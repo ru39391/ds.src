@@ -1,0 +1,54 @@
+$grid-gutter-width: 8px;
+@import '~nouislider/distribute/nouislider.css';
+
+@import '~bootstrap/scss/bootstrap-reboot.scss';
+@import '~bootstrap/scss/bootstrap-grid.scss';
+//@import '~bootstrap/scss/modal';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/utilities/text';
+@import '~bootstrap/scss/utilities/embed';
+@import '~bootstrap/scss/utilities/borders';
+//@import '~bootstrap/scss/utilities/display';
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+/* base */
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/extends';
+@import 'base/common';
+
+/* tpl */
+@import 'tpl/btn';
+@import 'tpl/menu';
+@import 'tpl/tabs';
+@import 'tpl/form';
+@import 'tpl/card';
+@import 'tpl/brand';
+@import 'tpl/media';
+@import 'tpl/sales';
+@import 'tpl/filter';
+@import 'tpl/banner';
+@import 'tpl/social';
+@import 'tpl/search';
+@import 'tpl/swiper';
+@import 'tpl/header';
+@import 'tpl/section';
+@import 'tpl/content';
+@import 'tpl/feature';
+@import 'tpl/pathway';
+@import 'tpl/topmenu';
+@import 'tpl/heading';
+@import 'tpl/contacts';
+@import 'tpl/selecter';
+@import 'tpl/dropdown';
+@import 'tpl/category';
+@import 'tpl/desclist';
+@import 'tpl/leftmenu';
+@import 'tpl/accordion';
+@import 'tpl/pagination';
+@import 'tpl/recalculate';
+@import 'tpl/review';
+@import 'tpl/params';
+@import 'tpl/footer';

@@ -1,0 +1,145 @@
+extends base
+
+block meta
+  - var title = 'Статьи';
+
+block wrapper
+  .container.container_wrapper
+    nav.pathway
+      a.pathway__link(href="#") Главная
+      a.pathway__link(href="#") Шины
+      a.pathway__current(href="#") Шины R18
+    section.row
+      .content.col-lg-5.col-md-6
+        h1 #{title}
+      form.form.col-lg-7.col-md-6.d-flex.align-items-center.justify-content-end.px-0.mb-3(action="#")
+        .col-xl-4.col-lg-5.col-md-8
+          .form__select
+            select.form__select-options
+              option По умолчанию
+              option По возрастанию цены
+              option По убыванию цены
+              option По популярности
+        .col-xl-2.col-lg-3.d-none.d-lg-flex.align-items-center.justify-content-end
+          button.form__view.mr-3(type="button")
+            svg.icon-fluid
+              use(xlink:href="#icon-list")
+          button.form__view.active(type="button")
+            svg.icon-fluid
+              use(xlink:href="#icon-tile")
+
+    .category.category_list.mb-3
+      .media.media_row
+        a.media__picture(href="#")
+          img.img-cover(src="../img/content/media/media-1.jpg" alt="" title="")
+        .media__meta
+          .media__date 23.10.2021
+          a.media__title(href="#") Как зарядить аккумулятор автомобиля зарядным устройством
+          .media__intro Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...
+      .media.media_row
+        a.media__picture(href="#")
+          img.img-cover(src="../img/content/media/media-1.jpg" alt="" title="")
+        .media__meta
+          .media__date 23.10.2021
+          a.media__title(href="#") Как зарядить аккумулятор автомобиля зарядным устройством
+          .media__intro Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...
+      .media.media_row
+        a.media__picture(href="#")
+          img.img-cover(src="../img/content/media/media-1.jpg" alt="" title="")
+        .media__meta
+          .media__date 23.10.2021
+          a.media__title(href="#") Как зарядить аккумулятор автомобиля зарядным устройством
+          .media__intro Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...
+      .media.media_row
+        a.media__picture(href="#")
+          img.img-cover(src="../img/content/media/media-1.jpg" alt="" title="")
+        .media__meta
+          .media__date 23.10.2021
+          a.media__title(href="#") Как зарядить аккумулятор автомобиля зарядным устройством
+          .media__intro Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...
+      .media.media_row
+        a.media__picture(href="#")
+          img.img-cover(src="../img/content/media/media-1.jpg" alt="" title="")
+        .media__meta
+          .media__date 23.10.2021
+          a.media__title(href="#") Как зарядить аккумулятор автомобиля зарядным устройством
+          .media__intro Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...
+      .media.media_row
+        a.media__picture(href="#")
+          img.img-cover(src="../img/content/media/media-1.jpg" alt="" title="")
+        .media__meta
+          .media__date 23.10.2021
+          a.media__title(href="#") Как зарядить аккумулятор автомобиля зарядным устройством
+          .media__intro Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...
+      .media.media_row
+        a.media__picture(href="#")
+          img.img-cover(src="../img/content/media/media-1.jpg" alt="" title="")
+        .media__meta
+          .media__date 23.10.2021
+          a.media__title(href="#") Как зарядить аккумулятор автомобиля зарядным устройством
+          .media__intro Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...
+    .section.text-center.mb-5
+      .section__wrapper.py-3
+        a.readmore.readmore_arrow-down.color-brand(href="#")
+          span.text-lg Показать еще
+
+    .category.category_list.mb-3
+      .media.media_row.media_col
+        a.media__picture(href="#")
+          img.img-cover(src="../img/content/media/media-1.jpg" alt="" title="")
+        .media__meta
+          .media__date 23.10.2021
+          a.media__title(href="#") Как зарядить аккумулятор автомобиля зарядным устройством
+          .media__intro Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...
+      .media.media_row.media_col
+        a.media__picture(href="#")
+          img.img-cover(src="../img/content/media/media-1.jpg" alt="" title="")
+        .media__meta
+          .media__date 23.10.2021
+          a.media__title(href="#") Как зарядить аккумулятор автомобиля зарядным устройством
+          .media__intro Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...
+      .media.media_row.media_col
+        a.media__picture(href="#")
+          img.img-cover(src="../img/content/media/media-1.jpg" alt="" title="")
+        .media__meta
+          .media__date 23.10.2021
+          a.media__title(href="#") Как зарядить аккумулятор автомобиля зарядным устройством
+          .media__intro Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...
+      .media.media_row.media_col
+        a.media__picture(href="#")
+          img.img-cover(src="../img/content/media/media-1.jpg" alt="" title="")
+        .media__meta
+          .media__date 23.10.2021
+          a.media__title(href="#") Как зарядить аккумулятор автомобиля зарядным устройством
+          .media__intro Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...
+      .media.media_row.media_col
+        a.media__picture(href="#")
+          img.img-cover(src="../img/content/media/media-1.jpg" alt="" title="")
+        .media__meta
+          .media__date 23.10.2021
+          a.media__title(href="#") Как зарядить аккумулятор автомобиля зарядным устройством
+          .media__intro Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...
+      .media.media_row.media_col
+        a.media__picture(href="#")
+          img.img-cover(src="../img/content/media/media-1.jpg" alt="" title="")
+        .media__meta
+          .media__date 23.10.2021
+          a.media__title(href="#") Как зарядить аккумулятор автомобиля зарядным устройством
+          .media__intro Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...
+      .media.media_row.media_col
+        a.media__picture(href="#")
+          img.img-cover(src="../img/content/media/media-1.jpg" alt="" title="")
+        .media__meta
+          .media__date 23.10.2021
+          a.media__title(href="#") Как зарядить аккумулятор автомобиля зарядным устройством
+          .media__intro Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...
+    .section.text-center.mb-5
+      .section__wrapper.py-3
+        a.readmore.readmore_arrow-down.color-brand(href="#")
+          span.text-lg Показать еще
+
+    .section.mb-3
+      .section__title Рекомендуем:
+      include category/carousel.pug
+
+    include base/links.pug

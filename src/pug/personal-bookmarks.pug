@@ -1,0 +1,10 @@
+extends personal
+
+block meta
+  - var title = 'Избранное';
+
+block personal
+  .section
+    .section__title.text-center #{title}
+    .mx-3
+      include category/carousel.pug

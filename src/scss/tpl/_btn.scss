@@ -1,0 +1,40 @@
+.btn {
+    @extend %btn-default;
+    @extend %btn-theme;
+    padding: 4px 12px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &.btn_bordered {
+        border: 1px solid #fcfcfc;
+    }
+
+    &.btn_icon {
+
+    }
+
+    &.btn_nobg {
+        @extend %h5;
+        padding: 0;
+        box-shadow: none;
+        background: none;
+        text-transform: none;
+        color: $color__text_default;
+    }
+}
+
+.btn-unstyled {
+    @extend %btn-default;
+}
+
+.btn-link {
+    @extend %btn-default;
+    @include fs-lh(12px,1);
+}
+
+.btn__icon {
+    @include fw(14px);
+    @include wh(14px,18px);
+}

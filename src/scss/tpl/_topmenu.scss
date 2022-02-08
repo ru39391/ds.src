@@ -1,0 +1,23 @@
+.topmenu__wrapper {
+    justify-content: space-between;
+}
+
+.topmenu__item {
+    @include inline-block;
+    @include fs-lh(16px,22px);
+    user-select: none;
+    transition: all .3s ease;
+
+    &:hover,
+    &.current {
+        color: $color__brand;
+    }
+
+    &.current {
+        font-weight: bold;
+    }
+
+    @include media-breakpoint-down(md) {
+        margin: 0 24px 0 0;
+    }
+}

@@ -1,0 +1,48 @@
+form.form.mb-3(action="#")
+    .form__header.form__header_bg
+      .slides.slides_togglers.swiper-container
+        .slides__nav
+          button.slides__btn.slides__btn_sm.slides__btn_prev.slides_togglers-prev(type="button")
+            svg.icon-fluid
+              use(xlink:href="#icon-arrow-left")
+          button.slides__btn.slides__btn_sm.slides__btn_next.slides_togglers-next(type="button")
+            svg.icon-fluid
+              use(xlink:href="#icon-arrow-right")
+        .swiper-wrapper.px-3.px-lg-0
+          .swiper-slide
+            input.form__toggler.form__toggler_radio(id="filter-radio-1" name="filter-radio" type="radio" value="" checked)
+            label.form__label(for="filter-radio-1") Все
+          .swiper-slide
+            input.form__toggler.form__toggler_radio(id="filter-radio-2" name="filter-radio" type="radio" value="")
+            label.form__label(for="filter-radio-2") Для моего авто
+          .swiper-slide
+            input.form__toggler.form__toggler_radio(id="filter-radio-9" name="filter-radio" type="radio" value="")
+            label.form__label(for="filter-radio-9") Скидки
+          .swiper-slide
+            input.form__toggler.form__toggler_radio(id="filter-radio-10" name="filter-radio" type="radio" value="")
+            label.form__label(for="filter-radio-10") Хиты
+          .swiper-slide
+            input.form__toggler.form__toggler_radio(id="filter-radio-13" name="filter-radio" type="radio" value="")
+            label.form__label(for="filter-radio-13") Акции
+    .row.justify-content-end
+      .col-xl-2.col-md-3.col-sm-8.order-1.order-md-1.mb-3.mb-md-0
+        input.form__toggler.form__toggler_checkbox(id="instock4" type="checkbox" value="")
+        label.form__label(for="instock4")
+          span.form__label-icon
+            svg.icon-fluid
+              use(xlink:href="#icon-checked")
+          span.form__label-title В наличии от 4 шт.
+      .col-xl-3.col-md-4.order-3.order-md-2
+        .form__select
+          select.form__select-options
+            option По умолчанию
+            option По возрастанию цены
+            option По убыванию цены
+            option По популярности
+      .col-xl-1.col-md-2.col-4.d-none.d-sm-flex.align-items-center.justify-content-end.order-2.order-md-3.mb-3.mb-md-0
+        button.form__view.mr-3(type="button")
+          svg.icon-fluid
+            use(xlink:href="#icon-list")
+        button.form__view.active(type="button")
+          svg.icon-fluid
+            use(xlink:href="#icon-tile")

@@ -1,0 +1,78 @@
+.section.mb-3
+  .section__title Часто выбирают:
+  form.form.mb-3(action="#")
+    .slides.slides_togglers.swiper-container
+      .slides__nav
+        button.slides__btn.slides__btn_sm.slides__btn_prev.slides_togglers-prev(type="button")
+          svg.icon-fluid
+            use(xlink:href="#icon-arrow-left")
+        button.slides__btn.slides__btn_sm.slides__btn_next.slides_togglers-next(type="button")
+          svg.icon-fluid
+            use(xlink:href="#icon-arrow-right")
+      .swiper-wrapper.px-3.px-lg-0
+        .swiper-slide
+          input.form__toggler.form__toggler_radio(id="filter-radio-1" name="filter-radio" type="radio" value="" checked)
+          label.form__label(for="filter-radio-1") Все
+        .swiper-slide
+          input.form__toggler.form__toggler_radio(id="filter-radio-2" name="filter-radio" type="radio" value="")
+          label.form__label(for="filter-radio-2") Шины
+        .swiper-slide
+          input.form__toggler.form__toggler_radio(id="filter-radio-3" name="filter-radio" type="radio" value="")
+          label.form__label(for="filter-radio-3") Диски
+        .swiper-slide
+          input.form__toggler.form__toggler_radio(id="filter-radio-4" name="filter-radio" type="radio" value="")
+          label.form__label(for="filter-radio-4") Мотошины
+        .swiper-slide
+          input.form__toggler.form__toggler_radio(id="filter-radio-5" name="filter-radio" type="radio" value="")
+          label.form__label(for="filter-radio-5") Аккумуляторы
+        .swiper-slide
+          input.form__toggler.form__toggler_radio(id="filter-radio-6" name="filter-radio" type="radio" value="")
+          label.form__label(for="filter-radio-6") Автозапчасти
+        .swiper-slide
+          input.form__toggler.form__toggler_radio(id="filter-radio-7" name="filter-radio" type="radio" value="")
+          label.form__label(for="filter-radio-7") Масла
+        .swiper-slide
+          input.form__toggler.form__toggler_radio(id="filter-radio-8" name="filter-radio" type="radio" value="")
+          label.form__label(for="filter-radio-8") Автотовары
+        .swiper-slide
+          input.form__toggler.form__toggler_radio(id="filter-radio-9" name="filter-radio" type="radio" value="")
+          label.form__label(for="filter-radio-9") Скидки
+        .swiper-slide
+          input.form__toggler.form__toggler_radio(id="filter-radio-10" name="filter-radio" type="radio" value="")
+          label.form__label(for="filter-radio-10") Хиты
+        .swiper-slide
+          input.form__toggler.form__toggler_radio(id="filter-radio-11" name="filter-radio" type="radio" value="")
+          label.form__label(for="filter-radio-11") Шины на внедорожник
+        .swiper-slide
+          input.form__toggler.form__toggler_radio(id="filter-radio-12" name="filter-radio" type="radio" value="")
+          label.form__label(for="filter-radio-12") Шины на газель
+        .swiper-slide
+          input.form__toggler.form__toggler_radio(id="filter-radio-13" name="filter-radio" type="radio" value="")
+          label.form__label(for="filter-radio-13") Акции
+    .slides.slides_grid.swiper-container.pt-1.pb-4
+      .slides__nav
+        button.slides__btn.slides__btn_prev.slides_grid-prev(type="button")
+          svg.icon-fluid
+            use(xlink:href="#icon-arrow-left")
+        button.slides__btn.slides__btn_next.slides_grid-next(type="button")
+          svg.icon-fluid
+            use(xlink:href="#icon-arrow-right")
+      .swiper-wrapper
+        .swiper-slide
+          include ../positions/plain.pug
+        .swiper-slide
+          include ../positions/plain.pug
+        .swiper-slide
+          include ../positions/banner1.pug
+        .swiper-slide
+          include ../positions/sale.pug
+        .swiper-slide
+          include ../positions/banner2.pug
+        .swiper-slide
+          include ../positions/discount.pug
+        .swiper-slide
+          include ../positions/hit.pug
+        .swiper-slide
+          include ../positions/sale.pug
+        .swiper-slide
+          include ../positions/plain.pug

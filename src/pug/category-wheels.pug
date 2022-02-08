@@ -1,0 +1,43 @@
+extends base
+
+block meta
+  - var title = 'Категория каталога (диски, мотошины, масла, акб)';
+
+block filter
+  .header__footer
+    button.filter-toggler(type="button")
+      svg.filter-toggler__icon
+        use(xlink:href="#icon-filter")
+      span.filter-toggler__title
+        span.filter-toggler__show Показать 
+        span.filter-toggler__hide Скрыть 
+        | фильтр
+
+block wrapper
+    .container.container_wrapper
+      nav.pathway
+        a.pathway__link(href="#") Главная
+        a.pathway__current(href="#") Диски
+      section.content
+        h1 Диски в Ростове-на-Дону
+      .category-counter 1 840 товаров
+      .row
+        .col-xl-2.col-lg-3.mb-lg-4
+          include base/filter-wheels.pug
+
+        .col-xl-10.col-lg-9.mb-4
+          include base/brands.pug
+
+      include category/popular.pug
+
+      .section.mb-3
+        .section__title Рекомендуем так же:
+        include category/wheels.pug
+
+      include base/links.pug
+
+      .section
+        .content.content_expanded
+          include base/content.pug
+          .content__footer
+            button.readmore.readmore_btn.readmore_arrow-down(type="button")

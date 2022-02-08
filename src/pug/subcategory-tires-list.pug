@@ -1,0 +1,132 @@
+extends base
+
+block meta
+  - var title = 'Подкатегория каталога (серия бренда шин)';
+
+block filter
+  .header__footer
+    button.filter-toggler(type="button")
+      svg.filter-toggler__icon
+        use(xlink:href="#icon-filter")
+      span.filter-toggler__title
+        span.filter-toggler__show Показать 
+        span.filter-toggler__hide Скрыть 
+        | фильтр
+
+block wrapper
+    .container.container_wrapper
+      nav.pathway
+        a.pathway__link(href="#") Главная
+        a.pathway__link(href="#") Шины
+        a.pathway__link(href="#") Cordiant
+        a.pathway__current(href="#") Cordiant 2
+      section.content
+        h1 Шины CORDIANT Comfort 2 в Ростове-на-Дону
+      .category-counter 1 840 товаров
+      .row
+        .col-xl-2.col-lg-3.mb-lg-4
+          a.brand.brand_category.mb-3(href="#")
+            img.img-fluid(src="../img/content/logo/logo-1.jpg" alt="" title="")
+            span.brand__title Cordiant
+          include base/filter-tires.pug
+
+        .col-xl-10.col-lg-9.mb-4
+          include base/results-form.pug
+          .mb-3
+            .heading
+              .heading__col Диаметр
+              .heading__col Ширина
+              .heading__col Высота
+              .heading__col Сезон
+              .heading__col.heading__col_lg Название
+              .heading__col Цена
+              .heading__col Наличие
+            .card-row
+              .card-row__left
+                .card-row__param 18”
+              .card-row__right
+                include tile/row.pug
+            .card-row
+              .card-row__left
+                .card-row__param 17”
+              .card-row__right
+                include tile/row.pug
+            .card-row
+              .card-row__left
+                .card-row__param 16”
+              .card-row__right
+                include tile/row.pug
+                include tile/row.pug
+                include tile/row.pug
+                include tile/row.pug
+            .card-row
+              .card-row__left
+                .card-row__param 15”
+              .card-row__right
+                include tile/row.pug
+                include tile/row.pug
+                include tile/row.pug
+            .card-row
+              .card-row__left
+                .card-row__param 14”
+              .card-row__right
+                include tile/row.pug
+                include tile/row.pug
+                include tile/row.pug
+            .card-row
+              .card-row__left
+                .card-row__param 13”
+              .card-row__right
+                include tile/row.pug
+                include tile/row.pug
+
+      .section.mb-3
+        .section__title Подходящие диски:
+        include category/wheels.pug
+
+      include category/popular.pug
+
+      .section.mb-3
+        .section__title Рекомендуем так же:
+        include category/carousel.pug
+
+      .section
+        .section__wrapper.section__wrapper_px
+          .mb-3
+            .section__title.section__title_sm Сезон
+            a.toggler(href="#") Летняя
+            a.toggler(href="#") Зимняя
+            a.toggler(href="#") Всесезонная
+            a.toggler(href="#") Летняя
+            a.toggler(href="#") Зимняя
+            a.toggler(href="#") Всесезонная
+          .mb-3
+            .section__title.section__title_sm Тип
+            a.toggler(href="#") Легковые
+            a.toggler(href="#") Для микроавтобуса
+            a.toggler(href="#") Для микроавтобуса
+          .section__title.section__title_sm Диаметр
+          a.toggler(href="#") 13
+          a.toggler(href="#") 14
+          a.toggler(href="#") 14С
+          a.toggler(href="#") 15
+          a.toggler(href="#") 15С
+          a.toggler(href="#") 16
+          a.toggler(href="#") 16С
+          a.toggler(href="#") 17
+          a.toggler(href="#") 18
+          a.toggler(href="#") 13
+          a.toggler(href="#") 14
+          a.toggler(href="#") 14С
+          a.toggler(href="#") 15
+          a.toggler(href="#") 15С
+          a.toggler(href="#") 16
+          a.toggler(href="#") 16С
+          a.toggler(href="#") 17
+          a.toggler(href="#") 18
+
+      .section
+        .content.content_expanded
+          include base/content.pug
+          .content__footer
+            button.readmore.readmore_btn.readmore_arrow-down(type="button")

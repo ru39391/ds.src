@@ -1,0 +1,75 @@
+extends base
+
+block meta
+  - var title = 'Скидки и акции';
+
+block wrapper
+    .container.container_wrapper
+      nav.pathway
+        a.pathway__link(href="#") Главная
+        a.pathway__current(href="#") #{title}
+      section.content
+        h1 #{title}
+      .category.category_rows.mb-5
+        a.sale-item(href="#")
+          span.sale-item__header
+            img.img-cover(src="../img/content/sales/sales-1.jpg" alt="")
+          span.sale-item__body
+            span.sale-item__date До 30 ноября
+            span.sale-item__title Скидки на зимние шины Michelin
+        a.sale-item(href="#")
+          span.sale-item__header
+            img.img-cover(src="../img/content/sales/sales-2.jpg" alt="")
+          span.sale-item__body
+            span.sale-item__date До 30 ноября
+            span.sale-item__title 1000 бонусов при покупке шин Michelin
+        a.sale-item(href="#")
+          span.sale-item__header
+            img.img-cover(src="../img/content/sales/sales-3.jpg" alt="")
+          span.sale-item__body
+            span.sale-item__date До 30 ноября
+            span.sale-item__title Скидки на всю всесезонные шины Cordiant
+        a.sale-item(href="#")
+          span.sale-item__header
+            img.img-cover(src="../img/content/sales/sales-4.jpg" alt="")
+          span.sale-item__body
+            span.sale-item__date До 30 ноября
+            span.sale-item__title Скидки на всю колекцию зимних шин Pirelli
+        a.sale-item(href="#")
+          span.sale-item__header
+            img.img-cover(src="../img/content/sales/sales-5.jpg" alt="")
+          span.sale-item__body
+            span.sale-item__date До 30 ноября
+            span.sale-item__title Скидки на старые модели дисков Alcasta
+        a.sale-item(href="#")
+          span.sale-item__header
+            img.img-cover(src="../img/content/sales/sales-6.jpg" alt="")
+          span.sale-item__body
+            span.sale-item__date До 30 ноября
+            span.sale-item__title Скидки на зимние шины Michelin
+        a.sale-item(href="#")
+          span.sale-item__header
+            img.img-cover(src="../img/content/sales/sales-7.jpg" alt="")
+          span.sale-item__body
+            span.sale-item__date До 30 ноября
+            span.sale-item__title 1000 бонусов при покупке шин Michelin
+        a.sale-item(href="#")
+          span.sale-item__header
+            img.img-cover(src="../img/content/sales/sales-8.jpg" alt="")
+          span.sale-item__body
+            span.sale-item__date До 30 ноября
+            span.sale-item__title Скидки на всю всесезонные шины Cordiant
+        a.sale-item(href="#")
+          span.sale-item__header
+            img.img-cover(src="../img/content/sales/sales-9.jpg" alt="")
+          span.sale-item__body
+            span.sale-item__date До 30 ноября
+            span.sale-item__title Скидки на всю колекцию зимних шин Pirelli
+        a.sale-item(href="#")
+          span.sale-item__header
+            img.img-cover(src="../img/content/sales/sales-10.jpg" alt="")
+          span.sale-item__body
+            span.sale-item__date До 30 ноября
+            span.sale-item__title Скидки на старые модели дисков Alcasta
+
+      include base/subscribe.pug

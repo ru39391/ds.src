@@ -1,0 +1,58 @@
+.accordion {
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.16);
+
+    &.active {
+        padding: 0 0 26px;
+
+        .accordion__header {
+            @include py(16px,12px);
+            margin: 0 0 24px;
+            border-color: $color__border;
+        }
+
+        .accordion__toggler {
+            &:before {
+                opacity: 0;
+            }
+        
+            &:after {
+                opacity: 0;
+            } 
+        }
+
+        .accordion__body {
+            opacity: 1;
+            height: 100%;
+            visibility: visible;
+        }
+    }
+}
+
+.accordion__header {
+    @include border(0 0 1px,rgba(0,0,0,0));
+    padding: 8px 24px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.accordion__toggler {
+    @extend %h3;
+    @extend .readmore;
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    color: $color__brand;
+    pointer-events: none;
+}
+
+.accordion__body {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    padding: 0 24px;
+    transition: all .3s ease;
+}

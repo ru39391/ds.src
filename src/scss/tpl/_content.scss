@@ -1,0 +1,121 @@
+.content {
+    h1 {
+        margin: 0 0 24px;
+    }
+
+    h2 {
+        @extend %h2;
+        font-weight: bold;
+        margin: 0 0 40px;
+    }
+
+    h3 {
+        @extend %h3;
+        font-weight: bold;
+        margin: 0 0 16px;
+    }
+
+    h4 {
+        @extend %h4;
+        font-weight: normal;
+        color: $color__brand;
+        margin: 0 0 4px;
+    }
+
+    h5 {
+        @extend %h5;
+        font-weight: normal;
+    }
+
+    h6 {
+        @extend %h6;
+        font-weight: normal;
+    }
+
+    p {
+        margin: 0 0 24px;
+    }
+
+    ul {
+        @extend %list-default;
+        margin: 0 0 24px;
+
+        li {
+            list-style-type: disc;
+        }
+    }
+
+    li {
+        @include fs-lh($font-size_default,22px);
+    }
+
+    &.content_expanded {
+        @include before;
+        transition: all .3s ease;
+
+        @include media-breakpoint-down(md) {
+            height: 430px;
+            overflow: hidden;
+        }
+
+        &:before {
+            @include media-breakpoint-down(md) {
+                @include pos(0,0);
+                right: 0;
+                bottom: 0;
+                transition: all .3s ease;
+                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+                background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+            }
+        }
+
+        &.active {
+            @include media-breakpoint-down(md) {
+                height: 100%;
+            }
+
+            &:before {
+                @include media-breakpoint-down(md) {
+                    top: auto;
+                    background: rgba(0,0,0,0);
+                }
+            }
+
+            .readmore_btn {
+                transform: rotate(180deg);
+            }
+        }
+
+        .content__footer {
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+
+            @include media-breakpoint-down(md) {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.content__columns {
+    @include media-breakpoint-up(lg) {
+        column-count: 2;
+        column-gap: (100%/12);
+    }
+}
+
+.content__intro {
+    @extend %h4;
+}
+
+.content__date {
+    @extend %date-item;
+    margin: 0 0 8px;
+}

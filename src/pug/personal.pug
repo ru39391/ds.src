@@ -1,0 +1,74 @@
+extends base
+
+block meta
+  - var title = 'Личный кабинет';
+
+block filter
+  .header__footer
+    button.filter-toggler(type="button")
+      svg.filter-toggler__icon
+        use(xlink:href="#icon-filter")
+      span.filter-toggler__title
+        span.filter-toggler__show Показать 
+        span.filter-toggler__hide Скрыть 
+        | меню
+
+block wrapper
+  .container.container_wrapper
+    nav.pathway
+      a.pathway__link(href="#") Главная
+      a.pathway__current(href="#") #{title}
+    section.content
+      h1 #{title}
+    .row.align-items-start
+      .col-xl-3.col-lg-4.mb-lg-4
+        .filter.filter_sticky
+          .filter__body
+            nav.leftmenu
+              a.leftmenu__item(href="#")
+                svg.leftmenu__item-icon
+                  use(xlink:href="#icon-case")
+                span.leftmenu__item-title Мои заказы
+                span.leftmenu__item-badge.bg-brand 2
+              a.leftmenu__item(href="#")
+                svg.leftmenu__item-icon
+                  use(xlink:href="#icon-favourite")
+                span.leftmenu__item-title Избранное
+                span.leftmenu__item-badge.bg-success 3
+              a.leftmenu__item(href="#")
+                svg.leftmenu__item-icon
+                  use(xlink:href="#icon-gift")
+                span.leftmenu__item-title Бонусные рубли
+                span.leftmenu__item-badge.bg-success 300 
+                  span.text-sm Б.₽.
+              a.leftmenu__item(href="#")
+                svg.leftmenu__item-icon
+                  use(xlink:href="#icon-tool")
+                span.leftmenu__item-title Запись на услуги
+              a.leftmenu__item(href="#")
+                svg.leftmenu__item-icon
+                  use(xlink:href="#icon-settings")
+                span.leftmenu__item-title Подбор по VIN
+                span.leftmenu__item-badge.bg-success 1
+              a.leftmenu__item(href="#")
+                svg.leftmenu__item-icon
+                  use(xlink:href="#icon-user")
+                span.leftmenu__item-title Персональные данные
+              a.leftmenu__item(href="#")
+                svg.leftmenu__item-icon
+                  use(xlink:href="#icon-car")
+                span.leftmenu__item-title Мой автомобиль
+              a.leftmenu__item.active(href="#")
+                svg.leftmenu__item-icon
+                  use(xlink:href="#icon-shield")
+                span.leftmenu__item-title Смена пароля
+              a.leftmenu__item(href="#")
+                svg.leftmenu__item-icon
+                  use(xlink:href="#icon-exit")
+                span.leftmenu__item-title Выход
+      .col-xl-9.col-lg-8
+        block personal
+
+    .section.mb-3
+      .section__title Ранее просмотренные товары:
+      include category/carousel.pug

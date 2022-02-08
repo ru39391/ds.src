@@ -1,0 +1,32 @@
+extends personal
+
+block meta
+  - var title = 'Смена пароля';
+
+block personal
+  .section
+    .section__title.text-center #{title}
+    .section__wrapper.pb-3
+      form.form(action="#")
+        .row
+          .col-xl-4.offset-xl-4.col-md-6.offset-md-3.col-sm-8.offset-sm-2.mb-3
+            .form__item.form__item_icon.mb-4
+              input.form__field(type="password" value="")
+              .form__label.form__label_title Новый пароль
+              button.form__toggler.form__toggler_pwd(type="button")
+                svg.icon-fluid
+                  use(xlink:href="#icon-eye")
+            .form__item.form__item_icon.mb-4
+              input.form__field(type="password" value="")
+              .form__label.form__label_title Повторите новый пароль
+              button.form__toggler.form__toggler_pwd(type="button")
+                svg.icon-fluid
+                  use(xlink:href="#icon-eye")
+        .form__section.form__section_content.form__section_px.pt-0.mb-3
+          p Чтобы ваши персональные данные были в безопасности, пароль должен быть надежным и отвечать некоторым требованиям:
+          ul
+            li длина пароля должна быть не менее 8ми символов;
+            li пароль должен состоять из букв латинского алфавита (A-z), арабских цифр (0-9) и специальных символов ( . , : ; ? ! * + % - < > @ [ ] { } / \ _ {} $ # ):
+            li буквенная часть пароля должна содержать как строчные, так и прописные (заглавные) буквы.
+        .form__footer.form__footer_px.d-flex.justify-content-md-end.justify-content-center
+          button.btn.px-5(type="submit") Изменить пароль

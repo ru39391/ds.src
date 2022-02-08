@@ -1,0 +1,70 @@
+extends base
+
+block meta
+  - var title = 'Результаты подбора дисков';
+
+block filter
+  .header__footer
+    button.filter-toggler(type="button")
+      svg.filter-toggler__icon
+        use(xlink:href="#icon-filter")
+      span.filter-toggler__title
+        span.filter-toggler__show Показать 
+        span.filter-toggler__hide Скрыть 
+        | фильтр
+
+block wrapper
+    .container.container_wrapper
+      nav.pathway
+        a.pathway__link(href="#") Главная
+        a.pathway__link(href="#") Шины
+        a.pathway__current(href="#") Шины R18
+      section.content
+        h1 Диски ширина 10, R20
+      .category-counter 1 840 товаров
+      .row
+        .col-xl-2.col-lg-3.mb-lg-4
+          include base/filter-wheels.pug
+
+        .col-xl-10.col-lg-9.mb-4
+          include base/results-form.pug
+          .category.mb-3
+            include tile/wheels/sale.pug
+            include tile/wheels/discount.pug
+            include tile/wheels/banner3.pug
+            include tile/wheels/hit.pug
+            include tile/wheels/plain.pug
+            include tile/wheels/banner4.pug
+            include tile/wheels/sale.pug
+            include tile/wheels/plain.pug
+            include tile/wheels/discount.pug
+            include tile/wheels/hit.pug
+            include tile/wheels/plain.pug
+            include tile/wheels/plain.pug
+          nav.pagination
+            a.pagination__nav.pagination__nav_prev(href="#")
+            span.pagination__item.pagination__item_current 1
+            a.pagination__item(href="#") 2
+            a.pagination__item(href="#") 3
+            a.pagination__item(href="#") 4
+            span.pagination__item.pagination__item_divider ...
+            a.pagination__item(href="#") 57
+            a.pagination__nav.pagination__nav_next(href="#")
+
+      .section.mb-3
+        .section__title Подходящие шины:
+        include category/carousel.pug
+
+      include category/popular.pug
+
+      .section.mb-3
+        .section__title Рекомендуем так же:
+        include category/wheels.pug
+
+      include base/links.pug
+
+      .section
+        .content.content_expanded
+          include base/content.pug
+          .content__footer
+            button.readmore.readmore_btn.readmore_arrow-down(type="button")

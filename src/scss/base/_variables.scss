@@ -1,0 +1,23 @@
+$font-family_default: 'Noto Sans', Arial, sans-serif;
+$font-family_title: $font-family_default;
+$font-size_default: 14px;
+
+$line-height_default: 1;
+$line-height_content: 1.4;
+
+$breakpoint__custom: 1366px;
+
+$color__text_default: #525252;
+
+$color__link: $color__text_default;
+$color__link_hover: $color__link;
+
+$color__light: #EDF5FA;
+$color__brand: #008BD1;
+$color__brand_dark: #0075B4;
+$color__border: #E1DDDD;
+
+$color__info: #30D3CA;
+$color__disabled: #A1A1A1;
+$color__success: #61BD2B;
+$color__warning: #F3CA2C;

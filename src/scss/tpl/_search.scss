@@ -1,0 +1,29 @@
+.search {
+    position: relative;
+    padding: 0 40px 0 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: $color__light;
+}
+
+.search__field {
+    @include fw(100%);
+    @include size(100%,40px);
+    @include fs-lh(16px,22px);
+    letter-spacing: 0.05em;
+    padding: 8px 0 8px 14px;
+    border: 0;
+    background: none;
+    color: $color__brand;
+}
+
+.search__btn {
+    @extend %btn-default;
+    @include fw(18px);
+    @include size(18px);
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    margin: -9px 0 0;
+    color: $color__brand;
+}

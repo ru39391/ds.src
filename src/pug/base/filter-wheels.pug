@@ -1,0 +1,193 @@
+.filter.filter_sticky
+  .filter__body
+    form.form.form_bg.form_filter(action="#")
+      .form__header
+        .form__title.form__title_icon
+          svg.form__title-icon
+            use(xlink:href="#icon-wheels")
+          | Подбор дисков
+        button.btn-link(type="reset") Сбросить
+      .form__section
+        .form__section-title Типоразмер
+        .row
+          .col-4.col-lg-12
+            .form__select.mb-lg-4
+              .form__select-title Ширина
+              select.form__select-options
+                option --
+                option 5
+                option 6.5
+                option 7
+                option 10.5
+                option 12.5
+                option 30
+          .col-4.col-lg-12
+            .form__select.mb-lg-4
+              .form__select-title Диаметр (R)
+              select.form__select-options
+                option --
+                option 9.5
+                option 10
+                option 10.5
+                option 11.5
+                option 12.5
+                option 13.5
+          .col-4.col-lg-12
+            .form__select
+              .form__select-title Отверстие
+              select.form__select-options
+                option --
+                option 10
+                option 12
+                option 12C
+                option 13
+                option 13C
+      .form__section
+        .form__section-title Тип диска
+        input.form__toggler.form__toggler_checkbox(id="param-1" type="checkbox" value="")
+        label.form__label.mb-4(for="param-1")
+          span.form__label-icon
+            svg.icon-fluid
+              use(xlink:href="#icon-checked")
+          span.form__label-title Кованый
+        input.form__toggler.form__toggler_checkbox(id="param-2" type="checkbox" value="")
+        label.form__label.mb-4(for="param-2")
+          span.form__label-icon
+            svg.icon-fluid
+              use(xlink:href="#icon-checked")
+          span.form__label-title Литой
+        input.form__toggler.form__toggler_checkbox(id="param-3" type="checkbox" value="")
+        label.form__label(for="param-3")
+          span.form__label-icon
+            svg.icon-fluid
+              use(xlink:href="#icon-checked")
+          span.form__label-title Стальной
+      .form__section
+        .form__section-title Тип
+        input.form__toggler.form__toggler_checkbox(id="param-4" type="checkbox" value="")
+        label.form__label.mb-4(for="param-4")
+          span.form__label-icon
+            svg.icon-fluid
+              use(xlink:href="#icon-checked")
+          span.form__label-title Для внедорожника
+        input.form__toggler.form__toggler_checkbox(id="param-5" type="checkbox" value="")
+        label.form__label.mb-4(for="param-5")
+          span.form__label-icon
+            svg.icon-fluid
+              use(xlink:href="#icon-checked")
+          span.form__label-title Для внедорожника
+        input.form__toggler.form__toggler_checkbox(id="param-6" type="checkbox" value="")
+        label.form__label(for="param-6")
+          span.form__label-icon
+            svg.icon-fluid
+              use(xlink:href="#icon-checked")
+          span.form__label-title Для внедорожника
+      .form__section
+        .form__section-title Вылет диска, мм
+        .row.mb-3
+          .form__item.col-6
+            label.form__label.form__label_plain От
+            input#et-min.form__field(type="text" value="")
+          .form__item.col-6
+            label.form__label.form__label_plain До
+            input#et-max.form__field(type="text" value="")
+        #et-ranger.form__slider
+      .form__section
+        .form__section-title Применяемость
+        .form__select
+          .form__select-title Выберете марку
+          select.form__select-options
+            option Audi
+            option BMW
+            option Cadillac
+            option CHERY
+            option Chevrolet
+            option Citroen
+      .form__section
+        .form__section-title Цена, ₽
+        .row.mb-3
+          .form__item.col-6
+            label.form__label.form__label_plain От
+            input#price-min.form__field(type="text" value="")
+          .form__item.col-6
+            label.form__label.form__label_plain До
+            input#price-max.form__field(type="text" value="")
+        #price-ranger.form__slider
+      .form__section
+        .form__section-title Наличие
+        input.form__toggler.form__toggler_checkbox(id="instock" type="checkbox" value="")
+        label.form__label(for="instock")
+          span.form__label-icon
+            svg.icon-fluid
+              use(xlink:href="#icon-checked")
+          span.form__label-title Сейчас в наличии
+      .form__section.border-0.pb-0
+        .form__section-title Бренд
+        .form__item.mb-4
+          input.form__field(type="text" value="")
+          label.form__label.form__label_title Введите название
+        .row
+          .col-6
+            input.form__toggler.form__toggler_checkbox(id="Michelin" type="checkbox" value="")
+            label.form__label.mb-4(for="Michelin")
+              span.form__label-icon
+                svg.icon-fluid
+                  use(xlink:href="#icon-checked")
+              span.form__label-title Michelin
+          .col-6
+            input.form__toggler.form__toggler_checkbox(id="Cordiant" type="checkbox" value="")
+            label.form__label.mb-4(for="Cordiant")
+              span.form__label-icon
+                svg.icon-fluid
+                  use(xlink:href="#icon-checked")
+              span.form__label-title Cordiant
+          .col-6
+            input.form__toggler.form__toggler_checkbox(id="Pirelli" type="checkbox" value="")
+            label.form__label.mb-4(for="Pirelli")
+              span.form__label-icon
+                svg.icon-fluid
+                  use(xlink:href="#icon-checked")
+              span.form__label-title Pirelli
+          .col-6
+            input.form__toggler.form__toggler_checkbox(id="Hankook" type="checkbox" value="")
+            label.form__label.mb-4(for="Hankook")
+              span.form__label-icon
+                svg.icon-fluid
+                  use(xlink:href="#icon-checked")
+              span.form__label-title Hankook
+          .col-6
+            input.form__toggler.form__toggler_checkbox(id="Yokohama" type="checkbox" value="")
+            label.form__label.mb-4(for="Yokohama")
+              span.form__label-icon
+                svg.icon-fluid
+                  use(xlink:href="#icon-checked")
+              span.form__label-title Yokohama
+          .col-6
+            input.form__toggler.form__toggler_checkbox(id="Goodyear" type="checkbox" value="")
+            label.form__label.mb-4(for="Goodyear")
+              span.form__label-icon
+                svg.icon-fluid
+                  use(xlink:href="#icon-checked")
+              span.form__label-title Good year
+          .col-6
+            input.form__toggler.form__toggler_checkbox(id="Continental" type="checkbox" value="")
+            label.form__label.mb-4(for="Continental")
+              span.form__label-icon
+                svg.icon-fluid
+                  use(xlink:href="#icon-checked")
+              span.form__label-title Continental
+          .col-6
+            input.form__toggler.form__toggler_checkbox(id="Bridgestone" type="checkbox" value="")
+            label.form__label.mb-4(for="Bridgestone")
+              span.form__label-icon
+                svg.icon-fluid
+                  use(xlink:href="#icon-checked")
+              span.form__label-title Bridgestone
+      .text-center
+        button.btn-unstyled(type="submit")
+          span.readmore.readmore_arrow-down Показать еще
+    .filter__alert
+      .filter__alert-info
+        .text-sm Найдено:
+        | 713
+      button.btn.btn_bordered.px-3(type="button") Показать

@@ -1,0 +1,21 @@
+.slides.slides_carousel.swiper-container.pt-1.pb-4
+  .slides__nav
+    button.slides__btn.slides__btn_prev.slides-carousel-prev(type="button")
+      svg.icon-fluid
+        use(xlink:href="#icon-arrow-left")
+    button.slides__btn.slides__btn_next.slides-carousel-next(type="button")
+      svg.icon-fluid
+        use(xlink:href="#icon-arrow-right")
+  .swiper-wrapper.align-items-stretch
+    .swiper-slide
+      include ../carousel/newprice.pug
+    .swiper-slide
+      include ../carousel/plain.pug
+    .swiper-slide
+      include ../carousel/plain.pug
+    .swiper-slide
+      include ../carousel/discount.pug
+    .swiper-slide
+      include ../carousel/sale.pug
+    .swiper-slide
+      include ../carousel/hit.pug

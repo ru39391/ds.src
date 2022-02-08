@@ -1,0 +1,29 @@
+extends base
+
+block meta
+  - var title = 'Категория каталога (автотовары)';
+
+block wrapper
+    .container.container_wrapper
+      nav.pathway
+        a.pathway__link(href="#") Главная
+        a.pathway__current(href="#") Автозапчасти
+      section.content
+        h1 Автозапчасти в Ростове-на-Дону
+      .category-counter 1 840 товаров
+
+      .category.category_6col.mb-3
+
+      include category/popular.pug
+
+      .section.mb-3
+        .section__title Рекомендуем так же:
+        include category/wheels.pug
+
+      include base/links.pug
+
+      .section
+        .content.content_expanded
+          include base/content.pug
+          .content__footer
+            button.readmore.readmore_btn.readmore_arrow-down(type="button")

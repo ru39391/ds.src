@@ -1,0 +1,56 @@
+extends personal
+
+block meta
+  - var title = 'Текущие записи';
+
+block personal
+  .section
+    .section__title.text-center Текущие записи
+    .section__wrapper.pb-0
+      .section__body
+        .section__title.section__title_sm.color-brand Вы записаны на шиномонтаж
+        .desclist
+          .desclist__item
+            .desclist__item-title.col-xl-2.col-sm-3 Номер записи:
+            .desclist__item-value.desclist__item-value_lg.col-xl-10.col-sm-9 49409
+          .desclist__item
+            .desclist__item-title.col-xl-2.col-sm-3 Адрес:
+            .desclist__item-value.col-xl-10.col-sm-9 ул. Доватора, 11
+          .desclist__item
+            .desclist__item-title.col-xl-2.col-sm-3 Дата:
+            .desclist__item-value.col-xl-10.col-sm-9 10 января 2021 г.
+          .desclist__item
+            .desclist__item-title.col-xl-2.col-sm-3 Время:
+            .desclist__item-value.col-xl-10.col-sm-9 11 : 00
+      .section__footer
+        .row
+          .contacts.flex-wrap.col-xl-7
+            a.contacts__item.mb-2.mb-sm-0(href="#")
+              svg.contacts__item-icon
+                use(xlink:href="#icon-tg")
+              span.contacts__item-title Напомнить в Telegram
+            a.contacts__item.mb-2.mb-sm-0(href="#")
+              svg.contacts__item-icon
+                use(xlink:href="#icon-wapp")
+              span.contacts__item-title Напомнить в WhatsApp
+          .col-xl-5.d-flex.justify-content-xl-end
+            button.btn.btn_icon.btn_nobg(type="button")
+              svg.btn__icon.color-brand.mr-2
+                use(xlink:href="#icon-trash")
+              | Отменить запись
+  .section
+    .section__wrapper.pt-2.pb-3.pb-sm-2
+      .section__body.border-0.pb-0.mb-0
+        .row.align-items-center
+          .col-xl-8.col-sm-6
+            button.btn.btn_icon.btn_nobg(type="button")
+              svg.btn__icon.color-brand.mr-2
+                use(xlink:href="#icon-tool")
+              | Записаться на услугу
+          .col-xl-4.col-sm-6
+            .form__select
+              select.form__select-options
+                option Выберете услугу
+                option Услуга 1
+                option Услуга 2
+                option Услуга 3
