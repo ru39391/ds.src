@@ -1,71 +1,8 @@
-extends base
+extends results
 
 block meta
   - var title = 'Результаты подбора шин';
+  - var h1 = 'Купить в Ростове-на-Дону шины R18 диаметра';
 
-block filter
-  .header__footer
-    button.filter-toggler(type="button")
-      svg.filter-toggler__icon
-        use(xlink:href="#icon-filter")
-      span.filter-toggler__title
-        span.filter-toggler__show Показать 
-        span.filter-toggler__hide Скрыть 
-        | фильтр
-
-block wrapper
-    .container.container_wrapper
-      nav.pathway
-        a.pathway__link(href="#") Главная
-        a.pathway__link(href="#") Шины
-        a.pathway__current(href="#") Шины R18
-      section.content
-        h1 Купить в Ростове-на-Дону шины R18 диаметра
-      .category-counter 1 840 товаров
-      .row
-        .col-xl-2.col-lg-3.mb-lg-4
-          include base/filter-tires.pug
-
-        .col-xl-10.col-lg-9.mb-4
-          include base/results-form.pug
-          .category.mb-3
-            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T','sale',false,false,true,false,false,false,false,true,'card_column card_tile')
-            +card('15 000','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','discount',true,true,false,false,false,false,false,true,'card_column card_tile')
-            +banner('content/banners/banner-5.jpg',false,'card_column card_banner card_tile')
-            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55','hit',false,false,false,true,true,false,false,true,'card_column card_tile')
-            +card('','','Зимние шины Yokohama Ice','',false,false,false,false,false,true,true,true,'card_column card_tile')
-            +banner('content/banners/banner-6.jpg', true,'card_column card_banner card_tile')
-            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','sale',false,false,false,false,true,false,false,true,'card_column card_tile')
-            +card('12 337.12','','Зимние шины Yokohama Ice Guard IG55','',false,false,false,false,false,true,true,true,'card_column card_tile')
-            +card('12 337.12','','Зимние шины Ice Guard IG55','discount',true,true,false,false,false,false,false,true,'card_column card_tile')
-            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55','hit',false,false,false,true,true,false,false,true,'card_column card_tile')
-            +card('','','Зимние шины Yokohama Ice','',false,false,false,false,false,true,true,true,'card_column card_tile')
-            +card('','14 000','Шины Yokohama Ice Guard IG55 215/55 R17 98T','',false,false,false,false,false,false,false,true,'card_column card_tile')
-
-          nav.pagination
-            a.pagination__nav.pagination__nav_prev(href="#")
-            span.pagination__item.pagination__item_current 1
-            a.pagination__item(href="#") 2
-            a.pagination__item(href="#") 3
-            a.pagination__item(href="#") 4
-            span.pagination__item.pagination__item_divider ...
-            a.pagination__item(href="#") 57
-            a.pagination__nav.pagination__nav_next(href="#")
-
-      .section.mb-3
-        .section__title Подходящие диски:
-        include category/wheels.pug
-
-      include category/popular.pug
-
-      .section.mb-3
-        .section__title Рекомендуем так же:
-        include category/carousel.pug
-
-      include base/links.pug
-
-      .section
-        .content.content_expanded
-          include base/content.pug
-          .content__footer
-            button.readmore.readmore_btn.readmore_arrow-down(type="button")
+block results__filter
+  .category-counter 1 840 товаров

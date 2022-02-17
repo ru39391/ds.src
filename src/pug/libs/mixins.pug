@@ -5,9 +5,9 @@ mixin icon(icon__name, icon__classname="icon-fluid")
   svg(class=icon__classname)
     use(xlink:href=`/img/icons/icons.svg#icon-${icon__name}`)
 
-mixin radio(radio__index=1, radio__title, radio__checked, radio__name="filter-radio")
+mixin radio(radio__index=1, radio__title, radio__checked, radio__name="filter-radio", radio__labelclassmod)
   input.form__toggler.form__toggler_radio(id=`filter-radio-${radio__index}` name=radio__name type="radio" value="" checked=radio__checked)
-  label.form__label(for=`filter-radio-${radio__index}`)!= radio__title
+  label.form__label(class=radio__labelclassmod for=`filter-radio-${radio__index}`)!= radio__title
 
 mixin slidesNav(slidesNav__prev, slidesNav__next, slidesNav__classmod)
   .slides__nav(class=slidesNav__classmod)
@@ -32,6 +32,8 @@ mixin banner(banner__img, banner__noshadow=false, banner__classmod="card_column 
 mixin card(card__price_old, card__price_new, card__title="Зимние шины Yokohama Ice", card__label, card__warranty=false, card__credit=false, card__card=false, card__delivery=false, card__repair=false, card__winter=true, card__spikes=true, card__oneclick=false, card__classmod="card_column card_slide", card__img="content/cards/card-1.jpg", card__wheel=false)
   if (card__oneclick)
     - var card__oneclick_offset = 'mb-3';
+  else if (card__oneclick) && (card__classmod === 'card_column card_tile')
+    - var card__oneclick_offset = 'mb-sm-3';
   else
     - var card__oneclick_offset = '';
 
@@ -107,7 +109,7 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
       .card__footer
         .card__meta.card__meta_row(class=card__price_classmod)
           .card__price
-            span.card__price-value 7 337.12 
+            span.card__price-value 7 337.12
             | ₽
           if (card__price_old)
             .card__price.card__price_old!= card__price_old

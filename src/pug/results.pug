@@ -2,82 +2,75 @@ extends base
 
 block meta
   - var title = 'Результаты поиска по сайту';
+  - var h1 = 'Поиск по запросу «Нокиан»';
 
 block filter
   .header__footer
     button.filter-toggler(type="button")
-      svg.filter-toggler__icon
-        use(xlink:href="#icon-filter")
+      +icon('filter','filter-toggler__icon')
       span.filter-toggler__title
-        span.filter-toggler__show Показать 
-        span.filter-toggler__hide Скрыть 
+        span.filter-toggler__show Показать
+        span.filter-toggler__hide Скрыть
         | фильтр
 
 block wrapper
-    .container.container_wrapper
-      nav.pathway
-        a.pathway__link(href="#") Главная
-        a.pathway__link(href="#") Шины
-        a.pathway__current(href="#") Шины R18
-      section.content
-        h1 Поиск по запросу «Нокиан»
+  .container.container_wrapper
+    nav.pathway
+      a.pathway__link(href="#") Главная
+      a.pathway__link(href="#") Шины
+      a.pathway__current(href="#") Шины R18
+    section.content
+      h1 #{h1}
+    block results__filter
+      - var resultsRadio = [{index: 1, title: 'Шины (887)', checked: true}, {index: 2, title: 'Мотошины (0)'}, {index: 3, title: 'Диски (67)'}, {index: 4, title: 'АКБ (0)'}, {index: 5, title: 'Масла (0)'}, {index: 6, title: 'Автотовары (238)'}]
       .category-counter 1 840 товаров в 4 каталогах
       form.form.mb-3(action="#")
-        input.form__toggler.form__toggler_radio(id="search-radio-1" name="search-radio" type="radio" value="" checked)
-        label.form__label.form__label_lg(for="search-radio-1") Шины (887)
-        input.form__toggler.form__toggler_radio(id="search-radio-2" name="search-radio" type="radio" value="")
-        label.form__label.form__label_lg(for="search-radio-2") Мотошины (0)
-        input.form__toggler.form__toggler_radio(id="search-radio-3" name="search-radio" type="radio" value="")
-        label.form__label.form__label_lg(for="search-radio-3") Диски (67)
-        input.form__toggler.form__toggler_radio(id="search-radio-4" name="search-radio" type="radio" value="")
-        label.form__label.form__label_lg(for="search-radio-4") АКБ (0)
-        input.form__toggler.form__toggler_radio(id="search-radio-5" name="search-radio" type="radio" value="")
-        label.form__label.form__label_lg(for="search-radio-5") Масла (0)
-        input.form__toggler.form__toggler_radio(id="search-radio-6" name="search-radio" type="radio" value="")
-        label.form__label.form__label_lg(for="search-radio-6") Автотовары (238)
-      .row
-        .col-xl-2.col-lg-3.mb-lg-4
+        each resultsRadio__item in resultsRadio
+          +radio(resultsRadio__item.index, resultsRadio__item.title, resultsRadio__item.checked, 'search-radio', 'form__label_lg')
+    .row
+      .col-xl-2.col-lg-3.mb-lg-4
+        block results__sidebar
           include base/filter-tires.pug
+      .col-xl-10.col-lg-9.mb-4
+        include base/results-form.pug
 
-        .col-xl-10.col-lg-9.mb-4
-          include base/results-form.pug
+        block results__wrapper
+          - var results = [{price__old: '', price__new: '', title: 'Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL', label: 'sale', warranty: false, credit: false, card: false, delivery: false, repair: true, winter: false, spikes: false}, {price__old: '12 337.12', price__new: '', title: 'Зимние шины Yokohama Ice Guard IG55', label: '', warranty: false, credit: false, card: false, delivery: false, repair: false, winter: true, spikes: true}, {price__old: '12 337.12', price__new: '', title: 'Зимние шины Yokohama Ice Guard IG55', label: 'discount', warranty: true, credit: true, card: false, delivery: false, repair: false, winter: false, spikes: false},{price__old: '', price__new: '', title: 'Зимние шины Yokohama Ice Guard IG55 215/55', label: 'hit', warranty: false, credit: false, card: false, delivery: true, repair: true, winter: false, spikes: false}, {price__old: '', price__new: '', title: 'Зимние шины Yokohama Ice', label: '', warranty: false, credit: false, card: false, delivery: false, repair: false, winter: true, spikes: true},{price__old: '', price__new: '14 000', title: 'Шины Yokohama Ice Guard IG55 215/55 R17 98T', label: '', warranty: false, credit: false, card: false, delivery: false, repair: false, winter: false, spikes: false}]
           .category.mb-3
-            include tile/sale.pug
-            include tile/discount.pug
-            include tile/banner3.pug
-            include tile/hit.pug
-            include tile/plain.pug
-            include tile/banner4.pug
-            include tile/sale.pug
-            include tile/plain.pug
-            include tile/discount.pug
-            include tile/hit.pug
-            include tile/plain.pug
-            include tile/plain.pug
-          nav.pagination
-            a.pagination__nav.pagination__nav_prev(href="#")
-            span.pagination__item.pagination__item_current 1
-            a.pagination__item(href="#") 2
-            a.pagination__item(href="#") 3
-            a.pagination__item(href="#") 4
-            span.pagination__item.pagination__item_divider ...
-            a.pagination__item(href="#") 57
-            a.pagination__nav.pagination__nav_next(href="#")
+            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T','sale',false,false,true,false,false,false,false,true,'card_column card_tile')
+            +card('15 000','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','discount',true,true,false,false,false,false,false,true,'card_column card_tile')
+            +banner('content/banners/banner-5.jpg',false,'card_column card_banner card_tile')
+            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55','hit',false,false,false,true,true,false,false,true,'card_column card_tile')
+            +card('','','Зимние шины Yokohama Ice','',false,false,false,false,false,true,true,true,'card_column card_tile')
+            +banner('content/banners/banner-6.jpg', true,'card_column card_banner card_tile')
+            each results__item in results
+              +card(results__item.price__old,results__item.price__new,results__item.title,results__item.label,results__item.warranty,results__item.credit,results__item.card,results__item.delivery,results__item.repair,results__item.winter,results__item.spikes,true,'card_column card_tile')
+        nav.pagination
+          a.pagination__nav.pagination__nav_prev(href="#")
+          span.pagination__item.pagination__item_current 1
+          a.pagination__item(href="#") 2
+          a.pagination__item(href="#") 3
+          a.pagination__item(href="#") 4
+          span.pagination__item.pagination__item_divider ...
+          a.pagination__item(href="#") 57
+          a.pagination__nav.pagination__nav_next(href="#")
 
+    block results__seealso
       .section.mb-3
         .section__title Подходящие диски:
         include category/wheels.pug
 
-      include category/popular.pug
+    include category/popular.pug
 
+    block results__recommended
       .section.mb-3
         .section__title Рекомендуем так же:
         include category/carousel.pug
 
-      include base/links.pug
+    include base/links.pug
 
-      .section
-        .content.content_expanded
-          include base/content.pug
-          .content__footer
-            button.readmore.readmore_btn.readmore_arrow-down(type="button")
+    .section
+      .content.content_expanded
+        include base/content.pug
+        .content__footer
+          button.readmore.readmore_btn.readmore_arrow-down(type="button")
