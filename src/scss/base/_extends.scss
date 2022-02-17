@@ -1,13 +1,7 @@
 %wrapper {
+  @include mw(1600px);
   @include mx(auto);
-  max-width: 1140px;
-  position: relative;
-
-  @include px(15px);
-
-  @include media-breakpoint-up(xl) {
-    @include px(15px);
-  }
+  @include px(2*$grid-gutter-width);
 }
 
 %d-flex {

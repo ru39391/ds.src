@@ -169,18 +169,11 @@ button {
   visibility: hidden;
 }
 
-.container {
-  &.container_wrapper {
-    @media (min-width:$breakpoint__custom) {
-      max-width: 1288px;
-    }
+.wrapper {
+  @extend %wrapper;
 
-    @include media-breakpoint-only(xs) {
-      @include px(16px);
-    }
-  }
-
-  &.container_column {
+  &.wrapper_column {
+  //&.container_column {
     @extend %flex-column;
     justify-content: space-between;
 

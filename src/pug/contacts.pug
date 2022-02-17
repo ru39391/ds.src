@@ -4,7 +4,7 @@ block meta
   - var title = 'Контакты';
 
 block wrapper
-  .container.container_wrapper
+  .wrapper
     nav.pathway
       a.pathway__link(href="#") Главная
       a.pathway__current(href="#") #{title}
@@ -13,7 +13,7 @@ block wrapper
     .row.align-items-start
       .col-xl-3.col-lg-4.order-2.order-lg-1.mb-5.mb-lg-4
         .accordion.active.mb-2
-          .accordion__header 
+          .accordion__header
             button.accordion__toggler(type="button") ДонШина Ростов
           .accordion__body
             .contacts.contacts_list
@@ -48,7 +48,7 @@ block wrapper
                   br
                   | Вс. – Выходной
         .accordion.mb-2
-          .accordion__header 
+          .accordion__header
             button.accordion__toggler(type="button") ДонШина Таганрог
           .accordion__body
             .contacts.contacts_list
@@ -83,7 +83,7 @@ block wrapper
                   br
                   | Вс. – Выходной
         .accordion
-          .accordion__header 
+          .accordion__header
             button.accordion__toggler(type="button") ДонШина Волгоград
           .accordion__body
             .contacts.contacts_list
@@ -119,8 +119,8 @@ block wrapper
                   | Вс. – Выходной
       .section.col-xl-9.col-lg-8.order-1.order-lg-2.mb-5.mb-lg-4
         .section__wrapper.section__wrapper_px.overflow-hidden.p-0
-          script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab61ba54858def5cc58e7cbfdae9ffac5c0d900377f9b5655fa84742b96a9c73d&amp;width=100%25&amp;height=460&amp;lang=ru_RU&amp;scroll=false")  
-      
+          script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab61ba54858def5cc58e7cbfdae9ffac5c0d900377f9b5655fa84742b96a9c73d&amp;width=100%25&amp;height=460&amp;lang=ru_RU&amp;scroll=false")
+
     .section
       .section__wrapper.px-3.px-md-0
         .section__title.text-center.color-brand Вы можете задать нам вопросы и мы ответим в ближайшее
@@ -150,7 +150,7 @@ block wrapper
               .col-md-6.mb-3.mb-md-0 *-поля обязательные для заполнения
               .col-md-6 Нажимая “Подписаться” вы принимаете
                 br
-                | условия 
+                | условия
                 a.color-brand(href="#") Политики конфиденциальности
             .d-flex.justify-content-center.justify-content-lg-end.col-xl-2.col-lg-3.offset-lg-0.col-md-10.offset-md-1
               button.btn.px-5(type="submit") отправить

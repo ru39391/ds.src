@@ -9,12 +9,12 @@ block filter
       svg.filter-toggler__icon
         use(xlink:href="#icon-filter")
       span.filter-toggler__title
-        span.filter-toggler__show Показать 
-        span.filter-toggler__hide Скрыть 
+        span.filter-toggler__show Показать
+        span.filter-toggler__hide Скрыть
         | меню
 
 block wrapper
-  .container.container_wrapper
+  .wrapper
     nav.pathway
       a.pathway__link(href="#") Главная
       a.pathway__current(href="#") #{title}
@@ -39,7 +39,7 @@ block wrapper
                 svg.leftmenu__item-icon
                   use(xlink:href="#icon-gift")
                 span.leftmenu__item-title Бонусные рубли
-                span.leftmenu__item-badge.bg-success 300 
+                span.leftmenu__item-badge.bg-success 300
                   span.text-sm Б.₽.
               a.leftmenu__item(href="#")
                 svg.leftmenu__item-icon

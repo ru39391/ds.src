@@ -1,230 +1,227 @@
 .header {
-    @include offset(0 0 40px,0 0 12px);
-    @include pos(0,0,sticky);
-    right: 0;
-    z-index: 1080;
-    transition: all .3s ease;
-    background: #fff;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12);
-    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.16);
+  @include offset(0 0 40px,0 0 12px);
+  @include pos(0,0,sticky);
+  right: 0;
+  z-index: 1080;
+  transition: all .3s ease;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.16);
 
-    &.header_sticky {
-        padding-bottom: 0;
+  &.header_sticky {
+    padding-bottom: 0;
 
-        .header__top {
-            height: 0;
-            padding: 0;
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .header__wrapper {
-            @include media-breakpoint-up(lg) {
-                @include py(12px,0);
-            }
-
-            @include media-breakpoint-down(md) {
-                flex-wrap: nowrap;
-            }
-        }
-
-        .header__bottom {
-            height: 0;
-            padding: 0;
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .header__col {
-            @include media-breakpoint-down(md) {
-                @include fw(auto);
-                width: auto;
-                max-width: initial;
-            }
-
-            &.header__col_nav {
-                @include media-breakpoint-down(md) {
-                    flex-grow: 1;
-                }
-            }
-        }
-
-        .header__footer {
-            transform: translateY(0);
-        }
-
-        .logo {
-            @include media-breakpoint-down(md) {
-                display: none;
-            }
-        }
+    .header__top {
+      height: 0;
+      padding: 0;
+      opacity: 0;
+      visibility: hidden;
     }
+
+    .header__wrapper {
+      @include media-breakpoint-up(lg) {
+        @include py(12px,0);
+      }
+
+      @include media-breakpoint-down(md) {
+        flex-wrap: nowrap;
+      }
+    }
+
+    .header__bottom {
+      height: 0;
+      padding: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .header__col {
+      @include media-breakpoint-down(md) {
+        @include fw(auto);
+        width: auto;
+        max-width: initial;
+      }
+
+      &.header__col_nav {
+        @include media-breakpoint-down(md) {
+          flex-grow: 1;
+        }
+      }
+    }
+
+    .header__footer {
+      transform: translateY(0);
+    }
+
+    .logo {
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+  }
 }
 
 .header__top {
-    padding: 10px 0;
-    overflow: hidden;
-    background: $color__light;
-    transition: all .3s ease;
+  padding: 10px 0;
+  overflow: hidden;
+  background: $color__light;
+  transition: all .3s ease;
 }
 
 .header__wrapper {
-    @extend %flex-item;
-    @extend .px-sm-0;
-    @extend .container;
-    @extend .container_wrapper;
-    flex-wrap: wrap;
+  @extend %wrapper;
+  @extend %flex-item;
+  flex-wrap: wrap;
 
-    @include media-breakpoint-up(lg) {
-        @include py(20px,0);
-    }
+  @include media-breakpoint-up(lg) {
+    @include py(20px,0);
+  }
 
-    @include media-breakpoint-down(md) {
-        @include py(16px,0);
-    }
+  @include media-breakpoint-down(md) {
+    @include py(16px,0);
+  }
 }
 
 .header__bottom {
-    @extend .container;
-    @extend .container_wrapper;
-    overflow: hidden;
-    transition: all .3s ease;
+  @extend %wrapper;
+  overflow: hidden;
+  transition: all .3s ease;
 }
 
 .header__col {
-    &.header__col_logo {
-        @extend %flex-item;
-        order: 1;
+  &.header__col_logo {
+    @extend %flex-item;
+    order: 1;
 
-        @include media-breakpoint-down(md) {
-            justify-content: center;
-        }
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+    }
+  }
+
+  &.header__col_search {
+    @include media-breakpoint-up(xl) {
+      order: 2;
     }
 
-    &.header__col_search {
-        @include media-breakpoint-up(xl) {
-            order: 2;
-        }
-
-        @include media-breakpoint-only(lg) {
-            order: 3;
-        }
-    
-        @include media-breakpoint-down(md) {
-            order: 2;
-            display: none;
-        }
+    @include media-breakpoint-only(lg) {
+      order: 3;
     }
 
-    &.header__col_nav {
-        @extend %flex-item;
-        order: 1;
-
-        @include media-breakpoint-up(xl) {
-            order: 3;
-        }
-
-        @include media-breakpoint-only(lg) {
-            order: 2;
-        }
-    
-        @include media-breakpoint-down(md) {
-            order: 3;
-            justify-content: center;
-        }
+    @include media-breakpoint-down(md) {
+      order: 2;
+      display: none;
     }
+  }
+
+  &.header__col_nav {
+    @extend %flex-item;
+    order: 1;
+
+    @include media-breakpoint-up(xl) {
+      order: 3;
+    }
+
+    @include media-breakpoint-only(lg) {
+      order: 2;
+    }
+
+    @include media-breakpoint-down(md) {
+      order: 3;
+      justify-content: center;
+    }
+  }
 }
 
 .header__nav {
-    @extend %flex-item;
+  @extend %flex-item;
 
-    @include media-breakpoint-down(md) {
-        justify-content: space-between;
-    }
+  @include media-breakpoint-down(md) {
+    justify-content: space-between;
+  }
 }
 
 .header__nav-item {
-    @extend %btn-default;
-    margin: 0 30px 0 0;
-    transition: all .3s ease;
+  @extend %btn-default;
+  margin: 0 30px 0 0;
+  transition: all .3s ease;
+
+  &:hover {
+    color: $color__brand;
+  }
+
+  &.header__nav-item_col {
+    @extend %flex-column;
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
 
     &:hover {
-        color: $color__brand;
+      .header__nav-icon {
+        background: $color__light;
+      }
     }
-
-    &.header__nav-item_col {
-        @extend %flex-column;
-        margin: 0;
-        text-align: center;
-        white-space: nowrap;
-
-        &:hover {
-            .header__nav-icon {
-                background: $color__light;
-            }
-        }
-    }
+  }
 }
 
 .header__nav-icon {
-    @include wh(24px);
-    padding: 2px 4px;
-    align-self: center;
-    border-radius: 50%;
-    color: $color__brand;
-    transition: all .3s ease;
+  @include wh(24px);
+  padding: 2px 4px;
+  align-self: center;
+  border-radius: 50%;
+  color: $color__brand;
+  transition: all .3s ease;
 }
 
 .header__btn-title {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 20px;
 
-    @include media-breakpoint-up(lg) {
-        display: block;
-    }
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
 }
 
 .header__btn {
-    @extend %flex-item;
-    @extend %btn-theme;
-    padding: 8px 11px;
-    letter-spacing: 0.03em;
+  @extend %flex-item;
+  @extend %btn-theme;
+  padding: 8px 11px;
+  letter-spacing: 0.03em;
 
-    &.header__btn_inverse {
-        @include media-breakpoint-down(md) {
-            @include color($color__brand);
-            height: auto;
-            padding: 0;
-            box-shadow: none;
-            background: #fff;
-        }
+  &.header__btn_inverse {
+    @include media-breakpoint-down(md) {
+      @include color($color__brand);
+      height: auto;
+      padding: 0;
+      box-shadow: none;
+      background: #fff;
     }
+  }
 }
 
 .header__btn-icon {
-    @include fw(18px);
-    @include wh(18px);
+  @include fw(18px);
+  @include wh(18px);
 
-    @include media-breakpoint-up(lg) {
-        margin: 0 8px 0 0;
-    }
+  @include media-breakpoint-up(lg) {
+    margin: 0 8px 0 0;
+  }
 }
 
 .header__btn-title {
-    @include media-breakpoint-down(md) {
-        display: none;
-    }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
 
 .header__footer {
-    transition: all .3s ease;
+  transition: all .3s ease;
 
-    @include media-breakpoint-up(lg) {
-        display: none;
-    }
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
 
-    @include media-breakpoint-down(md) {
-        transform: translateY(12px);
-    }
+  @include media-breakpoint-down(md) {
+    transform: translateY(12px);
+  }
 }
