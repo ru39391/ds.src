@@ -29,18 +29,19 @@ block wrapper
         .col-xl-10.col-lg-9.mb-4
           include base/results-form.pug
           .category.mb-3
-            include tile/sale.pug
-            include tile/discount.pug
-            include tile/banner3.pug
-            include tile/hit.pug
-            include tile/plain.pug
-            include tile/banner4.pug
-            include tile/sale.pug
-            include tile/plain.pug
-            include tile/discount.pug
-            include tile/hit.pug
-            include tile/plain.pug
-            include tile/plain.pug
+            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T','sale',false,false,true,false,false,false,false,true,'card_column card_tile')
+            +card('15 000','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','discount',true,true,false,false,false,false,false,true,'card_column card_tile')
+            +banner('content/banners/banner-5.jpg',false,'card_column card_banner card_tile')
+            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55','hit',false,false,false,true,true,false,false,true,'card_column card_tile')
+            +card('','','Зимние шины Yokohama Ice','',false,false,false,false,false,true,true,true,'card_column card_tile')
+            +banner('content/banners/banner-6.jpg', true,'card_column card_banner card_tile')
+            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','sale',false,false,false,false,true,false,false,true,'card_column card_tile')
+            +card('12 337.12','','Зимние шины Yokohama Ice Guard IG55','',false,false,false,false,false,true,true,true,'card_column card_tile')
+            +card('12 337.12','','Зимние шины Ice Guard IG55','discount',true,true,false,false,false,false,false,true,'card_column card_tile')
+            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55','hit',false,false,false,true,true,false,false,true,'card_column card_tile')
+            +card('','','Зимние шины Yokohama Ice','',false,false,false,false,false,true,true,true,'card_column card_tile')
+            +card('','14 000','Шины Yokohama Ice Guard IG55 215/55 R17 98T','',false,false,false,false,false,false,false,true,'card_column card_tile')
+
           nav.pagination
             a.pagination__nav.pagination__nav_prev(href="#")
             span.pagination__item.pagination__item_current 1

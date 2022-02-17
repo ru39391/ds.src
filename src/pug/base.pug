@@ -1,3 +1,5 @@
+include libs/mixins
+
 block meta
   - var title = '';
 
@@ -201,9 +203,17 @@ html(lang="ru")
 
 //-
     pug/tile - товары и баннеры в плитке на стр. результатов results-tires.html http://dl3.joxi.net/drive/2021/11/04/0050/2358/3311926/26/d2900e3683.jpg
-    pug/tile/wheels - товары и баннеры на стр. результатов results-wheels.html
-    pug/carousel - товары карусели "Рекомедуем также" http://dl3.joxi.net/drive/2021/11/04/0050/2358/3311926/26/ae6f72a0c4.jpg
-    pug/positions - товары блока "Часто выбирают:" http://dl3.joxi.net/drive/2021/11/04/0050/2358/3311926/26/bce77beaf9.jpg
-    pug/category/carousel.pug - "Рекомедуем также", шины
-    pug/category/wheels.pug - "Рекомедуем также", диски
-    pug/category/popular.pug - "Часто выбирают:"
+        + pug/tile/wheels - товары и баннеры на стр. результатов results-wheels.html
+        + pug/carousel - товары карусели "Рекомедуем также" http://dl3.joxi.net/drive/2021/11/04/0050/2358/3311926/26/ae6f72a0c4.jpg
+        + pug/positions - товары блока "Часто выбирают:" http://dl3.joxi.net/drive/2021/11/04/0050/2358/3311926/26/bce77beaf9.jpg
+        + pug/category/carousel.pug - "Рекомедуем также", шины
+        + pug/category/wheels.pug - "Рекомедуем также", диски
+        + pug/category/popular.pug - "Часто выбирают:"
+
+    banner1 - banner-3.jpg
+    banner2 - banner-4.jpg
+    banner3 - banner-5.jpg
+    banner4 - banner-6.jpg (с текстом)
+
+    .mb-sm-3 - для случая card_tile
+    .slides_togglers-next в category/popular.pug

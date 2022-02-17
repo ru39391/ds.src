@@ -1,21 +1,8 @@
+- var recommended = [{price__old: '', price__new: '1 840'},{price__old: ''},{price__old: '12 337.12'},{price__old: '12 337.12', price__new: '', title: 'Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL', label: 'discount', warranty: true, credit: true, card: false, delivery: false, repair: false, winter: false, spikes: false},{price__old: '', price__new: '', title: 'Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL', label: 'sale', warranty: false, credit: false, card: true, delivery: false, repair: false, winter: false, spikes: false},{price__old: '12 337.12', price__new: '', title: 'Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL', label: 'hit', warranty: false, credit: false, card: false, delivery: true, repair: true, winter: false, spikes: false}]
+
 .slides.slides_carousel.swiper-container.pt-1.pb-4
-  .slides__nav
-    button.slides__btn.slides__btn_prev.slides-carousel-prev(type="button")
-      svg.icon-fluid
-        use(xlink:href="#icon-arrow-left")
-    button.slides__btn.slides__btn_next.slides-carousel-next(type="button")
-      svg.icon-fluid
-        use(xlink:href="#icon-arrow-right")
+  +slidesNav
   .swiper-wrapper.align-items-stretch
-    .swiper-slide
-      include ../carousel/newprice.pug
-    .swiper-slide
-      include ../carousel/plain.pug
-    .swiper-slide
-      include ../carousel/plain.pug
-    .swiper-slide
-      include ../carousel/discount.pug
-    .swiper-slide
-      include ../carousel/sale.pug
-    .swiper-slide
-      include ../carousel/hit.pug
+    each recommended__item in recommended
+      .swiper-slide
+        +card(recommended__item.price__old,recommended__item.price__new,recommended__item.title,recommended__item.label,recommended__item.warranty,recommended__item.credit,recommended__item.card,recommended__item.delivery,recommended__item.repair,recommended__item.winter,recommended__item.spikes)

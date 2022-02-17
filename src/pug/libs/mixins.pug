@@ -1,0 +1,132 @@
+mixin img(img__path, img__classname="img-fluid")
+  img(class=img__classname src=`/img/${img__path}` alt=""  title="")
+
+mixin icon(icon__name, icon__classname="icon-fluid")
+  svg(class=icon__classname)
+    use(xlink:href=`/img/icons/icons.svg#icon-${icon__name}`)
+
+mixin radio(radio__index=1, radio__title, radio__checked, radio__name="filter-radio")
+  input.form__toggler.form__toggler_radio(id=`filter-radio-${radio__index}` name=radio__name type="radio" value="" checked=radio__checked)
+  label.form__label(for=`filter-radio-${radio__index}`)!= radio__title
+
+mixin slidesNav(slidesNav__prev, slidesNav__next, slidesNav__classmod)
+  .slides__nav(class=slidesNav__classmod)
+    button.slides__btn.slides__btn_prev.slides-carousel-prev(class=slidesNav__prev type="button")
+      +icon('arrow-left')
+    button.slides__btn.slides__btn_next.slides-carousel-next(class=slidesNav__next type="button")
+      +icon('arrow-right')
+
+mixin banner(banner__img, banner__noshadow=false, banner__classmod="card_column card_banner", banner__title="Запись на шиномонтаж онлайн")
+  if (banner__noshadow)
+    .card(class=banner__classmod)
+      .banner.banner_noshadow
+        +img(banner__img,'img-cover')
+        .banner__inner
+          .banner__title.banner__title_colored.banner__title_xs!= banner__title
+          a.btn(href="#") Записаться
+  else
+    .card(class=banner__classmod)
+      a.card__picture(href="#")
+        +img(banner__img,'img-cover')
+
+mixin card(card__price_old, card__price_new, card__title="Зимние шины Yokohama Ice", card__label, card__warranty=false, card__credit=false, card__card=false, card__delivery=false, card__repair=false, card__winter=true, card__spikes=true, card__oneclick=false, card__classmod="card_column card_slide", card__img="content/cards/card-1.jpg", card__wheel=false)
+  if (card__oneclick)
+    - var card__oneclick_offset = 'mb-3';
+  else
+    - var card__oneclick_offset = '';
+
+  if (card__price_new)
+    - var card__price_classmod = 'align-items-end';
+  else
+    - var card__price_classmod = '';
+
+  .card(class=card__classmod)
+    .card__header
+      a.card__picture(href="#")
+        +img(card__img)
+      .card__meta.card__meta_left
+        if (card__label === 'discount')
+          .card__label.card__label_discount Скидка
+        else if (card__label === 'sale')
+          .card__label.card__label_sale Акция
+        else if (card__label === 'hit')
+          .card__label.card__label_hit Хит
+        .card__features.card__features_col
+          if (card__warranty)
+            .card__features-item
+              span.card__features-icon.bg-info
+                +icon('warranty')
+              span.card__features-title.bg-info Расширеная гарантия
+          if (card__credit)
+            .card__features-item
+              span.card__features-icon.bg-disabled
+                +icon('credit')
+              span.card__features-title.bg-disabled Кредит
+          if (card__card)
+            .card__features-item
+              span.card__features-icon.bg-warning
+                +icon('card')
+              span.card__features-title.bg-warning Топливная карта
+          if (card__delivery)
+            .card__features-item
+              span.card__features-icon
+                +icon('delivery')
+              span.card__features-title Бесплатная доставка
+          if (card__repair)
+            .card__features-item
+              .card__features-content.bg-success
+                .d-flex.align-items-center.pointer-events-none
+                  span.card__features-icon.bg-success
+                    +icon('repair')
+                  span.card__features-title.bg-success Бесплатный шиномотаж
+                .card__features-text
+                  p Акция действует при покупке комплекта шин за наличные (от 4 шт.)
+                  p При наличии на Доватора 11
+                a.card__features-readmore(href="#") Подробнее
+      .card__meta.card__meta_right
+        button.card__btn.card__btn_icon(type="button")
+          +icon('compare','card__btn-icon')
+          span.card__btn-title Сравнить
+        button.card__btn.card__btn_icon(type="button")
+          +icon('favourite','card__btn-icon')
+          span.card__btn-title Добавить в избранное
+      if (!card__wheel)
+        .card__meta.card__meta_row
+          if (card__winter) && (card__spikes)
+            .card__features
+              if (card__winter)
+                .icon-marker.mr-2
+                  +icon('winter')
+              if (card__spikes)
+                .icon-marker
+                  +icon('spikes')
+          .card__params 215 / 55  R16
+    .card__body
+      .card__intro
+        a.card__title(href="#")!= card__title
+      .card__footer
+        .card__meta.card__meta_row(class=card__price_classmod)
+          .card__price
+            span.card__price-value 7 337.12 
+            | ₽
+          if (card__price_old)
+            .card__price.card__price_old!= card__price_old
+              | ₽
+
+          if (card__price_new)
+            .d-flex.flex-column
+              .card__price.card__price_new!= card__price_new
+                | ₽
+              .text-sm при сдаче старого
+        .d-flex.align-items-center.justify-content-between(class=card__oneclick_offset)
+          .recalculate
+            input.recalculate__field(type="number" name="count" value="4")
+            button.recalculate__btn.recalculate__btn_remove(type="button") -
+            .recalculate__value 4
+            button.recalculate__btn.recalculate__btn_add(type="button") +
+          a.btn(href="#") В корзину
+        if (card__oneclick)
+          button.card__btn.card__btn_link.w-100(type="button")
+            span.card__btn-icon
+              +icon('plane')
+            | Купить в один клик

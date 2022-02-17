@@ -1,3 +1,4 @@
+//- удалить
 .card.card_column.card_slide
   .card__header
     a.card__picture(href="#")
@@ -25,13 +26,11 @@
     .card__intro
       a.card__title(href="#") Зимние шины Yokohama Ice
     .card__footer
-      .card__meta.card__meta_row.align-items-end
+      .card__meta.card__meta_row
         .card__price
           span.card__price-value 7 337.12 
           | ₽
-        .d-flex.flex-column
-          .card__price.card__price_new 1 840 ₽
-          .text-sm при сдаче старого
+        .card__price.card__price_old 12 337.12 ₽
       .d-flex.align-items-center.justify-content-between
         .recalculate
           input.recalculate__field(type="number" name="count" value="4")

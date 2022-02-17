@@ -1,26 +1,21 @@
+//- удалить
 .card.card_column.card_slide
   .card__header
     a.card__picture(href="#")
       img.img-fluid(src="../img/content/cards/card-1.jpg" alt="" title="")
     .card__meta.card__meta_left
-      .card__label.card__label_hit хит
-      .card__features.card__features_col 
+      .card__label.card__label_discount Скидка
+      .card__features.card__features_col
         .card__features-item
-          .card__features-content.bg-success
-            .d-flex.align-items-center.pointer-events-none
-              span.card__features-icon.bg-success
-                svg.icon-fluid
-                  use(xlink:href="#icon-repair")
-              span.card__features-title.bg-success Бесплатный шиномотаж
-            .card__features-text
-              p Акция действует при покупке комплекта шин за наличные (от 4 шт.)
-              p При наличии на Доватора 11
-            a.card__features-readmore(href="#") Подробнее
-        .card__features-item
-          span.card__features-icon
+          span.card__features-icon.bg-disabled
             svg.icon-fluid
-              use(xlink:href="#icon-delivery")
-          span.card__features-title Бесплатная доставка
+              use(xlink:href="#icon-credit")
+          span.card__features-title.bg-disabled Кредит
+        .card__features-item
+          span.card__features-icon.bg-info
+            svg.icon-fluid
+              use(xlink:href="#icon-warranty")
+          span.card__features-title.bg-info Расширеная гарантия
     .card__meta.card__meta_right
       button.card__btn.card__btn_icon(type="button")
         svg.card__btn-icon
@@ -40,6 +35,7 @@
         .card__price
           span.card__price-value 7 337.12 
           | ₽
+        .card__price.card__price_old 12 337.12 ₽
       .d-flex.align-items-center.justify-content-between
         .recalculate
           input.recalculate__field(type="number" name="count" value="4")
