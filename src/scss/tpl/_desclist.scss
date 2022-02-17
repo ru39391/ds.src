@@ -8,7 +8,7 @@
 }
 
 .desclist__item-title {
-    @extend %h6;
+    @include h6;
     @extend .px-0;
     display: block;
     overflow: hidden;
@@ -17,10 +17,10 @@
 }
 
 .desclist__item-value {
-    @extend %h5;
+    @include h5;
 
     &.desclist__item-value_lg {
-        @extend %h3;
+        @include h3;
         font-weight: bold;
     }
 }

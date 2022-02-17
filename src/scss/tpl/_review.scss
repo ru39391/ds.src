@@ -21,7 +21,7 @@
 }
 
 .review__title {
-    @extend %h4;
+    @include h4;
     display: block;
     margin: 0 0 12px;
     color: $color__brand;
@@ -32,5 +32,5 @@
 }
 
 .review__content {
-    @extend %h5;
+    @include h5;
 }

@@ -44,7 +44,7 @@
             grid-column-end: 5;
         }
     }
-    
+
     &:nth-child(5n+5) {
         @include media-breakpoint-up(lg) {
             grid-column-start: 5;
@@ -74,7 +74,7 @@
         }
 
         .sale-item__date {
-            @extend %h5;
+            @include h5;
             @include pos(-10px,32px);
             padding: 0 8px;
         }
@@ -110,7 +110,7 @@
 }
 
 .sale-item__title {
-    @extend %h2;
+    @include h2;
     font-weight: bold;
     display: block;
 }

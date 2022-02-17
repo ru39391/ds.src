@@ -8,8 +8,8 @@
 
 .search__field {
     @include fw(100%);
-    @include size(100%,40px);
-    @include fs-lh(16px,22px);
+    @include wh(100%,40px);
+    @include fs-lh(1rem,1.375rem);
     letter-spacing: 0.05em;
     padding: 8px 0 8px 14px;
     border: 0;
@@ -20,7 +20,7 @@
 .search__btn {
     @extend %btn-default;
     @include fw(18px);
-    @include size(18px);
+    @include wh(18px);
     position: absolute;
     top: 50%;
     right: 14px;

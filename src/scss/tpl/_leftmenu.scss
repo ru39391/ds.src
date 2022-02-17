@@ -8,7 +8,7 @@
 }
 
 .leftmenu__item {
-    @extend %h4;
+    @include h4;
     @extend %flex-item;
     @include border(0 0 1px,$color__border);
     padding: 12px 16px 12px 32px;
@@ -35,7 +35,7 @@
 }
 
 .leftmenu__item-badge {
-    @extend %h5;
+    @include h5;
     color: #fff;
     line-height: 20px;
     white-space: nowrap;

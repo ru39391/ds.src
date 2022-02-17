@@ -6,7 +6,7 @@
         position: relative;
 
         h1 {
-            @extend %h1;
+            @include h1;
         }
     }
 }
@@ -78,18 +78,18 @@
 }
 
 .section__title {
-    @extend %h2;
+    @include h2;
     font-weight: bold;
     margin: 0 0 24px;
 
     &.section__title_sm {
-        @extend %h3;
+        @include h3;
         margin: 0 0 12px;
     }
 }
 
 .section__intro {
-    @extend %h4;
+    @include h4;
     margin: 0 0 32px;
 }
 
@@ -126,7 +126,7 @@
         @include media-breakpoint-only(md) {
             margin-top: -40px;
         }
-    
+
         @include media-breakpoint-down(sm) {
             margin-top: -24px;
         }
@@ -161,7 +161,7 @@
 }
 
 .section__row {
-    @extend %h5;
+    @include h5;
     @include offset(0 -32px,8px 32px);
     @include border(1px 0 0,$color__border);
     display: block;

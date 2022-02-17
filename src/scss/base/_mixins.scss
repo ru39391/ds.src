@@ -1,113 +1,137 @@
 @mixin before {
-    position: relative;
+  position: relative;
 
-    &:before {
-        content: '';
-        position: absolute;
-    }
+  &:before {
+    content: '';
+    position: absolute;
+  }
 }
 
 @mixin mw($mw,$width:100%) {
-    width: $width;
-    max-width: $mw;
+  width: $width;
+  max-width: $mw;
 }
 
 @mixin wh($width,$height:$width) {
-    width: $width;
-    height: $height;
+  width: $width;
+  height: $height;
 }
 
 @mixin fw($fw) {
-    flex: 0 0 $fw;
-    max-width: $fw;
+  flex: 0 0 $fw;
+  max-width: $fw;
 }
 
 @mixin offset($margin,$padding) {
-    margin: $margin;
-    padding: $padding;
+  margin: $margin;
+  padding: $padding;
 }
 
 @mixin px($px__l,$px__r:$px__l) {
-    padding: {
-        left: $px__l;
-        right: $px__r;
-    }
+  padding: {
+    left: $px__l;
+    right: $px__r;
+  }
 }
 
 @mixin py($py__t,$py__b:$py__t) {
-    padding: {
-        top: $py__t;
-        bottom: $py__b;
-    }
+  padding: {
+    top: $py__t;
+    bottom: $py__b;
+  }
 }
 
 @mixin mx($mx__l,$mx__r:$mx__l) {
-    margin: {
-        left: $mx__l;
-        right: $mx__r;
-    }
+  margin: {
+    left: $mx__l;
+    right: $mx__r;
+  }
 }
 
 @mixin my($mx__t,$mx__b:$mx__t) {
-    margin: {
-        top: $mx__t;
-        bottom: $mx__b;
-    }
+  margin: {
+    top: $mx__t;
+    bottom: $mx__b;
+  }
 }
 
 @mixin pos($pt,$pl,$pp:absolute) {
-    top: $pt;
-    left: $pl;
-    position: $pp;
+  top: $pt;
+  left: $pl;
+  position: $pp;
 }
 
 @mixin border($bw,$bc,$bs:solid) {
-    border: {
-        width: $bw;
-        color: $bc;
-        style: $bs;
-    }
+  border: {
+    width: $bw;
+    color: $bc;
+    style: $bs;
+  }
 }
 
 @mixin color($color){
-    color: $color;
+  color: $color;
 
-    &:hover,
-    &:focus {
-        color: $color;
-    }
+  &:hover,
+  &:focus {
+    color: $color;
+  }
 }
 
 @mixin bg($bgs,$bgp:0 0) {
-    background: {
-        size: $bgs;
-        position: $bgp;
-        repeat: no-repeat;
-        color: rgba(0,0,0,0);
-    }
+  background: {
+    size: $bgs;
+    position: $bgp;
+    repeat: no-repeat;
+    color: rgba(0,0,0,0);
+  }
 }
 
 @mixin grad($bg__top,$bg__bottom) {
-    background: $bg__top;
-    background: -moz-linear-gradient(top,  $bg__top 0%, $bg__bottom 100%);
-    background: -webkit-linear-gradient(top,  $bg__top 0%,$bg__bottom 100%);
-    background: linear-gradient(to bottom,  $bg__top 0%,$bg__bottom 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bg__top', endColorstr='$bg__bottom',GradientType=0 );
+  background: $bg__top;
+  background: -moz-linear-gradient(top,  $bg__top 0%, $bg__bottom 100%);
+  background: -webkit-linear-gradient(top,  $bg__top 0%,$bg__bottom 100%);
+  background: linear-gradient(to bottom,  $bg__top 0%,$bg__bottom 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bg__top', endColorstr='$bg__bottom',GradientType=0 );
 }
 
 @mixin font($fs,$fw) {
-    font: {
-        size: $fs;
-        weight: $fw;
-    }
+  font: {
+    size: $fs;
+    weight: $fw;
+  }
 }
 
 @mixin fs-lh($fs,$lh) {
-    font-size: $fs;
-    line-height: $lh;
+  font-size: $fs;
+  line-height: $lh;
 }
 
 @mixin inline-block($va:top) {
-    display: inline-block;
-    vertical-align: $va;
+  display: inline-block;
+  vertical-align: $va;
+}
+
+@mixin h1 {
+  @include fs-lh(2.25rem,2.5rem);
+}
+
+@mixin h2 {
+  @include fs-lh(1.5rem,1.75rem);
+}
+
+@mixin h3 {
+  @include fs-lh(1.125rem,1.5rem);
+}
+
+@mixin h4 {
+  @include fs-lh(1rem,1.125rem);
+}
+
+@mixin h5 {
+  @include fs-lh(0.875rem,1.375rem);
+}
+
+@mixin h6 {
+  @include fs-lh(0.75rem,1);
 }

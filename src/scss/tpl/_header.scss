@@ -167,7 +167,7 @@
 }
 
 .header__nav-icon {
-    @include size(24px);
+    @include wh(24px);
     padding: 2px 4px;
     align-self: center;
     border-radius: 50%;
@@ -204,7 +204,7 @@
 
 .header__btn-icon {
     @include fw(18px);
-    @include size(18px);
+    @include wh(18px);
 
     @include media-breakpoint-up(lg) {
         margin: 0 8px 0 0;

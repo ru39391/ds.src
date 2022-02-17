@@ -1,318 +1,318 @@
 body {
 	font: $font-size_default $font-family_default;
-    font-weight: 400;
+  font-weight: 400;
 	line-height: $line-height_default;
-    color: $color__text_default;
+  color: $color__text_default;
 }
 
 h1 {
-    @extend %title-default;
+  @extend %title-default;
 }
 
 p {
-    @extend %h5;
+  @include h5;
 }
 
 a {
-    @extend %link-default;
+  @extend %link-default;
 }
 
 input {
-    outline: 0;
-    outline: none;
+  outline: 0;
+  outline: none;
 }
 
 button {
+  outline: 0;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
     outline: 0;
     cursor: pointer;
-
-    &:hover,
-    &:focus {
-        outline: 0;
-        cursor: pointer;
-    }
+  }
 }
 
 .color-inherit {
-    @include color(inherit);
+  @include color(inherit);
 }
 
 .color-white {
-    @include color(#fff);
+  @include color(#fff);
 }
 
 .color-light {
-    @include color($color__light);
+  @include color($color__light);
 }
 
 .color-brand {
-    @include color($color__brand);
+  @include color($color__brand);
 }
 
 .color-success {
-    @include color($color__success);
+  @include color($color__success);
 }
 
 .color-disabled {
-    @include color($color__disabled);
+  @include color($color__disabled);
 }
 
 .text-underline {
-    text-decoration: underline;
+  text-decoration: underline;
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .h1 {
-    @extend %h1;
+  @include h1;
 }
 
 .h2 {
-    @extend %h2;
+  @include h2;
 }
 
 .h3 {
-    @extend %h3;
+  @include h3;
 }
 
 .h4 {
-    @extend %h4;
+  @include h4;
 }
 
 .h5 {
-    @extend %h5;
+  @include h5;
 }
 
 .h6 {
-    @extend %h6;
+  @include h6;
 }
 
 .zi-1 {
-    @extend %zi-1;
+  @extend %zi-1;
 }
 
 .zi-2 {
-    @extend %zi-2;
+  @extend %zi-2;
 }
 
 .list-marked {
-    li {
-        margin: 0 0 24px;
-        list-style-type: none !important;
+  li {
+    margin: 0 0 24px;
+    list-style-type: none !important;
 
-        &:before {
-            @include wh(8px);
-            @include inline-block;
-            content: '';
-            border-radius: 50%;
-            margin: 8px 4px 0 0;
-            background: $color__brand;
-        }
+    &:before {
+      @include wh(8px);
+      @include inline-block;
+      content: '';
+      border-radius: 50%;
+      margin: 8px 4px 0 0;
+      background: $color__brand;
     }
+  }
 }
 
 .icons {
-    display: none;
+  display: none;
 }
 
 .icon-fluid {
-    @include wh(100%);
-    pointer-events: none;
+  @include wh(100%);
+  pointer-events: none;
 }
 
 .icon-marker {
-    @include fw(16px);
-    @include wh(16px);
-    pointer-events: none;
+  @include fw(16px);
+  @include wh(16px);
+  pointer-events: none;
 }
 
 .img-cover {
-    @include wh(100%);
-    object-fit: cover;
+  @include wh(100%);
+  object-fit: cover;
 }
 
 .border-radius {
-    border-radius: 8px;
+  border-radius: 8px;
 }
 
 .pointer-events-none {
-    pointer-events: none !important; 
+  pointer-events: none !important;
 }
 
 .w-auto {
-    width: auto !important; 
+  width: auto !important;
 }
 
 .w-100 {
-    width: 100% !important; 
+  width: 100% !important;
 }
 
 .h-auto {
-    height: auto !important; 
+  height: auto !important;
 }
 
 .h-100 {
-    height: 100% !important; 
+  height: 100% !important;
 }
 
 .h-100vh {
-    height: 100vh !important; 
+  height: 100vh !important;
 }
 
 .overflow-hidden {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .container {
-    &.container_wrapper {
-        @media (min-width:$breakpoint__custom) {
-            max-width: 1288px;
-        }
-
-        @include media-breakpoint-only(xs) {
-            @include px(16px);
-        }
+  &.container_wrapper {
+    @media (min-width:$breakpoint__custom) {
+      max-width: 1288px;
     }
 
-    &.container_column {
-        @extend %flex-column;
-        justify-content: space-between;
-
-        @include media-breakpoint-up(md) {
-            @include py(40px);
-            min-height: 320px;
-        }
-    
-        @include media-breakpoint-down(sm) {
-            @include py(24px);
-        }
+    @include media-breakpoint-only(xs) {
+      @include px(16px);
     }
+  }
+
+  &.container_column {
+    @extend %flex-column;
+    justify-content: space-between;
+
+    @include media-breakpoint-up(md) {
+      @include py(40px);
+      min-height: 320px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      @include py(24px);
+    }
+  }
 }
 
 .bg-info {
-    background: $color__info !important;
+  background: $color__info !important;
 }
 
 .bg-brand {
-    background: $color__brand !important;
+  background: $color__brand !important;
 }
 
 .bg-success {
-    background: $color__success !important;
+  background: $color__success !important;
 }
 
 .bg-warning {
-    background: $color__warning !important;
+  background: $color__warning !important;
 }
 
 .bg-disabled {
-    background: $color__disabled !important;
+  background: $color__disabled !important;
 }
 
 .logo {
-    @extend %color-brand;
-    @include inline-block;
-    @include fw(100px);
-    @include size(100px,48px);
-    color: $color__brand;
+  @extend %color-brand;
+  @include inline-block;
+  @include fw(100px);
+  @include wh(100px,48px);
+  color: $color__brand;
 }
 
 .toggler {
-    @extend %toggler-theme;
+  @extend %toggler-theme;
 
-    &.active {
-        @extend %toggler-theme-current;
-    }
+  &.active {
+    @extend %toggler-theme-current;
+  }
 
-    &.toggler_success {
-        @extend %toggler-theme-success;
-    }
+  &.toggler_success {
+    @extend %toggler-theme-success;
+  }
 }
 
 .icon-rounded {
-    @include wh(48px);
-    @include fw(48px);
-    padding: 8px;
-    border-radius: 50%;
-    color: $color__brand;
-    background: $color__light;
+  @include wh(48px);
+  @include fw(48px);
+  padding: 8px;
+  border-radius: 50%;
+  color: $color__brand;
+  background: $color__light;
 }
 
 .readmore {
-    @extend %btn-default;
-    @include before;
-    padding: 0 26px 0 0;
+  @extend %btn-default;
+  @include before;
+  padding: 0 26px 0 0;
+  transition: all .3s ease;
+
+  &:hover,
+  &.current {
+    color: $color__brand;
+  }
+
+  &:before {
+    @include fw(20px);
+    @include wh(20px);
+    top: 50%;
+    right: 0;
+    margin: -8px 0 0;
+    border-radius: 50%;
+    background: $color__brand;
     transition: all .3s ease;
+  }
 
-    &:hover,
-    &.current {
-        color: $color__brand;
-    }
+  &:after {
+    @include border(4px 0 4px 4px,rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #fff);
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    margin: -2px 0 0;
+    transition: all .3s ease;
+  }
 
-    &:before {
-        @include fw(20px);
-        @include wh(20px);
-        top: 50%;
-        right: 0;
-        margin: -8px 0 0;
-        border-radius: 50%;
-        background: $color__brand;
-        transition: all .3s ease;
-    }
+  &.readmore_btn {
+    @include wh(22px,26px);
+    padding: 0;
+  }
 
+  &.readmore_arrow-down {
     &:after {
-        @include border(4px 0 4px 4px,rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #fff);
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 7px;
-        margin: -2px 0 0;
-        transition: all .3s ease;
+      @include border(4px 4px 0,#fff rgba(0,0,0,0) rgba(0,0,0,0));
+      right: 6px;
+      margin: 0;
     }
+  }
 
-    &.readmore_btn {
-        @include wh(22px,26px);
-        padding: 0;
-    }
-
-    &.readmore_arrow-down {
-        &:after {
-            @include border(4px 4px 0,#fff rgba(0,0,0,0) rgba(0,0,0,0));
-            right: 6px;
-            margin: 0;
-        }
-    }
-
-    .text-lg {
-        @extend %h4;
-    }
+  .text-lg {
+    @include h4;
+  }
 }
 
 /* result */
 .result-item {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
 
 .result-item__pic {
-    display: block;
-    margin: 0 0 12px;
+  display: block;
+  margin: 0 0 12px;
 }
 
 .result-item__title {
-    display: block;
+  display: block;
 
-    @include media-breakpoint-up(lg) {
-        @include fs-lh(14px,22px);
-    }
+  @include media-breakpoint-up(lg) {
+    @include h5;
+  }
 
-    @include media-breakpoint-down(md) {
-        @include fs-lh(12px,1);
-    }
+  @include media-breakpoint-down(md) {
+    @include h6;
+  }
 }

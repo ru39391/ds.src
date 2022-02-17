@@ -1,61 +1,61 @@
 .contacts {
-    @extend %flex-item;
+  @extend %flex-item;
 
-    @include media-breakpoint-up(lg) {
-        justify-content: space-between;
+  @include media-breakpoint-up(lg) {
+    justify-content: space-between;
+  }
+
+  &.contacts_list {
+    @extend %flex-column;
+    align-items: flex-start;
+
+    .contacts__item {
+      margin: 0 0 4px;
     }
-
-    &.contacts_list {
-        @extend %flex-column;
-        align-items: flex-start;
-
-        .contacts__item {
-            margin: 0 0 4px;
-        }
-    }
+  }
 }
 
 .contacts__item {
-    @extend %h5;
-    @extend %flex-item;
-    margin: 0 24px 0 0;
-    white-space: nowrap;
+  @include h5;
+  @extend %flex-item;
+  margin: 0 24px 0 0;
+  white-space: nowrap;
 
-    &.contacts__item_wrap {
-        white-space: normal;
+  &.contacts__item_wrap {
+    white-space: normal;
+  }
+
+  &.contacts__item_inverse {
+    color: #fff;
+
+    .contacts__item-icon {
+      color: #fff;
+    }
+  }
+
+  &.contacts__item_lg {
+    @include h3;
+    font-weight: bold;
+  }
+
+  &.contacts__item_notitle {
+    .contacts__item-icon {
+      @include media-breakpoint-down(md) {
+        margin-right: 0;
+      }
     }
 
-    &.contacts__item_inverse {
-        color: #fff;
-
-        .contacts__item-icon {
-            color: #fff;
-        }
+    .contacts__item-title {
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
-
-    &.contacts__item_lg {
-        @extend %h3;
-        font-weight: bold;
-    }
-
-    &.contacts__item_notitle {
-        .contacts__item-icon {
-            @include media-breakpoint-down(md) {
-                margin-right: 0;
-            }
-        }
-
-        .contacts__item-title {
-            @include media-breakpoint-down(md) {
-                display: none;
-            }
-        }
-    }
+  }
 }
 
 .contacts__item-icon {
-    @extend %color-brand;
-    @include fw(20px);
-    @include size(20px);
-    margin: 0 8px 0 0;
+  @extend %color-brand;
+  @include fw(20px);
+  @include wh(20px);
+  margin: 0 8px 0 0;
 }

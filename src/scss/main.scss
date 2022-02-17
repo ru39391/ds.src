@@ -11,9 +11,8 @@ $grid-gutter-width: 8px;
 @import '~bootstrap/scss/utilities/borders';
 //@import '~bootstrap/scss/utilities/display';
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
-
 /* base */
+@import 'base/fonts';
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/extends';

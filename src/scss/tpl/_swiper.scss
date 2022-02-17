@@ -155,7 +155,7 @@
 .slides__btn {
     @extend %btn-default;
     @extend %flex-column;
-    @include size(40px);
+    @include wh(40px);
     @include offset(-25px 0 0,12px 14px);
     position: absolute;
     top: 50%;
@@ -188,7 +188,7 @@
     }
 
     &.slides__btn_sm {
-        @include size(28px);
+        @include wh(28px);
         @include offset(-18px 0 0,8px 6px 8px 4px);
 
         &.slides__btn_next {
@@ -202,7 +202,7 @@
 }
 
 .swiper-slide {
-    @include size(auto);
+    @include wh(auto);
     z-index: 1;
     box-sizing: border-box;
 

@@ -16,10 +16,10 @@
             &:before {
                 opacity: 0;
             }
-        
+
             &:after {
                 opacity: 0;
-            } 
+            }
         }
 
         .accordion__body {
@@ -38,7 +38,7 @@
 }
 
 .accordion__toggler {
-    @extend %h3;
+    @include h3;
     @extend .readmore;
     display: block;
     width: 100%;

@@ -1,5 +1,5 @@
 .heading {
-    @extend %h6;
+    @include h6;
     @extend %flex-item;
     margin-bottom: 8px;
     position: relative;

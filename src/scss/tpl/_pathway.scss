@@ -1,25 +1,25 @@
 .pathway {
-    @include fs-lh(12px,1);
+  @include h6;
 
-    @include media-breakpoint-up(lg) {
-        margin: 0 0 28px;
-    }
+  @include media-breakpoint-up(lg) {
+    margin: 0 0 28px;
+  }
 
-    @include media-breakpoint-down(md) {
-        margin: 0 0 16px;
-    }
+  @include media-breakpoint-down(md) {
+    margin: 0 0 16px;
+  }
 }
 
 .pathway__link {
-    @include inline-block;
-    margin: 0 4px 0 0;
+  @include inline-block;
+  margin: 0 4px 0 0;
 
-    &:after {
-        content: '/';
-        margin: 0 0 0 4px;
-    }
+  &:after {
+    content: '/';
+    margin: 0 0 0 4px;
+  }
 }
 
 .pathway__current {
-    @include inline-block;
+  @include inline-block;
 }

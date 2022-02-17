@@ -14,6 +14,6 @@
 
 .menu__icon {
     @include fw(8px);
-    @include size(8px);
+    @include wh(8px);
     margin: 0 0 0 4px;
 }

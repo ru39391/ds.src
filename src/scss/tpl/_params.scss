@@ -1,5 +1,5 @@
 .params {
-    @extend %h6;
+    @include h6;
     @include border(0 0 1px,#E1DDDD);
     margin: 0 -16px;
 }
@@ -16,5 +16,5 @@
 }
 
 .params__value {
-    @extend %h5;
+    @include h5;
 }

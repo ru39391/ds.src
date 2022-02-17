@@ -13,7 +13,7 @@
 
 .recalculate__btn {
     @extend %btn-default;
-    @include fs-lh(16px,22px);
+    @include fs-lh(1rem,1.375rem);
     font-weight: bold;
     height: 40px;
     flex-grow: 1;
@@ -31,7 +31,7 @@
 .recalculate__value {
     @extend %flex-item;
     @include fw(18px);
-    @include fs-lh(16px,22px);
+    @include fs-lh(1rem,1.375rem);
     height: 40px;
     color: #fff;
     justify-content: center;

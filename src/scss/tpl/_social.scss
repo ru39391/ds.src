@@ -6,7 +6,7 @@
 .social__item {
     @extend %color-brand;
     @include fw(20px);
-    @include size(20px);
+    @include wh(20px);
 
     &:last-child {
         margin-right: 0;
