@@ -1,0 +1,50 @@
+extends base
+
+block meta
+  - var title = 'Статьи (списком)';
+
+block wrapper
+  .wrapper
+    nav.pathway
+      a.pathway__link(href="#") Главная
+      a.pathway__link(href="#") Шины
+      a.pathway__current(href="#") Шины R18
+    section.row
+      .content.col-lg-5.col-md-6
+        h1 #{title}
+      form.form.col-lg-7.col-md-6.d-flex.align-items-center.justify-content-end.px-0.mb-3(action="#")
+        .col-xl-4.col-lg-5.col-md-8
+          .form__select
+            select.form__select-options
+              option По умолчанию
+              option По возрастанию цены
+              option По убыванию цены
+              option По популярности
+        .col-xl-2.col-lg-3.d-none.d-lg-flex.align-items-center.justify-content-end
+          button.form__view.mr-3(type="button")
+            +icon('list')
+          button.form__view.active(type="button")
+            +icon('tile')
+
+    - var articles = [{img: 'content/media/media-1.jpg', date: '23.10.2021', title: 'Как зарядить аккумулятор автомобиля зарядным устройством', intro: 'Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...'},{img: 'content/media/media-1.jpg', date: '23.10.2021', title: 'Как зарядить аккумулятор автомобиля зарядным устройством', intro: 'Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...'},{img: 'content/media/media-1.jpg', date: '23.10.2021', title: 'Как зарядить аккумулятор автомобиля зарядным устройством', intro: 'Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...'},{img: 'content/media/media-1.jpg', date: '23.10.2021', title: 'Как зарядить аккумулятор автомобиля зарядным устройством', intro: 'Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...'},{img: 'content/media/media-1.jpg', date: '23.10.2021', title: 'Как зарядить аккумулятор автомобиля зарядным устройством', intro: 'Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...'},{img: 'content/media/media-1.jpg', date: '23.10.2021', title: 'Как зарядить аккумулятор автомобиля зарядным устройством', intro: 'Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...'},{img: 'content/media/media-1.jpg', date: '23.10.2021', title: 'Как зарядить аккумулятор автомобиля зарядным устройством', intro: 'Аккумулятор автомобиля — как правильно зарядить Аккумулятор автомобиля — один из ключевых элементов. Он используется для запуска мотора и служит источником питания бортовой сети. Важно знать, как заряжать аккумуляторную батарею. Это поможет...'}]
+
+    .category.category_list.mb-3
+      block articles__wrapper
+        each articles__item in articles
+          .media.media_shadow.media_row
+            a.media__picture.mb-4.mb-md-0(href="#")
+              +img(articles__item.img, 'img-cover')
+            .media__meta
+              .media__date!= articles__item.date
+              a.media__title.d-block.font-weight-bold.mb-3(href="#")!= articles__item.title
+              .media__intro.h5!= articles__item.intro
+    .section.text-center.mb-5
+      .section__wrapper.py-3
+        a.readmore.readmore_arrow-down.color-brand(href="#")
+          span.text-lg Показать еще
+
+    .section.mb-3
+      .section__title Рекомендуем:
+      include category/carousel.pug
+
+    include base/links.pug

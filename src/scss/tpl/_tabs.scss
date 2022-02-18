@@ -104,10 +104,6 @@
 .tabs__nav-title {
   @include h3;
   font-weight: bold;
-
-  &.tabs__nav-title_upp {
-    text-transform: uppercase;
-  }
 }
 
 .tabs__content {
