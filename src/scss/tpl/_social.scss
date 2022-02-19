@@ -1,31 +1,23 @@
 .social {
-    @extend %flex-item;
-    flex-wrap: wrap;
+  @extend %flex-item;
+  flex-wrap: wrap;
 }
 
 .social__item {
-    @extend %color-brand;
-    @include fw(20px);
-    @include wh(20px);
+  @extend %color-brand;
+  @include fw(20px);
+  @include wh(20px);
 
-    &:last-child {
-        margin-right: 0;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.social__item_inverse {
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      color: #fff;
     }
-
-    @include media-breakpoint-up(lg) {
-        margin: 0 16px 0 0;
-    }
-
-    @include media-breakpoint-down(md) {
-        margin: 0 24px 0 0;
-    }
-
-    &.social__item_inverse {
-        color: #fff;
-
-        &:hover,
-        &:focus {
-            color: #fff;
-        }
-    }
+  }
 }

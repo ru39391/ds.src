@@ -2,7 +2,7 @@
   overflow: hidden;
   position: relative;
   border-radius: 8px;
-  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
 
   @include media-breakpoint-up(lg) {
     height: 100%;
@@ -14,7 +14,7 @@
     box-shadow: none;
 
     @include media-breakpoint-down(md) {
-      margin-bottom: 40px;
+      margin-bottom: 2.5rem;
     }
   }
 

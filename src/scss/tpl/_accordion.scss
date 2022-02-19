@@ -1,14 +1,14 @@
 .accordion {
     border-radius: 8px;
     background: #fff;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.16);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .16);
 
     &.active {
         padding: 0 0 26px;
 
         .accordion__header {
-            @include py(16px,12px);
-            margin: 0 0 24px;
+            @include py(1rem,.75rem);
+            margin: 0 0 1.5rem;
             border-color: $color__border;
         }
 

@@ -3,7 +3,7 @@
     overflow: hidden;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.16);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, .16);
 
     &:nth-child(5n+1) {
         @include media-breakpoint-up(lg) {

@@ -14,7 +14,7 @@
 .section__wrapper {
     @include py(40px);
     border-radius: 8px;
-    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
 
     @include media-breakpoint-up(lg) {
         height: 100%;

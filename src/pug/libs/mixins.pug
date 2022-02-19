@@ -31,20 +31,23 @@ mixin banner(banner__img, banner__noshadow=false, banner__classmod="card_column 
 
 mixin card(card__price_old, card__price_new, card__title="Зимние шины Yokohama Ice", card__label, card__warranty=false, card__credit=false, card__card=false, card__delivery=false, card__repair=false, card__winter=true, card__spikes=true, card__oneclick=false, card__classmod="card_column card_slide", card__img="content/cards/card-1.jpg", card__wheel=false)
   if (card__oneclick)
-    - var card__oneclick_offset = 'mb-3';
-  else if (card__oneclick) && (card__classmod === 'card_column card_tile')
-    - var card__oneclick_offset = 'mb-sm-3';
-  else
-    - var card__oneclick_offset = '';
+    case (card__classmod === 'card_column card_tile')
+      when true
+        - var card__oneclick_offset = 'mb-sm-3';
+      when false
+        - var card__oneclick_offset = 'mb-3';
 
   if (card__price_new)
     - var card__price_classmod = 'align-items-end';
+
+  if (card__classmod === 'card_column card_tile')
+    - var card__header_offset = 'mb-sm-3';
   else
-    - var card__price_classmod = '';
+    - var card__header_offset = 'mb-3';
 
   .card(class=card__classmod)
-    .card__header
-      a.card__picture(href="#")
+    .card__header(class=card__header_offset)
+      a.card__picture.mb-2(href="#")
         +img(card__img)
       .card__meta.card__meta_left
         if (card__label === 'discount')
@@ -93,7 +96,7 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
           +icon('favourite','card__btn-icon')
           span.card__btn-title Добавить в избранное
       if (!card__wheel)
-        .card__meta.card__meta_row
+        .card__meta.card__meta_row.mb-0
           if (card__winter) && (card__spikes)
             .card__features
               if (card__winter)
@@ -105,9 +108,9 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
           .card__params 215 / 55  R16
     .card__body
       .card__intro
-        a.card__title(href="#")!= card__title
+        a.card__title.mb-2(href="#")!= card__title
       .card__footer
-        .card__meta.card__meta_row(class=card__price_classmod)
+        .card__meta.card__meta_row.mb-2(class=card__price_classmod)
           .card__price
             span.card__price-value 7 337.12
             | ₽

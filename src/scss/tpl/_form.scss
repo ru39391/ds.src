@@ -3,7 +3,7 @@
         padding: 0 0 32px;
         background: #fff;
         border-radius: 8px;
-        box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
+        box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
     }
 
     &.form_filter {
@@ -13,7 +13,7 @@
             box-shadow: none;
             margin: 0 0 32px;
             border-radius: 0 0 8px 8px;
-            box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
+            box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
         }
 
         .form__header {
@@ -58,7 +58,7 @@
         margin-bottom: 12px;
         background: #fff;
         border-radius: 8px;
-        box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
+        box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
     }
 }
 
@@ -116,7 +116,7 @@
     transition: all .3s ease;
 
     &.form__label_title {
-        @include fs-lh(0.75rem,1.125rem);
+        @include fs-lh(.75rem,1.125rem);
         pointer-events: none;
 
         @include media-breakpoint-up(md) {
@@ -130,7 +130,7 @@
 
     &.form__label_plain {
         @include pos(-18px,8px);
-        @include fs-lh(0.75rem,1.125rem);
+        @include fs-lh(.75rem,1.125rem);
         color: $color__disabled;
         cursor: default;
     }
@@ -162,7 +162,7 @@
                 justify-content: center;
                 color: $color__brand;
                 background: $color__light;
-                box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 0.16);
+                box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, .16);
 
                 .icon-fluid {
                     opacity: 0;
@@ -170,7 +170,7 @@
             }
 
             .form__label-title {
-                @include fs-lh(0.75rem,1rem);
+                @include fs-lh(.75rem,1rem);
             }
         }
 
@@ -240,7 +240,7 @@
 }
 
 .form__divider {
-    @include fs-lh(0.75rem,1rem);
+    @include fs-lh(.75rem,1rem);
 }
 
 .form__row {
@@ -343,10 +343,10 @@
     border-radius: 4px;
     background: $color__light;
     color: $color__text_default;
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.16) inset;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .16) inset;
 
     @include media-breakpoint-up(md) {
-        @include fs-lh(0.75rem,1.125rem);
+        @include fs-lh(.75rem,1.125rem);
     }
 
     @include media-breakpoint-down(sm) {
@@ -387,7 +387,7 @@
     transition: all .3s ease;
     background: #fff;
     color: $color__brand;
-    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.14);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .14);
 
     &.active {
         background: $color__light;
@@ -415,7 +415,7 @@
             background: #fff;
             border-radius: 50%;
             border-color: $color__brand;
-            box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
+            box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
 
             &.noUi-handle-lower {
                 right: -8px;

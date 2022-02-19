@@ -1,9 +1,9 @@
 .slides {
-    @include px(16px);
-    margin-left: -16px;
+    @include px(1rem);
+    margin-left: -1rem;
 
     @include media-breakpoint-down(lg) {
-      margin-right: -16px;
+      margin-right: -1rem;
     }
 
     &.slides_grid {
@@ -52,7 +52,7 @@
             width: auto !important;
 
             @include media-breakpoint-down(md) {
-                margin: 0 0 16px;
+                margin: 0 0 1rem;
             }
         }
     }
@@ -82,14 +82,14 @@
         @include mx(0);
         @include px(0);
         border-radius: 8px;
-        box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
+        box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
 
         @include media-breakpoint-up(lg) {
-            margin-bottom: 8px;
+            margin-bottom: .5rem;
         }
 
         @include media-breakpoint-down(md) {
-            margin-bottom: 4px;
+            margin-bottom: .25rem;
         }
 
         & + .slides-pagination {
@@ -103,11 +103,11 @@
                 background: #C4C4C4;
 
                 @include media-breakpoint-up(lg) {
-                    margin: 0 8px 0 0;
+                    margin: 0 .5rem 0 0;
                 }
 
                 @include media-breakpoint-down(md) {
-                    margin: 0 4px 0 0;
+                    margin: 0 .25rem 0 0;
                 }
 
                 &.swiper-pagination-bullet-active {
@@ -170,7 +170,7 @@
     border-radius: 50%;
     transition: all .3s ease;
     background: #fff;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .12);
 
     &:hover {
         box-shadow: none;

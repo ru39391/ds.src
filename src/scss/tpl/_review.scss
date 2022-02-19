@@ -2,7 +2,7 @@
     height: 100%;
     padding: 16px;
     border-radius: 8px;
-    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
 
     &.review_slide {
         @include media-breakpoint-only(xs) {

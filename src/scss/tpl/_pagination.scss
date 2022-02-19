@@ -4,7 +4,7 @@
     padding: 8px;
     border-radius: 8px;
     background: #fff;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.16);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, .16);
 }
 
 .pagination__item {
@@ -17,7 +17,7 @@
     justify-content: center;
     border-radius: 50%;
     background: #fff;
-    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.14);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .14);
 
     &.pagination__item_current {
         background: $color__light;

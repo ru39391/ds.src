@@ -99,7 +99,7 @@ button {
 
 .list-marked {
   li {
-    margin: 0 0 24px;
+    margin: 0 0 1.5rem;
     list-style-type: none !important;
 
     &:before {
@@ -107,7 +107,7 @@ button {
       @include inline-block;
       content: '';
       border-radius: 50%;
-      margin: 8px 4px 0 0;
+      margin: .5rem .25rem 0 0;
       background: $color__brand;
     }
   }
@@ -253,7 +253,7 @@ button {
     @include wh(20px);
     top: 50%;
     right: 0;
-    margin: -8px 0 0;
+    margin: -.5rem 0 0;
     border-radius: 50%;
     background: $color__brand;
     transition: all .3s ease;
@@ -265,7 +265,7 @@ button {
     position: absolute;
     top: 50%;
     right: 7px;
-    margin: -2px 0 0;
+    margin: -.125rem 0 0;
     transition: all .3s ease;
   }
 
@@ -295,7 +295,7 @@ button {
 
 .result-item__pic {
   display: block;
-  margin: 0 0 12px;
+  margin: 0 0 .75rem;
 }
 
 .result-item__title {

@@ -5,8 +5,8 @@
   z-index: 1080;
   transition: all .3s ease;
   background: #fff;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .12);
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .16);
 
   &.header_sticky {
     padding-bottom: 0;
@@ -186,7 +186,7 @@
   @extend %flex-item;
   @extend %btn-theme;
   padding: 8px 11px;
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
 
   &.header__btn_inverse {
     @include media-breakpoint-down(md) {

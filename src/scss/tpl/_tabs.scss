@@ -1,7 +1,3 @@
-.tabs {
-  margin-bottom: 40px;
-}
-
 .tabs__nav {
   @extend %flex-item;
   @extend %list-default;
@@ -38,7 +34,7 @@
   border-radius: 8px 8px 0 0;
   color: $color__disabled;
   background: $color__light;
-  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .12);
 
   &:hover,
   &:focus {
@@ -82,7 +78,7 @@
     &.active {
       .tabs__nav-icon {
         @include media-breakpoint-down(sm) {
-          margin-right: 10px;
+          margin-right: 0.625rem;
         }
       }
 
@@ -98,7 +94,7 @@
 .tabs__nav-icon {
   @include fw(22px);
   @include wh(22px,22px);
-  margin: 0 10px 0 0;
+  margin: 0 0.625rem 0 0;
 }
 
 .tabs__nav-title {
@@ -108,11 +104,10 @@
 
 .tabs__content {
   @extend %zi-2;
-  @include py(40px,32px);
-  //margin: -20px 0 0;
+  @include py(2.5rem,2rem);
   border-radius: 8px;
   background: #fff;
-  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .12);
 
   @include media-breakpoint-down(md) {
     @include px(16px);

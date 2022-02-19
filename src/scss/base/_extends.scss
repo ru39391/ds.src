@@ -35,7 +35,7 @@
   border-radius: 8px;
   transition: all .3s ease;
   background: $color__brand;
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, .16);
 
   &:hover,
   &:focus {
@@ -65,7 +65,7 @@
   transition: all .3s ease;
   color: $color__brand;
   background: #fff;
-  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.14);
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .14);
 
   &:hover {
     color: $color__brand;

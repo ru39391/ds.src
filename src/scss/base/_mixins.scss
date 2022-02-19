@@ -129,9 +129,9 @@
 }
 
 @mixin h5 {
-  @include fs-lh(0.875rem,1.375rem);
+  @include fs-lh(.875rem,1.375rem);
 }
 
 @mixin h6 {
-  @include fs-lh(0.75rem,1);
+  @include fs-lh(.75rem,1);
 }
