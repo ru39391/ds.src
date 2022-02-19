@@ -133,8 +133,6 @@
 }
 
 .media__meta {
-  flex-grow: 1;
-
   @include media-breakpoint-up(sm) {
     padding: 0 24px 0 0;
   }

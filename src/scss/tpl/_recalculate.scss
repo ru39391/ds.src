@@ -1,38 +1,23 @@
 .recalculate {
-    @extend %flex-item;
-    flex-grow: 1;
-    overflow: hidden;
-    margin: 0 4px 0 0;
-    border-radius: 8px;
-    background: $color__brand;
-}
-
-.recalculate__field {
-    display: none;
+  border-radius: 8px;
 }
 
 .recalculate__btn {
-    @extend %btn-default;
-    @include fs-lh(1rem,1.375rem);
-    font-weight: bold;
-    height: 40px;
-    flex-grow: 1;
-    color: #fff;
+  @extend %btn-default;
+  @include fs-lh(1rem,1.375rem);
+  height: 40px;
 
-    &.recalculate__btn_remove {
-        padding: 4px 3px 4px 4px;
-    }
+  &.recalculate__btn_remove {
+    padding: 4px 3px 4px 4px;
+  }
 
-    &.recalculate__btn_add {
-        padding: 4px 4px 4px 3px;
-    }
+  &.recalculate__btn_add {
+    padding: 4px 4px 4px 3px;
+  }
 }
 
 .recalculate__value {
-    @extend %flex-item;
-    @include fw(18px);
-    @include fs-lh(1rem,1.375rem);
-    height: 40px;
-    color: #fff;
-    justify-content: center;
+  @include fw(18px);
+  @include fs-lh(1rem,1.375rem);
+  height: 40px;
 }

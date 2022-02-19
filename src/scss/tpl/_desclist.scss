@@ -1,26 +1,5 @@
-.desclist {
-
-}
-
-.desclist__item {
-    @extend %flex-item;
-    margin: 0 0 4px;
-}
-
-.desclist__item-title {
-    @include h6;
-    @extend .px-0;
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.desclist__item-value {
-    @include h5;
-
-    &.desclist__item-value_lg {
-        @include h3;
-        font-weight: bold;
-    }
+.desclist__title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

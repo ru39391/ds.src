@@ -1,20 +1,10 @@
 .params {
-    @include h6;
-    @include border(0 0 1px,#E1DDDD);
-    margin: 0 -16px;
+  @include border(0 0 1px,#E1DDDD);
+  margin: 0 -1rem;
 }
 
 .params__row {
-    @extend %flex-column;
-    @include border(1px 0 0,#E1DDDD);
-    padding: 2px 16px 0;
-    justify-content: flex-end;
+  @include border(1px 0 0,#E1DDDD);
+  padding: .125rem 1rem 0;
 }
 
-.params__title {
-    color: $color__disabled;
-}
-
-.params__value {
-    @include h5;
-}

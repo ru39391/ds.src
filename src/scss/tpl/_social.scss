@@ -1,23 +1,4 @@
-.social {
-  @extend %flex-item;
-  flex-wrap: wrap;
-}
-
 .social__item {
-  @extend %color-brand;
   @include fw(20px);
   @include wh(20px);
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  &.social__item_inverse {
-    color: #fff;
-
-    &:hover,
-    &:focus {
-      color: #fff;
-    }
-  }
 }

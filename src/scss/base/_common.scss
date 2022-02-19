@@ -192,6 +192,10 @@ button {
   background: $color__info !important;
 }
 
+.bg-light {
+  background: $color__light !important;
+}
+
 .bg-brand {
   background: $color__brand !important;
 }
@@ -209,11 +213,9 @@ button {
 }
 
 .logo {
-  @extend %color-brand;
   @include inline-block;
   @include fw(100px);
   @include wh(100px,48px);
-  color: $color__brand;
 }
 
 .toggler {
@@ -233,8 +235,6 @@ button {
   @include fw(48px);
   padding: 8px;
   border-radius: 50%;
-  color: $color__brand;
-  background: $color__light;
 }
 
 .readmore {
@@ -308,4 +308,8 @@ button {
   @include media-breakpoint-down(md) {
     @include h6;
   }
+}
+
+.date {
+  @extend %date-item;
 }

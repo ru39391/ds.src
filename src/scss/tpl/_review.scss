@@ -1,36 +1,14 @@
 .review {
-    height: 100%;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
+  border-radius: 8px;
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
 
-    &.review_slide {
-        @include media-breakpoint-only(xs) {
-            max-width: 215px;
-        }
+  &.review_slide {
+    @include media-breakpoint-only(xs) {
+      max-width: 215px;
     }
-}
-
-.review__header {
-    @extend %flex-item;
-    margin: 0 0 16px;
-}
-
-.review__meta {
-    flex-grow: 1;
+  }
 }
 
 .review__title {
-    @include h4;
-    display: block;
-    margin: 0 0 12px;
-    color: $color__brand;
-}
-
-.review__date {
-    @extend %date-item;
-}
-
-.review__content {
-    @include h5;
+  margin: 0 0 .75rem;
 }

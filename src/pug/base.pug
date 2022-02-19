@@ -22,84 +22,69 @@ html(lang="ru")
             .header__top
                 .wrapper.d-flex.flex-wrap.align-items-center
                     .col-xl-6.col-lg-12.col-8.d-flex.align-items-center.justify-content-xl-start.justify-content-lg-between.mb-xl-0.mb-lg-2
-                        .contacts.col-xl-7.col-lg-5.w-auto.px-0
-                            .contacts__item.contacts__item_notitle
-                                svg.contacts__item-icon
-                                    use(xlink:href="#icon-placemark")
-                                span.contacts__item-title г. Ростов-на-Дону
-                            a.contacts__item.contacts__item_notitle(href="#")
-                                svg.contacts__item-icon
-                                    use(xlink:href="#icon-phone")
-                                span.contacts__item-title +7 (365) 277-70-68
-                        .social
-                            a.social__item(href="#")
-                                svg.icon-fluid
-                                    use(xlink:href="#icon-wapp")
-                            a.social__item(href="#")
-                                svg.icon-fluid
-                                    use(xlink:href="#icon-tg")
+                        .contacts.d-flex.align-items-center.justify-content-lg-between.col-xl-7.col-lg-5.w-auto.px-0
+                            .contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4
+                              +icon('placemark','contacts__icon color-brand mr-lg-2')
+                              span.d-none.d-lg-block г. Ростов-на-Дону
+                            a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4(href="#")
+                              +icon('phone','contacts__icon color-brand mr-lg-2')
+                              span.d-none.d-lg-block +7 (365) 277-70-68
+                        nav.social.d-flex.flex-wrap.align-items-center
+                            a.social__item.color-brand.mr-4.mr-lg-3(href="#")
+                              +icon('wapp')
+                            a.social__item.color-brand(href="#")
+                              +icon('tg')
                     .col-xl-5.col-lg-10.d-none.d-lg-block
-                        nav.header__nav.justify-content-xl-end.justify-content-between
-                            a.header__nav-item(href="#") Скидки и акции
-                            a.header__nav-item(href="#") Бонусные рубли
+                        nav.header__nav.d-flex.align-items-center.justify-content-xl-end.justify-content-between
+                            a.header__nav-item.mr-4(href="#") Скидки и акции
+                            a.header__nav-item.mr-4(href="#") Бонусные рубли
                             a.header__nav-item(href="#") Контакты
                     .col-xl-1.col-lg-2.col-4.d-flex.align-items-xl-start.justify-content-end
-                        .menu
-                            button.menu__title(type="button")
-                                | Помощь
-                                svg.menu__icon
-                                    use(xlink:href="#icon-dropdown")
-                            .menu__wrapper
+                      .menu.d-flex.align-items-center
+                        button.menu__title(type="button")
+                          | Помощь
+                          +icon('dropdown','menu__icon ml-1')
+                        .menu__wrapper
             .header__wrapper
                 .header__col.header__col_logo.col-xl-4.col-lg-5.mb-3
-                    a.logo.mr-4(href="#")
-                        svg.icon-fluid
-                            use(xlink:href="#icon-logo")
-                    nav.header__nav.justify-content-center
+                    a.logo.color-brand.mr-4(href="#")
+                      +icon('logo')
+                    nav.header__nav.d-flex.align-items-center.justify-content-center
                         a.header__btn.text-uppercase.mr-3(href="#")
-                            svg.header__btn-icon
-                                use(xlink:href="#icon-menu")
-                            span.header__btn-title Каталог
+                          +icon('menu','header__btn-icon mr-lg-2')
+                          span.header__btn-title Каталог
                         a.header__btn.text-uppercase(href="#")
-                            svg.header__btn-icon
-                                use(xlink:href="#icon-services")
-                            span.header__btn-title Услуги
+                          +icon('services','header__btn-icon mr-lg-2')
+                          span.header__btn-title Услуги
                 .header__col.header__col_search.col-xl-3.mb-3
                     form.search(action="#" method="post")
                         input.search__field(type="text" placeholder="Я ищу..." value="")
                         button.search__btn(type="submit")
-                            svg.icon-fluid
-                                use(xlink:href="#icon-search")
-                .header__col.header__col_nav.col-xl-5.col-lg-7.mb-3
-                    nav.header__nav.flex-grow-1.mr-lg-5
-                        button.header__nav-item.header__nav-item_col.d-flex.d-lg-none(type="button")
+                          +icon('search')
+                .header__col.header__col_nav.col-xl-5.col-lg-7.flex-grow-1.flex-lg-grow-0.mb-3
+                    nav.header__nav.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-5
+                        button.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.d-lg-none(type="button")
                             span.header__nav-icon
-                                svg.icon-fluid
-                                    use(xlink:href="#icon-search")
+                              +icon('search')
                             span.header__btn-title Поиск
-                        a.header__nav-item.header__nav-item_col.col-lg-3(href="#")
+                        a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
                             span.header__nav-icon
-                                svg.icon-fluid
-                                    use(xlink:href="#icon-compare")
+                              +icon('compare')
                             span.header__btn-title Сравнить
-                        a.header__nav-item.header__nav-item_col.col-lg-3(href="#")
+                        a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
                             span.header__nav-icon
-                                svg.icon-fluid
-                                    use(xlink:href="#icon-car")
+                              +icon('car')
                             span.header__btn-title Выбор авто
-                        a.header__nav-item.header__nav-item_col.col-lg-3(href="#")
+                        a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
                             span.header__nav-icon
-                                svg.icon-fluid
-                                    use(xlink:href="#icon-case")
+                              +icon('case')
                             span.header__btn-title Заказы
-                        a.header__nav-item.header__nav-item_col.col-lg-3(href="#")
+                        a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
                             span.header__nav-icon
-                                svg.icon-fluid
-                                    use(xlink:href="#icon-user")
+                              +icon('user')
                             span.header__btn-title Вход | регистрация
                     a.header__btn.text-uppercase.header__btn_inverse(href="#")
-                        svg.header__btn-icon.mr-0
-                            use(xlink:href="#icon-cart")
+                      +icon('cart','header__btn-icon')
             .header__bottom
                 nav.topmenu.swiper-container
                     .topmenu__wrapper.swiper-wrapper
@@ -122,70 +107,66 @@ html(lang="ru")
     block wrapper
 
     block footer
-        footer.footer
+        footer.footer.h6.color-white.bg-brand
             .wrapper.d-flex.flex-wrap
                 .col-lg-2.col-md-3
-                    nav.footer__nav
-                        .footer__nav-title Каталог
-                        a.footer__nav-item(href="#") Шины
-                        a.footer__nav-item(href="#") Диски
-                        a.footer__nav-item(href="#") Мотошины
-                        a.footer__nav-item(href="#") Акб
-                        a.footer__nav-item(href="#") Масла
-                        a.footer__nav-item(href="#") Автотовары
+                    nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0
+                        .footer__nav-title.h4 Каталог
+                        a.footer__nav-item.color-white.mb-2(href="#") Шины
+                        a.footer__nav-item.color-white.mb-2(href="#") Диски
+                        a.footer__nav-item.color-white.mb-2(href="#") Мотошины
+                        a.footer__nav-item.color-white.mb-2(href="#") Акб
+                        a.footer__nav-item.color-white.mb-2(href="#") Масла
+                        a.footer__nav-item.color-white.mb-2(href="#") Автотовары
                 .col-lg-2.col-md-3
-                    nav.footer__nav
-                        .footer__nav-title Услуги
-                        a.footer__nav-item(href="#") Шиномонтаж
-                        a.footer__nav-item(href="#") Сезонное хранение шин и дисков
-                        a.footer__nav-item(href="#") Заправка автокондиционеровов
-                        a.footer__nav-item(href="#") Прокатка дисков
-                        a.footer__nav-item(href="#") Покраска дисков
+                    nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0
+                        .footer__nav-title.h4 Услуги
+                        a.footer__nav-item.color-white.mb-2(href="#") Шиномонтаж
+                        a.footer__nav-item.color-white.mb-2(href="#") Сезонное хранение шин и дисков
+                        a.footer__nav-item.color-white.mb-2(href="#") Заправка автокондиционеровов
+                        a.footer__nav-item.color-white.mb-2(href="#") Прокатка дисков
+                        a.footer__nav-item.color-white.mb-2(href="#") Покраска дисков
                 .col-lg-2.col-md-3
-                    nav.footer__nav
-                        .footer__nav-title Пользователям
-                        a.footer__nav-item(href="#") Скидки и акции
-                        a.footer__nav-item(href="#") Сравнить
-                        a.footer__nav-item(href="#") Избранное
-                        a.footer__nav-item(href="#") Подбор по авто
-                        a.footer__nav-item(href="#") Шинный калькулятор
-                        a.footer__nav-item(href="#") О компании
-                        a.footer__nav-item(href="#") Новости
-                        a.footer__nav-item(href="#") Статьи
+                    nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0
+                        .footer__nav-title.h4 Пользователям
+                        a.footer__nav-item.color-white.mb-2(href="#") Скидки и акции
+                        a.footer__nav-item.color-white.mb-2(href="#") Сравнить
+                        a.footer__nav-item.color-white.mb-2(href="#") Избранное
+                        a.footer__nav-item.color-white.mb-2(href="#") Подбор по авто
+                        a.footer__nav-item.color-white.mb-2(href="#") Шинный калькулятор
+                        a.footer__nav-item.color-white.mb-2(href="#") О компании
+                        a.footer__nav-item.color-white.mb-2(href="#") Новости
+                        a.footer__nav-item.color-white.mb-2(href="#") Статьи
                 .col-lg-2.col-md-3
-                    nav.footer__nav
-                        .footer__nav-title Помощь
-                        a.footer__nav-item(href="#") Контакты
-                        a.footer__nav-item(href="#") Вопросы и ответы
-                        a.footer__nav-item(href="#") Оплата и доставка
-                        a.footer__nav-item(href="#") Кредит
-                        a.footer__nav-item(href="#") КупиВкредит
-                        a.footer__nav-item(href="#") Политика конфиденциальности
+                    nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0
+                        .footer__nav-title.h4 Помощь
+                        a.footer__nav-item.color-white.mb-2(href="#") Контакты
+                        a.footer__nav-item.color-white.mb-2(href="#") Вопросы и ответы
+                        a.footer__nav-item.color-white.mb-2(href="#") Оплата и доставка
+                        a.footer__nav-item.color-white.mb-2(href="#") Кредит
+                        a.footer__nav-item.color-white.mb-2(href="#") КупиВкредит
+                        a.footer__nav-item.color-white.mb-2(href="#") Политика конфиденциальности
                 .col-xl-3.offset-xl-1.col-lg-4.col-md-6
-                    a.logo.mb-4(href="#")
-                        svg.icon-fluid
-                            use(xlink:href="#icon-logo")
+                    a.logo.color-white.mb-4(href="#")
+                      +icon('logo')
                     .row.align-items-center
                         .col-8
-                            .contacts.contacts_list.mb-2
-                                .contacts__item.contacts__item_inverse
-                                    svg.contacts__item-icon
-                                        use(xlink:href="#icon-placemark")
-                                    | г. Ростов-на-Дону
-                                a.contacts__item.contacts__item_inverse(href="#")
-                                    svg.contacts__item-icon
-                                        use(xlink:href="#icon-phone-nobg")
-                                    | +7 (365) 277-70-68
-                                a.contacts__item.contacts__item_inverse(href="#")
-                                    svg.contacts__item-icon
-                                        use(xlink:href="#icon-email")
-                                    | office@don-shina.ru
+                            .contacts.mb-2
+                                .contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1
+                                  +icon('placemark','contacts__icon color-white mr-2')
+                                  span.color-white г. Ростов-на-Дону
+                                a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1(href="#")
+                                  +icon('phone-nobg','contacts__icon color-white mr-2')
+                                  span.color-white +7 (365) 277-70-68
+                                a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1(href="#")
+                                  +icon('email','contacts__icon color-white mr-2')
+                                  span.color-white office@don-shina.ru
                         .col-4
-                            nav.social
-                                a.social__item.social__item_inverse(href="#")
+                            nav.social.d-flex.flex-wrap.align-items-center
+                                a.social__item.color-white.mr-4.mr-lg-3(href="#")
                                     svg.icon-fluid
                                         use(xlink:href="#icon-wapp-bordered")
-                                a.social__item.social__item_inverse(href="#")
+                                a.social__item.color-white(href="#")
                                     svg.icon-fluid
                                         use(xlink:href="#icon-tg-bordered")
                     .mb-2
@@ -219,5 +200,17 @@ html(lang="ru")
     carousel/comparing.pug
     carousel/comparing-noparamtitle.pug
 
-    + .mb-sm-3 - для случая card_tile
   .slides_togglers-next в category/popular.pug
+  _swiper.scss - перебрать
+  _section
+  _common
+  _card
+  _sales
+
+  padding
+  px
+  py
+
+  service.pug - изменить вёрстку promo
+  избавиться от .content__date и прочих похожих
+  flex-grow: 1 -> flex-grow-1

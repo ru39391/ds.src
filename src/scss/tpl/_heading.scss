@@ -1,18 +1,13 @@
 .heading {
-    @include h6;
-    @extend %flex-item;
-    margin-bottom: 8px;
-    position: relative;
+  position: relative;
 }
 
 .heading__col {
-    @include fw(100%/10);
-    @include px(16px,$grid-gutter-width/2);
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  @include fw(100%/10);
+  @include px(16px,$grid-gutter-width/2);
+  text-overflow: ellipsis;
 
-    &.heading__col_lg {
-        @include fw(100%/10*2);
-    }
+  &.heading__col_lg {
+    @include fw(100%/10*2);
+  }
 }

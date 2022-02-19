@@ -18,7 +18,7 @@
 .dropdown-menu {
   display: none;
   overflow: hidden;
-  padding: 12px 16px;
+  padding: .75rem 1rem;
   border-radius: 4px;
   background: #fff;
   box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
@@ -37,31 +37,24 @@
   }
 }
 
-.dropdown-menu__header {
-  margin: 0 0 8px;
-}
-
 .dropdown__field {
   @include h6;
   @include wh(100%,25px);
   border: 0;
-  padding: 2px 6px;
+  padding: .125rem .375rem;
   border-radius: 8px;
   background: $color__light;
-}
-
-.dropdown-menu__body {
 }
 
 .dropdown-menu__list {
   @extend %list-default;
   height: 100%;
   max-height: 184px;
-  margin: 0 -16px;
+  margin: 0 -1rem;
   overflow: auto;
 
   @include media-breakpoint-up(md) {
-    margin-right: -33px;
+    margin-right: -2rem;
   }
 }
 

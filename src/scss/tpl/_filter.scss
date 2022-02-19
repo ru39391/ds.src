@@ -45,10 +45,9 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, .12) inset;
 }
 
-.filter-toggler__icon {
+.filter-toggler__icon.mr-2 {
   @include fw(18px);
   @include wh(18px);
-  margin: 0 8px 0 0;
   pointer-events: none;
 }
 
@@ -116,21 +115,5 @@
     right: 0;
     bottom: 0;
     padding: 16px 24px;
-  }
-}
-
-.filter__alert-info {
-  @include h2;
-  @extend %flex-item;
-  font-weight: bold;
-
-  @include media-breakpoint-up(lg) {
-    margin: 0 0 4px;
-  }
-
-  .text-sm {
-    @include h5;
-    font-weight: normal;
-    margin: 0 8px 0 0;
   }
 }

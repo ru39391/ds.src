@@ -105,10 +105,10 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
               if (card__spikes)
                 .icon-marker
                   +icon('spikes')
-          .card__params 215 / 55  R16
-    .card__body
+          .card__params.flex-grow-1.text-right.color-brand 215 / 55  R16
+    .card__body.d-flex.flex-column.justify-content-between.flex-grow-1
       .card__intro
-        a.card__title.mb-2(href="#")!= card__title
+        a.card__title.d-block.mb-2(href="#")!= card__title
       .card__footer
         .card__meta.card__meta_row.mb-2(class=card__price_classmod)
           .card__price
@@ -124,11 +124,11 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
                 | ₽
               .text-sm при сдаче старого
         .d-flex.align-items-center.justify-content-between(class=card__oneclick_offset)
-          .recalculate
-            input.recalculate__field(type="number" name="count" value="4")
-            button.recalculate__btn.recalculate__btn_remove(type="button") -
-            .recalculate__value 4
-            button.recalculate__btn.recalculate__btn_add(type="button") +
+          .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-brand.mr-1
+            input.recalculate__field.d-none(type="number" name="count" value="4")
+            button.recalculate__btn.font-weight-bold.color-white.flex-grow-1.recalculate__btn_remove(type="button") -
+            .recalculate__value.d-flex.align-items-center.justify-content-center.color-white 4
+            button.recalculate__btn.font-weight-bold.color-white.flex-grow-1.recalculate__btn_add(type="button") +
           a.btn.text-uppercase(href="#") В корзину
         if (card__oneclick)
           button.card__btn.card__btn_link.w-100(type="button")

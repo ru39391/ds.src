@@ -12,10 +12,10 @@
         .icon-marker
           svg.icon-fluid
             use(xlink:href="#icon-spikes")
-      .card__params 215 / 55  R16
-  .card__body.mb-4
+      .card__params.flex-grow-1.text-right.color-brand 215 / 55  R16
+  .card__body.d-flex.flex-column.justify-content-between.flex-grow-1.mb-4
     .card__intro
-      a.card__title(href="#") Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL
+      a.card__title.d-block(href="#") Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL
     .card__footer
       .card__meta.card__meta_row
         .card__price
@@ -24,33 +24,33 @@
         .card__price.card__price_old 12 337.12 ₽
       .d-flex.align-items-center.justify-content-between
         .recalculate
-          input.recalculate__field(type="number" name="count" value="4")
-          button.recalculate__btn.recalculate__btn_remove(type="button") -
-          .recalculate__value 4
-          button.recalculate__btn.recalculate__btn_add(type="button") +
+          input.recalculate__field.d-none(type="number" name="count" value="4")
+          button.recalculate__btn.font-weight-bold.color-white.flex-grow-1.recalculate__btn_remove(type="button") -
+          .recalculate__value.d-flex.align-items-center.justify-content-center.color-white 4
+          button.recalculate__btn.font-weight-bold.color-white.flex-grow-1.recalculate__btn_add(type="button") +
         a.btn.text-uppercase(href="#") В корзину
-  .params
-    .params__row
-      .params__title.invisible Ширина
-      .params__value 185
-    .params__row
-      .params__title.invisible Высота
-      .params__value 55
-    .params__row
-      .params__title.invisible Диаметр
-      .params__value 16
-    .params__row
-      .params__title.invisible Сезон
-      .params__value Зима
-    .params__row
-      .params__title.invisible Производитель
-      .params__value Yokohama
-    .params__row
-      .params__title.invisible Модель
-      .params__value Ice Guard IG55
-    .params__row
-      .params__title.invisible Типоразмер
-      .params__value 215 / 55  R16
-    .params__row
-      .params__title.invisible Индекс нагрузки
-      .params__value 102 (850 кг)
+  .params.h6
+    .params__row.d-flex.flex-column.justify-content-end
+      .params__title.color-disabled.invisible Ширина
+      .params__value.h5 185
+    .params__row.d-flex.flex-column.justify-content-end
+      .params__title.color-disabled.invisible Высота
+      .params__value.h5 55
+    .params__row.d-flex.flex-column.justify-content-end
+      .params__title.color-disabled.invisible Диаметр
+      .params__value.h5 16
+    .params__row.d-flex.flex-column.justify-content-end
+      .params__title.color-disabled.invisible Сезон
+      .params__value.h5 Зима
+    .params__row.d-flex.flex-column.justify-content-end
+      .params__title.color-disabled.invisible Производитель
+      .params__value.h5 Yokohama
+    .params__row.d-flex.flex-column.justify-content-end
+      .params__title.color-disabled.invisible Модель
+      .params__value.h5 Ice Guard IG55
+    .params__row.d-flex.flex-column.justify-content-end
+      .params__title.color-disabled.invisible Типоразмер
+      .params__value.h5 215 / 55  R16
+    .params__row.d-flex.flex-column.justify-content-end
+      .params__title.color-disabled.invisible Индекс нагрузки
+      .params__value.h5 102 (850 кг)

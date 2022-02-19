@@ -10,28 +10,26 @@ block personal
       .section__body
         .section__title.section__title_sm.color-brand Вы записаны на шиномонтаж
         .desclist
-          .desclist__item
-            .desclist__item-title.col-xl-2.col-sm-3 Номер записи:
-            .desclist__item-value.desclist__item-value_lg.col-xl-10.col-sm-9 49409
-          .desclist__item
-            .desclist__item-title.col-xl-2.col-sm-3 Адрес:
-            .desclist__item-value.col-xl-10.col-sm-9 ул. Доватора, 11
-          .desclist__item
-            .desclist__item-title.col-xl-2.col-sm-3 Дата:
-            .desclist__item-value.col-xl-10.col-sm-9 10 января 2021 г.
-          .desclist__item
-            .desclist__item-title.col-xl-2.col-sm-3 Время:
-            .desclist__item-value.col-xl-10.col-sm-9 11 : 00
+          .d-flex.align-items-center.mb-1
+            .desclist__title.h6.d-block.overflow-hidden.px-0.col-xl-2.col-sm-3 Номер записи:
+            .h3.font-weight-bold.col-xl-10.col-sm-9 49409
+          .d-flex.align-items-center.mb-1
+            .desclist__title.h6.d-block.overflow-hidden.px-0.col-xl-2.col-sm-3 Адрес:
+            .h5.col-xl-10.col-sm-9 ул. Доватора, 11
+          .d-flex.align-items-center.mb-1
+            .desclist__title.h6.d-block.overflow-hidden.px-0.col-xl-2.col-sm-3 Дата:
+            .h5.col-xl-10.col-sm-9 10 января 2021 г.
+          .d-flex.align-items-center.mb-1
+            .desclist__title.h6.d-block.overflow-hidden.px-0.col-xl-2.col-sm-3 Время:
+            .h5.col-xl-10.col-sm-9 11 : 00
       .section__footer
         .row
-          .contacts.flex-wrap.col-xl-7
-            a.contacts__item.mb-2.mb-sm-0(href="#")
-              svg.contacts__item-icon
-                use(xlink:href="#icon-tg")
+          .contacts.d-flex.align-items-center.justify-content-lg-between.flex-wrap.col-xl-7
+            a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-2.mb-sm-0(href="#")
+              +icon('tg','contacts__icon color-brand mr-2')
               span.contacts__item-title Напомнить в Telegram
-            a.contacts__item.mb-2.mb-sm-0(href="#")
-              svg.contacts__item-icon
-                use(xlink:href="#icon-wapp")
+            a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-2.mb-sm-0(href="#")
+              +icon('wapp','contacts__icon color-brand mr-2')
               span.contacts__item-title Напомнить в WhatsApp
           .col-xl-5.d-flex.justify-content-xl-end
             button.btn.text-uppercase.btn_icon.btn_nobg(type="button")

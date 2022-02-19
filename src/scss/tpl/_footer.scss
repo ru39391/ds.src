@@ -1,8 +1,4 @@
 .footer {
-  @include h6;
-  color: #fff;
-  background: $color__brand;
-
   @include media-breakpoint-up(md) {
     padding: 40px 0;
   }
@@ -10,39 +6,12 @@
   @include media-breakpoint-down(sm) {
     padding: 40px 16px 55px;
   }
-
-  .logo {
-    color: #fff;
-
-    &:hover,
-    &:focus {
-      color: #fff;
-    }
-  }
 }
 
-.footer__nav {
-  @extend .pr-md-4;
-  @extend .pr-xl-5;
-  @extend %flex-column;
-
-  @include media-breakpoint-down(md) {
-    margin: 0 0 40px;
-  }
+.footer__nav-title.h4 {
+  margin: 0 0 1.25rem;
 }
 
-.footer__nav-title {
-  @include h4;
-  margin: 0 0 20px;
-}
-
-.footer__nav-item {
+.footer__nav-item.color-white.mb-2 {
   @include fs-lh(.75rem,1rem);
-  color: #fff;
-  margin: 0 0 8px;
-
-  &:focus,
-  &:hover {
-    color: #fff;
-  }
 }

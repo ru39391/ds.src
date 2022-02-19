@@ -12,10 +12,6 @@
     overflow: visible;
     border-radius: 0;
     box-shadow: none;
-
-    @include media-breakpoint-down(md) {
-      margin-bottom: 2.5rem;
-    }
   }
 
   &.banner_noshadow {

@@ -1,25 +1,25 @@
 .content {
   h1 {
-    margin: 0 0 24px;
+    margin-bottom: 1.5rem;
   }
 
   h2 {
     @include h2;
     font-weight: bold;
-    margin: 0 0 40px;
+    margin-bottom: 2.5rem;
   }
 
   h3 {
     @include h3;
     font-weight: bold;
-    margin: 0 0 16px;
+    margin-bottom: 1rem;
   }
 
   h4 {
     @include h4;
     font-weight: normal;
     color: $color__brand;
-    margin: 0 0 4px;
+    margin-bottom: .25rem;
   }
 
   h5 {
@@ -33,12 +33,12 @@
   }
 
   p {
-    margin: 0 0 24px;
+    margin-bottom: 1.5rem;
   }
 
   ul {
     @extend %list-default;
-    margin: 0 0 24px;
+    margin-bottom: 1.5rem;
 
     li {
       list-style-type: disc;
@@ -117,5 +117,4 @@
 
 .content__date {
   @extend %date-item;
-  margin: 0 0 8px;
 }

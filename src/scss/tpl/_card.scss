@@ -151,10 +151,6 @@
 }
 
 .card__body {
-  @extend %flex-column;
-  justify-content: space-between;
-  flex-grow: 1;
-
   &.card__body_lg {
     min-height: 102px;
   }
@@ -449,20 +445,9 @@
   }
 }
 
-.card__params {
-  flex-grow: 1;
-  text-align: right;
-  color: $color__brand;
-}
-
 .card__title {
   @include fs-lh(1rem,1.375rem);
-  display: block;
   transition: all .3s ease;
-
-  &.card__title_sm {
-    @include h5;
-  }
 
   &:hover {
     color: $color__brand;

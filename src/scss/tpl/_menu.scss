@@ -1,19 +1,14 @@
-.menu {
-    @extend %flex-item;
-}
-
 .menu__title {
-    @extend %btn-default;
-    color: $color__text_default;
-    transition: all .3s ease;
+  @extend %btn-default;
+  color: $color__text_default;
+  transition: all .3s ease;
 
-    &:hover {
-        color: $color__brand;
-    }
+  &:hover {
+    color: $color__brand;
+  }
 }
 
 .menu__icon {
-    @include fw(8px);
-    @include wh(8px);
-    margin: 0 0 0 4px;
+  @include fw(8px);
+  @include wh(8px);
 }

@@ -4,8 +4,6 @@
 }
 
 .tabs__nav-item {
-  flex-grow: 1;
-
   &:first-child {
     .tabs__nav-link {
       &:before {
@@ -78,7 +76,7 @@
     &.active {
       .tabs__nav-icon {
         @include media-breakpoint-down(sm) {
-          margin-right: 0.625rem;
+          margin-right: .625rem;
         }
       }
 
@@ -94,7 +92,7 @@
 .tabs__nav-icon {
   @include fw(22px);
   @include wh(22px,22px);
-  margin: 0 0.625rem 0 0;
+  margin: 0 .625rem 0 0;
 }
 
 .tabs__nav-title {

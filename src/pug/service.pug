@@ -37,17 +37,17 @@ block wrapper
                 use(xlink:href="#icon-arrow-next")
           .swiper-wrapper
             .swiper-slide.px-3
-              .icon-rounded.mb-3
+              .icon-rounded.color-brand.bg-light.mb-3
                 svg.icon-fluid
                   use(xlink:href="#icon-scales")
               p Уменьшение срока службы подвески. Неточная или не качественная балансировка может привести к поломке всей ходовой. При некачественной балансировке, неверно выбранный груз или неверном его креплении на диске в процессе эксплуатации груз может слететь.
             .swiper-slide.px-3
-              .icon-rounded.mb-3
+              .icon-rounded.color-brand.bg-light.mb-3
                 svg.icon-fluid
                   use(xlink:href="#icon-target")
               p Неравномерная изношенность покрышек. При неверной балансировке износ шин происходит намного быстрее, что может привести не только к преждевременной замены покрышки, но и к возникновению аварийной ситуации на дороге.
             .swiper-slide.px-3
-              .icon-rounded.mb-3
+              .icon-rounded.color-brand.bg-light.mb-3
                 svg.icon-fluid
                   use(xlink:href="#icon-attention")
               p Безопасность на дороге. Дороже этого ничего быть не может. Сэкономленные 2 часа на смену комплекта шин у непрофессионалов не стоят Вашей безопасности и безопасности Ваших близких.
@@ -66,64 +66,63 @@ block wrapper
               br
               | или записаться вы можете по телефону:
             .contacts
-              a.contacts__item.contacts__item_lg.color-brand(href="tel:+73652777068")
-                svg.contacts__item-icon
-                  use(xlink:href="#icon-phone")
+              a.contacts__item.d-flex.align-items-center.h3.font-weight-bold.text-nowrap.color-brand(href="tel:+73652777068")
+                +icon('phone','contacts__icon color-brand mr-2')
                 span.contacts__item-title +7 (365) 277-70-68
     .section.mb-3
       .section__title Отзывы
       .slides.slides_reviews.swiper-container.pt-1.pb-4.px-0.mx-0
         .swiper-wrapper
           .swiper-slide
-            .review.review_slide
-              .review__header
-                .icon-rounded.mr-3
+            .review.review_slide.h-100.p-3
+              .review__header.d-flex.align-items-center.mb-3
+                .icon-rounded.color-brand.bg-light.mr-3
                   svg.icon-fluid
                     use(xlink:href="#icon-emoji")
-                .review__meta
-                  .review__title Анатолий Ефимов
+                .review__meta.flex-grow-1
+                  .review__title.d-block.h4.color-brand Анатолий Ефимов
                   .review__date 10 дек в 11:37
-              .review__content Был 10 декабря, отличный сервис. Сам ещё приеду и всем друзьям посоветую. Мастеру большой репект! Мне очень понравилось, советую ВСЕМ!!!
+              .review__content.h5 Был 10 декабря, отличный сервис. Сам ещё приеду и всем друзьям посоветую. Мастеру большой репект! Мне очень понравилось, советую ВСЕМ!!!
           .swiper-slide
-            .review.review_slide
-              .review__header
-                .icon-rounded.mr-3
+            .review.review_slide.h-100.p-3
+              .review__header.d-flex.align-items-center.mb-3
+                .icon-rounded.color-brand.bg-light.mr-3
                   svg.icon-fluid
                     use(xlink:href="#icon-emoji")
-                .review__meta
-                  .review__title Павел Антипин
+                .review__meta.flex-grow-1
+                  .review__title.d-block.h4.color-brand Павел Антипин
                   .review__date 10 дек в 11:37
-              .review__content Друг присоветовал этот салон. Приехал, не пожалел. Ребята, сервис шикарный! И доступно, и оперативно, и без проблем. Теперь сам работаю сарафанным радио и друзьям советую!
+              .review__content.h5 Друг присоветовал этот салон. Приехал, не пожалел. Ребята, сервис шикарный! И доступно, и оперативно, и без проблем. Теперь сам работаю сарафанным радио и друзьям советую!
           .swiper-slide
-            .review.review_slide
-              .review__header
-                .icon-rounded.mr-3
+            .review.review_slide.h-100.p-3
+              .review__header.d-flex.align-items-center.mb-3
+                .icon-rounded.color-brand.bg-light.mr-3
                   svg.icon-fluid
                     use(xlink:href="#icon-emoji")
-                .review__meta
-                  .review__title Костя Боярский
+                .review__meta.flex-grow-1
+                  .review__title.d-block.h4.color-brand Костя Боярский
                   .review__date 10 дек в 11:37
-              .review__content Терпеть не могу сам лезть менять! Считаю, что лучше обратиться к спецам, чем возиться. В последний раз обращался сюда, сервис очень понравился. Думаю, дальше тоже буду кататься к Вашему мастеру!
+              .review__content.h5 Терпеть не могу сам лезть менять! Считаю, что лучше обратиться к спецам, чем возиться. В последний раз обращался сюда, сервис очень понравился. Думаю, дальше тоже буду кататься к Вашему мастеру!
           .swiper-slide
-            .review.review_slide
-              .review__header
-                .icon-rounded.mr-3
+            .review.review_slide.h-100.p-3
+              .review__header.d-flex.align-items-center.mb-3
+                .icon-rounded.color-brand.bg-light.mr-3
                   svg.icon-fluid
                     use(xlink:href="#icon-emoji")
-                .review__meta
-                  .review__title Иван Трактиров
+                .review__meta.flex-grow-1
+                  .review__title.d-block.h4.color-brand Иван Трактиров
                   .review__date 10 дек в 11:37
-              .review__content Приезжал сюда ставить шины на зимний сезон. Вот и масло решил приехать менять сюда же. Мастера отличные, работают быстро и качественно. Рекомендую всем!
+              .review__content.h5 Приезжал сюда ставить шины на зимний сезон. Вот и масло решил приехать менять сюда же. Мастера отличные, работают быстро и качественно. Рекомендую всем!
           .swiper-slide
-            .review.review_slide
-              .review__header
-                .icon-rounded.mr-3
+            .review.review_slide.h-100.p-3
+              .review__header.d-flex.align-items-center.mb-3
+                .icon-rounded.color-brand.bg-light.mr-3
                   svg.icon-fluid
                     use(xlink:href="#icon-emoji")
-                .review__meta
-                  .review__title Анатолий Ефимов
+                .review__meta.flex-grow-1
+                  .review__title.d-block.h4.color-brand Анатолий Ефимов
                   .review__date 10 дек в 11:37
-              .review__content Был 10 декабря, отличный сервис. Сам ещё приеду и всем друзьям посоветую. Мастеру большой репект! Мне очень понравилось, советую ВСЕМ!!!
+              .review__content.h5 Был 10 декабря, отличный сервис. Сам ещё приеду и всем друзьям посоветую. Мастеру большой репект! Мне очень понравилось, советую ВСЕМ!!!
   .wrapper
     .section.mb-3
       .section__title Как мы работаем

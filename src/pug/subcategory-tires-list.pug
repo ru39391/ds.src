@@ -6,7 +6,7 @@ block meta
 block filter
   .header__footer
     button.filter-toggler(type="button")
-      svg.filter-toggler__icon
+      svg.filter-toggler__icon.mr-2
         use(xlink:href="#icon-filter")
       span.filter-toggler__title
         span.filter-toggler__show Показать
@@ -33,14 +33,14 @@ block wrapper
         .col-xl-10.col-lg-9.mb-4
           include base/results-form.pug
           .mb-3
-            .heading
-              .heading__col Диаметр
-              .heading__col Ширина
-              .heading__col Высота
-              .heading__col Сезон
-              .heading__col.heading__col_lg Название
-              .heading__col Цена
-              .heading__col Наличие
+            .heading.d-flex.align-items-center.h6.mb-2
+              .heading__col.d-block.overflow-hidden Диаметр
+              .heading__col.d-block.overflow-hidden Ширина
+              .heading__col.d-block.overflow-hidden Высота
+              .heading__col.d-block.overflow-hidden Сезон
+              .heading__col.heading__col_lg.d-block.overflow-hidden Название
+              .heading__col.d-block.overflow-hidden Цена
+              .heading__col.d-block.overflow-hidden Наличие
             .card-row
               .card-row__left
                 .card-row__param 18”
