@@ -233,14 +233,14 @@ button {
 .icon-rounded {
   @include wh(48px);
   @include fw(48px);
-  padding: 8px;
+  padding: .5rem;
   border-radius: 50%;
 }
 
 .readmore {
   @extend %btn-default;
   @include before;
-  padding: 0 26px 0 0;
+  padding: 0 1.625rem 0 0;
   transition: all .3s ease;
 
   &:hover,

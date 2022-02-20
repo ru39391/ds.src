@@ -284,50 +284,50 @@ block wrapper
                             .form__title Наиболее популярные:
                             .text-center.mb-1
                                 a.d-inline-block.mr-3.mb-3(href="#")
-                                    img.img-fluid(src="../img/content/logo/acura.jpg" alt="" title="")
+                                  +img('content/logo/acura.jpg')
                                 a.d-inline-block.mr-3.mb-3(href="#")
-                                    img.img-fluid(src="../img/content/logo/toyota.jpg" alt="" title="")
+                                  +img('content/logo/toyota.jpg')
                                 a.d-inline-block.mr-3.mb-3(href="#")
-                                    img.img-fluid(src="../img/content/logo/suzuki.jpg" alt="" title="")
+                                  +img('content/logo/suzuki.jpg')
                                 a.d-inline-block.mr-3.mb-3(href="#")
-                                    img.img-fluid(src="../img/content/logo/nissan.jpg" alt="" title="")
+                                  +img('content/logo/nissan.jpg')
                                 a.d-inline-block.mr-3.mb-3(href="#")
-                                    img.img-fluid(src="../img/content/logo/bmw.jpg" alt="" title="")
+                                  +img('content/logo/bmw.jpg')
                                 a.d-inline-block.mr-3.mb-3(href="#")
-                                    img.img-fluid(src="../img/content/logo/fiat.jpg" alt="" title="")
+                                  +img('content/logo/fiat.jpg')
                                 a.d-inline-block.mr-3.mb-3(href="#")
-                                    img.img-fluid(src="../img/content/logo/mazda.jpg" alt="" title="")
+                                  +img('content/logo/mazda.jpg')
                                 a.d-inline-block.mr-3.mb-3(href="#")
-                                    img.img-fluid(src="../img/content/logo/lexus.jpg" alt="" title="")
+                                  +img('content/logo/lexus.jpg')
                                 a.d-inline-block.mr-3.mb-3(href="#")
-                                    img.img-fluid(src="../img/content/logo/mitsubishi.jpg" alt="" title="")
+                                  +img('content/logo/mitsubishi.jpg')
                                 a.d-inline-block.mr-3.mb-3(href="#")
-                                    img.img-fluid(src="../img/content/logo/infiniti.jpg" alt="" title="")
+                                  +img('content/logo/infiniti.jpg')
                     .row
                         .col-md-2.col-sm-3.col-6.offset-lg-1
                             a.result-item.mb-4(href="#")
                                 span.result-item__pic
-                                    img.img-fluid(src="../img/content/results/car-1.jpg" alt="" title="")
+                                  +img('content/results/car-1.jpg')
                                 span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
                         .col-md-2.col-sm-3.col-6
                             a.result-item.mb-4(href="#")
                                 span.result-item__pic
-                                    img.img-fluid(src="../img/content/results/car-2.jpg" alt="" title="")
+                                  +img('content/results/car-2.jpg')
                                 span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
                         .col-md-2.col-sm-3.col-6
                             a.result-item.mb-4(href="#")
                                 span.result-item__pic
-                                    img.img-fluid(src="../img/content/results/car-1.jpg" alt="" title="")
+                                  +img('content/results/car-1.jpg')
                                 span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
                         .col-md-2.col-sm-3.col-6
                             a.result-item.mb-4(href="#")
                                 span.result-item__pic
-                                    img.img-fluid(src="../img/content/results/car-2.jpg" alt="" title="")
+                                  +img('content/results/car-2.jpg')
                                 span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
                         .col-md-2.col-sm-3.col-6
                             a.result-item.mb-4(href="#")
                                 span.result-item__pic
-                                    img.img-fluid(src="../img/content/results/car-1.jpg" alt="" title="")
+                                  +img('content/results/car-1.jpg')
                                 span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
                     .row
                         .col-lg-10.offset-lg-1.d-flex.flex-sm-row.flex-column.align-items-center.justify-content-sm-around.justify-content-center
@@ -351,97 +351,47 @@ block wrapper
                               +img('content/slides/slide-1.jpg','img-cover')
                     .slides-banners-pagination.slides-pagination
             .col-lg-4.offset-lg-1.col-md-6.offset-md-3.col-sm-8.offset-sm-2
-                .banner.text-uppercase
+                .banner.overflow-hidden
                   +img('content/banners/banner-1.jpg','img-cover')
-                  .banner__inner
-                    .banner__title.banner__title_colored.banner__title_sm Запись на шиномонтаж онлайн
+                  .banner__inner.d-flex.flex-column.align-items-center.justify-content-between.px-3.py-4
+                    .banner__title.banner__title_sm.h1.text-uppercase.font-weight-bold.color-brand Запись на шиномонтаж онлайн
                     a.btn.text-uppercase(href="#") Записаться
 
         .tabs.mb-5
             ul.tabs__nav.nav.nav-tabs(role="tablist")
-                li.tabs__nav-item.flex-grow-1.nav-item
-                    a.tabs__nav-link.nav-link.active(href="#links-tires" data-toggle="tab" role="tab" aria-controls="links-tires" aria-selected="true")
-                        svg.tabs__nav-icon
-                            use(xlink:href="#icon-tires")
-                        span.tabs__nav-title.text-uppercase шины
-                li.tabs__nav-item.flex-grow-1.nav-item
-                    a.tabs__nav-link.nav-link(href="#links-wheels" data-toggle="tab" role="tab" aria-controls="links-wheels" aria-selected="false")
-                        svg.tabs__nav-icon
-                            use(xlink:href="#icon-wheels")
-                        span.tabs__nav-title.text-uppercase диски
+              li.tabs__nav-item.flex-grow-1.nav-item
+                a.tabs__nav-link.nav-link.active(href="#links-tires" data-toggle="tab" role="tab" aria-controls="links-tires" aria-selected="true")
+                  +icon('tires','tabs__nav-icon')
+                  span.tabs__nav-title.text-uppercase шины
+              li.tabs__nav-item.flex-grow-1.nav-item
+                a.tabs__nav-link.nav-link(href="#links-wheels" data-toggle="tab" role="tab" aria-controls="links-wheels" aria-selected="false")
+                  +icon('wheels','tabs__nav-icon')
+                  span.tabs__nav-title.text-uppercase диски
             .tabs__content.tab-content
-                .tab-pane.fade.show.active(id="links-tires" role="tabpanel" action="#")
-                    .row
-                        .col-lg-10.offset-lg-1.text-center.text-lg-left
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-1.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-2.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-3.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-4.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-5.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-2.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-3.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-1.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-2.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-3.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-4.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-5.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-2.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-3.jpg" alt="" title="")
-                            .text-center
-                                a.readmore(href="#") Показать еще
-                .tab-pane.fade(id="links-wheels" role="tabpanel" action="#")
-                    .row
-                        .col-lg-10.offset-lg-1.text-center.text-lg-left
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-3.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-1.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-2.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-3.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-4.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-5.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-4.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-5.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-2.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-1.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-2.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-2.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-3.jpg" alt="" title="")
-                            a.d-inline-block.mr-3.mb-4(href="#")
-                                img.img-fluid(src="../img/content/logo/logo-3.jpg" alt="" title="")
-                            .text-center
-                                a.readmore(href="#") Показать еще
+              .tab-pane.fade.show.active(id="links-tires" role="tabpanel" action="#")
+                .row
+                  .col-lg-10.offset-lg-1.text-center.text-lg-left
+                    - var logoWheels = ['content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg']
+                    each logoWheels__item in logoWheels
+                      a.d-inline-block.mr-3.mb-4(href="#")
+                        +img(logoWheels__item)
+                    .text-center
+                      a.readmore(href="#") Показать еще
+              .tab-pane.fade(id="links-wheels" role="tabpanel" action="#")
+                .row
+                  .col-lg-10.offset-lg-1.text-center.text-lg-left
+                    - var logoWheels = ['content/logo/logo-3.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-3.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-3.jpg']
+                    each logoWheels__item in logoWheels
+                      a.d-inline-block.mr-3.mb-4(href="#")
+                        +img(logoWheels__item)
+                    .text-center
+                      a.readmore(href="#") Показать еще
 
         include category/popular.pug
 
         .section.mb-3
-            .section__title Рекомендуем так же:
-            include category/carousel.pug
+          .section__title Рекомендуем так же:
+          include category/carousel.pug
 
         .section.row
             .col-lg-9
@@ -493,11 +443,11 @@ block wrapper
                     .text-center
                         a.readmore(href="#") Узнать больше новостей
             .col-lg-3.ml-lg-0.col-md-6.offset-md-3.col-sm-8.offset-sm-2
-                .banner
-                    img.img-cover(src="../img/content/banners/banner-2.jpg" alt="" title="")
-                    .banner__inner.banner__inner_offset
-                        .banner__title Подбор запчастей по VIN-коду
-                        a.btn.text-uppercase(href="#") Подобрать
+              .banner.overflow-hidden
+                img.img-cover(src="../img/content/banners/banner-2.jpg" alt="" title="")
+                .banner__inner.banner__inner_offset.d-flex.flex-column.align-items-center.justify-content-between
+                  .banner__title.h1.font-weight-bold.color-white Подбор запчастей по VIN-коду
+                  a.btn.text-uppercase(href="#") Подобрать
 
         .section
             .section__wrapper

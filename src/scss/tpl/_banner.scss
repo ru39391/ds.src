@@ -1,5 +1,4 @@
 .banner {
-  overflow: hidden;
   position: relative;
   border-radius: 8px;
   box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
@@ -9,7 +8,6 @@
   }
 
   &.banner_carousel {
-    overflow: visible;
     border-radius: 0;
     box-shadow: none;
   }
@@ -21,33 +19,21 @@
 }
 
 .banner__inner {
-  @extend %flex-column;
   @include pos(0,0);
   right: 0;
   bottom: 0;
-  padding: 24px 16px;
-  align-items: center;
-  justify-content: space-between;
 
   &.banner__inner_offset {
-    padding: 32px;
+    padding: 2rem;
 
     @include media-breakpoint-only(lg) {
-      @include px(16px);
+      @include px(1rem);
     }
   }
 }
 
 .banner__title {
-  @include h1;
-  font-weight: bold;
-  color: #fff;
   word-break: break-word;
-  align-items: flex-start;
-
-  &.banner__title_colored {
-    color: $color__brand;
-  }
 
   &.banner__title_sm {
     @include media-breakpoint-down(sm) {
