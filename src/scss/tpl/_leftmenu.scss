@@ -3,13 +3,13 @@
   box-shadow: 2px 2px 8px rgba(0,0,0,.16);
 
   @include media-breakpoint-up(lg) {
-    border-radius: 8px;
+    border-radius: .5rem;
   }
 }
 
 .leftmenu__item {
   @include border(0 0 1px,$color__border);
-  padding: 12px 16px 12px 32px;
+  padding: .75rem 1rem .75rem 2rem;
 
   &:hover,
   &.active {
@@ -28,7 +28,7 @@
 
 .leftmenu__badge {
   line-height: 1.25rem;
-  border-radius: 14px;
+  border-radius: .875rem;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, .14);
 }
 

@@ -1,5 +1,5 @@
 .header {
-  @include offset(0 0 40px,0 0 12px);
+  @include offset(0 0 2.5rem,0 0 .75rem);
   @include pos(0,0,sticky);
   right: 0;
   z-index: 1080;
@@ -20,7 +20,7 @@
 
     .header__wrapper {
       @include media-breakpoint-up(lg) {
-        @include py(12px,0);
+        @include py(.75rem,0);
       }
 
       @include media-breakpoint-down(md) {
@@ -56,7 +56,7 @@
 }
 
 .header__top {
-  padding: 10px 0;
+  padding: .625rem 0;
   overflow: hidden;
   background: $color__light;
   transition: all .3s ease;
@@ -68,11 +68,11 @@
   flex-wrap: wrap;
 
   @include media-breakpoint-up(lg) {
-    @include py(20px,0);
+    @include py(1.25rem,0);
   }
 
   @include media-breakpoint-down(md) {
-    @include py(16px,0);
+    @include py(1rem,0);
   }
 }
 
@@ -145,7 +145,7 @@
 
 .header__nav-icon {
   @include wh(24px);
-  padding: 2px 4px;
+  padding: .125rem .25rem;
   align-self: center;
   border-radius: 50%;
   color: $color__brand;
@@ -155,7 +155,7 @@
 .header__btn-title {
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 20px;
+  line-height: 1.25rem;
 
   @include media-breakpoint-up(lg) {
     display: block;
@@ -165,7 +165,7 @@
 .header__btn {
   @extend %flex-item;
   @extend %btn-theme;
-  padding: 8px 11px;
+  padding: .5rem .688rem;
   letter-spacing: .03em;
 
   &.header__btn_inverse {

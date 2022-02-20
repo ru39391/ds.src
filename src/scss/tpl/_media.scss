@@ -3,7 +3,7 @@
 
   &.media_shadow {
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: .5rem;
     background: #fff;
     box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
 
@@ -12,7 +12,7 @@
     }
 
     .media__date {
-      @include px(12px);
+      @include px(.75rem);
     }
 
     .media__title {
@@ -52,20 +52,20 @@
     .media__meta {
       @include media-breakpoint-up(lg) {
         @include fw(100%/12*9);
-        padding: 24px 0 24px 32px;
+        padding: 1.5rem 0 1.5rem 2rem;
       }
 
       @include media-breakpoint-only(lg) {
-        padding-right: 32px;
+        padding-right: 2rem;
       }
 
       @include media-breakpoint-only(md) {
         @include fw(100%/12*6);
-        padding: 24px;
+        padding: 1.5rem;
       }
 
       @include media-breakpoint-down(sm) {
-        padding: 0 16px 24px;
+        padding: 0 1rem 1.5rem;
       }
     }
 
@@ -121,7 +121,7 @@
 
 .media__picture {
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: .5rem;
 
   @include media-breakpoint-up(md) {
     @include fw(120px);
@@ -134,7 +134,7 @@
 
 .media__meta {
   @include media-breakpoint-up(sm) {
-    padding: 0 24px 0 0;
+    padding: 0 1.5rem 0 0;
   }
 }
 

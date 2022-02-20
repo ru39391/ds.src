@@ -1,5 +1,5 @@
 .recalculate {
-  border-radius: 8px;
+  border-radius: .5rem;
 }
 
 .recalculate__btn {
@@ -8,11 +8,11 @@
   height: 40px;
 
   &.recalculate__btn_remove {
-    padding: 4px 3px 4px 4px;
+    padding: .25rem .188rem .25rem .25rem;
   }
 
   &.recalculate__btn_add {
-    padding: 4px 4px 4px 3px;
+    padding: .25rem .25rem .25rem .188rem;
   }
 }
 

@@ -81,7 +81,7 @@
   &.slides_banners {
     @include mx(0);
     @include px(0);
-    border-radius: 8px;
+    border-radius: .5rem;
     box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
 
     @include media-breakpoint-up(lg) {
@@ -128,7 +128,7 @@
   }
 
   .swiper-slide {
-    @include px(4px);
+    @include px(.25rem);
   }
 }
 
@@ -160,7 +160,7 @@
   @extend %btn-default;
   @extend %flex-column;
   @include wh(40px);
-  @include offset(-25px 0 0,12px 14px);
+  @include offset(-1.563rem 0 0,.75rem .875rem);
   position: absolute;
   top: 50%;
   z-index: 3;
@@ -193,10 +193,10 @@
 
   &.slides__btn_sm {
     @include wh(28px);
-    @include offset(-18px 0 0,8px 6px 8px 4px);
+    @include offset(-1.125rem 0 0,.5rem .375rem .5rem .25rem);
 
     &.slides__btn_next {
-      padding: 8px 4px 8px 6px;
+      padding: .5rem .25rem .5rem .375rem;
     }
   }
 

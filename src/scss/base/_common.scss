@@ -134,7 +134,7 @@ button {
 }
 
 .border-radius {
-  border-radius: 8px;
+  border-radius: .5rem;
 }
 
 .pointer-events-none {
@@ -178,12 +178,12 @@ button {
     justify-content: space-between;
 
     @include media-breakpoint-up(md) {
-      @include py(40px);
+      @include py(2.5rem);
       min-height: 320px;
     }
 
     @include media-breakpoint-down(sm) {
-      @include py(24px);
+      @include py(1.5rem);
     }
   }
 }

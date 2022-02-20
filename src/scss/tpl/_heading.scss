@@ -4,7 +4,7 @@
 
 .heading__col {
   @include fw(100%/10);
-  @include px(16px,$grid-gutter-width/2);
+  @include px(1rem,$grid-gutter-width/2);
   text-overflow: ellipsis;
 
   &.heading__col_lg {

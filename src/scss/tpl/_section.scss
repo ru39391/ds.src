@@ -12,8 +12,8 @@
 }
 
 .section__wrapper {
-  @include py(40px);
-  border-radius: 8px;
+  @include py(2.5rem);
+  border-radius: .5rem;
   box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
 
   @include media-breakpoint-up(lg) {
@@ -61,7 +61,7 @@
 
     &.mx-0 {
       @include media-breakpoint-down(sm) {
-        border-radius: 8px;
+        border-radius: .5rem;
       }
     }
   }

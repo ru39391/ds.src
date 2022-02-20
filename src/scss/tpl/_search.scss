@@ -1,8 +1,8 @@
 .search {
     position: relative;
-    padding: 0 40px 0 0;
+    padding: 0 2.5rem 0 0;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: .5rem;
     background: $color__light;
 }
 
@@ -11,7 +11,7 @@
     @include wh(100%,40px);
     @include fs-lh(1rem,1.375rem);
     letter-spacing: .05em;
-    padding: 8px 0 8px 14px;
+    padding: .5rem 0 .5rem .875rem;
     border: 0;
     background: none;
     color: $color__brand;

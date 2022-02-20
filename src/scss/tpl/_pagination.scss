@@ -1,8 +1,8 @@
 .pagination {
     @extend %flex-item;
     justify-content: center;
-    padding: 8px;
-    border-radius: 8px;
+    padding: .5rem;
+    border-radius: .5rem;
     background: #fff;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, .16);
 }
