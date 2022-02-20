@@ -11,7 +11,7 @@
       grid-column-end: 4;
     }
 
-    .sale-item__header.mb-3 {
+    .sale-item__header {
       @include media-breakpoint-up(lg) {
         max-height: 255px;
       }
@@ -24,7 +24,7 @@
       grid-column-end: 7;
     }
 
-    .sale-item__header.mb-3 {
+    .sale-item__header {
       @include media-breakpoint-up(lg) {
         max-height: 255px;
       }
@@ -56,7 +56,7 @@
     overflow: visible;
     position: relative;
 
-    .sale-item__header.mb-3 {
+    .sale-item__header {
       max-height: initial;
       overflow: hidden;
       border-radius: 8px 8px 0 0;
@@ -80,7 +80,7 @@
   }
 }
 
-.sale-item__header.mb-3 {
+.sale-item__header {
   flex-grow: 1;
   display: block;
 
