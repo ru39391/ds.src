@@ -11,27 +11,15 @@
     border: 1px solid #fcfcfc;
   }
 
-  &.btn_icon {
-
-  }
-
   &.btn_nobg {
-    @include h5;
-    padding: 0;
     box-shadow: none;
     background: none;
-    text-transform: none;
     color: $color__text_default;
   }
 }
 
 .btn-unstyled {
   @extend %btn-default;
-}
-
-.btn-link {
-  @extend %btn-default;
-  @include h6;
 }
 
 .btn__icon {

@@ -1,6 +1,5 @@
 .card {
   @extend %zi-1;
-  padding: 16px;
   border-radius: 8px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .12);
   transition: all .3s ease;
@@ -14,34 +13,9 @@
     max-width: 207px;
   }
 
-  &.card_row {
-    @extend %flex-item;
-    @include px(0,4px);
-    flex-wrap: wrap;
-  }
-
-  &.card_column {
-    @extend %flex-column;
-    height: 100%;
-    justify-content: space-between;
-
+  &.card_sm {
     @include media-breakpoint-down(md) {
       max-width: 207px;
-    }
-  }
-
-  &.card_banner {
-    padding: 0;
-    overflow: hidden;
-
-    .card__picture {
-      height: 100%;
-    }
-
-    &.card_tile {
-      @include media-breakpoint-only(xs) {
-        display: none;
-      }
     }
   }
 

@@ -22,22 +22,21 @@ mixin brand(brand__title, brand__classmod, brand__title_classmod, brand__img="co
     if (brand__title !== '')
       span.brand__title(class=brand__title_classmod)!= brand__title
 
-mixin banner(banner__img, banner__noshadow=false, banner__classmod="card_column card_banner", banner__title="Запись на шиномонтаж онлайн")
-  if (banner__noshadow)
-    .card(class=banner__classmod)
+mixin banner(banner__img, banner__noshadow=false, banner__classmod="card_sm", banner__title="Запись на шиномонтаж онлайн")
+  .card.overflow-hidden.h-100(class=banner__classmod)
+    if (banner__noshadow)
       .banner.banner_noshadow.overflow-hidden
         +img(banner__img,'img-cover')
         .banner__inner.d-flex.flex-column.align-items-center.justify-content-between.px-3.py-4
           .banner__title.h1.font-weight-bold.color-brand!= banner__title
           a.btn.text-uppercase(href="#") Записаться
-  else
-    .card(class=banner__classmod)
-      a.card__picture(href="#")
+    else
+      a.card__picture.h-100(href="#")
         +img(banner__img,'img-cover')
 
-mixin card(card__price_old, card__price_new, card__title="Зимние шины Yokohama Ice", card__label, card__warranty=false, card__credit=false, card__card=false, card__delivery=false, card__repair=false, card__winter=true, card__spikes=true, card__oneclick=false, card__classmod="card_column card_slide", card__img="content/cards/card-1.jpg", card__wheel=false)
+mixin card(card__price_old, card__price_new, card__title="Зимние шины Yokohama Ice", card__label, card__warranty=false, card__credit=false, card__card=false, card__delivery=false, card__repair=false, card__winter=true, card__spikes=true, card__oneclick=false, card__classmod="d-flex", card__img="content/cards/card-1.jpg", card__wheel=false)
   if (card__oneclick)
-    case (card__classmod === 'card_column card_tile')
+    case (card__classmod === 'card_tile d-sm-flex')
       when true
         - var card__oneclick_offset = 'mb-sm-3';
       when false
@@ -46,12 +45,12 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
   if (card__price_new)
     - var card__price_classmod = 'align-items-end';
 
-  if (card__classmod === 'card_column card_tile')
+  if (card__classmod === 'card_tile d-sm-flex')
     - var card__header_offset = 'mb-sm-3';
   else
     - var card__header_offset = 'mb-3';
 
-  .card(class=card__classmod)
+  .card.flex-column.justify-content-between.h-100.p-3(class=card__classmod)
     .card__header(class=card__header_offset)
       a.card__picture.mb-2(href="#")
         +img(card__img)

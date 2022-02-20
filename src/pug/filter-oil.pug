@@ -5,7 +5,7 @@ block meta
 
 block filter
   .header__footer
-    button.filter-toggler(type="button")
+    button.filter-toggler.d-flex.align-items-center.justify-content-center.bg-light.p-2(type="button")
       svg.filter-toggler__icon.mr-2
         use(xlink:href="#icon-filter")
       span.filter-toggler__title
@@ -31,7 +31,7 @@ block wrapper
                     svg.form__title-icon.mr-2
                       use(xlink:href="#icon-oil")
                     | #{title}
-                  button.btn-link(type="reset") Сбросить
+                  button.btn-unstyled.h6(type="reset") Сбросить
                 .form__section
                   .form__section-title.h6.color-disabled.mb-4 Параметры
                   .row
@@ -168,7 +168,7 @@ block wrapper
                             use(xlink:href="#icon-checked")
                         span.form__label-title Bridgestone
                 .text-center
-                  button.btn-unstyled(type="submit")
+                  button.btn-unstyled.h6(type="submit")
                     span.readmore.readmore_arrow-down Показать еще
               .filter__alert
                 .filter__alert-info.h2.font-weight-bold.d-flex.align-items-center.mb-lg-1
