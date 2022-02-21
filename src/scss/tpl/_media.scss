@@ -147,7 +147,3 @@
     @include fs-lh(.75rem,1.375rem);
   }
 }
-
-.media__date {
-  @extend %date-item;
-}

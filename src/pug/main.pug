@@ -334,28 +334,28 @@ block wrapper
                             a.btn.text-uppercase.px-4.mb-4.mb-sm-0(href="#") подобрать шины
                             a.btn.text-uppercase.px-4(href="#") подобрать Диски
 
-        .section.row
-            .col-lg-7
-                .banner.banner_carousel.mb-5.mb-lg-0
-                    .slides.slides_banners.swiper-container
-                        .swiper-wrapper
-                            a.swiper-slide.px-0(href="#")
-                              +img('content/slides/slide-1.jpg','img-cover')
-                            a.swiper-slide.px-0(href="#")
-                              +img('content/slides/slide-1.jpg','img-cover')
-                            a.swiper-slide.px-0(href="#")
-                              +img('content/slides/slide-1.jpg','img-cover')
-                            a.swiper-slide.px-0(href="#")
-                              +img('content/slides/slide-1.jpg','img-cover')
-                            a.swiper-slide.px-0(href="#")
-                              +img('content/slides/slide-1.jpg','img-cover')
-                    .slides-banners-pagination.slides-pagination
-            .col-lg-4.offset-lg-1.col-md-6.offset-md-3.col-sm-8.offset-sm-2
-                .banner.overflow-hidden
-                  +img('content/banners/banner-1.jpg','img-cover')
-                  .banner__inner.d-flex.flex-column.align-items-center.justify-content-between.px-3.py-4
-                    .banner__title.banner__title_sm.h1.text-uppercase.font-weight-bold.color-theme-brand Запись на шиномонтаж онлайн
-                    a.btn.text-uppercase(href="#") Записаться
+        .row.mb-5
+          .col-lg-7.mb-5.mb-lg-0
+            .banner.banner_carousel
+              .slides.slides_banners.swiper-container
+                .swiper-wrapper
+                  a.swiper-slide.px-0(href="#")
+                    +img('content/slides/slide-1.jpg','img-cover')
+                  a.swiper-slide.px-0(href="#")
+                    +img('content/slides/slide-1.jpg','img-cover')
+                  a.swiper-slide.px-0(href="#")
+                    +img('content/slides/slide-1.jpg','img-cover')
+                  a.swiper-slide.px-0(href="#")
+                    +img('content/slides/slide-1.jpg','img-cover')
+                  a.swiper-slide.px-0(href="#")
+                    +img('content/slides/slide-1.jpg','img-cover')
+              .slides-banners-pagination.slides-pagination
+          .col-lg-4.offset-lg-1.col-md-6.offset-md-3.col-sm-8.offset-sm-2
+            .banner.overflow-hidden
+              +img('content/banners/banner-1.jpg','img-cover')
+              .banner__inner.d-flex.flex-column.align-items-center.justify-content-between.px-3.py-4
+                .banner__title.banner__title_sm.h1.text-uppercase.font-weight-bold.color-theme-brand Запись на шиномонтаж онлайн
+                a.btn.text-uppercase(href="#") Записаться
 
         .tabs.mb-5
             ul.tabs__nav.nav.nav-tabs(role="tablist")
@@ -389,67 +389,37 @@ block wrapper
 
         include category/popular.pug
 
-        .section.mb-3
-          .section__title Рекомендуем так же:
+        .mb-3
+          .h2.font-weight-bold.mb-4 Рекомендуем так же:
           include category/carousel.pug
 
-        .section.row
-            .col-lg-9
-                .section__wrapper.section__wrapper_offset
-                    .section__title Новости
-                    .row
-                        .col-md-6
-                            .media.mb-4
-                                a.media__picture.mr-2(href="#")
-                                    img.img-fluid(src="../img/content/media/media-1.jpg" alt="" title="")
-                                .media__meta.flex-grow-1
-                                    a.media__title.d-block.mb-2(href="#") Работа на майские праздники 2021
-                                    .media__date 23.10.2021
-                        .col-md-6
-                            .media.mb-4
-                                a.media__picture.mr-2(href="#")
-                                    img.img-fluid(src="../img/content/media/media-2.jpg" alt="" title="")
-                                .media__meta.flex-grow-1
-                                    a.media__title.d-block.mb-2(href="#") Выходные Дини с 29 марта до 5 апреля
-                                    .media__date 23.10.2021
-                        .col-md-6
-                            .media.mb-4
-                                a.media__picture.mr-2(href="#")
-                                    img.img-fluid(src="../img/content/media/media-3.jpg" alt="" title="")
-                                .media__meta.flex-grow-1
-                                    a.media__title.d-block.mb-2(href="#") Открытие шинного центра ДонШина Ростов-на-Дону.
-                                    .media__date 23.10.2021
-                        .col-md-6
-                            .media.mb-4
-                                a.media__picture.mr-2(href="#")
-                                    img.img-fluid(src="../img/content/media/media-4.jpg" alt="" title="")
-                                .media__meta.flex-grow-1
-                                    a.media__title.d-block.mb-2(href="#") Открытие шинного центра ДонШина Ростов-на-Дону.
-                                    .media__date 23.10.2021
-                        .col-md-6
-                            .media.mb-4
-                                a.media__picture.mr-2(href="#")
-                                    img.img-fluid(src="../img/content/media/media-5.jpg" alt="" title="")
-                                .media__meta.flex-grow-1
-                                    a.media__title.d-block.mb-2(href="#") Рассрочка на шины и диски!
-                                    .media__date 23.10.2021
-                        .col-md-6
-                            .media.mb-4
-                                a.media__picture.mr-2(href="#")
-                                    img.img-fluid(src="../img/content/media/media-6.jpg" alt="" title="")
-                                .media__meta.flex-grow-1
-                                    a.media__title.d-block.mb-2(href="#") Открытие шинного центра ДонШина Ростов-на-Дону.
-                                    .media__date 23.10.2021
-                    .text-center
-                        a.readmore(href="#") Узнать больше новостей
-            .col-lg-3.ml-lg-0.col-md-6.offset-md-3.col-sm-8.offset-sm-2
-              .banner.overflow-hidden
-                img.img-cover(src="../img/content/banners/banner-2.jpg" alt="" title="")
-                .banner__inner.banner__inner_offset.d-flex.flex-column.align-items-center.justify-content-between
-                  .banner__title.h1.font-weight-bold.color-theme-white Подбор запчастей по VIN-коду
-                  a.btn.text-uppercase(href="#") Подобрать
+        .row.mb-5
+          .col-lg-9.mb-5.mb-lg-0
+            .section.d-flex.flex-column.justify-content-between.h-100.px-3
+              .offset-md-1
+                .h2.font-weight-bold.mb-4 Новости
+                - var news = [{title: 'Работа на майские праздники 2021', img: 'content/media/media-1.jpg'},{title: 'Выходные Дини с 29 марта до 5 апреля', img: 'content/media/media-2.jpg'},{title: 'Открытие шинного центра ДонШина Ростов-на-Дону', img: 'content/media/media-3.jpg'},{title: 'Открытие шинного центра ДонШина Ростов-на-Дону', img: 'content/media/media-4.jpg'},{title: 'Рассрочка на шины и диски!', img: 'content/media/media-5.jpg'},{title: 'Открытие шинного центра ДонШина Ростов-на-Дону', img: 'content/media/media-6.jpg'}]
+                .row
+                  each news__item in news
+                    .col-md-6.mb-4
+                      .media
+                        a.media__picture.mr-2(href="#")
+                          +img(news__item.img)
+                        .media__meta.flex-grow-1
+                          a.media__title.d-block.mb-2(href="#")!= news__item.title
+                          .media__date.date 23.10.2021
+              .offset-md-1
+                .text-center
+                  a.readmore(href="#") Узнать больше новостей
+          .col-lg-3.ml-lg-0.col-md-6.offset-md-3.col-sm-8.offset-sm-2
+            .banner.overflow-hidden
+              +img('content/banners/banner-2.jpg','img-cover')
+              .banner__inner.banner__inner_offset.d-flex.flex-column.align-items-center.justify-content-between
+                .banner__title.h1.font-weight-bold.color-theme-white Подбор запчастей по VIN-коду
+                a.btn.text-uppercase(href="#") Подобрать
 
         .section
+          .row
             .section__wrapper
                 .row
                     .col-lg-4.col-sm-10.offset-sm-1.d-flex.flex-column
