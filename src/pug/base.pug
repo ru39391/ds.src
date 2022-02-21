@@ -17,7 +17,7 @@ html(lang="ru")
 
   body
     block header
-        .icons
+        .icons.d-none
         header.header
             .header__top
                 .wrapper.d-flex.flex-wrap.align-items-center
@@ -30,9 +30,9 @@ html(lang="ru")
                               +icon('phone','contacts__icon color-brand mr-lg-2')
                               span.d-none.d-lg-block +7 (365) 277-70-68
                         nav.social.d-flex.flex-wrap.align-items-center
-                            a.social__item.color-brand.mr-4.mr-lg-3(href="#")
+                            a.social__item.color-theme-brand.mr-4.mr-lg-3(href="#")
                               +icon('wapp')
-                            a.social__item.color-brand(href="#")
+                            a.social__item.color-theme-brand(href="#")
                               +icon('tg')
                     .col-xl-5.col-lg-10.d-none.d-lg-block
                         nav.header__nav.d-flex.align-items-center.justify-content-xl-end.justify-content-between
@@ -47,7 +47,7 @@ html(lang="ru")
                         .menu__wrapper
             .header__wrapper
                 .header__col.header__col_logo.col-xl-4.col-lg-5.mb-3
-                    a.logo.color-brand.mr-4(href="#")
+                    a.logo.color-theme-brand.mr-4(href="#")
                       +icon('logo')
                     nav.header__nav.d-flex.align-items-center.justify-content-center
                         a.header__btn.text-uppercase.mr-3(href="#")
@@ -107,66 +107,66 @@ html(lang="ru")
     block wrapper
 
     block footer
-        footer.footer.h6.color-white.bg-brand
+        footer.footer.h6.color-theme-white.bg-theme-brand
             .wrapper.d-flex.flex-wrap
                 .col-lg-2.col-md-3
                     nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0
                         .footer__nav-title.h4 Каталог
-                        a.footer__nav-item.color-white.mb-2(href="#") Шины
-                        a.footer__nav-item.color-white.mb-2(href="#") Диски
-                        a.footer__nav-item.color-white.mb-2(href="#") Мотошины
-                        a.footer__nav-item.color-white.mb-2(href="#") Акб
-                        a.footer__nav-item.color-white.mb-2(href="#") Масла
-                        a.footer__nav-item.color-white.mb-2(href="#") Автотовары
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Шины
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Диски
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Мотошины
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Акб
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Масла
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Автотовары
                 .col-lg-2.col-md-3
                     nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0
                         .footer__nav-title.h4 Услуги
-                        a.footer__nav-item.color-white.mb-2(href="#") Шиномонтаж
-                        a.footer__nav-item.color-white.mb-2(href="#") Сезонное хранение шин и дисков
-                        a.footer__nav-item.color-white.mb-2(href="#") Заправка автокондиционеровов
-                        a.footer__nav-item.color-white.mb-2(href="#") Прокатка дисков
-                        a.footer__nav-item.color-white.mb-2(href="#") Покраска дисков
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Шиномонтаж
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Сезонное хранение шин и дисков
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Заправка автокондиционеровов
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Прокатка дисков
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Покраска дисков
                 .col-lg-2.col-md-3
                     nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0
                         .footer__nav-title.h4 Пользователям
-                        a.footer__nav-item.color-white.mb-2(href="#") Скидки и акции
-                        a.footer__nav-item.color-white.mb-2(href="#") Сравнить
-                        a.footer__nav-item.color-white.mb-2(href="#") Избранное
-                        a.footer__nav-item.color-white.mb-2(href="#") Подбор по авто
-                        a.footer__nav-item.color-white.mb-2(href="#") Шинный калькулятор
-                        a.footer__nav-item.color-white.mb-2(href="#") О компании
-                        a.footer__nav-item.color-white.mb-2(href="#") Новости
-                        a.footer__nav-item.color-white.mb-2(href="#") Статьи
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Скидки и акции
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Сравнить
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Избранное
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Подбор по авто
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Шинный калькулятор
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") О компании
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Новости
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Статьи
                 .col-lg-2.col-md-3
                     nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0
                         .footer__nav-title.h4 Помощь
-                        a.footer__nav-item.color-white.mb-2(href="#") Контакты
-                        a.footer__nav-item.color-white.mb-2(href="#") Вопросы и ответы
-                        a.footer__nav-item.color-white.mb-2(href="#") Оплата и доставка
-                        a.footer__nav-item.color-white.mb-2(href="#") Кредит
-                        a.footer__nav-item.color-white.mb-2(href="#") КупиВкредит
-                        a.footer__nav-item.color-white.mb-2(href="#") Политика конфиденциальности
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Контакты
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Вопросы и ответы
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Оплата и доставка
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Кредит
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") КупиВкредит
+                        a.footer__nav-item.color-theme-white.mb-2(href="#") Политика конфиденциальности
                 .col-xl-3.offset-xl-1.col-lg-4.col-md-6
-                    a.logo.color-white.mb-4(href="#")
+                    a.logo.color-theme-white.mb-4(href="#")
                       +icon('logo')
                     .row.align-items-center
                         .col-8
                             .contacts.mb-2
                                 .contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1
                                   +icon('placemark','contacts__icon color-white mr-2')
-                                  span.color-white г. Ростов-на-Дону
+                                  span.color-theme-white г. Ростов-на-Дону
                                 a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1(href="#")
                                   +icon('phone-nobg','contacts__icon color-white mr-2')
-                                  span.color-white +7 (365) 277-70-68
+                                  span.color-theme-white +7 (365) 277-70-68
                                 a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1(href="#")
                                   +icon('email','contacts__icon color-white mr-2')
-                                  span.color-white office@don-shina.ru
+                                  span.color-theme-white office@don-shina.ru
                         .col-4
                             nav.social.d-flex.flex-wrap.align-items-center
-                                a.social__item.color-white.mr-4.mr-lg-3(href="#")
+                                a.social__item.color-theme-white.mr-4.mr-lg-3(href="#")
                                     svg.icon-fluid
                                         use(xlink:href="#icon-wapp-bordered")
-                                a.social__item.color-white(href="#")
+                                a.social__item.color-theme-white(href="#")
                                     svg.icon-fluid
                                         use(xlink:href="#icon-tg-bordered")
                     .mb-2
@@ -202,9 +202,9 @@ html(lang="ru")
 
   .slides_togglers-next в category/popular.pug
   _swiper.scss - перебрать
-  _sales
+    + _sales
   _section
-  _common
+    + _common
   _card
   _tabs
   _form - внутренние отступы и стили текста
@@ -216,7 +216,7 @@ html(lang="ru")
 
   service.pug - изменить вёрстку promo
   избавиться от .content__date и прочих похожих
-  flex-grow: 1 -> flex-grow-1
+    + flex-grow: 1 -> flex-grow-1
 
     + вернуть фон кнопки фильтра results-tires.pug в стили
 

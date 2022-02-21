@@ -1,0 +1,17 @@
+.wrapper {
+  @extend %wrapper;
+
+  &.wrapper_column {
+    @extend %flex-column;
+    justify-content: space-between;
+
+    @include media-breakpoint-up(md) {
+      @include py(2.5rem);
+      min-height: 320px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      @include py(1.5rem);
+    }
+  }
+}

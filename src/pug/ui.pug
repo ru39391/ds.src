@@ -4,16 +4,89 @@ block meta
   - var title = 'Элементы интерфейса';
 
 block header
+  .header.d-none
 
 block wrapper
-  .py-4.px-5
+  .pt-4.pb-3.px-5.border-bottom
     .content
-      h1 Н1 Noto Sans Bold 36pt / line height 110%
-      h2 Н2 Noto Sans Bold 24pt
-      h3 Н3 Noto Sans Bold 18pt
-      h4 H4 Noto Sans Regular 16pt
-      h5 SimpleText Noto Sans Regular 14pt
-      h6 SmallText Noto Sans Regular 12pt
-      p В нашем интернет-магазине шин и дисков Don-Shina.ru (Дон Шина) представлен большой выбор зимней и летней резины ведущих мировых производителей. Надежные и проверенные шины Nokian (Нокиан), Goodyear, зимние и летние шины Michelin, недорогая резина Continental, Yokohama, Gislaved, Kleber, BF Goodrich, а также автомобильные покрышки отечественных производителей по низким ценам. Купить летние и зимние шины в Ростове можно по низким ценам. Кроме того, в ассортименте присутствуют диски и шины грузовые и для внедорожников. Шины в Таганроге. Шины Шахты. Шины в Новочеркасске.
+      h1 h1 Заголовок первого уровня
+      h2 h2 Заголовок второго уровня
+      h3 h3 Заголовок третьего уровня
+      h4 h4 Заголовок четвёртого уровня
+      h5 h5 Заголовок пятого уровня
+      h6 h6 Заголовок шестого уровня
+      p Обычный текст, размещённый внутри блока с селектором класса&nbsp;
+        span.font-weight-bold .content
+        br
+        | Прописал стили таким образом, чтобы тэгам заголовков, абзацев и списков не пришлось бы дописывать селекторы классов. Достаточно поместить их внутри соответствующего блока. Исключение составляет маркированный список:
+      ul.list-marked
+        li Элементу&nbsp;
+          span.font-weight-bold ul&nbsp;
+          | необходимо присвоить класс&nbsp;
+          span.font-weight-bold list-marked&nbsp;
+          |;
+        li В других случаях списки внутри&nbsp;
+          span.font-weight-bold .content&nbsp;
+          | будут размечены автоматически;
+        li Это касается как простых маркированных списков, так и нумерованных. Например:
+      ul
+        li Это простой маркированный список;
+        li Если список с крупным цветным маркером можно разместить, благодаря селектору класса&nbsp;
+          span.font-weight-bold list-marked
+          | , где угодно на сайте, то обычный список принимает соответствующий вид только внутри текстового блока;
+        li В других случаях стандартное форматирование не работает;
+        li То же относится и к нумерованным спискам.
+      ol
+        li Это простой нумерованный список;
+        li У него стандартное форматирование.
+
+  .pt-4.pb-3.px-5.border-bottom
+    ul
+      li.h1.mb-4 Присваиваем любому тексту размер заголовка первого уровня;
+      li.h2.mb-4 Это возможно благодаря селекторам класса&nbsp;
+        span.font-weight-bold .hN
+        |;
+      li.h3.mb-4 Где N - число от 1 до 6, для текущей строчки N = 3, для двух предыдущих N равно 1 и 2 соответственно;
+      li.h4.mb-4 Вместе с размером текста не присваивается отступ и полужирное начертание;
+      li.h5.mb-4 Сделать это можно, используя нативные селекторы классов Bootstrap, например:
+      li.h6.font-weight-bold.mb-4 Применён .font-weight-bold
+
+  .pt-4.pb-3.px-5.border-bottom
+    p.h2.mb-4 Ниже несколько селекторов, подстроенных под использованные в макете цвета:
+    ul
+      li.h3.font-weight-bold.color-theme-info.mb-4 Применён .color-theme-info;
+      li.h3.font-weight-bold.color-theme-light.mb-4 Применён .color-theme-light;
+      li.h3.font-weight-bold.color-theme-brand.mb-4 Применён .color-theme-brand;
+      li.h3.font-weight-bold.color-theme-brand-dark.mb-4 Применён .color-theme-brand-dark;
+      li.h3.font-weight-bold.color-theme-success.mb-4 Применён .color-theme-success;
+      li.h3.font-weight-bold.color-theme-warning.mb-4 Применён .color-theme-warning;
+      li.h3.font-weight-bold.color-theme-disabled.mb-4 Применён .color-theme-disabled;
+
+  .pt-4.pb-3.px-5.border-bottom
+    p.h2.mb-4 Фоны, текст в блоке наследует цвет от родителя благодаря селектору класса .color-theme-inherit (кроме второго и последнего элементов):
+    ul.color-theme-white
+      li.h4.color-theme-inherit.bg-theme-info.p-4.mb-3 .bg-theme-info
+      li.h4.color-theme-brand-dark.bg-theme-light.p-4.mb-3 .bg-theme-light
+      li.h4.color-theme-inherit.bg-theme-brand.p-4.mb-3 .bg-theme-brand
+      li.h4.color-theme-inherit.bg-theme-brand-dark.p-4.mb-3 .bg-theme-brand-dark
+      li.h4.color-theme-inherit.bg-theme-success.p-4.mb-3 .bg-theme-success
+      li.h4.color-theme-inherit.bg-theme-warning.p-4.mb-3 .bg-theme-warning
+      li.h4.color-theme-inherit.bg-theme-disabled.p-4.mb-3 .bg-theme-disabled
+      li.h4.color-theme-brand-dark.bg-theme-white.border.p-4.mb-3 .bg-theme-white
+
+  .pt-4.pb-3.px-5.border-bottom
+    p.h2.mb-4 Кнопки
+    .mb-3
+      button.btn(type="button") Кнопка со стилями по умолчанию
+    .mb-3
+      button.btn.text-uppercase(type="button") .text-uppercase
+    .mb-3
+      button.btn.bg-theme-disabled(type="button") .bg-theme-disabled
+    .mb-3
+      button.btn.color-theme-light(type="button") .color-theme-light
+    .mb-3
+      button.btn.py-4.px-5(type="button") .py-4.px-5
+    .mb-3
+      button.btn.w-100(type="button") Ширина 100%
 
 block footer

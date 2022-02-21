@@ -1,0 +1,11 @@
+.toggler {
+  @extend %toggler-theme;
+
+  &.active {
+    @extend %toggler-theme-current;
+  }
+
+  &.toggler_success {
+    @extend %toggler-theme-success;
+  }
+}

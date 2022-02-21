@@ -108,7 +108,7 @@
     }
   }
 
-  &.form__label_plain.color-disabled {
+  &.form__label_plain.color-theme-disabled {
     @include pos(-18px,8px);
     @include fs-lh(.75rem,1.125rem);
     cursor: default;

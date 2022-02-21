@@ -1,0 +1,17 @@
+.icon-fluid {
+  @include wh(100%);
+  pointer-events: none;
+}
+
+.icon-marker {
+  @include fw(16px);
+  @include wh(16px);
+  pointer-events: none;
+}
+
+.icon-rounded {
+  @include wh(48px);
+  @include fw(48px);
+  padding: .5rem;
+  border-radius: 50%;
+}

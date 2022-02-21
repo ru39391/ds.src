@@ -1,0 +1,59 @@
+h1 {
+  @extend %title-default;
+}
+
+p {
+  @include h5;
+}
+
+a {
+  @extend %link-default;
+}
+
+.h1 {
+  @include h1;
+}
+
+.h2 {
+  @include h2;
+}
+
+.h3 {
+  @include h3;
+}
+
+.h4 {
+  @include h4;
+}
+
+.h5 {
+  @include h5;
+}
+
+.h6 {
+  @include h6;
+}
+
+.list-marked {
+  li {
+    margin: 0 0 1.5rem;
+    list-style-type: none !important;
+
+    &:before {
+      @include wh(8px);
+      @include inline-block;
+      content: '';
+      border-radius: 50%;
+      margin: .5rem .25rem 0 0;
+      background: $color__brand;
+    }
+  }
+}
+
+.text-underline {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

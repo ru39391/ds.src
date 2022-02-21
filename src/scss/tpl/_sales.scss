@@ -1,6 +1,4 @@
 .sale-item {
-  @extend %flex-column;
-  overflow: hidden;
   background: #fff;
   border-radius: .5rem;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, .16);
@@ -53,12 +51,10 @@
   }
 
   &.sale-item_section {
-    overflow: visible;
     position: relative;
 
     .sale-item__header {
-      max-height: initial;
-      overflow: hidden;
+      max-height: 500px;
       border-radius: .5rem .5rem 0 0;
 
       @include media-breakpoint-down(sm) {
@@ -66,24 +62,13 @@
       }
     }
 
-    .sale-item__body {
-      @include media-breakpoint-down(sm) {
-        padding: 0 1rem 1rem;
-      }
-    }
-
     .sale-item__date {
-      @include h5;
       @include pos(-10px,32px);
-      padding: 0 .5rem;
     }
   }
 }
 
 .sale-item__header {
-  flex-grow: 1;
-  display: block;
-
   @include media-breakpoint-up(md) {
     max-height: 175px;
   }
@@ -91,24 +76,4 @@
   @include media-breakpoint-down(sm) {
     height: 115px;
   }
-}
-
-.sale-item__body {
-  @include media-breakpoint-up(lg) {
-    padding: 0 2rem 1rem;
-  }
-
-  @include media-breakpoint-down(md) {
-    padding: 0 1rem 1.5rem;
-  }
-}
-
-.sale-item__date {
-  @extend %date-item;
-}
-
-.sale-item__title {
-  @include h2;
-  font-weight: bold;
-  display: block;
 }

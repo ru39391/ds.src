@@ -37,11 +37,18 @@
   }
 
   ul {
-    @extend %list-default;
     margin-bottom: 1.5rem;
 
     li {
       list-style-type: disc;
+    }
+  }
+
+  ol {
+    margin-bottom: 1.5rem;
+
+    li {
+      list-style-type: decimal;
     }
   }
 

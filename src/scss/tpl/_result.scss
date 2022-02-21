@@ -1,0 +1,21 @@
+.result-item {
+  display: block;
+  text-align: center;
+}
+
+.result-item__pic {
+  display: block;
+  margin: 0 0 .75rem;
+}
+
+.result-item__title {
+  display: block;
+
+  @include media-breakpoint-up(lg) {
+    @include h5;
+  }
+
+  @include media-breakpoint-down(md) {
+    @include h6;
+  }
+}

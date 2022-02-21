@@ -2,13 +2,13 @@
   .filter__body
     form.form.form_bg.form_filter(action="#")
       .form__header.d-flex.align-items-center.justify-content-between.d-lg-block
-        .form__title.form__title_icon.d-flex.align-items-center.h3.font-weight-bold.color-brand.mb-0.mb-lg-2
+        .form__title.form__title_icon.d-flex.align-items-center.h3.font-weight-bold.color-theme-brand.mb-0.mb-lg-2
           svg.form__title-icon.mr-2
             use(xlink:href="#icon-wheels")
           | Подбор дисков
         button.btn-unstyled.h6(type="reset") Сбросить
       .form__section
-        .form__section-title.h6.color-disabled.mb-4 Типоразмер
+        .form__section-title.h6.color-theme-disabled.mb-4 Типоразмер
         .row
           .col-4.col-lg-12
             .form__select.mb-lg-4
@@ -43,7 +43,7 @@
                 option 13
                 option 13C
       .form__section
-        .form__section-title.h6.color-disabled.mb-4 Тип диска
+        .form__section-title.h6.color-theme-disabled.mb-4 Тип диска
         input.form__toggler.form__toggler_checkbox(id="param-1" type="checkbox" value="")
         label.form__label.mb-4(for="param-1")
           span.form__label-icon
@@ -63,7 +63,7 @@
               use(xlink:href="#icon-checked")
           span.form__label-title Стальной
       .form__section
-        .form__section-title.h6.color-disabled.mb-4 Тип
+        .form__section-title.h6.color-theme-disabled.mb-4 Тип
         input.form__toggler.form__toggler_checkbox(id="param-4" type="checkbox" value="")
         label.form__label.mb-4(for="param-4")
           span.form__label-icon
@@ -83,17 +83,17 @@
               use(xlink:href="#icon-checked")
           span.form__label-title Для внедорожника
       .form__section
-        .form__section-title.h6.color-disabled.mb-4 Вылет диска, мм
+        .form__section-title.h6.color-theme-disabled.mb-4 Вылет диска, мм
         .row.mb-3
           .form__item.col-6
-            label.form__label.form__label_plain.color-disabled От
+            label.form__label.form__label_plain.color-theme-disabled От
             input#et-min.form__field(type="text" value="")
           .form__item.col-6
-            label.form__label.form__label_plain.color-disabled До
+            label.form__label.form__label_plain.color-theme-disabled До
             input#et-max.form__field(type="text" value="")
         #et-ranger.form__slider
       .form__section
-        .form__section-title.h6.color-disabled.mb-4 Применяемость
+        .form__section-title.h6.color-theme-disabled.mb-4 Применяемость
         .form__select
           .form__select-title Выберете марку
           select.form__select-options
@@ -104,17 +104,17 @@
             option Chevrolet
             option Citroen
       .form__section
-        .form__section-title.h6.color-disabled.mb-4 Цена, ₽
+        .form__section-title.h6.color-theme-disabled.mb-4 Цена, ₽
         .row.mb-3
           .form__item.col-6
-            label.form__label.form__label_plain.color-disabled От
+            label.form__label.form__label_plain.color-theme-disabled От
             input#price-min.form__field(type="text" value="")
           .form__item.col-6
-            label.form__label.form__label_plain.color-disabled До
+            label.form__label.form__label_plain.color-theme-disabled До
             input#price-max.form__field(type="text" value="")
         #price-ranger.form__slider
       .form__section
-        .form__section-title.h6.color-disabled.mb-4 Наличие
+        .form__section-title.h6.color-theme-disabled.mb-4 Наличие
         input.form__toggler.form__toggler_checkbox(id="instock" type="checkbox" value="")
         label.form__label(for="instock")
           span.form__label-icon
@@ -122,7 +122,7 @@
               use(xlink:href="#icon-checked")
           span.form__label-title Сейчас в наличии
       .form__section.border-0.pb-0
-        .form__section-title.h6.color-disabled.mb-4 Бренд
+        .form__section-title.h6.color-theme-disabled.mb-4 Бренд
         .form__item.mb-4
           input.form__field(type="text" value="")
           label.form__label.form__label_title Введите название
@@ -186,7 +186,7 @@
       .text-center
         button.btn-unstyled.h6(type="submit")
           span.readmore.readmore_arrow-down Показать еще
-    .filter__alert.d-flex.align-items-center.justify-content-between.flex-lg-column.color-white.bg-brand.px-lg-3.pt-lg-1.pb-lg-3.py-3.px-4
+    .filter__alert.d-flex.align-items-center.justify-content-between.flex-lg-column.color-theme-white.bg-theme-brand.px-lg-3.pt-lg-1.pb-lg-3.py-3.px-4
       .filter__alert-info.h2.font-weight-bold.d-flex.align-items-center.mb-lg-1
         .h5.font-weight-normal.mr-2 Найдено:
         | 713

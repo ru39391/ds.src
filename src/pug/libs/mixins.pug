@@ -28,7 +28,7 @@ mixin banner(banner__img, banner__noshadow=false, banner__classmod="card_sm", ba
       .banner.banner_noshadow.overflow-hidden
         +img(banner__img,'img-cover')
         .banner__inner.d-flex.flex-column.align-items-center.justify-content-between.px-3.py-4
-          .banner__title.h1.font-weight-bold.color-brand!= banner__title
+          .banner__title.h1.font-weight-bold.color-theme-brand!= banner__title
           a.btn.text-uppercase(href="#") Записаться
     else
       a.card__picture.h-100(href="#")
@@ -64,19 +64,19 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
         .card__features.card__features_col
           if (card__warranty)
             .card__features-item
-              span.card__features-icon.bg-info
+              span.card__features-icon.bg-theme-info
                 +icon('warranty')
-              span.card__features-title.bg-info Расширеная гарантия
+              span.card__features-title.bg-theme-info Расширеная гарантия
           if (card__credit)
             .card__features-item
-              span.card__features-icon.bg-disabled
+              span.card__features-icon.bg-theme-disabled
                 +icon('credit')
-              span.card__features-title.bg-disabled Кредит
+              span.card__features-title.bg-theme-disabled Кредит
           if (card__card)
             .card__features-item
-              span.card__features-icon.bg-warning
+              span.card__features-icon.bg-theme-warning
                 +icon('card')
-              span.card__features-title.bg-warning Топливная карта
+              span.card__features-title.bg-theme-warning Топливная карта
           if (card__delivery)
             .card__features-item
               span.card__features-icon
@@ -84,11 +84,11 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
               span.card__features-title Бесплатная доставка
           if (card__repair)
             .card__features-item
-              .card__features-content.bg-success
+              .card__features-content.bg-theme-success
                 .d-flex.align-items-center.pointer-events-none
-                  span.card__features-icon.bg-success
+                  span.card__features-icon.bg-theme-success
                     +icon('repair')
-                  span.card__features-title.bg-success Бесплатный шиномотаж
+                  span.card__features-title.bg-theme-success Бесплатный шиномотаж
                 .card__features-text
                   p Акция действует при покупке комплекта шин за наличные (от 4 шт.)
                   p При наличии на Доватора 11
@@ -110,7 +110,7 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
               if (card__spikes)
                 .icon-marker
                   +icon('spikes')
-          .card__params.flex-grow-1.text-right.color-brand 215 / 55  R16
+          .card__params.flex-grow-1.text-right.color-theme-brand 215 / 55  R16
     .card__body.d-flex.flex-column.justify-content-between.flex-grow-1
       .card__intro
         a.card__title.d-block.mb-2(href="#")!= card__title
@@ -129,11 +129,11 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
                 | ₽
               .text-sm при сдаче старого
         .d-flex.align-items-center.justify-content-between(class=card__oneclick_offset)
-          .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-brand.mr-1
+          .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
             input.recalculate__field.d-none(type="number" name="count" value="4")
-            button.recalculate__btn.font-weight-bold.color-white.flex-grow-1.recalculate__btn_remove(type="button") -
-            .recalculate__value.d-flex.align-items-center.justify-content-center.color-white 4
-            button.recalculate__btn.font-weight-bold.color-white.flex-grow-1.recalculate__btn_add(type="button") +
+            button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
+            .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
+            button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
           a.btn.text-uppercase(href="#") В корзину
         if (card__oneclick)
           button.card__btn.card__btn_link.w-100(type="button")
