@@ -8,7 +8,7 @@ block personal
     .section__title.text-center Текущие записи
     .section__wrapper.pb-0
       .section__body
-        .section__title.section__title_sm.color-theme-brand Вы записаны на шиномонтаж
+        .h3.font-weight-bold.mb-3.color-theme-brand Вы записаны на шиномонтаж
         .desclist
           .d-flex.align-items-center.mb-1
             .desclist__title.h6.d-block.overflow-hidden.px-0.col-xl-2.col-sm-3 Номер записи:
@@ -26,10 +26,10 @@ block personal
         .row
           .contacts.d-flex.align-items-center.justify-content-lg-between.flex-wrap.col-xl-7
             a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-2.mb-sm-0(href="#")
-              +icon('tg','contacts__icon color-brand mr-2')
+              +icon('tg','contacts__icon color-theme-brand mr-2')
               span.contacts__item-title Напомнить в Telegram
             a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-2.mb-sm-0(href="#")
-              +icon('wapp','contacts__icon color-brand mr-2')
+              +icon('wapp','contacts__icon color-theme-brand mr-2')
               span.contacts__item-title Напомнить в WhatsApp
           .col-xl-5.d-flex.justify-content-xl-end
             button.btn.btn_nobg.h5.p-0(type="button")

@@ -117,11 +117,3 @@
     column-gap: (100%/12);
   }
 }
-
-.content__intro {
-  @include h4;
-}
-
-.content__date {
-  @extend %date-item;
-}

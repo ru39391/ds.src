@@ -396,7 +396,7 @@ block wrapper
         .row.mb-5
           .col-lg-9.mb-5.mb-lg-0
             .section.d-flex.flex-column.justify-content-between.h-100.px-3
-              .offset-md-1
+              .px-lg-5.px-sm-4
                 .h2.font-weight-bold.mb-4 Новости
                 - var news = [{title: 'Работа на майские праздники 2021', img: 'content/media/media-1.jpg'},{title: 'Выходные Дини с 29 марта до 5 апреля', img: 'content/media/media-2.jpg'},{title: 'Открытие шинного центра ДонШина Ростов-на-Дону', img: 'content/media/media-3.jpg'},{title: 'Открытие шинного центра ДонШина Ростов-на-Дону', img: 'content/media/media-4.jpg'},{title: 'Рассрочка на шины и диски!', img: 'content/media/media-5.jpg'},{title: 'Открытие шинного центра ДонШина Ростов-на-Дону', img: 'content/media/media-6.jpg'}]
                 .row
@@ -404,13 +404,12 @@ block wrapper
                     .col-md-6.mb-4
                       .media
                         a.media__picture.mr-2(href="#")
-                          +img(news__item.img)
+                          +img(news__item.img, 'img-cover')
                         .media__meta.flex-grow-1
                           a.media__title.d-block.mb-2(href="#")!= news__item.title
                           .media__date.date 23.10.2021
-              .offset-md-1
-                .text-center
-                  a.readmore(href="#") Узнать больше новостей
+              .text-center.px-lg-5.px-sm-4
+                a.readmore(href="#") Узнать больше новостей
           .col-lg-3.ml-lg-0.col-md-6.offset-md-3.col-sm-8.offset-sm-2
             .banner.overflow-hidden
               +img('content/banners/banner-2.jpg','img-cover')
@@ -418,24 +417,21 @@ block wrapper
                 .banner__title.h1.font-weight-bold.color-theme-white Подбор запчастей по VIN-коду
                 a.btn.text-uppercase(href="#") Подобрать
 
-        .section
-          .row
-            .section__wrapper
-                .row
-                    .col-lg-4.col-sm-10.offset-sm-1.d-flex.flex-column
-                        .section__title.pr-lg-5 Интернет-магазин резины, авто шин и дисков в Ростове-на-Дону
-                        .row.flex-grow-1
-                            .col-xl-6.col-lg-8.col-md-6.d-flex.flex-column.justify-content-around.h-100
-                              .feature.mb-5.mb-lg-4
-                                .feature__value.font-weight-bold.color-theme-brand 10
-                                  span.h1 лет
-                                .h4 на рынке продаж шин дисков и автотоваров.
-                              .feature.mb-5.mb-lg-0
-                                .feature__value.font-weight-bold.color-theme-brand &gt;2000
-                                .h4 качественных товаров в каталоге сайта.
-                    .col-lg-6.ml-lg-0.col-sm-10.offset-sm-1
-                      .content
-                        p В нашем интернет-магазине шин и дисков Don-Shina.ru (Дон Шина) представлен большой выбор зимней и летней резины ведущих мировых производителей. Надежные и проверенные шины Nokian (Нокиан), Goodyear, зимние и летние шины Michelin, недорогая резина Continental, Yokohama, Gislaved, Kleber, BF Goodrich, а также автомобильные покрышки отечественных производителей по низким ценам. Купить летние и зимние шины в Ростове можно по низким ценам. Кроме того, в ассортименте присутствуют диски и шины грузовые и для внедорожников. Шины в Таганроге. Шины Шахты. Шины в Новочеркасске.
-                        p Кроме летних и зимних шин разных размеров, у нас можно купить литые диски, кованые, штампованные на авто: Lenso, Enkei, Slik, ВСМПО, литые диски LS Replica (Реплика), KOSEI, KFZ, Futek, Теч-лайн, хромированные литые диски Futek, а также осуществляем хранение шин и литых дисков на авто всех размеров. Если вы захотите купить диски (автомобильные) на сумму 50000 руб и более, то мы предоставим вам бесплатную доставку. На нашем сайте вы можете воспользоваться удобным подбором шин и дисков по марке автомобиля, а также заказать шины на Дом. В магазине автомобильных шин и дисков ДонШина цены ниже рыночных.
-                      .text-lg-left.text-center
-                        a.readmore(href="#") Узнать больше о компании
+        .section.d-flex.flex-wrap.px-3.mb-5
+          .col-lg-4.d-flex.flex-column.pl-lg-5.pr-lg-0.px-sm-4
+            .h2.font-weight-bold.pr-xl-5.mb-4 Интернет-магазин резины, авто шин и дисков в Ростове-на-Дону
+            .row.flex-grow-1
+              .col-xl-6.col-lg-8.col-md-6.d-flex.flex-column.justify-content-around.h-100
+                .feature.mb-5.mb-lg-4
+                  .feature__value.font-weight-bold.color-theme-brand 10
+                    span.h1 лет
+                  .h4 на рынке продаж шин дисков и автотоваров.
+                .feature.mb-5.mb-lg-0
+                  .feature__value.font-weight-bold.color-theme-brand &gt;2000
+                  .h4 качественных товаров в каталоге сайта.
+          .col-lg-6.offset-lg-1.px-lg-0.px-sm-4
+            .content
+              p В нашем интернет-магазине шин и дисков Don-Shina.ru (Дон Шина) представлен большой выбор зимней и летней резины ведущих мировых производителей. Надежные и проверенные шины Nokian (Нокиан), Goodyear, зимние и летние шины Michelin, недорогая резина Continental, Yokohama, Gislaved, Kleber, BF Goodrich, а также автомобильные покрышки отечественных производителей по низким ценам. Купить летние и зимние шины в Ростове можно по низким ценам. Кроме того, в ассортименте присутствуют диски и шины грузовые и для внедорожников. Шины в Таганроге. Шины Шахты. Шины в Новочеркасске.
+              p Кроме летних и зимних шин разных размеров, у нас можно купить литые диски, кованые, штампованные на авто: Lenso, Enkei, Slik, ВСМПО, литые диски LS Replica (Реплика), KOSEI, KFZ, Futek, Теч-лайн, хромированные литые диски Futek, а также осуществляем хранение шин и литых дисков на авто всех размеров. Если вы захотите купить диски (автомобильные) на сумму 50000 руб и более, то мы предоставим вам бесплатную доставку. На нашем сайте вы можете воспользоваться удобным подбором шин и дисков по марке автомобиля, а также заказать шины на Дом. В магазине автомобильных шин и дисков ДонШина цены ниже рыночных.
+            .text-lg-left.text-center
+              a.readmore(href="#") Узнать больше о компании

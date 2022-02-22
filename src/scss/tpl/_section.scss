@@ -1,6 +1,4 @@
 .section {
-  margin-bottom: 40px;
-
   &.section_top {
     margin-top: -40px;
     position: relative;
@@ -15,6 +13,13 @@
   @include py(2.5rem);
   border-radius: .5rem;
   box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
+
+  &.section_divider {
+    @include media-breakpoint-down(sm) {
+      @include mx(-1rem);
+      border-radius: 0;
+    }
+  }
 }
 
 .section__wrapper {
@@ -83,17 +88,6 @@
   }
 }
 
-.section__title {
-  @include h2;
-  font-weight: bold;
-  margin: 0 0 24px;
-
-  &.section__title_sm {
-    @include h3;
-    margin: 0 0 12px;
-  }
-}
-
 .section__intro {
   @include h4;
   margin: 0 0 32px;
@@ -104,15 +98,7 @@
     @include my(-2.5rem);
   }
 
-  @include media-breakpoint-only(md) {
-    @include mx(-2.5rem);
-  }
-
   @include media-breakpoint-down(md) {
-    margin-bottom: 24px;
-  }
-
-  @include media-breakpoint-down(sm) {
     @include mx(-1rem);
   }
 
