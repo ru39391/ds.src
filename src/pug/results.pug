@@ -56,21 +56,20 @@ block wrapper
           a.pagination__nav.pagination__nav_next(href="#")
 
     block results__seealso
-      .section.mb-3
-        .section__title Подходящие диски:
+      .mb-3
+        .h2.font-weight-bold.mb-4 Подходящие диски:
         include category/wheels.pug
 
     include category/popular.pug
 
     block results__recommended
-      .section.mb-3
-        .section__title Рекомендуем так же:
+      .mb-3
+        .h2.font-weight-bold.mb-4 Рекомендуем так же:
         include category/carousel.pug
 
     include base/links.pug
 
-    .section
-      .content.content_expanded
-        include base/content.pug
-        .content__footer
-          button.readmore.readmore_btn.readmore_arrow-down(type="button")
+    .content.content_expanded.mb-5
+      include base/content.pug
+      .content__footer
+        button.readmore.readmore_btn.readmore_arrow-down(type="button")

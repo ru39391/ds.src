@@ -6,8 +6,7 @@ block meta
 block filter
   .header__footer
     button.filter-toggler.d-flex.align-items-center.justify-content-center.p-2(type="button")
-      svg.filter-toggler__icon.mr-2
-        use(xlink:href="#icon-filter")
+      +icon('filter','filter-toggler__icon mr-2')
       span.filter-toggler__title
         span.filter-toggler__show Показать
         span.filter-toggler__hide Скрыть

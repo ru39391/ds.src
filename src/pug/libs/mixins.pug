@@ -9,6 +9,15 @@ mixin radio(radio__index=1, radio__title, radio__checked, radio__name="filter-ra
   input.form__toggler.form__toggler_radio(id=`filter-radio-${radio__index}` name=radio__name type="radio" value="" checked=radio__checked)
   label.form__label(class=radio__labelclassmod for=`filter-radio-${radio__index}`)!= radio__title
 
+mixin leftmenu(leftmenu__title, leftmenu__icon, leftmenu__badge, leftmenu__badge_text, leftmenu__badge_extratext=false)
+  a.leftmenu__item.d-flex.align-items-center.h4(href="#")
+    +icon(leftmenu__icon, 'leftmenu__item-icon color-theme-brand mr-2')
+    span.leftmenu__item-title.d-block.overflow-hidden.text-nowrap.mr-2!= leftmenu__title
+    if (leftmenu__badge_text)
+      span.leftmenu__badge.h5.text-nowrap.color-theme-white.px-2(class=leftmenu__badge)!= leftmenu__badge_text
+        if (leftmenu__badge_extratext)
+          span.leftmenu__badge-text Б.₽.
+
 mixin slidesNav(slidesNav__prev, slidesNav__next, slidesNav__classmod)
   .slides__nav(class=slidesNav__classmod)
     button.slides__btn.slides__btn_prev.slides-carousel-prev(class=slidesNav__prev type="button")

@@ -38,13 +38,12 @@ block wrapper
               .media__date!= articles__item.date
               a.media__title.d-block.font-weight-bold.mb-3(href="#")!= articles__item.title
               .media__intro.h5!= articles__item.intro
-    .section.text-center.mb-5
-      .section__wrapper.py-3
-        a.readmore.readmore_arrow-down.color-theme-brand(href="#")
-          span.text-lg Показать еще
+    .section.text-center.py-3.mb-5
+      a.readmore.readmore_arrow-down.color-theme-brand(href="#")
+        span.h4 Показать еще
 
-    .section.mb-3
-      .section__title Рекомендуем:
+    .mb-3
+      .h2.font-weight-bold.mb-4 Рекомендуем:
       include category/carousel.pug
 
     include base/links.pug

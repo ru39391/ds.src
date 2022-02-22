@@ -4,7 +4,7 @@ block meta
   - var title = 'Страница услуги';
 
 block wrapper
-  .section.section_top
+  .section.section_top.mb-5
     .section__picture.section__picture_top.text-right.zi-1
       img.img-cover.d-none.d-lg-block(src="../img/content/services/services-top-1.jpg" alt="")
       img.img-cover.d-block.d-lg-none(src="../img/content/services/services-top-1-mobile.jpg" alt="")
@@ -23,54 +23,49 @@ block wrapper
         button.btn.text-uppercase(type="button") Записаться онлайн
 
   .wrapper
-    .section
-      .section__wrapper.section__wrapper_px.mx-0
-        .section__title.text-center Почему лучше обращаться к профессионалам?
-        .section__intro В межсезонье, когда приходит пора менять комплект шин, остро встает вопрос, где это лучше сделать, что бы не стоять больщую очередь. И В такой ситуации мало кто задумывается о качестве работ, а ведь это основной момент. Именно от качества шиномонтажа зависит сразу несколько моментов:
+    .section.px-lg-0.px-3.mb-5
+      .px-lg-5.px-md-4
+        .h2.font-weight-bold.text-center.mb-4 Почему лучше обращаться к профессионалам?
+        .h4.mb-4 В межсезонье, когда приходит пора менять комплект шин, остро встает вопрос, где это лучше сделать, что бы не стоять больщую очередь. И В такой ситуации мало кто задумывается о качестве работ, а ведь это основной момент. Именно от качества шиномонтажа зависит сразу несколько моментов:
         .slides.slides_features.swiper-container.px-0
           .slides__nav.slides__nav_row
             button.slides__btn.slides__btn_prev.slides-features-prev(type="button")
-              svg.icon-fluid
-                use(xlink:href="#icon-arrow-prev")
+              +icon('arrow-prev')
             button.slides__btn.slides__btn_prev.slides-features-next(type="button")
-              svg.icon-fluid
-                use(xlink:href="#icon-arrow-next")
+              +icon('arrow-next')
           .swiper-wrapper
             .swiper-slide.px-3
               .icon-rounded.color-theme-brand.bg-theme-light.mb-3
-                svg.icon-fluid
-                  use(xlink:href="#icon-scales")
+                +icon('scales')
               p Уменьшение срока службы подвески. Неточная или не качественная балансировка может привести к поломке всей ходовой. При некачественной балансировке, неверно выбранный груз или неверном его креплении на диске в процессе эксплуатации груз может слететь.
             .swiper-slide.px-3
               .icon-rounded.color-theme-brand.bg-theme-light.mb-3
-                svg.icon-fluid
-                  use(xlink:href="#icon-target")
+                +icon('target')
               p Неравномерная изношенность покрышек. При неверной балансировке износ шин происходит намного быстрее, что может привести не только к преждевременной замены покрышки, но и к возникновению аварийной ситуации на дороге.
             .swiper-slide.px-3
               .icon-rounded.color-theme-brand.bg-theme-light.mb-3
-                svg.icon-fluid
-                  use(xlink:href="#icon-attention")
+                +icon('attention')
               p Безопасность на дороге. Дороже этого ничего быть не может. Сэкономленные 2 часа на смену комплекта шин у непрофессионалов не стоят Вашей безопасности и безопасности Ваших близких.
-    .section
-      .section__wrapper.section__wrapper_px.mx-0
-        .row
-          .col-xl-4.col-lg-5
-            .section__picture.section__picture_left
-              img.img-fluid(src="../img/content/services/services-1.jpg" alt="")
-          .col-lg-6.offset-xl-1
-            .content
-              p Все работы осуществляют только квалифицированные специалисты, прошедшие профессионально-техническое обучение.
-              p У нас вы можете произвести полный комплекс услуг профессионального шиномонтажа: монтаж-демонтаж легковых шин, шин для внедорожников и микроавтобусов, балансировку и ремонт колес, шиномонтаж мотошин.
-              p Все шиномонтажные работы выполняются на новейшем высококачественном немецком оборудовании фирмы Hofmann, а стоимость услуг вас приятно удивит.
-            .h3.color-theme-brand.font-weight-bold.mb-2 Получить более подробную информацию
-              br
-              | или записаться вы можете по телефону:
-            .contacts
-              a.contacts__item.d-flex.align-items-center.h3.font-weight-bold.text-nowrap.color-theme-brand(href="tel:+73652777068")
-                +icon('phone','contacts__icon color-theme-brand mr-2')
-                span.contacts__item-title +7 (365) 277-70-68
-    .section.mb-3
-      .section__title Отзывы
+
+    .section.section_divider.px-lg-0.px-3.mb-5
+      .px-lg-5.px-md-4.d-flex.flex-wrap
+        .col-xl-4.col-lg-5.px-0
+          .section__picture.section__picture_left.text-center.mx-0
+            +img('content/services/services-1.jpg')
+        .col-lg-6.offset-xl-1.px-0
+          .content
+            p Все работы осуществляют только квалифицированные специалисты, прошедшие профессионально-техническое обучение.
+            p У нас вы можете произвести полный комплекс услуг профессионального шиномонтажа: монтаж-демонтаж легковых шин, шин для внедорожников и микроавтобусов, балансировку и ремонт колес, шиномонтаж мотошин.
+            p Все шиномонтажные работы выполняются на новейшем высококачественном немецком оборудовании фирмы Hofmann, а стоимость услуг вас приятно удивит.
+          .h3.color-theme-brand.font-weight-bold.mb-2 Получить более подробную информацию
+            br
+            | или записаться вы можете по телефону:
+          .contacts
+            a.contacts__item.d-flex.align-items-center.h3.font-weight-bold.text-nowrap.color-theme-brand(href="tel:+73652777068")
+              +icon('phone','contacts__icon color-theme-brand mr-2')
+              span.contacts__item-title +7 (365) 277-70-68
+    .mb-3
+      .h2.font-weight-bold.mb-4 Отзывы
       .slides.slides_reviews.swiper-container.pt-1.pb-4.px-0.mx-0
         .swiper-wrapper
           .swiper-slide
@@ -124,35 +119,34 @@ block wrapper
                   .review__date 10 дек в 11:37
               .review__content.h5 Был 10 декабря, отличный сервис. Сам ещё приеду и всем друзьям посоветую. Мастеру большой репект! Мне очень понравилось, советую ВСЕМ!!!
   .wrapper
-    .section.mb-3
-      .section__title Как мы работаем
-  .section
-    .slides.slides_carousel.swiper-container.pt-1.pb-4.px-0.mx-0
-      .swiper-wrapper
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-1.jpg" alt="")
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-2.jpg" alt="")
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-3.jpg" alt="")
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-4.jpg" alt="")
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-1.jpg" alt="")
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-2.jpg" alt="")
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-3.jpg" alt="")
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-4.jpg" alt="")
-    .text-center
-      a.readmore(href="#") Больше фото
+    .mb-3
+      .h2.font-weight-bold.mb-4 Как мы работаем
+
+  .slides.slides_carousel.swiper-container.pt-1.pb-4.px-0.mx-0.mb-3
+    .swiper-wrapper
+      .swiper-slide
+        img.img-fluid.border-radius(src="../img/content/carousel/item-1.jpg" alt="")
+      .swiper-slide
+        img.img-fluid.border-radius(src="../img/content/carousel/item-2.jpg" alt="")
+      .swiper-slide
+        img.img-fluid.border-radius(src="../img/content/carousel/item-3.jpg" alt="")
+      .swiper-slide
+        img.img-fluid.border-radius(src="../img/content/carousel/item-4.jpg" alt="")
+      .swiper-slide
+        img.img-fluid.border-radius(src="../img/content/carousel/item-1.jpg" alt="")
+      .swiper-slide
+        img.img-fluid.border-radius(src="../img/content/carousel/item-2.jpg" alt="")
+      .swiper-slide
+        img.img-fluid.border-radius(src="../img/content/carousel/item-3.jpg" alt="")
+      .swiper-slide
+        img.img-fluid.border-radius(src="../img/content/carousel/item-4.jpg" alt="")
+  .text-center
+    a.readmore(href="#") Больше фото
 
   .wrapper
     include base/callorder.pug
 
-    .section
-      .content.content_expanded
-        include base/content.pug
-        .content__footer
-          button.readmore.readmore_btn.readmore_arrow-down(type="button")
+    .content.content_expanded.mb-5
+      include base/content.pug
+      .content__footer
+        button.readmore.readmore_btn.readmore_arrow-down(type="button")

@@ -6,8 +6,7 @@ block meta
 block filter
   .header__footer
     button.filter-toggler.d-flex.align-items-center.justify-content-center.p-2(type="button")
-      svg.filter-toggler__icon.mr-2
-        use(xlink:href="#icon-filter")
+      +icon('filter', 'filter-toggler__icon mr-2')
       span.filter-toggler__title
         span.filter-toggler__show Показать
         span.filter-toggler__hide Скрыть
@@ -25,50 +24,13 @@ block wrapper
         .filter.filter_sticky
           .filter__body
             nav.leftmenu
-              a.leftmenu__item.d-flex.align-items-center.h4(href="#")
-                svg.leftmenu__item-icon.color-theme-brand.mr-2
-                  use(xlink:href="#icon-case")
-                span.leftmenu__item-title.d-block.overflow-hidden.text-nowrap.mr-2 Мои заказы
-                span.leftmenu__badge.h5.text-nowrap.color-theme-white.bg-theme-brand.px-2 2
-              a.leftmenu__item.d-flex.align-items-center.h4(href="#")
-                svg.leftmenu__item-icon.color-theme-brand.mr-2
-                  use(xlink:href="#icon-favourite")
-                span.leftmenu__item-title.d-block.overflow-hidden.text-nowrap.mr-2 Избранное
-                span.leftmenu__badge.h5.text-nowrap.color-theme-white.bg-theme-success.px-2 3
-              a.leftmenu__item.d-flex.align-items-center.h4(href="#")
-                svg.leftmenu__item-icon.color-theme-brand.mr-2
-                  use(xlink:href="#icon-gift")
-                span.leftmenu__item-title.d-block.overflow-hidden.text-nowrap.mr-2 Бонусные рубли
-                span.leftmenu__badge.h5.text-nowrap.color-theme-white.bg-theme-success.px-2 300
-                  span.leftmenu__badge-text Б.₽.
-              a.leftmenu__item.d-flex.align-items-center.h4(href="#")
-                svg.leftmenu__item-icon.color-theme-brand.mr-2
-                  use(xlink:href="#icon-tool")
-                span.leftmenu__item-title.d-block.overflow-hidden.text-nowrap.mr-2 Запись на услуги
-              a.leftmenu__item.d-flex.align-items-center.h4(href="#")
-                svg.leftmenu__item-icon.color-theme-brand.mr-2
-                  use(xlink:href="#icon-settings")
-                span.leftmenu__item-title.d-block.overflow-hidden.text-nowrap.mr-2 Подбор по VIN
-                span.leftmenu__badge.h5.text-nowrap.color-theme-white.bg-theme-success.px-2 1
-              a.leftmenu__item.d-flex.align-items-center.h4(href="#")
-                svg.leftmenu__item-icon.color-theme-brand.mr-2
-                  use(xlink:href="#icon-user")
-                span.leftmenu__item-title.d-block.overflow-hidden.text-nowrap.mr-2 Персональные данные
-              a.leftmenu__item.d-flex.align-items-center.h4(href="#")
-                svg.leftmenu__item-icon.color-theme-brand.mr-2
-                  use(xlink:href="#icon-car")
-                span.leftmenu__item-title.d-block.overflow-hidden.text-nowrap.mr-2 Мой автомобиль
-              a.leftmenu__item.d-flex.align-items-center.h4.active(href="#")
-                svg.leftmenu__item-icon.color-theme-brand.mr-2
-                  use(xlink:href="#icon-shield")
-                span.leftmenu__item-title.d-block.overflow-hidden.text-nowrap.mr-2 Смена пароля
-              a.leftmenu__item.d-flex.align-items-center.h4(href="#")
-                svg.leftmenu__item-icon.color-theme-brand.mr-2
-                  use(xlink:href="#icon-exit")
-                span.leftmenu__item-title.d-block.overflow-hidden.text-nowrap.mr-2 Выход
+              - var leftmenu = [{title: 'Мои заказы', icon: 'case', badge: 'bg-theme-brand', badge__text: '2'}, {title: 'Избранное', icon: 'favourite', badge: 'bg-theme-success', badge__text: '3'}, {title: 'Бонусные рубли', icon: 'gift', badge: 'bg-theme-success', badge__text: '300', badge__extratext: true}, {title: 'Запись на услуги', icon: 'tool'},{title: 'Подбор по VIN', icon: 'settings', badge: 'bg-theme-success', badge__text: '1'}, {title: 'Персональные данные', icon: 'user'},{title: 'Мой автомобиль', icon: 'car'}, {title: 'Смена пароля', icon: 'shield'},{title: 'Выход', icon: 'exit'}]
+              each leftmenu__item in leftmenu
+                +leftmenu(leftmenu__item.title, leftmenu__item.icon, leftmenu__item.badge, leftmenu__item.badge__text, leftmenu__item.badge__extratext)
+
       .col-xl-9.col-lg-8
         block personal
 
-    .section.mb-3
-      .section__title Ранее просмотренные товары:
+    .mb-3
+      .h2.font-weight-bold.mb-4 Ранее просмотренные товары:
       include category/carousel.pug

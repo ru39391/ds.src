@@ -15,52 +15,17 @@ block wrapper
       .row
         .col-xl-2.col-lg-3.mb-lg-4
           include base/filter-wheels.pug
-
         .col-xl-10.col-lg-9.mb-4
 
       include category/popular.pug
 
-      .section.mb-3
-        .section__title Рекомендуем так же:
+      .mb-3
+        .h2.font-weight-bold.mb-4 Рекомендуем так же:
         include category/wheels.pug
 
-      .section
-        .section__wrapper.section__wrapper_px
-          .mb-3
-            .h3.font-weight-bold.mb-3 Сезон
-            a.toggler(href="#") Летняя
-            a.toggler(href="#") Зимняя
-            a.toggler(href="#") Всесезонная
-            a.toggler(href="#") Летняя
-            a.toggler(href="#") Зимняя
-            a.toggler(href="#") Всесезонная
-          .mb-3
-            .h3.font-weight-bold.mb-3 Тип
-            a.toggler(href="#") Легковые
-            a.toggler(href="#") Для микроавтобуса
-            a.toggler(href="#") Для микроавтобуса
-          .h3.font-weight-bold.mb-3 Диаметр
-          a.toggler(href="#") 13
-          a.toggler(href="#") 14
-          a.toggler(href="#") 14С
-          a.toggler(href="#") 15
-          a.toggler(href="#") 15С
-          a.toggler(href="#") 16
-          a.toggler(href="#") 16С
-          a.toggler(href="#") 17
-          a.toggler(href="#") 18
-          a.toggler(href="#") 13
-          a.toggler(href="#") 14
-          a.toggler(href="#") 14С
-          a.toggler(href="#") 15
-          a.toggler(href="#") 15С
-          a.toggler(href="#") 16
-          a.toggler(href="#") 16С
-          a.toggler(href="#") 17
-          a.toggler(href="#") 18
+      include base/links.pug
 
-      .section
-        .content.content_expanded
-          include base/content.pug
-          .content__footer
-            button.readmore.readmore_btn.readmore_arrow-down(type="button")
+      .content.content_expanded.mb-5
+        include base/content.pug
+        .content__footer
+          button.readmore.readmore_btn.readmore_arrow-down(type="button")

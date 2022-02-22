@@ -111,16 +111,7 @@
 
   &.section__picture_left {
     @include media-breakpoint-down(md) {
-      @include mx(0);
-      text-align: center;
-    }
-
-    @include media-breakpoint-only(md) {
       margin-top: -40px;
-    }
-
-    @include media-breakpoint-down(sm) {
-      margin-top: -24px;
     }
   }
 }

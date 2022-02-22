@@ -4,7 +4,14 @@ block meta
   - var title = 'Избранное';
 
 block personal
-  .section
-    .section__title.text-center #{title}
-    .mx-3
-      include category/carousel.pug
+  .mb-5
+    .h2.font-weight-bold.text-center.mb-4 #{title}
+    .category.mb-3
+      +card('','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T','sale',false,false,true,false,false,false,false,true,'card_tile d-sm-flex')
+      +card('15 000','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','discount',true,true,false,false,false,false,false,true,'card_tile d-sm-flex')
+      +card('','','Зимние шины Yokohama Ice Guard IG55 215/55','hit',false,false,false,true,true,false,false,true,'card_tile d-sm-flex')
+      +card('','','Зимние шины Yokohama Ice','',false,false,false,false,false,true,true,true,'card_tile d-sm-flex')
+      +card('15 000','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','discount',true,true,false,false,false,false,false,true,'card_tile d-sm-flex')
+      +card('','','Зимние шины Yokohama Ice Guard IG55 215/55','hit',false,false,false,true,true,false,false,true,'card_tile d-sm-flex')
+      +card('','','Зимние шины Yokohama Ice','',false,false,false,false,false,true,true,true,'card_tile d-sm-flex')
+      +card('','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T','sale',false,false,true,false,false,false,false,true,'card_tile d-sm-flex')

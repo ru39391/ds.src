@@ -6,8 +6,7 @@ block meta
 block filter
   .header__footer
     button.filter-toggler.d-flex.align-items-center.justify-content-center.p-2(type="button")
-      svg.filter-toggler__icon.mr-2
-        use(xlink:href="#icon-filter")
+      +icon('filter','filter-toggler__icon mr-2')
       span.filter-toggler__title
         span.filter-toggler__show Показать
         span.filter-toggler__hide Скрыть
@@ -24,20 +23,18 @@ block wrapper
       .row
         .col-xl-2.col-lg-3.mb-lg-4
           include base/filter-wheels.pug
-
         .col-xl-10.col-lg-9.mb-4
           include base/brands.pug
 
       include category/popular.pug
 
-      .section.mb-3
-        .section__title Рекомендуем так же:
+      .mb-3
+        .h2.font-weight-bold.mb-4 Рекомендуем так же:
         include category/wheels.pug
 
       include base/links.pug
 
-      .section
-        .content.content_expanded
-          include base/content.pug
-          .content__footer
-            button.readmore.readmore_btn.readmore_arrow-down(type="button")
+      .content.content_expanded.mb-5
+        include base/content.pug
+        .content__footer
+          button.readmore.readmore_btn.readmore_arrow-down(type="button")

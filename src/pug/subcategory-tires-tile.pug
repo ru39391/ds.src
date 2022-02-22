@@ -6,8 +6,7 @@ block meta
 block filter
   .header__footer
     button.filter-toggler.d-flex.align-items-center.justify-content-center.p-2(type="button")
-      svg.filter-toggler__icon.mr-2
-        use(xlink:href="#icon-filter")
+      +icon('filter','filter-toggler__icon mr-2')
       span.filter-toggler__title
         span.filter-toggler__show Показать
         span.filter-toggler__hide Скрыть
@@ -38,11 +37,9 @@ block wrapper
                   option По популярности
             .col-xl-1.col-md-2.col-sm-5.d-none.d-sm-flex.align-items-center.justify-content-end
               button.form__view.mr-3(type="button")
-                svg.icon-fluid
-                  use(xlink:href="#icon-list")
+                +icon('list')
               button.form__view.active(type="button")
-                svg.icon-fluid
-                  use(xlink:href="#icon-tile")
+                +icon('tile')
           .category.mb-3
             include tile/category.pug
             include tile/category.pug
@@ -63,47 +60,13 @@ block wrapper
 
       include category/popular.pug
 
-      .section.mb-3
-        .section__title Рекомендуем так же:
+      .mb-3
+        .h2.font-weight-bold.mb-4 Рекомендуем так же:
         include category/carousel.pug
 
-      .section
-        .section__wrapper.section__wrapper_px
-          .mb-3
-            .h3.font-weight-bold.mb-3 Сезон
-            a.toggler(href="#") Летняя
-            a.toggler(href="#") Зимняя
-            a.toggler(href="#") Всесезонная
-            a.toggler(href="#") Летняя
-            a.toggler(href="#") Зимняя
-            a.toggler(href="#") Всесезонная
-          .mb-3
-            .h3.font-weight-bold.mb-3 Тип
-            a.toggler(href="#") Легковые
-            a.toggler(href="#") Для микроавтобуса
-            a.toggler(href="#") Для микроавтобуса
-          .h3.font-weight-bold.mb-3 Диаметр
-          a.toggler(href="#") 13
-          a.toggler(href="#") 14
-          a.toggler(href="#") 14С
-          a.toggler(href="#") 15
-          a.toggler(href="#") 15С
-          a.toggler(href="#") 16
-          a.toggler(href="#") 16С
-          a.toggler(href="#") 17
-          a.toggler(href="#") 18
-          a.toggler(href="#") 13
-          a.toggler(href="#") 14
-          a.toggler(href="#") 14С
-          a.toggler(href="#") 15
-          a.toggler(href="#") 15С
-          a.toggler(href="#") 16
-          a.toggler(href="#") 16С
-          a.toggler(href="#") 17
-          a.toggler(href="#") 18
+      include base/links.pug
 
-      .section
-        .content.content_expanded
-          include base/content.pug
-          .content__footer
-            button.readmore.readmore_btn.readmore_arrow-down(type="button")
+      .content.content_expanded.mb-5
+        include base/content.pug
+        .content__footer
+          button.readmore.readmore_btn.readmore_arrow-down(type="button")
