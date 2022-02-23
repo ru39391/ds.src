@@ -9,6 +9,6 @@ block articles__wrapper
       a.media__picture.mb-4.mb-md-0(href="#")
         +img(articles__item.img, 'img-cover')
       .media__meta.flex-grow-1.p-md-4.px-3.pb-4
-        .media__date!= articles__item.date
+        .date.px-2!= articles__item.date
         a.media__title.d-block.font-weight-bold.mb-lg-2.mb-3(href="#")!= articles__item.title
         .media__intro.h5!= articles__item.intro

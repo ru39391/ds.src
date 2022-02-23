@@ -1,0 +1,17 @@
+.promo {
+  margin-top: -2.5rem;
+  position: relative;
+}
+
+.promo__wrapper {
+  @include media-breakpoint-up(md) {
+    min-height: 320px;
+  }
+}
+
+.promo__picture {
+  @include pos(0,0);
+  right: 0;
+  bottom: 0;
+  margin: 0;
+}

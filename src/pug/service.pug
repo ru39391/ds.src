@@ -4,23 +4,24 @@ block meta
   - var title = 'Страница услуги';
 
 block wrapper
-  .section.section_top.mb-5
-    .section__picture.section__picture_top.text-right.zi-1
-      img.img-cover.d-none.d-lg-block(src="../img/content/services/services-top-1.jpg" alt="")
-      img.img-cover.d-block.d-lg-none(src="../img/content/services/services-top-1-mobile.jpg" alt="")
-    .wrapper.container_column.zi-2
-      .section__body.section__body_unstyled
-        nav.pathway
-          a.pathway__link(href="#") Главная
-          a.pathway__link(href="#") Услуги
-          a.pathway__current(href="#") Шиномонтаж
-        section.content
-          h1 Шиномонтаж в Ростове-на-Дону
-          .content__intro Хватит стоять в очередях,
-            br
-            | запишитесь прямо сейчас:
-      .section__footer.p-0
-        button.btn.text-uppercase(type="button") Записаться онлайн
+  .promo.mb-5
+    .promo__picture.text-right.zi-1
+      +img('content/services/services-top-1.jpg','img-cover d-none d-lg-block')
+      +img('content/services/services-top-1-mobile.jpg','img-cover d-block d-lg-none')
+    .wrapper.zi-2
+      .promo__wrapper.d-flex.flex-column.justify-content-between.py-lg-5.py-md-4.py-3
+        .promo__content.mb-3
+          nav.pathway
+            a.pathway__link(href="#") Главная
+            a.pathway__link(href="#") Услуги
+            a.pathway__current(href="#") Шиномонтаж
+          section.content
+            h1 Шиномонтаж в Ростове-на-Дону
+            .h4 Хватит стоять в очередях,
+              br
+              | запишитесь прямо сейчас:
+        .promo__footer
+          button.btn.text-uppercase(type="button") Записаться онлайн
 
   .wrapper
     .section.px-lg-0.px-3.mb-5
@@ -76,7 +77,7 @@ block wrapper
                     use(xlink:href="#icon-emoji")
                 .review__meta.flex-grow-1
                   .review__title.d-block.h4.color-theme-brand Анатолий Ефимов
-                  .review__date 10 дек в 11:37
+                  .date 10 дек в 11:37
               .review__content.h5 Был 10 декабря, отличный сервис. Сам ещё приеду и всем друзьям посоветую. Мастеру большой репект! Мне очень понравилось, советую ВСЕМ!!!
           .swiper-slide
             .review.review_slide.h-100.p-3
@@ -86,7 +87,7 @@ block wrapper
                     use(xlink:href="#icon-emoji")
                 .review__meta.flex-grow-1
                   .review__title.d-block.h4.color-theme-brand Павел Антипин
-                  .review__date 10 дек в 11:37
+                  .date 10 дек в 11:37
               .review__content.h5 Друг присоветовал этот салон. Приехал, не пожалел. Ребята, сервис шикарный! И доступно, и оперативно, и без проблем. Теперь сам работаю сарафанным радио и друзьям советую!
           .swiper-slide
             .review.review_slide.h-100.p-3
@@ -96,7 +97,7 @@ block wrapper
                     use(xlink:href="#icon-emoji")
                 .review__meta.flex-grow-1
                   .review__title.d-block.h4.color-theme-brand Костя Боярский
-                  .review__date 10 дек в 11:37
+                  .date 10 дек в 11:37
               .review__content.h5 Терпеть не могу сам лезть менять! Считаю, что лучше обратиться к спецам, чем возиться. В последний раз обращался сюда, сервис очень понравился. Думаю, дальше тоже буду кататься к Вашему мастеру!
           .swiper-slide
             .review.review_slide.h-100.p-3
@@ -106,7 +107,7 @@ block wrapper
                     use(xlink:href="#icon-emoji")
                 .review__meta.flex-grow-1
                   .review__title.d-block.h4.color-theme-brand Иван Трактиров
-                  .review__date 10 дек в 11:37
+                  .date 10 дек в 11:37
               .review__content.h5 Приезжал сюда ставить шины на зимний сезон. Вот и масло решил приехать менять сюда же. Мастера отличные, работают быстро и качественно. Рекомендую всем!
           .swiper-slide
             .review.review_slide.h-100.p-3
@@ -116,7 +117,7 @@ block wrapper
                     use(xlink:href="#icon-emoji")
                 .review__meta.flex-grow-1
                   .review__title.d-block.h4.color-theme-brand Анатолий Ефимов
-                  .review__date 10 дек в 11:37
+                  .date 10 дек в 11:37
               .review__content.h5 Был 10 декабря, отличный сервис. Сам ещё приеду и всем друзьям посоветую. Мастеру большой репект! Мне очень понравилось, советую ВСЕМ!!!
   .wrapper
     .mb-3
@@ -125,22 +126,22 @@ block wrapper
   .slides.slides_carousel.swiper-container.pt-1.pb-4.px-0.mx-0.mb-3
     .swiper-wrapper
       .swiper-slide
-        img.img-fluid.border-radius(src="../img/content/carousel/item-1.jpg" alt="")
+        +img('content/carousel/item-1.jpg','img-fluid border-radius')
       .swiper-slide
-        img.img-fluid.border-radius(src="../img/content/carousel/item-2.jpg" alt="")
+        +img('content/carousel/item-2.jpg','img-fluid border-radius')
       .swiper-slide
-        img.img-fluid.border-radius(src="../img/content/carousel/item-3.jpg" alt="")
+        +img('content/carousel/item-3.jpg','img-fluid border-radius')
       .swiper-slide
-        img.img-fluid.border-radius(src="../img/content/carousel/item-4.jpg" alt="")
+        +img('content/carousel/item-4.jpg','img-fluid border-radius')
       .swiper-slide
-        img.img-fluid.border-radius(src="../img/content/carousel/item-1.jpg" alt="")
+        +img('content/carousel/item-1.jpg','img-fluid border-radius')
       .swiper-slide
-        img.img-fluid.border-radius(src="../img/content/carousel/item-2.jpg" alt="")
+        +img('content/carousel/item-2.jpg','img-fluid border-radius')
       .swiper-slide
-        img.img-fluid.border-radius(src="../img/content/carousel/item-3.jpg" alt="")
+        +img('content/carousel/item-3.jpg','img-fluid border-radius')
       .swiper-slide
-        img.img-fluid.border-radius(src="../img/content/carousel/item-4.jpg" alt="")
-  .text-center
+        +img('content/carousel/item-4.jpg','img-fluid border-radius')
+  .text-center.mb-5
     a.readmore(href="#") Больше фото
 
   .wrapper

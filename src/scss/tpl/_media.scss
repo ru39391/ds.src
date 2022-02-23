@@ -11,10 +11,6 @@
       border-radius: 0;
     }
 
-    .media__date {
-      @include px(.75rem);
-    }
-
     .media__title {
       @include h3;
     }

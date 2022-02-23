@@ -99,40 +99,37 @@ block wrapper
                   | Сб. – 09:00–17:00,
                   br
                   | Вс. – Выходной
-      .section.col-xl-9.col-lg-8.order-1.order-lg-2.mb-5.mb-lg-4
-        .section__wrapper.section__wrapper_px.overflow-hidden.p-0
+      .col-xl-9.col-lg-8.order-1.order-lg-2.mb-5.mb-lg-4
+        .border-radius.box-shadow.overflow-hidden
           script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab61ba54858def5cc58e7cbfdae9ffac5c0d900377f9b5655fa84742b96a9c73d&amp;width=100%25&amp;height=460&amp;lang=ru_RU&amp;scroll=false")
 
-    .section
-      .section__wrapper.px-3.px-md-0
-        .section__title.text-center.color-theme-brand Вы можете задать нам вопросы и мы ответим в ближайшее
+    form.section.mb-5(action="#")
+      .border-bottom.px-lg-5.px-md-4.px-3.mb-3
+        .h2.font-weight-bold.text-center.color-theme-brand.mb-4 Вы можете задать нам вопросы и мы ответим в ближайшее
           br
           | время
-        form.form(action="#")
-          .form__header.p-0.mb-3
-            //- .justify-content-center.justify-content-xl-start
-            .row
-              .col-xl-3.offset-xl-2.col-lg-4.col-md-5.offset-md-1
-                .form__item.mb-4
-                  input.form__field(type="text" value="")
-                  label.form__label.form__label_title Ваше имя*
-                .form__item.mb-4
-                  input.form__field(type="text" value="")
-                  label.form__label.form__label_title +7 (___) ___-__-__*
-                .form__item.mb-4
-                  input.form__field(type="text" value="")
-                  label.form__label.form__label_title e-mail*
-              .col-xl-3.col-lg-4.offset-lg-2.col-md-5
-                .form__item.mb-4
-                  textarea.form__field.form__field_textarea
-                  label.form__label.form__label_title Текст сообщения
-          //- .justify-content-center.justify-content-xl-start
-          .row.text-center.text-md-left
-            .form__footer.d-flex.flex-wrap.align-items-center.col-xl-6.offset-xl-2.col-lg-7.col-md-10.offset-md-1.px-0.mb-4.mb-lg-0
-              .col-md-6.mb-3.mb-md-0 *-поля обязательные для заполнения
-              .col-md-6 Нажимая “Подписаться” вы принимаете
-                br
-                | условия
-                a.color-theme-brand(href="#") Политики конфиденциальности
-            .d-flex.justify-content-center.justify-content-lg-end.col-xl-2.col-lg-3.offset-lg-0.col-md-10.offset-md-1
-              button.btn.text-uppercase.px-5(type="submit") отправить
+        .form.row
+          .col-xl-4.offset-xl-1.col-md-5
+            .form__item.mb-4
+              input.form__field(type="text" value="")
+              label.form__label.form__label_title Ваше имя*
+            .form__item.mb-4
+              input.form__field(type="text" value="")
+              label.form__label.form__label_title +7 (___) ___-__-__*
+            .form__item.mb-4
+              input.form__field(type="text" value="")
+              label.form__label.form__label_title e-mail*
+          .col-xl-4.col-md-5.offset-md-2
+            .form__item.mb-4
+              textarea.form__field.form__field_textarea
+              label.form__label.form__label_title Текст сообщения
+      .px-lg-5.px-md-4.px-3
+        .row.text-center.text-md-left
+          .d-flex.flex-wrap.align-items-center.col-xl-7.offset-xl-1.col-lg-8.offset-lg-0.col-md-10.offset-md-1.px-0.mb-lg-0.mb-4
+            .h6.col-md-6.mb-3.mb-md-0 *-поля обязательные для заполнения
+            .h6.col-xl-5.col-md-6.text-center Нажимая “Подписаться” вы принимаете
+              br
+              | условия&nbsp;
+              a.color-theme-brand(href="#") Политики конфиденциальности
+          .d-flex.justify-content-lg-end.justify-content-center.col-xl-3.col-lg-4
+            button.btn.text-uppercase.px-5(type="submit") отправить
