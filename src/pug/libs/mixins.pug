@@ -1,9 +1,9 @@
 mixin img(img__path, img__classname="img-fluid")
   img(class=img__classname src=`/img/${img__path}` alt=""  title="")
 
-//- mixin icon(icon__name, icon__classname="icon-fluid")
-  svg(class=icon__classname)
-    use(xlink:href=`/img/icons/icons.svg#icon-${icon__name}`)
+mixin svg(svg__name, svg__classname="icon-fluid")
+  svg(class=svg__classname)
+    use(xlink:href=`/img/icons/icons.svg#icon-${svg__name}`)
 
 mixin icon(icon__name, icon__classname)
   if (icon__classname)
@@ -17,7 +17,7 @@ mixin radio(radio__index=1, radio__title, radio__checked, radio__name="filter-ra
 
 mixin leftmenu(leftmenu__title, leftmenu__icon, leftmenu__badge, leftmenu__badge_text, leftmenu__badge_extratext=false)
   a.leftmenu__item.d-flex.align-items-center.h4(href="#")
-    +icon(leftmenu__icon, 'leftmenu__item-icon color-theme-brand mr-2')
+    +icon(leftmenu__icon, 'leftmenu__item-icon h3 color-theme-brand mr-2')
     span.leftmenu__item-title.d-block.overflow-hidden.text-nowrap.mr-2!= leftmenu__title
     if (leftmenu__badge_text)
       span.leftmenu__badge.h5.text-nowrap.color-theme-white.px-2(class=leftmenu__badge)!= leftmenu__badge_text
@@ -79,29 +79,29 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
         .card__features.card__features_col
           if (card__warranty)
             .card__features-item
-              span.card__features-icon.bg-theme-info
-                +icon('warranty')
+              span.card__features-icon.h4.d-flex.flex-column.align-items-center.justify-content-center.bg-theme-info
+                +icon('shield')
               span.card__features-title.bg-theme-info Расширеная гарантия
           if (card__credit)
             .card__features-item
-              span.card__features-icon.bg-theme-disabled
+              span.card__features-icon.h4.d-flex.flex-column.align-items-center.justify-content-center.bg-theme-disabled
                 +icon('credit')
               span.card__features-title.bg-theme-disabled Кредит
           if (card__card)
             .card__features-item
-              span.card__features-icon.bg-theme-warning
+              span.card__features-icon.h4.d-flex.flex-column.align-items-center.justify-content-center.bg-theme-warning
                 +icon('card')
               span.card__features-title.bg-theme-warning Топливная карта
           if (card__delivery)
             .card__features-item
-              span.card__features-icon
+              span.card__features-icon.h4.d-flex.flex-column.align-items-center.justify-content-center
                 +icon('delivery')
               span.card__features-title Бесплатная доставка
           if (card__repair)
             .card__features-item
               .card__features-content.bg-theme-success
                 .d-flex.align-items-center.pointer-events-none
-                  span.card__features-icon.bg-theme-success
+                  span.card__features-icon.h4.d-flex.flex-column.align-items-center.justify-content-center.bg-theme-success
                     +icon('repair')
                   span.card__features-title.bg-theme-success Бесплатный шиномотаж
                 .card__features-text
@@ -110,10 +110,10 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
                 a.card__features-readmore(href="#") Подробнее
       .card__meta.card__meta_right
         button.card__btn.card__btn_icon(type="button")
-          +icon('compare','card__btn-icon')
+          +icon('compare','card__btn-icon h4 d-flex flex-column align-items-center justify-content-center')
           span.card__btn-title Сравнить
         button.card__btn.card__btn_icon(type="button")
-          +icon('favourite','card__btn-icon')
+          +icon('favourite','card__btn-icon h4 d-flex flex-column align-items-center justify-content-center')
           span.card__btn-title Добавить в избранное
       if (!card__wheel)
         .card__meta.card__meta_row.mb-0
@@ -121,10 +121,10 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
             .card__features
               if (card__winter)
                 .icon-marker.mr-2
-                  +icon('winter')
+                  +icon('winter','h4')
               if (card__spikes)
                 .icon-marker
-                  +icon('spikes')
+                  +icon('spikes','h4')
           .card__params.flex-grow-1.text-right.color-theme-brand 215 / 55  R16
     .card__body.d-flex.flex-column.justify-content-between.flex-grow-1
       .card__intro

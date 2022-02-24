@@ -9,18 +9,15 @@ block wrapper
             ul.tabs__nav.nav.nav-tabs(role="tablist")
                 li.tabs__nav-item.flex-grow-1.nav-item
                     a.tabs__nav-link.p-2.tabs__nav-link_notitle.nav-link.active(href="#filter-tires" data-toggle="tab" role="tab" aria-controls="filter-tires" aria-selected="true")
-                        svg.tabs__nav-icon
-                            use(xlink:href="#icon-tires")
+                        +icon('tires','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
                         span.tabs__nav-title Подбор шин
                 li.tabs__nav-item.flex-grow-1.nav-item
                     a.tabs__nav-link.p-2.tabs__nav-link_notitle.nav-link(href="#filter-wheels" data-toggle="tab" role="tab" aria-controls="filter-wheels" aria-selected="false")
-                        svg.tabs__nav-icon
-                            use(xlink:href="#icon-wheels")
+                        +icon('wheels','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
                         span.tabs__nav-title Подбор дисков
                 li.tabs__nav-item.flex-grow-1.nav-item
                     a.tabs__nav-link.p-2.tabs__nav-link_notitle.nav-link(href="#filter-cars" data-toggle="tab" role="tab" aria-controls="filter-cars" aria-selected="false")
-                        svg.tabs__nav-icon
-                            use(xlink:href="#icon-car")
+                        +icon('car','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
                         span.tabs__nav-title Подбор по авто
             .tabs__content.tab-content
                 form.form.tab-pane.fade.show.active(id="filter-tires" role="tabpanel" action="#")
@@ -65,43 +62,30 @@ block wrapper
                         .form__row.col-lg-8.offset-lg-2
                             input.form__toggler.form__toggler_checkbox(id="tires-checkbox-1" type="checkbox" value="")
                             label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-1")
-                                span.form__label-icon
-                                    svg.icon-fluid
-                                        use(xlink:href="#icon-checked")
-                                svg.icon-marker.mr-2
-                                    use(xlink:href="#icon-allseason")
+                                +icon('checked','form__label-icon')
+                                span.icon-marker.h4.ds-icon-allseason.mr-2
+                                  span.path1
+                                  span.path2
                                 span.form__label-title Всесезонные
                             input.form__toggler.form__toggler_checkbox(id="tires-checkbox-2" type="checkbox" value="")
                             label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-2")
-                                span.form__label-icon
-                                    svg.icon-fluid
-                                        use(xlink:href="#icon-checked")
-                                svg.icon-marker.mr-2
-                                    use(xlink:href="#icon-summer")
+                                +icon('checked','form__label-icon')
+                                +icon('summer','icon-marker h4 mr-2')
                                 span.form__label-title Летние
                             input.form__toggler.form__toggler_checkbox(id="tires-checkbox-3" type="checkbox" value="")
                             label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-3")
-                                span.form__label-icon
-                                    svg.icon-fluid
-                                        use(xlink:href="#icon-checked")
-                                svg.icon-marker.mr-2
-                                    use(xlink:href="#icon-winter")
+                                +icon('checked','form__label-icon')
+                                +icon('winter','icon-marker h4 mr-2')
                                 span.form__label-title Зимние
                             input.form__toggler.form__toggler_checkbox(id="tires-checkbox-4" type="checkbox" value="")
                             label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-4")
-                                span.form__label-icon
-                                    svg.icon-fluid
-                                        use(xlink:href="#icon-checked")
-                                svg.icon-marker.mr-2
-                                    use(xlink:href="#icon-spikes")
+                                +icon('checked','form__label-icon')
+                                +icon('spikes','icon-marker h4 mr-2')
                                 span.form__label-title Шипы
                             input.form__toggler.form__toggler_checkbox(id="tires-checkbox-5" type="checkbox" value="")
                             label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-5")
-                                span.form__label-icon
-                                    svg.icon-fluid
-                                        use(xlink:href="#icon-checked")
-                                svg.icon-marker.mr-2
-                                    use(xlink:href="#icon-nonspikes")
+                                +icon('checked','form__label-icon')
+                                +icon('nonspikes','icon-marker h4 mr-2')
                                 span.form__label-title Без шипов
                         .col-md-8.offset-md-2.text-center
                             a.btn.text-uppercase.px-4(href="#") подобрать
@@ -153,27 +137,22 @@ block wrapper
                         .form__row.col-lg-6.offset-lg-3.col-md-8.offset-md-2
                             input.form__toggler.form__toggler_checkbox(id="wheels-checkbox-11" type="checkbox" value="")
                             label.form__label.form__label_checkbox.mb-4(for="wheels-checkbox-11")
-                                span.form__label-icon
-                                    svg.icon-fluid
-                                        use(xlink:href="#icon-checked")
-                                svg.icon-marker.mr-2
-                                    use(xlink:href="#icon-iron")
+                                +icon('checked','form__label-icon')
+                                +icon('iron','icon-marker h3 mr-2')
                                 span.form__label-title Кованые
                             input.form__toggler.form__toggler_checkbox(id="wheels-checkbox-21" type="checkbox" value="")
                             label.form__label.form__label_checkbox.mb-4(for="wheels-checkbox-21")
-                                span.form__label-icon
-                                    svg.icon-fluid
-                                        use(xlink:href="#icon-checked")
-                                svg.icon-marker.mr-2
-                                    use(xlink:href="#icon-founding")
+                                +icon('checked','form__label-icon')
+                                span.icon-marker.h3.ds-icon-founding.mr-2
+                                  span.path1
+                                  span.path2
                                 span.form__label-title Литые
                             input.form__toggler.form__toggler_checkbox(id="wheels-checkbox-31" type="checkbox" value="")
                             label.form__label.form__label_checkbox.mb-4(for="wheels-checkbox-31")
-                                span.form__label-icon
-                                    svg.icon-fluid
-                                        use(xlink:href="#icon-checked")
-                                svg.icon-marker.mr-2
-                                    use(xlink:href="#icon-steel")
+                                +icon('checked','form__label-icon')
+                                span.icon-marker.h3.ds-icon-steel.mr-2
+                                  span.path1
+                                  span.path2
                                 span.form__label-title Стальные
                         .col-md-10.offset-md-1.text-center
                             a.btn.text-uppercase.px-4(href="#") подобрать
@@ -361,11 +340,11 @@ block wrapper
             ul.tabs__nav.nav.nav-tabs(role="tablist")
               li.tabs__nav-item.flex-grow-1.nav-item
                 a.tabs__nav-link.p-2.nav-link.active(href="#links-tires" data-toggle="tab" role="tab" aria-controls="links-tires" aria-selected="true")
-                  +icon('tires','tabs__nav-icon')
+                  +icon('tires','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
                   span.tabs__nav-title.text-uppercase шины
               li.tabs__nav-item.flex-grow-1.nav-item
                 a.tabs__nav-link.p-2.nav-link(href="#links-wheels" data-toggle="tab" role="tab" aria-controls="links-wheels" aria-selected="false")
-                  +icon('wheels','tabs__nav-icon')
+                  +icon('wheels','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
                   span.tabs__nav-title.text-uppercase диски
             .tabs__content.tab-content
               .tab-pane.fade.show.active(id="links-tires" role="tabpanel" action="#")

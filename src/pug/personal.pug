@@ -24,7 +24,7 @@ block wrapper
         .filter.filter_sticky
           .filter__body
             nav.leftmenu
-              - var leftmenu = [{title: 'Мои заказы', icon: 'case', badge: 'bg-theme-brand', badge__text: '2'}, {title: 'Избранное', icon: 'favourite', badge: 'bg-theme-success', badge__text: '3'}, {title: 'Бонусные рубли', icon: 'gift', badge: 'bg-theme-success', badge__text: '300', badge__extratext: true}, {title: 'Запись на услуги', icon: 'tool'},{title: 'Подбор по VIN', icon: 'settings', badge: 'bg-theme-success', badge__text: '1'}, {title: 'Персональные данные', icon: 'user'},{title: 'Мой автомобиль', icon: 'car'}, {title: 'Смена пароля', icon: 'shield'},{title: 'Выход', icon: 'exit'}]
+              - var leftmenu = [{title: 'Мои заказы', icon: 'case', badge: 'bg-theme-brand', badge__text: '2'}, {title: 'Избранное', icon: 'favourite', badge: 'bg-theme-success', badge__text: '3'}, {title: 'Бонусные рубли', icon: 'gift', badge: 'bg-theme-success', badge__text: '300', badge__extratext: true}, {title: 'Запись на услуги', icon: 'services'},{title: 'Подбор по VIN', icon: 'settings', badge: 'bg-theme-success', badge__text: '1'}, {title: 'Персональные данные', icon: 'user'},{title: 'Мой автомобиль', icon: 'car'}, {title: 'Смена пароля', icon: 'shield'},{title: 'Выход', icon: 'exit'}]
               each leftmenu__item in leftmenu
                 +leftmenu(leftmenu__item.title, leftmenu__item.icon, leftmenu__item.badge, leftmenu__item.badge__text, leftmenu__item.badge__extratext)
 

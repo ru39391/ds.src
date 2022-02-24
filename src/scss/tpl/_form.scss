@@ -143,7 +143,7 @@
         background: $color__light;
         box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, .16);
 
-        .icon-fluid {
+        &:before {
           opacity: 0;
         }
       }
@@ -156,7 +156,7 @@
     &:checked {
       & + .form__label {
         .form__label-icon {
-          .icon-fluid {
+          &:before {
             opacity: 1;
           }
         }

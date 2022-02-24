@@ -23,17 +23,17 @@ html(lang="ru")
                 .wrapper.d-flex.flex-wrap.align-items-center
                     .col-xl-6.col-lg-12.col-8.d-flex.align-items-center.justify-content-xl-start.justify-content-lg-between.mb-xl-0.mb-lg-2
                         .contacts.d-flex.align-items-center.justify-content-lg-between.col-xl-7.col-lg-5.w-auto.px-0
-                            .contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4
-                              +icon('placemark','contacts__icon color-theme-brand mr-lg-2')
-                              span.d-none.d-lg-block г. Ростов-на-Дону
-                            a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4(href="#")
-                              +icon('phone','contacts__icon color-theme-brand mr-lg-2')
-                              span.d-none.d-lg-block +7 (365) 277-70-68
-                        nav.social.d-flex.flex-wrap.align-items-center
-                            a.social__item.color-theme-brand.mr-4.mr-lg-3(href="#")
-                              +icon('wapp')
-                            a.social__item.color-theme-brand(href="#")
-                              +icon('tg')
+                          .contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4
+                            +icon('placemark','contacts__icon h3 color-theme-brand mr-lg-2')
+                            span.d-none.d-lg-block г. Ростов-на-Дону
+                          a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4(href="#")
+                            +icon('phone','contacts__icon h3 color-theme-brand mr-lg-2')
+                            span.d-none.d-lg-block +7 (365) 277-70-68
+                        nav.social.d-flex.align-items-center
+                          a.social__item.color-theme-brand.mr-4.mr-lg-3(href="#")
+                            +icon('wapp-filled','h3')
+                          a.social__item.color-theme-brand(href="#")
+                            +icon('tg-filled','h3')
                     .col-xl-5.col-lg-10.d-none.d-lg-block
                         nav.header__nav.d-flex.align-items-center.justify-content-xl-end.justify-content-between
                             a.header__nav-item.mr-4(href="#") Скидки и акции
@@ -48,7 +48,7 @@ html(lang="ru")
             .header__wrapper
                 .header__col.header__col_logo.col-xl-4.col-lg-5.mb-3
                     a.logo.color-theme-brand.mr-4(href="#")
-                      +icon('logo')
+                      +svg('logo')
                     nav.header__nav.d-flex.align-items-center.justify-content-center
                         a.header__btn.text-uppercase.mr-3(href="#")
                           +icon('menu','header__btn-icon mr-lg-2')
@@ -64,23 +64,23 @@ html(lang="ru")
                 .header__col.header__col_nav.col-xl-5.col-lg-7.flex-grow-1.flex-lg-grow-0.mb-3
                     nav.header__nav.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-5
                         button.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.d-lg-none(type="button")
-                            span.header__nav-icon
+                            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                               +icon('search')
                             span.header__btn-title Поиск
                         a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
-                            span.header__nav-icon
+                            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                               +icon('compare')
                             span.header__btn-title Сравнить
                         a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
-                            span.header__nav-icon
+                            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                               +icon('car')
                             span.header__btn-title Выбор авто
                         a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
-                            span.header__nav-icon
+                            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                               +icon('case')
                             span.header__btn-title Заказы
                         a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
-                            span.header__nav-icon
+                            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                               +icon('user')
                             span.header__btn-title Вход | регистрация
                     a.header__btn.text-uppercase.header__btn_inverse(href="#")
@@ -147,32 +147,30 @@ html(lang="ru")
                         a.footer__nav-item.color-theme-white.mb-2(href="#") КупиВкредит
                         a.footer__nav-item.color-theme-white.mb-2(href="#") Политика конфиденциальности
                 .col-xl-3.offset-xl-1.col-lg-4.col-md-6
-                    a.logo.color-theme-white.mb-4(href="#")
-                      +icon('logo')
-                    .row.align-items-center
-                        .col-8
-                            .contacts.mb-2
-                                .contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1
-                                  +icon('placemark','contacts__icon color-theme-white mr-2')
-                                  span.color-theme-white г. Ростов-на-Дону
-                                a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1(href="#")
-                                  +icon('phone-nobg','contacts__icon color-theme-white mr-2')
-                                  span.color-theme-white +7 (365) 277-70-68
-                                a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1(href="#")
-                                  +icon('email','contacts__icon color-theme-white mr-2')
-                                  span.color-theme-white office@don-shina.ru
-                        .col-4
-                            nav.social.d-flex.flex-wrap.align-items-center
-                                a.social__item.color-theme-white.mr-4.mr-lg-3(href="#")
-                                    svg.icon-fluid
-                                        use(xlink:href="#icon-wapp-bordered")
-                                a.social__item.color-theme-white(href="#")
-                                    svg.icon-fluid
-                                        use(xlink:href="#icon-tg-bordered")
-                    .mb-2
-                        img.img-fluid.mr-3(src="../img/visa.png" alt="")
-                        img.img-fluid(src="../img/mc.png" alt="")
-                    .copyright © 2021 Все права защищены.
+                  a.logo.color-theme-white.mb-4(href="#")
+                    +svg('logo')
+                  .row.align-items-center
+                    .col-8
+                      .contacts.mb-2
+                        .contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1
+                          +icon('placemark','contacts__icon h3 text-center color-theme-white mr-2')
+                          span.color-theme-white г. Ростов-на-Дону
+                        a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1(href="#")
+                          +icon('phone-nobg','contacts__icon h3 text-center color-theme-white mr-2')
+                          span.color-theme-white +7 (365) 277-70-68
+                        a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1(href="#")
+                          +icon('email','contacts__icon h3 text-center color-theme-white mr-2')
+                          span.color-theme-white office@don-shina.ru
+                    .col-4
+                      nav.social.d-flex.flex-wrap.align-items-center
+                        a.social__item.color-theme-white.mr-4.mr-lg-3(href="#")
+                          +icon('wapp','h3')
+                        a.social__item.color-theme-white(href="#")
+                          +icon('tg','h3')
+                  .mb-2
+                    +img('visa.png')
+                    +img('mc.png')
+                  .copyright © 2021 Все права защищены.
 
     script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js")
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js")

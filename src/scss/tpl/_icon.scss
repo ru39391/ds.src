@@ -5,7 +5,7 @@
 
 .icon-marker {
   @include fw(16px);
-  @include wh(16px);
+  //@include wh(16px);
   pointer-events: none;
 }
 
