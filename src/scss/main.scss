@@ -22,6 +22,10 @@ $grid-gutter-width: 8px;
 @import 'base/text';
 @import 'base/bg';
 
+/* icons */
+@import 'icons/variables';
+@import 'icons/style';
+
 /* tpl */
 @import 'tpl/btn';
 @import 'tpl/icon';
