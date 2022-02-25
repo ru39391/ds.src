@@ -7,9 +7,9 @@ mixin svg(svg__name, svg__classname="icon-fluid")
 
 mixin icon(icon__name, icon__classname)
   if (icon__classname)
-    span(class=`${icon__classname} ds-icon-${icon__name}`)
+    span(class=`ds-icon-${icon__name} ${icon__classname} pointer-events-none`)
   else
-    span(class=`ds-icon-${icon__name}`)
+    span(class=`ds-icon-${icon__name} pointer-events-none`)
 
 mixin radio(radio__index=1, radio__title, radio__checked, radio__name="filter-radio", radio__labelclassmod)
   input.form__toggler.form__toggler_radio(id=`filter-radio-${radio__index}` name=radio__name type="radio" value="" checked=radio__checked)

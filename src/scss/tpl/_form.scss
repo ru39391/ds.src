@@ -249,7 +249,7 @@
 
 .form__title-icon {
   @include fw(22px);
-  @include wh(22px);
+  //@include wh(22px);
 }
 
 .form__select {

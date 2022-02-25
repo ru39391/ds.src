@@ -154,7 +154,7 @@
 
 .header__btn-title {
   overflow: hidden;
-  text-overflow: ellipsis;
+  //text-overflow: ellipsis;
   line-height: 1.25rem;
 
   @include media-breakpoint-up(lg) {

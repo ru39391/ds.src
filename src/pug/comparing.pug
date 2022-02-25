@@ -11,7 +11,7 @@ block wrapper
     section.content
       h1 Сравнить
 
-    .section.mb-3
+    .mb-5
       form.form.row.align-items-center(action="#")
         .col-xl-8.col-lg-6.col-md-4.d-flex.flex-wrap.align-items-center.mb-md-4.mb-2
           .h3.font-weight-bold.mr-3 Шины:
@@ -19,38 +19,32 @@ block wrapper
         .col-xl-2.col-lg-3.col-md-4.col-9.mb-4
           input.form__toggler.form__toggler_checkbox(id="param-1" type="checkbox" value="")
           label.form__label(for="param-1")
-            span.form__label-icon
-              svg.icon-fluid
-                use(xlink:href="#icon-checked")
+            +icon('checked','form__label-icon')
             span.form__label-title Показать только различия
         .col-xl-2.col-lg-3.col-md-4.col-3.d-flex.justify-content-end.mb-4
           button.btn.btn_nobg.h5.p-0(type="button")
-            svg.btn__icon.color-theme-brand.mr-md-2
-              use(xlink:href="#icon-trash")
+            +icon('trash','btn__icon h4 color-theme-brand mr-md-2')
             span.d-md-block.d-none Очистить список
       include category/comparing.pug
 
-    .section.mb-3
+    .mb-5
       form.form.row.align-items-center(action="#")
         .col-xl-8.col-lg-6.col-md-4.d-flex.flex-wrap.align-items-center.mb-md-4.mb-2
           .h3.font-weight-bold.mr-3 Шины:
           .toggler.toggler_success.mb-0 7 шт.
         .col-xl-2.col-lg-3.col-md-4.col-9.mb-4
-          input.form__toggler.form__toggler_checkbox(id="param-1" type="checkbox" value="")
-          label.form__label(for="param-1")
-            span.form__label-icon
-              svg.icon-fluid
-                use(xlink:href="#icon-checked")
+          input.form__toggler.form__toggler_checkbox(id="param-2" type="checkbox" value="")
+          label.form__label(for="param-2")
+            +icon('checked','form__label-icon')
             span.form__label-title Показать только различия
         .col-xl-2.col-lg-3.col-md-4.col-3.d-flex.justify-content-end.mb-4
           button.btn.btn_nobg.h5.p-0(type="button")
-            svg.btn__icon.color-theme-brand.mr-md-2
-              use(xlink:href="#icon-trash")
+            +icon('trash','btn__icon h4 color-theme-brand mr-md-2')
             span.d-md-block.d-none Очистить список
       include category/comparing.pug
 
     include category/popular.pug
 
-    .section.mb-3
-      .section__title Рекомендуем так же:
+    .mb-5
+      .h2.font-weight-bold.mb-4 Рекомендуем так же:
       include category/wheels.pug

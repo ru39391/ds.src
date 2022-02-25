@@ -2,9 +2,8 @@
   .filter__body
     form.form.form_bg.form_filter(action="#")
       .form__header.d-flex.align-items-center.justify-content-between.d-lg-block
-        .form__title.form__title_icon.d-flex.align-items-center.h3.font-weight-bold.color-theme-brand.mb-0.mb-lg-2
-          svg.form__title-icon.mr-2
-            use(xlink:href="#icon-wheels")
+        .form__title.form__title_icon.text-nowrap.d-flex.align-items-center.h3.font-weight-bold.color-theme-brand.mb-0.mb-lg-2
+          +icon('wheels','form__title-icon h3 mr-2')
           | Подбор дисков
         button.btn-unstyled.h6(type="reset") Сбросить
       .form__section
@@ -46,41 +45,29 @@
         .form__section-title.h6.color-theme-disabled.mb-4 Тип диска
         input.form__toggler.form__toggler_checkbox(id="param-1" type="checkbox" value="")
         label.form__label.mb-4(for="param-1")
-          span.form__label-icon
-            svg.icon-fluid
-              use(xlink:href="#icon-checked")
+          +icon('checked','form__label-icon')
           span.form__label-title Кованый
         input.form__toggler.form__toggler_checkbox(id="param-2" type="checkbox" value="")
         label.form__label.mb-4(for="param-2")
-          span.form__label-icon
-            svg.icon-fluid
-              use(xlink:href="#icon-checked")
+          +icon('checked','form__label-icon')
           span.form__label-title Литой
         input.form__toggler.form__toggler_checkbox(id="param-3" type="checkbox" value="")
         label.form__label(for="param-3")
-          span.form__label-icon
-            svg.icon-fluid
-              use(xlink:href="#icon-checked")
+          +icon('checked','form__label-icon')
           span.form__label-title Стальной
       .form__section
         .form__section-title.h6.color-theme-disabled.mb-4 Тип
         input.form__toggler.form__toggler_checkbox(id="param-4" type="checkbox" value="")
         label.form__label.mb-4(for="param-4")
-          span.form__label-icon
-            svg.icon-fluid
-              use(xlink:href="#icon-checked")
+          +icon('checked','form__label-icon')
           span.form__label-title Для внедорожника
         input.form__toggler.form__toggler_checkbox(id="param-5" type="checkbox" value="")
         label.form__label.mb-4(for="param-5")
-          span.form__label-icon
-            svg.icon-fluid
-              use(xlink:href="#icon-checked")
+          +icon('checked','form__label-icon')
           span.form__label-title Для внедорожника
         input.form__toggler.form__toggler_checkbox(id="param-6" type="checkbox" value="")
         label.form__label(for="param-6")
-          span.form__label-icon
-            svg.icon-fluid
-              use(xlink:href="#icon-checked")
+          +icon('checked','form__label-icon')
           span.form__label-title Для внедорожника
       .form__section
         .form__section-title.h6.color-theme-disabled.mb-4 Вылет диска, мм
@@ -117,9 +104,7 @@
         .form__section-title.h6.color-theme-disabled.mb-4 Наличие
         input.form__toggler.form__toggler_checkbox(id="instock" type="checkbox" value="")
         label.form__label(for="instock")
-          span.form__label-icon
-            svg.icon-fluid
-              use(xlink:href="#icon-checked")
+          +icon('checked','form__label-icon')
           span.form__label-title Сейчас в наличии
       .form__section.border-0.pb-0
         .form__section-title.h6.color-theme-disabled.mb-4 Бренд
@@ -130,58 +115,42 @@
           .col-6
             input.form__toggler.form__toggler_checkbox(id="Michelin" type="checkbox" value="")
             label.form__label.mb-4(for="Michelin")
-              span.form__label-icon
-                svg.icon-fluid
-                  use(xlink:href="#icon-checked")
+              +icon('checked','form__label-icon')
               span.form__label-title Michelin
           .col-6
             input.form__toggler.form__toggler_checkbox(id="Cordiant" type="checkbox" value="")
             label.form__label.mb-4(for="Cordiant")
-              span.form__label-icon
-                svg.icon-fluid
-                  use(xlink:href="#icon-checked")
+              +icon('checked','form__label-icon')
               span.form__label-title Cordiant
           .col-6
             input.form__toggler.form__toggler_checkbox(id="Pirelli" type="checkbox" value="")
             label.form__label.mb-4(for="Pirelli")
-              span.form__label-icon
-                svg.icon-fluid
-                  use(xlink:href="#icon-checked")
+              +icon('checked','form__label-icon')
               span.form__label-title Pirelli
           .col-6
             input.form__toggler.form__toggler_checkbox(id="Hankook" type="checkbox" value="")
             label.form__label.mb-4(for="Hankook")
-              span.form__label-icon
-                svg.icon-fluid
-                  use(xlink:href="#icon-checked")
+              +icon('checked','form__label-icon')
               span.form__label-title Hankook
           .col-6
             input.form__toggler.form__toggler_checkbox(id="Yokohama" type="checkbox" value="")
             label.form__label.mb-4(for="Yokohama")
-              span.form__label-icon
-                svg.icon-fluid
-                  use(xlink:href="#icon-checked")
+              +icon('checked','form__label-icon')
               span.form__label-title Yokohama
           .col-6
             input.form__toggler.form__toggler_checkbox(id="Goodyear" type="checkbox" value="")
             label.form__label.mb-4(for="Goodyear")
-              span.form__label-icon
-                svg.icon-fluid
-                  use(xlink:href="#icon-checked")
+              +icon('checked','form__label-icon')
               span.form__label-title Good year
           .col-6
             input.form__toggler.form__toggler_checkbox(id="Continental" type="checkbox" value="")
             label.form__label.mb-4(for="Continental")
-              span.form__label-icon
-                svg.icon-fluid
-                  use(xlink:href="#icon-checked")
+              +icon('checked','form__label-icon')
               span.form__label-title Continental
           .col-6
             input.form__toggler.form__toggler_checkbox(id="Bridgestone" type="checkbox" value="")
             label.form__label.mb-4(for="Bridgestone")
-              span.form__label-icon
-                svg.icon-fluid
-                  use(xlink:href="#icon-checked")
+              +icon('checked','form__label-icon')
               span.form__label-title Bridgestone
       .text-center
         button.btn-unstyled.h6(type="submit")

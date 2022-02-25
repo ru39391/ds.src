@@ -44,7 +44,7 @@
 
 .filter-toggler__icon {
   @include fw(18px);
-  @include wh(18px);
+  //@include wh(18px);
   pointer-events: none;
 }
 
