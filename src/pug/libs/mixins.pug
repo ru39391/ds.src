@@ -49,7 +49,7 @@ mixin banner(banner__img, banner__noshadow=false, banner__classmod="card_sm", ba
       a.card__picture.h-100(href="#")
         +img(banner__img,'img-cover')
 
-mixin card(card__price_old, card__price_new, card__title="Зимние шины Yokohama Ice", card__label, card__warranty=false, card__credit=false, card__card=false, card__delivery=false, card__repair=false, card__winter=true, card__spikes=true, card__oneclick=false, card__classmod="d-flex", card__img="content/cards/card-1.jpg", card__wheel=false)
+mixin card(card__price_old, card__price_new, card__title="Зимние шины Yokohama Ice", card__label, card__warranty=false, card__credit=false, card__card=false, card__delivery=false, card__repair=false, card__winter=true, card__spikes=true, card__oneclick=false, card__classmod="d-flex", card__img="content/cards/card-1.jpg", card__wheel=false, card__params=false, card__params_arr={'Ширина':185,'Высота':55,'Диаметр':16}, card__params_notitle=false)
   if (card__oneclick)
     case (card__classmod === 'card_tile d-sm-flex')
       when true
@@ -64,6 +64,9 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
     - var card__header_offset = 'mb-sm-3';
   else
     - var card__header_offset = 'mb-3';
+
+  if (card__params)
+    - var card__params_offset = 'mb-4';
 
   .card.flex-column.justify-content-between.h-100.p-3(class=card__classmod)
     .card__header(class=card__header_offset)
@@ -126,7 +129,7 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
                 .icon-marker
                   +icon('spikes','h4')
           .card__params.flex-grow-1.text-right.color-theme-brand 215 / 55  R16
-    .card__body.d-flex.flex-column.justify-content-between.flex-grow-1
+    .card__body.d-flex.flex-column.justify-content-between.flex-grow-1(class=card__params_offset)
       .card__intro
         a.card__title.d-block.mb-2(href="#")!= card__title
       .card__footer
@@ -155,3 +158,13 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
             span.card__btn-icon
               +icon('plane')
             | Купить в один клик
+    if (card__params)
+      .params
+        each card__params_val,card__params_index in card__params_arr
+          if (card__params_notitle)
+            .params__row.d-flex.flex-column.justify-content-end
+              .params__value.h5!= card__params_val
+          else
+            .params__row.d-flex.flex-column.justify-content-end
+              .params__title.h6.color-theme-disabled!= card__params_index
+              .params__value.h5!= card__params_val
