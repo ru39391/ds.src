@@ -25,6 +25,18 @@
     }
   }
 
+  &.heading_vin {
+    grid-template-columns: repeat(2,1fr) 2fr 5fr;
+
+    @include media-breakpoint-up(md) {
+      display: grid;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
   &.heading_order-details {
     display: grid;
     grid-template-columns: 8fr 1fr;

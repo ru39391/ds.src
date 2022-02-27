@@ -23,7 +23,7 @@ block personal
   .table-row
     - var bonusArr = [{bonusArr__id: 174, bonusArr__title: 'Приветственные бонусы', bonusArr__value: '+ 500 Б. ₽.', bonusArr__classmod: 'color-theme-success'},{bonusArr__id: 175, bonusArr__title: 'Начисление при покупке PIRELLI P Zero New', bonusArr__value: '+ 250 Б. ₽.', bonusArr__classmod: 'color-theme-success'},{bonusArr__id: 175, bonusArr__title: 'Списание в счет покупки комплекта шин Cordiant Comfort 2 175/70 R13 86H', bonusArr__value: '- 350 Б. ₽.', bonusArr__classmod: 'color-theme-success'},{bonusArr__id: 174, bonusArr__title: 'Приветственные бонусы', bonusArr__value: '+ 500 Б. ₽.', bonusArr__classmod: 'color-theme-success'},{bonusArr__id: 175, bonusArr__title: 'Начисление при покупке PIRELLI P Zero New', bonusArr__value: '+ 250 Б. ₽.', bonusArr__classmod: 'color-theme-success'},{bonusArr__id: 175, bonusArr__title: 'Списание в счет покупки комплекта шин Cordiant Comfort 2 175/70 R13 86H', bonusArr__value: '- 350 Б. ₽.', bonusArr__classmod: 'color-theme-success'},{bonusArr__id: 174, bonusArr__title: 'Приветственные бонусы', bonusArr__value: '+ 500 Б. ₽.', bonusArr__classmod: 'color-theme-success'}]
     each bonusArr__item in bonusArr
-      .table-row__header.table-row__header_bonus.box-shadow.border-radius.py-3.px-3.mb-md-2.mb-3
+      .table-row__header.table-row__header_bonus.box-shadow.border-radius.py-2.px-3.mb-md-2.mb-3
         .table-row__col.table-row__col_grid.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.mb-md-0.mb-2
           span.table-row__title.text-oneline.text-oneline.d-block.d-md-none Номер заказа:
           span.text-right.text-md-left!= bonusArr__item.bonusArr__id

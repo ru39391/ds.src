@@ -32,6 +32,12 @@
       grid-template-columns: 1fr 1fr 5fr 2fr;
     }
   }
+
+  &.table-row__header_vin {
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2,1fr) 2fr 5fr;
+    }
+  }
 }
 
 .table-row__col {
