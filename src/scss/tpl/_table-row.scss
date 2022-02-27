@@ -1,0 +1,16 @@
+.table-row {
+}
+
+.table-row__header {
+  display: grid;
+  grid-column-gap: $grid-gutter-width;
+  grid-template-columns: repeat(2,1fr) 3fr repeat(4,1fr);
+}
+
+.table-row__col {
+
+}
+
+.table-row__body {
+
+}

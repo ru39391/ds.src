@@ -50,6 +50,10 @@
   pointer-events: none !important;
 }
 
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
 .img-cover {
   @include wh(100%);
   object-fit: cover;
