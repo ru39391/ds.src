@@ -13,95 +13,244 @@ block personal
       .heading__col.h6.mb-2 Сумма
       .heading__col.h6.mb-2 Отслеживание
       .heading__col.h6.mb-2 Статус
-    .table-row.box-shadow.border-radius.overflow-hidden.mb-2
-      .table-row__header.py-2.px-3
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 1758767
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 10.08.2021
-        .table-row__col.h5.d-flex.flex-column.justify-content-center.cursor-pointer
+    .table-row
+      .table-row__header.table-row__header_order.box-shadow.border-radius.py-3.py-md-1.px-3.mb-md-2.mb-3
+        .table-row__title.h4.d-block.d-md-none.color-theme-brand.mb-3.order-1 Заказ № 1758767
+        .table-row__col.h5.d-none.d-md-flex.flex-column.justify-content-center.order-md-1 1758767
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-2.order-md-2.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Дата заказа:
+          | 10.08.2021
+        .table-row__col.h5.d-flex.flex-column.justify-content-center.overflow-hidden.order-6.order-md-3
           .text-oneline Летние шины Cordiant Comfort 2 175/70
           .text-oneline Летние шины Cordiant Comfort 2 175/70
           .text-oneline Летние шины Cordiant Comfort 2 175/70
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 25 530, 08 ₽
-        .table-row__col.d-flex.flex-column.justify-content-center
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-3.order-md-4.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Сумма заказа:
+          | 25 530, 08 ₽
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-4.order-md-5.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Отслеживание:
           .social.d-flex.align-items-center
             a.social__item.h2.color-theme-brand.mr-2(href="#")
               +icon('wapp')
             a.social__item.h2.color-theme-brand.mr-2(href="#")
               +icon('tg')
-        .table-row__col.h5.color-theme-success.d-flex.flex-column.justify-content-center Ожидает отгрузки
-        .table-row__col.d-flex.flex-column.justify-content-center
-          span.d-block.color-theme-brand.cursor-pointer(style="width:20px;height:20px;")
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-5.order-md-6.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Статус заказа:
+          span.color-theme-success Ожидает отгрузки
+        .table-row__col.d-none.d-md-block.pos-rel.order-md-7
+          span.readmore.readmore_centered.d-block.color-theme-brand(style="width:20px;height:20px;")
             +svg('readmore')
       .table-row__body
+        .box-shadow.border-radius.overflow-hidden.pt-4.mb-2
+          .border-bottom.px-3.pb-3.mb-3
+            .heading.heading_order-details.mb-3
+              .heading__col
+                .h3.font-weight-bold.color-theme-brand Заказ # 837258628
+              .heading__col.pos-rel
+                span.readmore.readmore_centered.d-block.color-theme-brand(style="width:20px;height:20px;")
+                  +svg('readmore-reversed')
+            .desclist
+              .d-flex.align-items-center.mb-2
+                .desclist__title.h5.d-block.overflow-hidden.px-0.col-xl-2.col-sm-3 Дата заказа:
+                .h5.col-xl-10.col-sm-9 21.05.2021
+              .d-flex.align-items-center.mb-2
+                .desclist__title.h5.d-block.overflow-hidden.px-0.col-xl-2.col-sm-3 Сумма заказа:
+                .h5.col-xl-10.col-sm-9
+                  span.h4.font-weight-bold 7 337.12&nbsp;
+                  | ₽
+              .d-flex.align-items-center.mb-2
+                .desclist__title.h5.d-block.overflow-hidden.px-0.col-xl-2.col-sm-3 Статус заказа:
+                .h5.color-theme-success.col-xl-10.col-sm-9 Ожидает отгрузки
+              .d-flex.align-items-center.mb-2
+                .desclist__title.h5.d-block.overflow-hidden.px-0.col-xl-2.col-sm-3 Отслеживание:
+                .h5.col-xl-10.col-sm-9
+                  .social.d-flex.align-items-center
+                    a.social__item.h2.color-theme-brand.mr-2(href="#")
+                      +icon('wapp')
+              .d-flex.align-items-center.mb-2
+                .desclist__title.h5.d-block.overflow-hidden.px-0.col-xl-2.col-sm-3 Доставка:
+                .h5.col-xl-10.col-sm-9 344000, Россия, г. Ростов-на-Дону, пр. Королева 20, кв 31 (Почта России)
+          .card-row.border-bottom.px-3.pb-3.mb-3
+            .card-row__col.d-flex.flex-column.justify-content-center
+              a.border.border-radius.overflow-hidden(href="#")
+                +img('content/cards/card-1.jpg')
+            .card-row__col.d-flex.flex-column.justify-content-center
+              a.h5(href="#") Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL  Ice Guard
+            .card-row__col.d-flex.flex-column.justify-content-center.align-items-end
+              .h5 4 шт.
+            .card-row__col.d-flex.flex-column.justify-content-center.align-items-end
+              .h4.font-weight-bold 7 337.12 ₽
+          .card-row.border-bottom.px-3.pb-3.mb-3
+            .card-row__col.d-flex.flex-column.justify-content-center
+              a.border.border-radius.overflow-hidden(href="#")
+                +img('content/cards/card-1.jpg')
+            .card-row__col.d-flex.flex-column.justify-content-center
+              a.h5(href="#") Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL  Ice Guard
+            .card-row__col.d-flex.flex-column.justify-content-center.align-items-end
+              .h5 4 шт.
+            .card-row__col.d-flex.flex-column.justify-content-center.align-items-end
+              .h4.font-weight-bold 7 337.12 ₽
+          .card-row.border-bottom.px-3.pb-3.mb-3
+            .card-row__col.d-flex.flex-column.justify-content-center
+              a.border.border-radius.overflow-hidden(href="#")
+                +img('content/cards/card-1.jpg')
+            .card-row__col.d-flex.flex-column.justify-content-center
+              a.h5(href="#") Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL  Ice Guard
+            .card-row__col.d-flex.flex-column.justify-content-center.align-items-end
+              .h5 4 шт.
+            .card-row__col.d-flex.flex-column.justify-content-center.align-items-end
+              .h4.font-weight-bold 7 337.12 ₽
+          .px-3.pb-3
+            .row
+              .contacts.d-flex.align-items-center.justify-content-lg-between.flex-wrap.col-xl-7
+                a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4.mr-lg-0.mb-2.mb-sm-0(href="#")
+                  +icon('tg-filled','contacts__icon h3 color-theme-brand mr-2 pointer-events-none')
+                  span.contacts__item-title Следить в Telegram
+              .col-xl-5.d-flex.justify-content-xl-end
+                button.btn.btn_nobg.h5.p-0(type="button")
+                  +icon('trash','btn__icon h3 color-theme-brand mr-2 pointer-events-none')
+                  | Отменить запись
 
-    .table-row.box-shadow.border-radius.overflow-hidden.mb-2
-      .table-row__header.py-2.px-3
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 1758767
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 10.08.2021
-        .table-row__col.h5.d-flex.flex-column.justify-content-center.cursor-pointer
+    .table-row
+      .table-row__header.table-row__header_order.box-shadow.border-radius.py-3.py-md-1.px-3.mb-md-2.mb-3
+        .table-row__title.h4.d-block.d-md-none.color-theme-brand.mb-3.order-1 Заказ № 1758767
+        .table-row__col.h5.d-none.d-md-flex.flex-column.justify-content-center.order-md-1 1758767
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-2.order-md-2.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Дата заказа:
+          | 10.08.2021
+        .table-row__col.h5.d-flex.flex-column.justify-content-center.overflow-hidden.order-6.order-md-3
           .text-oneline Летние шины Cordiant Comfort 2 175/70
           .text-oneline Летние шины Cordiant Comfort 2 175/70
           .text-oneline Летние шины Cordiant Comfort 2 175/70
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 25 530, 08 ₽
-        .table-row__col.d-flex.flex-column.justify-content-center
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-3.order-md-4.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Сумма заказа:
+          | 25 530, 08 ₽
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-4.order-md-5.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Отслеживание:
           .social.d-flex.align-items-center
             a.social__item.h2.color-theme-brand.mr-2(href="#")
               +icon('tg')
-        .table-row__col.h5.color-theme-brand.d-flex.flex-column.justify-content-center Ожидает обработки
-        .table-row__col.d-flex.flex-column.justify-content-center
-          span.d-block.color-theme-brand.cursor-pointer(style="width:20px;height:20px;")
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-5.order-md-6.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Статус заказа:
+          span.color-theme-brand Ожидает обработки
+        .table-row__col.d-none.d-md-block.pos-rel.order-md-7
+          span.readmore.readmore_centered.d-block.color-theme-brand(style="width:20px;height:20px;")
             +svg('readmore')
       .table-row__body
+        .box-shadow.border-radius.overflow-hidden.pt-4.mb-2
+          .border-bottom.px-3.pb-3.mb-3
+            .heading.heading_order-details.mb-3
+              .heading__col
+                .h3.font-weight-bold.color-theme-brand Заказ #
+              .heading__col.pos-rel
+                span.readmore.readmore_centered.d-block.color-theme-brand(style="width:20px;height:20px;")
+                  +svg('readmore-reversed')
 
-  .mb-5
+  .mb-3
     .h2.font-weight-bold.text-center.mb-4 История заказа
-    .table-row.box-shadow.border-radius.overflow-hidden.mb-2
-      .table-row__header.py-2.px-3
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 1758767
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 10.08.2021
-        .table-row__col.h5.d-flex.flex-column.justify-content-center.cursor-pointer
+    .table-row
+      .table-row__header.table-row__header_order.box-shadow.border-radius.py-3.py-md-1.px-3.mb-md-2.mb-3
+        .table-row__title.h4.d-block.d-md-none.color-theme-brand.mb-3.order-1 Заказ № 1758767
+        .table-row__col.h5.d-none.d-md-flex.flex-column.justify-content-center.order-md-1 1758767
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-2.order-md-2.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Дата заказа:
+          | 10.08.2021
+        .table-row__col.h5.d-flex.flex-column.justify-content-center.overflow-hidden.order-6.order-md-3
           .text-oneline Летние шины Cordiant Comfort 2 175/70
           .text-oneline Летние шины Cordiant Comfort 2 175/70
           .text-oneline Летние шины Cordiant Comfort 2 175/70
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 25 530, 08 ₽
-        .table-row__col.d-flex.flex-column.justify-content-center
-        .table-row__col.h5.d-flex.flex-column.justify-content-center Готово
-        .table-row__col.d-flex.flex-column.justify-content-center
-          span.d-block.color-theme-brand.cursor-pointer(style="width:20px;height:20px;")
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-3.order-md-4.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Сумма заказа:
+          | 25 530, 08 ₽
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-4.order-md-5.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Отслеживание:
+          .social.d-flex.align-items-center
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-5.order-md-6.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Статус заказа:
+          | Готово
+        .table-row__col.d-none.d-md-block.pos-rel.order-md-7
+          span.readmore.readmore_centered.d-block.color-theme-brand(style="width:20px;height:20px;")
             +svg('readmore')
       .table-row__body
+        .box-shadow.border-radius.overflow-hidden.pt-4.mb-2
+          .border-bottom.px-3.pb-3.mb-3
+            .heading.heading_order-details.mb-3
+              .heading__col
+                .h3.font-weight-bold.color-theme-brand Заказ # 837258628
+              .heading__col.pos-rel
+                span.readmore.readmore_centered.d-block.color-theme-brand(style="width:20px;height:20px;")
+                  +svg('readmore-reversed')
 
-    .table-row.box-shadow.border-radius.overflow-hidden.mb-2
-      .table-row__header.py-2.px-3
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 1758767
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 10.08.2021
-        .table-row__col.h5.d-flex.flex-column.justify-content-center.cursor-pointer
+    .table-row
+      .table-row__header.table-row__header_order.box-shadow.border-radius.py-3.py-md-1.px-3.mb-md-2.mb-3
+        .table-row__title.h4.d-block.d-md-none.color-theme-brand.mb-3.order-1 Заказ № 1758767
+        .table-row__col.h5.d-none.d-md-flex.flex-column.justify-content-center.order-md-1 1758767
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-2.order-md-2.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Дата заказа:
+          | 10.08.2021
+        .table-row__col.h5.d-flex.flex-column.justify-content-center.overflow-hidden.order-6.order-md-3
           .text-oneline Летние шины Cordiant Comfort 2 175/70
           .text-oneline Летние шины Cordiant Comfort 2 175/70
           .text-oneline Летние шины Cordiant Comfort 2 175/70
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 25 530, 08 ₽
-        .table-row__col.d-flex.flex-column.justify-content-center
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-3.order-md-4.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Сумма заказа:
+          | 25 530, 08 ₽
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-4.order-md-5.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Отслеживание:
           .social.d-flex.align-items-center
             a.social__item.h2.color-theme-brand.mr-2(href="#")
               +icon('wapp')
-        .table-row__col.h5.d-flex.flex-column.justify-content-center Готово
-        .table-row__col.d-flex.flex-column.justify-content-center
-          span.d-block.color-theme-brand.cursor-pointer(style="width:20px;height:20px;")
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-5.order-md-6.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Статус заказа:
+          | Готово
+        .table-row__col.d-none.d-md-block.pos-rel.order-md-7
+          span.readmore.readmore_centered.d-block.color-theme-brand(style="width:20px;height:20px;")
             +svg('readmore')
       .table-row__body
+        .box-shadow.border-radius.overflow-hidden.pt-4.mb-2
+          .border-bottom.px-3.pb-3.mb-3
+            .heading.heading_order-details.mb-3
+              .heading__col
+                .h3.font-weight-bold.color-theme-brand Заказ # 837258628
+              .heading__col.pos-rel
+                span.readmore.readmore_centered.d-block.color-theme-brand(style="width:20px;height:20px;")
+                  +svg('readmore-reversed')
 
-    .table-row.box-shadow.border-radius.overflow-hidden.mb-2
-      .table-row__header.py-2.px-3
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 1758767
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 10.08.2021
-        .table-row__col.h5.d-flex.flex-column.justify-content-center.cursor-pointer
+    .table-row
+      .table-row__header.table-row__header_order.box-shadow.border-radius.py-3.py-md-1.px-3.mb-md-2.mb-3
+        .table-row__title.h4.d-block.d-md-none.color-theme-brand.mb-3.order-1 Заказ № 1758767
+        .table-row__col.h5.d-none.d-md-flex.flex-column.justify-content-center.order-md-1 1758767
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-2.order-md-2.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Дата заказа:
+          | 10.08.2021
+        .table-row__col.h5.d-flex.flex-column.justify-content-center.overflow-hidden.order-6.order-md-3
           .text-oneline Летние шины Cordiant Comfort 2 175/70
           .text-oneline Летние шины Cordiant Comfort 2 175/70
           .text-oneline Летние шины Cordiant Comfort 2 175/70
-        .table-row__col.h5.d-flex.flex-column.justify-content-center 25 530, 08 ₽
-        .table-row__col.d-flex.flex-column.justify-content-center e-mail, sms
-        .table-row__col.h5.d-flex.flex-column.justify-content-center Готово
-        .table-row__col.d-flex.flex-column.justify-content-center
-          span.d-block.color-theme-brand.cursor-pointer(style="width:20px;height:20px;")
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-3.order-md-4.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Сумма заказа:
+          | 25 530, 08 ₽
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-4.order-md-5.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Отслеживание:
+          | e-mail, sms
+        .table-row__col.h5.d-flex.flex-md-column.justify-content-between.justify-content-md-center.align-items-center.align-items-md-start.order-5.order-md-6.mb-md-0.mb-2
+          span.table-row__title.d-block.d-md-none Статус заказа:
+          | Готово
+        .table-row__col.d-none.d-md-block.pos-rel.order-md-7
+          span.readmore.readmore_centered.d-block.color-theme-brand(style="width:20px;height:20px;")
             +svg('readmore')
       .table-row__body
+        .box-shadow.border-radius.overflow-hidden.pt-4.mb-2
+          .border-bottom.px-3.pb-3.mb-3
+            .heading.heading_order-details.mb-3
+              .heading__col
+                .h3.font-weight-bold.color-theme-brand Заказ # 837258628
+              .heading__col.pos-rel
+                span.readmore.readmore_centered.d-block.color-theme-brand(style="width:20px;height:20px;")
+                  +svg('readmore-reversed')
+
+  .section.text-center.py-2.mb-5
+    a.readmore.h4.d-flex.align-items-center.justify-content-center.color-theme-brand.pr-0(href="#")
+      span.mr-1 Показать всю историю заказов
+      span.d-block(style="width:20px;height:20px;")
+        +svg('readmore')

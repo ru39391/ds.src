@@ -1,0 +1,9 @@
+.card-row {
+  display: grid;
+  grid-column-gap: $grid-gutter-width;
+  grid-template-columns: 1fr 5fr 1fr 2fr;
+}
+
+.card-row__col {
+
+}
