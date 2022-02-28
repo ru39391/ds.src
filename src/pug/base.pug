@@ -276,33 +276,14 @@ html(lang="ru")
   subcategory-tires-tile.pug
     tile/category.pug
 
-  comparing.pug
-    carousel/comparing.pug
-    carousel/comparing-noparamtitle.pug
-
   .slides_togglers-next в category/popular.pug
   _swiper.scss - перебрать
-    + _sales
-    + _section
-    + _common
   _card
   _tabs
   _form - внутренние отступы и стили текста
 
-    + _section:
-    + include base/callorder.pug
-    + include base/subscribe.pug
-
-    + padding
-    + px
-    + py
-    + @include offset()
-
-    + service.pug - изменить вёрстку promo
-    + избавиться от .content__date и прочих похожих
-    + flex-grow: 1 -> flex-grow-1
-
-    + вернуть фон кнопки фильтра results-tires.pug в стили
+  пожать изображения
+  поправить .readmore
 
   contacts.pug - поправить баг с аккордеоном
 
