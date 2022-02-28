@@ -57,3 +57,9 @@ a {
     text-decoration: underline;
   }
 }
+
+.text-oneline {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

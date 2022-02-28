@@ -1,8 +1,9 @@
 .readmore {
   @extend %btn-default;
+  transition: all .3s ease;
+  /*
   @include before;
   padding: 0 1.625rem 0 0;
-  transition: all .3s ease;
 
   &:hover,
   &.current {
@@ -41,5 +42,13 @@
       right: 6px;
       margin: 0;
     }
+  }
+  */
+
+  &.readmore_centered {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin: -10px 0 0;
   }
 }

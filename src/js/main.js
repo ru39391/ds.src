@@ -8,4 +8,5 @@ import './app/recalculate';
 import './app/ranger';
 import './app/cards';
 import './app/header';
+import './app/collapse';
 import './app/accordion';

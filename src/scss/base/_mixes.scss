@@ -30,6 +30,10 @@
 }
 
 /* other */
+.pos-rel {
+  position: relative;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -48,6 +52,10 @@
 
 .pointer-events-none {
   pointer-events: none !important;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
 }
 
 .img-cover {

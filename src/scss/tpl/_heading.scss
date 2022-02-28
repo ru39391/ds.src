@@ -1,13 +1,47 @@
 .heading {
-  position: relative;
+  grid-column-gap: $grid-gutter-width;
+
+  &.heading_orders {
+    grid-template-columns: repeat(2,1fr) 3fr repeat(4,1fr);
+
+    @include media-breakpoint-up(md) {
+      display: grid;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &.heading_bonus {
+    grid-template-columns: 1fr 1fr 5fr 2fr;
+
+    @include media-breakpoint-up(md) {
+      display: grid;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &.heading_vin {
+    grid-template-columns: repeat(2,1fr) 2fr 5fr;
+
+    @include media-breakpoint-up(md) {
+      display: grid;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &.heading_order-details {
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+  }
 }
 
 .heading__col {
-  @include fw(100%/10);
-  @include px(1rem,$grid-gutter-width/2);
-  text-overflow: ellipsis;
-
-  &.heading__col_lg {
-    @include fw(100%/10*2);
-  }
 }

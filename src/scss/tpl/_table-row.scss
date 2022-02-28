@@ -1,0 +1,54 @@
+.table-row {
+  &.active {
+    .table-row__header {
+      display: none;
+    }
+
+    .table-row__body {
+      display: block;
+    }
+  }
+}
+
+.table-row__header {
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-column-gap: $grid-gutter-width;
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.table-row__header_order {
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2,1fr) 3fr repeat(4,1fr);
+    }
+  }
+
+  &.table-row__header_bonus {
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 1fr 1fr 5fr 2fr;
+    }
+  }
+
+  &.table-row__header_vin {
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2,1fr) 2fr 5fr;
+    }
+  }
+}
+
+.table-row__col {
+  &.table-row__col_grid {
+    @include media-breakpoint-down(sm) {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+}
+
+.table-row__body {
+  display: none;
+}

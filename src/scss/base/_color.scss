@@ -30,6 +30,10 @@
   @include color($color__warning);
 }
 
+.color-theme-danger {
+  @include color($color__danger);
+}
+
 .color-theme-disabled {
   @include color($color__disabled);
 }

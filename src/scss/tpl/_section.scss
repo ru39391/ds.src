@@ -37,11 +37,22 @@
   }
 }
 
-/*
-.section__row {
-  @include h5;
-  @include offset(0 -32px,8px 32px);
-  @include border(1px 0 0,$color__border);
-  display: block;
+.section__expander {
+  @include border(0 0 1px,rgba(0,0,0,0));
+
+  &.active {
+    border-color: $color__border;
+
+    & + .section__body {
+      display: block;
+    }
+
+    .section__readmore {
+      transform: rotate(-180deg);
+    }
+  }
 }
-*/
+
+.section__body {
+  display: none;
+}

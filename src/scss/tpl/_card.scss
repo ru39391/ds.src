@@ -491,24 +491,3 @@
     grid-column-end: 3;
   }
 }
-
-/* card-row */
-.card-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card-row__left {
-  @include fw(100%/10);
-  padding-left: 1rem;
-}
-
-.card-row__right {
-  @include fw(100%/10*9);
-}
-
-.card-row__param {
-  @include h2;
-  line-height: 4.375rem;
-  font-weight: bold;
-}
