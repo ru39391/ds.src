@@ -40,10 +40,10 @@ html(lang="ru")
                             a.header__nav-item.mr-4(href="#") Бонусные рубли
                             a.header__nav-item(href="#") Контакты
                     .col-xl-1.col-lg-2.col-4.d-flex.align-items-xl-start.justify-content-end
-                      .menu.d-flex.align-items-center
-                        button.menu__title(type="button")
-                          | Помощь
-                          +icon('dropdown','menu__icon ml-1')
+                      .menu
+                        button.menu__title.d-flex.align-items-center(type="button")
+                          span.mr-1 Помощь
+                          +icon('dropdown','menu__icon h6')
                         .menu__wrapper
             .header__wrapper
                 .header__col.header__col_logo.col-xl-4.col-lg-5.mb-3

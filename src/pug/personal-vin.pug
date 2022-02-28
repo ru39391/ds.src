@@ -21,11 +21,10 @@ block personal
   .section.py-0.mb-5
     .section__expander.d-flex.align-items-center.justify-content-between.cursor-pointer.px-md-4.px-3.py-2
       button.btn.btn_nobg.h4.p-0(type="button")
-        span.color-theme-brand.mr-2(style="width:20px;")
-          +svg('select')
+        +icon('settings','color-theme-brand h3 mr-2')
         span.color-theme-brand Подобрать по VIN
-      span.section__readmore.readmore.d-block.color-theme-brand(style="width:20px;height:20px;")
-        +svg('readmore')
+      span.section__readmore.readmore.d-block.color-theme-brand
+        +icon('readmore','h3')
     form.section__body(action="#")
       .border-bottom.px-md-4.px-3.pt-md-4.pt-3
         .row

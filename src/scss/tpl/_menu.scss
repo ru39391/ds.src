@@ -9,6 +9,5 @@
 }
 
 .menu__icon {
-  @include fw(8px);
-  @include wh(8px);
+  margin: 0 0 -.25rem;
 }

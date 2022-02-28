@@ -2,11 +2,10 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?qpbx8c');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?qpbx8c#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?qpbx8c') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?qpbx8c') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?qpbx8c##{$icomoon-font-family}') format('svg');
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?y36wip') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?y36wip') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?y36wip##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -222,7 +221,7 @@
   &:before {
     content: $ds-icon-logo-path6;
     margin-left: -1em;
-    color: rgb(187, 187, 187);
+    color: #bbb;
   }
 }
 .ds-icon-menu {
@@ -264,6 +263,16 @@
 .ds-icon-plane {
   &:before {
     content: $ds-icon-plane;
+  }
+}
+.ds-icon-readmore {
+  &:before {
+    content: $ds-icon-readmore;
+  }
+}
+.ds-icon-readmore-reversed {
+  &:before {
+    content: $ds-icon-readmore-reversed;
   }
 }
 .ds-icon-repair {
