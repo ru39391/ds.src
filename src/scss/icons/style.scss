@@ -26,6 +26,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ds-icon-close {
+  &:before {
+    content: $ds-icon-close;
+  }
+}
 .ds-icon-allseason .path1 {
   &:before {
     content: $ds-icon-allseason-path1;

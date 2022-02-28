@@ -1,0 +1,17 @@
+.modal-dialog {
+  &.modal-dialog_wide {
+    @include media-breakpoint-up(md) {
+      max-width: 630px;
+    }
+  }
+}
+
+.modal__bg {
+  @include wh(224px);
+  position: absolute;
+  right: -35px;
+  bottom: 42px;
+  z-index: 1;
+  transform: rotateY(180deg);
+  color: $color__light;
+}

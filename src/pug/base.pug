@@ -52,10 +52,10 @@ html(lang="ru")
                     nav.header__nav.d-flex.align-items-center.justify-content-center
                         a.header__btn.text-uppercase.mr-3(href="#")
                           +icon('menu','header__btn-icon mr-lg-2')
-                          span.header__btn-title Каталог
+                          | Каталог
                         a.header__btn.text-uppercase(href="#")
                           +icon('services','header__btn-icon mr-lg-2')
-                          span.header__btn-title Услуги
+                          | Услуги
                 .header__col.header__col_search.col-xl-3.mb-3
                     form.search(action="#" method="post")
                         input.search__field(type="text" placeholder="Я ищу..." value="")
@@ -79,10 +79,12 @@ html(lang="ru")
                             span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                               +icon('case')
                             span.header__btn-title Заказы
-                        a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
-                            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
+                        .header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3
+                            .header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                               +icon('user')
-                            span.header__btn-title Вход | регистрация
+                            .d-flex.justify-content-center
+                              button.header__btn-title.btn-unstyled(type="button" data-toggle="modal" data-target="#auth") Вход |
+                              button.header__btn-title.btn-unstyled(type="button" data-toggle="modal" data-target="#reg")  регистрация
                     a.header__btn.text-uppercase.header__btn_inverse(href="#")
                       +icon('cart','header__btn-icon')
             .header__bottom
@@ -171,6 +173,86 @@ html(lang="ru")
                     +img('visa.png')
                     +img('mc.png')
                   .copyright © 2021 Все права защищены.
+
+    block modals
+      .modal.fade#reg(tabindex="-1" aria-hidden="true")
+        form.modal-dialog(action="#")
+          .modal-content.border-0.box-shadow.py-3
+            .modal-header.d-flex.align-items-center.justify-content-between.pt-0.px-4.pb-3.mb-4
+              .d-flex.align-items-center
+                +icon('user','color-theme-brand h3 mr-2')
+                .h3.font-weight-bold.color-theme-brand.mr-3 Регистрация
+              button.close.h2.btn-unstyled.color-theme-brand.py-0(data-dismiss="modal")
+                +icon('close')
+            .modal-body.border-bottom.pt-0.px-4.pb-3.mb-3
+              .form
+                .form__item.mb-4
+                  input.form__field(type="text" value="")
+                  .form__label.form__label_title Ваше имя *
+                .form__item.mb-4
+                  input.form__field(type="text" value="")
+                  .form__label.form__label_title Номер телефона *
+                .form__item.mb-4
+                  input.form__field(type="text" value="")
+                  .form__label.form__label_title E-mail *
+                .form__item
+                  input.form__toggler.form__toggler_checkbox(id="modal-form-checkbox" type="checkbox" value="")
+                  label.form__label.form__label_checkbox(for="modal-form-checkbox")
+                    +icon('checked','form__label-icon')
+                    span.form__label-title Я принимаю&nbsp;
+                      a.text-underline(href="#") политику конфиденциальности&nbsp;
+                      | *
+            .px-4
+              .row
+                .col-xl-5.text-xl-left.text-center.mb-xl-0.mb-3
+                  .h6 *-поля обязательные для заполнения
+                .col-xl-7.text-xl-right.text-center
+                  button.btn.text-uppercase.px-3(type="submit") Зарегистрироваться
+
+      .modal.fade#auth(tabindex="-1" aria-hidden="true")
+        form.modal-dialog(action="#")
+          .modal-content.border-0.box-shadow.py-3
+            .modal-header.d-flex.align-items-center.justify-content-between.pt-0.px-4.pb-3.mb-4
+              .d-flex.align-items-center
+                +icon('user','color-theme-brand h3 mr-2')
+                .h3.font-weight-bold.color-theme-brand.mr-3 Вход
+              button.close.h2.btn-unstyled.color-theme-brand.py-0(data-dismiss="modal")
+                +icon('close')
+            .modal-body.border-bottom.pt-0.px-4.pb-2.mb-3
+              .form.mb-4
+                .form__item.mb-4
+                  input.form__field(type="text" value="")
+                  .form__label.form__label_title Номер телефона *
+                .form__item
+                  input.form__field(type="text" value="")
+                  .form__label.form__label_title Пароль *
+              .d-flex.flex-wrap.align-items-center.justify-content-between
+                a.h5(href="#" data-dismiss="modal" data-toggle="modal" data-target="#pwd") Забыли пароль?
+                a.h5(href="#" data-dismiss="modal" data-toggle="modal" data-target="#reg") Регистрация
+            .text-center.px-4
+              button.btn.text-uppercase.px-5(type="submit") Вход
+
+      .modal.fade#pwd(tabindex="-1" aria-hidden="true")
+        form.modal-dialog(action="#")
+          .modal-content.border-0.box-shadow.py-3
+            .modal-header.d-flex.align-items-center.justify-content-between.pt-0.px-4.pb-3.mb-4
+              .d-flex.align-items-center
+                +icon('user','color-theme-brand h3 mr-2')
+                .h3.font-weight-bold.color-theme-brand.mr-3 Забыли пароль?
+              button.close.h2.btn-unstyled.color-theme-brand.py-0(data-dismiss="modal")
+                +icon('close')
+            .modal-body.border-bottom.pt-0.px-4.pb-2.mb-3
+              .h5.text-center.mb-3 Укажите ваш телефон, и мы отправим&nbsp;
+                br
+                | вам новый пароль
+              .form.mb-4
+                .form__item
+                  input.form__field(type="text" value="")
+                  .form__label.form__label_title +7 (_ _ _) _ _ _-_ _-_ _
+              .d-flex.flex-wrap.align-items-center.justify-content-end
+                a.h5(href="#" data-dismiss="modal" data-toggle="modal" data-target="#reg") Регистрация
+            .text-center.px-4
+              button.btn.text-uppercase.px-5(type="submit") Отправить
 
     script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js")
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js")

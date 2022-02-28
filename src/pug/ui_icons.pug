@@ -12,6 +12,8 @@ block wrapper
       .d-flex.flex-column
         .h2.font-weight-bold.mb-2 SVG
         .d-inline-block.pr-5.mb-1(style="width:80px;height:80px;")
+          +svg('close')
+        .d-inline-block.pr-5.mb-1(style="width:80px;height:80px;")
           +svg('allseason')
         .d-inline-block.pr-5.mb-1(style="width:80px;height:80px;")
           +svg('arrow-left')
@@ -138,6 +140,8 @@ block wrapper
     .col-md-3
       .d-flex.flex-column
         .h2.font-weight-bold.mb-2 Шрифт
+        .d-flex.flex-column.justify-content-center.pr-5.mb-1(style="width:80px;height:80px;")
+          span.h1.ds-icon-close
         .d-flex.flex-column.justify-content-center.pr-5.mb-1(style="width:80px;height:80px;")
           span.h1.ds-icon-allseason
             span.path1
