@@ -1,3 +1,24 @@
+.results-row {
+  display: grid;
+  grid-gap: $grid-gutter-width;
+
+  @include media-breakpoint-up(xl) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @include media-breakpoint-only(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-breakpoint-only(md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .result-item {
   display: block;
   text-align: center;
