@@ -21,6 +21,12 @@
     flex-direction: column;
   }
 
+  &.table-row__header_cart {
+    grid-gap: 8px;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas: "row__img row__title row__title row__title row__title row__price row__price row__quantity row__quantity row__summ row__summ row__close";
+  }
+
   &.table-row__header_order {
     @include media-breakpoint-up(md) {
       grid-template-columns: repeat(2,1fr) 3fr repeat(4,1fr);
@@ -46,6 +52,30 @@
       display: grid;
       grid-template-columns: 1fr 2fr;
     }
+  }
+
+  &.table-row__col_cart-img {
+    grid-area: row__img;
+  }
+
+  &.table-row__col_cart-title {
+    grid-area: row__title;
+  }
+
+  &.table-row__col_cart-price {
+    grid-area: row__price;
+  }
+
+  &.table-row__col_cart-quantity {
+    grid-area: row__quantity;
+  }
+
+  &.table-row__col_cart-summ {
+    grid-area: row__summ;
+  }
+
+  &.table-row__col_cart-close {
+    grid-area: row__close;
   }
 }
 

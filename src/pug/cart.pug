@@ -4,4 +4,130 @@ block meta
   - var title = 'Корзина';
 
 block wrapper
-    .wrapper
+  .wrapper
+    nav.pathway
+      a.pathway__link(href="#") Главная
+      a.pathway__current(href="#") #{title}
+    section.content
+      h1 #{title}
+    .heading.heading_cart.px-3
+      .heading__col.heading__col_cart-title.h6.mb-2 Товар
+      .heading__col.heading__col_cart-price.h6.mb-2 Цена
+      .heading__col.heading__col_cart-quantity.h6.mb-2 Количество
+      .heading__col.heading__col_cart-summ.h6.mb-2 Сумма
+    form.table-row(action="#")
+      .table-row__header.table-row__header_cart.box-shadow.border-radius.py-3.py-md-1.px-3.mb-md-2.mb-3.js-cart
+        .table-row__col.table-row__col_cart-img.d-md-flex.flex-column.align-items-start.justify-content-center
+          a(href="#")
+            +img('content/cards/card-1.jpg')
+        .table-row__col.table-row__col_cart-title.d-md-flex.flex-column.align-items-start.justify-content-center
+          a.h5(href="#") Летние шины Cordiant Comfort 2 175/70 R13 86H
+        .table-row__col.table-row__col_cart-price.d-md-flex.flex-column.align-items-start.justify-content-center
+          span.d-flex.h3
+            span.font-weight-bold.mr-1.js-price 7 337.12
+            | ₽
+        .table-row__col.table-row__col_cart-quantity.d-md-flex.flex-column.align-items--start.justify-content-center
+          .d-flex.align-items-center
+            .color-theme-disabled.mr-3(style="width:16px;height:16px;")
+              +svg('close-noborder')
+            .recalculate.recalculate_sm.recalculate_shadow.d-flex.align-items-center.overflow-hidden.bg-theme-white
+              input.recalculate__field.d-none(type="number" name="count" value="1")
+              button.recalculate__btn.recalculate__btn_sm.font-weight-bold.color-theme-brand.flex-grow-1.recalculate__btn_remove(type="button") -
+              .recalculate__value.recalculate__value_sm.d-flex.align-items-center.justify-content-center.color-theme-brand 1
+              button.recalculate__btn.recalculate__btn_sm.font-weight-bold.color-theme-brand.flex-grow-1.recalculate__btn_add(type="button") +
+        .table-row__col.table-row__col_cart-summ.d-md-flex.flex-column.align-items-start.justify-content-center
+          span.d-flex.h3
+            span.font-weight-bold.mr-1.js-summ 7 337.12
+            | ₽
+        .table-row__col.table-row__col_cart-close.d-md-flex.flex-column.align-items-center.justify-content-center
+          button.h2.btn-unstyled.color-theme-brand(type="button")
+            +icon('close')
+    form.table-row(action="#")
+      .table-row__header.table-row__header_cart.box-shadow.border-radius.py-3.py-md-1.px-3.mb-md-2.mb-3.js-cart
+        .table-row__col.table-row__col_cart-img.d-md-flex.flex-column.align-items-start.justify-content-center
+          a(href="#")
+            +img('content/cards/card-1.jpg')
+        .table-row__col.table-row__col_cart-title.d-md-flex.flex-column.align-items-start.justify-content-center
+          a.h5(href="#") Летние шины Cordiant Comfort 2 175/70 R13 86H
+        .table-row__col.table-row__col_cart-price.d-md-flex.flex-column.align-items-start.justify-content-center
+          span.d-flex.h3
+            span.font-weight-bold.mr-1.js-price 7 337.12
+            | ₽
+        .table-row__col.table-row__col_cart-quantity.d-md-flex.flex-column.align-items--start.justify-content-center
+          .d-flex.align-items-center
+            .color-theme-disabled.mr-3(style="width:16px;height:16px;")
+              +svg('close-noborder')
+            .recalculate.recalculate_sm.recalculate_shadow.d-flex.align-items-center.overflow-hidden.bg-theme-white
+              input.recalculate__field.d-none(type="number" name="count" value="1")
+              button.recalculate__btn.recalculate__btn_sm.font-weight-bold.color-theme-brand.flex-grow-1.recalculate__btn_remove(type="button") -
+              .recalculate__value.recalculate__value_sm.d-flex.align-items-center.justify-content-center.color-theme-brand 1
+              button.recalculate__btn.recalculate__btn_sm.font-weight-bold.color-theme-brand.flex-grow-1.recalculate__btn_add(type="button") +
+        .table-row__col.table-row__col_cart-summ.d-md-flex.flex-column.align-items-start.justify-content-center
+          span.d-flex.h3
+            span.font-weight-bold.mr-1.js-summ 7 337.12
+            | ₽
+        .table-row__col.table-row__col_cart-close.d-md-flex.flex-column.align-items-center.justify-content-center
+          button.h2.btn-unstyled.color-theme-brand(type="button")
+            +icon('close')
+    form.table-row.mb-4(action="#")
+      .table-row__header.table-row__header_cart.box-shadow.border-radius.py-3.py-md-1.px-3.mb-md-2.mb-3.js-cart
+        .table-row__col.table-row__col_cart-img.d-md-flex.flex-column.align-items-start.justify-content-center
+          a(href="#")
+            +img('content/cards/card-1.jpg')
+        .table-row__col.table-row__col_cart-title.d-md-flex.flex-column.align-items-start.justify-content-center
+          a.h5(href="#") Летние шины Cordiant Comfort 2 175/70 R13 86H
+        .table-row__col.table-row__col_cart-price.d-md-flex.flex-column.align-items-start.justify-content-center
+          span.d-flex.h3
+            span.font-weight-bold.mr-1.js-price 7 337.12
+            | ₽
+        .table-row__col.table-row__col_cart-quantity.d-md-flex.flex-column.align-items--start.justify-content-center
+          .d-flex.align-items-center
+            .color-theme-disabled.mr-3(style="width:16px;height:16px;")
+              +svg('close-noborder')
+            .recalculate.recalculate_sm.recalculate_shadow.d-flex.align-items-center.overflow-hidden.bg-theme-white
+              input.recalculate__field.d-none(type="number" name="count" value="1")
+              button.recalculate__btn.recalculate__btn_sm.font-weight-bold.color-theme-brand.flex-grow-1.recalculate__btn_remove(type="button") -
+              .recalculate__value.recalculate__value_sm.d-flex.align-items-center.justify-content-center.color-theme-brand 1
+              button.recalculate__btn.recalculate__btn_sm.font-weight-bold.color-theme-brand.flex-grow-1.recalculate__btn_add(type="button") +
+        .table-row__col.table-row__col_cart-summ.d-md-flex.flex-column.align-items-start.justify-content-center
+          span.d-flex.h3
+            span.font-weight-bold.mr-1.js-summ 7 337.12
+            | ₽
+        .table-row__col.table-row__col_cart-close.d-md-flex.flex-column.align-items-center.justify-content-center
+          button.h2.btn-unstyled.color-theme-brand(type="button")
+            +icon('close')
+    form.form.row.mb-5(action="#")
+      .col-xl-8.col-md-6.d-flex.flex-wrap.align-items-start.px-0
+        .col-xl-7.d-flex.flex-wrap.align-items-center.px-0
+          .col-xl-6.col-md-6
+            label.h6.d-inline-block.mb-0 Предпочтительный год производства шин:
+          .col-xl-5.col-md-6
+            .form__select
+              select.form__select-options
+                option 2022
+                option 2021
+                option 2020
+                option 2019
+        .col-xl-5.d-flex.flex-wrap.align-items-center.px-0
+          .col-xl-3.col-md-6
+            label.h6.d-inline-block.mb-0 Если старше:
+          .col-xl-8.col-md-6
+            .form__select
+              select.form__select-options
+                option позвонить и подобрать аналог
+                option написать и подобрать аналог
+                option позвонить и подобрать аналог
+                option написать и подобрать аналог
+      .col-xl-3.col-md-5.offset-md-1
+        .desclist.mb-3
+          .d-flex.align-items-center.mb-1
+            .desclist__title.h6.d-block.overflow-hidden.px-0.col-md-7 Доставка в ваш город:
+            .h3.col-md-5
+              span.font-weight-bold 750&nbsp;
+              | ₽
+          .d-flex.align-items-center.mb-1
+            .desclist__title.h6.d-block.overflow-hidden.px-0.col-md-7 Итого:
+            .h3.col-md-5
+              span.font-weight-bold 79 337.12&nbsp;
+              | ₽
+        button.btn.text-uppercase.px-5(type="submit") Оформить заказ
