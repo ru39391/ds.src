@@ -22,9 +22,18 @@
   }
 
   &.table-row__header_cart {
-    grid-gap: 8px;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-areas: "row__img row__title row__title row__title row__title row__price row__price row__quantity row__quantity row__summ row__summ row__close";
+    @include media-breakpoint-up(md) {
+      grid-gap: 8px;
+      grid-template-columns: repeat(12,1fr);
+      grid-template-areas: "row__img row__title row__title row__title row__title row__price row__price row__quantity row__quantity row__summ row__summ row__close";
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+      align-items: center;
+      flex-direction: row;
+      position: relative;
+    }
   }
 
   &.table-row__header_order {
@@ -55,27 +64,65 @@
   }
 
   &.table-row__col_cart-img {
-    grid-area: row__img;
+    @include media-breakpoint-up(md) {
+      grid-area: row__img;
+    }
+
+    @include media-breakpoint-down(sm) {
+      @include fw(100%/12*4);
+    }
   }
 
   &.table-row__col_cart-title {
-    grid-area: row__title;
+    @include media-breakpoint-up(md) {
+      grid-area: row__title;
+    }
+
+    @include media-breakpoint-down(sm) {
+      @include fw(100%/12*7);
+    }
   }
 
   &.table-row__col_cart-price {
-    grid-area: row__price;
+    @include media-breakpoint-up(md) {
+      grid-area: row__price;
+    }
+
+    @include media-breakpoint-down(sm) {
+      @include fw(100%/12*8);
+    }
   }
 
   &.table-row__col_cart-quantity {
-    grid-area: row__quantity;
+    @include media-breakpoint-up(md) {
+      grid-area: row__quantity;
+    }
+
+    @include media-breakpoint-down(sm) {
+      @include fw(100%/12*4);
+    }
   }
 
   &.table-row__col_cart-summ {
-    grid-area: row__summ;
+    @include media-breakpoint-up(md) {
+      grid-area: row__summ;
+    }
+
+    @include media-breakpoint-down(sm) {
+      @include fw(100%/12*8);
+    }
   }
 
   &.table-row__col_cart-close {
-    grid-area: row__close;
+    @include media-breakpoint-up(md) {
+      grid-area: row__close;
+    }
+
+    @include media-breakpoint-down(sm) {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+    }
   }
 }
 

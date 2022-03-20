@@ -1,6 +1,7 @@
 import 'swiper/swiper.scss';
 import '../scss/main.scss';
 
+import './app/cart';
 import './app/forms';
 import './app/slides';
 import './app/breakpointchecker';

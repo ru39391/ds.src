@@ -1,0 +1,22 @@
+.cart-summary {
+  transition: all .3s ease;
+
+  &.cart-summary_sticky {
+    @include media-breakpoint-down(sm) {
+      padding: .875rem 1rem 1.25rem;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1040;
+      color: #fff;
+      background: $color__brand;
+    }
+
+    .btn {
+      @include media-breakpoint-down(sm) {
+        border-color: #fff;
+      }
+    }
+  }
+}

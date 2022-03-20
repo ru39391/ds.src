@@ -2,10 +2,16 @@
   grid-column-gap: $grid-gutter-width;
 
   &.heading_cart {
-    display: grid;
-    grid-gap: 8px;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-areas: ". cart__title cart__title cart__title cart__title cart__price cart__price cart__quantity cart__quantity cart__summ cart__summ .";
+    @include media-breakpoint-up(md) {
+      display: grid;
+      grid-gap: 8px;
+      grid-template-columns: repeat(12,1fr);
+      grid-template-areas: ". cart__title cart__title cart__title cart__title cart__price cart__price cart__quantity cart__quantity cart__summ cart__summ .";
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   &.heading_orders {
