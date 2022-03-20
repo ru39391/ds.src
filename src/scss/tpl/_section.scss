@@ -56,3 +56,12 @@
 .section__body {
   display: none;
 }
+
+.section-counter {
+  @include fw(22px);
+  @include wh(22px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
