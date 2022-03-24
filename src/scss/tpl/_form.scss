@@ -88,6 +88,22 @@
   }
 }
 
+.form__box {
+  @include border(1px 0,rgba(0,0,0,0));
+  transition: all .3s ease;
+
+  &:last-child {
+    border-width: 1px 0 0;
+  }
+
+  &.form__box_active {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-color: $color__border;
+  }
+}
+
 .form__label {
   @include h5;
   margin-bottom: 0;
@@ -180,6 +196,42 @@
     &:checked {
       & + .form__label {
         @extend %toggler-theme-current;
+      }
+    }
+  }
+
+  &.form__toggler_dot {
+    @extend %toggler-default;
+
+    & + .form__label {
+      @include before;
+
+      &:before {
+        @include fw(24px);
+        @include wh(24px);
+        position: static;
+        border-radius: 50%;
+        margin: 0 .625rem 0 0;
+        background: $color__light;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.16) inset;
+      }
+
+      &:after {
+        @include fw(12px);
+        @include wh(12px);
+        @include pos(6px,6px);
+        content: '';
+        border-radius: 50%;
+        transition: all .3s ease;
+        background: rgba(0, 0, 0, 0);
+      }
+    }
+
+    &:checked {
+      & + .form__label {
+        &:after {
+          background: $color__brand;
+        }
       }
     }
   }

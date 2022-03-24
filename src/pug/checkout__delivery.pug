@@ -40,19 +40,208 @@ block checkout
       .h3.flex-grow-1.font-weight-bold.color-theme-brand Доставка
     .form.border-bottom.px-md-4.px-3.pb-md-4.pb-3
       .h6.color-theme-disabled.mb-3 Тип платильщика
-      input.form__toggler.form__toggler_checkbox(id="checkout-service-1" type="checkbox" value="")
+      input.form__toggler.form__toggler_checkbox(id="checkout-service-1" type="radio" name="checkout-service" value="")
       label.form__label.form__label_checkbox.mb-4(for="checkout-service-1")
         +icon('checked','form__label-icon')
         span.form__label-title Физическое лицо
-      input.form__toggler.form__toggler_checkbox(id="checkout-service-2" type="checkbox" value="")
+      input.form__toggler.form__toggler_checkbox(id="checkout-service-2" type="radio" name="checkout-service" value="")
       label.form__label.form__label_checkbox(for="checkout-service-2")
         +icon('checked','form__label-icon')
         span.form__label-title Юридическое лицо
+    .form.border-bottom.pb-md-4.pb-3
+      .px-md-4.px-3
+        .h6.color-theme-disabled.mb-3 Тип доставки
+      .form__box.px-md-4.px-3
+        .row.align-items-center.mb-4
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-1" type="radio" name="delivery" value="")
+            label.form__label.form__label_dot(for="checkout-delivery-1")
+              span.form__label-title.h6 Самовывоз (0₽)
+          .col-sm-7
+            .h6.color-theme-disabled Вы можете самостоятельно забрать заказ из нашего магазина по адресу: РнД, ул. Доватора, 11.
+      .form__box.px-md-4.px-3
+        .row.align-items-center.mb-4
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-2" type="radio" name="delivery" value="")
+            label.form__label.form__label_dot(for="checkout-delivery-2")
+              span.form__label-title.h6 Доставка ТК для регионов РФ (0₽)
+          .col-sm-7
+            .h6.color-theme-disabled Бесплатная доставка до Транспортной Компании КИТ в городе отправки.
+      .form__box.px-md-4.px-3
+        .row.align-items-center.mb-4
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-3" type="radio" name="delivery" value="")
+            label.form__label.form__label_dot(for="checkout-delivery-3")
+              span.form__label-title.h6 GTD (500₽)
+          .col-sm-7
+            +img('content/delivery/ctd.png')
+      .form__box.px-md-4.px-3
+        .row.align-items-center.mb-4
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-4" type="radio" name="delivery" value="" checked)
+            label.form__label.form__label_dot(for="checkout-delivery-4")
+              span.form__label-title.h6 СДЭК (500₽)
+          .col-sm-7
+              +img('content/delivery/cdek.png')
+      .form__box.px-md-4.px-3
+        .row.align-items-center.mb-4
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-5" type="radio" name="delivery" value="")
+            label.form__label.form__label_dot(for="checkout-delivery-5")
+              span.form__label-title.h6 ПЭК (500₽)
+          .col-sm-7
+            +img('content/delivery/pek.png')
+      .form__box.px-md-4.px-3
+        .row.align-items-center.mb-4
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-6" type="radio" name="delivery" value="")
+            label.form__label.form__label_dot(for="checkout-delivery-6")
+              span.form__label-title.h6 Деловые Линии (500₽)
+          .col-sm-7
+            +img('content/delivery/dl.png')
+      .form__box.px-md-4.px-3
+        .row.align-items-center.mb-4
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-8" type="radio" name="delivery" value="")
+            label.form__label.form__label_dot(for="checkout-delivery-8")
+              span.form__label-title.h6 Boxberry (500₽)
+          .col-sm-7
+            +img('content/delivery/boxberry.png')
+      .form__box.px-md-4.px-3
+        .row.align-items-center
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-9" type="radio" name="delivery" value="")
+            label.form__label.form__label_dot(for="checkout-delivery-9")
+              span.form__label-title.h6 PickPoint (500₽)
+          .col-sm-7
+            +img('content/delivery/pickpoint.png')
+    .px-md-4.px-3.py-3.text-right
+      button.btn.text-uppercase.px-5(type="button") Далее
+  form.section.py-0.mb-3(action="#")
+    .border-bottom.d-flex.align-items-center.px-md-4.px-3.py-2
+      span.section-counter.h3.rounded-circle.bg-theme-brand.color-theme-white.mr-2 3
+      .h3.flex-grow-1.font-weight-bold.color-theme-brand Доставка
     .form.border-bottom.px-md-4.px-3.pb-md-4.pb-3
-      .h6.color-theme-disabled.mb-3 Тип доставки
-      input.form__toggler.form__toggler_radio(id="checkout-delivery-1" type="radio" name="delivery" value="")
-      label.form__label.form__label_radio(for="checkout-delivery-1")
-        span.form__label-title Самовывоз (0₽)
+      .h6.color-theme-disabled.mb-3 Тип платильщика
+      input.form__toggler.form__toggler_checkbox(id="checkout-service-1" type="radio" name="checkout-service" value="")
+      label.form__label.form__label_checkbox.mb-4(for="checkout-service-1")
+        +icon('checked','form__label-icon')
+        span.form__label-title Физическое лицо
+      input.form__toggler.form__toggler_checkbox(id="checkout-service-2" type="radio" name="checkout-service" value="")
+      label.form__label.form__label_checkbox(for="checkout-service-2")
+        +icon('checked','form__label-icon')
+        span.form__label-title Юридическое лицо
+    .form.border-bottom.pb-md-4.pb-3
+      .px-md-4.px-3
+        .h6.color-theme-disabled.mb-3 Тип доставки
+      .form__box.px-md-4.px-3
+        .row.align-items-center.mb-4
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-1" type="radio" name="delivery" value="")
+            label.form__label.form__label_dot(for="checkout-delivery-1")
+              span.form__label-title.h6 Самовывоз (0₽)
+          .col-sm-7
+            .h6.color-theme-disabled Вы можете самостоятельно забрать заказ из нашего магазина по адресу: РнД, ул. Доватора, 11.
+      .form__box.px-md-4.px-3
+        .row.align-items-center.mb-4
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-2" type="radio" name="delivery" value="")
+            label.form__label.form__label_dot(for="checkout-delivery-2")
+              span.form__label-title.h6 Доставка ТК для регионов РФ (0₽)
+          .col-sm-7
+            .h6.color-theme-disabled Бесплатная доставка до Транспортной Компании КИТ в городе отправки.
+      .form__box.px-md-4.px-3
+        .row.align-items-center.mb-4
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-3" type="radio" name="delivery" value="")
+            label.form__label.form__label_dot(for="checkout-delivery-3")
+              span.form__label-title.h6 GTD (500₽)
+          .col-sm-7
+            +img('content/delivery/ctd.png')
+      .form__box.form__box_active.px-md-4.px-3
+        .row.align-items-center.mb-4
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-4" type="radio" name="delivery" value="" checked)
+            label.form__label.form__label_dot(for="checkout-delivery-4")
+              span.form__label-title.h6 СДЭК (500₽)
+          .d-flex.flex-wrap.align-items-center.col-sm-7.px-0
+            .col-md-4.mb-3.mb-md-0
+              +img('content/delivery/cdek.png')
+            .col-md-8
+              .form__select
+                select.form__select-options
+                  option Доставка по адресу
+                  option Значение 1
+                  option Значение 2
+                  option Значение 3
+        .form__item.mb-4
+          .form__select
+            select.form__select-options
+              option Страна
+              option Россия
+              option Армения
+              option Казахстан
+        .form__item.mb-4
+          .form__select
+            select.form__select-options
+              option Область / край
+              option Ростовская обл.
+              option Краснодарский кр.
+              option Ставропольский кр.
+        .form__item.mb-4
+          .form__select
+            select.form__select-options
+              option Город
+              option Ростов-на-Дону
+              option Краснодар
+              option Ставрополь
+        .form__item.mb-4
+          .form__select
+            select.form__select-options
+              option Улица
+              option Ленина
+              option Б. Садовая
+              option Сарьяна
+        .form__item.mb-4
+          .form__select
+            select.form__select-options
+              option Дом
+              option 34
+              option 35
+              option 36
+        .h6.color-theme-disabled Выберите свой городе в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"
+      .form__box.px-md-4.px-3
+        .row.align-items-center.mb-4
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-5" type="radio" name="delivery" value="")
+            label.form__label.form__label_dot(for="checkout-delivery-5")
+              span.form__label-title.h6 ПЭК (500₽)
+          .col-sm-7
+            +img('content/delivery/pek.png')
+      .form__box.px-md-4.px-3
+        .row.align-items-center.mb-4
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-6" type="radio" name="delivery" value="")
+            label.form__label.form__label_dot(for="checkout-delivery-6")
+              span.form__label-title.h6 Деловые Линии (500₽)
+          .col-sm-7
+            +img('content/delivery/dl.png')
+      .form__box.px-md-4.px-3
+        .row.align-items-center.mb-4
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-8" type="radio" name="delivery" value="")
+            label.form__label.form__label_dot(for="checkout-delivery-8")
+              span.form__label-title.h6 Boxberry (500₽)
+          .col-sm-7
+            +img('content/delivery/boxberry.png')
+      .form__box.px-md-4.px-3
+        .row.align-items-center
+          .col-sm-5.mb-2.mb-sm-0
+            input.form__toggler.form__toggler_dot(id="checkout-delivery-9" type="radio" name="delivery" value="")
+            label.form__label.form__label_dot(for="checkout-delivery-9")
+              span.form__label-title.h6 PickPoint (500₽)
+          .col-sm-7
+            +img('content/delivery/pickpoint.png')
     .px-md-4.px-3.py-3.text-right
       button.btn.text-uppercase.px-5(type="button") Далее
   form.section.py-0.mb-3(action="#")

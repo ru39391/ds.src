@@ -17,6 +17,11 @@
     background: none;
     color: $color__text_default;
   }
+
+  &.btn_sm {
+    height: 26px;
+    border-radius: .25rem;
+  }
 }
 
 .btn-unstyled {
