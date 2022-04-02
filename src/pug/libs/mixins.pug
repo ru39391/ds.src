@@ -74,11 +74,11 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
         +img(card__img)
       .card__meta.card__meta_left
         if (card__label === 'discount')
-          .card__label.card__label_discount.text-uppercase.px-2 Скидка
+          .label.label_discount.text-uppercase.px-2 Скидка
         else if (card__label === 'sale')
-          .card__label.card__label_sale.text-uppercase.px-2 Акция
+          .label.label_sale.text-uppercase.px-2 Акция
         else if (card__label === 'hit')
-          .card__label.card__label_hit.text-uppercase.px-2 Хит
+          .label.label_hit.text-uppercase.px-2 Хит
         .card__features.card__features_col
           if (card__warranty)
             .card__features-item
@@ -155,8 +155,7 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
           a.btn.text-uppercase(href="#") В корзину
         if (card__oneclick)
           button.card__btn.card__btn_link.w-100(type="button")
-            span.card__btn-icon
-              +icon('plane')
+            +icon('plane','h4 color-theme-brand d-flex flex-column align-items-center justify-content-center mr-1')
             | Купить в один клик
     if (card__params)
       .params

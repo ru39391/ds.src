@@ -4,4 +4,156 @@ block meta
   - var title = 'Страница товара';
 
 block wrapper
-    .wrapper
+  .wrapper
+    nav.pathway
+      a.pathway__link(href="#") Главная
+      a.pathway__link(href="#") Шины
+      a.pathway__link(href="#") Шины PIRELLI
+      a.pathway__link(href="#") P Zero
+      a.pathway__current(href="#") Летние шины Pirelli P Zero 235 / 60 R17 102Y
+    section.content
+      h1 Летние шины Pirelli P Zero 235/60 R17 102Y
+    .row.mb-5
+      .col-md-4
+        .text-center.box-shadow.border-radius.pos-rel.p-4.mb-2
+          +img('content/cards/pirelli.jpg')
+          .label.label_hit.label_pos_abs.text-uppercase.px-2 Хит
+          a.zoom(href="#")
+            +icon('zoom','h4 color-theme-brand')
+        a.d-flex.align-items-center.justify-content-around.box-shadow.border-radius.p-3.mb-2(href="#")
+          +img('content/logo/logo-4.jpg')
+          span.h5 Bridgestone
+      .col-md-8
+        .box-shadow.border-radius.p-4.mb-2
+          form.row.align-items-center.mb-3(action="#")
+            .col-md-6.d-flex.align-items-center
+              .d-flex.align-items-center.flex-grow-1
+                .d-flex.align-items-end
+                  span.h2.font-weight-bold.text-nowrap.mr-1 7 337.12
+                  span.h3 ₽
+                .text-center.flex-grow-1
+                  +icon('close-noborder','h4 color-theme-disabled')
+              .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+                input.recalculate__field.d-none(type="number" name="count" value="4")
+                button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
+                .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
+                button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
+              a.btn.text-uppercase.px-3.mr-4(href="#") В корзину
+            .col-md-3
+              button.btn.btn_nobg.h5.p-0(type="button")
+                +icon('plane','h3 color-theme-brand mr-2')
+                | Купить в один клик
+            .col-md-3
+              button.btn.btn_nobg.h5.p-0(type="button")
+                +icon('card','h3 color-theme-brand mr-2')
+                | В кредит
+          .row
+            .col-md-3
+              span.h6.mr-1 Доставка в ваш город:
+              span.h5.color-theme-brand от 350 ₽
+            .col-md-3
+              span.h6.mr-1 Отгрузка:
+              span.h5.color-theme-brand сегодня после 15
+            .col-md-3
+              span.h6.mr-1 В наличии:
+              span.h5.color-theme-brand 8 шт.
+            .col-md-3
+              span.h6.mr-1 Отзывы:
+              span.h5.color-theme-brand 2 шт.
+        .box-shadow.border-radius.p-4
+          .d-flex.flex-wrap.align-items-center.mb-2
+            .d-flex.align-items-center.color-theme-brand.bg-theme-light.rounded-pill.py-1.px-2.mb-1.mr-2
+              +icon('car','h4 mr-2')
+              span.h5 Подходит для вашего авто
+            .d-flex.align-items-center.color-theme-white.bg-theme-success.rounded-pill.py-1.px-2.mb-1.mr-2
+              +icon('repair','h4 mr-2')
+              span.h5 Бесплатный шиномотаж
+            .d-flex.align-items-center.color-theme-white.bg-theme-brand.rounded-pill.py-1.px-2.mb-1.mr-2
+              +icon('delivery','h4 mr-2')
+              span.h5 Бесплатная доставка
+          .row
+            .col-md-3
+              .desclist
+                .desclist__border.d-flex.align-items-center.justify-content-between
+                  .desclist__title.h6.d-block.overflow-hidden.bg-theme-white.py-1.pr-2.zi-2 Артикул
+                  .h5.bg-theme-white.py-1.pl-1.zi-2 1874100
+                .desclist__border.d-flex.align-items-center.justify-content-between
+                  .desclist__title.h6.d-block.overflow-hidden.bg-theme-white.py-1.pr-2.zi-2 Ширина
+                  .h5.bg-theme-white.py-1.pl-1.zi-2 235″
+                .desclist__border.d-flex.align-items-center.justify-content-between
+                  .desclist__title.h6.d-block.overflow-hidden.bg-theme-white.py-1.pr-2.zi-2 Высота
+                  .h5.bg-theme-white.py-1.pl-1.zi-2 60 мм
+                .desclist__border.d-flex.align-items-center.justify-content-between
+                  .desclist__title.h6.d-block.overflow-hidden.bg-theme-white.py-1.pr-2.zi-2 Диаметр
+                  .h5.bg-theme-white.color-theme-brand.py-1.pl-2.zi-2 17″
+                .desclist__border.d-flex.align-items-center.justify-content-between
+                  .desclist__title.h6.d-block.overflow-hidden.bg-theme-white.py-1.pr-2.zi-2 Сезон
+                  .h5.d-flex.align-items-center.bg-theme-white.color-theme-brand.py-1.pl-2.zi-2
+                    +icon('summer','h5 mr-1')
+                    | Лето
+                .desclist__border.d-flex.align-items-center.justify-content-between
+                  .desclist__title.h6.d-block.overflow-hidden.bg-theme-white.py-1.pr-2.zi-2 Производитель
+                  .h5.bg-theme-white.color-theme-brand.py-1.pl-2.zi-2 PIRELLI
+                .desclist__border.d-flex.align-items-center.justify-content-between
+                  .desclist__title.h6.d-block.overflow-hidden.bg-theme-white.py-1.pr-2.zi-2 Модель
+                  .h5.bg-theme-white.color-theme-brand.py-1.pl-2.zi-2 P-ZERO
+                .desclist__border.d-flex.align-items-center.justify-content-between
+                  .desclist__title.h6.d-block.overflow-hidden.bg-theme-white.py-1.pr-2.zi-2 Типоразмер
+                  .h5.bg-theme-white.color-theme-brand.py-1.pl-2.zi-2 235/60R17
+                .desclist__border.d-flex.align-items-center.justify-content-between
+                  .desclist__title.h6.d-block.overflow-hidden.bg-theme-white.py-1.pr-2.zi-2 Тип
+                  .h5.bg-theme-white.color-theme-brand.py-1.pl-2.zi-2 Легковые
+                .desclist__border.d-flex.align-items-center.justify-content-between
+                  .desclist__title.h6.d-block.overflow-hidden.bg-theme-white.py-1.pr-2.zi-2 Индекс нагрузки
+                  .h5.bg-theme-white.py-1.pl-1.zi-2 102 (850 кг)
+            .col-md-8.d-flex.flex-column.justify-content-between.offset-md-1
+              .content
+                p Нашли дешевле? Звоните! Мы постараемся предложить Вам цену ниже!
+                p Цена указана при покупке от 4 шт. за наличный расчет. Минимальный заказ 4 шт., меньшее количество можно приобрести только по согласованию с менеджером и 100% предоплате.
+                p Остатки товара на складе меняются, о точном наличии товара и ценах уточняйте у менеджера.
+              .d-flex.align-items-center.justify-content-between
+                button.btn.btn_nobg.h5.p-0(type="button")
+                  +icon('share','h3 color-theme-brand mr-2')
+                  | Рассказать друзьям
+                button.btn.btn_nobg.h5.p-0(type="button")
+                  +icon('compare','h3 color-theme-brand mr-2')
+                  | Сравнить
+                button.btn.btn_nobg.h5.p-0(type="button")
+                  +icon('favourite','h3 color-theme-brand mr-2')
+                  | В избранное
+    .tabs.mb-5
+      ul.nav.nav-tabs.d-flex.align-items-center.p-0.m-0(role="tablist")
+        li.tabs__nav-item.nav-item.flex-grow-1
+          a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2.active(href="#pos-view" data-toggle="tab" role="tab" aria-controls="pos-view" aria-selected="true")
+            +icon('view','tabs__nav-icon h4 d-flex flex-column align-items-center justify-content-center')
+            span.h3.font-weight-bold.d-none.d-lg-block Обзор
+        li.tabs__nav-item.nav-item.flex-grow-1
+          a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2(href="#pos-desc" data-toggle="tab" role="tab" aria-controls="pos-desc" aria-selected="true")
+            +icon('desc','tabs__nav-icon h4 d-flex flex-column align-items-center justify-content-center')
+            span.h3.font-weight-bold.d-none.d-lg-block Описание
+        li.tabs__nav-item.nav-item.flex-grow-1
+          a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2(href="#pos-reviews" data-toggle="tab" role="tab" aria-controls="pos-reviews" aria-selected="true")
+            +icon('reviews','tabs__nav-icon h4 d-flex flex-column align-items-center justify-content-center')
+            span.h3.font-weight-bold.d-none.d-lg-block Отзывы
+        li.tabs__nav-item.nav-item.flex-grow-1
+          a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2(href="#pos-points" data-toggle="tab" role="tab" aria-controls="pos-points" aria-selected="true")
+            +icon('points','tabs__nav-icon h4 d-flex flex-column align-items-center justify-content-center')
+            span.h3.font-weight-bold.d-none.d-lg-block Пункты выдачи
+        li.tabs__nav-item.nav-item.flex-grow-1
+          a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2(href="#pos-wallet" data-toggle="tab" role="tab" aria-controls="pos-wallet" aria-selected="true")
+            +icon('wallet','tabs__nav-icon h4 d-flex flex-column align-items-center justify-content-center')
+            span.h3.font-weight-bold.d-none.d-lg-block Покупка и доставка
+      .tabs__content.tab-content
+        .tab-pane.fade.show.active(id="pos-view" role="tabpanel" action="#")
+          .row
+            .col-md-8.offset-md-2
+              .h2.font-weight-bold.mb-4 Обзор на летние шины Pirelli P Zero от ДонШина
+              .embed-responsive.embed-responsive-16by9.mb-3
+                iframe.embed-responsive-item(src="https://www.youtube.com/embed/_4rN_sP9DHU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+              .d-flex.flex-wrap.align-items-center.justify-content-between
+                button.btn.btn_nobg.h5.p-0(type="button")
+                  +icon('share','h3 color-theme-brand mr-2')
+                  | Рассказать друзьям
+                a.readmore.d-flex.align-items-center(href="#")
+                  span.mr-2 Смотреть на нашем канале
+                  +icon('readmore','h3 color-theme-brand')

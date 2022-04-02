@@ -1,3 +1,14 @@
+.desclist__border {
+  @include before;
+
+  &:before {
+    @include pos(50%,0);
+    @include border(0 0 1px,$color__border,dotted);
+    right: 0;
+    z-index: 1;
+  }
+}
+
 .desclist__title {
   overflow: hidden;
   white-space: nowrap;

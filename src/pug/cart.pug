@@ -14,9 +14,7 @@ block wrapper
           h1.mr-4.mb-0 #{title}
           span.h5.text-nowrap.rounded-pill.color-theme-white.bg-theme-brand.px-2 3 шт.
         a.btn.btn_nobg.h4.d-none.d-md-flex.p-0(href="#")
-          //- +icon('share','h3 color-theme-brand mr-2')
-          span.h3.color-theme-brand.mr-2(style="width:16px;height:16px;")
-            +svg('share')
+          +icon('share','h3 color-theme-brand mr-2')
           span.h5 Рассказать друзьям
     .heading.heading_cart.px-3
       .heading__col.heading__col_cart-title.h6.mb-2 Товар
@@ -37,8 +35,7 @@ block wrapper
             | ₽
         .table-row__col.table-row__col_cart-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-2.mb-md-0
           .d-flex.align-items-center
-            .table-row__close.color-theme-disabled.mr-3(style="width:16px;height:16px;flex:0 0 16px;")
-              +svg('close-noborder')
+            +icon('close-noborder', 'h4 color-theme-disabled mr-3')
             .recalculate.recalculate_sm.recalculate_shadow.d-flex.align-items-center.overflow-hidden.bg-theme-white
               input.recalculate__field.d-none(type="number" name="count" value="1")
               button.recalculate__btn.recalculate__btn_sm.font-weight-bold.color-theme-brand.flex-grow-1.recalculate__btn_remove(type="button") -
@@ -66,8 +63,7 @@ block wrapper
             | ₽
         .table-row__col.table-row__col_cart-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-2.mb-md-0
           .d-flex.align-items-center
-            .table-row__close.color-theme-disabled.mr-3(style="width:16px;height:16px;flex:0 0 16px;")
-              +svg('close-noborder')
+            +icon('close-noborder', 'h4 color-theme-disabled mr-3')
             .recalculate.recalculate_sm.recalculate_shadow.d-flex.align-items-center.overflow-hidden.bg-theme-white
               input.recalculate__field.d-none(type="number" name="count" value="1")
               button.recalculate__btn.recalculate__btn_sm.font-weight-bold.color-theme-brand.flex-grow-1.recalculate__btn_remove(type="button") -
@@ -95,8 +91,7 @@ block wrapper
             | ₽
         .table-row__col.table-row__col_cart-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-2.mb-md-0
           .d-flex.align-items-center
-            .table-row__close.color-theme-disabled.mr-3(style="width:16px;height:16px;flex:0 0 16px;")
-              +svg('close-noborder')
+            +icon('close-noborder', 'h4 color-theme-disabled mr-3')
             .recalculate.recalculate_sm.recalculate_shadow.d-flex.align-items-center.overflow-hidden.bg-theme-white
               input.recalculate__field.d-none(type="number" name="count" value="1")
               button.recalculate__btn.recalculate__btn_sm.font-weight-bold.color-theme-brand.flex-grow-1.recalculate__btn_remove(type="button") -
@@ -151,8 +146,7 @@ block wrapper
       .d-block.d-md-none
         .text-center.mb-2
           a.btn.btn_nobg.h4.p-0(href="#")
-            span.h3.color-theme-brand.mr-2(style="width:16px;height:16px;")
-              +svg('continue')
+            +icon('continue', 'h3 color-theme-brand mr-2')
             span.h5 Продолжить покупки
         .h6 Зарегистрировавшись на сайте всего один раз вам будет доступна история заказов, повтор заказов, накопительные скидки. &gt;
 

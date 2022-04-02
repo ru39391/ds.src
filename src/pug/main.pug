@@ -6,312 +6,312 @@ block meta
 block wrapper
     .wrapper
         .tabs.mb-5
-            ul.tabs__nav.nav.nav-tabs(role="tablist")
-                li.tabs__nav-item.flex-grow-1.nav-item
-                    a.tabs__nav-link.p-2.tabs__nav-link_notitle.nav-link.active(href="#filter-tires" data-toggle="tab" role="tab" aria-controls="filter-tires" aria-selected="true")
-                        +icon('tires','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
-                        span.tabs__nav-title Подбор шин
-                li.tabs__nav-item.flex-grow-1.nav-item
-                    a.tabs__nav-link.p-2.tabs__nav-link_notitle.nav-link(href="#filter-wheels" data-toggle="tab" role="tab" aria-controls="filter-wheels" aria-selected="false")
-                        +icon('wheels','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
-                        span.tabs__nav-title Подбор дисков
-                li.tabs__nav-item.flex-grow-1.nav-item
-                    a.tabs__nav-link.p-2.tabs__nav-link_notitle.nav-link(href="#filter-cars" data-toggle="tab" role="tab" aria-controls="filter-cars" aria-selected="false")
-                        +icon('car','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
-                        span.tabs__nav-title Подбор по авто
-            .tabs__content.tab-content
-                form.form.tab-pane.fade.show.active(id="filter-tires" role="tabpanel" action="#")
-                    .row.align-items-center
-                        .col-lg-2.offset-lg-2
-                            .form__select.mb-4
-                                .form__select-title Ширина
-                                select.form__select-options
-                                    option --
-                                    option 5
-                                    option 6.5
-                                    option 7
-                                    option 10.5
-                                    option 12.5
-                                    option 30
-                        .col-lg-1.d-none.d-lg-block
-                            .form__divider.text-center.mb-4 /
-                        .col-lg-2
-                            .form__select.mb-4
-                                .form__select-title Высота
-                                select.form__select-options
-                                    option --
-                                    option 9.5
-                                    option 10
-                                    option 10.5
-                                    option 11.5
-                                    option 12.5
-                                    option 13.5
-                        .col-lg-1.d-none.d-lg-block
-                            .form__divider.text-center.mb-4 R
-                        .col-lg-2
-                            .form__select.mb-4
-                                .form__select-title Диаметр
-                                select.form__select-options
-                                    option --
-                                    option 10
-                                    option 12
-                                    option 12C
-                                    option 13
-                                    option 13C
-                    .row
-                        .form__row.col-lg-8.offset-lg-2
-                            input.form__toggler.form__toggler_checkbox(id="tires-checkbox-1" type="checkbox" value="")
-                            label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-1")
-                                +icon('checked','form__label-icon')
-                                span.icon-marker.h4.ds-icon-allseason.mr-2
-                                  span.path1
-                                  span.path2
-                                span.form__label-title Всесезонные
-                            input.form__toggler.form__toggler_checkbox(id="tires-checkbox-2" type="checkbox" value="")
-                            label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-2")
-                                +icon('checked','form__label-icon')
-                                +icon('summer','icon-marker h4 mr-2')
-                                span.form__label-title Летние
-                            input.form__toggler.form__toggler_checkbox(id="tires-checkbox-3" type="checkbox" value="")
-                            label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-3")
-                                +icon('checked','form__label-icon')
-                                +icon('winter','icon-marker h4 mr-2')
-                                span.form__label-title Зимние
-                            input.form__toggler.form__toggler_checkbox(id="tires-checkbox-4" type="checkbox" value="")
-                            label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-4")
-                                +icon('checked','form__label-icon')
-                                +icon('spikes','icon-marker h4 mr-2')
-                                span.form__label-title Шипы
-                            input.form__toggler.form__toggler_checkbox(id="tires-checkbox-5" type="checkbox" value="")
-                            label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-5")
-                                +icon('checked','form__label-icon')
-                                +icon('nonspikes','icon-marker h4 mr-2')
-                                span.form__label-title Без шипов
-                        .col-md-8.offset-md-2.text-center
-                            a.btn.text-uppercase.px-4(href="#") подобрать
-                form.form.tab-pane.fade(id="filter-wheels" role="tabpanel" action="#")
-                    .row
-                        .form__row.col-lg-10.offset-lg-1
-                            .form__col.pr-md-4.pr-xl-0
-                                .form__select.mb-4
-                                    .form__select-title Диаметр
-                                    select.form__select-options
-                                        option --
-                                        option 10
-                                        option 12
-                                        option 12C
-                                        option 13
-                            .form__col.pr-md-4.pr-xl-0
-                                .form__select.mb-4
-                                    .form__select-title Ширина
-                                    select.form__select-options
-                                        option --
-                                        option 5
-                                        option 6.5
-                                        option 7
-                                        option 10.5
-                                        option 12.5
-                                        option 30
-                            .form__col.pr-md-4.pr-xl-0
-                                .form__select.mb-4
-                                    .form__select-title Отверстий
-                                    select.form__select-options
-                                        option --
-                                        option 3
-                                        option 4
-                                        option 5
-                                        option 6
-                                        option 8
-                                        option 10
-                            .form__col.pr-md-4.pr-xl-0
-                                .form__select.mb-4
-                                    .form__select-title PCD
-                                    select.form__select-options
-                                        option --
-                                        option 98
-                                        option 10
-                                        option 105
-                                        option 107.95
-                                        option 108
-                                        option 110
-                        .form__row.col-lg-6.offset-lg-3.col-md-8.offset-md-2
-                            input.form__toggler.form__toggler_checkbox(id="wheels-checkbox-11" type="checkbox" value="")
-                            label.form__label.form__label_checkbox.mb-4(for="wheels-checkbox-11")
-                                +icon('checked','form__label-icon')
-                                +icon('iron','icon-marker h3 mr-2')
-                                span.form__label-title Кованые
-                            input.form__toggler.form__toggler_checkbox(id="wheels-checkbox-21" type="checkbox" value="")
-                            label.form__label.form__label_checkbox.mb-4(for="wheels-checkbox-21")
-                                +icon('checked','form__label-icon')
-                                span.icon-marker.h3.ds-icon-founding.mr-2
-                                  span.path1
-                                  span.path2
-                                span.form__label-title Литые
-                            input.form__toggler.form__toggler_checkbox(id="wheels-checkbox-31" type="checkbox" value="")
-                            label.form__label.form__label_checkbox.mb-4(for="wheels-checkbox-31")
-                                +icon('checked','form__label-icon')
-                                span.icon-marker.h3.ds-icon-steel.mr-2
-                                  span.path1
-                                  span.path2
-                                span.form__label-title Стальные
-                        .col-md-10.offset-md-1.text-center
-                            a.btn.text-uppercase.px-4(href="#") подобрать
-                form.form.tab-pane.fade(id="filter-cars" role="tabpanel" action="#")
-                    .row
-                        .form__row.col-lg-10.offset-lg-1
-                            .form__col.pr-md-4.pr-xl-0
-                                .dropdown.mb-4
-                                    select.car-select.d-none
-                                        option Значение 1
-                                        option Значение 2
-                                        option Значение 3
-                                        option Значение 4
-                                        option Значение 5
-                                    button.dropdown-toggle(id="filter-cars-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Выберете марку
-                                    .dropdown-menu(aria-labelledby="filter-cars-dropdown")
-                                        .dropdown-menu__header.mb-2.bs-searchbox
-                                            input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
-                                        .dropdown-menu__body
-                                            ul.dropdown-menu__list
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 1
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 2
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 3
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option.selected(role="option") Значение 4
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 5
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 1
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 2
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 3
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 4
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 5
-                            .form__col.pr-md-4.pr-xl-0
-                                .dropdown.mb-4
-                                    select.car-select.d-none
-                                        option Значение 1
-                                        option Значение 2
-                                        option Значение 3
-                                        option Значение 4
-                                        option Значение 5
-                                    button.dropdown-toggle(id="filter-cars-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled) Модель
-                                    .dropdown-menu(aria-labelledby="filter-cars-dropdown")
-                                        .dropdown-menu__header.mb-2.bs-searchbox
-                                            input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
-                                        .dropdown-menu__body
-                                            ul.dropdown-menu__list
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 1
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 2
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 3
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option.selected(role="option") Значение 4
-                            .form__col.pr-md-4.pr-xl-0
-                                .dropdown.mb-4
-                                    select.car-select.d-none
-                                        option Значение 1
-                                        option Значение 2
-                                        option Значение 3
-                                        option Значение 4
-                                        option Значение 5
-                                    button.dropdown-toggle(id="filter-cars-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled) Кузов
-                                    .dropdown-menu(aria-labelledby="filter-cars-dropdown")
-                                        .dropdown-menu__header.mb-2.bs-searchbox
-                                            input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
-                                        .dropdown-menu__body
-                                            ul.dropdown-menu__list
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 1
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 2
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 3
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option.selected(role="option") Значение 4
-                            .form__col.pr-md-4.pr-xl-0
-                                .dropdown.mb-4
-                                    select.car-select.d-none
-                                        option Значение 1
-                                        option Значение 2
-                                        option Значение 3
-                                        option Значение 4
-                                        option Значение 5
-                                    button.dropdown-toggle(id="filter-cars-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled) Двигатель
-                                    .dropdown-menu(aria-labelledby="filter-cars-dropdown")
-                                        .dropdown-menu__header.mb-2.bs-searchbox
-                                            input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
-                                        .dropdown-menu__body
-                                            ul.dropdown-menu__list
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 1
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 2
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option(role="option") Значение 3
-                                                li.dropdown-menu__list-item
-                                                    a.dropdown-menu__list-option.selected(role="option") Значение 4
-                        .col-lg-10.offset-lg-1
-                            .form__title Наиболее популярные:
-                            .text-center.mb-1
-                                a.d-inline-block.mr-3.mb-3(href="#")
-                                  +img('content/logo/acura.jpg')
-                                a.d-inline-block.mr-3.mb-3(href="#")
-                                  +img('content/logo/toyota.jpg')
-                                a.d-inline-block.mr-3.mb-3(href="#")
-                                  +img('content/logo/suzuki.jpg')
-                                a.d-inline-block.mr-3.mb-3(href="#")
-                                  +img('content/logo/nissan.jpg')
-                                a.d-inline-block.mr-3.mb-3(href="#")
-                                  +img('content/logo/bmw.jpg')
-                                a.d-inline-block.mr-3.mb-3(href="#")
-                                  +img('content/logo/fiat.jpg')
-                                a.d-inline-block.mr-3.mb-3(href="#")
-                                  +img('content/logo/mazda.jpg')
-                                a.d-inline-block.mr-3.mb-3(href="#")
-                                  +img('content/logo/lexus.jpg')
-                                a.d-inline-block.mr-3.mb-3(href="#")
-                                  +img('content/logo/mitsubishi.jpg')
-                                a.d-inline-block.mr-3.mb-3(href="#")
-                                  +img('content/logo/infiniti.jpg')
-                    .row
-                        .col-md-2.col-sm-3.col-6.offset-lg-1
-                            a.result-item.mb-4(href="#")
-                                span.result-item__pic
-                                  +img('content/results/car-1.jpg')
-                                span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
-                        .col-md-2.col-sm-3.col-6
-                            a.result-item.mb-4(href="#")
-                                span.result-item__pic
-                                  +img('content/results/car-2.jpg')
-                                span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
-                        .col-md-2.col-sm-3.col-6
-                            a.result-item.mb-4(href="#")
-                                span.result-item__pic
-                                  +img('content/results/car-1.jpg')
-                                span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
-                        .col-md-2.col-sm-3.col-6
-                            a.result-item.mb-4(href="#")
-                                span.result-item__pic
-                                  +img('content/results/car-2.jpg')
-                                span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
-                        .col-md-2.col-sm-3.col-6
-                            a.result-item.mb-4(href="#")
-                                span.result-item__pic
-                                  +img('content/results/car-1.jpg')
-                                span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
-                    .row
-                        .col-lg-10.offset-lg-1.d-flex.flex-sm-row.flex-column.align-items-center.justify-content-sm-around.justify-content-center
-                            a.btn.text-uppercase.px-4.mb-4.mb-sm-0(href="#") подобрать шины
-                            a.btn.text-uppercase.px-4(href="#") подобрать Диски
+          ul.nav.nav-tabs.d-flex.align-items-center.p-0.m-0(role="tablist")
+            li.tabs__nav-item.nav-item.flex-grow-1
+              a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2.tabs__nav-link_notitle.active(href="#filter-tires" data-toggle="tab" role="tab" aria-controls="filter-tires" aria-selected="true")
+                +icon('tires','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
+                span.tabs__nav-title.h3.font-weight-bold Подбор шин
+            li.tabs__nav-item.nav-item.flex-grow-1
+              a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2.tabs__nav-link_notitle(href="#filter-wheels" data-toggle="tab" role="tab" aria-controls="filter-wheels" aria-selected="false")
+                +icon('wheels','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
+                span.tabs__nav-title.h3.font-weight-bold Подбор дисков
+            li.tabs__nav-item.nav-item.flex-grow-1
+              a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2.tabs__nav-link_notitle(href="#filter-cars" data-toggle="tab" role="tab" aria-controls="filter-cars" aria-selected="false")
+                +icon('car','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
+                span.tabs__nav-title.h3.font-weight-bold Подбор по авто
+          .tabs__content.tab-content
+            form.form.tab-pane.fade.show.active(id="filter-tires" role="tabpanel" action="#")
+              .row.align-items-center
+                .col-lg-2.offset-lg-2
+                  .form__select.mb-4
+                    .form__select-title Ширина
+                    select.form__select-options
+                      option --
+                      option 5
+                      option 6.5
+                      option 7
+                      option 10.5
+                      option 12.5
+                      option 30
+                .col-lg-1.d-none.d-lg-block
+                  .form__divider.text-center.mb-4 /
+                .col-lg-2
+                  .form__select.mb-4
+                    .form__select-title Высота
+                    select.form__select-options
+                      option --
+                      option 9.5
+                      option 10
+                      option 10.5
+                      option 11.5
+                      option 12.5
+                      option 13.5
+                .col-lg-1.d-none.d-lg-block
+                  .form__divider.text-center.mb-4 R
+                .col-lg-2
+                  .form__select.mb-4
+                    .form__select-title Диаметр
+                    select.form__select-options
+                      option --
+                      option 10
+                      option 12
+                      option 12C
+                      option 13
+                      option 13C
+              .row
+                .form__row.col-lg-8.offset-lg-2
+                  input.form__toggler.form__toggler_checkbox(id="tires-checkbox-1" type="checkbox" value="")
+                  label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-1")
+                    +icon('checked','form__label-icon')
+                    span.icon-marker.h4.ds-icon-allseason.mr-2
+                      span.path1
+                      span.path2
+                    span.form__label-title Всесезонные
+                  input.form__toggler.form__toggler_checkbox(id="tires-checkbox-2" type="checkbox" value="")
+                  label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-2")
+                    +icon('checked','form__label-icon')
+                    +icon('summer','icon-marker h4 mr-2')
+                    span.form__label-title Летние
+                  input.form__toggler.form__toggler_checkbox(id="tires-checkbox-3" type="checkbox" value="")
+                  label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-3")
+                    +icon('checked','form__label-icon')
+                    +icon('winter','icon-marker h4 mr-2')
+                    span.form__label-title Зимние
+                  input.form__toggler.form__toggler_checkbox(id="tires-checkbox-4" type="checkbox" value="")
+                  label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-4")
+                    +icon('checked','form__label-icon')
+                    +icon('spikes','icon-marker h4 mr-2')
+                    span.form__label-title Шипы
+                  input.form__toggler.form__toggler_checkbox(id="tires-checkbox-5" type="checkbox" value="")
+                  label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-5")
+                    +icon('checked','form__label-icon')
+                    +icon('nonspikes','icon-marker h4 mr-2')
+                    span.form__label-title Без шипов
+                .col-md-8.offset-md-2.text-center
+                  a.btn.text-uppercase.px-4(href="#") подобрать
+            form.form.tab-pane.fade(id="filter-wheels" role="tabpanel" action="#")
+              .row
+                .form__row.col-lg-10.offset-lg-1
+                  .form__col.pr-md-4.pr-xl-0
+                    .form__select.mb-4
+                      .form__select-title Диаметр
+                      select.form__select-options
+                        option --
+                        option 10
+                        option 12
+                        option 12C
+                        option 13
+                  .form__col.pr-md-4.pr-xl-0
+                    .form__select.mb-4
+                      .form__select-title Ширина
+                      select.form__select-options
+                        option --
+                        option 5
+                        option 6.5
+                        option 7
+                        option 10.5
+                        option 12.5
+                        option 30
+                  .form__col.pr-md-4.pr-xl-0
+                    .form__select.mb-4
+                      .form__select-title Отверстий
+                      select.form__select-options
+                        option --
+                        option 3
+                        option 4
+                        option 5
+                        option 6
+                        option 8
+                        option 10
+                  .form__col.pr-md-4.pr-xl-0
+                    .form__select.mb-4
+                      .form__select-title PCD
+                      select.form__select-options
+                        option --
+                        option 98
+                        option 10
+                        option 105
+                        option 107.95
+                        option 108
+                        option 110
+                .form__row.col-lg-6.offset-lg-3.col-md-8.offset-md-2
+                  input.form__toggler.form__toggler_checkbox(id="wheels-checkbox-11" type="checkbox" value="")
+                  label.form__label.form__label_checkbox.mb-4(for="wheels-checkbox-11")
+                    +icon('checked','form__label-icon')
+                    +icon('iron','icon-marker h3 mr-2')
+                    span.form__label-title Кованые
+                  input.form__toggler.form__toggler_checkbox(id="wheels-checkbox-21" type="checkbox" value="")
+                  label.form__label.form__label_checkbox.mb-4(for="wheels-checkbox-21")
+                    +icon('checked','form__label-icon')
+                    span.icon-marker.h3.ds-icon-founding.mr-2
+                      span.path1
+                      span.path2
+                    span.form__label-title Литые
+                  input.form__toggler.form__toggler_checkbox(id="wheels-checkbox-31" type="checkbox" value="")
+                  label.form__label.form__label_checkbox.mb-4(for="wheels-checkbox-31")
+                    +icon('checked','form__label-icon')
+                    span.icon-marker.h3.ds-icon-steel.mr-2
+                      span.path1
+                      span.path2
+                    span.form__label-title Стальные
+                .col-md-10.offset-md-1.text-center
+                  a.btn.text-uppercase.px-4(href="#") подобрать
+            form.form.tab-pane.fade(id="filter-cars" role="tabpanel" action="#")
+              .row
+                .form__row.col-lg-10.offset-lg-1
+                  .form__col.pr-md-4.pr-xl-0
+                    .dropdown.mb-4
+                      select.car-select.d-none
+                        option Значение 1
+                        option Значение 2
+                        option Значение 3
+                        option Значение 4
+                        option Значение 5
+                      button.dropdown-toggle(id="filter-cars-dropdown-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Выберете марку
+                      .dropdown-menu(aria-labelledby="filter-cars-dropdown-1")
+                        .dropdown-menu__header.mb-2.bs-searchbox
+                          input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
+                        .dropdown-menu__body
+                          ul.dropdown-menu__list
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 1
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 2
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 3
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option.selected(role="option") Значение 4
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 5
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 1
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 2
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 3
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 4
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 5
+                  .form__col.pr-md-4.pr-xl-0
+                    .dropdown.mb-4
+                      select.car-select.d-none
+                        option Значение 1
+                        option Значение 2
+                        option Значение 3
+                        option Значение 4
+                        option Значение 5
+                      button.dropdown-toggle(id="filter-cars-dropdown-2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled) Модель
+                      .dropdown-menu(aria-labelledby="filter-cars-dropdown-2")
+                        .dropdown-menu__header.mb-2.bs-searchbox
+                          input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
+                        .dropdown-menu__body
+                          ul.dropdown-menu__list
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 1
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 2
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 3
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option.selected(role="option") Значение 4
+                  .form__col.pr-md-4.pr-xl-0
+                    .dropdown.mb-4
+                      select.car-select.d-none
+                        option Значение 1
+                        option Значение 2
+                        option Значение 3
+                        option Значение 4
+                        option Значение 5
+                      button.dropdown-toggle(id="filter-cars-dropdown-3" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled) Кузов
+                      .dropdown-menu(aria-labelledby="filter-cars-dropdown-3")
+                        .dropdown-menu__header.mb-2.bs-searchbox
+                          input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
+                        .dropdown-menu__body
+                          ul.dropdown-menu__list
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 1
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 2
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 3
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option.selected(role="option") Значение 4
+                  .form__col.pr-md-4.pr-xl-0
+                    .dropdown.mb-4
+                      select.car-select.d-none
+                        option Значение 1
+                        option Значение 2
+                        option Значение 3
+                        option Значение 4
+                        option Значение 5
+                      button.dropdown-toggle(id="filter-cars-dropdown-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled) Двигатель
+                      .dropdown-menu(aria-labelledby="filter-cars-dropdown-4")
+                        .dropdown-menu__header.mb-2.bs-searchbox
+                          input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
+                        .dropdown-menu__body
+                          ul.dropdown-menu__list
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 1
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 2
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option(role="option") Значение 3
+                            li.dropdown-menu__list-item
+                              a.dropdown-menu__list-option.selected(role="option") Значение 4
+                  .col-lg-10.offset-lg-1
+                    .form__title.mb-3 Наиболее популярные:
+                    .text-center.mb-1
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/acura.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/toyota.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/suzuki.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/nissan.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/bmw.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/fiat.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/mazda.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/lexus.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/mitsubishi.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/infiniti.jpg')
+              .row
+                .col-md-2.col-sm-3.col-6.offset-lg-1
+                  a.result-item.mb-4(href="#")
+                    span.result-item__pic
+                      +img('content/results/car-1.jpg')
+                    span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
+                .col-md-2.col-sm-3.col-6
+                  a.result-item.mb-4(href="#")
+                    span.result-item__pic
+                      +img('content/results/car-2.jpg')
+                    span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
+                .col-md-2.col-sm-3.col-6
+                  a.result-item.mb-4(href="#")
+                    span.result-item__pic
+                      +img('content/results/car-1.jpg')
+                    span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
+                .col-md-2.col-sm-3.col-6
+                  a.result-item.mb-4(href="#")
+                    span.result-item__pic
+                      +img('content/results/car-2.jpg')
+                    span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
+                .col-md-2.col-sm-3.col-6
+                  a.result-item.mb-4(href="#")
+                    span.result-item__pic
+                      +img('content/results/car-1.jpg')
+                    span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
+              .row
+                .col-lg-10.offset-lg-1.d-flex.flex-sm-row.flex-column.align-items-center.justify-content-sm-around.justify-content-center
+                  a.btn.text-uppercase.px-4.mb-4.mb-sm-0(href="#") подобрать шины
+                  a.btn.text-uppercase.px-4(href="#") подобрать Диски
 
         .row.mb-5
           .col-lg-7.mb-5.mb-lg-0
@@ -337,34 +337,34 @@ block wrapper
                 a.btn.text-uppercase(href="#") Записаться
 
         .tabs.mb-5
-            ul.tabs__nav.nav.nav-tabs(role="tablist")
-              li.tabs__nav-item.flex-grow-1.nav-item
-                a.tabs__nav-link.p-2.nav-link.active(href="#links-tires" data-toggle="tab" role="tab" aria-controls="links-tires" aria-selected="true")
-                  +icon('tires','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
-                  span.tabs__nav-title.text-uppercase шины
-              li.tabs__nav-item.flex-grow-1.nav-item
-                a.tabs__nav-link.p-2.nav-link(href="#links-wheels" data-toggle="tab" role="tab" aria-controls="links-wheels" aria-selected="false")
-                  +icon('wheels','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
-                  span.tabs__nav-title.text-uppercase диски
-            .tabs__content.tab-content
-              .tab-pane.fade.show.active(id="links-tires" role="tabpanel" action="#")
-                .row
-                  .col-lg-10.offset-lg-1.text-center.text-lg-left
-                    - var logoWheels = ['content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg']
-                    each logoWheels__item in logoWheels
-                      a.d-inline-block.mr-3.mb-4(href="#")
-                        +img(logoWheels__item)
-                    .text-center
-                      a.readmore(href="#") Показать еще
-              .tab-pane.fade(id="links-wheels" role="tabpanel" action="#")
-                .row
-                  .col-lg-10.offset-lg-1.text-center.text-lg-left
-                    - var logoWheels = ['content/logo/logo-3.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-3.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-3.jpg']
-                    each logoWheels__item in logoWheels
-                      a.d-inline-block.mr-3.mb-4(href="#")
-                        +img(logoWheels__item)
-                    .text-center
-                      a.readmore(href="#") Показать еще
+          ul.nav.nav-tabs.d-flex.align-items-center.p-0.m-0(role="tablist")
+            li.tabs__nav-item.nav-item.flex-grow-1
+              a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2.active(href="#links-tires" data-toggle="tab" role="tab" aria-controls="links-tires" aria-selected="true")
+                +icon('tires','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center mr-2')
+                span.tabs__nav-title.h3.font-weight-bold.text-uppercase шины
+            li.tabs__nav-item.nav-item.flex-grow-1
+              a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2(href="#links-wheels" data-toggle="tab" role="tab" aria-controls="links-wheels" aria-selected="false")
+                +icon('wheels','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center mr-2')
+                span.tabs__nav-title.h3.font-weight-bold.text-uppercase диски
+          .tabs__content.tab-content
+            .tab-pane.fade.show.active(id="links-tires" role="tabpanel" action="#")
+              .row
+                .col-lg-10.offset-lg-1.text-center.text-lg-left
+                  - var logoWheels = ['content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg']
+                  each logoWheels__item in logoWheels
+                    a.d-inline-block.mr-3.mb-4(href="#")
+                      +img(logoWheels__item)
+                  .text-center
+                    a.readmore(href="#") Показать еще
+            .tab-pane.fade(id="links-wheels" role="tabpanel" action="#")
+              .row
+                .col-lg-10.offset-lg-1.text-center.text-lg-left
+                  - var logoWheels = ['content/logo/logo-3.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-3.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-3.jpg']
+                  each logoWheels__item in logoWheels
+                    a.d-inline-block.mr-3.mb-4(href="#")
+                      +img(logoWheels__item)
+                  .text-center
+                    a.readmore(href="#") Показать еще
 
         include category/popular.pug
 

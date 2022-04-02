@@ -26,6 +26,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.ds-icon-desc {
+  &:before {
+    content: $ds-icon-desc;
+  }
+}
+.ds-icon-notify {
+  &:before {
+    content: $ds-icon-notify;
+  }
+}
+.ds-icon-points {
+  &:before {
+    content: $ds-icon-points;
+  }
+}
+.ds-icon-reviews {
+  &:before {
+    content: $ds-icon-reviews;
+  }
+}
+.ds-icon-view {
+  &:before {
+    content: $ds-icon-view;
+  }
+}
+.ds-icon-wallet {
+  &:before {
+    content: $ds-icon-wallet;
+  }
+}
+.ds-icon-zoom {
+  &:before {
+    content: $ds-icon-zoom;
+  }
+}
 .ds-icon-close {
   &:before {
     content: $ds-icon-close;
@@ -414,5 +450,25 @@
 .ds-icon-youtube {
   &:before {
     content: $ds-icon-youtube;
+  }
+}
+.ds-icon-edit {
+  &:before {
+    content: $ds-icon-edit;
+  }
+}
+.ds-icon-share {
+  &:before {
+    content: $ds-icon-share;
+  }
+}
+.ds-icon-close-noborder {
+  &:before {
+    content: $ds-icon-close-noborder;
+  }
+}
+.ds-icon-continue {
+  &:before {
+    content: $ds-icon-continue;
   }
 }

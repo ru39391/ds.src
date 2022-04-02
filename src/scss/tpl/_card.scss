@@ -198,32 +198,6 @@
   transition: all .3s ease;
 }
 
-.card__label {
-  @extend %flex-item;
-  justify-content: center;
-  height: 22px;
-  border-radius: .75rem;
-  font-weight: bold;
-  line-height: 1;
-  text-align: center;
-  letter-spacing: .03em;
-  pointer-events: none;
-
-  &.card__label_hit {
-    background: $color__warning;
-  }
-
-  &.card__label_sale {
-    color: #fff;
-    background: $color__brand;
-  }
-
-  &.card__label_discount {
-    color: #fff;
-    background: $color__success;
-  }
-}
-
 .card__features {
   @extend %flex-item;
 
