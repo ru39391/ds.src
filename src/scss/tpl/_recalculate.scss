@@ -1,5 +1,7 @@
 .recalculate {
+  @include border(1px,rgba(0,0,0,0));
   border-radius: .5rem;
+  transition: all .3s ease;
 
   &.recalculate_sm {
     @include fw(54px);

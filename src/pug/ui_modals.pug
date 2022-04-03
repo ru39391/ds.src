@@ -49,11 +49,12 @@ block footer
   .modal.fade#order-success(tabindex="-1" aria-hidden="true")
     .modal-dialog.modal-dialog_wide
       .modal-content.border-0.box-shadow.py-3
+        +svg('checked-double','modal__bg modal__bg_checked')
         .modal-header.d-flex.align-items-center.justify-content-between.pt-0.px-4.pb-3.mb-4
           .h3.font-weight-bold.color-theme-brand.mr-3 Заказ успешно оформлен
           button.close.h2.btn-unstyled.color-theme-brand.py-0(data-dismiss="modal")
             +icon('close')
-        .modal-body.border-bottom.pt-0.px-4.pb-3.mb-3
+        .modal-body.border-bottom.pt-0.px-4.pb-3.mb-3.zi-2
           .h5.mb-4 Ваш заказ успешно оформлен и будет обработан в ближайшее время. С вами свяжется менеджер для его подтверждения.
           .h5.mb-4 Вы можете следить за выполнением своего заказа в личном кабинете. Либо Вы можете получать информацию удобных для вас месенджерах, сообщив нам номер своего заказа.
           .desclist

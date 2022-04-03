@@ -3,7 +3,7 @@
 
   &.cart-summary_sticky {
     @include media-breakpoint-down(sm) {
-      padding: .875rem 1rem 1.25rem;
+      @include offset(0 !important,.875rem .75rem 1.25rem)
       position: fixed;
       left: 0;
       right: 0;
@@ -11,6 +11,37 @@
       z-index: 1040;
       color: #fff;
       background: $color__brand;
+    }
+
+    &.cart-summary_row {
+      @include media-breakpoint-down(sm) {
+        flex-direction: row !important;
+      }
+    }
+
+    .cart-summary__meta {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .cart-summary__invisible {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    .notify {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    .recalculate {
+      @include media-breakpoint-down(sm) {
+        border-color: #fff;
+        box-shadow: 4px 4px 8px 0 rgba(0,0,0,.16);
+      }
     }
 
     .btn {

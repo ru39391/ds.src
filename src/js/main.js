@@ -4,6 +4,7 @@ import '../scss/main.scss';
 import './app/cart';
 import './app/forms';
 import './app/slides';
+import './app/notify';
 import './app/breakpointchecker';
 import './app/recalculate';
 import './app/ranger';

@@ -14,4 +14,13 @@
   z-index: 1;
   transform: rotateY(180deg);
   color: $color__light;
+
+  &.modal__bg_checked {
+    @include wh(200px);
+    right: 0;
+    top: 50%;
+    bottom: auto;
+    margin: -100px 0 0;
+    transform: rotateY(0);
+  }
 }

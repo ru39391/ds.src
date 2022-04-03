@@ -472,3 +472,18 @@
     content: $ds-icon-continue;
   }
 }
+.ds-icon-phonehandset {
+  &:before {
+    content: $ds-icon-phonehandset;
+  }
+}
+.ds-icon-checked-double {
+  &:before {
+    content: $ds-icon-checked-double;
+  }
+}
+.ds-icon-readmore-right {
+  &:before {
+    content: $ds-icon-readmore-right;
+  }
+}
