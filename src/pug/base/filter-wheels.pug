@@ -152,9 +152,10 @@
             label.form__label.mb-4(for="Bridgestone")
               +icon('checked','form__label-icon')
               span.form__label-title Bridgestone
-      .text-center
-        button.btn-unstyled.h6(type="submit")
-          span.readmore.readmore_arrow-down Показать еще
+      .d-flex.justify-content-center
+        button.btn-unstyled.d-flex.align-items-center(type="submit")
+          span.h6.mr-2 Показать еще
+          +icon('readmore','h3 color-theme-brand')
     .filter__alert.d-flex.align-items-center.justify-content-between.flex-lg-column.color-theme-white.bg-theme-brand.px-lg-3.pt-lg-1.pb-lg-3.py-3.px-4
       .filter__alert-info.h2.font-weight-bold.d-flex.align-items-center.mb-lg-1
         .h5.font-weight-normal.mr-2 Найдено:

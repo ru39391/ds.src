@@ -29,7 +29,8 @@ block wrapper
             li Доставка товаров, которые участвуют в акции, осуществляется за счет покупателя в соответствии с тарифами курьерской службы, выбранной при оформлении заказа. Возврат товара осуществляется за счет покупателя.
             li Время обработки заказа может увеличиться до 2 (двух) дней.
           .content__footer
-            button.readmore.readmore_btn.readmore_arrow-down(type="button")
+            button.readmore.readmore_btn(type="button")
+              +icon('readmore','h2 color-theme-brand')
 
     .mb-3
       .h2.font-weight-bold.mb-4 Товары участвующие в акции:
@@ -40,4 +41,5 @@ block wrapper
     .content.content_expanded.mb-5
       include base/content.pug
       .content__footer
-        button.readmore.readmore_btn.readmore_arrow-down(type="button")
+        button.readmore.readmore_btn(type="button")
+          +icon('readmore','h2 color-theme-brand')

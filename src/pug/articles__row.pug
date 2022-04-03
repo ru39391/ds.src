@@ -38,9 +38,10 @@ block wrapper
               .date.px-2!= articles__item.date
               a.media__title.d-block.font-weight-bold.mb-3(href="#")!= articles__item.title
               .media__intro.h5!= articles__item.intro
-    .section.text-center.py-3.mb-5
-      a.readmore.readmore_arrow-down.color-theme-brand(href="#")
-        span.h4 Показать еще
+    .section.d-flex.justify-content-center.py-3.mb-5
+      a.readmore.d-flex.align-items-center.color-theme-brand(href="#")
+        span.h4.mr-2 Показать еще
+        +icon('readmore','h3 color-theme-brand')
 
     .mb-3
       .h2.font-weight-bold.mb-4 Рекомендуем:
