@@ -55,6 +55,12 @@
 
 .section__body {
   display: none;
+
+  &.section__body_visible {
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+  }
 }
 
 .section-counter {

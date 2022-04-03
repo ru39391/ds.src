@@ -26,7 +26,7 @@
   }
 
   @include media-breakpoint-only(xs) {
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: 1fr;
   }
 
   &.category_rows {
@@ -44,7 +44,7 @@
     }
 
     @include media-breakpoint-down(sm) {
-      grid-template-columns: repeat(1,1fr);
+      grid-template-columns: 1fr;
     }
   }
 
@@ -54,7 +54,31 @@
     }
 
     @include media-breakpoint-down(md) {
-      grid-template-columns: repeat(1,1fr);
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &.category_wide {
+    grid-row-gap: 0;
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: repeat(6,1fr);
+    }
+
+    @include media-breakpoint-only(lg) {
+      grid-template-columns: repeat(4,1fr);
+    }
+
+    @include media-breakpoint-only(md) {
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    @include media-breakpoint-only(sm) {
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    @include media-breakpoint-only(xs) {
+      grid-template-columns: 1fr;
     }
   }
 }

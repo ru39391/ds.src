@@ -3,6 +3,12 @@ extends base
 block meta
   - var title = 'Категория каталога (автотовары)';
 
+block filter
+  .header__footer
+    button.filter-toggler.d-flex.align-items-center.justify-content-center.p-2(type="button")
+      +icon('settings','filter-toggler__icon h4 mr-2')
+      span.filter-toggler__title Подобрать по VIN
+
 block wrapper
     .wrapper
       nav.pathway
@@ -12,7 +18,358 @@ block wrapper
         h1 Автозапчасти в Ростове-на-Дону
       .category-counter.mb-4 1 840 товаров
 
-      .category.category_6col.mb-3
+      .filter.filter_sticky
+        .filter__body
+          .section.bg-theme-white.py-0.mb-lg-3
+            .section__expander.d-flex.align-items-center.justify-content-between.cursor-pointer.px-md-4.px-3.py-2
+              button.btn.btn_nobg.h4.p-0(type="button")
+                +icon('settings','color-theme-brand h3 mr-2')
+                span.color-theme-brand Подобрать по VIN
+              span.section__readmore.readmore.d-none.d-lg-block.color-theme-brand
+                +icon('readmore','h3')
+            form.section__body.section__body_visible(action="#")
+              .form.border-bottom.px-md-4.px-3.pt-md-4.pt-3
+                .row
+                  .col-md-5.d-flex.flex-column.justify-content-between
+                    .form__item.mb-4
+                      input.form__field(type="text" value="")
+                      .form__label.form__label_title VIN-код *
+                    .form__item.mb-4
+                      input.form__field(type="text" value="")
+                      .form__label.form__label_title Марка авто *
+                    .form__item.mb-4
+                      input.form__field(type="text" value="")
+                      .form__label.form__label_title Год выпуска
+                    .form__item.mb-4
+                      input.form__field(type="text" value="")
+                      .form__label.form__label_title Объём двигателя
+                    .form__item.mb-4
+                      input.form__field(type="text" value="")
+                      .form__label.form__label_title Мощность
+                  .col-md-5.offset-md-2.d-flex.flex-column.justify-content-between
+                    .form__item.mb-4
+                      input.form__field(type="text" value="")
+                      .form__label.form__label_title Модель двигателя
+                    .form__item.mb-4
+                      input.form__field(type="text" value="")
+                      .form__label.form__label_title Номер двигателя
+                    .form__item.mb-4
+                      textarea.form__field.form__field_textarea
+                      .form__label.form__label_title Cписок необходимых запчастей *
+              .px-md-4.px-3.py-3
+                .row.align-items-center
+                  .col-xl-7.mb-3.mb-xl-0
+                    .h6.color-theme-disabled *-поля обязательные для заполнения
+                  .col-xl-5.d-flex.justify-content-xl-end
+                    button.btn.text-uppercase.px-5(type="submit") Отправить запрос
+
+      .category.category_wide.mb-3
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-1.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Автоаксессуары
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Антенны автомобильные
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Бегунки, Втулки и щетки стартера
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Бендиксы
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Комплектующие (запчасти) генераторов
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Регуляторы
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Датчики и предохранители
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Антенны автомобильные
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Бегунки, Втулки и щетки стартера
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Бендиксы
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Комплектующие (запчасти) генераторов
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Регуляторы
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Датчики и предохранители
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-2.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Автохимия
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.mb-2(href="#") Автоэмаль чернозем (Просто ГряZ) (520 мл) BGS 90046
+              a.d-block.h6.mb-2(href="#") SAA-0781 Ароматизатор подвесной For him (paper)
+              a.d-block.h6.mb-2(href="#") SAA-0781 Ароматизатор подвесной For him (paper)
+              a.d-block.h6.mb-2(href="#") RUSEFF Полироль для шин ЧЕРНИТЕЛЬ ШИН. 0.5 л
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-3.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Авточехлы
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.mb-2(href="#") Авточехол Автопилот из экокожи Стандарт для LADA
+              a.d-block.h6.mb-2(href="#") Авточехол Автопилот из экокожи Стандарт для
+              a.d-block.h6.mb-2(href="#") Авточехол Автопилот из экокожи Стандарт для SKO
+              a.d-block.h6.mb-2(href="#") Авточехол Автопилот из экокожи Ромб для HYUNDAI
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-4.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Автоэлектроника
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Видеорегистраторы
+              a.d-block.h6.mb-2(href="#") Видеорегистратор Playme NETTON, 2 камеры
+              a.d-block.h6.mb-2(href="#") Видеорегистратор Playme TIO S, GPS
+              a.d-block.h6.mb-2(href="#") Видеорегистратор с радар-детектором Playme ALPHA
+              a.d-block.h6.mb-2(href="#") Дополнительная камера
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-5.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Амортизаторы / стойки
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.mb-2(href="#") Амортизатор | зад |
+              a.d-block.h6.mb-2(href="#") Амортизатор AUDI A4 07/00-09/01/VW PASSAT 09/
+              a.d-block.h6.mb-2(href="#") ОПОРА АМОРТ ПЕР GENERAL MOTORS 96535011
+              a.d-block.h6.mb-2(href="#") Lemforder 3126001 Подшипник опоры
+              a.d-block.h6.mb-2(href="#") АМОРТИЗАТОР HYUNDAI
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-6.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Ароматизаторы
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.mb-2(href="#") Ароматизатор подвесной CONTEX SEX QUEEN (слад.
+              a.d-block.h6.mb-2(href="#") Ароматизатор подвесной CONTEX SEX FIRST (прохлад
+              a.d-block.h6.mb-2(href="#") Ароматизатор подвесной CONTEX ORGASM TESTER
+              a.d-block.h6.mb-2(href="#") Ароматизатор подвесной CONTEX SEX ON BOARD
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-2.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Автохимия
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.mb-2(href="#") Автоэмаль чернозем (Просто ГряZ) (520 мл) BGS 90046
+              a.d-block.h6.mb-2(href="#") SAA-0781 Ароматизатор подвесной For him (paper)
+              a.d-block.h6.mb-2(href="#") SAA-0781 Ароматизатор подвесной For him (paper)
+              a.d-block.h6.mb-2(href="#") RUSEFF Полироль для шин ЧЕРНИТЕЛЬ ШИН. 0.5 л
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-4.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Автоэлектроника
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Видеорегистраторы
+              a.d-block.h6.mb-2(href="#") Видеорегистратор Playme NETTON, 2 камеры
+              a.d-block.h6.mb-2(href="#") Видеорегистратор Playme TIO S, GPS
+              a.d-block.h6.mb-2(href="#") Видеорегистратор с радар-детектором Playme ALPHA
+              a.d-block.h6.mb-2(href="#") Дополнительная камера
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-1.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Автоаксессуары
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Антенны автомобильные
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Бегунки, Втулки и щетки стартера
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Бендиксы
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Комплектующие (запчасти) генераторов
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Регуляторы
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Датчики и предохранители
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-2.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Автохимия
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.mb-2(href="#") Автоэмаль чернозем (Просто ГряZ) (520 мл) BGS 90046
+              a.d-block.h6.mb-2(href="#") SAA-0781 Ароматизатор подвесной For him (paper)
+              a.d-block.h6.mb-2(href="#") SAA-0781 Ароматизатор подвесной For him (paper)
+              a.d-block.h6.mb-2(href="#") RUSEFF Полироль для шин ЧЕРНИТЕЛЬ ШИН. 0.5 л
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-5.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Амортизаторы / стойки
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.mb-2(href="#") Амортизатор | зад |
+              a.d-block.h6.mb-2(href="#") Амортизатор AUDI A4 07/00-09/01/VW PASSAT 09/
+              a.d-block.h6.mb-2(href="#") ОПОРА АМОРТ ПЕР GENERAL MOTORS 96535011
+              a.d-block.h6.mb-2(href="#") Lemforder 3126001 Подшипник опоры
+              a.d-block.h6.mb-2(href="#") АМОРТИЗАТОР HYUNDAI
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-4.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Автоэлектроника
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Видеорегистраторы
+              a.d-block.h6.mb-2(href="#") Видеорегистратор Playme NETTON, 2 камеры
+              a.d-block.h6.mb-2(href="#") Видеорегистратор Playme TIO S, GPS
+              a.d-block.h6.mb-2(href="#") Видеорегистратор с радар-детектором Playme ALPHA
+              a.d-block.h6.mb-2(href="#") Дополнительная камера
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-6.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Ароматизаторы
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.mb-2(href="#") Ароматизатор подвесной CONTEX SEX QUEEN (слад.
+              a.d-block.h6.mb-2(href="#") Ароматизатор подвесной CONTEX SEX FIRST (прохлад
+              a.d-block.h6.mb-2(href="#") Ароматизатор подвесной CONTEX ORGASM TESTER
+              a.d-block.h6.mb-2(href="#") Ароматизатор подвесной CONTEX SEX ON BOARD
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-5.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Амортизаторы / стойки
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.mb-2(href="#") Амортизатор | зад |
+              a.d-block.h6.mb-2(href="#") Амортизатор AUDI A4 07/00-09/01/VW PASSAT 09/
+              a.d-block.h6.mb-2(href="#") ОПОРА АМОРТ ПЕР GENERAL MOTORS 96535011
+              a.d-block.h6.mb-2(href="#") Lemforder 3126001 Подшипник опоры
+              a.d-block.h6.mb-2(href="#") АМОРТИЗАТОР HYUNDAI
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-6.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Ароматизаторы
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.mb-2(href="#") Ароматизатор подвесной CONTEX SEX QUEEN (слад.
+              a.d-block.h6.mb-2(href="#") Ароматизатор подвесной CONTEX SEX FIRST (прохлад
+              a.d-block.h6.mb-2(href="#") Ароматизатор подвесной CONTEX ORGASM TESTER
+              a.d-block.h6.mb-2(href="#") Ароматизатор подвесной CONTEX SEX ON BOARD
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-2.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Автохимия
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.mb-2(href="#") Автоэмаль чернозем (Просто ГряZ) (520 мл) BGS 90046
+              a.d-block.h6.mb-2(href="#") SAA-0781 Ароматизатор подвесной For him (paper)
+              a.d-block.h6.mb-2(href="#") SAA-0781 Ароматизатор подвесной For him (paper)
+              a.d-block.h6.mb-2(href="#") RUSEFF Полироль для шин ЧЕРНИТЕЛЬ ШИН. 0.5 л
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-4.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Автоэлектроника
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Видеорегистраторы
+              a.d-block.h6.mb-2(href="#") Видеорегистратор Playme NETTON, 2 камеры
+              a.d-block.h6.mb-2(href="#") Видеорегистратор Playme TIO S, GPS
+              a.d-block.h6.mb-2(href="#") Видеорегистратор с радар-детектором Playme ALPHA
+              a.d-block.h6.mb-2(href="#") Дополнительная камера
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
+
+        .product-list.d-flex.flex-column.box-shadow.border-radius.text-center.text-md-left.p-2.p-md-3.mb-3
+          .product-list__header
+            a.d-block.text-center.mb-3(href="#")
+              +img('content/category/category-1.jpg')
+            a.product-list__title.d-block.mb-2(href="#") Автоаксессуары
+            .h6.color-theme-disabled.mb-3 8 товаров
+          .d-flex.flex-column.justify-content-between.flex-grow-1
+            .product-list__body
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Антенны автомобильные
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Бегунки, Втулки и щетки стартера
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Бендиксы
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Комплектующие (запчасти) генераторов
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Регуляторы
+              a.d-block.h6.color-theme-brand.mb-2(href="#") Датчики и предохранители
+            .product-list__footer.text-center
+              button.btn.btn_nobg.h-auto.p-0(type="button")
+                +icon('readmore','h3 color-theme-disabled')
 
       include category/popular.pug
 
