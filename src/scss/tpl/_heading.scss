@@ -1,6 +1,25 @@
 .heading {
   grid-column-gap: $grid-gutter-width;
 
+  &.heading_subcategory {
+    display: grid;
+    grid-gap: 8px;
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: repeat(10,1fr);
+      grid-template-areas: "subcategory__title subcategory__title subcategory__title subcategory__title subcategory__title subcategory__article subcategory__price subcategory__quantity subcategory__quantity subcategory__quantity";
+    }
+
+    @include media-breakpoint-between(md,lg) {
+      grid-template-columns: repeat(10,1fr);
+      grid-template-areas: "subcategory__title subcategory__title subcategory__title subcategory__title subcategory__title subcategory__article subcategory__article subcategory__price subcategory__price subcategory__quantity";
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
   &.heading_cart {
     @include media-breakpoint-up(md) {
       display: grid;
@@ -71,5 +90,21 @@
 
   &.heading__col_cart-summ {
     grid-area: cart__summ;
+  }
+
+  &.heading__col_subcategory-title {
+    grid-area: subcategory__title;
+  }
+
+  &.heading__col_subcategory-article {
+    grid-area: subcategory__article;
+  }
+
+  &.heading__col_subcategory-price {
+    grid-area: subcategory__price;
+  }
+
+  &.heading__col_subcategory-quantity {
+    grid-area: subcategory__quantity;
   }
 }

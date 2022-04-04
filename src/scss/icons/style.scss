@@ -26,7 +26,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+.ds-icon-photo {
+  &:before {
+    content: $ds-icon-photo;
+  }
+}
 .ds-icon-desc {
   &:before {
     content: $ds-icon-desc;

@@ -1,0 +1,50 @@
+.bubble {
+  cursor: pointer;
+  position: relative;
+
+  &.bubble_pos_abs {
+    @include media-breakpoint-down(sm) {
+      @include pos(0,0);
+    }
+  }
+
+  &:hover {
+    .bubble__picture {
+      display: block;
+    }
+  }
+}
+
+.bubble__picture {
+  @include before;
+  @include wh(120px);
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    @include pos(-50px,-120px);
+  }
+
+  @include media-breakpoint-down(md) {
+    position: absolute;
+    top: -50px;
+    right: -120px;
+  }
+
+  &:before {
+    @include wh(12px);
+    top: 50%;
+    margin: -6px 0 0;
+    z-index: 1;
+    transform: rotate(45deg);
+    background-color: #fff;
+    box-shadow: 1px 1px 8px 0 rgba(0,0,0,.16);
+
+    @include media-breakpoint-up(lg) {
+      right: -6px;
+    }
+
+    @include media-breakpoint-down(md) {
+      left: -6px;
+    }
+  }
+}
