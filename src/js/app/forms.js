@@ -42,3 +42,17 @@ document.querySelectorAll('.form__toggler_pwd').forEach(formPwdToggler => {
     }
   });
 });
+
+/* form toggler */
+document.querySelectorAll('[data-toggle="list"]').forEach(listToggler => {
+  listToggler.addEventListener('click', (e) => {
+    let target = document.querySelector(e.target.getAttribute('data-target'));
+    if (!target.style.height) {
+      target.style.height = 'auto';
+      e.target.classList.add('checked');
+    } else {
+      target.style.height = null;
+      e.target.classList.remove('checked');
+    }
+  });
+});

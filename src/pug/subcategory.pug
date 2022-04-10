@@ -4,10 +4,21 @@ block meta
   - var title = 'Подкатегория каталога (автотовары)';
 
 block filter
-  .header__footer
-    button.filter-toggler.d-flex.align-items-center.justify-content-center.p-2(type="button")
-      +icon('settings','filter-toggler__icon h4 mr-2')
-      span.filter-toggler__title Подобрать по VIN
+  .header__footer.header__footer_row
+    button.filter-btn.align-items-center.flex-grow-1.p-2(type="button" data-toggle="filter" data-target="#detail")
+      +icon('detail','filter-btn__icon h3 mr-2')
+      span.filter-btn__title.text-nowrap
+        span.filter-btn__show Все автотовары
+        span.filter-btn__hide Скрыть все автотовары
+    button.filter-btn.align-items-center.p-2(type="button" data-toggle="filter" data-target="#filter")
+      +icon('filter','filter-btn__icon h3 mr-2')
+      span.filter-btn__title.filter-btn__title_invisible.text-nowrap
+        span.filter-btn__show Показать&nbsp;
+        span.filter-btn__hide Скрыть&nbsp;
+        | фильтр
+    button.filter-btn.align-items-center.p-2(type="button" data-toggle="filter" data-target="#settings")
+      +icon('settings','filter-btn__icon h3 mr-2')
+      span.filter-btn__title.filter-btn__title_invisible.text-nowrap Подобрать по VIN
 
 block wrapper
   .wrapper
@@ -20,11 +31,12 @@ block wrapper
     .category-counter.mb-4 1 840 товаров
     .row
       .col-xl-2.col-lg-3.mb-lg-4
-        include base/filter-wheels.pug
+        include base/filter-details.pug
       .col-xl-10.col-lg-9.mb-4
-        .filter.filter_sticky
+        #detail.filter.filter_extend.filter_sticky
+        #settings.filter.filter_extend.filter_sticky
           .filter__body
-            .section.bg-theme-white.py-0.mb-lg-3
+            .section.section_filter.bg-theme-white.py-0.mb-lg-3
               .section__expander.d-flex.align-items-center.justify-content-between.cursor-pointer.px-md-4.px-3.py-2
                 button.btn.btn_nobg.h4.p-0(type="button")
                   +icon('settings','color-theme-brand h3 mr-2')
@@ -236,9 +248,7 @@ block wrapper
             .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
               .d-flex.align-items-center
                 .bubble.bubble_pos_abs
-                  +icon('photo','h2 color-theme-brand mr-2')
-                  .bubble__picture.box-shadow.border.border-radius
-                    +img('content/cards/pirelli.jpg','img-cover border-radius zi-2')
+                  +icon('photo','h2 color-theme-disabled mr-2')
                 a.h5(href="#") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
             .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
               .h5.d-flex.align-items-center
@@ -265,9 +275,7 @@ block wrapper
             .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
               .d-flex.align-items-center
                 .bubble.bubble_pos_abs
-                  +icon('photo','h2 color-theme-brand mr-2')
-                  .bubble__picture.box-shadow.border.border-radius
-                    +img('content/cards/pirelli.jpg','img-cover border-radius zi-2')
+                  +icon('photo','h2 color-theme-disabled mr-2')
                 a.h5(href="#") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
             .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
               .h5.d-flex.align-items-center

@@ -16,6 +16,32 @@
   }
 }
 
+.filter-visible {
+  @include media-breakpoint-down(md) {
+    overflow: hidden;
+  }
+
+  .filter {
+    &.filter_sticky {
+      @include media-breakpoint-down(md) {
+        bottom: 0;
+      }
+    }
+
+    &.filter_extend {
+      @include media-breakpoint-down(md) {
+        bottom: auto;
+      }
+    }
+
+    &.filter_active {
+      @include media-breakpoint-down(md) {
+        bottom: 0;
+      }
+    }
+  }
+}
+
 .filter__body {
   transition: all .3s ease;
 
@@ -31,62 +57,6 @@
     opacity: 0;
     overflow: hidden;
     visibility: hidden;
-  }
-}
-
-.filter-toggler {
-  @extend %btn-default;
-  @include wh(100%,40px);
-  background: $color__light;
-  color: $color__text_default;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, .12) inset;
-}
-
-.filter-toggler__icon {
-  @include fw(18px);
-  //@include wh(18px);
-  pointer-events: none;
-}
-
-.filter-toggler__title {
-  pointer-events: none;
-}
-
-.filter-toggler__hide {
-  display: none;
-}
-
-.filter-visible {
-  @include media-breakpoint-down(md) {
-    overflow: hidden;
-  }
-
-  .filter_sticky {
-    @include media-breakpoint-down(md) {
-      bottom: 0;
-    }
-  }
-
-  .filter-toggler {
-    color: #fff;
-    background: $color__brand;
-  }
-
-  .filter-toggler__show {
-    display: none;
-  }
-
-  .filter-toggler__hide {
-    display: inline;
-  }
-
-  .filter__body {
-    @include media-breakpoint-down(md) {
-      opacity: 1;
-      height: auto;
-      overflow: auto;
-      visibility: visible;
-    }
   }
 }
 

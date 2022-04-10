@@ -1,0 +1,79 @@
+.filter-btn {
+  @extend %btn-default;
+  height: 40px;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+
+  &.filter-btn_active {
+    width: 100%;
+    justify-content: center;
+    background-color: $color__brand;
+
+    .filter-btn__icon {
+      color: #fff;
+    }
+
+    .filter-btn__title {
+      color: #fff;
+    }
+
+    .filter-btn__title_invisible {
+      display: block;
+    }
+  }
+}
+
+.active {
+  .filter-btn {
+    display: none;
+
+    &.filter-btn_active {
+      display: flex;
+    }
+  }
+}
+
+.filter-btn__icon {
+  @include fw(18px);
+  pointer-events: none;
+  color: $color__brand;
+}
+
+.filter-btn__title {
+  @include fs-lh(1rem,1.125rem);
+  pointer-events: none;
+  color: $color__text_default;
+
+  &.filter-btn__title_invisible {
+    display: none;
+  }
+}
+
+.filter-btn__hide {
+  display: none;
+}
+
+.filter-visible {
+  .filter-btn {
+    color: #fff;
+    background: $color__brand;
+  }
+
+  .filter-btn__show {
+    display: none;
+  }
+
+  .filter-btn__hide {
+    display: inline;
+  }
+
+  .filter__body {
+    @include media-breakpoint-down(md) {
+      opacity: 1;
+      height: auto;
+      overflow: auto;
+      visibility: visible;
+    }
+  }
+}

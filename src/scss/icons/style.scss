@@ -491,3 +491,8 @@
     content: $ds-icon-readmore-right;
   }
 }
+.ds-icon-detail {
+  &:before {
+    content: $ds-icon-detail;
+  }
+}

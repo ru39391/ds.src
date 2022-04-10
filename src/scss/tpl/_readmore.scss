@@ -52,3 +52,13 @@
     margin: -10px 0 0;
   }
 }
+
+.readmore__icon {
+  transition: all .3s ease;
+}
+
+.checked {
+  .readmore__icon {
+    transform: rotate(-180deg);
+  }
+}
