@@ -5,14 +5,9 @@ block meta
 
 block filter
   .header__footer.header__footer_row
-    button.filter-btn.align-items-center.flex-grow-1.p-2(type="button" data-toggle="filter" data-target="#detail")
-      +icon('detail','filter-btn__icon h3 mr-2')
-      span.filter-btn__title.text-nowrap
-        span.filter-btn__show Все автотовары
-        span.filter-btn__hide Скрыть все автотовары
     button.filter-btn.align-items-center.p-2(type="button" data-toggle="filter" data-target="#filter")
       +icon('filter','filter-btn__icon h3 mr-2')
-      span.filter-btn__title.filter-btn__title_invisible.text-nowrap
+      span.filter-btn__title.text-nowrap
         span.filter-btn__show Показать&nbsp;
         span.filter-btn__hide Скрыть&nbsp;
         | фильтр
@@ -31,7 +26,8 @@ block wrapper
     .category-counter.mb-4 1 840 товаров
     .row
       .col-xl-2.col-lg-3.mb-lg-4
-        include base/filter-details.pug
+        block aside
+          include base/filter-details.pug
       .col-xl-10.col-lg-9.mb-4
         #detail.filter.filter_extend.filter_sticky
         #settings.filter.filter_extend.filter_sticky
@@ -270,7 +266,7 @@ block wrapper
                 button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
               .text-center.text-md-left
                 button.btn.text-uppercase.px-3(type="submit") В корзину
-        form.table-row(action="#")
+        form.table-row.mb-3(action="#")
           .table-row__header.table-row__header_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3
             .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
               .d-flex.align-items-center
@@ -297,16 +293,26 @@ block wrapper
                 button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
               .text-center.text-md-left
                 button.btn.text-uppercase.px-3(type="submit") В корзину
+        nav.pagination
+          a.pagination__item.pagination__item_prev(href="#")
+            +icon('readmore-right','h3 color-theme-brand')
+          span.pagination__item.pagination__item_current 1
+          a.pagination__item(href="#") 2
+          a.pagination__item(href="#") 3
+          a.pagination__item(href="#") 4
+          span.pagination__item.pagination__item_divider ...
+          a.pagination__item(href="#") 57
+          a.pagination__item.pagination__item_next(href="#")
+            +icon('readmore-right','h3 color-theme-brand')
+    include category/popular.pug
 
-    //- include category/popular.pug
-
-    //- .mb-3
+    .mb-3
       .h2.font-weight-bold.mb-4 Рекомендуем так же:
       include category/wheels.pug
 
-    //- include base/links.pug
+    include base/links.pug
 
-    //- .content.content_expanded.mb-5
+    .content.content_expanded.mb-5
       include base/content.pug
       .content__footer
         button.readmore.readmore_btn(type="button")

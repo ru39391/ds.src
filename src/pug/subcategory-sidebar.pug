@@ -1,0 +1,18 @@
+extends subcategory
+
+block meta
+  - var title = 'Подкатегория каталога (автотовары)';
+
+block filter
+  .header__footer.header__footer_row
+    button.filter-btn.align-items-center.flex-grow-1.p-2(type="button" data-toggle="filter" data-target="#detail")
+      +icon('detail','filter-btn__icon h3 mr-2')
+      span.filter-btn__title.text-nowrap
+        span.filter-btn__show Все автотовары
+        span.filter-btn__hide Скрыть все автотовары
+    button.filter-btn.align-items-center.p-2(type="button" data-toggle="filter" data-target="#settings")
+      +icon('settings','filter-btn__icon h3 mr-2')
+      span.filter-btn__title.filter-btn__title_invisible.text-nowrap Подобрать по VIN
+
+block aside
+  include base/category-details.pug
