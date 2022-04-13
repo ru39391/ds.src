@@ -1,7 +1,15 @@
-extends base
+extends results
 
 block meta
   - var title = 'Результаты подбора по авто';
+  - var h1 = 'Купить шины для HYUNDAI Accent 2000-2005 LC Sedan 1.3 в Ростове-на-Дону';
 
-block wrapper
-    .wrapper
+block results__sidebar
+  .filter.filter_sticky
+    .filter__body
+      form.form.form_bg.form_filter(action="#")
+        .form__header.d-flex.align-items-center.justify-content-between.d-lg-block
+          .form__title.form__title_icon.text-nowrap.d-flex.align-items-center.h3.font-weight-bold.color-theme-brand.mb-0.mb-lg-2
+            +icon('car','form__title-icon h3 mr-2')
+            | Подбор по авто
+          button.btn-unstyled.h6(type="reset") Сбросить
