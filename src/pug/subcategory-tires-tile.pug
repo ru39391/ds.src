@@ -41,23 +41,35 @@ block wrapper
               button.form__view.active(type="button")
                 +icon('tile')
           .category.mb-3
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
+            - var positions = ['Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','Зимние шины Yokohama Ice Guard IG55 215/55','Зимние шины Yokohama Ice','Зимние шины Yokohama Ice Guard IG55','Зимние шины Yokohama Ice Guard IG55 215/55','Зимние шины Yokohama Ice','Шины Yokohama Ice Guard IG55 215/55 R17 98T','CORDIANT Sport 3','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','Зимние шины Yokohama Ice Guard IG55 215/55','Зимние шины Yokohama Ice','Зимние шины Yokohama Ice Guard IG55','Зимние шины Yokohama Ice Guard IG55 215/55','Зимние шины Yokohama Ice','Шины Yokohama Ice Guard IG55 215/55 R17 98T','CORDIANT Sport 3']
+            each positions__item in positions
+              .card.card_tile.d-sm-flex.flex-column.justify-content-between.h-100.pt-3.px-3.pb-4
+                .card__header.justify-content-center.justify-content-sm-between.mb-sm-3
+                  a.card__picture.mb-0(href="#")
+                    img.img-fluid(src="../img/content/cards/card-1.jpg" alt="" title="")
+                .card__body.card__body_lg.d-flex.flex-column.justify-content-between.flex-grow-1
+                  .card__intro.mb-3
+                    .card__meta.card__meta_row.flex-wrap.flex-sm-nowrap.mb-3
+                      .card__features.mb-1.mb-sm-0
+                        .icon-marker
+                          +icon('summer')
+                      .card__params.flex-grow-1.text-sm-right.color-theme-brand.mb-1.mb-sm-0 R16 / R17 / R18 / R19
+                    a.card__title.d-block.mb-3(href="#")!= positions__item
+                  .card__footer
+                    .card__meta.card__meta_row
+                      .card__price
+                        span.card__price-value от 7 337.12&nbsp;
+                        | ₽/шт.
 
+    .box-shadow.pt-4.pb-3.mb-5
+      .wrapper
+        .h2.font-weight-bold.mb-4 Другие бренды:
+        - var logoWheels = ['content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg']
+        each logoWheels__item in logoWheels
+          a.d-inline-block.mr-2.mr-sm-3.mb-4(href="#")
+            +img(logoWheels__item)
+
+    .wrapper
       include category/popular.pug
 
       .mb-3

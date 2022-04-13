@@ -118,7 +118,7 @@
         .form__item.mb-4
           input.form__field(type="text" value="")
           label.form__label.form__label_title Введите название
-        .row
+        #brand.form__list.row
           .col-6
             input.form__toggler.form__toggler_checkbox(id="Michelin" type="checkbox" value="")
             label.form__label.mb-4(for="Michelin")
@@ -159,11 +159,21 @@
             label.form__label.mb-4(for="Bridgestone")
               +icon('checked','form__label-icon')
               span.form__label-title Bridgestone
+          .col-6
+            input.form__toggler.form__toggler_checkbox(id="Michelin2" type="checkbox" value="")
+            label.form__label.mb-4(for="Michelin2")
+              +icon('checked','form__label-icon')
+              span.form__label-title Michelin
+          .col-6
+            input.form__toggler.form__toggler_checkbox(id="Cordiant2" type="checkbox" value="")
+            label.form__label.mb-4(for="Cordiant2")
+              +icon('checked','form__label-icon')
+              span.form__label-title Cordiant
       .d-flex.justify-content-center
-        button.btn-unstyled.d-flex.align-items-center(type="submit")
-          span.h6.mr-2 Показать еще
-          +icon('readmore','h3 color-theme-brand')
-    .filter__alert.d-flex.align-items-center.justify-content-between.flex-lg-column.color-theme-white.bg-theme-brand.px-lg-3.pt-lg-1.pb-lg-3.py-3.px-4
+        button.readmore.d-flex.align-items-center(type="submit" data-toggle="list" data-target="#brand")
+          span.h6.mr-2.pointer-events-none Показать еще
+          +icon('readmore','h3 color-theme-brand readmore__icon')
+    .filter__alert.d-flex.align-items-center.justify-content-between.flex-lg-column.color-theme-white.bg-theme-brand.px-lg-3.pt-lg-1.pb-lg-3.py-3.px-4(style="top:574px;")
       .filter__alert-info.h2.font-weight-bold.d-flex.align-items-center.mb-lg-1
         .h5.font-weight-normal.mr-2 Найдено:
         | 713

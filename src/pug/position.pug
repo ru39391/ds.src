@@ -225,14 +225,14 @@ block wrapper
         .h2.font-weight-bold.mb-4 Другие бренды:
         - var logoWheels = ['content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg']
         each logoWheels__item in logoWheels
-          a.d-inline-block.mr-3.mb-4(href="#")
+          a.d-inline-block.mr-2.mr-sm-3.mb-4(href="#")
             +img(logoWheels__item)
     .wrapper
       - var namesList = ['Cordiant','Hankook','Continental','Yokohama','Good Year','Bridgestone','Nokian tyres','Dunlop','BFGoodrich','Michelin','Kormoran','Pirelli']
       each namesList__item in namesList
-        a.h4.d-inline-block.mr-4.mb-3(href="#")!= namesList__item
+        a.h4.d-inline-block.mr-3.mr-sm-4.mb-3(href="#")!= namesList__item
       each namesList__item in namesList
-        a.h4.d-inline-block.mr-4.mb-3(href="#")!= namesList__item
+        a.h4.d-inline-block.mr-3.mr-sm-4.mb-3(href="#")!= namesList__item
 
   .wrapper
     .mb-4
