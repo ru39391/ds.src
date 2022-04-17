@@ -21,3 +21,7 @@
 .brand__title {
   @include fs-lh(1rem,1.5rem);
 }
+
+.brand__desc {
+  line-height: 1.5em;
+}

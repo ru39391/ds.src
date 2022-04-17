@@ -3,6 +3,7 @@
   @include wh(26px);
   cursor: pointer;
   border-radius: .25rem;
+  border: 1px solid rgba(0,0,0,0);
 
   &.color-white {
     background-color: #FCFCFC;
@@ -31,5 +32,10 @@
 
   &.color-bez {
     background-color: $color__border;
+  }
+
+  &.active {
+    border-color: $color__brand;
+    box-shadow: 0 0 0 1px $color__brand inset;
   }
 }
