@@ -30,53 +30,56 @@ block wrapper
         .col-xl-10.col-lg-9.mb-4
           include base/results-form.pug
           .mb-3
-            .heading.d-flex.align-items-center.h6.mb-2
-              .heading__col.d-block.overflow-hidden Диаметр
-              .heading__col.d-block.overflow-hidden Ширина
-              .heading__col.d-block.overflow-hidden Высота
-              .heading__col.d-block.overflow-hidden Сезон
-              .heading__col.heading__col_lg.d-block.overflow-hidden Название
-              .heading__col.d-block.overflow-hidden Цена
-              .heading__col.d-block.overflow-hidden Наличие
-            .card-row
-              .card-row__left
-                .card-row__param 18”
-              .card-row__right
-                include tile/row.pug
-            .card-row
-              .card-row__left
-                .card-row__param 17”
-              .card-row__right
-                include tile/row.pug
-            .card-row
-              .card-row__left
-                .card-row__param 16”
-              .card-row__right
-                include tile/row.pug
-                include tile/row.pug
-                include tile/row.pug
-                include tile/row.pug
-            .card-row
-              .card-row__left
-                .card-row__param 15”
-              .card-row__right
-                include tile/row.pug
-                include tile/row.pug
-                include tile/row.pug
-            .card-row
-              .card-row__left
-                .card-row__param 14”
-              .card-row__right
-                include tile/row.pug
-                include tile/row.pug
-                include tile/row.pug
-            .card-row
-              .card-row__left
-                .card-row__param 13”
-              .card-row__right
-                include tile/row.pug
-                include tile/row.pug
+            .heading.heading_category.px-3
+              .heading__col.heading__col_category-group.h6.mb-2 Диаметр
+              .heading__col.heading__col_category-width.h6.mb-2 Ширина
+              .heading__col.heading__col_category-height.h6.mb-2 Высота
+              .heading__col.heading__col_category-type.h6.mb-2 Сезон
+              .heading__col.heading__col_category-title.h6.mb-2 Название
+              .heading__col.heading__col_category-price.h6.mb-2 Цена
+              .heading__col.heading__col_category-stock.h6.mb-2 Наличие
+            .table-row.table-row_category.mb-md-2.mb-3
+              .table-row__col.table-row__col_group.d-flex.flex-md-column.align-items-center.align-items-md-start.justify-content-md-center.px-3.mb-2.mb-md-0
+                .h6.d-md-none.mr-2 Диаметр:
+                .h2.font-weight-bold 18”
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              .table-row__col.table-row__col_group.d-flex.flex-md-column.align-items-center.align-items-md-start.justify-content-md-center.px-3.mb-2.mb-md-0
+                .h6.d-md-none.mr-2 Диаметр:
+                .h2.font-weight-bold 17”
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              .table-row__col.table-row__col_group.d-flex.flex-md-column.align-items-center.align-items-md-start.justify-content-md-center.px-3.mb-2.mb-md-0
+                .h6.d-md-none.mr-2 Диаметр:
+                .h2.font-weight-bold 16”
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              .table-row__col.table-row__col_group.d-flex.flex-md-column.align-items-center.align-items-md-start.justify-content-md-center.px-3.mb-2.mb-md-0
+                .h6.d-md-none.mr-2 Диаметр:
+                .h2.font-weight-bold 15”
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              include base/row.pug
 
+    .box-shadow.pt-4.pb-3.mb-5
+      .wrapper
+        .h2.font-weight-bold.mb-4 Другие бренды:
+        - var logoWheels = ['content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg']
+        each logoWheels__item in logoWheels
+          a.d-inline-block.mr-2.mr-sm-3.mb-4(href="#")
+            +img(logoWheels__item)
+
+    .wrapper
       .mb-3
         .h2.font-weight-bold.mb-4 Подходящие диски:
         include category/wheels.pug

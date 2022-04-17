@@ -13,6 +13,7 @@
 .table-row {
   @include media-breakpoint-up(md) {
     display: grid;
+    grid-gap: 8px;
     grid-column-gap: $grid-gutter-width;
   }
 
@@ -23,7 +24,6 @@
 
   &.table-row_cart {
     @include media-breakpoint-up(md) {
-      grid-gap: 8px;
       grid-template-columns: repeat(12,1fr);
       grid-template-areas: "cart__img cart__title cart__title cart__title cart__title cart__price cart__price cart__quantity cart__quantity cart__summ cart__summ cart__close";
     }
@@ -48,9 +48,19 @@
     }
   }
 
-  &.table-row_subcategory {
-    grid-gap: 8px;
+  &.table-row_category {
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: repeat(10,1fr);
+      grid-template-areas: "category__group category__pos category__pos category__pos category__pos category__pos category__pos category__pos category__pos category__pos category__pos";
+    }
 
+    @include media-breakpoint-between(md,lg) {
+      grid-template-columns: repeat(8,1fr);
+      grid-template-areas: "category__group category__pos category__pos category__pos category__pos category__pos category__pos category__pos category__pos";
+    }
+  }
+
+  &.table-row_subcategory {
     @include media-breakpoint-up(xl) {
       grid-template-columns: repeat(10,1fr);
       grid-template-areas: "subcategory__title subcategory__title subcategory__title subcategory__title subcategory__title subcategory__article subcategory__price subcategory__quantity subcategory__btn subcategory__btn";
@@ -90,6 +100,38 @@
     @include media-breakpoint-down(sm) {
       display: grid;
       grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  /* group */
+  &.table-row__col_group {
+    @include media-breakpoint-up(md) {
+      grid-area: category__group;
+    }
+  }
+
+  /* category */
+  &.table-row__col_category {
+    @include media-breakpoint-up(md) {
+      grid-area: category__pos;
+      display: grid;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: repeat(9,1fr);
+      grid-template-areas: "col__width col__height col__type col__title col__title col__price col__stock col__btn col__btn";
+    }
+
+    @include media-breakpoint-between(md,lg) {
+      grid-template-columns: repeat(7,1fr);
+      grid-template-areas: "col__width col__height col__type col__title col__title col__price col__stock""col__btn col__btn col__btn . . . .";
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 
@@ -212,4 +254,71 @@
 
 .table-row__body {
   display: none;
+}
+
+.table__col {
+  &.table__col_width {
+    grid-area: col__width;
+
+    @include media-breakpoint-down(sm) {
+      color: $color__brand;
+    }
+  }
+
+  &.table__col_height {
+    grid-area: col__height;
+
+    @include media-breakpoint-down(sm) {
+      color: $color__brand;
+    }
+  }
+
+  &.table__col_type {
+    grid-area: col__type;
+  }
+
+  &.table__col_title {
+    grid-area: col__title;
+
+    @include media-breakpoint-down(sm) {
+      @include fw(100%);
+    }
+  }
+
+  &.table__col_price {
+    grid-area: col__price;
+
+    @include media-breakpoint-down(sm) {
+      @include fw(100%);
+      @include h4;
+      font-weight: bold;
+    }
+  }
+
+  &.table__col_stock {
+    grid-area: col__stock;
+
+    @include media-breakpoint-down(sm) {
+      @include fw(100%);
+      color: $color__brand;
+    }
+  }
+
+  &.table__col_btn {
+    grid-area: col__btn;
+
+    @include media-breakpoint-only(sm) {
+      @include fw(50%);
+      @include mx(auto);
+    }
+
+    @include media-breakpoint-only(xs) {
+      @include fw(100%);
+    }
+  }
+}
+
+.table__col-title {
+  font-weight: normal;
+  color: $color__text_default;
 }
