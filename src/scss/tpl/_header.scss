@@ -182,11 +182,21 @@
       background: #fff;
     }
   }
+
+  &.header__btn_active {
+    z-index: 3;
+    position: relative;
+    border-radius: .5rem .5rem 0 0;
+  }
 }
 
 .header__btn-icon {
   @include fw(18px);
-  //@include wh(18px);
+  display: none;
+
+  &.header__btn-icon_active {
+    display: block;
+  }
 }
 
 .header__btn-title {

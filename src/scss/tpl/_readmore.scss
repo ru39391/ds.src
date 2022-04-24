@@ -1,5 +1,8 @@
 .readmore {
   @extend %btn-default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all .3s ease;
   /*
   @include before;

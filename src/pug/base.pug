@@ -17,94 +17,7 @@ html(lang="ru")
 
   body
     block header
-        .icons.d-none
-        header.header
-            .header__top
-                .wrapper.d-flex.flex-wrap.align-items-center
-                    .col-xl-6.col-lg-12.col-8.d-flex.align-items-center.justify-content-xl-start.justify-content-lg-between.mb-xl-0.mb-lg-2
-                        .contacts.d-flex.align-items-center.justify-content-lg-between.col-xl-7.col-lg-5.w-auto.px-0
-                          .contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4
-                            +icon('placemark','contacts__icon h3 color-theme-brand mr-lg-2')
-                            span.d-none.d-lg-block г. Ростов-на-Дону
-                          a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4(href="#")
-                            +icon('phone','contacts__icon h3 color-theme-brand mr-lg-2')
-                            span.d-none.d-lg-block +7 (365) 277-70-68
-                        nav.social.d-flex.align-items-center
-                          a.social__item.color-theme-brand.mr-4.mr-lg-3(href="#")
-                            +icon('wapp-filled','h3')
-                          a.social__item.color-theme-brand(href="#")
-                            +icon('tg-filled','h3')
-                    .col-xl-5.col-lg-10.d-none.d-lg-block
-                        nav.header__nav.d-flex.align-items-center.justify-content-xl-end.justify-content-between
-                            a.header__nav-item.mr-4(href="#") Скидки и акции
-                            a.header__nav-item.mr-4(href="#") Бонусные рубли
-                            a.header__nav-item(href="#") Контакты
-                    .col-xl-1.col-lg-2.col-4.d-flex.align-items-xl-start.justify-content-end
-                      .menu
-                        button.menu__title.d-flex.align-items-center(type="button")
-                          span.mr-1 Помощь
-                          +icon('dropdown','menu__icon h6')
-                        .menu__wrapper
-            .header__wrapper
-                .header__col.header__col_logo.col-xl-4.col-lg-5.mb-3
-                    a.logo.color-theme-brand.mr-4(href="#")
-                      +svg('logo')
-                    nav.header__nav.d-flex.align-items-center.justify-content-center
-                        a.header__btn.text-uppercase.mr-3(href="#")
-                          +icon('menu','header__btn-icon mr-lg-2')
-                          span.d-none.d-sm-block Каталог
-                        a.header__btn.text-uppercase(href="#")
-                          +icon('services','header__btn-icon mr-lg-2')
-                          span.d-none.d-sm-block Услуги
-                .header__col.header__col_search.col-xl-3.mb-3
-                    form.search(action="#" method="post")
-                        input.search__field(type="text" placeholder="Я ищу..." value="")
-                        button.search__btn(type="submit")
-                          +icon('search')
-                .header__col.header__col_nav.col-xl-5.col-lg-7.flex-grow-1.flex-lg-grow-0.mb-3
-                    nav.header__nav.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-5
-                        button.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.d-lg-none(type="button")
-                            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-                              +icon('search')
-                            span.header__btn-title Поиск
-                        a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
-                            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-                              +icon('compare')
-                            span.header__btn-title Сравнить
-                        a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
-                            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-                              +icon('car')
-                            span.header__btn-title Выбор авто
-                        a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
-                            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-                              +icon('case')
-                            span.header__btn-title Заказы
-                        .header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3
-                            .header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-                              +icon('user')
-                            .d-flex.justify-content-center
-                              button.header__btn-title.btn-unstyled(type="button" data-toggle="modal" data-target="#auth") Вход |
-                              button.header__btn-title.btn-unstyled(type="button" data-toggle="modal" data-target="#reg")  регистрация
-                    a.header__btn.text-uppercase.header__btn_inverse(href="#")
-                      +icon('cart','header__btn-icon')
-            .header__bottom
-                nav.topmenu.swiper-container
-                    .topmenu__wrapper.swiper-wrapper
-                        .swiper-slide.w-auto
-                            a.topmenu__item(href="#") Автошины
-                        .swiper-slide.w-auto
-                            a.topmenu__item(href="#") Мотошины
-                        .swiper-slide.w-auto
-                            a.topmenu__item(href="#") Диски
-                        .swiper-slide.w-auto
-                            a.topmenu__item(href="#") Аккумуляторы
-                        .swiper-slide.w-auto
-                            a.topmenu__item(href="#") Масла
-                        .swiper-slide.w-auto
-                            a.topmenu__item(href="#") Автотовары
-                        .swiper-slide.w-auto
-                            a.topmenu__item(href="#") Шиномонтаж
-            block filter
+      include tpl/header
 
     block wrapper
 
@@ -272,11 +185,6 @@ html(lang="ru")
     + pug/category/carousel.pug - "Рекомедуем также", шины
     + pug/category/wheels.pug - "Рекомедуем также", диски
     + pug/category/popular.pug - "Часто выбирают:"
-
-  subcategory-tires-list.pug
-    tile/row.pug
-  subcategory-tires-tile.pug
-    tile/category.pug
 
   .slides_togglers-next в category/popular.pug
   _swiper.scss - перебрать
