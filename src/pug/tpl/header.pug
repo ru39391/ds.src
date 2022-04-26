@@ -43,7 +43,7 @@ header.header
                 span.h4.text-uppercase каталог
               .wrapper
                 .row.align-items-start
-                  .panel__nav.col-xl-2
+                  .panel__nav.col-xl-2.pr-xl-2
                     .panel__nav-item.px-3.px-xl-0.py-2.py-xl-0.mb-xl-1(data-target="#tires")
                       a.panel__nav-link.panel__nav-link_active.px-3.py-xl-2.mr-1(href="#")
                         +icon('tires','h3 color-theme-brand mr-2')
@@ -171,7 +171,7 @@ header.header
         button.search__btn(type="submit")
           +icon('search')
     .header__col.header__col_nav.col-xl-5.col-lg-7.flex-grow-1.flex-lg-grow-0.mb-3
-      nav.header__nav.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-5
+      nav.header__nav.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-4
         button.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.d-lg-none(type="button")
           span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
             +icon('search')
@@ -191,11 +191,11 @@ header.header
         .header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3
           .header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
             +icon('user')
-          .d-flex.justify-content-center
-            button.header__btn-title.btn-unstyled(type="button" data-toggle="modal" data-target="#auth") Вход |
+          .d-flex.justify-content-center            
+            button.d-none.d-lg-block.btn-unstyled(type="button" data-toggle="modal" data-target="#auth") Вход |
             button.header__btn-title.btn-unstyled(type="button" data-toggle="modal" data-target="#reg")  регистрация
-        a.header__btn.text-uppercase.header__btn_inverse(href="#")
-          +icon('cart','header__btn-icon d-block')
+      a.header__btn.text-uppercase.header__btn_inverse(href="#")
+        +icon('cart','header__btn-icon d-block')
   .header__bottom
     nav.topmenu.swiper-container
       .topmenu__wrapper.swiper-wrapper

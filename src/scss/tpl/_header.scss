@@ -155,7 +155,7 @@
 .header__btn-title {
   color: $color__link;
   overflow: hidden;
-  //text-overflow: ellipsis;
+  text-overflow: ellipsis;
   line-height: 1.25rem;
 
   &:hover {

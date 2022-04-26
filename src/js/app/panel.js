@@ -8,7 +8,8 @@ const panelClose = panel.querySelector('.panel__close');
 const readmoreBtns = panel.querySelectorAll('.readmore');
 
 const headerTogglers = document.querySelectorAll('.header__btn_type_toggler');
-function showPanelNav(headerToggler) {
+/* показываем панель */
+function showPanel(headerToggler) {
   const panelWrapperId = headerToggler.getAttribute('data-target');
   const panelWrapper = panel.querySelector(panelWrapperId);
   headerToggler.classList.toggle('header__btn_active');
@@ -16,23 +17,25 @@ function showPanelNav(headerToggler) {
   panelWrapper.classList.toggle('panel__wrapper_active');
   if(headerToggler.classList.contains('header__btn_active')) {
     document.body.style.overflow = 'hidden';
-    panel.style.height = `${window.innerHeight}px`;
+    panel.style.height = `${2*window.innerHeight}px`;
   } else {
-    document.body.style = null;
+    document.body.style.overflow = null;
     panel.style.height = null;
   }
 };
 
-function hidePanelNav() {
+/* скрываем панель */
+function hidePanel() {
   const panelWrapper = panel.querySelector('.panel__wrapper_active');
   const panelWrapperId = panelWrapper.id;
   panel.style.height = null;
-  document.body.style.overflow = 'hidden';
+  document.body.style = null;
   panel.classList.remove('panel_visible');
   panelWrapper.classList.remove('panel__wrapper_active');
   document.querySelector(`[data-target="#${panelWrapperId}"]`).classList.remove('header__btn_active');
 };
 
+/* отображаем/скрываем блок с брендами и сопутствующими услугами - для десктопов */
 function showPanelGrid(id) {
   panelGrids.forEach(panelGridsEl => {
     if(panelGridsEl == panel.querySelector(`${id}`)) {
@@ -43,7 +46,8 @@ function showPanelGrid(id) {
   });
 };
 
-function showPanel(panelNavBtn) {
+/* отображаем блок с брендами и сопутствующими услугами - для мобильных */
+function showPanelSide(panelNavBtn) {
   const panelWrapper = panelNavBtn.closest('.panel__wrapper');
   const panelTargetId = panelNavBtn.closest('.panel__nav-item').getAttribute('data-target');
   const panelGrid = panel.querySelector(`${panelTargetId}`);
@@ -55,7 +59,8 @@ function showPanel(panelNavBtn) {
   }
 };
 
-function hidePanel(panelToggler) {
+/* скрываем блок с брендами и сопутствующими услугами - для мобильных */
+function hidePanelSide(panelToggler) {
   const panelWrapper = panelToggler.closest('.panel__wrapper');
   const panelGrid = panelToggler.closest('.panel__grid');
   panelGrid.classList.remove('panel__grid_visible');
@@ -66,6 +71,7 @@ function hidePanel(panelToggler) {
   }
 };
 
+/* добавляем модификатор пункту меню панели при наведении */
 function addPanelNavLinkHover(panelNavItem) {
   panelNavLinks.forEach(panelNavLinksEl => {
     if(panelNavLinksEl == panelNavItem.querySelector('.panel__nav-link')) {
@@ -76,6 +82,7 @@ function addPanelNavLinkHover(panelNavItem) {
   });
 };
 
+/* показываем все бренды из списка в панели - для десктопов */
 function showPanelBrands(readmoreBtn) {
   const panelWrapper = readmoreBtn.closest('.panel__wrapper');
   const panelContent = readmoreBtn.closest('.panel__content');
@@ -98,6 +105,7 @@ function showPanelBrands(readmoreBtn) {
   }
 };
 
+/* скрываем все бренды из списка в панели - для десктопов */
 function hidePanelBrands(id) {
   const panelGrid = panel.querySelector(`${id}`);
   const panelWrapper = panelGrid.closest('.panel__wrapper');
@@ -137,22 +145,31 @@ readmoreBtns.forEach(readmoreBtnsEl => {
 
 panelNavBtns.forEach(panelNavBtnsEl => {
   panelNavBtnsEl.addEventListener('click', e => {
-    showPanel(e.target);
+    showPanelSide(e.target);
   });
 });
 
 panelTogglers.forEach(panelTogglersEl => {
   panelTogglersEl.addEventListener('click', e => {
-    hidePanel(e.target);
+    hidePanelSide(e.target);
   });
 });
 
 headerTogglers.forEach(headerTogglersEl => {
   headerTogglersEl.addEventListener('click', e => {
-    showPanelNav(e.target);
+    showPanel(e.target);
   });
 });
 
 panelClose.addEventListener('click', e => {
-  hidePanelNav();
+  hidePanel();
+});
+
+
+document.body.addEventListener('click', e => {
+  const panelVisible = document.querySelector('.panel_visible');
+  const panelWrapperActive = panelVisible.querySelector('.panel__wrapper_active');
+  if(e.target.closest('.panel') == panelVisible && e.target.closest('.panel__wrapper') != panelWrapperActive) {
+    hidePanel();
+  }
 });

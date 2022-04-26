@@ -1,13 +1,27 @@
 .panel {
-  @include wh(100%,0);
   @include pos(0,0,fixed);
   overflow: hidden;
+  pointer-events: none;
   background-color: rgba(0, 0, 0, 0);
   transition: all .3s ease;
 
+  @include media-breakpoint-up(xl) {
+    @include wh(100%,0);
+  }
+
+  @include media-breakpoint-down(lg) {
+    @include wh(100%,100% !important);
+    opacity: 0;
+  }
+
   &.panel_visible {
     z-index: 2;
+    pointer-events: all;
     background-color: rgba(82, 82, 82, .2);
+
+    @include media-breakpoint-down(lg) {
+      opacity: 1;
+    }
   }
 }
 
