@@ -16,6 +16,16 @@
       flex-direction: row;
     }
   }
+
+  &.brand_border_bottom {
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+
+    @include media-breakpoint-down(lg) {
+      @include border(0 0 1px,$color__border);
+    }
+  }
 }
 
 .brand__title {

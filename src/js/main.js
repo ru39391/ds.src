@@ -12,3 +12,4 @@ import './app/cards';
 import './app/header';
 import './app/collapse';
 import './app/accordion';
+import './app/panel';
