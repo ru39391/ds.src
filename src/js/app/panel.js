@@ -4,7 +4,7 @@ const panelNavLinks = panel.querySelectorAll('.panel__nav-link');
 const panelNavBtns = panel.querySelectorAll('.panel__nav-btn');
 const panelGrids = panel.querySelectorAll('.panel__grid');
 const panelTogglers = panel.querySelectorAll('.panel__toggler');
-const panelClose = panel.querySelector('.panel__close');
+const panelCloseBtns = panel.querySelectorAll('.panel__close');
 const readmoreBtns = panel.querySelectorAll('.readmore');
 
 const headerTogglers = document.querySelectorAll('.header__btn_type_toggler');
@@ -15,6 +15,7 @@ function showPanel(headerToggler) {
   headerToggler.classList.toggle('header__btn_active');
   panel.classList.toggle('panel_visible');
   panelWrapper.classList.toggle('panel__wrapper_active');
+  panelWrapper.style.top = `${headerToggler.getBoundingClientRect().top + headerToggler.getBoundingClientRect().height}px`;
   if(headerToggler.classList.contains('header__btn_active')) {
     document.body.style.overflow = 'hidden';
     panel.style.height = `${2*window.innerHeight}px`;
@@ -161,14 +162,18 @@ headerTogglers.forEach(headerTogglersEl => {
   });
 });
 
-panelClose.addEventListener('click', e => {
-  hidePanel();
+panelCloseBtns.forEach(panelCloseBtnsEl => {
+  panelCloseBtnsEl.addEventListener('click', () => {
+    hidePanel();
+  });
 });
-
 
 document.body.addEventListener('click', e => {
   const panelVisible = document.querySelector('.panel_visible');
-  const panelWrapperActive = panelVisible.querySelector('.panel__wrapper_active');
+  let panelWrapperActive;
+  if(panelVisible) {
+    panelWrapperActive = panelVisible.querySelector('.panel__wrapper_active');
+  }
   if(e.target.closest('.panel') == panelVisible && e.target.closest('.panel__wrapper') != panelWrapperActive) {
     hidePanel();
   }

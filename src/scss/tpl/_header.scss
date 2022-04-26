@@ -192,13 +192,13 @@
     }
 
     .header__btn-icon_show {
-      @include media-breakpoint-up(xl) {
+      @include media-breakpoint-up(md) {
         display: none;
       }
     }
 
     .header__btn-icon_close {
-      @include media-breakpoint-up(xl) {
+      @include media-breakpoint-up(md) {
         display: block;
       }
     }

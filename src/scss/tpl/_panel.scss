@@ -37,6 +37,7 @@
 }
 
 .panel__wrapper {
+  pointer-events: none;
   background-color: #fff;
   box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
   transition: all .3s ease;
@@ -60,6 +61,7 @@
 
   &.panel__wrapper_active {
     opacity: 1;
+    pointer-events: all;
     transform: translate(0,0);
   }
 
@@ -92,12 +94,28 @@
 }
 
 .panel__nav-link {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  border-radius: .25rem;
   transition: all .3s ease;
+
+  @include media-breakpoint-up(xl) {
+    border-radius: .25rem;
+  }
+
+  &.panel__nav-link_type_btn {
+    @include media-breakpoint-down(lg) {
+      @include before;
+      min-height: 50px;
+    }
+
+    &:before {
+      @include media-breakpoint-down(lg) {
+        left: -2rem;
+        right: -2rem;
+        bottom: 0;
+        height: 1px;
+        background-color: $color__border;
+      }
+    }
+  }
 
   &.panel__nav-link_active {
     @include media-breakpoint-up(xl) {

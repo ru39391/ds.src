@@ -18,7 +18,15 @@
   }
 
   &.banner_sm {
-    height: 200px;
+    @include media-breakpoint-up(xl) {
+      height: 200px;
+    }
+  }
+
+  &.banner_xs {
+    @include media-breakpoint-up(xl) {
+      height: 160px;
+    }
   }
 }
 
