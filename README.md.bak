@@ -79,35 +79,35 @@
 
 #### Страницы
 
-1. ~~Результаты подбора шин (tire_selection_result, mob_tire_selection_result)~~ [https://ru39391.github.io/ds.dist/results-tires.html](https://ru39391.github.io/ds.dist/results-tires.html)
-1. ~~Результаты подбора дисков (disk_selection_result)~~ [https://ru39391.github.io/ds.dist/results-wheels.html](https://ru39391.github.io/ds.dist/results-wheels.html)
-1. ~~Результаты подбора по авто~~ [https://ru39391.github.io/ds.dist/results-auto.html](https://ru39391.github.io/ds.dist/results-auto.html)
-1. ~~Результаты поиска по сайту (search_result)~~ [https://ru39391.github.io/ds.dist/results.html](https://ru39391.github.io/ds.dist/results.html)
-1. ~~Категория каталога: шины (catalog_category_tires)~~ [https://ru39391.github.io/ds.dist/category-tires.html](https://ru39391.github.io/ds.dist/category-tires.html)
-1. ~~Категория каталога: диски, мотошины, масла, акб (catalog_category_tires)~~ [https://ru39391.github.io/ds.dist/category-wheels.html](https://ru39391.github.io/ds.dist/category-wheels.html)
-1. ~~Категория каталога: автотовары (catalog_category_auto parts)~~ [https://ru39391.github.io/ds.dist/category.html](https://ru39391.github.io/ds.dist/category.html)
+1. ~~Результаты подбора шин (tire_selection_result, mob_tire_selection_result), [https://ru39391.github.io/ds.dist/results-tires.html](https://ru39391.github.io/ds.dist/results-tires.html)~~
+1. ~~Результаты подбора дисков (disk_selection_result), [https://ru39391.github.io/ds.dist/results-wheels.html](https://ru39391.github.io/ds.dist/results-wheels.html)~~
+1. ~~Результаты подбора по авто [https://ru39391.github.io/ds.dist/results-auto.html](https://ru39391.github.io/ds.dist/results-auto.html)~~
+1. ~~Результаты поиска по сайту (search_result) [https://ru39391.github.io/ds.dist/results.html](https://ru39391.github.io/ds.dist/results.html)~~
+1. ~~Категория каталога: шины (catalog_category_tires), [https://ru39391.github.io/ds.dist/category-tires.html](https://ru39391.github.io/ds.dist/category-tires.html)~~
+1. ~~Категория каталога: диски, мотошины, масла, акб (catalog_category_tires), [https://ru39391.github.io/ds.dist/category-wheels.html](https://ru39391.github.io/ds.dist/category-wheels.html)~~
+1. ~~Категория каталога: автотовары (catalog_category_auto parts), [https://ru39391.github.io/ds.dist/category.html](https://ru39391.github.io/ds.dist/category.html)
 1. ~~Подкатегория каталога (автотовары), с фильтром [https://ru39391.github.io/ds.dist/subcategory.html](https://ru39391.github.io/ds.dist/subcategory.html) и без [https://ru39391.github.io/ds.dist/subcategory-sidebar.html](https://ru39391.github.io/ds.dist/subcategory-sidebar.html), форма подбора по VIN;~~
-1. ~~Подкатегория каталога (серии бренда шин), список~~ [https://ru39391.github.io/ds.dist/subcategory-tires-list.html](https://ru39391.github.io/ds.dist/subcategory-tires-list.html)
-1. ~~Подкатегория каталога (серия бренда шин), плитка (с плашкой)~~ [https://ru39391.github.io/ds.dist/subcategory-tires-tile.html](https://ru39391.github.io/ds.dist/subcategory-tires-tile.html)
-1. ~~Страница сравнения (mob_tire_selection_result)~~ [https://ru39391.github.io/ds.dist/comparing.html](https://ru39391.github.io/ds.dist/comparing.html)
-1. ~~Корзина (cart, mob_cart, mob_cart_scroll)~~ [https://ru39391.github.io/ds.dist/cart.html](https://ru39391.github.io/ds.dist/cart.html)
-1. ~~Оформление заказа, 4 шага (ordering_1, ordering_2, ordering_3, ordering_3_1, ordering_4, mob_ordering)~~ [https://ru39391.github.io/ds.dist/checkout.html](https://ru39391.github.io/ds.dist/checkout.html), прочие шаги смотреть в списке [https://ru39391.github.io/ds.dist/](https://ru39391.github.io/ds.dist/)
-1. ~~Заказ успешно оформлен (ordering_ok), модальное окно~~ [https://ru39391.github.io/ds.dist/ui_modals.html](https://ru39391.github.io/ds.dist/ui_modals.html)
-1. ~~Страница товара (detail, mob_detail, detail_tabs, detail_no)~~ [https://ru39391.github.io/ds.dist/position.html](https://ru39391.github.io/ds.dist/position.html)
-1. ~~Скидки и акции (stocks, mob_stocks)~~ [https://ru39391.github.io/ds.dist/sales.html](https://ru39391.github.io/ds.dist/sales.html)
-1. ~~Страница акции (stock_1)~~ [https://ru39391.github.io/ds.dist/sales-item.html](https://ru39391.github.io/ds.dist/sales-item.html)
-1. ~~Страница услуги (service, service_reg_1, service_reg_2, service_reg_3)~~ [https://ru39391.github.io/ds.dist/service.html](https://ru39391.github.io/ds.dist/service.html)
+1. ~~Подкатегория каталога (серии бренда шин), список [https://ru39391.github.io/ds.dist/subcategory-tires-list.html](https://ru39391.github.io/ds.dist/subcategory-tires-list.html)~~
+1. ~~Подкатегория каталога (серия бренда шин), плитка (с плашкой) [https://ru39391.github.io/ds.dist/subcategory-tires-tile.html](https://ru39391.github.io/ds.dist/subcategory-tires-tile.html)~~
+1. ~~Страница сравнения (mob_tire_selection_result) [https://ru39391.github.io/ds.dist/comparing.html](https://ru39391.github.io/ds.dist/comparing.html)~~
+1. ~~Корзина (cart, mob_cart, mob_cart_scroll) [https://ru39391.github.io/ds.dist/cart.html](https://ru39391.github.io/ds.dist/cart.html)~~
+1. ~~Оформление заказа, 4 шага (ordering_1, ordering_2, ordering_3, ordering_3_1, ordering_4, mob_ordering) [https://ru39391.github.io/ds.dist/checkout.html](https://ru39391.github.io/ds.dist/checkout.html), прочие шаги смотреть в списке [https://ru39391.github.io/ds.dist/](https://ru39391.github.io/ds.dist/)~~
+1. ~~Заказ успешно оформлен (ordering_ok), модальное окно [https://ru39391.github.io/ds.dist/ui_modals.html](https://ru39391.github.io/ds.dist/ui_modals.html)~~
+1. ~~Страница товара (detail, mob_detail, detail_tabs, detail_no) [https://ru39391.github.io/ds.dist/position.html](https://ru39391.github.io/ds.dist/position.html)~~
+1. ~~Скидки и акции (stocks, mob_stocks) [https://ru39391.github.io/ds.dist/sales.html](https://ru39391.github.io/ds.dist/sales.html)~~
+1. ~~Страница акции (stock_1) [https://ru39391.github.io/ds.dist/sales-item.html](https://ru39391.github.io/ds.dist/sales-item.html)~~
+1. ~~Страница услуги (service, service_reg_1, service_reg_2, service_reg_3) [https://ru39391.github.io/ds.dist/service.html](https://ru39391.github.io/ds.dist/service.html)~~
 1. ~~Статьи (item_all), списоком [https://ru39391.github.io/ds.dist/articles__row.html](https://ru39391.github.io/ds.dist/articles__row.html) и плиткой [https://ru39391.github.io/ds.dist/articles__cols.html](https://ru39391.github.io/ds.dist/articles__cols.html)~~
-1. ~~Страница статьи, с видео (item, item_video)~~ [https://ru39391.github.io/ds.dist/article__item_video.html](https://ru39391.github.io/ds.dist/article__item_video.html)
-1. ~~Контакты (contacts, mob_contacts)~~ [https://ru39391.github.io/ds.dist/contacts.html](https://ru39391.github.io/ds.dist/contacts.html)
+1. ~~Страница статьи, с видео (item, item_video) [https://ru39391.github.io/ds.dist/article__item_video.html](https://ru39391.github.io/ds.dist/article__item_video.html)~~
+1. ~~Контакты (contacts, mob_contacts) [https://ru39391.github.io/ds.dist/contacts.html](https://ru39391.github.io/ds.dist/contacts.html)~~
 1. ЛК: заказы, бонусы, подбор, авто, избранное, данные, пароль, записи
-    * ~~personal area~~ [https://ru39391.github.io/ds.dist/personal-auto.html](https://ru39391.github.io/ds.dist/personal-auto.html)
-    * ~~personal area_orders~~ [https://ru39391.github.io/ds.dist/personal-booking.html](https://ru39391.github.io/ds.dist/personal-booking.html)
-    * ~~personal area_bonus~~ [https://ru39391.github.io/ds.dist/personal-bonus.html](https://ru39391.github.io/ds.dist/personal-bonus.html)
-    * ~~personal area_vin~~ [https://ru39391.github.io/ds.dist/personal-vin.html](https://ru39391.github.io/ds.dist/personal-vin.html)
-    * ~~personal area_vin_new~~ [https://ru39391.github.io/ds.dist/personal-vin.html](https://ru39391.github.io/ds.dist/personal-vin.html)
-    * ~~personal area_auto~~ [https://ru39391.github.io/ds.dist/personal-auto-models.html](https://ru39391.github.io/ds.dist/personal-auto-models.html)
-	* ~~Избранное personal area_select~~ [https://ru39391.github.io/ds.dist/personal-bookmarks.html](https://ru39391.github.io/ds.dist/personal-bookmarks.html)
-	* ~~Данные пользователя personal area_personal information~~ [https://ru39391.github.io/ds.dist/personal-user.html](https://ru39391.github.io/ds.dist/personal-user.html)
-	* ~~Смена пароля personal area_password~~ [https://ru39391.github.io/ds.dist/personal-pwd.html](https://ru39391.github.io/ds.dist/personal-pwd.html)
+    * ~~personal area [https://ru39391.github.io/ds.dist/personal-auto.html](https://ru39391.github.io/ds.dist/personal-auto.html)~~
+    * ~~personal area_orders [https://ru39391.github.io/ds.dist/personal-booking.html](https://ru39391.github.io/ds.dist/personal-booking.html)~~
+    * ~~personal area_bonus [https://ru39391.github.io/ds.dist/personal-bonus.html](https://ru39391.github.io/ds.dist/personal-bonus.html)~~
+    * ~~personal area_vin [https://ru39391.github.io/ds.dist/personal-vin.html](https://ru39391.github.io/ds.dist/personal-vin.html)~~
+    * ~~personal area_vin_new [https://ru39391.github.io/ds.dist/personal-vin.html](https://ru39391.github.io/ds.dist/personal-vin.html)~~
+    * ~~personal area_auto [https://ru39391.github.io/ds.dist/personal-auto-models.html](https://ru39391.github.io/ds.dist/personal-auto-models.html)~~
+	* ~~Избранное personal area_select [https://ru39391.github.io/ds.dist/personal-bookmarks.html](https://ru39391.github.io/ds.dist/personal-bookmarks.html)~~
+	* ~~Данные пользователя personal area_personal information [https://ru39391.github.io/ds.dist/personal-user.html](https://ru39391.github.io/ds.dist/personal-user.html)~~
+	* ~~Смена пароля personal area_password [https://ru39391.github.io/ds.dist/personal-pwd.html](https://ru39391.github.io/ds.dist/personal-pwd.html)~~
 	* Текущие записи personal area_service [https://ru39391.github.io/ds.dist/personal-booking.html](https://ru39391.github.io/ds.dist/personal-booking.html)
