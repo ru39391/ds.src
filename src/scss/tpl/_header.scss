@@ -152,6 +152,11 @@
   transition: all .3s ease;
 }
 
+.header__nav-value {
+  min-width: 18px;
+  height: 18px;
+}
+
 .header__btn-title {
   color: $color__link;
   overflow: hidden;

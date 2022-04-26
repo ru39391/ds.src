@@ -3,6 +3,46 @@ extends personal
 block meta
   - var title = 'Данные пользователя';
 
+block profile
+  nav.header__nav.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-4
+    button.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.d-lg-none(type="button")
+      span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
+        +icon('search')
+      span.header__btn-title Поиск
+    a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
+      span.d-flex.align-items-center.justify-content-center.pos-rel
+        span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center.mr-1
+          +icon('compare')
+        span.header__nav-value.d-flex.align-items-center.justify-content-center.h6.bg-theme-success.color-theme-white.rounded-circle 3
+      span.header__btn-title Сравнить
+    a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
+      span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
+        +icon('car','color-theme-success')
+      span.header__btn-title HYUNDAI Accent
+    a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
+      span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
+        +icon('case')
+      span.header__btn-title Заказы
+    .header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3
+      .d-flex.align-items-center.justify-content-center
+        .header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center.mr-1
+          +icon('user')
+        .header__nav-value.d-flex.align-items-center.justify-content-center.h6.bg-theme-success.color-theme-white.rounded-pill.px-2
+          span.font-weight-bold 300&nbsp;
+          | Б.₽.
+      .d-flex.justify-content-center
+        a.header__btn-title.btn-unstyled(href="#") Сергей | выход
+  .d-flex.align-items-center.justify-content-center
+    a.header__btn.text-uppercase.header__btn_inverse(href="#")
+      +icon('cart','header__btn-icon d-block')
+    .d-flex.flex-column.justify-content-between
+      .header__nav-value.d-flex.align-items-center.justify-content-center.h6.bg-theme-success.color-theme-white.rounded-pill.px-2.mb-1
+        span.font-weight-bold 3&nbsp;
+        | шт.
+      .header__nav-value.d-flex.align-items-center.justify-content-center.h6.bg-theme-light.color-theme-brand.rounded-pill.box-shadow.px-2
+        | 29&nbsp;
+        +icon('favourite')
+
 block personal
   .h2.font-weight-bold.text-center.mb-4 #{title}
   form.section.pb-0.mb-5(action="#")

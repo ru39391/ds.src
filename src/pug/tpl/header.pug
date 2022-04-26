@@ -196,39 +196,38 @@ header.header
                     button.panel__toggler.d-flex.align-items-center.d-xl-none.px-3.py-2.border-bottom(type="button")
                       +icon('arrow-left','h6 color-theme-brand pl-3 mr-2')
                       span.h5 Назад
-
-
     .header__col.header__col_search.col-xl-3.mb-3
       form.search(action="#" method="post")
         input.search__field(type="text" placeholder="Я ищу..." value="")
         button.search__btn(type="submit")
           +icon('search')
     .header__col.header__col_nav.col-xl-5.col-lg-7.flex-grow-1.flex-lg-grow-0.mb-3
-      nav.header__nav.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-4
-        button.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.d-lg-none(type="button")
-          span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-            +icon('search')
-          span.header__btn-title Поиск
-        a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
-          span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-            +icon('compare')
-          span.header__btn-title Сравнить
-        a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
-          span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-            +icon('car')
-          span.header__btn-title Выбор авто
-        a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
-          span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-            +icon('case')
-          span.header__btn-title Заказы
-        .header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3
-          .header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-            +icon('user')
-          .d-flex.justify-content-center            
-            button.d-none.d-lg-block.btn-unstyled(type="button" data-toggle="modal" data-target="#auth") Вход |
-            button.header__btn-title.btn-unstyled(type="button" data-toggle="modal" data-target="#reg")  регистрация
-      a.header__btn.text-uppercase.header__btn_inverse(href="#")
-        +icon('cart','header__btn-icon d-block')
+      block profile
+        nav.header__nav.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-4
+          button.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.d-lg-none(type="button")
+            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
+              +icon('search')
+            span.header__btn-title Поиск
+          a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
+            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
+              +icon('compare')
+            span.header__btn-title Сравнить
+          a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
+            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
+              +icon('car')
+            span.header__btn-title Выбор авто
+          a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
+            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
+              +icon('case')
+            span.header__btn-title Заказы
+          .header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3
+            .header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
+              +icon('user')
+            .d-flex.justify-content-center            
+              button.d-none.d-lg-block.btn-unstyled(type="button" data-toggle="modal" data-target="#auth") Вход |
+              button.header__btn-title.btn-unstyled(type="button" data-toggle="modal" data-target="#reg")  регистрация
+        a.header__btn.text-uppercase.header__btn_inverse(href="#")
+          +icon('cart','header__btn-icon d-block')
   .header__bottom
     nav.topmenu.swiper-container
       .topmenu__wrapper.swiper-wrapper
