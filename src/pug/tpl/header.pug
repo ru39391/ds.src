@@ -208,26 +208,31 @@ header.header
             span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
               +icon('search')
             span.header__btn-title Поиск
-          a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
-            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-              +icon('compare')
-            span.header__btn-title Сравнить
-          a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
-            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-              +icon('car')
-            span.header__btn-title Выбор авто
-          a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3(href="#")
-            span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-              +icon('case')
-            span.header__btn-title Заказы
-          .header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.col-lg-3
-            .header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-              +icon('user')
-            .d-flex.justify-content-center            
-              button.d-none.d-lg-block.btn-unstyled(type="button" data-toggle="modal" data-target="#auth") Вход |
-              button.header__btn-title.btn-unstyled(type="button" data-toggle="modal" data-target="#reg")  регистрация
-        a.header__btn.text-uppercase.header__btn_inverse(href="#")
-          +icon('cart','header__btn-icon d-block')
+          .pos-rel.col-lg-3
+            a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap(href="#")
+              span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
+                +icon('compare')
+              span.header__btn-title Сравнить
+          .pos-rel.col-lg-3
+            a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap(href="#")
+              span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
+                +icon('car')
+              span.header__btn-title Выбор авто
+          .pos-rel.col-lg-3
+            a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap(href="#")
+              span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
+                +icon('case')
+              span.header__btn-title Заказы
+          .pos-rel.col-lg-3
+            .header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap
+              .header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
+                +icon('user')
+              .d-flex.justify-content-center
+                button.theme-hover.d-none.d-lg-block.btn-unstyled(type="button" data-toggle="modal" data-target="#auth") Вход |
+                button.header__btn-title.btn-unstyled(type="button" data-toggle="modal" data-target="#reg")  регистрация
+        .pos-rel
+          a.header__btn.header__btn_inverse(href="#")
+            +icon('cart','header__btn-icon d-block')
   .header__bottom
     nav.topmenu.swiper-container
       .topmenu__wrapper.swiper-wrapper

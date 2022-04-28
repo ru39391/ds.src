@@ -81,6 +81,18 @@ block wrapper
     .mb-3
       button.btn(type="button") Кнопка со стилями по умолчанию
     .mb-3
+      button.btn(type="button")
+        +icon('trash','btn__icon h3 mr-2')
+        | Кнопка с иконкой
+    .mb-3
+      button.btn.btn_nobg(type="button")
+        +icon('trash','btn__icon h3 color-theme-brand mr-2')
+        | Кнопка без фона с иконкой
+    .mb-3
+      button.btn.btn_nobg(type="button") Кнопка без фона
+    .mb-3
+      button.btn-unstyled(type="button") Кнопка (стиль ссылки)
+    .mb-3
       button.btn.text-uppercase(type="button") .text-uppercase
     .mb-3
       button.btn.bg-theme-disabled(type="button") .bg-theme-disabled
