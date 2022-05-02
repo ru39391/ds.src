@@ -18,9 +18,9 @@ block profile
         span.header__btn-title Сравнить
       .popup.popup_width_md.popup_pos_left.box-shadow.border-radius.d-block
         .popup__triangle.bg-theme-white.box-shadow
-        .bg-theme-white.border-radius.zi-2.px-4.py-3
+        .bg-theme-white.border-radius.overflow-hidden.zi-2.px-4.py-3
           .d-flex.align-items-start.justify-content-between.mb-4
-            .popup__title.h3.font-weight-bold.color-theme-brand Товар готов к сравнению
+            .h3.font-weight-bold.color-theme-brand Товар готов к сравнению
             .h4.text-nowrap.d-flex.flex-column.align-items-center.justify-content-center.box-shadow.bg-theme-success.color-theme-white.rounded-pill.px-2.py-1 3 шт.
           .mb-5
             a.h5.theme-hover(href="#") Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL  Ice Guard
@@ -28,7 +28,7 @@ block profile
             button.popup__close.btn.btn_nobg.text-left.px-0(type="button") Продолжить
               br
               | покупки
-            button.btn.text-uppercase(href="#") Сравнить
+            button.btn.text-uppercase(type="button") Сравнить
     .pos-rel.col-lg-3
       a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap(href="#")
         span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
@@ -36,8 +36,8 @@ block profile
         span.header__btn-title HYUNDAI Accent
       .popup.box-shadow.border-radius.d-block
         .popup__triangle.bg-theme-white.box-shadow
-        .bg-theme-white.border-radius.zi-2.pt-4.pb-3.px-4
-          .popup__title.h5.color-theme-brand.mb-2 Выберете свой автомобиль и поиск товаров на сайте станет значительно проще.
+        .bg-theme-white.border-radius.overflow-hidden.zi-2.pt-4.pb-3.px-4
+          .h5.color-theme-brand.mb-2 Выберете свой автомобиль и поиск товаров на сайте станет значительно проще.
           .d-flex.align-items-center.justify-content-between
             button.popup__close.btn.btn_nobg.px-0(type="button") Позже
             a.btn.font-weight-bold.px-3(href="#") ОК
@@ -46,6 +46,22 @@ block profile
         span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
           +icon('case')
         span.header__btn-title Заказы
+      .popup.popup_width_md.popup_pos_left.box-shadow.border-radius.d-block
+        .popup__triangle.bg-theme-white.box-shadow
+        form.bg-theme-white.border-radius.overflow-hidden.zi-2.px-4.py-3(action="#")
+          .d-flex.align-items-center.justify-content-between.mb-4
+            .h3.font-weight-bold.color-theme-brand.mr-3 Что с моим заказом?
+            button.popup__close.btn-unstyled.rounded-circle.bg-theme-white(type="button")
+              +icon('close','h3 color-theme-brand')
+          .mb-5
+            .form__item.mb-4
+              input.form__field(type="text" value="")
+              label.form__label.form__label_title Номер заказа
+            .form__item
+              input.form__field(type="text" value="")
+              label.form__label.form__label_title +7 (___) ___-__-__
+          .d-flex.align-items-center.justify-content-end
+            button.btn.text-uppercase(type="submit") Отправить
     .pos-rel.col-lg-3
       .header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap
         .d-flex.align-items-center.justify-content-center
@@ -58,20 +74,22 @@ block profile
           a.header__btn-title.btn-unstyled(href="#") Сергей | выход
   .pos-rel
     .d-flex.align-items-center.justify-content-center
-      a.header__btn.header__btn_inverse(href="#")
-        +icon('cart','header__btn-icon d-block')
-      .header__cart-data.d-flex.flex-column.justify-content-between
+      button.header__btn.header__btn_type_cart-holder.header__btn_inverse(type="button" data-target="#cart")
+        +icon('cart','header__btn-icon header__btn-icon_show zi-2')
+        +icon('close','header__btn-icon header__btn-icon_close zi-2 mr-md-2')
+        span.header__btn-caption.color-theme-white.text-uppercase.pointer-events-none.zi-2.d-none.d-sm-block Корзина
+      .header__cart-data.d-flex.flex-column.justify-content-between.zi-2
         a.header__counter.d-flex.align-items-center.justify-content-center.h6.bg-theme-success.color-theme-white.rounded-pill.px-md-2.mb-1(href="#")
           span.font-weight-bold.mr-md-1 3
           span.d-none.d-md-block шт.
         a.header__counter.d-flex.align-items-center.justify-content-center.h6.bg-theme-light.color-theme-brand.rounded-pill.box-shadow.px-md-2(href="#")
           span.mr-md-1 29
           +icon('favourite','d-none d-md-block')
-    .popup.popup_width_md.popup_pos_right.box-shadow.border-radius.d-none.block
+    .popup.popup_width_md.popup_pos_right.box-shadow.border-radius.d-block
       .popup__triangle.bg-theme-white.box-shadow
-      .bg-theme-white.border-radius.zi-2.px-4.py-3
+      .bg-theme-white.border-radius.overflow-hidden.zi-2.px-4.py-3
         .d-flex.align-items-start.justify-content-between.mb-4
-          .popup__title.h3.font-weight-bold.color-theme-brand Товар добавлен в избранное
+          .h3.font-weight-bold.color-theme-brand Товар добавлен в избранное
           .h4.text-nowrap.d-flex.flex-column.align-items-center.justify-content-center.box-shadow.bg-theme-light.color-theme-brand.rounded-pill.px-2.py-1 3 шт.
         .mb-5
           a.h5.theme-hover(href="#") Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL  Ice Guard
@@ -79,17 +97,17 @@ block profile
           button.popup__close.btn.btn_nobg.text-left.px-0(type="button") Продолжить
             br
             | покупки
-          button.btn.text-uppercase(href="#") В избранное
+          button.btn.text-uppercase(type="button") В избранное
     .popup.popup_width_lg.popup_pos_right.box-shadow.border-radius.d-block
       .popup__triangle.bg-theme-white.box-shadow
       button.popup__close.popup__close_type_btn.btn-unstyled.rounded-circle.bg-theme-white(type="button")
         +icon('close','h3 color-theme-brand')
-      .bg-theme-white.border-radius.zi-2
+      .bg-theme-white.border-radius.overflow-hidden.zi-2
         .popup__content
           .p-4.border-bottom
-            .popup__title.h3.font-weight-bold.color-theme-brand.mb-4 Товар успешно добавлен в корзину
+            .h3.font-weight-bold.color-theme-brand.mb-4 Товар успешно добавлен в корзину
             .row.mb-4
-              .col-6.col-sm-3.offset-3.pr-3.mb-3.mb-sm-0.ml-sm-0
+              .col-4.col-sm-3.offset-4.text-center.pr-3.mb-2.mb-sm-0.ml-sm-0
                 a.border.border-radius.overflow-hidden.d-block(href="#")
                   +img('content/cards/card-1.jpg')
               .col-sm-8
@@ -104,15 +122,94 @@ block profile
                     .font-weight-bold.text-nowrap.mr-1 7 337.12
                     | ₽
             .d-flex.flex-wrap.align-items-center.justify-content-center.justify-content-sm-between
-              a.btn.btn_nobg.h4.mb-2.mb-sm-0.px-3.px-0.py-0(href="#")
+              button.popup__close.btn.btn_nobg.h4.mb-2.mb-sm-0.px-3.px-0.py-0(type="button")
                 +icon('continue','h3 color-theme-brand mr-2')
-                span.h5 Продолжить покупки
-              button.btn.text-uppercase(href="#") Перейти в корзину
+                span.h5.pointer-events-none Продолжить покупки
+              a.btn.text-uppercase(href="#") Перейти в корзину
           .pt-4.px-4.pb-3
             .h4.mb-3 Рекомендуем
             .slides.slides_carousel.swiper-container.pt-1.pb-3
               +slidesNav
-              - var wheels = ['Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17',]
+              - var wheels = ['Диск КиК Сильверстоун','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17','Диск КиК Сильверстоун (КС770-02) 6,5x17']
+              .swiper-wrapper.align-items-stretch
+                each wheels__item in wheels
+                  .swiper-slide.pr-3
+                    .card.card_slide_sm.d-flex.flex-column.justify-content-between.h-100.p-3
+                      .card__header.mb-2
+                        a.card__picture(href="#")
+                          +img('content/cards/card-2.jpg')
+                        .card__meta.card__meta_left
+                          .label.label_hit.text-uppercase.px-2 Хит
+                      .card__body.d-flex.flex-column.justify-content-between.flex-grow-1
+                        .card__intro
+                          a.h6.theme-hover.d-block.mb-1(href="#")!= wheels__item
+                        .card__footer
+                          .card__meta.card__meta_row.mb-2
+                            .card__price
+                              span.card__price-value 7 337.12
+                              | ₽
+                          a.btn.text-uppercase(href="#") В корзину
+    #cart.popup.popup_width_lg.popup_pos_right.box-shadow.border-radius
+      .popup__triangle.bg-theme-white.box-shadow
+      .bg-theme-white.border-radius.overflow-hidden.zi-2
+        .popup__content
+          .p-4.border-bottom
+            .d-flex.flex-wrap.align-items-center.mb-4
+              .h3.font-weight-bold.color-theme-brand.mr-3 Товары в корзине
+              .h4.text-nowrap.d-flex.flex-column.align-items-center.justify-content-center.box-shadow.bg-theme-brand.color-theme-white.rounded-pill.px-2.py-1 4 шт.
+            .row.align-items-center.mb-3
+              .col-4.col-sm-2.offset-4.mb-2.mb-sm-0.ml-sm-0
+                a.border.border-radius.overflow-hidden.d-block(href="#")
+                  +img('content/cards/card-1.jpg')
+              .col-sm-6
+                a.h5.theme-hover.d-block.mb-2.mb-sm-0(href="#") Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL Ice Guard
+              .col-sm-4.d-flex.align-items-center.justify-content-between
+                .h5 4 шт.
+                .h3.d-flex
+                  .font-weight-bold.text-nowrap.mr-1 7 337.12
+                  | ₽
+            .row.align-items-center.mb-3
+              .col-4.col-sm-2.offset-4.mb-2.mb-sm-0.ml-sm-0
+                a.border.border-radius.overflow-hidden.d-block(href="#")
+                  +img('content/cards/card-1.jpg')
+              .col-sm-6
+                a.h5.theme-hover.d-block.mb-2.mb-sm-0(href="#") Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL Ice Guard
+              .col-sm-4.d-flex.align-items-center.justify-content-between
+                .h5 4 шт.
+                .h3.d-flex
+                  .font-weight-bold.text-nowrap.mr-1 7 337.12
+                  | ₽
+            .row.align-items-center.mb-3
+              .col-4.col-sm-2.offset-4.mb-2.mb-sm-0.ml-sm-0
+                a.border.border-radius.overflow-hidden.d-block(href="#")
+                  +img('content/cards/card-1.jpg')
+              .col-sm-6
+                a.h5.theme-hover.d-block.mb-2.mb-sm-0(href="#") Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL Ice Guard
+              .col-sm-4.d-flex.align-items-center.justify-content-between
+                .h5 4 шт.
+                .h3.d-flex
+                  .font-weight-bold.text-nowrap.mr-1 7 337.12
+                  | ₽
+            .row.align-items-center.mb-3
+              .col-4.col-sm-2.offset-4.mb-2.mb-sm-0.ml-sm-0
+                a.border.border-radius.overflow-hidden.d-block(href="#")
+                  +img('content/cards/card-1.jpg')
+              .col-sm-6
+                a.h5.theme-hover.d-block.mb-2.mb-sm-0(href="#") Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL Ice Guard
+              .col-sm-4.d-flex.align-items-center.justify-content-between
+                .h5 4 шт.
+                .h3.d-flex
+                  .font-weight-bold.text-nowrap.mr-1 7 337.12
+                  | ₽
+            .d-flex.flex-wrap.align-items-center.justify-content-center.justify-content-sm-between
+              button.popup__close.btn.btn_nobg.h4.mb-2.mb-sm-0.px-3.px-0.py-0(type="button")
+                +icon('continue','h3 color-theme-brand mr-2')
+                span.h5.pointer-events-none Продолжить покупки
+              a.btn.text-uppercase(href="#") Перейти в корзину
+          .pt-4.px-4.pb-3
+            .h4.mb-3 Рекомендуем
+            .slides.slides_carousel.swiper-container.pt-1.pb-3
+              +slidesNav
               .swiper-wrapper.align-items-stretch
                 each wheels__item in wheels
                   .swiper-slide.pr-3

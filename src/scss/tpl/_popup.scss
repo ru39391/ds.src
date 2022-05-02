@@ -91,8 +91,10 @@ $popup__width_lg: 530px;
 }
 
 .popup__content {
-  @include media-breakpoint-down(sm) {
-    height: 600px;
-    overflow-y: scroll;
+  max-height: 600px;
+  overflow-y: scroll;
+
+  @include media-breakpoint-up(lg) {
+    @include offset(0 -17px 0 0,0 17px 0 0);
   }
 }
