@@ -1,5 +1,6 @@
 $popup__width_sm: 194px;
 $popup__width_md: 316px;
+$popup__width_lg: 530px;
 @mixin popupParams($popup_w) {
   width: $popup_w;
   margin-left: -($popup_w/2);
@@ -24,6 +25,12 @@ $popup__width_md: 316px;
   &.popup_width_md {
     @include media-breakpoint-up(md) {
       @include popupParams($popup__width_md);
+    }
+  }
+
+  &.popup_width_lg {
+    @include media-breakpoint-up(md) {
+      @include popupParams($popup__width_lg);
     }
   }
 
@@ -63,5 +70,29 @@ $popup__width_md: 316px;
 
   @include media-breakpoint-down(sm) {
     display: none;
+  }
+}
+
+.popup__close {
+  &.popup__close_type_btn {
+    position: absolute;
+    z-index: 3;
+
+    @include media-breakpoint-up(md) {
+      top: 32px;
+      right: 32px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      top: 12px;
+      right: 12px;
+    }
+  }
+}
+
+.popup__content {
+  @include media-breakpoint-down(sm) {
+    height: 600px;
+    overflow-y: scroll;
   }
 }

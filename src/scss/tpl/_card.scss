@@ -13,6 +13,10 @@
     max-width: 207px;
   }
 
+  &.card_slide_sm {
+    max-width: 145px;
+  }
+
   &.card_sm {
     @include media-breakpoint-down(md) {
       max-width: 207px;
