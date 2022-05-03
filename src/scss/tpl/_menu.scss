@@ -1,13 +1,44 @@
+.menu {
+  position: relative;
+}
+
 .menu__title {
   @extend %btn-default;
-  color: $color__text_default;
   transition: all .3s ease;
 
-  &:hover {
-    color: $color__brand;
+  &.menu__title_active {
+    .menu__icon {
+      transform: rotate(-180deg);
+    }
+
+    & + .menu__wrapper {
+      opacity: 1;
+      pointer-events: all;
+    }
   }
 }
 
 .menu__icon {
   margin: 0 0 -.25rem;
+  transition: all .3s ease;
+}
+
+.menu__wrapper {
+  @include before;
+  position: absolute;
+  right: 0;
+  width: 200px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s ease;
+
+  &:before {
+    @include pos(-1.5rem,-1rem);
+    right: -1rem;
+    bottom: -1rem;
+    z-index: 1;
+    border-radius: .25rem;
+    background-color: $color__light;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.16);
+  }
 }

@@ -22,9 +22,9 @@
 
 1. ни в одной форме нет валидатора (поставить [https://github.com/jzaefferer/jquery-validation](https://github.com/jzaefferer/jquery-validation))
 1. нигде нет масок ввода (поставить [http://mths.be/placeholder](http://mths.be/placeholder))
-1. ~~ничего не происходит при кликах на каталог и услуги в шапки~~ - **сделано**
+1. ~~ничего не происходит при кликах на каталог и услуги в шапки~~ - **меню добавлены**
 1. ~~все слайдеры поумолчанию прокручены в правую сторону, кнопки для слайда перепутаны местами~~ - **поправил баг с кнопками, насчёт прокрутки в правую сторону нужно пояснение - сделать прокрутку бесконечной?**
-1. в помощи не работает подменю
+1. ~~в помощи не работает подменю~~ - **подменю добавлено**
 1. ~~почему верстка не резиновая, а дергается при изменении размера окна? на должна быть резиновой~~ - **сделал [https://ru39391.github.io/ds.dist/](https://ru39391.github.io/ds.dist/), возможно, потребуется поправить расстояния в блоках форм; думаю, также изменить расстояния между элементами в шапке [https://ru39391.github.io/ds.dist/_header.html](https://ru39391.github.io/ds.dist/_header.html) и высоту иллюстрации статьи [https://ru39391.github.io/ds.dist/sales-item.html](https://ru39391.github.io/ds.dist/sales-item.html)**
 1. ~~не нашел вестки каталага в виде таблицы [https://www.screencast.com/t/Z8AVpAlLqsKA](https://www.screencast.com/t/Z8AVpAlLqsKA) (не списка моделей [https://ds.39391.ru/subcategory-tires-list.html](https://ds.39391.ru/subcategory-tires-list.html) а товаров)~~ - **поправлено [https://ru39391.github.io/ds.dist/subcategory-tires-list.html](https://ru39391.github.io/ds.dist/subcategory-tires-list.html), добавлено [https://ru39391.github.io/ds.dist/subcategory.html](https://ru39391.github.io/ds.dist/subcategory.html)**
 1. ~~было требование о том, чтобы все размеры шрифтов, отступы, linw-height и т.д были в rem - все в пикселях - переделать~~ - **готово**

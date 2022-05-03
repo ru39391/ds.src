@@ -51,7 +51,7 @@
   }
 
   @include media-breakpoint-down(lg) {
-    @include pos(0,0);
+    @include pos(0 !important,0);
     bottom: 0;
     width: 304px;
     overflow-x: hidden;
