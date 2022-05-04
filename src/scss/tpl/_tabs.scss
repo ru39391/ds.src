@@ -103,7 +103,7 @@
 .tabs__grid {
   display: grid;
   grid-row-gap: 32px;
-  grid-column-gap: 32px;
+  grid-column-gap: 2rem;
   grid-template-columns: repeat(4,1fr);
 }
 

@@ -1,7 +1,13 @@
 .modal-dialog {
-  &.modal-dialog_wide {
+  &.modal-dialog_lg {
     @include media-breakpoint-up(md) {
       max-width: 630px;
+    }
+  }
+
+  &.modal-dialog_xl {
+    @include media-breakpoint-up(md) {
+      max-width: 1066px;
     }
   }
 }

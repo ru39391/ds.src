@@ -38,7 +38,7 @@ block personal
   form.section.px-lg-5.px-md-4.px-3.pt-2.pb-3.pb-sm-2.mb-5(action="#")
     .row.align-items-center
       .col-xl-8.col-sm-6
-        button.btn.btn_nobg.h5.p-0(type="button")
+        button.btn.btn_nobg.h5.p-0(type="button" data-toggle="modal" data-target="#booking")
           +icon('services','btn__icon h4 color-theme-brand mr-2')
           | Записаться на услугу
       .col-xl-4.col-sm-6
@@ -48,3 +48,74 @@ block personal
             option Услуга 1
             option Услуга 2
             option Услуга 3
+
+block popups
+  .modal.fade.show#booking(tabindex="-1" aria-hidden="true" style="display:block;")
+    .modal-dialog.modal-dialog_xl
+      form.modal-content.border-0.box-shadow.overflow-hidden.pt-md-5.pt-4(action="#")
+        .px-md-5.px-4
+          +svg('services-tires','modal__bg modal__bg_pos_left d-none')
+          .modal-header.d-flex.align-items-center.justify-content-between.border-0.zi-2.p-0.mb-1
+            .h2.font-weight-bold.color-theme-brand.mr-3 Запись на шиномонтаж
+            button.close.h2.btn-unstyled.color-theme-brand.py-0(data-dismiss="modal")
+              +icon('close')
+          .d-flex.align-items-center.mb-3
+            +icon('placemark','h6 color-theme-brand mr-2')
+            .h5 ул. Доватора, 11
+          .row.mb-5
+            .col-md-6
+              .d-flex.align-items-center.justify-content-between.box-shadow.border-radius.p-3
+                .booking-heading.booking-heading_active.d-flex.align-items-center
+                  .booking-heading__counter.h3.d-flex.flex-column.align-items-center.justify-content-center.font-weight-bold.rounded-circle.color-theme-white.mr-2 1
+                  .booking-heading__title.h4
+                    span.booking-heading__date.mr-2
+                      span.color-theme-brand Выберете дату и время
+                    span.booking-heading__time
+                +icon('readmore-right','booking-heading__arrow h3 color-theme-brand')
+            .col-md-6
+              .d-flex.align-items-center.justify-content-between.box-shadow.border-radius.p-3
+                .booking-heading.d-flex.align-items-center
+                  .booking-heading__counter.h3.d-flex.flex-column.align-items-center.justify-content-center.font-weight-bold.rounded-circle.color-theme-white.mr-2 2
+                  .booking-heading__title.h4 Регистрация
+                +icon('readmore-right','booking-heading__arrow h3 color-theme-brand')
+          .booking-form.zi-2.p-0.mb-4
+            .booking-form__col.booking-form__col_active
+              .row
+                .col-md-5
+                  .booking-form__datepicker
+                .col-md-5.offset-md-2
+                  .booking-form__datepicker
+            .booking-form__col
+              .row
+                .col-md-5.d-flex.flex-column
+                  .form__item.mb-4
+                    input.form__field(type="text" value="")
+                    label.form__label.form__label_title Ваше имя*
+                  .form__item.mb-4
+                    input.form__field(type="text" value="")
+                    label.form__label.form__label_title +7 (___) ___-__-__*
+                  .form__item.mb-4
+                    input.form__field(type="text" value="")
+                    label.form__label.form__label_title e-mail*
+                .col-md-5.offset-md-2.d-flex.flex-column
+                  .form__item.mb-4
+                    input.form__field(type="text" value="")
+                    label.form__label.form__label_title Гос. номер*
+                  .form__item.mb-4
+                    input.form__field(type="text" value="")
+                    label.form__label.form__label_title Автомобиль (марка, модель)*
+                  .form__item.mb-4
+                    input.form__toggler.form__toggler_checkbox(id="tyre-storage" type="checkbox" value="")
+                    label.form__label.form__label_checkbox(for="tyre-storage")
+                      +icon('checked','form__label-icon')
+                      span.form__label-title Оставить шины на хранение
+        .border-top.px-md-5.px-4.py-4
+          .row
+            .d-flex.flex-wrap.align-items-center.col-xl-9.col-lg-8.col-md-10.mb-lg-0.mb-4
+              .h6.col-md-6.mb-3.mb-md-0 *-поля обязательные для заполнения
+              .h6.col-xl-5.col-md-6 Нажимая “Записаться” вы принимаете
+                br
+                | условия&nbsp;
+                a.color-theme-brand(href="#") Политики конфиденциальности
+            .d-flex.justify-content-lg-end.justify-content-center.col-xl-3.col-lg-4
+              button.btn.text-uppercase.px-5(type="submit") Записаться

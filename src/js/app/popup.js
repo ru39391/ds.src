@@ -43,8 +43,10 @@ popupCloseBtns.forEach(popupCloseBtnsEl => {
   });
 });
 
-popupCartToggler.addEventListener('click', e => {
-  e.preventDefault();
-  toggleHeaderBtnClass(e.target);
-  showPopup(e.target.getAttribute('data-target'));
-});
+if(popupCartToggler) {
+  popupCartToggler.addEventListener('click', e => {
+    e.preventDefault();
+    toggleHeaderBtnClass(e.target);
+    showPopup(e.target.getAttribute('data-target'));
+  });
+};

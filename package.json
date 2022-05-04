@@ -47,7 +47,9 @@
     "desandro-classie": "^1.0.1",
     "formstone": "^1.4.20-1",
     "jquery": "^3.5.1",
+    "js-datepicker": "^5.18.0",
     "nouislider": "^14.7.0",
-    "swiper": "^5.4.1"
+    "swiper": "^5.4.1",
+    "vanillajs-datepicker": "^1.2.0"
   }
 }

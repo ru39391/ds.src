@@ -1,0 +1,29 @@
+.booking-heading {
+  &.booking-heading_active {
+    .booking-heading__counter {
+      background-color: $color__brand;
+    }
+
+    .booking-heading__title {
+      color: $color__text_default;
+    }
+
+    .booking-heading__arrow {
+      display: block;
+    }
+  }
+}
+
+.booking-heading__counter {
+  @include wh(22px);
+  @include fw(22px);
+  background-color: $color__border;
+}
+
+.booking-heading__title {
+  color: $color__border;
+}
+
+.booking-heading__arrow {
+  display: none;
+}

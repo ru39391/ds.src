@@ -1,0 +1,15 @@
+.booking-form {
+  display: flex;
+  overflow: hidden;
+  transition: all .2s ease;
+}
+
+.booking-form__col {
+  @include fw(100%);
+  opacity: 0;
+
+  &.booking-form__col_active {
+    opacity: 1;
+    transition: all .5s ease .3s;
+  }
+}
