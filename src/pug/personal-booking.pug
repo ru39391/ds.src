@@ -50,44 +50,70 @@ block personal
             option Услуга 3
 
 block popups
-  .modal.fade.show#booking(tabindex="-1" aria-hidden="true" style="display:block;")
+  .modal.fade#booking(tabindex="-1" aria-hidden="true")
     .modal-dialog.modal-dialog_xl
-      form.modal-content.border-0.box-shadow.overflow-hidden.pt-md-5.pt-4(action="#")
-        .px-md-5.px-4
-          +svg('services-tires','modal__bg modal__bg_pos_left d-none')
+      form.modal-content.border-0.box-shadow.overflow-hidden.py-md-5.py-4(action="#")
+        .px-md-5.px-3
+          +svg('services-tires','modal__bg modal__bg_pos_left')
           .modal-header.d-flex.align-items-center.justify-content-between.border-0.zi-2.p-0.mb-1
             .h2.font-weight-bold.color-theme-brand.mr-3 Запись на шиномонтаж
             button.close.h2.btn-unstyled.color-theme-brand.py-0(data-dismiss="modal")
               +icon('close')
-          .d-flex.align-items-center.mb-3
+          .d-flex.align-items-center.zi-2.mb-3
             +icon('placemark','h6 color-theme-brand mr-2')
             .h5 ул. Доватора, 11
-          .row.mb-5
-            .col-md-6
-              .d-flex.align-items-center.justify-content-between.box-shadow.border-radius.p-3
-                .booking-heading.booking-heading_active.d-flex.align-items-center
+          .row.mb-4.mb-lg-5.zi-2
+            .col-lg-6.mb-3.mb-lg-0
+              .booking-heading.booking-heading_active.d-flex.align-items-center.justify-content-between.bg-theme-white.box-shadow.border-radius.p-3(data-target="order-datepicker")
+                .d-flex.align-items-center
                   .booking-heading__counter.h3.d-flex.flex-column.align-items-center.justify-content-center.font-weight-bold.rounded-circle.color-theme-white.mr-2 1
                   .booking-heading__title.h4
-                    span.booking-heading__date.mr-2
+                    span.booking-heading__date.mr-1
                       span.color-theme-brand Выберете дату и время
                     span.booking-heading__time
                 +icon('readmore-right','booking-heading__arrow h3 color-theme-brand')
-            .col-md-6
-              .d-flex.align-items-center.justify-content-between.box-shadow.border-radius.p-3
-                .booking-heading.d-flex.align-items-center
+                button.booking-heading__btn.btn-unstyled.h5.p-0(type="button")
+                  +icon('edit','btn__icon h4 color-theme-brand mr-2')
+                  | Изменить
+            .col-lg-6
+              .booking-heading.d-flex.align-items-center.justify-content-between.bg-theme-white.box-shadow.border-radius.p-3(data-target="order-reg")
+                .d-flex.align-items-center
                   .booking-heading__counter.h3.d-flex.flex-column.align-items-center.justify-content-center.font-weight-bold.rounded-circle.color-theme-white.mr-2 2
                   .booking-heading__title.h4 Регистрация
                 +icon('readmore-right','booking-heading__arrow h3 color-theme-brand')
-          .booking-form.zi-2.p-0.mb-4
-            .booking-form__col.booking-form__col_active
+        .booking-form.zi-2.p-0
+          #order-datepicker.booking-form__col
+            .px-md-5.px-3
               .row
-                .col-md-5
+                .col-lg-5.mb-3.mb-lg-0
                   .booking-form__datepicker
-                .col-md-5.offset-md-2
-                  .booking-form__datepicker
-            .booking-form__col
+                .col-lg-5.offset-lg-2
+                  .booking-form__title.h4.color-theme-brand.text-center Время
+                  .booking-form__timetable
+                    input#timetable-radio-1.booking-form__toggler(name="timetable-radio" type="radio" value="" disabled)
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-1") 09:00
+                    input#timetable-radio-2.booking-form__toggler(name="timetable-radio" type="radio" value="" disabled)
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-2") 10:00
+                    input#timetable-radio-3.booking-form__toggler(name="timetable-radio" type="radio" value="")
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-3") 11:00
+                    input#timetable-radio-4.booking-form__toggler(name="timetable-radio" type="radio" value="")
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-4") 12:00
+                    input#timetable-radio-5.booking-form__toggler(name="timetable-radio" type="radio" value="")
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-5") 13:00
+                    input#timetable-radio-6.booking-form__toggler(name="timetable-radio" type="radio" value="")
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-6") 14:00
+                    input#timetable-radio-7.booking-form__toggler(name="timetable-radio" type="radio" value="")
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-7") 15:00
+                    input#timetable-radio-8.booking-form__toggler(name="timetable-radio" type="radio" value="" disabled)
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-8") 16:00
+                    input#timetable-radio-9.booking-form__toggler(name="timetable-radio" type="radio" value="" disabled)
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-9") 17:00
+                    input#timetable-radio-10.booking-form__toggler(name="timetable-radio" type="radio" value="")
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-10") 18:00
+          #order-reg.booking-form__col.d-flex.flex-column.justify-content-between
+            .px-md-5.px-3
               .row
-                .col-md-5.d-flex.flex-column
+                .col-lg-5.d-flex.flex-column
                   .form__item.mb-4
                     input.form__field(type="text" value="")
                     label.form__label.form__label_title Ваше имя*
@@ -97,7 +123,7 @@ block popups
                   .form__item.mb-4
                     input.form__field(type="text" value="")
                     label.form__label.form__label_title e-mail*
-                .col-md-5.offset-md-2.d-flex.flex-column
+                .col-lg-5.offset-lg-2.d-flex.flex-column
                   .form__item.mb-4
                     input.form__field(type="text" value="")
                     label.form__label.form__label_title Гос. номер*
@@ -109,13 +135,13 @@ block popups
                     label.form__label.form__label_checkbox(for="tyre-storage")
                       +icon('checked','form__label-icon')
                       span.form__label-title Оставить шины на хранение
-        .border-top.px-md-5.px-4.py-4
-          .row
-            .d-flex.flex-wrap.align-items-center.col-xl-9.col-lg-8.col-md-10.mb-lg-0.mb-4
-              .h6.col-md-6.mb-3.mb-md-0 *-поля обязательные для заполнения
-              .h6.col-xl-5.col-md-6 Нажимая “Записаться” вы принимаете
-                br
-                | условия&nbsp;
-                a.color-theme-brand(href="#") Политики конфиденциальности
-            .d-flex.justify-content-lg-end.justify-content-center.col-xl-3.col-lg-4
-              button.btn.text-uppercase.px-5(type="submit") Записаться
+            .border-top.px-md-5.px-3.pt-5
+              .row.text-center.text-lg-left
+                .d-flex.flex-wrap.align-items-center.col-xl-9.col-lg-8.mb-lg-0.mb-4
+                  .h6.col-md-6.mb-3.mb-md-0 *-поля обязательные для заполнения
+                  .h6.col-xl-5.col-md-6 Нажимая “Записаться” вы принимаете
+                    br
+                    | условия&nbsp;
+                    a.color-theme-brand(href="#") Политики конфиденциальности
+                .d-flex.justify-content-lg-end.justify-content-center.col-xl-3.col-lg-4
+                  button.btn.text-uppercase.px-5(type="submit") Записаться

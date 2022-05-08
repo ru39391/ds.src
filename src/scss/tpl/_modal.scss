@@ -29,4 +29,13 @@
     margin: -100px 0 0;
     transform: rotateY(0);
   }
+
+  &.modal__bg_pos_left {
+    @include wh(160px);
+    right: auto;
+    bottom: auto;
+    left: -90px;
+    top: 42px;
+    transform: rotateY(0);
+  }
 }

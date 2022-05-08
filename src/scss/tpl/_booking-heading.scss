@@ -1,5 +1,10 @@
 .booking-heading {
+  pointer-events: none;
+
   &.booking-heading_active {
+    cursor: pointer;
+    pointer-events: all;
+
     .booking-heading__counter {
       background-color: $color__brand;
     }
@@ -9,6 +14,16 @@
     }
 
     .booking-heading__arrow {
+      display: block;
+    }
+  }
+
+  &.booking-heading_checked {
+    .booking-heading__arrow {
+      display: none;
+    }
+
+    .booking-heading__btn {
       display: block;
     }
   }
@@ -25,5 +40,9 @@
 }
 
 .booking-heading__arrow {
+  display: none;
+}
+
+.booking-heading__btn {
   display: none;
 }
