@@ -31,6 +31,10 @@ const bookingHeadings = document.querySelectorAll('.booking-heading');
 const datepickerCells = document.querySelectorAll('.datepicker-cell');
 const bookingFormLabels = document.querySelectorAll('.booking-form__label');
 const bookingFormCols = Array.from(document.querySelectorAll('.booking-form__col'));
+const formFields = {
+  date: bookingForm.querySelector('.form__field_value_date'),
+  time: bookingForm.querySelector('.form__field_value_time')
+};
 
 function removeInactiveClass(elem, selector) {
   if(elem.classList.contains(selector)) {
@@ -53,8 +57,14 @@ if(bookingDate) {
     datepickerCellsEl.addEventListener('click', e => {
       const currentColID = e.target.closest('.booking-form__col').id;
       const pickedDate = new Date(Number(e.target.getAttribute('data-date')));
+      const dateFull = `${pickedDate.getDate()} ${Datepicker.locales.ru.monthsShort[pickedDate.getMonth()]} ${pickedDate.getFullYear()}`;
+
       bookingDate.textContent = `${pickedDate.getDate()} ${Datepicker.locales.ru.monthsShort[pickedDate.getMonth()]}`;
       bookingTime.textContent = '';
+
+      formFields.date.value = dateFull;
+      formFields.time.value = '';
+
       bookingFormLabels.forEach(bookingFormLabelsEl => {
         removeInactiveClass(bookingFormLabelsEl, 'booking-form__label_inactive');
       });
@@ -68,6 +78,7 @@ if(bookingDate) {
 bookingFormLabels.forEach(bookingFormLabelsEl => {
   bookingFormLabelsEl.addEventListener('click', e => {
     bookingTime.textContent = `| ${e.target.textContent}`;
+    formFields.time.value = e.target.textContent;
     bookingHeadings.forEach(bookingHeadingsEl => {
       addInactiveClass(bookingHeadingsEl, 'booking-heading_active');
     });

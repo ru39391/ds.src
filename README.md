@@ -38,7 +38,7 @@
 1. [https://ds.39391.ru/contacts.html](https://ds.39391.ru/contacts.html) при переключении табов слева карта должна меняться
 1. ~~[https://ds.39391.ru/filter-battery.html](https://ds.39391.ru/filter-battery.html) пустая страница, фильтр заезжает на футер [https://www.screencast.com/t/xbxgNynm5Aka](https://www.screencast.com/t/xbxgNynm5Aka); "показать еще" в брендах не работает - **у подбора АКБ нет отдельной стр., только фильтр [https://dl3.joxi.net/drive/2022/02/18/0050/2358/3311926/26/4b06f3e91a.jpg](https://dl3.joxi.net/drive/2022/02/18/0050/2358/3311926/26/4b06f3e91a.jpg), синяя плашка с кнопкой "Показать" позиционирована по умолчанию, т.к. предполагал, что фильтрация осуществляется готовым компонентом Битрикс, где есть скрипт, который выставляет style="" с нужными параметрами [https://dl4.joxi.net/drive/2022/02/18/0050/2358/3311926/26/2fa3051a1f.jpg](https://dl4.joxi.net/drive/2022/02/18/0050/2358/3311926/26/2fa3051a1f.jpg). На сайте так сейчас или нет?**~~ - **[https://ru39391.github.io/ds.dist/subcategory-tires-list.html](https://ru39391.github.io/ds.dist/subcategory-tires-list.html) - "Показать ещё" разворачивает список брендов**
 1. ~~[https://ds.39391.ru/filter-motowheels.html](https://ds.39391.ru/filter-motowheels.html), [https://ds.39391.ru/filter-oil.html](https://ds.39391.ru/filter-oil.html) то же самое~~
-1. [https://ds.39391.ru/personal-booking.html](https://ds.39391.ru/personal-booking.html) зачем везде в персональном разделе дублируется заголовок? что должно происходить при клике на запись на услугу?
+1. [https://ds.39391.ru/personal-booking.html](https://ds.39391.ru/personal-booking.html) зачем везде в персональном разделе дублируется заголовок? что должно происходить при клике на запись на услугу? - **в макете два заголовка: для страницы и для блока, поменял содержимое для доп. заголовков; форму записи на услугу добавил**
 1. ~~[https://ds.39391.ru/personal-bookmarks.html](https://ds.39391.ru/personal-bookmarks.html) избранным в слайдере пользоваться невозможно, товары должны быть плиткой~~ - **исправлено [https://ru39391.github.io/ds.dist/personal-bookmarks.html](https://ru39391.github.io/ds.dist/personal-bookmarks.html)**
 1. [https://ds.39391.ru/service.html](https://ds.39391.ru/service.html) в слайдере отзывов нет кнопок для прокрутки
 1. Переключатели над карточками товаров блока "Часто выбирают" сверстал как `input[type="radio"]` [http://joxi.ru/eAOxxg4T6EVYbr](http://joxi.ru/eAOxxg4T6EVYbr). В комментариях к макетам указано, что они будут работать подобно этому блоку на ютубе [http://joxi.ru/RmzDDdgUjZeELA](http://joxi.ru/RmzDDdgUjZeELA). Использовать другой тэг не составит проблем - вёрстка тэгонезависимая, можно оперативно переделать - **предлагаю стилизовать обычные бутсраповские табы**
@@ -69,7 +69,7 @@
 1. ~~Боковой фильтр~~
 1. ~~Мини-корзина (cart_edit)~~
 1. ~~Товар добавлен в корзину: в избранное, к сравнению, что с заказом (cart_edit)~~
-1. Запись на услугу
+1. ~~Запись на услугу~~
 1. ~~Короткое название товара в сетке~~
 1. "Сбросить" в фильтре
 1. Диапазон цен
@@ -110,4 +110,4 @@
 	* ~~Избранное personal area_select~~ [https://ru39391.github.io/ds.dist/personal-bookmarks.html](https://ru39391.github.io/ds.dist/personal-bookmarks.html)
 	* ~~Данные пользователя personal area_personal information~~ [https://ru39391.github.io/ds.dist/personal-user.html](https://ru39391.github.io/ds.dist/personal-user.html)
 	* ~~Смена пароля personal area_password~~ [https://ru39391.github.io/ds.dist/personal-pwd.html](https://ru39391.github.io/ds.dist/personal-pwd.html)
-	* Текущие записи personal area_service [https://ru39391.github.io/ds.dist/personal-booking.html](https://ru39391.github.io/ds.dist/personal-booking.html)
+	* Текущие записи personal area_service [https://ru39391.github.io/ds.dist/personal-booking.html](https://ru39391.github.io/ds.dist/personal-booking.html) - **выпадающий список "Выберите услугу"**

@@ -112,8 +112,14 @@ block popups
                     label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-10") 18:00
           #order-reg.booking-form__col.d-flex.flex-column.justify-content-between
             .px-md-5.px-3
-              .row
+              .form.row
                 .col-lg-5.d-flex.flex-column
+                  .form__item.d-none
+                    input.form__field.form__field_value_date(type="text" value="")
+                    label.form__label.form__label_title Дата
+                  .form__item.d-none
+                    input.form__field.form__field_value_time(type="text" value="")
+                    label.form__label.form__label_title Время
                   .form__item.mb-4
                     input.form__field(type="text" value="")
                     label.form__label.form__label_title Ваше имя*
