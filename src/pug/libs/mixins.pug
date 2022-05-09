@@ -162,6 +162,7 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
         each card__params_val,card__params_index in card__params_arr
           if (card__params_notitle)
             .params__row.d-flex.flex-column.justify-content-end
+              .params__title.h6.invisible!= card__params_index
               .params__value.h5!= card__params_val
           else
             .params__row.d-flex.flex-column.justify-content-end

@@ -15,5 +15,6 @@ import './app/collapse';
 import './app/accordion';
 import './app/panel';
 import './app/popup';
-import './app/datepicker';
+//import './app/datepicker';
+import './app/comparing';
 
