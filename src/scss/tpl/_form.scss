@@ -432,7 +432,7 @@
     box-shadow: none;
     background: $color__brand;
 
-    .noUi-connect {
+    .irs-line {
       background: $color__brand;
     }
 
@@ -468,4 +468,47 @@
 .form__list {
   height: 190px;
   overflow: hidden;
+}
+
+.irs {
+  display: block;
+  position: relative;
+}
+
+.irs-line {
+  height: 1px;
+  display: block;
+  background: $color__brand;
+}
+
+.irs-handle {
+  @include wh(8px,8px);
+  top: -4px;
+  position: absolute;
+  cursor: pointer;
+  box-shadow: none;
+  background: #fff;
+  border-radius: 50%;
+  border-color: $color__brand;
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
+}
+
+.irs-single {
+  display: none;
+}
+
+.irs-min {
+  display: none;
+}
+
+.irs-max {
+  display: none;
+}
+
+.irs-to {
+  display: none;
+}
+
+.irs-from {
+  display: none;
 }

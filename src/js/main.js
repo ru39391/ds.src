@@ -8,7 +8,7 @@ import './app/notify';
 import './app/menu';
 import './app/breakpointchecker';
 import './app/recalculate';
-import './app/ranger';
+//import './app/ranger';
 import './app/cards';
 import './app/header';
 import './app/collapse';
