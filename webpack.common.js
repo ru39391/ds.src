@@ -14,10 +14,19 @@ const paths = {
 const pagesDir = `${paths.src}/pug/`;
 const pages = fs.readdirSync(pagesDir).filter(fileName => fileName.endsWith('.pug'));
 
+const checkPage = (pugFileName) => {
+  if(pugFileName.includes('booking')) {
+    return ['icons','main','datepicker']
+  } else {
+    return ['icons','main']
+  }
+};
+
 module.exports = {
   entry: {
     main: path.resolve(__dirname, 'src/js/main.js'),
-    icons: path.resolve(__dirname, 'src/js/icons.js')
+    icons: path.resolve(__dirname, 'src/js/icons.js'),
+    datepicker: path.resolve(__dirname, 'src/js/datepicker.js')
   },
   output: {
     filename: 'js/[name].bundle.js',
@@ -102,10 +111,11 @@ module.exports = {
     ...pages.map(page => new HtmlWebpackPlugin({
       template: `${pagesDir}/${page}`,
       filename: `./${page.replace(/\.pug/,'.html')}`,
-      minify: false
+      minify: false,
+      chunks: checkPage(page)
     })),
     new SpriteLoaderPlugin({
       plainSprite: true
     })
-  ]  
+  ]
 };
