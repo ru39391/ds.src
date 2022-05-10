@@ -68,6 +68,7 @@ block wrapper
     .mb-3
       .h2.font-weight-bold.mb-4 Отзывы
       .slides.slides_reviews.swiper-container.pt-1.pb-4.px-0.mx-0
+        +slidesNav('slides-reviews-prev', 'slides-reviews-next')
         .swiper-wrapper
           .swiper-slide
             .review.review_slide.h-100.p-3
@@ -136,8 +137,10 @@ block wrapper
         +img('content/carousel/item-3.jpg','img-fluid border-radius')
       .swiper-slide
         +img('content/carousel/item-4.jpg','img-fluid border-radius')
-  .text-center.mb-5
-    a.readmore(href="#") Больше фото
+  .d-flex.justify-content-center.mb-5
+    a.readmore.d-flex.align-items-center(href="#")
+      span.h5.mr-2 Узнать больше о компании
+      +icon('readmore-right','h3 color-theme-brand')
 
   .wrapper
     include base/callorder.pug

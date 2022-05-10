@@ -24,11 +24,11 @@ mixin leftmenu(leftmenu__title, leftmenu__icon, leftmenu__badge, leftmenu__badge
         if (leftmenu__badge_extratext)
           span.leftmenu__badge-text Б.₽.
 
-mixin slidesNav(slidesNav__prev, slidesNav__next, slidesNav__classmod)
+mixin slidesNav(slidesNav__prev="slides-carousel-prev", slidesNav__next="slides-carousel-next", slidesNav__classmod)
   .slides__nav(class=slidesNav__classmod)
-    button.slides__btn.slides__btn_prev.slides-carousel-prev(class=slidesNav__prev type="button")
+    button.slides__btn.slides__btn_prev(class=slidesNav__prev type="button")
       +icon('arrow-left')
-    button.slides__btn.slides__btn_next.slides-carousel-next(class=slidesNav__next type="button")
+    button.slides__btn.slides__btn_next(class=slidesNav__next type="button")
       +icon('arrow-right')
 
 mixin brand(brand__title, brand__classmod, brand__title_classmod, brand__img="content/logo/logo-1.jpg")

@@ -72,18 +72,18 @@ block wrapper
                     +icon('checked','form__label-icon')
                     +icon('summer','icon-marker h4 mr-2')
                     span.form__label-title Летние
-                  input.form__toggler.form__toggler_checkbox(id="tires-checkbox-3" type="checkbox" value="")
+                  input.form__toggler.form__toggler_checkbox.form__toggler_param_winter(id="tires-checkbox-3" type="checkbox" value="")
                   label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-3")
                     +icon('checked','form__label-icon')
                     +icon('winter','icon-marker h4 mr-2')
                     span.form__label-title Зимние
-                  input.form__toggler.form__toggler_checkbox(id="tires-checkbox-4" type="checkbox" value="")
-                  label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-4")
+                  input.form__toggler.form__toggler_checkbox.form__toggler_param_spykes(id="tires-checkbox-4" type="checkbox" value="")
+                  label.form__label.form__label_checkbox.d-none.mb-4(for="tires-checkbox-4")
                     +icon('checked','form__label-icon')
                     +icon('spikes','icon-marker h4 mr-2')
                     span.form__label-title Шипы
-                  input.form__toggler.form__toggler_checkbox(id="tires-checkbox-5" type="checkbox" value="")
-                  label.form__label.form__label_checkbox.mb-4(for="tires-checkbox-5")
+                  input.form__toggler.form__toggler_checkbox.form__toggler_param_spykes(id="tires-checkbox-5" type="checkbox" value="")
+                  label.form__label.form__label_checkbox.d-none.mb-4(for="tires-checkbox-5")
                     +icon('checked','form__label-icon')
                     +icon('nonspikes','icon-marker h4 mr-2')
                     span.form__label-title Без шипов
@@ -354,8 +354,10 @@ block wrapper
                   each logoWheels__item in logoWheels
                     a.d-inline-block.mr-3.mb-4(href="#")
                       +img(logoWheels__item)
-                  .text-center
-                    a.readmore(href="#") Показать еще
+                  .d-flex.justify-content-center
+                    a.readmore.d-flex.align-items-center(href="#")
+                      span.h5.mr-2 Показать еще
+                      +icon('readmore-right','h3 color-theme-brand')
             .tab-pane.fade(id="links-wheels" role="tabpanel" action="#")
               .row
                 .col-lg-10.offset-lg-1.text-center.text-lg-left
@@ -363,8 +365,10 @@ block wrapper
                   each logoWheels__item in logoWheels
                     a.d-inline-block.mr-3.mb-4(href="#")
                       +img(logoWheels__item)
-                  .text-center
-                    a.readmore(href="#") Показать еще
+                  .d-flex.justify-content-center
+                    a.readmore.d-flex.align-items-center(href="#")
+                      span.h5.mr-2 Показать еще
+                      +icon('readmore-right','h3 color-theme-brand')
 
         include category/popular.pug
 
@@ -387,8 +391,10 @@ block wrapper
                         .media__meta.flex-grow-1
                           a.media__title.d-block.mb-2(href="#")!= news__item.title
                           .date.px-2 23.10.2021
-              .text-center.px-lg-5.px-sm-4
-                a.readmore(href="#") Узнать больше новостей
+              .d-flex.justify-content-center.px-lg-5.px-sm-4
+                a.readmore.d-flex.align-items-center(href="#")
+                  span.h5.mr-2 Узнать больше новостей
+                  +icon('readmore-right','h3 color-theme-brand')
           .col-lg-3.ml-lg-0.col-md-6.offset-md-3.col-sm-8.offset-sm-2
             .banner.overflow-hidden
               +img('content/banners/banner-2.jpg','img-cover')
@@ -412,5 +418,7 @@ block wrapper
             .content
               p В нашем интернет-магазине шин и дисков Don-Shina.ru (Дон Шина) представлен большой выбор зимней и летней резины ведущих мировых производителей. Надежные и проверенные шины Nokian (Нокиан), Goodyear, зимние и летние шины Michelin, недорогая резина Continental, Yokohama, Gislaved, Kleber, BF Goodrich, а также автомобильные покрышки отечественных производителей по низким ценам. Купить летние и зимние шины в Ростове можно по низким ценам. Кроме того, в ассортименте присутствуют диски и шины грузовые и для внедорожников. Шины в Таганроге. Шины Шахты. Шины в Новочеркасске.
               p Кроме летних и зимних шин разных размеров, у нас можно купить литые диски, кованые, штампованные на авто: Lenso, Enkei, Slik, ВСМПО, литые диски LS Replica (Реплика), KOSEI, KFZ, Futek, Теч-лайн, хромированные литые диски Futek, а также осуществляем хранение шин и литых дисков на авто всех размеров. Если вы захотите купить диски (автомобильные) на сумму 50000 руб и более, то мы предоставим вам бесплатную доставку. На нашем сайте вы можете воспользоваться удобным подбором шин и дисков по марке автомобиля, а также заказать шины на Дом. В магазине автомобильных шин и дисков ДонШина цены ниже рыночных.
-            .text-lg-left.text-center
-              a.readmore(href="#") Узнать больше о компании
+            .d-flex.justify-content-center
+              a.readmore.d-flex.align-items-center(href="#")
+                span.h5.mr-2 Узнать больше о компании
+                +icon('readmore-right','h3 color-theme-brand')

@@ -1,4 +1,7 @@
 .product-list {
+  transition: all .3s ease;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .12);
+
   &.product-list_active {
     .product-list__body {
       height: 100%;
@@ -8,6 +11,10 @@
       transition: all .3s ease;
       transform: rotate(-180deg);
     }
+  }
+
+  &:hover {
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .2);
   }
 }
 

@@ -1,6 +1,22 @@
 import classie from 'desandro-classie';
 import Inputmask from 'inputmask';
 
+const togglerParamWinter = document.querySelector('.form__toggler_param_winter');
+if(togglerParamWinter) {
+  togglerParamWinter.addEventListener('change', e => {
+    const checked = e.target.checked;
+    const togglerParamSpykes = e.target.closest('.form').querySelectorAll('.form__toggler_param_spykes');
+    togglerParamSpykes.forEach(togglerParamSpykesEl => {
+      const togglerParamLabel = togglerParamSpykesEl.nextElementSibling;
+      if(checked) {
+        togglerParamLabel.classList.remove('d-none');
+      } else {
+        togglerParamLabel.classList.add('d-none');
+      }
+    });
+  });
+}
+
 document.querySelectorAll('.input-email').forEach(field => {
 	Inputmask({
 		alias: 'email',
