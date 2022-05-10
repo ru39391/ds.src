@@ -13,7 +13,7 @@ block wrapper
     .row.align-items-start
       .col-xl-3.col-lg-4.order-2.order-lg-1.mb-5.mb-lg-4
         .accordion.active.mb-2
-          .accordion__header.px-4
+          .accordion__header.px-4(data-target="rnd")
             button.accordion__toggler.readmore.d-block.h3.text-left.font-weight-bold.color-theme-brand(type="button") ДонШина Ростов
           .accordion__body.overflow-hidden.px-4
             .contacts
@@ -42,7 +42,7 @@ block wrapper
                   br
                   | Вс. – Выходной
         .accordion.mb-2
-          .accordion__header.px-4
+          .accordion__header.px-4(data-target="taganrog")
             button.accordion__toggler.readmore.d-block.h3.text-left.font-weight-bold.color-theme-brand(type="button") ДонШина Таганрог
           .accordion__body.overflow-hidden.px-4
             .contacts
@@ -71,7 +71,7 @@ block wrapper
                   br
                   | Вс. – Выходной
         .accordion
-          .accordion__header.px-4
+          .accordion__header.px-4(data-target="volgograd")
             button.accordion__toggler.readmore.d-block.h3.text-left.font-weight-bold.color-theme-brand(type="button") ДонШина Волгоград
           .accordion__body.overflow-hidden.px-4
             .contacts
@@ -100,8 +100,10 @@ block wrapper
                   br
                   | Вс. – Выходной
       .col-xl-9.col-lg-8.order-1.order-lg-2.mb-5.mb-lg-4
-        .border-radius.box-shadow.overflow-hidden
+        #rnd.map.active.border-radius.box-shadow.overflow-hidden
           script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab61ba54858def5cc58e7cbfdae9ffac5c0d900377f9b5655fa84742b96a9c73d&amp;width=100%25&amp;height=460&amp;lang=ru_RU&amp;scroll=false")
+        #taganrog.map.border-radius.box-shadow.overflow-hidden Таганрог
+        #volgograd.map.border-radius.box-shadow.overflow-hidden Волгоград
 
     form.section.mb-5(action="#")
       .border-bottom.px-lg-5.px-md-4.px-3.mb-3

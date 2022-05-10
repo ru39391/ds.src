@@ -71,3 +71,20 @@ document.querySelectorAll('[data-toggle="list"]').forEach(listToggler => {
     }
   });
 });
+
+/* custom service select */
+const serviceSelect = document.querySelector('.custom-select__service');
+if (serviceSelect) {
+  const serviceCaption = document.querySelector('.modal-header__service-title');
+  const serviceBtn = document.querySelector('.btn_toggler-service');
+  const serviceIcon = serviceBtn.querySelector('.btn__icon');
+  serviceSelect.addEventListener('change', e => {
+    if(e.target.selectedIndex !== 0) {
+      serviceCaption.textContent = e.target.value.toLowerCase();
+      serviceBtn.disabled = false;
+      serviceBtn.classList.remove('color-theme-disabled');
+      serviceIcon.classList.remove('color-theme-disabled');
+      serviceIcon.classList.add('color-theme-brand');
+    }
+  });
+}

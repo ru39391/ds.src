@@ -38,16 +38,15 @@ block personal
   form.section.px-lg-5.px-md-4.px-3.pt-2.pb-3.pb-sm-2.mb-5(action="#")
     .row.align-items-center
       .col-xl-8.col-sm-6
-        button.btn.btn_nobg.h5.p-0(type="button" data-toggle="modal" data-target="#booking")
-          +icon('services','btn__icon h4 color-theme-brand mr-2')
+        button.btn.btn_nobg.btn_toggler-service.color-theme-disabled.h5.p-0(type="button" data-toggle="modal" data-target="#booking" disabled)
+          +icon('services','btn__icon h4 color-theme-disabled mr-2')
           | Записаться на услугу
       .col-xl-4.col-sm-6
         .form__select
-          select.form__select-options
+          select.custom-select.custom-select__service
             option Выберете услугу
-            option Услуга 1
-            option Услуга 2
-            option Услуга 3
+            option Шиномонтаж
+            option Консультации
 
 block popups
   .modal.fade#booking(tabindex="-1" aria-hidden="true")
@@ -56,7 +55,8 @@ block popups
         .px-md-5.px-3
           +svg('services-tires','modal__bg modal__bg_pos_left')
           .modal-header.d-flex.align-items-center.justify-content-between.border-0.zi-2.p-0.mb-1
-            .h2.font-weight-bold.color-theme-brand.mr-3 Запись на шиномонтаж
+            .h2.font-weight-bold.color-theme-brand.mr-3 Запись на&nbsp;
+              span.modal-header__service-title шиномонтаж
             button.close.h2.btn-unstyled.color-theme-brand.py-0(data-dismiss="modal")
               +icon('close')
           .d-flex.align-items-center.zi-2.mb-3

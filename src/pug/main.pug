@@ -25,7 +25,7 @@ block wrapper
                 .col-lg-2.offset-lg-2
                   .form__select.mb-4
                     .form__select-title Ширина
-                    select.form__select-options
+                    select.custom-select
                       option --
                       option 5
                       option 6.5
@@ -38,7 +38,7 @@ block wrapper
                 .col-lg-2
                   .form__select.mb-4
                     .form__select-title Высота
-                    select.form__select-options
+                    select.custom-select
                       option --
                       option 9.5
                       option 10
@@ -51,7 +51,7 @@ block wrapper
                 .col-lg-2
                   .form__select.mb-4
                     .form__select-title Диаметр
-                    select.form__select-options
+                    select.custom-select
                       option --
                       option 10
                       option 12
@@ -95,7 +95,7 @@ block wrapper
                   .form__col.pr-md-4.pr-xl-0
                     .form__select.mb-4
                       .form__select-title Диаметр
-                      select.form__select-options
+                      select.custom-select
                         option --
                         option 10
                         option 12
@@ -104,7 +104,7 @@ block wrapper
                   .form__col.pr-md-4.pr-xl-0
                     .form__select.mb-4
                       .form__select-title Ширина
-                      select.form__select-options
+                      select.custom-select
                         option --
                         option 5
                         option 6.5
@@ -115,7 +115,7 @@ block wrapper
                   .form__col.pr-md-4.pr-xl-0
                     .form__select.mb-4
                       .form__select-title Отверстий
-                      select.form__select-options
+                      select.custom-select
                         option --
                         option 3
                         option 4
@@ -126,7 +126,7 @@ block wrapper
                   .form__col.pr-md-4.pr-xl-0
                     .form__select.mb-4
                       .form__select-title PCD
-                      select.form__select-options
+                      select.custom-select
                         option --
                         option 98
                         option 10
@@ -161,7 +161,7 @@ block wrapper
                 .form__row.col-lg-10.offset-lg-1
                   .form__col.pr-md-4.pr-xl-0
                     .dropdown.mb-4
-                      select.car-select.d-none
+                      //- select.d-none
                         option Значение 1
                         option Значение 2
                         option Значение 3
@@ -169,7 +169,7 @@ block wrapper
                         option Значение 5
                       button.dropdown-toggle(id="filter-cars-dropdown-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Выберете марку
                       .dropdown-menu(aria-labelledby="filter-cars-dropdown-1")
-                        .dropdown-menu__header.mb-2.bs-searchbox
+                        .dropdown-menu__header.mb-2
                           input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
                         .dropdown-menu__body
                           ul.dropdown-menu__list
@@ -195,7 +195,7 @@ block wrapper
                               a.dropdown-menu__list-option(role="option") Значение 5
                   .form__col.pr-md-4.pr-xl-0
                     .dropdown.mb-4
-                      select.car-select.d-none
+                      //- select.d-none
                         option Значение 1
                         option Значение 2
                         option Значение 3
@@ -203,7 +203,7 @@ block wrapper
                         option Значение 5
                       button.dropdown-toggle(id="filter-cars-dropdown-2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled) Модель
                       .dropdown-menu(aria-labelledby="filter-cars-dropdown-2")
-                        .dropdown-menu__header.mb-2.bs-searchbox
+                        .dropdown-menu__header.mb-2
                           input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
                         .dropdown-menu__body
                           ul.dropdown-menu__list
@@ -217,7 +217,7 @@ block wrapper
                               a.dropdown-menu__list-option.selected(role="option") Значение 4
                   .form__col.pr-md-4.pr-xl-0
                     .dropdown.mb-4
-                      select.car-select.d-none
+                      //- select.d-none
                         option Значение 1
                         option Значение 2
                         option Значение 3
@@ -225,7 +225,7 @@ block wrapper
                         option Значение 5
                       button.dropdown-toggle(id="filter-cars-dropdown-3" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled) Кузов
                       .dropdown-menu(aria-labelledby="filter-cars-dropdown-3")
-                        .dropdown-menu__header.mb-2.bs-searchbox
+                        .dropdown-menu__header.mb-2
                           input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
                         .dropdown-menu__body
                           ul.dropdown-menu__list
@@ -239,7 +239,7 @@ block wrapper
                               a.dropdown-menu__list-option.selected(role="option") Значение 4
                   .form__col.pr-md-4.pr-xl-0
                     .dropdown.mb-4
-                      select.car-select.d-none
+                      //- select.d-none
                         option Значение 1
                         option Значение 2
                         option Значение 3
@@ -247,7 +247,7 @@ block wrapper
                         option Значение 5
                       button.dropdown-toggle(id="filter-cars-dropdown-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled) Двигатель
                       .dropdown-menu(aria-labelledby="filter-cars-dropdown-4")
-                        .dropdown-menu__header.mb-2.bs-searchbox
+                        .dropdown-menu__header.mb-2
                           input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
                         .dropdown-menu__body
                           ul.dropdown-menu__list

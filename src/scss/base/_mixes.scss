@@ -73,3 +73,11 @@
     height: 100%;
   }
 }
+
+.map {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}

@@ -22,6 +22,10 @@
     height: 26px;
     border-radius: .25rem;
   }
+
+  &:disabled {
+    cursor: default;
+  }
 }
 
 .btn-unstyled {
