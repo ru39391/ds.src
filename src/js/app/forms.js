@@ -1,4 +1,19 @@
 import classie from 'desandro-classie';
+import Inputmask from 'inputmask';
+
+document.querySelectorAll('.input-email').forEach(field => {
+	Inputmask({
+		alias: 'email',
+		showMaskOnHover: false,
+	}).mask(field);
+});
+
+document.querySelectorAll('.input-phone').forEach(field => {
+	Inputmask({
+		mask: '+7 (999) 999-99-99',
+		showMaskOnHover: false,
+	}).mask(field);
+});
 
 const onInputFocus = (e) => {
   classie.add(e.target.parentNode, 'active');

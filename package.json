@@ -46,6 +46,7 @@
     "countdown": "^2.6.0",
     "desandro-classie": "^1.0.1",
     "formstone": "^1.4.20-1",
+    "inputmask": "^5.0.7",
     "jquery": "^3.5.1",
     "js-datepicker": "^5.18.0",
     "nouislider": "^14.7.0",

@@ -16,9 +16,9 @@ const pages = fs.readdirSync(pagesDir).filter(fileName => fileName.endsWith('.pu
 
 const checkPage = (pugFileName) => {
   if(pugFileName.includes('booking')) {
-    return ['icons','main','datepicker']
+    return ['icons','main','validate','datepicker']
   } else {
-    return ['icons','main']
+    return ['icons','main','validate']
   }
 };
 
@@ -26,7 +26,8 @@ module.exports = {
   entry: {
     main: path.resolve(__dirname, 'src/js/main.js'),
     icons: path.resolve(__dirname, 'src/js/icons.js'),
-    datepicker: path.resolve(__dirname, 'src/js/datepicker.js')
+    datepicker: path.resolve(__dirname, 'src/js/datepicker.js'),
+    validate: path.resolve(__dirname, 'src/js/validate.js')
   },
   output: {
     filename: 'js/[name].bundle.js',

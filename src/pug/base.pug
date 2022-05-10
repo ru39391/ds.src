@@ -89,7 +89,7 @@ html(lang="ru")
 
     block modals
       .modal.fade#reg(tabindex="-1" aria-hidden="true")
-        form.modal-dialog(action="#")
+        form#form-reg.modal-dialog(action="#")
           .modal-content.border-0.box-shadow.py-3
             .modal-header.d-flex.align-items-center.justify-content-between.pt-0.px-4.pb-3.mb-4
               .d-flex.align-items-center
@@ -100,17 +100,17 @@ html(lang="ru")
             .modal-body.border-bottom.pt-0.px-4.pb-3.mb-3
               .form
                 .form__item.mb-4
-                  input.form__field(type="text" value="")
+                  input#reg__username.form__field(type="text" value="" name="reg__username")
                   .form__label.form__label_title Ваше имя *
                 .form__item.mb-4
-                  input.form__field(type="text" value="")
+                  input#reg__phone.form__field.input-phone(type="text" value="" name="reg__phone")
                   .form__label.form__label_title Номер телефона *
                 .form__item.mb-4
-                  input.form__field(type="text" value="")
+                  input#reg__email.form__field.input-email(type="text" value="" name="reg__email")
                   .form__label.form__label_title E-mail *
                 .form__item
-                  input.form__toggler.form__toggler_checkbox(id="modal-form-checkbox" type="checkbox" value="")
-                  label.form__label.form__label_checkbox(for="modal-form-checkbox")
+                  input#reg__confidential.form__toggler.form__toggler_checkbox(type="checkbox" value="" name="reg__confidential")
+                  label.form__label.form__label_checkbox(for="reg__confidential")
                     +icon('checked','form__label-icon')
                     span.form__label-title Я принимаю&nbsp;
                       a.text-underline(href="#") политику конфиденциальности&nbsp;
@@ -123,7 +123,7 @@ html(lang="ru")
                   button.btn.text-uppercase.px-3(type="submit") Зарегистрироваться
 
       .modal.fade#auth(tabindex="-1" aria-hidden="true")
-        form.modal-dialog(action="#")
+        form#form-login.modal-dialog(action="#")
           .modal-content.border-0.box-shadow.py-3
             .modal-header.d-flex.align-items-center.justify-content-between.pt-0.px-4.pb-3.mb-4
               .d-flex.align-items-center
@@ -134,10 +134,10 @@ html(lang="ru")
             .modal-body.border-bottom.pt-0.px-4.pb-2.mb-3
               .form.mb-4
                 .form__item.mb-4
-                  input.form__field(type="text" value="")
+                  input#login__username.form__field.input-phone(type="text" value="" name="login__username")
                   .form__label.form__label_title Номер телефона *
                 .form__item
-                  input.form__field(type="text" value="")
+                  input#login__pwd.form__field(type="text" value="" name="login__pwd")
                   .form__label.form__label_title Пароль *
               .d-flex.flex-wrap.align-items-center.justify-content-between
                 a.h5(href="#" data-dismiss="modal" data-toggle="modal" data-target="#pwd") Забыли пароль?
@@ -160,7 +160,7 @@ html(lang="ru")
                 | вам новый пароль
               .form.mb-4
                 .form__item
-                  input.form__field(type="text" value="")
+                  input.form__field.input-phone(type="text" value="")
                   .form__label.form__label_title +7 (_ _ _) _ _ _-_ _-_ _
               .d-flex.flex-wrap.align-items-center.justify-content-end
                 a.h5(href="#" data-dismiss="modal" data-toggle="modal" data-target="#reg") Регистрация
@@ -179,7 +179,7 @@ html(lang="ru")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/formstone/1.4.20/js/touch.js")
     script(src="https://refreshless.com/nouislider/documentation/assets/wNumb.js")
     script(src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js")
-    //- script(src="https://unpkg.com/js-datepicker")
+    script(src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js")
 
 //-
     + pug/tile - товары и баннеры в плитке на стр. результатов results-tires.html http://dl3.joxi.net/drive/2021/11/04/0050/2358/3311926/26/d2900e3683.jpg

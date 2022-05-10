@@ -139,14 +139,14 @@
 }
 
 .form__toggler {
-  & + .form__label {
+  & ~ .form__label {
     @extend %flex-item;
   }
 
   &.form__toggler_checkbox {
     @extend %toggler-default;
 
-    & + .form__label {
+    & ~ .form__label {
       .form__label-icon {
         @extend %flex-column;
         @include fw(24px);
@@ -170,7 +170,7 @@
     }
 
     &:checked {
-      & + .form__label {
+      & ~ .form__label {
         .form__label-icon {
           &:before {
             opacity: 1;
@@ -183,7 +183,7 @@
   &.form__toggler_radio {
     @extend %toggler-default;
 
-    & + .form__label {
+    & ~ .form__label {
       @extend %toggler-theme;
 
       &.form__label_lg {
@@ -194,7 +194,7 @@
     }
 
     &:checked {
-      & + .form__label {
+      & ~ .form__label {
         @extend %toggler-theme-current;
       }
     }
@@ -203,7 +203,7 @@
   &.form__toggler_dot {
     @extend %toggler-default;
 
-    & + .form__label {
+    & ~ .form__label {
       @include before;
 
       &:before {
@@ -228,7 +228,7 @@
     }
 
     &:checked {
-      & + .form__label {
+      & ~ .form__label {
         &:after {
           background: $color__brand;
         }
@@ -351,13 +351,20 @@
       }
     }
   }
+
+  .error {
+    @include h6;
+    color: $color__danger;
+    margin: .25rem 0 .5rem;
+  }
 }
 
 .form__field {
+  @include offset(0,.25rem .5rem);
   border: 0;
   width: 100%;
-  padding: .25rem .5rem;
   border-radius: .25rem;
+  border: 1px solid rgba(0,0,0,0);
   background: $color__light;
   color: $color__text_default;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .16) inset;
@@ -378,6 +385,11 @@
       border: 0;
       outline: none;
     }
+  }
+
+  &.error {
+    margin: 0;
+    border-color: $color__danger;
   }
 }
 
