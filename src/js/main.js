@@ -15,4 +15,5 @@ import './app/collapse';
 import './app/accordion';
 import './app/panel';
 import './app/popup';
+//import './app/search';
 import './app/comparing';
