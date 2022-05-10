@@ -43,6 +43,21 @@
       }
     }
 
+    .header__search-holder {
+      @include media-breakpoint-down(sm) {
+        @include pos(0,0);
+        right: 0;
+      }
+    }
+
+    .header__col_search_wide {
+      @include media-breakpoint-down(sm) {
+        @include fw(100%);
+        position: static;
+        padding: 1rem 1rem 0;
+      }
+    }
+
     .header__footer {
       transform: translateY(0);
     }
@@ -312,33 +327,46 @@
 
 .header__search-holder {
   z-index: 2;
-  position: relative;
   justify-content: flex-end;
-  transition: all .3s ease;
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+  }
 
   .header__nav {
-    display: none !important;
+    opacity: 0;
+    pointer-events: none;
   }
 
   .header__col_nav {
     z-index: 1;
     position: relative;
     justify-content: flex-end;
+
+    @include media-breakpoint-down(lg) {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 
   .header__col_search_wide {
-    @include pos(0,0);
+    @include pos(2px,0);
     z-index: 2;
     width: auto;
     max-width: initial;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       right: 60px;
     }
 
     @include media-breakpoint-down(lg) {
+      top: 2px;
       right: 0;
       display: block;
+    }
+
+    @include media-breakpoint-down(md) {
+      top: -8px;
     }
   }
 
@@ -364,7 +392,6 @@
   overflow: hidden;
   border-radius: .5rem;
   background: $color__light;
-  transition: all .3s ease;
 }
 
 .header__search-field {
@@ -376,7 +403,6 @@
   border: 0;
   background: none;
   color: $color__brand;
-  transition: all .3s ease;
 }
 
 .header__search-btn {
@@ -404,7 +430,6 @@
   overflow-x: hidden;
   overflow-y: scroll;
   background: $color__light;
-  transition: all .3s ease;
 
   @include media-breakpoint-up(xl) {
     @include offset(0 -17px 0 0,0 17px 0 0);
