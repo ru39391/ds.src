@@ -43,18 +43,25 @@
       }
     }
 
-    .header__search-holder {
-      @include media-breakpoint-down(sm) {
-        @include pos(0,0);
-        right: 0;
-      }
-    }
-
-    .header__col_search_wide {
+    .header__col_search {
       @include media-breakpoint-down(sm) {
         @include fw(100%);
         position: static;
         padding: 1rem 1rem 0;
+      }
+    }
+
+    .header__col_logo_invisible {
+      @include media-breakpoint-down(sm) {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+
+    .header__search-holder {
+      @include media-breakpoint-down(sm) {
+        @include pos(0,0);
+        right: 0;
       }
     }
 
@@ -100,7 +107,6 @@
 .header__col {
   &.header__col_logo {
     @extend %flex-item;
-    //order: 1;
 
     @include media-breakpoint-down(md) {
       justify-content: center;
@@ -110,49 +116,23 @@
   &.header__col_search {
     @include media-breakpoint-up(xl) {
       @include fw(100%/8*3);
-      //order: 2;
     }
 
-    @include media-breakpoint-only(lg) {
-      //order: 3;
-    }
-
-    @include media-breakpoint-down(md) {
-      //order: 2;
+    @include media-breakpoint-down(lg) {
       display: none;
     }
   }
 
   &.header__col_nav {
     @extend %flex-item;
-    //order: 1;
 
     @include media-breakpoint-up(xl) {
       @include fw(100%/8*5);
-      //order: 3;
-    }
-
-    @include media-breakpoint-only(lg) {
-      //order: 2;
     }
 
     @include media-breakpoint-down(md) {
-      //order: 3;
       justify-content: center;
     }
-  }
-
-  &.header__col_search_wide {
-    @include media-breakpoint-down(lg) {
-      display: none;
-    }
-  }
-}
-
-.header__nav {
-  @include media-breakpoint-only(lg) {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
   }
 }
 
@@ -333,23 +313,7 @@
     position: relative;
   }
 
-  .header__nav {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .header__col_nav {
-    z-index: 1;
-    position: relative;
-    justify-content: flex-end;
-
-    @include media-breakpoint-down(lg) {
-      opacity: 0;
-      pointer-events: none;
-    }
-  }
-
-  .header__col_search_wide {
+  .header__col_search {
     @include pos(2px,0);
     z-index: 2;
     width: auto;
@@ -379,11 +343,27 @@
       display: block;
     }
   }
-}
 
-.header__search-holder_active {
-  .header__search-dropdown {
-    height: 100%;
+  .header__col_nav {
+    z-index: 1;
+    position: relative;
+    justify-content: flex-end;
+
+    @include media-breakpoint-down(lg) {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  .header__nav {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.header__search-holder_active {
+    .header__search-dropdown {
+      height: 100%;
+    }
   }
 }
 
