@@ -15,12 +15,21 @@ block filter
 
 block wrapper
   .wrapper
-    nav.pathway
-      a.pathway__link(href="#") Главная
-      a.pathway__link(href="#") Шины
-      a.pathway__current(href="#") Шины R18
+    ul.pathway(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Главная
+          meta(itemprop="position" content="1")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Шины
+          meta(itemprop="position" content="2")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__current(href="#" itemprop="item")
+          span(itemprop="name") Шины R18
+          meta(itemprop="position" content="3")
     section.content
-      h1 #{h1}
+      h1(itemprop="name") #{h1}
     block results__filter
       - var resultsRadio = [{index: 1, title: 'Шины (887)', checked: true}, {index: 2, title: 'Мотошины (0)'}, {index: 3, title: 'Диски (67)'}, {index: 4, title: 'АКБ (0)'}, {index: 5, title: 'Масла (0)'}, {index: 6, title: 'Автотовары (238)'}]
       .category-counter.mb-4 1 840 товаров в 4 каталогах
@@ -69,7 +78,7 @@ block wrapper
 
     include base/links.pug
 
-    .content.content_expanded.mb-5
+    .content.content_expanded.mb-5(itemprop="text")
       include base/content.pug
       .content__footer
         button.readmore.readmore_btn(type="button")

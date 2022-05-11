@@ -5,11 +5,17 @@ block meta
 
 block wrapper
   .wrapper
-    nav.pathway
-      a.pathway__link(href="#") Главная
-      a.pathway__current(href="#") Сравнить
+    ul.pathway(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Главная
+          meta(itemprop="position" content="1")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__current(href="#" itemprop="item")
+          span(itemprop="name") Сравнить
+          meta(itemprop="position" content="2")
     section.content
-      h1 Сравнить
+      h1(itemprop="name") Сравнить
 
     - var comparing = ['Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','Зимние шины Yokohama Ice','Зимние шины Yokohama Ice Guard','Yokohama Ice Guard IG55','Зимние шины Yokohama Ice Guard R17 98T XL','Шины Yokohama Ice Guard 215/55','Yokohama Guard 98T XL']
     ul.nav.nav-tabs.d-flex.flex-wrap.align-items-center(role="tablist")

@@ -5,12 +5,21 @@ block meta
 
 block wrapper
   .wrapper
-    nav.pathway
-      a.pathway__link(href="#") Главная
-      a.pathway__link(href="#") Скидки и акции
-      a.pathway__current(href="#") Скидки на зимние шины Michelin
+    ul.pathway(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Главная
+          meta(itemprop="position" content="1")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Скидки и акции
+            meta(itemprop="position" content="2")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__current(href="#" itemprop="item")
+            span(itemprop="name") Скидки на зимние шины Michelin
+            meta(itemprop="position" content="3")
     section.content
-      h1 Скидки на зимние шины Michelin
+      h1(itemprop="name") Скидки на зимние шины Michelin
     .sale-item.sale-item_section.mb-5
       .sale-item__header.d-block.overflow-hidden.mb-4
         +img('content/sales/sales-1.jpg','img-cover')
@@ -38,7 +47,7 @@ block wrapper
 
     include base/subscribe.pug
 
-    .content.content_expanded.mb-5
+    .content.content_expanded.mb-5(itemprop="text")
       include base/content.pug
       .content__footer
         button.readmore.readmore_btn(type="button")

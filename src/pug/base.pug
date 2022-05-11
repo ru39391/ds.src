@@ -4,14 +4,14 @@ block meta
   - var title = '';
 
 doctype html
-html(lang="ru")
+html(lang="ru" itemscope="" itemtype="http://schema.org/WebPage")
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
     title #{title}
-    meta(name="keywords" content="")
-    meta(name="description" content="")
+    meta(name="keywords" content="" itemprop="keywords")
+    meta(name="description" content="" itemprop="description")
 
     //- link(href="../img/favicon.ico" rel="shortcut icon")
 
@@ -65,19 +65,30 @@ html(lang="ru")
                   a.logo.color-theme-white.mb-4(href="#")
                     +svg('logo')
                   .row.align-items-center
-                    .col-8
-                      .contacts.mb-2
+                    .col-8(itemscope="" itemtype="http://schema.org/AutoPartsStore")
+                      meta(itemprop="name" content="ДонШина Ростов")
+                      meta(itemprop="priceRange" content="Информация о ценах по телефону +7 (863) 22-99-99-4")
+                      meta(itemprop="openingHours" content="Mo-Fr 09:00-19:00")
+                      meta(itemprop="openingHours" content="Sa 10:00-17:00")
+                      span.d-none(itemprop="geo" itemscope="" itemtype="http://schema.org/GeoCoordinates")
+                        meta(itemprop="latitude" content="47.244980")
+                        meta(itemprop="longitude" content="39.648187")
+                      .contacts.mb-2(itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress")
+                        span.d-none(itemprop="postalCode") 344103
+                        span.d-none(itemprop="addressRegion") Ростовская область
+                        span.d-none(itemprop="addressLocality" content="Ростов-на-Дону")
+                        span.d-none(itemprop="streetAddress") ул. Доватора, 11
                         .contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1
                           +icon('placemark','contacts__icon h3 text-center color-theme-white mr-2')
                           span.color-theme-white г. Ростов-на-Дону
                         a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1(href="#")
                           +icon('phone-nobg','contacts__icon h3 text-center color-theme-white mr-2')
-                          span.color-theme-white +7 (365) 277-70-68
-                        a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1(href="#")
+                          span.color-theme-white(itemprop="telephone") +7 (863) 22-99-99-4
+                        a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-1(href="mailto:office@don-shina.ru" itemprop="email")
                           +icon('email','contacts__icon h3 text-center color-theme-white mr-2')
                           span.color-theme-white office@don-shina.ru
                     .col-4
-                      nav.social.d-flex.flex-wrap.align-items-center
+                      div.social.d-flex.flex-wrap.align-items-center
                         a.social__item.color-theme-white.mr-4.mr-lg-3(href="#")
                           +icon('wapp','h3')
                         a.social__item.color-theme-white(href="#")
@@ -203,8 +214,14 @@ html(lang="ru")
   пожать изображения
   поправить .readmore
 
-  contacts.pug - поправить баг с аккордеоном
-
   _media:
   border-radius и box-shadow - найти
   и другие страницы
+
+  https://pr-cy.ru/news/p/7359-mikrorazmetka-dlya-sayta-internet-magazina--kak-nastroit-razmetku-tovarov-i-kategoriy#check%20micromarking
+  https://seo-akademiya.com/baza-znanij/prodvizhenie-internet-magazina/kak-nastroit-mikrorazmetku-dlya-sajta-internet-magazina/
+  https://validator.schema.org/
+
+  отзывы
+  товар
+  статья блога

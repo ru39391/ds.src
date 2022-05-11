@@ -9,7 +9,7 @@ header.header
             span.d-none.d-lg-block г. Ростов-на-Дону
           a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4(href="#")
             +icon('phone','contacts__icon h3 color-theme-brand mr-lg-2')
-            span.d-none.d-lg-block +7 (365) 277-70-68
+            span.d-none.d-lg-block +7 (863) 22-99-99-4
         nav.social.d-flex.align-items-center
           a.social__item.color-theme-brand.mr-4.mr-lg-3(href="#")
             +icon('wapp-filled','h3')
@@ -319,19 +319,26 @@ header.header
               +icon('cart','header__btn-icon d-block')
   .header__bottom
     nav.topmenu.swiper-container
-      .topmenu__wrapper.swiper-wrapper
+      .topmenu__wrapper.swiper-wrapper(itemscope itemtype="https://schema.org/SiteNavigationElement")
         .swiper-slide.w-auto
-          a.theme-hover.d-inline-block.mr-3(href="#") Автошины
+          a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+            span(itemprop="name") Автошины
         .swiper-slide.w-auto
-          a.theme-hover.d-inline-block.mr-3(href="#") Мотошины
+          a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+            span(itemprop="name") Мотошины
         .swiper-slide.w-auto
-          a.theme-hover.d-inline-block.mr-3(href="#") Диски
+          a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+            span(itemprop="name") Диски
         .swiper-slide.w-auto
-          a.theme-hover.d-inline-block.mr-3(href="#") Аккумуляторы
+          a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+            span(itemprop="name") Аккумуляторы
         .swiper-slide.w-auto
-          a.theme-hover.d-inline-block.mr-3(href="#") Масла
+          a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+            span(itemprop="name") Масла
         .swiper-slide.w-auto
-          a.theme-hover.d-inline-block.mr-3(href="#") Автотовары
+          a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+            span(itemprop="name") Автотовары
         .swiper-slide.w-auto
-          a.theme-hover.d-inline-block.mr-3(href="#") Шиномонтаж
+          a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+            span(itemprop="name") Шиномонтаж
   block filter

@@ -5,32 +5,49 @@ block meta
 
 block wrapper
   .wrapper
-    nav.pathway
-      a.pathway__link(href="#") Главная
-      a.pathway__current(href="#") #{title}
+    ul.pathway(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Главная
+          meta(itemprop="position" content="1")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__current(href="#" itemprop="item")
+          span(itemprop="name") #{title}
+          meta(itemprop="position" content="2")
     section.content
-      h1 #{title}
+      h1(itemprop="name") #{title}
     .row.align-items-start
       .col-xl-3.col-lg-4.order-2.order-lg-1.mb-5.mb-lg-4
-        .accordion.active.mb-2
+        .accordion.active.mb-2(itemscope="" itemtype="http://schema.org/AutoPartsStore")
           .accordion__header.px-4(data-target="rnd")
             button.accordion__toggler.readmore.d-block.h3.text-left.font-weight-bold.color-theme-brand(type="button") ДонШина Ростов
+            meta(itemprop="name" content="ДонШина Ростов")
+            meta(itemprop="priceRange" content="Информация о ценах по телефону +7 (863) 22-99-99-4")
+            meta(itemprop="openingHours" content="Mo-Fr 09:00-19:00")
+            meta(itemprop="openingHours" content="Sa 10:00-17:00")
           .accordion__body.overflow-hidden.px-4
-            .contacts
+            .d-none(itemprop="geo" itemscope="" itemtype="http://schema.org/GeoCoordinates")
+              meta(itemprop="latitude" content="47.244980")
+              meta(itemprop="longitude" content="39.648187")
+            .contacts(itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress")
+              span.d-none(itemprop="postalCode") 344103
+              span.d-none(itemprop="addressRegion") Ростовская область
+              span.d-none(itemprop="addressLocality" content="Ростов-на-Дону")
+              span.d-none(itemprop="streetAddress") ул. Доватора, 11
               .contacts__item.d-flex.align-items-center.h5.text-wrap.mb-3
                 +icon('placemark','contacts__icon color-theme-brand mr-2')
                 | г. Ростов-на-Дону; ул. Доватора, 11
               a.contacts__item.d-flex.align-items-center.h3.font-weight-bold.text-nowrap.mb-3(href="#")
                 +icon('phone-nobg','contacts__icon color-theme-brand mr-2')
-                | +7 (365) 277-70-68
-              a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
+                span(itemprop="telephone") +7 (863) 22-99-99-4
+              a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="mailto:office@don-shina.ru" itemprop="email")
                 +icon('email','contacts__icon color-theme-brand mr-2')
                 | office@don-shina.ru
               a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
-                +icon('wapp-bordered','contacts__icon color-theme-brand mr-2')
+                +icon('wapp','contacts__icon color-theme-brand mr-2')
                 | WhatsApp
               a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
-                +icon('tg-bordered','contacts__icon color-theme-brand mr-2')
+                +icon('tg','contacts__icon color-theme-brand mr-2')
                 | Telegram
               a.contacts__item.d-flex.align-items-start.h5(href="#")
                 +icon('time','contacts__icon color-theme-brand mr-2')
@@ -41,25 +58,36 @@ block wrapper
                   | Сб. – 09:00–17:00,
                   br
                   | Вс. – Выходной
-        .accordion.mb-2
+        .accordion.mb-2(itemscope="" itemtype="http://schema.org/AutoPartsStore")
           .accordion__header.px-4(data-target="taganrog")
             button.accordion__toggler.readmore.d-block.h3.text-left.font-weight-bold.color-theme-brand(type="button") ДонШина Таганрог
+            meta(itemprop="name" content="ДонШина Таганрог")
+            meta(itemprop="priceRange" content="Информация о ценах по телефону +7 (863) 22-99-99-4")
+            meta(itemprop="openingHours" content="Mo-Fr 09:00-19:00")
+            meta(itemprop="openingHours" content="Sa 10:00-17:00")
           .accordion__body.overflow-hidden.px-4
-            .contacts
+            .d-none(itemprop="geo" itemscope="" itemtype="http://schema.org/GeoCoordinates")
+              meta(itemprop="latitude" content="47.244980")
+              meta(itemprop="longitude" content="39.648187")
+            .contacts(itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress")
+              span.d-none(itemprop="postalCode") 344103
+              span.d-none(itemprop="addressRegion") Ростовская область
+              span.d-none(itemprop="addressLocality" content="Ростов-на-Дону")
+              span.d-none(itemprop="streetAddress") ул. Доватора, 11
               .contacts__item.d-flex.align-items-center.h5.text-wrap.mb-3
                 +icon('placemark','contacts__icon color-theme-brand mr-2')
                 | г. Ростов-на-Дону; ул. Доватора, 11
               a.contacts__item.d-flex.align-items-center.h3.font-weight-bold.text-nowrap.mb-3(href="#")
                 +icon('phone-nobg','contacts__icon color-theme-brand mr-2')
-                | +7 (365) 277-70-68
-              a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
+                span(itemprop="telephone") +7 (863) 22-99-99-4
+              a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="mailto:office@don-shina.ru" itemprop="email")
                 +icon('email','contacts__icon color-theme-brand mr-2')
                 | office@don-shina.ru
               a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
-                +icon('wapp-bordered','contacts__icon color-theme-brand mr-2')
+                +icon('wapp','contacts__icon color-theme-brand mr-2')
                 | WhatsApp
               a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
-                +icon('tg-bordered','contacts__icon color-theme-brand mr-2')
+                +icon('tg','contacts__icon color-theme-brand mr-2')
                 | Telegram
               a.contacts__item.d-flex.align-items-start.h5(href="#")
                 +icon('time','contacts__icon color-theme-brand mr-2')
@@ -70,25 +98,36 @@ block wrapper
                   | Сб. – 09:00–17:00,
                   br
                   | Вс. – Выходной
-        .accordion
+        .accordion(itemscope="" itemtype="http://schema.org/AutoPartsStore")
           .accordion__header.px-4(data-target="volgograd")
             button.accordion__toggler.readmore.d-block.h3.text-left.font-weight-bold.color-theme-brand(type="button") ДонШина Волгоград
+            meta(itemprop="name" content="ДонШина Волгоград")
+            meta(itemprop="priceRange" content="Информация о ценах по телефону +7 (863) 22-99-99-4")
+            meta(itemprop="openingHours" content="Mo-Fr 09:00-19:00")
+            meta(itemprop="openingHours" content="Sa 10:00-17:00")
           .accordion__body.overflow-hidden.px-4
-            .contacts
+            .d-none(itemprop="geo" itemscope="" itemtype="http://schema.org/GeoCoordinates")
+              meta(itemprop="latitude" content="47.244980")
+              meta(itemprop="longitude" content="39.648187")
+            .contacts(itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress")
+              span.d-none(itemprop="postalCode") 344103
+              span.d-none(itemprop="addressRegion") Ростовская область
+              span.d-none(itemprop="addressLocality" content="Ростов-на-Дону")
+              span.d-none(itemprop="streetAddress") ул. Доватора, 11
               .contacts__item.d-flex.align-items-center.h5.text-wrap.mb-3
                 +icon('placemark','contacts__icon color-theme-brand mr-2')
                 | г. Ростов-на-Дону; ул. Доватора, 11
               a.contacts__item.d-flex.align-items-center.h3.font-weight-bold.text-nowrap.mb-3(href="#")
                 +icon('phone-nobg','contacts__icon color-theme-brand mr-2')
-                | +7 (365) 277-70-68
-              a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
+                span(itemprop="telephone") +7 (863) 22-99-99-4
+              a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="mailto:office@don-shina.ru" itemprop="email")
                 +icon('email','contacts__icon color-theme-brand mr-2')
                 | office@don-shina.ru
               a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
-                +icon('wapp-bordered','contacts__icon color-theme-brand mr-2')
+                +icon('wapp','contacts__icon color-theme-brand mr-2')
                 | WhatsApp
               a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
-                +icon('tg-bordered','contacts__icon color-theme-brand mr-2')
+                +icon('tg','contacts__icon color-theme-brand mr-2')
                 | Telegram
               a.contacts__item.d-flex.align-items-start.h5(href="#")
                 +icon('time','contacts__icon color-theme-brand mr-2')

@@ -6,13 +6,22 @@ block meta
 block articles__section
   .section.px-lg-0.px-3.mb-5
     .px-lg-5.px-md-4
-      nav.pathway
-        a.pathway__link(href="#") Главная
-        a.pathway__link(href="#") Статьи
-        a.pathway__current(href="#") Как самостоятельно заменить тормозную жидкость
+      ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Главная
+            meta(itemprop="position" content="1")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Статьи
+            meta(itemprop="position" content="2")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__current(href="#" itemprop="item")
+            span(itemprop="name") Как самостоятельно заменить тормозную жидкость
+            meta(itemprop="position" content="3")
       section.content
         .color-theme-brand
-          h1 Обзор на летние шины Pirelli P Zero от ДонШина
+          h1(itemprop="name") Обзор на летние шины Pirelli P Zero от ДонШина
         .date.mb-2 30 ноября 2021
       .section__video
         .row

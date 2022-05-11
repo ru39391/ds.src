@@ -11,12 +11,29 @@ block filter
 
 block wrapper
     .wrapper
-      nav.pathway
-        a.pathway__link(href="#") Главная
-        a.pathway__current(href="#") Автозапчасти
+      ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Главная
+            meta(itemprop="position" content="1")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__current(href="#" itemprop="item")
+            span(itemprop="name") Автозапчасти
+            meta(itemprop="position" content="2")
       section.content
-        h1 Автозапчасти в Ростове-на-Дону
+        h1(itemprop="name") Автозапчасти в Ростове-на-Дону
       .category-counter.mb-4 1 840 товаров
+      span.d-none(itemscope itemtype="http://schema.org/Product")
+        span(itemprop="name") Автозапчасти в Ростове-на-Дону
+        span(itemtype="http://schema.org/AggregateOffer" itemscope="" itemprop="offers")
+          //- количество товаров в категории
+          meta(content="1840" itemprop="offerCount")
+          //- самая выскоая цена
+          meta(content="10657" itemprop="highPrice")
+          //- самая низкая цена
+          meta(content="25" itemprop="lowPrice")
+          //- наименование валюты
+          meta(content="RUB" itemprop="priceCurrency")
 
       .filter.filter_sticky
         .filter__body
@@ -379,7 +396,7 @@ block wrapper
 
       include base/links.pug
 
-      .content.content_expanded.mb-5
+      .content.content_expanded.mb-5(itemprop="text")
         include base/content.pug
         .content__footer
           button.readmore.readmore_btn(type="button")

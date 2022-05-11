@@ -5,14 +5,29 @@ block meta
 
 block wrapper
   .wrapper
-    nav.pathway
-      a.pathway__link(href="#") Главная
-      a.pathway__link(href="#") Шины
-      a.pathway__link(href="#") Шины PIRELLI
-      a.pathway__link(href="#") P Zero
-      a.pathway__current(href="#") Летние шины Pirelli P Zero 235 / 60 R17 102Y
+    ul.pathway(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Главная
+          meta(itemprop="position" content="1")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Шины
+          meta(itemprop="position" content="2")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Шины PIRELLI
+          meta(itemprop="position" content="3")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") P Zero
+          meta(itemprop="position" content="4")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__current(href="#" itemprop="item")
+          span(itemprop="name") Летние шины Pirelli P Zero 235 / 60 R17 102Y
+          meta(itemprop="position" content="5")
     section.content
-      h1 Летние шины Pirelli P Zero 235/60 R17 102Y
+      h1(itemprop="name") Летние шины Pirelli P Zero 235/60 R17 102Y
     .row.mb-5
       .col-lg-4
         .text-center.box-shadow.border-radius.pos-rel.p-md-4.p-3.mb-2
@@ -197,7 +212,7 @@ block wrapper
                     .h4.color-theme-brand.mb-3 Дмитрий Леухин
                     .h6 6 июня 2021
                 .col-md-9.h5 Сразу после первого выезда восхитился! Сцепление выше всяких похвал, руль стал крутиться чуть жестче и четче, по мягкости средние (то что надо).Тот же LATITUDE SPORT 3 стоит дороже а по параметрам хуже. Отличные шины. Много сомневался так как в отзывах писали что сильно шумят, но по факту НЕТ. Нет никакого шума. Может если на "ведро" ставить можно что то услышать. На мерседес GLC ничего не шумит. Выбирал между ними и LATITUDE SPORT 3, однозначно не прогадал! Очень советую.
-              nav.pagination
+              nav.pagination.mb-2
                 a.pagination__item.pagination__item_prev(href="#")
                   +icon('readmore-right','h3 color-theme-brand')
                 span.pagination__item.pagination__item_current 1
@@ -244,7 +259,7 @@ block wrapper
 
     include base/links.pug
 
-    .content.content_expanded.mb-5
+    .content.content_expanded.mb-5(itemprop="text")
       include base/content.pug
       .content__footer
         button.readmore.readmore_btn(type="button")

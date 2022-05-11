@@ -5,13 +5,22 @@ block meta
 
 block wrapper
   .wrapper
-    nav.pathway
-      a.pathway__link(href="#") Главная
-      a.pathway__link(href="#") Шины
-      a.pathway__current(href="#") Шины R18
+    ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Главная
+          meta(itemprop="position" content="1")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Шины
+          meta(itemprop="position" content="2")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__current(href="#" itemprop="item")
+          span(itemprop="name") Шины R18
+          meta(itemprop="position" content="3")
     section.row
       .content.col-lg-5.col-md-6
-        h1 #{title}
+        h1(itemprop="name") #{title}
       form.form.col-lg-7.col-md-6.d-flex.align-items-center.justify-content-end.px-0.mb-3(action="#")
         .col-xl-4.col-lg-5.col-md-8
           .form__select

@@ -8,13 +8,22 @@ block wrapper
     block articles__section
       .section.d-flex.flex-wrap.overflow-hidden.px-lg-0.px-3.mb-5
         .col-lg-6.px-0
-          nav.pathway.px-lg-5.px-md-4
-            a.pathway__link(href="#") Главная
-            a.pathway__link(href="#") Статьи
-            a.pathway__current(href="#") Как самостоятельно заменить тормозную жидкость
+          ul.pathway(itemscope="" itemtype="http://schema.org/BreadcrumbList").px-lg-5.px-md-4
+            li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+              a.pathway__link(href="#" itemprop="item")
+                span(itemprop="name") Главная
+                meta(itemprop="position" content="1")
+            li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+              a.pathway__link(href="#" itemprop="item")
+                span(itemprop="name") Статьи
+                meta(itemprop="position" content="2")
+            li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+              a.pathway__current(href="#" itemprop="item")
+                span(itemprop="name") Как самостоятельно заменить тормозную жидкость
+                meta(itemprop="position" content="3")
           .content.px-lg-5.px-md-4
             .color-theme-brand
-              h1 Как самостоятельно заменить тормозную жидкость
+              h1(itemprop="name") Как самостоятельно заменить тормозную жидкость
             .date.mb-2 30 ноября 2021
           .section__picture.d-block.d-lg-none.mb-4
             +img('content/media/media-7.jpg','img-cover')
@@ -56,7 +65,7 @@ block wrapper
 
     include base/links.pug
 
-    .content.content_expanded.mb-5
+    .content.content_expanded.mb-5(itemprop="text")
       include base/content.pug
       .content__footer
         button.readmore.readmore_btn(type="button")

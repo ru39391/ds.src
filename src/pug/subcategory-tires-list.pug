@@ -14,13 +14,25 @@ block filter
 
 block wrapper
     .wrapper
-      nav.pathway
-        a.pathway__link(href="#") Главная
-        a.pathway__link(href="#") Шины
-        a.pathway__link(href="#") Cordiant
-        a.pathway__current(href="#") Cordiant 2
+      ul.pathway(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+        li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+          a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Главная
+            meta(itemprop="position" content="1")
+        li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+          a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Шины
+            meta(itemprop="position" content="2")
+        li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+          a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Cordiant
+            meta(itemprop="position" content="3")
+        li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+          a.pathway__current(href="#" itemprop="item")
+            span(itemprop="name") Cordiant 2
+            meta(itemprop="position" content="4")
       section.content
-        h1 Шины CORDIANT Comfort 2 в Ростове-на-Дону
+        h1(itemprop="name") Шины CORDIANT Comfort 2 в Ростове-на-Дону
       .category-counter.mb-4 1 840 товаров
       .row
         .col-xl-2.col-lg-3.mb-lg-4
@@ -92,7 +104,7 @@ block wrapper
 
       include base/links.pug
 
-      .content.content_expanded.mb-5
+      .content.content_expanded.mb-5(itemprop="text")
         include base/content.pug
         .content__footer
           button.readmore.readmore_btn(type="button")

@@ -5,11 +5,17 @@ block meta
 
 block wrapper
   .wrapper
-    nav.pathway
-      a.pathway__link(href="#") Главная
-      a.pathway__current(href="#") #{title}
+    ul.pathway(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Главная
+          meta(itemprop="position" content="1")
+      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        a.pathway__current(href="#" itemprop="item")
+          span(itemprop="name") #{title}
+          meta(itemprop="position" content="2")
     section.content
-      h1 #{title}
+      h1(itemprop="name") #{title}
     .category.category_rows.mb-5
       - var sales = [{title: 'Скидки на зимние шины Michelin', img: 'content/sales/sales-1.jpg'},{title: '1000 бонусов при покупке шин Michelin', img: 'content/sales/sales-2.jpg'},{title: 'Скидки на всю всесезонные шины Cordiant', img: 'content/sales/sales-3.jpg'},{title: 'Скидки на всю колекцию зимних шин Pirelli', img: 'content/sales/sales-4.jpg'},{title: 'Скидки на старые модели дисков Alcasta', img: 'content/sales/sales-5.jpg'},{title: 'Скидки на зимние шины Michelin', img: 'content/sales/sales-6.jpg'},{title: '1000 бонусов при покупке шин Michelin', img: 'content/sales/sales-7.jpg'},{title: 'Скидки на всю всесезонные шины Cordiant', img: 'content/sales/sales-8.jpg'},{title: 'Скидки на всю колекцию зимних шин Pirelli', img: 'content/sales/sales-9.jpg'},{title: 'Скидки на старые модели дисков Alcasta', img: 'content/sales/sales-10.jpg'}]
       each sales__item in sales
