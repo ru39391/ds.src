@@ -4,12 +4,12 @@ block meta
   - var title = '';
 
 doctype html
-html(lang="ru" itemscope="" itemtype="http://schema.org/WebPage")
-  head
+html(lang="ru" itemscope itemtype="http://schema.org/WebPage")
+  head(itemscope itemtype="http://schema.org/WPHeader")
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
-    title #{title}
+    title(itemprop="headline") #{title}
     meta(name="keywords" content="" itemprop="keywords")
     meta(name="description" content="" itemprop="description")
 
@@ -22,58 +22,86 @@ html(lang="ru" itemscope="" itemtype="http://schema.org/WebPage")
     block wrapper
 
     block footer
-        footer.footer.h6.color-theme-white.bg-theme-brand
+        footer.footer.h6.color-theme-white.bg-theme-brand(itemscope itemtype="http://schema.org/WPFooter")
+            meta(itemprop="copyrightYear" content="2022")
+            meta(itemprop="copyrightHolder" content="ДонШина Ростов")
             .wrapper.d-flex.flex-wrap
                 .col-lg-2.col-md-3
-                    nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0
+                    nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0(itemscope itemtype="https://schema.org/SiteNavigationElement")
                         .footer__nav-title.h4 Каталог
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Шины
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Диски
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Мотошины
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Акб
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Масла
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Автотовары
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Шины
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Диски
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Мотошины
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Акб
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Масла
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Автотовары
                 .col-lg-2.col-md-3
-                    nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0
+                    nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0(itemscope itemtype="https://schema.org/SiteNavigationElement")
                         .footer__nav-title.h4 Услуги
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Шиномонтаж
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Сезонное хранение шин и дисков
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Заправка автокондиционеровов
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Прокатка дисков
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Покраска дисков
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Шиномонтаж
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Сезонное хранение шин и дисков
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Заправка автокондиционеровов
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Прокатка дисков
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Покраска дисков
                 .col-lg-2.col-md-3
-                    nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0
+                    nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0(itemscope itemtype="https://schema.org/SiteNavigationElement")
                         .footer__nav-title.h4 Пользователям
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Скидки и акции
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Сравнить
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Избранное
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Подбор по авто
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Шинный калькулятор
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") О компании
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Новости
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Статьи
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Скидки и акции
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Сравнить
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Избранное
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Подбор по авто
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Шинный калькулятор
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") О компании
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Новости
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Статьи
                 .col-lg-2.col-md-3
-                    nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0
+                    nav.footer__nav.d-flex.flex-column.pr-xl-5.pr-md-4.mb-5.mb-lg-0(itemscope itemtype="https://schema.org/SiteNavigationElement")
                         .footer__nav-title.h4 Помощь
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Контакты
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Вопросы и ответы
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Оплата и доставка
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Кредит
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") КупиВкредит
-                        a.footer__nav-item.color-theme-white.mb-2(href="#") Политика конфиденциальности
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Контакты
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Вопросы и ответы
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Оплата и доставка
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Кредит
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") КупиВкредит
+                        a.footer__nav-item.color-theme-white.mb-2(itemprop="url" href="#")
+                          span(itemprop="name") Политика конфиденциальности
                 .col-xl-3.offset-xl-1.col-lg-4.col-md-6
                   a.logo.color-theme-white.mb-4(href="#")
                     +svg('logo')
                   .row.align-items-center
-                    .col-8(itemscope="" itemtype="http://schema.org/AutoPartsStore")
+                    .col-8(itemscope itemtype="http://schema.org/AutoPartsStore")
+                      +img('logo.png','d-none',true)
                       meta(itemprop="name" content="ДонШина Ростов")
                       meta(itemprop="priceRange" content="Информация о ценах по телефону +7 (863) 22-99-99-4")
                       meta(itemprop="openingHours" content="Mo-Fr 09:00-19:00")
                       meta(itemprop="openingHours" content="Sa 10:00-17:00")
-                      span.d-none(itemprop="geo" itemscope="" itemtype="http://schema.org/GeoCoordinates")
+                      span.d-none(itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates")
                         meta(itemprop="latitude" content="47.244980")
                         meta(itemprop="longitude" content="39.648187")
-                      .contacts.mb-2(itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress")
+                      .contacts.mb-2(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
                         span.d-none(itemprop="postalCode") 344103
                         span.d-none(itemprop="addressRegion") Ростовская область
                         span.d-none(itemprop="addressLocality" content="Ростов-на-Дону")
@@ -96,7 +124,7 @@ html(lang="ru" itemscope="" itemtype="http://schema.org/WebPage")
                   .mb-2
                     +img('visa.png')
                     +img('mc.png')
-                  .copyright © 2021 Все права защищены.
+                  .copyright © 2022 Все права защищены.
 
     block modals
       .modal.fade#reg(tabindex="-1" aria-hidden="true")
@@ -180,7 +208,6 @@ html(lang="ru" itemscope="" itemtype="http://schema.org/WebPage")
 
     block popups
 
-    //- link(rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css")
     link(rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css")
     script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js")
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js")
@@ -188,7 +215,6 @@ html(lang="ru" itemscope="" itemtype="http://schema.org/WebPage")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/formstone/1.4.20/js/core.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/formstone/1.4.20/js/dropdown.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/formstone/1.4.20/js/touch.js")
-    script(src="https://refreshless.com/nouislider/documentation/assets/wNumb.js")
     script(src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js")
     script(src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js")

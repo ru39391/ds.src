@@ -20,20 +20,21 @@ block wrapper
           a.pathway__current(href="#" itemprop="item")
             span(itemprop="name") Автозапчасти
             meta(itemprop="position" content="2")
-      section.content
+      section.content(itemscope itemtype="http://schema.org/Product")
         h1(itemprop="name") Автозапчасти в Ростове-на-Дону
-      .category-counter.mb-4 1 840 товаров
-      span.d-none(itemscope itemtype="http://schema.org/Product")
-        span(itemprop="name") Автозапчасти в Ростове-на-Дону
-        span(itemtype="http://schema.org/AggregateOffer" itemscope="" itemprop="offers")
+        //- остаток на складе
+        span.d-none(itemprop="sku") 1840
+        span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+          meta(itemprop="availability" content="http://schema.org/InStock")
           //- количество товаров в категории
-          meta(content="1840" itemprop="offerCount")
-          //- самая выскоая цена
-          meta(content="10657" itemprop="highPrice")
-          //- самая низкая цена
-          meta(content="25" itemprop="lowPrice")
+          meta(itemprop="offerCount" content="1840")
+          //- самая выскоая цена в категории
+          meta(itemprop="highPrice" content="10657")
+          //- самая низкая цена в категории
+          meta(itemprop="lowPrice" content="25")
           //- наименование валюты
-          meta(content="RUB" itemprop="priceCurrency")
+          meta(itemprop="priceCurrency" content="RUB")
+      .category-counter.mb-4 1 840 товаров
 
       .filter.filter_sticky
         .filter__body

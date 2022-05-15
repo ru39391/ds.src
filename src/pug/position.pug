@@ -4,25 +4,25 @@ block meta
   - var title = 'Страница товара';
 
 block wrapper
-  .wrapper
-    ul.pathway(itemscope="" itemtype="http://schema.org/BreadcrumbList")
-      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+  .wrapper(itemscope itemtype="http://schema.org/Product")
+    ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
         a.pathway__link(href="#" itemprop="item")
           span(itemprop="name") Главная
           meta(itemprop="position" content="1")
-      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
         a.pathway__link(href="#" itemprop="item")
           span(itemprop="name") Шины
           meta(itemprop="position" content="2")
-      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
         a.pathway__link(href="#" itemprop="item")
           span(itemprop="name") Шины PIRELLI
           meta(itemprop="position" content="3")
-      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
         a.pathway__link(href="#" itemprop="item")
           span(itemprop="name") P Zero
           meta(itemprop="position" content="4")
-      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
         a.pathway__current(href="#" itemprop="item")
           span(itemprop="name") Летние шины Pirelli P Zero 235 / 60 R17 102Y
           meta(itemprop="position" content="5")
@@ -30,14 +30,14 @@ block wrapper
       h1(itemprop="name") Летние шины Pirelli P Zero 235/60 R17 102Y
     .row.mb-5
       .col-lg-4
-        .text-center.box-shadow.border-radius.pos-rel.p-md-4.p-3.mb-2
+        a.d-block.text-center.box-shadow.border-radius.pos-rel.p-md-4.p-3.mb-2(href="img/content/cards/pirelli.jpg" data-fancybox="gallery" itemprop="image")
           +img('content/cards/pirelli.jpg')
-          .label.label_hit.label_pos_abs.text-uppercase.px-2 Хит
-          a.zoom(href="img/content/cards/pirelli.jpg" data-fancybox="gallery")
+          span.label.label_hit.label_pos_abs.text-uppercase.px-2 Хит
+          span.zoom
             +icon('zoom','h4 color-theme-brand')
-        a.d-flex.align-items-center.justify-content-around.box-shadow.border-radius.p-3.mb-2(href="#")
-          +img('content/logo/logo-4.jpg')
-          span.h5 Bridgestone
+        a.d-flex.align-items-center.justify-content-around.box-shadow.border-radius.p-3.mb-2(href="#" itemscope itemtype="http://schema.org/Brand")
+          img(class="img-fluid" src="/img/content/logo/logo-4.jpg" alt="" title="" itemprop="logo")
+          span.h5(itemprop="name") Bridgestone
       .col-lg-8
         .d-flex.flex-wrap.align-items-center.box-shadow.border-radius.text-center.text-md-left.p-md-4.p-3.mb-2
           .col-md-4.px-0.mb-2.mb-md-0
@@ -47,12 +47,16 @@ block wrapper
               +icon('phonehandset','h3 color-theme-white mr-2')
               span сообщить,
                 span.d-block.d-sm-inline когда появится
-        .box-shadow.border-radius.p-md-4.p-3.mb-2
+        .box-shadow.border-radius.p-md-4.p-3.mb-2(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
           form.row.align-items-center.mb-3(action="#")
             .cart-summary.cart-summary_row.col-xl-6.col-md-9.d-flex.flex-column.flex-sm-row.align-items-center.mb-2.mb-sm-0
               .cart-summary__meta.d-flex.flex-grow-1.align-self-stretch.mb-3.mb-sm-0
                 .d-flex.align-items-center.flex-grow-1
                   .d-flex.align-items-end.pos-rel
+                    meta(itemprop="price" content="7337.12")
+                    meta(itemprop="priceCurrency" content="RUB")
+                    //- если товар в наличии
+                    link(itemprop="availability" href="http://schema.org/InStock")
                     span.h2.font-weight-bold.text-nowrap.mr-1 7 337.12
                     span.h3 ₽
                     .notify
@@ -171,7 +175,7 @@ block wrapper
             +icon('wallet','tabs__nav-icon h4 d-flex flex-column align-items-center justify-content-center')
             span.h3.font-weight-bold.d-none.d-lg-block Покупка и доставка
       .tabs__content.tab-content
-        .tab-pane.fade.show.px-lg-3(id="pos-view" role="tabpanel" action="#")
+        .tab-pane.fade.show.px-lg-3(id="pos-view" role="tabpanel")
           .row
             .col-xl-8.offset-xl-2.col-lg-10.offset-lg-1
               .h2.font-weight-bold.mb-4 Обзор на летние шины Pirelli P Zero от ДонШина
@@ -184,8 +188,10 @@ block wrapper
                 a.readmore.d-flex.align-items-center(href="#")
                   span.h5.mr-2 Смотреть на нашем канале
                   +icon('readmore-right','h3 color-theme-brand')
-        .tab-pane.fade.show.px-lg-3(id="pos-desc" role="tabpanel" action="#")
-        .tab-pane.fade.show.px-lg-3.active(id="pos-reviews" role="tabpanel" action="#")
+        .tab-pane.fade.show.px-lg-3(id="pos-desc" role="tabpanel" itemprop="description")
+          .content
+            p Цена указана при покупке от 4 шт. за наличный расчет. Минимальный заказ 4 шт., меньшее количество можно приобрести только по согласованию с менеджером и 100% предоплате.
+        .tab-pane.fade.show.px-lg-3.active(id="pos-reviews" role="tabpanel")
           .row
             .col-xl-10.offset-xl-1
               .d-flex.flex-wrap.align-items-start.border-bottom.pb-4.mb-4
@@ -223,8 +229,8 @@ block wrapper
                 a.pagination__item(href="#") 57
                 a.pagination__item.pagination__item_next(href="#")
                   +icon('readmore-right','h3 color-theme-brand')
-        .tab-pane.fade.show.px-lg-3(id="pos-points" role="tabpanel" action="#")
-        .tab-pane.fade.show.px-lg-3(id="pos-wallet" role="tabpanel" action="#")
+        .tab-pane.fade.show.px-lg-3(id="pos-points" role="tabpanel")
+        .tab-pane.fade.show.px-lg-3(id="pos-wallet" role="tabpanel")
 
     .mb-4
       .h2.font-weight-bold.mb-4 Вам так же может понравиться:

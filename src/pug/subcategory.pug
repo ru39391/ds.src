@@ -17,16 +17,16 @@ block filter
 
 block wrapper
   .wrapper
-    ul.pathway(itemscope="" itemtype="http://schema.org/BreadcrumbList")
-      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+    ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
         a.pathway__link(href="#" itemprop="item")
           span(itemprop="name") Главная
           meta(itemprop="position" content="1")
-      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
         a.pathway__link(href="#" itemprop="item")
           span(itemprop="name") Автотовары
           meta(itemprop="position" content="2")
-      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
         a.pathway__current(href="#" itemprop="item")
           span(itemprop="name") Авточехлы
           meta(itemprop="position" content="3")
@@ -103,14 +103,21 @@ block wrapper
           .heading__col.heading__col_subcategory-article.h6.mb-2 Артикул
           .heading__col.heading__col_subcategory-price.h6.mb-2 Цена
           .heading__col.heading__col_subcategory-quantity.h6.mb-2 Наличие
-        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#")
+        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+          span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+            meta(itemprop="availability" content="http://schema.org/InStock")
+            meta(itemprop="priceCurrency" content="RUB")
+            meta(itemprop="price" content="100")
+            //- самая низкая цена в категории
+            meta(itemprop="lowPrice" content="100")
           .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .d-flex.align-items-center
               .bubble.bubble_pos_abs
                 +icon('photo','h2 color-theme-brand mr-2')
                 .bubble__picture.box-shadow.border.border-radius
-                  +img('content/cards/pirelli.jpg','img-cover border-radius zi-2')
-              a.h5(href="#") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
+                  +img('content/cards/pirelli.jpg','img-cover border-radius zi-2', true)
+              a.h5(href="#" itemprop="url")
+                span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
           .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
             .h5.d-flex.align-items-center
               .mr-3.d-block.d-md-none Артикул:
@@ -122,7 +129,8 @@ block wrapper
           .table-row__col.table-row__col_subcategory-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .h5.d-flex.align-items-center
               .mr-3.d-block.d-md-none Наличие:
-              | 3 шт.
+              span(itemprop="sku") 3
+              | &nbsp;шт.
           .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center
             .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
               input.recalculate__field.d-none(type="number" name="count" value="4")
@@ -131,14 +139,21 @@ block wrapper
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
             .text-center.text-md-left
               button.btn.text-uppercase.px-3(type="submit") В корзину
-        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#")
+        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+          span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+            meta(itemprop="availability" content="http://schema.org/InStock")
+            meta(itemprop="priceCurrency" content="RUB")
+            meta(itemprop="price" content="100")
+            //- самая низкая цена в категории
+            meta(itemprop="lowPrice" content="100")
           .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .d-flex.align-items-center
               .bubble.bubble_pos_abs
                 +icon('photo','h2 color-theme-brand mr-2')
                 .bubble__picture.box-shadow.border.border-radius
-                  +img('content/cards/pirelli.jpg','img-cover border-radius zi-2')
-              a.h5(href="#") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
+                  +img('content/cards/pirelli.jpg','img-cover border-radius zi-2', true)
+              a.h5(href="#" itemprop="url")
+                span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
           .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
             .h5.d-flex.align-items-center
               .mr-3.d-block.d-md-none Артикул:
@@ -150,7 +165,8 @@ block wrapper
           .table-row__col.table-row__col_subcategory-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .h5.d-flex.align-items-center
               .mr-3.d-block.d-md-none Наличие:
-              | 3 шт.
+              span(itemprop="sku") 3
+              | &nbsp;шт.
           .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center
             .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
               input.recalculate__field.d-none(type="number" name="count" value="4")
@@ -159,14 +175,21 @@ block wrapper
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
             .text-center.text-md-left
               button.btn.text-uppercase.px-3(type="submit") В корзину
-        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#")
+        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+          span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+            meta(itemprop="availability" content="http://schema.org/InStock")
+            meta(itemprop="priceCurrency" content="RUB")
+            meta(itemprop="price" content="100")
+            //- самая низкая цена в категории
+            meta(itemprop="lowPrice" content="100")
           .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .d-flex.align-items-center
               .bubble.bubble_pos_abs
                 +icon('photo','h2 color-theme-brand mr-2')
                 .bubble__picture.box-shadow.border.border-radius
-                  +img('content/cards/pirelli.jpg','img-cover border-radius zi-2')
-              a.h5(href="#") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
+                  +img('content/cards/pirelli.jpg','img-cover border-radius zi-2', true)
+              a.h5(href="#" itemprop="url")
+                span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
           .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
             .h5.d-flex.align-items-center
               .mr-3.d-block.d-md-none Артикул:
@@ -178,7 +201,8 @@ block wrapper
           .table-row__col.table-row__col_subcategory-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .h5.d-flex.align-items-center
               .mr-3.d-block.d-md-none Наличие:
-              | 3 шт.
+              span(itemprop="sku") 3
+              | &nbsp;шт.
           .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center
             .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
               input.recalculate__field.d-none(type="number" name="count" value="4")
@@ -187,14 +211,21 @@ block wrapper
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
             .text-center.text-md-left
               button.btn.text-uppercase.px-3(type="submit") В корзину
-        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#")
+        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+          span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+            meta(itemprop="availability" content="http://schema.org/InStock")
+            meta(itemprop="priceCurrency" content="RUB")
+            meta(itemprop="price" content="100")
+            //- самая низкая цена в категории
+            meta(itemprop="lowPrice" content="100")
           .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .d-flex.align-items-center
               .bubble.bubble_pos_abs
                 +icon('photo','h2 color-theme-brand mr-2')
                 .bubble__picture.box-shadow.border.border-radius
-                  +img('content/cards/pirelli.jpg','img-cover border-radius zi-2')
-              a.h5(href="#") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
+                  +img('content/cards/pirelli.jpg','img-cover border-radius zi-2', true)
+              a.h5(href="#" itemprop="url")
+                span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
           .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
             .h5.d-flex.align-items-center
               .mr-3.d-block.d-md-none Артикул:
@@ -206,7 +237,8 @@ block wrapper
           .table-row__col.table-row__col_subcategory-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .h5.d-flex.align-items-center
               .mr-3.d-block.d-md-none Наличие:
-              | 3 шт.
+              span(itemprop="sku") 3
+              | &nbsp;шт.
           .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center
             .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
               input.recalculate__field.d-none(type="number" name="count" value="4")
@@ -215,12 +247,19 @@ block wrapper
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
             .text-center.text-md-left
               button.btn.text-uppercase.px-3(type="submit") В корзину
-        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#")
+        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+          span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+            meta(itemprop="availability" content="http://schema.org/InStock")
+            meta(itemprop="priceCurrency" content="RUB")
+            meta(itemprop="price" content="100")
+            //- самая низкая цена в категории
+            meta(itemprop="lowPrice" content="100")
           .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .d-flex.align-items-center
               .bubble.bubble_pos_abs
                 +icon('photo','h2 color-theme-disabled mr-2')
-              a.h5(href="#") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
+              a.h5(href="#" itemprop="url")
+                span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
           .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
             .h5.d-flex.align-items-center
               .mr-3.d-block.d-md-none Артикул:
@@ -232,7 +271,8 @@ block wrapper
           .table-row__col.table-row__col_subcategory-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .h5.d-flex.align-items-center
               .mr-3.d-block.d-md-none Наличие:
-              | 3 шт.
+              span(itemprop="sku") 3
+              | &nbsp;шт.
           .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center
             .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
               input.recalculate__field.d-none(type="number" name="count" value="4")
@@ -241,12 +281,19 @@ block wrapper
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
             .text-center.text-md-left
               button.btn.text-uppercase.px-3(type="submit") В корзину
-        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#")
+        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+          span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+            meta(itemprop="availability" content="http://schema.org/InStock")
+            meta(itemprop="priceCurrency" content="RUB")
+            meta(itemprop="price" content="100")
+            //- самая низкая цена в категории
+            meta(itemprop="lowPrice" content="100")
           .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .d-flex.align-items-center
               .bubble.bubble_pos_abs
                 +icon('photo','h2 color-theme-disabled mr-2')
-              a.h5(href="#") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
+              a.h5(href="#" itemprop="url")
+                span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
           .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
             .h5.d-flex.align-items-center
               .mr-3.d-block.d-md-none Артикул:
@@ -258,7 +305,8 @@ block wrapper
           .table-row__col.table-row__col_subcategory-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .h5.d-flex.align-items-center
               .mr-3.d-block.d-md-none Наличие:
-              | 3 шт.
+              span(itemprop="sku") 3
+              | &nbsp;шт.
           .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center
             .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
               input.recalculate__field.d-none(type="number" name="count" value="4")

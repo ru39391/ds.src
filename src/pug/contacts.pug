@@ -5,12 +5,12 @@ block meta
 
 block wrapper
   .wrapper
-    ul.pathway(itemscope="" itemtype="http://schema.org/BreadcrumbList")
-      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+    ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
         a.pathway__link(href="#" itemprop="item")
           span(itemprop="name") Главная
           meta(itemprop="position" content="1")
-      li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
         a.pathway__current(href="#" itemprop="item")
           span(itemprop="name") #{title}
           meta(itemprop="position" content="2")
@@ -18,18 +18,19 @@ block wrapper
       h1(itemprop="name") #{title}
     .row.align-items-start
       .col-xl-3.col-lg-4.order-2.order-lg-1.mb-5.mb-lg-4
-        .accordion.active.mb-2(itemscope="" itemtype="http://schema.org/AutoPartsStore")
+        .accordion.active.mb-2(itemscope itemtype="http://schema.org/AutoPartsStore")
           .accordion__header.px-4(data-target="rnd")
             button.accordion__toggler.readmore.d-block.h3.text-left.font-weight-bold.color-theme-brand(type="button") ДонШина Ростов
+            +img('logo.png','d-none',true)
             meta(itemprop="name" content="ДонШина Ростов")
             meta(itemprop="priceRange" content="Информация о ценах по телефону +7 (863) 22-99-99-4")
             meta(itemprop="openingHours" content="Mo-Fr 09:00-19:00")
             meta(itemprop="openingHours" content="Sa 10:00-17:00")
           .accordion__body.overflow-hidden.px-4
-            .d-none(itemprop="geo" itemscope="" itemtype="http://schema.org/GeoCoordinates")
+            .d-none(itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates")
               meta(itemprop="latitude" content="47.244980")
               meta(itemprop="longitude" content="39.648187")
-            .contacts(itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress")
+            .contacts(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
               span.d-none(itemprop="postalCode") 344103
               span.d-none(itemprop="addressRegion") Ростовская область
               span.d-none(itemprop="addressLocality" content="Ростов-на-Дону")
@@ -58,18 +59,19 @@ block wrapper
                   | Сб. – 09:00–17:00,
                   br
                   | Вс. – Выходной
-        .accordion.mb-2(itemscope="" itemtype="http://schema.org/AutoPartsStore")
+        .accordion.mb-2(itemscope itemtype="http://schema.org/AutoPartsStore")
           .accordion__header.px-4(data-target="taganrog")
             button.accordion__toggler.readmore.d-block.h3.text-left.font-weight-bold.color-theme-brand(type="button") ДонШина Таганрог
+            +img('logo.png','d-none',true)
             meta(itemprop="name" content="ДонШина Таганрог")
             meta(itemprop="priceRange" content="Информация о ценах по телефону +7 (863) 22-99-99-4")
             meta(itemprop="openingHours" content="Mo-Fr 09:00-19:00")
             meta(itemprop="openingHours" content="Sa 10:00-17:00")
           .accordion__body.overflow-hidden.px-4
-            .d-none(itemprop="geo" itemscope="" itemtype="http://schema.org/GeoCoordinates")
+            .d-none(itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates")
               meta(itemprop="latitude" content="47.244980")
               meta(itemprop="longitude" content="39.648187")
-            .contacts(itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress")
+            .contacts(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
               span.d-none(itemprop="postalCode") 344103
               span.d-none(itemprop="addressRegion") Ростовская область
               span.d-none(itemprop="addressLocality" content="Ростов-на-Дону")
@@ -98,18 +100,19 @@ block wrapper
                   | Сб. – 09:00–17:00,
                   br
                   | Вс. – Выходной
-        .accordion(itemscope="" itemtype="http://schema.org/AutoPartsStore")
+        .accordion(itemscope itemtype="http://schema.org/AutoPartsStore")
           .accordion__header.px-4(data-target="volgograd")
             button.accordion__toggler.readmore.d-block.h3.text-left.font-weight-bold.color-theme-brand(type="button") ДонШина Волгоград
+            +img('logo.png','d-none',true)
             meta(itemprop="name" content="ДонШина Волгоград")
             meta(itemprop="priceRange" content="Информация о ценах по телефону +7 (863) 22-99-99-4")
             meta(itemprop="openingHours" content="Mo-Fr 09:00-19:00")
             meta(itemprop="openingHours" content="Sa 10:00-17:00")
           .accordion__body.overflow-hidden.px-4
-            .d-none(itemprop="geo" itemscope="" itemtype="http://schema.org/GeoCoordinates")
+            .d-none(itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates")
               meta(itemprop="latitude" content="47.244980")
               meta(itemprop="longitude" content="39.648187")
-            .contacts(itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress")
+            .contacts(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
               span.d-none(itemprop="postalCode") 344103
               span.d-none(itemprop="addressRegion") Ростовская область
               span.d-none(itemprop="addressLocality" content="Ростов-на-Дону")

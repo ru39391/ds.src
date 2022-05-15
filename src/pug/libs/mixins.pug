@@ -1,5 +1,8 @@
-mixin img(img__path, img__classname="img-fluid")
-  img(class=img__classname src=`/img/${img__path}` alt=""  title="")
+mixin img(img__path, img__classname="img-fluid", img__itemprop=false)
+  if (img__itemprop)
+    img(class=img__classname src=`/img/${img__path}` alt="" title="" itemprop="image")
+  else
+    img(class=img__classname src=`/img/${img__path}` alt="" title="")
 
 mixin svg(svg__name, svg__classname="icon-fluid")
   svg(class=svg__classname)
@@ -68,10 +71,16 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
   if (card__params)
     - var card__params_offset = 'mb-4';
 
-  .card.flex-column.justify-content-between.h-100.p-3(class=card__classmod)
+  .card.flex-column.justify-content-between.h-100.p-3(class=card__classmod itemscope itemtype="http://schema.org/Product")
+    span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+      meta(itemprop="availability" content="http://schema.org/InStock")
+      meta(itemprop="priceCurrency" content="RUB")
+      meta(itemprop="price" content="7337.12")
+      //- самая низкая цена в категории
+      meta(itemprop="lowPrice" content="100")
     .card__header(class=card__header_offset)
       a.card__picture.mb-2(href="#")
-        +img(card__img)
+        +img(card__img, 'img-fluid', true)
       .card__meta.card__meta_left
         if (card__label === 'discount')
           .label.label_discount.text-uppercase.px-2 Скидка
@@ -131,7 +140,8 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
           .card__params.flex-grow-1.text-right.color-theme-brand 215 / 55  R16
     .card__body.d-flex.flex-column.justify-content-between.flex-grow-1(class=card__params_offset)
       .card__intro
-        a.card__title.d-block.mb-2(href="#")!= card__title
+        a.card__title.d-block.mb-2(href="#" itemprop="url")
+          span(itemprop="name")!= card__title
       .card__footer
         .card__meta.card__meta_row.mb-2(class=card__price_classmod)
           .card__price

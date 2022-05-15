@@ -14,25 +14,39 @@ block filter
 
 block wrapper
     .wrapper
-      ul.pathway(itemscope="" itemtype="http://schema.org/BreadcrumbList")
-        li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+      ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
           a.pathway__link(href="#" itemprop="item")
             span(itemprop="name") Главная
             meta(itemprop="position" content="1")
-        li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
           a.pathway__link(href="#" itemprop="item")
             span(itemprop="name") Шины
             meta(itemprop="position" content="2")
-        li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
           a.pathway__link(href="#" itemprop="item")
             span(itemprop="name") Cordiant
             meta(itemprop="position" content="3")
-        li(itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
           a.pathway__current(href="#" itemprop="item")
             span(itemprop="name") Cordiant 2
             meta(itemprop="position" content="4")
-      section.content
+      section.content(itemscope itemtype="http://schema.org/Product")
         h1(itemprop="name") Шины CORDIANT Comfort 2 в Ростове-на-Дону
+        span.d-none(itemprop="brand") Cordiant
+        //- остаток на складе
+        span.d-none(itemprop="sku") 1840
+        meta(content="/img/content/logo/logo-1.jpg" itemprop="image")
+        span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+          meta(itemprop="availability" content="http://schema.org/InStock")
+          //- количество товаров в категории
+          meta(itemprop="offerCount" content="1840")
+          //- самая выскоая цена
+          meta(itemprop="highPrice" content="10657")
+          //- самая низкая цена
+          meta(itemprop="lowPrice" content="25")
+          //- наименование валюты
+          meta(itemprop="priceCurrency" content="RUB")
       .category-counter.mb-4 1 840 товаров
       .row
         .col-xl-2.col-lg-3.mb-lg-4
