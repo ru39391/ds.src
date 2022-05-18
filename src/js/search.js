@@ -48,3 +48,10 @@ if(searchField) {
     removeClass(headerLogoCol, 'header__col_logo_invisible');
   });
 }
+
+document.body.addEventListener('click', e => {
+  if(!e.target.closest('.header__col_search') && e.target != searchBtn && searchFieldColParent.classList.contains('header__search-holder')) {
+    removeClass(searchFieldColParent, 'header__search-holder');
+    removeClass(headerLogoCol, 'header__col_logo_invisible');
+  }
+});

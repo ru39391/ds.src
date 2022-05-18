@@ -25,8 +25,9 @@ block wrapper
       - var resultsRadio = [{index: 1, title: 'Шины (887)', checked: true}, {index: 2, title: 'Мотошины (0)'}, {index: 3, title: 'Диски (67)'}, {index: 4, title: 'АКБ (0)'}, {index: 5, title: 'Масла (0)'}, {index: 6, title: 'Автотовары (238)'}]
       .category-counter.mb-4 1 840 товаров в 4 каталогах
       form.form.mb-3(action="#")
+        a.toggler.toggler_lg.active(href="#") Активный
         each resultsRadio__item in resultsRadio
-          +radio(resultsRadio__item.index, resultsRadio__item.title, resultsRadio__item.checked, 'search-radio', 'form__label_lg')
+          a.toggler.toggler_lg(href="#")!= resultsRadio__item.title
     .row
       .col-xl-2.col-lg-3.mb-lg-4
         block results__sidebar

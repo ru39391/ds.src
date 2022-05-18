@@ -1,31 +1,22 @@
-$('#form-reg').validate({
-  rules: {
-    reg__username: 'required',
-    reg__phone: 'required',
-    reg__email: {
-      required: true,
-      email: true
-    },
-    reg__confidential: 'required',
-  },
-  messages: {
-    reg__username: 'Поле обязательно для заполнения',
-    reg__phone: 'Поле обязательно для заполнения',
-    reg__email: 'Ведите e-mail',
-    reg__confidential: 'Необходимо принять условия политики конфидециальности',
-  },
+$.extend($.validator.messages, {
+  required: "Обязательное поле",
+  remote: "Пожалуйста, введите правильное значение",
+  email: "Неверный формат",
+  pattern: "Неверный формат",
+  url: "Пожалуйста, введите корректный URL",
+  date: "Пожалуйста, введите корректную дату",
+  dateISO: "Пожалуйста, введите корректную дату в формате ISO",
+  number: "Пожалуйста, введите число",
+  digits: "Пожалуйста, вводите только цифры",
+  creditcard: "Пожалуйста, введите правильный номер кредитной карты.",
+  equalTo: "Пароли должны совпадать",
+  extension: "Пожалуйста, выберите файл с правильным расширением.",
+  maxlength: $.validator.format("Пожалуйста, введите не больше {0} символов"),
+  minlength: $.validator.format("Пожалуйста, введите не меньше {0} символов"),
+  rangelength: $.validator.format("Пожалуйста, введите от {0} до {1} символов"),
+  range: $.validator.format("Пожалуйста, введите число от {0} до {1}"),
+  max: $.validator.format("Пожалуйста, введите число, меньшее или равное {0}"),
+  min: $.validator.format("Пожалуйста, введите число, большее или равное {0}")
 });
 
-$('#form-login').validate({
-  rules: {
-    login__username: 'required',
-    login__pwd: {
-      required: true,
-      minlength: 5
-    },
-  },
-  messages: {
-    login__username: 'Поле обязательно для заполнения',
-    login__pwd: 'Поле обязательно для заполнения',
-  },
-});
+$('form').validate();

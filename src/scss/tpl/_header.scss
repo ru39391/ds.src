@@ -140,10 +140,6 @@
   @extend %btn-default;
   transition: all .3s ease;
 
-  &:hover {
-    color: $color__brand;
-  }
-
   &.header__nav-item_col {
     &:hover {
       .header__nav-icon {
@@ -175,10 +171,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.25rem;
-
-  &:hover {
-    color: $color__brand;
-  }
 
   @include media-breakpoint-up(lg) {
     display: block;

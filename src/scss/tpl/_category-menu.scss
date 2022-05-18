@@ -5,10 +5,8 @@
 .category-menu__item {
   @include border(0 0 1px,$color__light);
   min-height: 50px;
-  padding: .125rem 0 .125rem 1rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   transition: all .3s ease;
 
   &.category-menu__item_current {
@@ -44,7 +42,11 @@
 }
 
 .category-menu__title {
-  margin: 0 12px 0 0;
+  padding: .125rem 0 .125rem 1rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   transition: all .3s ease;
 }
 
@@ -62,11 +64,14 @@
 }
 
 .category-menu__link {
+  @include h5;
   @include border(0 0 1px,$color__brand);
   min-height: 50px;
+  padding: .5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   background-color: $color__light;
 }

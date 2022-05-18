@@ -100,16 +100,20 @@ html(lang="ru")
             .modal-body.border-bottom.pt-0.px-4.pb-3.mb-3
               .form
                 .form__item.mb-4
-                  input#reg__username.form__field(type="text" value="" name="reg__username")
+                  input#reg__username.form__field.error(type="text" value="" name="reg__username")
+                  label#reg__username-error.error(for="reg__username") Поле обязательно для заполнения
                   .form__label.form__label_title Ваше имя *
                 .form__item.mb-4
-                  input#reg__phone.form__field.input-phone(type="text" value="" name="reg__phone")
+                  input#reg__phone.form__field.input-phone.error(type="text" value="" name="reg__phone")
+                  label#reg__phone-error.error(for="reg__phone") Поле обязательно для заполнения
                   .form__label.form__label_title Номер телефона *
                 .form__item.mb-4
-                  input#reg__email.form__field.input-email(type="text" value="" name="reg__email")
+                  input#reg__email.form__field.error(type="text" value="" name="reg__email")
+                  label#reg__email-error.error(for="reg__email") Ведите e-mail
                   .form__label.form__label_title E-mail *
                 .form__item
                   input#reg__confidential.form__toggler.form__toggler_checkbox(type="checkbox" value="" name="reg__confidential")
+                  label#reg__confidential-error.error(for="reg__confidential") Необходимо принять условия политики конфидециальности
                   label.form__label.form__label_checkbox(for="reg__confidential")
                     +icon('checked','form__label-icon')
                     span.form__label-title Я принимаю&nbsp;

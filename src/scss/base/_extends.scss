@@ -101,6 +101,15 @@
   }
 }
 
+%theme-hover {
+  color: $color__text_default;
+
+  &:hover,
+  &:focus {
+    color: $color__brand;
+  }
+}
+
 %link-default {
   text-decoration: none;
   color: $color__link;
@@ -108,7 +117,7 @@
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $color__link;
+    color: $color__brand;
   }
 }
 

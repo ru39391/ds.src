@@ -27,10 +27,10 @@ block wrapper
                 +icon('email','contacts__icon color-theme-brand mr-2')
                 | office@don-shina.ru
               a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
-                +icon('wapp-bordered','contacts__icon color-theme-brand mr-2')
+                +icon('wapp','contacts__icon color-theme-brand mr-2')
                 | WhatsApp
               a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
-                +icon('tg-bordered','contacts__icon color-theme-brand mr-2')
+                +icon('tg','contacts__icon color-theme-brand mr-2')
                 | Telegram
               a.contacts__item.d-flex.align-items-start.h5(href="#")
                 +icon('time','contacts__icon color-theme-brand mr-2')
@@ -56,10 +56,10 @@ block wrapper
                 +icon('email','contacts__icon color-theme-brand mr-2')
                 | office@don-shina.ru
               a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
-                +icon('wapp-bordered','contacts__icon color-theme-brand mr-2')
+                +icon('wapp','contacts__icon color-theme-brand mr-2')
                 | WhatsApp
               a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
-                +icon('tg-bordered','contacts__icon color-theme-brand mr-2')
+                +icon('tg','contacts__icon color-theme-brand mr-2')
                 | Telegram
               a.contacts__item.d-flex.align-items-start.h5(href="#")
                 +icon('time','contacts__icon color-theme-brand mr-2')
@@ -85,10 +85,10 @@ block wrapper
                 +icon('email','contacts__icon color-theme-brand mr-2')
                 | office@don-shina.ru
               a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
-                +icon('wapp-bordered','contacts__icon color-theme-brand mr-2')
+                +icon('wapp','contacts__icon color-theme-brand mr-2')
                 | WhatsApp
               a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-3(href="#")
-                +icon('tg-bordered','contacts__icon color-theme-brand mr-2')
+                +icon('tg','contacts__icon color-theme-brand mr-2')
                 | Telegram
               a.contacts__item.d-flex.align-items-start.h5(href="#")
                 +icon('time','contacts__icon color-theme-brand mr-2')
@@ -102,8 +102,10 @@ block wrapper
       .col-xl-9.col-lg-8.order-1.order-lg-2.mb-5.mb-lg-4
         #rnd.map.active.border-radius.box-shadow.overflow-hidden
           script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab61ba54858def5cc58e7cbfdae9ffac5c0d900377f9b5655fa84742b96a9c73d&amp;width=100%25&amp;height=460&amp;lang=ru_RU&amp;scroll=false")
-        #taganrog.map.border-radius.box-shadow.overflow-hidden Таганрог
-        #volgograd.map.border-radius.box-shadow.overflow-hidden Волгоград
+        #taganrog.map.border-radius.box-shadow.overflow-hidden
+          script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A19b26df888c0af1ab8b7aceb26328560188b48582a903a59661050e4c96a079f&amp;width=100%25&amp;height=460&amp;lang=ru_RU&amp;scroll=false")
+        #volgograd.map.border-radius.box-shadow.overflow-hidden
+          script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A74758b5ee4465194e02a444d5c93601d3a5240432e973a93791a8e41dc5c7c95&amp;width=100%25&amp;height=460&amp;lang=ru_RU&amp;scroll=false")
 
     form.section.mb-5(action="#")
       .border-bottom.px-lg-5.px-md-4.px-3.mb-3
@@ -119,7 +121,7 @@ block wrapper
               input.form__field(type="text" value="")
               label.form__label.form__label_title +7 (___) ___-__-__*
             .form__item.mb-4
-              input.form__field.input-email(type="text" value="")
+              input.form__field(type="text" value="")
               label.form__label.form__label_title e-mail*
           .col-xl-4.col-md-5.offset-md-2
             .form__item.mb-4

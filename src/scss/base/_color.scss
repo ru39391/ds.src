@@ -1,3 +1,7 @@
+.theme-hover {
+  @extend %theme-hover;
+}
+
 .color-theme-inherit {
   @include color(inherit);
 }
