@@ -13,9 +13,9 @@
   }
 
   &.btn_nobg {
+    @extend %theme-hover;
     box-shadow: none;
     background: none;
-    color: $color__text_default;
   }
 
   &.btn_sm {

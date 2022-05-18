@@ -383,8 +383,11 @@
 
   .error {
     @include h6;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    margin: 0 0 .5rem;
     color: $color__danger;
-    margin: .25rem 0 .5rem;
   }
 }
 
@@ -418,6 +421,7 @@
 
   &.error {
     margin: 0;
+    position: static;
     border-color: $color__danger;
   }
 }

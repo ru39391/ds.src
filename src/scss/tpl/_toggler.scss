@@ -8,4 +8,10 @@
   &.toggler_success {
     @extend %toggler-theme-success;
   }
+
+  &.toggler_lg {
+    @include fs-lh(1rem,1.375rem);
+    @include offset(0 .5rem .5rem 0,.5rem 1.5rem);
+    border-radius: .5rem;
+  }
 }

@@ -63,11 +63,3 @@ a {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
-.theme-hover {
-  color: $color__text_default;
-
-  &:hover {
-    @include color($color__brand);
-  }
-}

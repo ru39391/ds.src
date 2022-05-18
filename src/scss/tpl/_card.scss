@@ -174,8 +174,6 @@
     transition: all .3s ease;
 
     &:hover {
-      color: $color__brand;
-
       .card__btn-icon {
         background: $color__light;
       }
@@ -399,10 +397,6 @@
 .card__title {
   @include fs-lh(1rem,1.375rem);
   transition: all .3s ease;
-
-  &:hover {
-    color: $color__brand;
-  }
 }
 
 .card__price {
