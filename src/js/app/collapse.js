@@ -26,7 +26,7 @@ document.body.addEventListener('click', e => {
 });
 
 /* category menu */
-const categoryMenuTitle = document.querySelectorAll('.category-menu__title');
+const categoryMenuTitle = document.querySelectorAll('.category-menu__title_type_toggler');
 const categoryMenuToggler = document.querySelectorAll('.category-menu__toggler');
 
 function toggleCategoryDropdown(categoryItem, activeClass) {

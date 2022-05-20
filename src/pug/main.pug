@@ -90,50 +90,35 @@ block wrapper
                 .col-md-8.offset-md-2.text-center
                   a.button.text-uppercase.px-4(href="#") подобрать
             form.form.tab-pane.fade(id="filter-wheels" role="tabpanel" action="#")
+              .row.align-items-center
+                .col-lg-2.offset-lg-2
+                  .form__select.mb-4
+                    .form__select-title Диаметр
+                    select.selecter
+                      option --
+                      option 10
+                      option 12
+                      option 12C
+                      option 13
+                .col-lg-2.offset-lg-1
+                  .form__select.mb-4
+                    .form__select-title Ширина
+                    select.selecter
+                      option --
+                      option 10
+                      option 12
+                      option 12C
+                      option 13
+                .col-lg-2.offset-lg-1
+                  .form__select.mb-4
+                    .form__select-title PCD
+                    select.selecter
+                      option --
+                      option 10
+                      option 12
+                      option 12C
+                      option 13
               .row
-                .form__row.col-lg-10.offset-lg-1
-                  .form__col.pr-md-4.pr-xl-0
-                    .form__select.mb-4
-                      .form__select-title Диаметр
-                      select.selecter
-                        option --
-                        option 10
-                        option 12
-                        option 12C
-                        option 13
-                  .form__col.pr-md-4.pr-xl-0
-                    .form__select.mb-4
-                      .form__select-title Ширина
-                      select.selecter
-                        option --
-                        option 5
-                        option 6.5
-                        option 7
-                        option 10.5
-                        option 12.5
-                        option 30
-                  .form__col.pr-md-4.pr-xl-0
-                    .form__select.mb-4
-                      .form__select-title Отверстий
-                      select.selecter
-                        option --
-                        option 3
-                        option 4
-                        option 5
-                        option 6
-                        option 8
-                        option 10
-                  .form__col.pr-md-4.pr-xl-0
-                    .form__select.mb-4
-                      .form__select-title PCD
-                      select.selecter
-                        option --
-                        option 98
-                        option 10
-                        option 105
-                        option 107.95
-                        option 108
-                        option 110
                 .form__row.col-lg-6.offset-lg-3.col-md-8.offset-md-2
                   input.form__toggler.form__toggler_checkbox(id="wheels-checkbox-11" type="checkbox" value="")
                   label.form__label.h5.mb-4(for="wheels-checkbox-11")

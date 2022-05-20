@@ -308,12 +308,11 @@ header.header
                   +icon('case')
                 span.header__btn-title Заказы
             .pos-rel.col-xl-3
-              .header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap
+              .header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap(data-toggle="modal" data-target="#auth-phone")
                 .header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                   +icon('user')
-                .d-flex.justify-content-center
-                  button.theme-hover.d-none.d-lg-block.button-unstyled(type="button" data-toggle="modal" data-target="#auth") Вход |
-                  button.header__btn-title.button-unstyled(type="button" data-toggle="modal" data-target="#reg")  регистрация
+                span.header__btn-title.button-unstyled(data-toggle="modal" data-target="#reg")  Вход | регистрация
+
           .pos-rel
             a.header__btn.header__btn_inverse(href="#")
               +icon('cart','header__btn-icon d-block')

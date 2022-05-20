@@ -9,6 +9,23 @@
     background: rgba(0,0,0,0);
   }
 
+  &:before {
+    transition: all .3s ease;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+
+    @include media-breakpoint-down(md) {
+      @include pos(0,0);
+      @include wh(100%);
+      content: '';
+      opacity: 0;
+      z-index: 1;
+      background-color: rgba(82,82,82,.2);
+    }
+  }
+
   &.aside_pos_sticky {
     @include media-breakpoint-up(lg) {
       position: sticky;
@@ -21,23 +38,6 @@
 
     @include media-breakpoint-only(lg) {
       top: 140px;
-    }
-
-    &:before {
-      transition: all .3s ease;
-
-      @include media-breakpoint-up(lg) {
-        display: none;
-      }
-
-      @include media-breakpoint-down(md) {
-        @include pos(0,0);
-        @include wh(100%);
-        content: '';
-        opacity: 0;
-        z-index: 1;
-        background-color: rgba(82,82,82,.2);
-      }
     }
   }
 

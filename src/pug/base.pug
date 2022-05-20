@@ -165,28 +165,43 @@ html(lang="ru" itemscope itemtype="http://schema.org/WebPage")
                 .col-xl-7.text-xl-right.text-center
                   button.button.text-uppercase.px-3(type="submit") Зарегистрироваться
 
-      .modal.fade#auth(tabindex="-1" aria-hidden="true")
-        form#form-login.modal-dialog(action="#")
+      .modal.fade#auth-phone(tabindex="-1" aria-hidden="true")
+        form.modal-dialog(action="#")
           .modal-content.border-0.box-shadow.py-3
             .modal-header.d-flex.align-items-center.justify-content-between.pt-0.px-4.pb-3.mb-4
               .d-flex.align-items-center
                 +icon('user','color-theme-brand h3 mr-2')
-                .h3.font-weight-bold.color-theme-brand.mr-3 Вход
+                .h3.font-weight-bold.color-theme-brand.mr-3 Войдите или зарегистрируйтесь
               button.close.h2.button-unstyled.color-theme-brand.py-0(data-dismiss="modal")
                 +icon('close')
             .modal-body.border-bottom.pt-0.px-4.pb-2.mb-3
               .form.mb-4
                 .form__item.mb-4
-                  input#login__username.form__field.input-phone(type="text" value="" name="login__username")
+                  input.form__field.input-phone(type="text" value="")
                   .form__label.form__label_title Номер телефона *
-                .form__item
-                  input#login__pwd.form__field(type="text" value="" name="login__pwd")
-                  .form__label.form__label_title Пароль *
               .d-flex.flex-wrap.align-items-center.justify-content-between
-                a.h5(href="#" data-dismiss="modal" data-toggle="modal" data-target="#pwd") Забыли пароль?
-                a.h5(href="#" data-dismiss="modal" data-toggle="modal" data-target="#reg") Регистрация
+                a.h5(href="#" data-dismiss="modal" data-toggle="modal" data-target="#auth-email") Войти по почте
             .text-center.px-4
-              button.button.text-uppercase.px-5(type="submit") Вход
+              button.button.text-uppercase.px-5(type="submit") Получить код
+
+      .modal.fade#auth-email(tabindex="-1" aria-hidden="true")
+        form.modal-dialog(action="#")
+          .modal-content.border-0.box-shadow.py-3
+            .modal-header.d-flex.align-items-center.justify-content-between.pt-0.px-4.pb-3.mb-4
+              .d-flex.align-items-center
+                +icon('user','color-theme-brand h3 mr-2')
+                .h3.font-weight-bold.color-theme-brand.mr-3 Войдите по почте
+              button.close.h2.button-unstyled.color-theme-brand.py-0(data-dismiss="modal")
+                +icon('close')
+            .modal-body.border-bottom.pt-0.px-4.pb-2.mb-3
+              .form.mb-4
+                .form__item.mb-4
+                  input.form__field.input-email(type="text" value="")
+                  .form__label.form__label_title Только для зарегистрированных пользователей *
+              .d-flex.flex-wrap.align-items-center.justify-content-between
+                a.h5(href="#" data-dismiss="modal" data-toggle="modal" data-target="#auth-phone") Войти или зарегистрироваться
+            .text-center.px-4
+              button.button.text-uppercase.px-5(type="submit") Получить код
 
       .modal.fade#pwd(tabindex="-1" aria-hidden="true")
         form.modal-dialog(action="#")
