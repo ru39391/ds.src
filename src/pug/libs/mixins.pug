@@ -19,7 +19,7 @@ mixin radio(radio__index=1, radio__title, radio__checked, radio__name="filter-ra
   label.form__label(class=radio__labelclassmod for=`filter-radio-${radio__index}`)!= radio__title
 
 mixin leftmenu(leftmenu__title, leftmenu__icon, leftmenu__badge, leftmenu__badge_text, leftmenu__badge_extratext=false)
-  a.leftmenu__item.d-flex.align-items-center.h4(href="#")
+  a.leftmenu__item.d-flex.align-items-center.h4(href="https://don-shina.ru")
     +icon(leftmenu__icon, 'leftmenu__item-icon h3 color-theme-brand mr-2')
     span.leftmenu__item-title.d-block.overflow-hidden.text-nowrap.mr-2!= leftmenu__title
     if (leftmenu__badge_text)
