@@ -397,6 +397,12 @@
 .card__title {
   @include fs-lh(1rem,1.375rem);
   transition: all .3s ease;
+
+  &:after {
+    content: '';
+    @include pos(0,0);
+    @include wh(100%);
+  }
 }
 
 .card__price {

@@ -88,7 +88,7 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
           .label.label_sale.text-uppercase.px-2 Акция
         else if (card__label === 'hit')
           .label.label_hit.text-uppercase.px-2 Хит
-        .card__features.card__features_col
+        .card__features.card__features_col.zi-2
           if (card__warranty)
             .card__features-item
               span.card__features-icon.h4.d-flex.flex-column.align-items-center.justify-content-center.bg-theme-info
@@ -121,10 +121,10 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
                   p При наличии на Доватора 11
                 a.card__features-readmore(href="#") Подробнее
       .card__meta.card__meta_right
-        button.card__btn.card__btn_icon(type="button")
+        button.card__btn.card__btn_icon.zi-2(type="button")
           +icon('compare','card__btn-icon h4 d-flex flex-column align-items-center justify-content-center')
           span.card__btn-title Сравнить
-        button.card__btn.card__btn_icon(type="button")
+        button.card__btn.card__btn_icon.zi-2(type="button")
           +icon('favourite','card__btn-icon h4 d-flex flex-column align-items-center justify-content-center')
           span.card__btn-title Добавить в избранное
       if (!card__wheel)
@@ -156,15 +156,15 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
               .card__price.card__price_new!= card__price_new
                 | ₽
               .text-sm при сдаче старого
-        .d-flex.align-items-center.justify-content-between(class=card__oneclick_offset)
+        .d-flex.align-items-center.justify-content-between.zi-2(class=card__oneclick_offset)
           .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
             input.recalculate__field.d-none(type="number" name="count" value="4")
             button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
             .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
             button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
-          a.button.text-uppercase(href="#") В корзину
+          button.button.text-uppercase(type="button") В корзину
         if (card__oneclick)
-          button.card__btn.card__btn_link.w-100(type="button")
+          button.card__btn.card__btn_link.w-100.zi-2(type="button")
             +icon('plane','h4 color-theme-brand d-flex flex-column align-items-center justify-content-center mr-1')
             | Купить в один клик
     if (card__params)
