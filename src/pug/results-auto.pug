@@ -20,7 +20,7 @@ block filter
         | фильтр
 
 block results__sidebar
-  #settings.aside
+  #settings.aside.aside_pos_fixed
     .aside__wrapper
       form.form.form_bg.form_filter.mb-lg-3(action="#")
         .form__header.d-flex.align-items-center.justify-content-between.d-lg-block
@@ -91,7 +91,7 @@ block results__sidebar
             +icon('wheels','contacts__icon h2 color-theme-brand mr-3')
             | Подборать диски
 
-  #params.aside
+  #params.aside.aside_pos_fixed
     .aside__wrapper
       form.form.form_bg.form_filter.mb-lg-3(action="#")
         .form__header.d-flex.align-items-center.justify-content-between.d-lg-block
@@ -120,7 +120,7 @@ block results__sidebar
           a.d-block.h6.mb-1(href="#") 215/40R16 (4)
           a.d-block.h6.mb-1(href="#") 195/40R17 (3)
 
-  #filter.aside
+  #filter.aside.aside_pos_fixed
     .aside__wrapper
       form.form.form_bg.form_filter.mb-lg-3(action="#")
         .form__header.d-flex.align-items-center.justify-content-between.d-lg-block.pl-3
@@ -128,8 +128,8 @@ block results__sidebar
         .form__section
           .form__section-title.h6.color-theme-disabled.mb-4 Типоразмер
           .row
-            .col-4.col-lg-12
-              .form__select.mb-lg-4
+            .col-sm-4.col-lg-12
+              .form__select.mb-lg-4.mb-sm-0.mb-4
                 .form__select-title Ширина
                 select.selecter
                   option --
@@ -139,8 +139,8 @@ block results__sidebar
                   option 10.5
                   option 12.5
                   option 30
-            .col-4.col-lg-12
-              .form__select.mb-lg-4
+            .col-sm-4.col-lg-12
+              .form__select.mb-lg-4.mb-sm-0.mb-4
                 .form__select-title Высота
                 select.selecter
                   option --
@@ -150,7 +150,7 @@ block results__sidebar
                   option 11.5
                   option 12.5
                   option 13.5
-            .col-4.col-lg-12
+            .col-sm-4.col-lg-12
               .form__select
                 .form__select-title Диаметр
                 select.selecter
@@ -164,8 +164,8 @@ block results__sidebar
         .form__section.form__section_hidden
           .form__section-title.h6.color-theme-disabled.mb-4 Типоразмер (задняя ось)
           .row
-            .col-4.col-lg-12
-              .form__select.mb-lg-4
+            .col-sm-4.col-lg-12
+              .form__select.mb-lg-4.mb-sm-0.mb-4
                 .form__select-title Ширина
                 select.selecter
                   option --
@@ -175,8 +175,8 @@ block results__sidebar
                   option 10.5
                   option 12.5
                   option 30
-            .col-4.col-lg-12
-              .form__select.mb-lg-4
+            .col-sm-4.col-lg-12
+              .form__select.mb-lg-4.mb-sm-0.mb-4
                 .form__select-title Высота
                 select.selecter
                   option --
@@ -186,7 +186,7 @@ block results__sidebar
                   option 11.5
                   option 12.5
                   option 13.5
-            .col-4.col-lg-12
+            .col-sm-4.col-lg-12
               .form__select
                 .form__select-title Диаметр
                 select.selecter

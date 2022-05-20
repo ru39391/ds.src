@@ -1,14 +1,6 @@
 .aside {
   transition: all .3s ease;
 
-  @include media-breakpoint-down(md) {
-    @include pos(0,0,fixed);
-    width: 100%;
-    padding: 0;
-    z-index: 1080;
-    background: rgba(0,0,0,0);
-  }
-
   &:before {
     transition: all .3s ease;
 
@@ -38,6 +30,16 @@
 
     @include media-breakpoint-only(lg) {
       top: 140px;
+    }
+  }
+
+  &.aside_pos_fixed {
+    @include media-breakpoint-down(md) {
+      @include pos(0,0,fixed);
+      width: 100%;
+      padding: 0;
+      z-index: 1080;
+      background: rgba(0,0,0,0);
     }
   }
 
