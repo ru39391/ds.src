@@ -8,12 +8,14 @@ import './app/notify';
 import './app/menu';
 import './app/breakpointchecker';
 import './app/recalculate';
-import './app/cards';
 import './app/header';
-import './app/collapse';
-import './app/accordion';
+
+import './app/cards'; //-
+import './app/collapse'; //-
+import './app/accordion'; //-
+
 import './app/panel';
+
 import './app/popup';
 import './app/comparing';
-
 import './app/aside';

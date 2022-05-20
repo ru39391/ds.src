@@ -5,9 +5,9 @@ block meta
 
 block filter
   .header__footer
-    button.filter-toggler.d-flex.align-items-center.justify-content-center.p-2(type="button")
-      +icon('settings','filter-toggler__icon h4 mr-2')
-      span.filter-toggler__title Подобрать по VIN
+    button.aside-toggler.flex-grow-1.justify-content-center.px-3.py-2(type="button" data-target="#settings")
+      +icon('settings', 'aside-toggler__icon h3 mr-2')
+      span.pointer-events-none Подобрать по VIN
 
 block wrapper
     .wrapper
@@ -36,8 +36,8 @@ block wrapper
           meta(itemprop="priceCurrency" content="RUB")
       .category-counter.mb-4 1 840 товаров
 
-      .filter.filter_sticky
-        .sidebar__wrapper
+      #settings.aside
+        .aside__wrapper
           .section.section_filter.bg-theme-white.py-0.mb-lg-3
             .section__expander.d-flex.align-items-center.justify-content-between.cursor-pointer.px-md-4.px-3.py-2
               button.btn.btn_nobg.h4.p-0(type="button")

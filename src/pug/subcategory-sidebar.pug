@@ -4,15 +4,15 @@ block meta
   - var title = 'Подкатегория каталога (автотовары)';
 
 block filter
-  .header__footer.header__footer_row
-    button.filter-btn.align-items-center.flex-grow-1.p-2(type="button" data-toggle="filter" data-target="#detail")
-      +icon('detail','filter-btn__icon h3 mr-2')
-      span.filter-btn__title.text-nowrap
-        span.filter-btn__show Все автотовары
-        span.filter-btn__hide Скрыть все автотовары
-    button.filter-btn.align-items-center.p-2(type="button" data-toggle="filter" data-target="#settings")
-      +icon('settings','filter-btn__icon h3 mr-2')
-      span.filter-btn__title.filter-btn__title_invisible.text-nowrap Подобрать по VIN
+  .header__footer
+    button.aside-toggler.flex-grow-1.aside-toggler_btn_group.px-3.py-2(type="button" data-target="#details")
+      +icon('detail','aside-toggler__icon h3 mr-2')
+      span.aside-toggler__title.h4.text-nowrap
+        span.aside-toggler__show Все автотовары
+        span.aside-toggler__hide Скрыть все автотовары
+    button.aside-toggler.aside-toggler_btn_group.px-3.py-2(type="button" data-target="#settings")
+      +icon('settings','aside-toggler__icon h3')
+      span.aside-toggler__title.aside-toggler__title_invisible.h4.text-nowrap Подобрать по VIN
 
 block aside
   include base/category-details.pug

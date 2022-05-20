@@ -1,6 +1,14 @@
 .aside {
   transition: all .3s ease;
 
+  @include media-breakpoint-down(md) {
+    @include pos(0,0,fixed);
+    width: 100%;
+    padding: 0;
+    z-index: 1080;
+    background: rgba(0,0,0,0);
+  }
+
   &.aside_pos_sticky {
     @include media-breakpoint-up(lg) {
       position: sticky;
@@ -13,14 +21,6 @@
 
     @include media-breakpoint-only(lg) {
       top: 140px;
-    }
-
-    @include media-breakpoint-down(md) {
-      @include pos(0,0,fixed);
-      width: 100%;
-      padding: 0;
-      z-index: 1080;
-      background: rgba(0,0,0,0);
     }
 
     &:before {
@@ -43,7 +43,7 @@
 
   &.aside_visible {
     @include media-breakpoint-down(md) {
-      height: 100%;
+      bottom: 0;
     }
 
     &:before {
@@ -52,8 +52,10 @@
 
     .aside__wrapper {
       @include media-breakpoint-down(md) {
-        height: 100%;
+        bottom: 0;
         opacity: 1;
+        overflow-y: scroll;
+        overflow-x: hidden;
         pointer-events: all;
       }
     }
@@ -69,12 +71,28 @@
 
   @include media-breakpoint-down(md) {
     @include pos(0,0);
-    right: 0;
-    bottom: 0;
-    height: 0;
+    width: 100%;
     opacity: 0;
     z-index: 2;
     overflow: hidden;
     pointer-events: none;
   }
 }
+
+.aside__alert {
+  z-index: 2;
+
+  @include media-breakpoint-up(lg) {
+    @include pos(auto,0);
+    right: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto !important;
+  }
+}
+

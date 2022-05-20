@@ -4,16 +4,21 @@ block meta
   - var title = 'Подкатегория каталога (автотовары)';
 
 block filter
-  .header__footer.header__footer_row
-    button.filter-btn.align-items-center.p-2(type="button" data-toggle="filter" data-target="#filter")
-      +icon('filter','filter-btn__icon h3 mr-2')
-      span.filter-btn__title.text-nowrap
-        span.filter-btn__show Показать&nbsp;
-        span.filter-btn__hide Скрыть&nbsp;
+  .header__footer
+    button.aside-toggler.flex-grow-1.aside-toggler_btn_group.px-3.py-2(type="button" data-target="#details")
+      +icon('detail','aside-toggler__icon h3 mr-2')
+      span.aside-toggler__title.h4.text-nowrap
+        span.aside-toggler__show Все автотовары
+        span.aside-toggler__hide Скрыть все автотовары
+    button.aside-toggler.aside-toggler_btn_group.px-3.py-2(type="button" data-target="#filter")
+      +icon('filter','aside-toggler__icon h3')
+      span.aside-toggler__title.aside-toggler__title_invisible.h4.text-nowrap
+        span.aside-toggler__show Показать&nbsp;
+        span.aside-toggler__hide Скрыть&nbsp;
         | фильтр
-    button.filter-btn.align-items-center.p-2(type="button" data-toggle="filter" data-target="#settings")
-      +icon('settings','filter-btn__icon h3 mr-2')
-      span.filter-btn__title.filter-btn__title_invisible.text-nowrap Подобрать по VIN
+    button.aside-toggler.aside-toggler_btn_group.px-3.py-2(type="button" data-target="#settings")
+      +icon('settings','aside-toggler__icon h3')
+      span.aside-toggler__title.aside-toggler__title_invisible.h4.text-nowrap Подобрать по VIN
 
 block wrapper
   .wrapper
@@ -38,9 +43,10 @@ block wrapper
         block aside
           include base/filter-details.pug
       .col-xl-10.col-lg-9.mb-4
-        #detail.filter.filter_extend.filter_sticky
-        #settings.filter.filter_extend.filter_sticky
-          .sidebar__wrapper
+        .d-lg-none
+          include base/category-details.pug
+        #settings.aside
+          .aside__wrapper
             .section.section_filter.bg-theme-white.py-0.mb-lg-3
               .section__expander.d-flex.align-items-center.justify-content-between.cursor-pointer.px-md-4.px-3.py-2
                 button.btn.btn_nobg.h4.p-0(type="button")

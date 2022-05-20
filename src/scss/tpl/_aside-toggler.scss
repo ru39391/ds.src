@@ -1,0 +1,74 @@
+.aside-toggler {
+  @extend %btn-default;
+  height: 40px;
+  flex-grow: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: $color__light;
+  color: $color__text_default;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, .12) inset;
+
+  &.aside-toggler_btn_group {
+    box-shadow: none;
+    background: rgba(0,0,0,0);
+  }
+
+  &.aside-toggler_active {
+    justify-content: center;
+    color: #fff;
+    background: $color__brand;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, .12) inset;
+
+    .aside-toggler__icon {
+      color: #fff;
+    }
+
+    .aside-toggler__show {
+      display: none;
+    }
+
+    .aside-toggler__hide {
+      display: inline;
+    }
+  }
+}
+
+.aside-toggler__icon {
+  color: $color__brand;
+}
+
+.aside-toggler__hide {
+  display: none;
+}
+
+.aside-toggler__title {
+  pointer-events: none;
+
+  &.aside-toggler__title_invisible {
+    display: none;
+  }
+}
+
+.aside-toggler-holder {
+  .aside-toggler {
+    &.aside-toggler_btn_group {
+      display: none;
+    }
+
+    &.aside-toggler_active {
+      flex-grow: 1;
+      display: flex;
+    }
+  }
+
+  .aside-toggler__icon {
+    margin-right: .5rem;
+  }
+
+  .aside-toggler__title {
+    &.aside-toggler__title_invisible {
+      display: block;
+    }
+  }
+}
