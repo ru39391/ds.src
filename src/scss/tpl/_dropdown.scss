@@ -20,6 +20,7 @@
 
     .dropdown-menu {
       display: block;
+      min-height: auto !important;
     }
   }
 
@@ -85,6 +86,10 @@
     overflow: visible;
     border-radius: 0;
     box-shadow: none;
+  }
+
+  .inner {
+    min-height: auto !important;
   }
 
   .bs-searchbox {

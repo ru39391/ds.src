@@ -56,7 +56,7 @@ block wrapper
             each results__item in results
               +card(results__item.price__old,results__item.price__new,results__item.title,results__item.label,results__item.warranty,results__item.credit,results__item.card,results__item.delivery,results__item.repair,results__item.winter,results__item.spikes,true,'card_tile d-sm-flex')
         nav.pagination
-          a.pagination__nav.pagination__nav_prev(href="#")
+          a.pagination__item.pagination__item_prev(href="#")
             +icon('readmore-right','h3 color-theme-brand')
           span.pagination__item.pagination__item_current 1
           a.pagination__item(href="#") 2
@@ -64,7 +64,7 @@ block wrapper
           a.pagination__item(href="#") 4
           span.pagination__item.pagination__item_divider ...
           a.pagination__item(href="#") 57
-          a.pagination__nav.pagination__nav_next(href="#")
+          a.pagination__item.pagination__item_next(href="#")
             +icon('readmore-right','h3 color-theme-brand')
 
     block results__seealso
