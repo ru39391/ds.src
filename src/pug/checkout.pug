@@ -27,7 +27,7 @@ block wrapper
               .row.align-items-center.mb-4
                 .col-sm-5.mb-2.mb-sm-0
                   input.form__toggler.form__toggler_checkbox(id="checkout-service-1" type="checkbox" value="")
-                  label.form__label.form__label_checkbox(for="checkout-service-1")
+                  label.form__label.h5(for="checkout-service-1")
                     +icon('checked','form__label-icon')
                     span.form__label-title Шиномонтаж
                 .col-sm-7
@@ -35,13 +35,13 @@ block wrapper
               .row.align-items-center
                 .col-sm-5.mb-2.mb-sm-0
                   input.form__toggler.form__toggler_checkbox(id="checkout-service-2" type="checkbox" value="")
-                  label.form__label.form__label_checkbox(for="checkout-service-2")
+                  label.form__label.h5(for="checkout-service-2")
                     +icon('checked','form__label-icon')
                     span.form__label-title Сезонное хранение
                 .col-sm-7
                   .h6.color-theme-disabled Вы можете оставить свои старые шины у нас на хранение
             .px-md-4.px-3.py-3.text-right
-              button.btn.text-uppercase.px-5(type="button") Далее
+              button.button.text-uppercase.px-5(type="button") Далее
           form.section.py-0.mb-3(action="#")
             .border-bottom.d-flex.align-items-center.px-md-4.px-3.py-2
               span.section-counter.h3.rounded-circle.bg-theme-brand.color-theme-white.mr-2 2

@@ -1,4 +1,4 @@
-.btn {
+.button {
   @extend %btn-default;
   @extend %btn-theme;
   @include border(1px,rgba(0,0,0,0));
@@ -8,17 +8,17 @@
   align-items: center;
   justify-content: center;
 
-  &.btn_bordered {
+  &.button_bordered {
     border-color: #fcfcfc;
   }
 
-  &.btn_nobg {
+  &.button_nobg {
     @extend %theme-hover;
     box-shadow: none;
     background: none;
   }
 
-  &.btn_sm {
+  &.button_sm {
     height: 26px;
     border-radius: .25rem;
   }
@@ -28,11 +28,11 @@
   }
 }
 
-.btn-unstyled {
+.button-unstyled {
   @extend %btn-default;
 }
 
-.btn__icon {
+.button__icon {
   @include fw(14px);
   //@include wh(14px,18px);
 }

@@ -9,7 +9,7 @@ block checkout
       span.section-counter.h4.rounded-circle.bg-theme-brand.color-theme-white.mr-2
         +icon('checked','color-theme-white')
       .h3.flex-grow-1.font-weight-bold.color-theme-brand Дополнительные услуги
-      button.btn.btn_nobg.h5.h-auto.p-0(type="button")
+      button.button.button_nobg.h5.h-auto.p-0(type="button")
         +icon('edit','h3 color-theme-brand mr-sm-2')
         .d-none.d-sm-block Изменить
   form.section.py-0.mb-3(action="#")
@@ -17,7 +17,7 @@ block checkout
       span.section-counter.h4.rounded-circle.bg-theme-brand.color-theme-white.mr-2
         +icon('checked','color-theme-white')
       .h3.flex-grow-1.font-weight-bold.color-theme-brand Покупатель
-      button.btn.btn_nobg.h5.h-auto.p-0(type="button")
+      button.button.button_nobg.h5.h-auto.p-0(type="button")
         +icon('edit','h3 color-theme-brand mr-sm-2')
         .d-none.d-sm-block Изменить
     .desclist.desclist.px-md-4.px-3.py-md-4.py-3
@@ -35,7 +35,7 @@ block checkout
       span.section-counter.h4.rounded-circle.bg-theme-brand.color-theme-white.mr-2
         +icon('checked','color-theme-white')
       .h3.flex-grow-1.font-weight-bold.color-theme-brand Доставка
-      button.btn.btn_nobg.h5.h-auto.p-0(type="button")
+      button.button.button_nobg.h5.h-auto.p-0(type="button")
         +icon('edit','h3 color-theme-brand mr-sm-2')
         .d-none.d-sm-block Изменить
     .desclist.desclist.px-md-4.px-3.py-md-4.py-3
@@ -54,14 +54,14 @@ block checkout
       .row.align-items-center.mb-4
         .col-sm-5.mb-2.mb-sm-0
           input.form__toggler.form__toggler_dot(id="checkout-payment-1" type="radio" name="payment" value="" checked)
-          label.form__label.form__label_dot(for="checkout-payment-1")
+          label.form__label.h5(for="checkout-payment-1")
             span.form__label-title.h6 Наличные
         .col-sm-7
           .h6.color-theme-disabled Оплата наличными при получении заказа в офисе или курьеру.
       .row.mb-4
         .col-sm-5.mb-2.mb-sm-0
           input.form__toggler.form__toggler_dot(id="checkout-payment-2" type="radio" name="payment" value="")
-          label.form__label.form__label_dot(for="checkout-payment-2")
+          label.form__label.h5(for="checkout-payment-2")
             span.form__label-title.h6 Кредит в офисе
         .col-sm-7
           .h6.color-theme-disabled.mb-2 Минимальный возраст заёмщика - 18 лет;
@@ -73,7 +73,7 @@ block checkout
       .row.mb-4
         .col-sm-5.mb-2.mb-sm-0
           input.form__toggler.form__toggler_dot(id="checkout-payment-3" type="radio" name="payment" value="")
-          label.form__label.form__label_dot(for="checkout-payment-3")
+          label.form__label.h5(for="checkout-payment-3")
             span.form__label-title.h6 Оплата банковским переводом
         .col-sm-7
           .h6.color-theme-disabled.mb-2 Сразу после подтверждения заказа Вы получите на указанный почтовый ящик квитанцию, которую можно оплатить в любом ближайшем от Вас банке.
@@ -90,7 +90,7 @@ block checkout
               input.form__field(type="text" value="")
               label.form__label.form__label_title Введите сумму списания в счёт покупки
           .col-sm-3
-            button.btn.btn_sm.h6.text-uppercase.px-4.py-1(type="button") Списать
+            button.button.button_sm.h6.text-uppercase.px-4.py-1(type="button") Списать
     .form.border-bottom.px-md-4.px-3.pb-md-4.pb-3
       .h6.color-theme-disabled.mb-4 Промокод
       .row.mb-2
@@ -100,7 +100,7 @@ block checkout
               input.form__field(type="text" value="")
               label.form__label.form__label_title Введите промокод
           .col-sm-3
-            button.btn.btn_sm.h6.text-uppercase.px-3.py-1(type="button") применить
+            button.button.button_sm.h6.text-uppercase.px-3.py-1(type="button") применить
       .h6.color-theme-disabled Скидки по промокоду не распространяются на товары со скидкой, промокод нельзя передавать третьим лицам и использовать в комерческих целях. Подробности уточняйте у наших менеджеров.
     .px-md-4.px-3.py-3.text-right
-      button.btn.text-uppercase.px-5(type="button") Оформить заказ
+      button.button.text-uppercase.px-5(type="button") Оформить заказ

@@ -89,11 +89,11 @@ document.querySelectorAll('[data-toggle="list"]').forEach(listToggler => {
 });
 
 /* custom service select */
-const serviceSelect = document.querySelector('.custom-select__service');
+const serviceSelect = document.querySelector('.select__service');
 if (serviceSelect) {
   const serviceCaption = document.querySelector('.modal-header__service-title');
-  const serviceBtn = document.querySelector('.btn_toggler-service');
-  const serviceIcon = serviceBtn.querySelector('.btn__icon');
+  const serviceBtn = document.querySelector('.button_toggler-service');
+  const serviceIcon = serviceBtn.querySelector('.button__icon');
   serviceSelect.addEventListener('change', e => {
     if(e.target.selectedIndex !== 0) {
       serviceCaption.textContent = e.target.value.toLowerCase();

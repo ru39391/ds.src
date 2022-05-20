@@ -1,4 +1,4 @@
-form.form.mb-3(action="#")
+form.mb-3(action="#")
     .form__header.form__header_bg
       .slides.slides_togglers.swiper-container
         .slides__nav
@@ -8,29 +8,24 @@ form.form.mb-3(action="#")
             +icon('arrow-right')
         .swiper-wrapper.px-3.px-lg-0
           .swiper-slide
-            input.form__toggler.form__toggler_radio(id="filter-radio-1" name="filter-radio" type="radio" value="" checked)
-            label.form__label(for="filter-radio-1") Все
+            a.toggler.active.h5(href="#") Все
           .swiper-slide
-            input.form__toggler.form__toggler_radio(id="filter-radio-2" name="filter-radio" type="radio" value="")
-            label.form__label(for="filter-radio-2") Для моего авто
+            a.toggler.h5(href="#") Для моего авто
           .swiper-slide
-            input.form__toggler.form__toggler_radio(id="filter-radio-9" name="filter-radio" type="radio" value="")
-            label.form__label(for="filter-radio-9") Скидки
+            a.toggler.h5(href="#") Скидки
           .swiper-slide
-            input.form__toggler.form__toggler_radio(id="filter-radio-10" name="filter-radio" type="radio" value="")
-            label.form__label(for="filter-radio-10") Хиты
+            a.toggler.h5(href="#") Хиты
           .swiper-slide
-            input.form__toggler.form__toggler_radio(id="filter-radio-13" name="filter-radio" type="radio" value="")
-            label.form__label(for="filter-radio-13") Акции
+            a.toggler.h5(href="#") Акции
     .row.justify-content-end
       .col-xl-2.col-md-3.col-sm-8.order-1.order-md-1.mb-3.mb-md-0
         input.form__toggler.form__toggler_checkbox(id="instock4" type="checkbox" value="")
-        label.form__label(for="instock4")
+        label.form__label.h5(for="instock4")
           +icon('checked','form__label-icon')
           span.form__label-title В наличии от 4 шт.
       .col-xl-3.col-md-4.order-3.order-md-2
         .form__select
-          select.custom-select
+          select.selecter
             option По умолчанию
             option По возрастанию цены
             option По убыванию цены

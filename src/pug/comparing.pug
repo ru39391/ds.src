@@ -24,7 +24,7 @@ block wrapper
       li.nav-item(role="presentation")
         a.toggler.nav-link.py-2(data-toggle="tab" href="#tab-wheels" role="tab" aria-controls="tab-wheels" aria-selected="true") Диски
     .tab-content.mb-5
-      #tab-tyres.tab-pane.d-block.fade.show.active(role="tabpanel")
+      #tab-tyres.tab-pane.d-block.overflow-hidden.fade.show.active(role="tabpanel")
         .comparing-form
           form.form.row.align-items-center(action="#")
             .col-xl-8.col-lg-6.col-md-4.d-flex.flex-wrap.align-items-center.mb-md-4.mb-2
@@ -32,11 +32,11 @@ block wrapper
               .toggler.toggler_success.mb-0 7 шт.
             .col-xl-2.col-lg-3.col-md-4.col-9.mb-4
               input.form__toggler.form__toggler_checkbox.form__toggler_comparing(id="param-1" type="checkbox" value="")
-              label.form__label(for="param-1")
+              label.form__label.h5(for="param-1")
                 +icon('checked','form__label-icon')
                 span.form__label-title Показать только различия
             .col-xl-2.col-lg-3.col-md-4.col-3.d-flex.justify-content-end.mb-4
-              button.btn.btn_nobg.h5.p-0(type="button")
+              button.button.button_nobg.h5.p-0(type="button")
                 +icon('trash','btn__icon h4 color-theme-brand mr-md-2')
                 span.d-md-block.d-none Очистить список
           .slides.slides_carousel.swiper-container.pt-1.pb-4
@@ -48,7 +48,7 @@ block wrapper
                     +card('12 337.12', '', comparing__item, '', false, false, false, false, false, true, true, false, 'card_compared card_slide d-flex', 'content/cards/card-1.jpg', false, true, {'Ширина':185,'Высота':55,'Диаметр':16,'Сезон':'Зима','Производитель':'Yokohama','Модель':'Ice Guard IG55','Типоразмер':'215 / 55  R16','Индекс нагрузки':'102 (850 кг)'})
                   else
                     +card('12 337.12', '', comparing__item, '', false, false, false, false, false, false, false, false, 'card_compared card_slide d-flex', 'content/cards/card-1.jpg', false, true, {'Ширина':170,'Высота':45,'Диаметр':17,'Сезон':'Лето','Производитель':'Yokohama','Модель':'Ice Guard IG55','Типоразмер':'215 / 55  R17','Индекс нагрузки':'102 (850 кг)'}, true)
-      #tab-wheels.tab-pane.d-block.fade(role="tabpanel")
+      #tab-wheels.tab-pane.d-block.overflow-hidden.fade(role="tabpanel")
         .comparing-form
           form.form.row.align-items-center(action="#")
             .col-xl-8.col-lg-6.col-md-4.d-flex.flex-wrap.align-items-center.mb-md-4.mb-2
@@ -56,11 +56,11 @@ block wrapper
               .toggler.toggler_success.mb-0 7 шт.
             .col-xl-2.col-lg-3.col-md-4.col-9.mb-4
               input.form__toggler.form__toggler_checkbox.form__toggler_comparing(id="param-2" type="checkbox" value="")
-              label.form__label(for="param-2")
+              label.form__label.h5(for="param-2")
                 +icon('checked','form__label-icon')
                 span.form__label-title Показать только различия
             .col-xl-2.col-lg-3.col-md-4.col-3.d-flex.justify-content-end.mb-4
-              button.btn.btn_nobg.h5.p-0(type="button")
+              button.button.button_nobg.h5.p-0(type="button")
                 +icon('trash','btn__icon h4 color-theme-brand mr-md-2')
                 span.d-md-block.d-none Очистить список
           .slides.slides_carousel.swiper-container.pt-1.pb-4

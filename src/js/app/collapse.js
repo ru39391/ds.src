@@ -1,6 +1,6 @@
 const productList = document.querySelectorAll('.product-list');
 productList.forEach(productListEl => {
-  productListEl.querySelector('.btn').addEventListener('click', (e) => {
+  productListEl.querySelector('.button').addEventListener('click', (e) => {
     e.target.closest('.product-list').classList.toggle('product-list_active');
   });
 });

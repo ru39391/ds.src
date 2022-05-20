@@ -10,102 +10,38 @@ block personal
       .h3.font-weight-bold.color-theme-brand Подробно заполненные данные вашего автомобиля сделают работу с сайтом удобнее и быстрее. Мы сможем предлагать товары и услуги подходящие именно Вам.
     .border-bottom.mb-3
       .d-flex.flex-wrap.pl-md-4.pl-3
-        .col-md-3.pl-0.pr-md-4.pr-3.mb-4
-          .dropdown
-            //- select.d-none
-              option Значение 1
-              option Значение 2
-              option Значение 3
-              option Значение 4
-              option Значение 5
-            button.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Выберете марку
-            .dropdown-menu
-              .dropdown-menu__header.mb-2
-                input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
-              .dropdown-menu__body
-                ul.dropdown-menu__list
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 1
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 2
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 3
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 4
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 5
-        .col-md-3.pl-0.pr-md-4.pr-3.mb-4
-          .dropdown
-            //- select.d-none
-              option Значение 1
-              option Значение 2
-              option Значение 3
-              option Значение 4
-              option Значение 5
-            button.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled) Модель
-            .dropdown-menu
-              .dropdown-menu__header.mb-2
-                input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
-              .dropdown-menu__body
-                ul.dropdown-menu__list
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 1
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 2
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 3
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 4
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 5
-        .col-md-3.pl-0.pr-md-4.pr-3.mb-4
-          .dropdown
-            //- select.d-none
-              option Значение 1
-              option Значение 2
-              option Значение 3
-              option Значение 4
-              option Значение 5
-            button.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled) Кузов
-            .dropdown-menu
-              .dropdown-menu__header.mb-2
-                input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
-              .dropdown-menu__body
-                ul.dropdown-menu__list
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 1
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 2
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 3
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 4
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 5
-        .col-md-3.pl-0.pr-md-4.pr-3.mb-4
-          .dropdown
-            //- select.d-none
-              option Значение 1
-              option Значение 2
-              option Значение 3
-              option Значение 4
-              option Значение 5
-            button.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled) Двигатель
-            .dropdown-menu
-              .dropdown-menu__header.mb-2
-                input.dropdown__field(type="search" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-5" aria-autocomplete="list")
-              .dropdown-menu__body
-                ul.dropdown-menu__list
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 1
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 2
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 3
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 4
-                  li.dropdown-menu__list-item
-                    a.dropdown-menu__list-option(role="option") Значение 5
+        .col-md-3.pl-0.pr-md-4.pr-3.mb-4.pos-rel
+          .form__select-title Выберете марку
+          select.selecter(data-live-search="true")
+            option Значение 1
+            option Значение 2
+            option Значение 3
+            option Значение 4
+            option Значение 5
+        .col-md-3.pl-0.pr-md-4.pr-3.mb-4.pos-rel
+          .form__select-title Модель
+          select.selecter(data-live-search="true" disabled)
+            option Значение 1
+            option Значение 2
+            option Значение 3
+            option Значение 4
+            option Значение 5
+        .col-md-3.pl-0.pr-md-4.pr-3.mb-4.pos-rel
+          .form__select-title Кузов
+          select.selecter(data-live-search="true" disabled)
+            option Значение 1
+            option Значение 2
+            option Значение 3
+            option Значение 4
+            option Значение 5
+        .col-md-3.pl-0.pr-md-4.pr-3.mb-4.pos-rel
+          .form__select-title Двигатель
+          select.selecter(data-live-search="true" disabled)
+            option Значение 1
+            option Значение 2
+            option Значение 3
+            option Значение 4
+            option Значение 5
       .px-md-4.px-3
         .h5.mb-3 Наиболее популярные:
         .text-center.mb-xl-5.mb-4
@@ -160,4 +96,4 @@ block personal
             +icon('wheels','contacts__icon h3 color-theme-brand mr-2')
             | Подборать диски
         .col-xl-6.d-sm-flex.justify-content-xl-end.text-center.text-sm-left
-          button.btn.text-uppercase.px-4(type="button") Сохранить изменения
+          button.button.text-uppercase.px-4(type="button") Сохранить изменения

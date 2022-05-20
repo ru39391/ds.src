@@ -19,7 +19,7 @@ block wrapper
         .d-flex.align-items-center
           h1.mr-4.mb-0 #{title}
           span.h5.text-nowrap.rounded-pill.color-theme-white.bg-theme-brand.px-2 3 шт.
-        a.btn.btn_nobg.h4.d-none.d-md-flex.p-0(href="#")
+        a.button.button_nobg.h4.d-none.d-md-flex.p-0(href="#")
           +icon('share','h3 color-theme-brand mr-2')
           span.h5 Рассказать друзьям
     .heading.heading_cart.px-3
@@ -52,7 +52,7 @@ block wrapper
           span.font-weight-bold.mr-1.text-nowrap.js-summ 7 337.12
           | ₽
       .table-row__col.table-row__col_cart-close.d-md-flex.flex-column.align-items-center.justify-content-center
-        button.h2.btn-unstyled.color-theme-brand(type="button")
+        button.h2.button-unstyled.color-theme-brand(type="button")
           +icon('close')
     form.table-row.table-row_cart.box-shadow.border-radius.py-3.py-md-1.px-3.mb-md-2.mb-3.js-cart(action="#")
       .table-row__col.table-row__col_cart-img.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
@@ -79,7 +79,7 @@ block wrapper
           span.font-weight-bold.mr-1.text-nowrap.js-summ 7 337.12
           | ₽
       .table-row__col.table-row__col_cart-close.d-md-flex.flex-column.align-items-center.justify-content-center
-        button.h2.btn-unstyled.color-theme-brand(type="button")
+        button.h2.button-unstyled.color-theme-brand(type="button")
           +icon('close')
     form.table-row.table-row_cart.box-shadow.border-radius.py-3.py-md-1.px-3.mb-4.js-cart(action="#")
       .table-row__col.table-row__col_cart-img.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
@@ -106,7 +106,7 @@ block wrapper
           span.font-weight-bold.mr-1.text-nowrap.js-summ 7 337.12
           | ₽
       .table-row__col.table-row__col_cart-close.d-md-flex.flex-column.align-items-center.justify-content-center
-        button.h2.btn-unstyled.color-theme-brand(type="button")
+        button.h2.button-unstyled.color-theme-brand(type="button")
           +icon('close')
     form.form.row.mb-5(action="#")
       .col-xl-8.col-md-6.d-flex.flex-wrap.align-items-start.px-0
@@ -115,7 +115,7 @@ block wrapper
             label.h6.d-inline-block.mb-0 Предпочтительный год производства шин:
           .col-xl-5.col-md-6.mb-3.mb-md-0
             .form__select
-              select.custom-select
+              select.selecter
                 option 2022
                 option 2021
                 option 2020
@@ -125,7 +125,7 @@ block wrapper
             label.h6.d-inline-block.mb-0 Если старше:
           .col-xl-8.col-md-6.mb-3.mb-md-0
             .form__select
-              select.custom-select
+              select.selecter
                 option позвонить и подобрать аналог
                 option написать и подобрать аналог
                 option позвонить и подобрать аналог
@@ -144,11 +144,11 @@ block wrapper
                 span.font-weight-bold 79 337.12&nbsp;
                 | ₽
           .text-center.text-md-left
-            button.btn.text-uppercase.px-5(type="submit") Оформить заказ
+            button.button.text-uppercase.px-5(type="submit") Оформить заказ
 
       .d-block.d-md-none
         .text-center.mb-2
-          a.btn.btn_nobg.h4.p-0(href="#")
+          a.button.button_nobg.h4.p-0(href="#")
             +icon('continue', 'h3 color-theme-brand mr-2')
             span.h5 Продолжить покупки
         .h6 Зарегистрировавшись на сайте всего один раз вам будет доступна история заказов, повтор заказов, накопительные скидки. &gt;

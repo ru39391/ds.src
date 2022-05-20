@@ -31,19 +31,19 @@ block personal
             +icon('wapp-filled','contacts__icon h3 color-theme-brand mr-2')
             span.contacts__item-title Напомнить в WhatsApp
         .col-xl-5.d-flex.justify-content-xl-end
-          button.btn.btn_nobg.h5.p-0(type="button")
+          button.button.button_nobg.h5.p-0(type="button")
             +icon('trash','btn__icon h3 color-theme-brand mr-2')
             | Отменить запись
 
   form.section.px-lg-5.px-md-4.px-3.pt-2.pb-3.pb-sm-2.mb-5(action="#")
     .row.align-items-center
       .col-xl-8.col-sm-6
-        button.btn.btn_nobg.btn_toggler-service.color-theme-disabled.h5.p-0(type="button" data-toggle="modal" data-target="#booking" disabled)
+        button.button.button_nobg.button_toggler-service.color-theme-disabled.h5.p-0(type="button" data-toggle="modal" data-target="#booking" disabled)
           +icon('services','btn__icon h4 color-theme-disabled mr-2')
           | Записаться на услугу
       .col-xl-4.col-sm-6
         .form__select
-          select.custom-select.custom-select__service
+          select.selecter.select__service
             option Выберете услугу
             option Шиномонтаж
             option Консультации
@@ -57,7 +57,7 @@ block popups
           .modal-header.d-flex.align-items-center.justify-content-between.border-0.zi-2.p-0.mb-1
             .h2.font-weight-bold.color-theme-brand.mr-3 Запись на&nbsp;
               span.modal-header__service-title шиномонтаж
-            button.close.h2.btn-unstyled.color-theme-brand.py-0(data-dismiss="modal")
+            button.close.h2.button-unstyled.color-theme-brand.py-0(data-dismiss="modal")
               +icon('close')
           .d-flex.align-items-center.zi-2.mb-3
             +icon('placemark','h6 color-theme-brand mr-2')
@@ -72,7 +72,7 @@ block popups
                       span.color-theme-brand Выберете дату и время
                     span.booking-heading__time
                 +icon('readmore-right','booking-heading__arrow h3 color-theme-brand')
-                button.booking-heading__btn.btn-unstyled.h5.p-0(type="button")
+                button.booking-heading__btn.button-unstyled.h5.p-0(type="button")
                   +icon('edit','btn__icon h4 color-theme-brand mr-2')
                   | Изменить
             .col-lg-6
@@ -138,7 +138,7 @@ block popups
                     label.form__label.form__label_title Автомобиль (марка, модель)*
                   .form__item.mb-4
                     input.form__toggler.form__toggler_checkbox(id="tyre-storage" type="checkbox" value="")
-                    label.form__label.form__label_checkbox(for="tyre-storage")
+                    label.form__label.h5(for="tyre-storage")
                       +icon('checked','form__label-icon')
                       span.form__label-title Оставить шины на хранение
             .border-top.px-md-5.px-3.pt-5
@@ -150,4 +150,4 @@ block popups
                     | условия&nbsp;
                     a.color-theme-brand(href="#") Политики конфиденциальности
                 .d-flex.justify-content-lg-end.justify-content-center.col-xl-3.col-lg-4
-                  button.btn.text-uppercase.px-5(type="submit") Записаться
+                  button.button.text-uppercase.px-5(type="submit") Записаться

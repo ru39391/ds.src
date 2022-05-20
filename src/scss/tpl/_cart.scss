@@ -44,7 +44,7 @@
       }
     }
 
-    .btn {
+    .button {
       @include media-breakpoint-down(sm) {
         border-color: #fff;
       }

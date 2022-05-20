@@ -22,22 +22,6 @@
   @include border(0 0 1px,$color__border);
   padding: 1rem 1rem 1rem 3rem;
 
-  &.form__header_px {
-    @include media-breakpoint-up(sm) {
-      @include px(2rem);
-    }
-
-    @include media-breakpoint-only(xs) {
-      @include px(1rem);
-    }
-  }
-
-  &.form__header_py {
-    @include media-breakpoint-up(sm) {
-      @include py(2rem);
-    }
-  }
-
   &.form__header_bg {
     border: 0;
     padding-bottom: .5rem;
@@ -52,29 +36,8 @@
   @include border(0 0 1px,$color__border);
   padding: .25rem 1rem 1.5rem;
 
-  &.form__section_px {
-    @include media-breakpoint-up(sm) {
-      @include px(2rem);
-    }
-  }
-
   &.form__section_hidden {
     display: none;
-  }
-
-  &.form__section_content {
-    p {
-      @include h6;
-      margin: 0 0 .25rem;
-    }
-
-    ul {
-      margin: 0 0 .25rem;
-    }
-
-    li {
-      @include h6;
-    }
   }
 
   &.active {
@@ -105,7 +68,6 @@
 }
 
 .form__label {
-  @include h5;
   margin-bottom: 0;
   cursor: pointer;
   user-select: none;
@@ -312,7 +274,7 @@
 .form__select {
   position: relative;
 
-  .custom-select {
+  .select {
     @include h6;
     height: 24px;
     padding: .125rem .5rem;
@@ -423,20 +385,6 @@
     margin: 0;
     position: static;
     border-color: $color__danger;
-  }
-}
-
-.form__footer {
-  @include h6;
-
-  &.form__footer_px {
-    @include media-breakpoint-up(sm) {
-      @include px(2rem);
-    }
-
-    @include media-breakpoint-only(xs) {
-      @include px(1rem);
-    }
   }
 }
 

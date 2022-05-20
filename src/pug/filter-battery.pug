@@ -35,14 +35,14 @@ block wrapper
                   .form__title.form__title_icon.text-nowrap.d-flex.align-items-center.h3.font-weight-bold.color-theme-brand.mb-0.mb-lg-2
                     +icon('battery','form__title-icon h3 mr-2')
                     | #{title}
-                  button.btn-unstyled.h6(type="reset") Сбросить
+                  button.button-unstyled.h6(type="reset") Сбросить
                 .form__section
                   .form__section-title.h6.color-theme-disabled.mb-4 Параметры
                   .row
                     .col-6.col-lg-12
                       .form__select.mb-lg-4
                         .form__select-title Полярность
-                        select.custom-select
+                        select.selecter
                           option --
                           option Значение 1
                           option Значение 2
@@ -55,7 +55,7 @@ block wrapper
                     .col-6.col-lg-12
                       .form__select
                         .form__select-title Ёмкость
-                        select.custom-select
+                        select.selecter
                           option --
                           option Значение 1
                           option Значение 2
@@ -69,16 +69,16 @@ block wrapper
                   .form__section-title.h6.color-theme-disabled.mb-4 Цена, ₽
                   .row.mb-3
                     .form__item.col-6
-                      label.form__label.form__label_plain.color-theme-disabled От
+                      label.form__label.form__label_plain.h5.color-theme-disabled От
                       input#price-min.form__field(type="text" value="")
                     .form__item.col-6
-                      label.form__label.form__label_plain.color-theme-disabled До
+                      label.form__label.form__label_plain.h5.color-theme-disabled До
                       input#price-max.form__field(type="text" value="")
                   #price-ranger.form__slider
                 .form__section
                   .form__section-title.h6.color-theme-disabled.mb-4 Наличие
                   input.form__toggler.form__toggler_checkbox(id="instock" type="checkbox" value="")
-                  label.form__label(for="instock")
+                  label.form__label.h5(for="instock")
                     +icon('checked', 'form__label-icon')
                     span.form__label-title Сейчас в наличии
                 .form__section.border-0.pb-0
@@ -89,52 +89,52 @@ block wrapper
                   .row
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Michelin" type="checkbox" value="")
-                      label.form__label.mb-4(for="Michelin")
+                      label.form__label.h5.mb-4(for="Michelin")
                         +icon('checked', 'form__label-icon')
                         span.form__label-title Michelin
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Cordiant" type="checkbox" value="")
-                      label.form__label.mb-4(for="Cordiant")
+                      label.form__label.h5.mb-4(for="Cordiant")
                         +icon('checked', 'form__label-icon')
                         span.form__label-title Cordiant
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Pirelli" type="checkbox" value="")
-                      label.form__label.mb-4(for="Pirelli")
+                      label.form__label.h5.mb-4(for="Pirelli")
                         +icon('checked', 'form__label-icon')
                         span.form__label-title Pirelli
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Hankook" type="checkbox" value="")
-                      label.form__label.mb-4(for="Hankook")
+                      label.form__label.h5.mb-4(for="Hankook")
                         +icon('checked', 'form__label-icon')
                         span.form__label-title Hankook
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Yokohama" type="checkbox" value="")
-                      label.form__label.mb-4(for="Yokohama")
+                      label.form__label.h5.mb-4(for="Yokohama")
                         +icon('checked', 'form__label-icon')
                         span.form__label-title Yokohama
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Goodyear" type="checkbox" value="")
-                      label.form__label.mb-4(for="Goodyear")
+                      label.form__label.h5.mb-4(for="Goodyear")
                         +icon('checked', 'form__label-icon')
                         span.form__label-title Good year
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Continental" type="checkbox" value="")
-                      label.form__label.mb-4(for="Continental")
+                      label.form__label.h5.mb-4(for="Continental")
                         +icon('checked', 'form__label-icon')
                         span.form__label-title Continental
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Bridgestone" type="checkbox" value="")
-                      label.form__label.mb-4(for="Bridgestone")
+                      label.form__label.h5.mb-4(for="Bridgestone")
                         +icon('checked', 'form__label-icon')
                         span.form__label-title Bridgestone
                 .d-flex.justify-content-center
-                  button.btn-unstyled.d-flex.align-items-center(type="submit")
+                  button.button-unstyled.d-flex.align-items-center(type="submit")
                     span.h6.mr-2 Показать еще
                     +icon('readmore','h3 color-theme-brand')
               .aside__alert.d-flex.align-items-center.justify-content-between.flex-lg-column.color-theme-white.bg-theme-brand.px-lg-3.pt-lg-1.pb-lg-3.py-3.px-4
                 .aside__alert-info.h2.font-weight-bold.d-flex.align-items-center.mb-lg-1
                   .h5.font-weight-normal.mr-2 Найдено:
                   | 713
-                button.btn.text-uppercase.btn_bordered.px-3(type="button") Показать
+                button.button.text-uppercase.button_bordered.px-3(type="button") Показать
 
         .col-xl-10.col-lg-9.mb-4
