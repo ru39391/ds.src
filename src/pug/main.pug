@@ -265,27 +265,65 @@ block wrapper
                 span.tabs__nav-title.h3.font-weight-bold.text-uppercase диски
           .tabs__content.tab-content
             .tab-pane.fade.show.active(id="links-tires" role="tabpanel" action="#")
-              .row
-                .col-lg-10.offset-lg-1.text-center.text-lg-left
-                  - var logoWheels = ['content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg']
-                  each logoWheels__item in logoWheels
-                    a.d-inline-block.mr-3.mb-4(href="#")
-                      +img(logoWheels__item)
-                  .d-flex.justify-content-center
-                    a.readmore.d-flex.align-items-center(href="#")
-                      span.h5.mr-2 Показать еще
-                      +icon('readmore-right','h3 color-theme-brand')
+              .row.text-center.mb-sm-5.mb-4
+                .col-lg-10.offset-lg-1.d-flex.flex-wrap
+                  .col-lg-5.d-flex.flex-column.justify-content-between
+                    .row
+                      a.col-6.px-2.mb-lg-0.mb-md-5.mb-4(href="#")
+                        +img('content/logo/cordiant.jpg')
+                      a.col-6.px-2.mb-lg-0.mb-md-5.mb-4(href="#")
+                        +img('content/logo/bridgestone.jpg')
+                    .row
+                      a.col-6.px-2.mb-lg-0.mb-md-5.mb-4(href="#")
+                        +img('content/logo/michelin.jpg')
+                      a.col-6.px-2.mb-lg-0.mb-md-5.mb-4(href="#")
+                        +img('content/logo/pirelli.jpg')
+                    .row
+                      a.col-6.px-2.mb-lg-0.mb-md-5.mb-4(href="#")
+                        +img('content/logo/yokohama.jpg')
+                      a.col-6.px-2.mb-lg-0.mb-md-5.mb-4(href="#")
+                        +img('content/logo/goodyear.jpg')
+                  .col-lg-6.offset-lg-1.d-flex.flex-wrap
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/contilitle.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/yokohama.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/pirelli.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/nokian.jpg')
+
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/kormoran.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/contilitle.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/dunlop.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/cordiant.jpg')
+
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/bridgestone.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/hankook.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/michelin.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/dunlop.jpg')
+
+                    a.col-6.col-md-3.mb-md-0.mb-4.px-2(href="#")
+                      +img('content/logo/bridgestone.jpg')
+                    a.col-6.col-md-3.mb-md-0.mb-4.px-2(href="#")
+                      +img('content/logo/nokian.jpg')
+                    a.col-6.col-md-3.px-2(href="#")
+                      +img('content/logo/goodyear.jpg')
+                    a.col-6.col-md-3.px-2(href="#")
+                      +img('content/logo/hankook.jpg')
+              .d-flex.justify-content-center
+                a.readmore.d-flex.align-items-center(href="#")
+                  span.h5.mr-2 Показать еще
+                  +icon('readmore-right','h3 color-theme-brand')
             .tab-pane.fade(id="links-wheels" role="tabpanel" action="#")
-              .row
-                .col-lg-10.offset-lg-1.text-center.text-lg-left
-                  - var logoWheels = ['content/logo/logo-3.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-3.jpg','content/logo/logo-3.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-4.jpg','content/logo/logo-5.jpg','content/logo/logo-2.jpg','content/logo/logo-1.jpg','content/logo/logo-2.jpg','content/logo/logo-2.jpg','content/logo/logo-3.jpg','content/logo/logo-3.jpg']
-                  each logoWheels__item in logoWheels
-                    a.d-inline-block.mr-3.mb-4(href="#")
-                      +img(logoWheels__item)
-                  .d-flex.justify-content-center
-                    a.readmore.d-flex.align-items-center(href="#")
-                      span.h5.mr-2 Показать еще
-                      +icon('readmore-right','h3 color-theme-brand')
 
         include category/popular.pug
 
