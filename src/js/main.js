@@ -11,9 +11,9 @@ import './app/recalculate';
 
 import './app/header';
 
-import './app/cards'; //-
-import './app/collapse'; //-
-import './app/accordion'; //-
+import './app/cards'; //- review
+import './app/collapse'; //- review
+import './app/accordion'; //- review
 
 import './app/slides';
 import './app/panel';

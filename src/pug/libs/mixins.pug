@@ -61,7 +61,7 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
         - var card__oneclick_offset = 'mb-3';
 
   if (card__price_new)
-    - var card__price_classmod = 'align-items-end';
+    - var card__price_classmod = 'align-items-sm-end';
 
   if (card__classmod === 'card_tile d-sm-flex')
     - var card__header_offset = 'mb-sm-3';
@@ -143,26 +143,48 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
         a.card__title.d-block.mb-2(href="#" itemprop="url")
           span(itemprop="name")!= card__title
       .card__footer
-        .card__meta.card__meta_row.mb-2(class=card__price_classmod)
-          .card__price
-            span.card__price-value 7 337.12
-            | ₽
-          if (card__price_old)
-            .card__price.card__price_old!= card__price_old
+        if (card__classmod === 'card_tile d-sm-flex')
+          .card__meta.card__meta_row.flex-column.flex-sm-row.align-items-start.mb-2(class=card__price_classmod)
+            .card__price
+              span.card__price-value 7 337.12
               | ₽
-
-          if (card__price_new)
-            .d-flex.flex-column
-              .card__price.card__price_new!= card__price_new
+            if (card__price_old)
+              .card__price.card__price_old!= card__price_old
                 | ₽
-              .text-sm при сдаче старого
-        .d-flex.align-items-center.justify-content-between.zi-2(class=card__oneclick_offset)
-          .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
-            input.recalculate__field.d-none(type="number" name="count" value="4")
-            button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
-            .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
-            button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
-          button.button.text-uppercase(type="button") В корзину
+
+            if (card__price_new)
+              .d-flex.flex-column
+                .card__price.card__price_new!= card__price_new
+                  | ₽
+                .text-sm при сдаче старого
+          .d-flex.flex-column.flex-sm-row.align-items-sm-center.justify-content-between.zi-2(class=card__oneclick_offset)
+            .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-sm-1.mb-sm-0.mb-2
+              input.recalculate__field.d-none(type="number" name="count" value="4")
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
+              .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
+            button.button.text-uppercase(type="button") В корзину
+        else
+          .card__meta.card__meta_row.mb-2(class=card__price_classmod)
+            .card__price
+              span.card__price-value 7 337.12
+              | ₽
+            if (card__price_old)
+              .card__price.card__price_old!= card__price_old
+                | ₽
+
+            if (card__price_new)
+              .d-flex.flex-column
+                .card__price.card__price_new!= card__price_new
+                  | ₽
+                .text-sm при сдаче старого
+          .d-flex.align-items-center.justify-content-between.zi-2(class=card__oneclick_offset)
+            .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+              input.recalculate__field.d-none(type="number" name="count" value="4")
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
+              .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
+            button.button.text-uppercase(type="button") В корзину
         if (card__oneclick)
           button.card__btn.card__btn_link.w-100.zi-2(type="button")
             +icon('plane','h4 color-theme-brand d-flex flex-column align-items-center justify-content-center mr-1')
