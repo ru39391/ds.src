@@ -4,3 +4,5 @@ notifyElements.forEach(notifyElementsItem => {
     e.target.closest('.notify').querySelector('.notify__desc').classList.toggle('d-none');
   });
 });
+
+$('[data-toggle="tooltip"]').tooltip();

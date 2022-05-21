@@ -109,7 +109,7 @@ block wrapper
           .heading__col.heading__col_subcategory-article.h6.mb-2 Артикул
           .heading__col.heading__col_subcategory-price.h6.mb-2 Цена
           .heading__col.heading__col_subcategory-quantity.h6.mb-2 Наличие
-        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+        form.table-row.table-row_subcategory.box-shadow.border-radius.pos-rel.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
           span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
             meta(itemprop="availability" content="http://schema.org/InStock")
             meta(itemprop="priceCurrency" content="RUB")
@@ -118,11 +118,11 @@ block wrapper
             meta(itemprop="lowPrice" content="100")
           .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .d-flex.align-items-center
-              .bubble.bubble_pos_abs
+              .bubble.bubble_pos_abs.zi-2
                 +icon('photo','h2 color-theme-brand mr-2')
                 .bubble__picture.box-shadow.border.border-radius
                   +img('content/cards/pirelli.jpg','img-cover border-radius zi-2', true)
-              a.h5(href="#" itemprop="url")
+              a.table-row__title.h5(href="#" itemprop="url")
                 span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
           .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
             .h5.d-flex.align-items-center
@@ -137,15 +137,15 @@ block wrapper
               .mr-3.d-block.d-md-none Наличие:
               span(itemprop="sku") 3
               | &nbsp;шт.
-          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center
-            .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center.justify-content-center.zi-2
+            .recalculate.recalculate_md.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
               input.recalculate__field.d-none(type="number" name="count" value="4")
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
               .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
             .text-center.text-md-left
               button.button.text-uppercase.px-3(type="submit") В корзину
-        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+        form.table-row.table-row_subcategory.box-shadow.border-radius.pos-rel.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
           span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
             meta(itemprop="availability" content="http://schema.org/InStock")
             meta(itemprop="priceCurrency" content="RUB")
@@ -154,11 +154,11 @@ block wrapper
             meta(itemprop="lowPrice" content="100")
           .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .d-flex.align-items-center
-              .bubble.bubble_pos_abs
+              .bubble.bubble_pos_abs.zi-2
                 +icon('photo','h2 color-theme-brand mr-2')
                 .bubble__picture.box-shadow.border.border-radius
                   +img('content/cards/pirelli.jpg','img-cover border-radius zi-2', true)
-              a.h5(href="#" itemprop="url")
+              a.table-row__title.h5(href="#" itemprop="url")
                 span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
           .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
             .h5.d-flex.align-items-center
@@ -173,15 +173,15 @@ block wrapper
               .mr-3.d-block.d-md-none Наличие:
               span(itemprop="sku") 3
               | &nbsp;шт.
-          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center
-            .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center.justify-content-center.zi-2
+            .recalculate.recalculate_md.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
               input.recalculate__field.d-none(type="number" name="count" value="4")
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
               .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
             .text-center.text-md-left
               button.button.text-uppercase.px-3(type="submit") В корзину
-        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+        form.table-row.table-row_subcategory.box-shadow.border-radius.pos-rel.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
           span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
             meta(itemprop="availability" content="http://schema.org/InStock")
             meta(itemprop="priceCurrency" content="RUB")
@@ -190,11 +190,11 @@ block wrapper
             meta(itemprop="lowPrice" content="100")
           .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .d-flex.align-items-center
-              .bubble.bubble_pos_abs
+              .bubble.bubble_pos_abs.zi-2
                 +icon('photo','h2 color-theme-brand mr-2')
                 .bubble__picture.box-shadow.border.border-radius
                   +img('content/cards/pirelli.jpg','img-cover border-radius zi-2', true)
-              a.h5(href="#" itemprop="url")
+              a.table-row__title.h5(href="#" itemprop="url")
                 span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
           .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
             .h5.d-flex.align-items-center
@@ -209,15 +209,15 @@ block wrapper
               .mr-3.d-block.d-md-none Наличие:
               span(itemprop="sku") 3
               | &nbsp;шт.
-          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center
-            .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center.justify-content-center.zi-2
+            .recalculate.recalculate_md.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
               input.recalculate__field.d-none(type="number" name="count" value="4")
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
               .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
             .text-center.text-md-left
               button.button.text-uppercase.px-3(type="submit") В корзину
-        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+        form.table-row.table-row_subcategory.box-shadow.border-radius.pos-rel.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
           span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
             meta(itemprop="availability" content="http://schema.org/InStock")
             meta(itemprop="priceCurrency" content="RUB")
@@ -226,11 +226,11 @@ block wrapper
             meta(itemprop="lowPrice" content="100")
           .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .d-flex.align-items-center
-              .bubble.bubble_pos_abs
+              .bubble.bubble_pos_abs.zi-2
                 +icon('photo','h2 color-theme-brand mr-2')
                 .bubble__picture.box-shadow.border.border-radius
                   +img('content/cards/pirelli.jpg','img-cover border-radius zi-2', true)
-              a.h5(href="#" itemprop="url")
+              a.table-row__title.h5(href="#" itemprop="url")
                 span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
           .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
             .h5.d-flex.align-items-center
@@ -245,15 +245,15 @@ block wrapper
               .mr-3.d-block.d-md-none Наличие:
               span(itemprop="sku") 3
               | &nbsp;шт.
-          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center
-            .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center.justify-content-center.zi-2
+            .recalculate.recalculate_md.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
               input.recalculate__field.d-none(type="number" name="count" value="4")
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
               .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
             .text-center.text-md-left
               button.button.text-uppercase.px-3(type="submit") В корзину
-        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+        form.table-row.table-row_subcategory.box-shadow.border-radius.pos-rel.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
           span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
             meta(itemprop="availability" content="http://schema.org/InStock")
             meta(itemprop="priceCurrency" content="RUB")
@@ -262,9 +262,9 @@ block wrapper
             meta(itemprop="lowPrice" content="100")
           .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .d-flex.align-items-center
-              .bubble.bubble_pos_abs
+              .bubble.bubble_pos_abs.zi-2
                 +icon('photo','h2 color-theme-disabled mr-2')
-              a.h5(href="#" itemprop="url")
+              a.table-row__title.h5(href="#" itemprop="url")
                 span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
           .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
             .h5.d-flex.align-items-center
@@ -279,15 +279,15 @@ block wrapper
               .mr-3.d-block.d-md-none Наличие:
               span(itemprop="sku") 3
               | &nbsp;шт.
-          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center
-            .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center.justify-content-center.zi-2
+            .recalculate.recalculate_md.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
               input.recalculate__field.d-none(type="number" name="count" value="4")
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
               .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
             .text-center.text-md-left
               button.button.text-uppercase.px-3(type="submit") В корзину
-        form.table-row.table-row_subcategory.box-shadow.border-radius.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+        form.table-row.table-row_subcategory.box-shadow.border-radius.pos-rel.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
           span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
             meta(itemprop="availability" content="http://schema.org/InStock")
             meta(itemprop="priceCurrency" content="RUB")
@@ -296,9 +296,9 @@ block wrapper
             meta(itemprop="lowPrice" content="100")
           .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
             .d-flex.align-items-center
-              .bubble.bubble_pos_abs
+              .bubble.bubble_pos_abs.zi-2
                 +icon('photo','h2 color-theme-disabled mr-2')
-              a.h5(href="#" itemprop="url")
+              a.table-row__title.h5(href="#" itemprop="url")
                 span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
           .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
             .h5.d-flex.align-items-center
@@ -313,8 +313,8 @@ block wrapper
               .mr-3.d-block.d-md-none Наличие:
               span(itemprop="sku") 3
               | &nbsp;шт.
-          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center
-            .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center.justify-content-center.zi-2
+            .recalculate.recalculate_md.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
               input.recalculate__field.d-none(type="number" name="count" value="4")
               button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
               .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4

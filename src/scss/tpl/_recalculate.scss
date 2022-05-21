@@ -7,6 +7,12 @@
     @include fw(54px);
   }
 
+  &.recalculate_md {
+    @include media-breakpoint-down(md) {
+      @include fw(128px);
+    }
+  }
+
   &.recalculate_shadow {
     box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.14);
   }

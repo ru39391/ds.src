@@ -145,15 +145,17 @@
     white-space: nowrap;
     color: $color__brand;
 
-    padding: .125rem .375rem;
-    margin: 0 0 1rem -.375rem;
-    border-radius: .75rem;
+    //padding: .125rem .375rem;
+    padding: .375rem;
+    margin: 0 0 .5rem -.375rem;
+    //border-radius: .75rem;
+    border-radius: 50%;
     background: rgba(0,0,0,0);
 
     .card__btn-icon {
       @include fw(16px);
       @include wh(16px);
-      margin: 0 .5rem 0 0;
+      //margin: 0 .5rem 0 0;
     }
 
     &:hover {

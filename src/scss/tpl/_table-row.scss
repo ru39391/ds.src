@@ -181,11 +181,6 @@
     @include media-breakpoint-up(md) {
       grid-area: subcategory__btn;
     }
-
-    @include media-breakpoint-only(sm) {
-      @include mx(auto);
-      width: 50%;
-    }
   }
 
   /* cart */
@@ -254,6 +249,14 @@
 
 .table-row__body {
   display: none;
+}
+
+.table-row__title {
+  &:after {
+    content: '';
+    @include pos(0,0);
+    @include wh(100%);
+  }
 }
 
 .table__col {

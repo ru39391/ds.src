@@ -121,12 +121,12 @@ mixin card(card__price_old, card__price_new, card__title="Зимние шины 
                   p При наличии на Доватора 11
                 a.card__features-readmore(href="#") Подробнее
       .card__meta.card__meta_right
-        button.card__btn.card__btn_icon.zi-2(type="button")
+        button.card__btn.card__btn_icon.zi-2(type="button" data-toggle="tooltip" data-placement="right" title="Сравнить")
           +icon('compare','card__btn-icon h4 d-flex flex-column align-items-center justify-content-center')
-          span.card__btn-title Сравнить
-        button.card__btn.card__btn_icon.zi-2(type="button")
+          //- span.card__btn-title Сравнить
+        button.card__btn.card__btn_icon.zi-2(type="button" data-toggle="tooltip" data-placement="right" title="Добавить в избранное")
           +icon('favourite','card__btn-icon h4 d-flex flex-column align-items-center justify-content-center')
-          span.card__btn-title Добавить в избранное
+          //- span.card__btn-title Добавить в избранное
       if (!card__wheel)
         .card__meta.card__meta_row.mb-0
           if (card__winter) && (card__spikes)

@@ -1,4 +1,4 @@
-$grid-gutter-width: 8px;
+@import 'base/variables';
 @import '~nouislider/distribute/nouislider.css';
 
 @import '~bootstrap/scss/bootstrap-reboot.scss';
@@ -6,7 +6,7 @@ $grid-gutter-width: 8px;
 @import '~bootstrap/scss/modal';
 @import '~bootstrap/scss/images';
 @import '~bootstrap/scss/transitions';
-//@import '~bootstrap/scss/custom-forms';
+@import '~bootstrap/scss/tooltip';
 @import '~bootstrap/scss/utilities/text';
 @import '~bootstrap/scss/utilities/embed';
 @import '~bootstrap/scss/utilities/borders';
@@ -14,7 +14,6 @@ $grid-gutter-width: 8px;
 
 /* base */
 @import 'base/fonts';
-@import 'base/variables';
 @import 'base/mixins';
 @import 'base/extends';
 @import 'base/common';
