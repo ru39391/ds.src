@@ -251,14 +251,6 @@
   display: none;
 }
 
-.table-row__title {
-  &:after {
-    content: '';
-    @include pos(0,0);
-    @include wh(100%);
-  }
-}
-
 .table__col {
   &.table__col_width {
     grid-area: col__width;

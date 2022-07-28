@@ -32,14 +32,14 @@ block personal
             span.contacts__item-title Напомнить в WhatsApp
         .col-xl-5.d-flex.justify-content-xl-end
           button.button.button_nobg.h5.p-0(type="button")
-            +icon('trash','btn__icon h3 color-theme-brand mr-2')
+            +icon('trash','button__icon h3 color-theme-brand mr-2')
             | Отменить запись
 
   form.section.px-lg-5.px-md-4.px-3.pt-2.pb-3.pb-sm-2.mb-5(action="#")
     .row.align-items-center
       .col-xl-8.col-sm-6
         button.button.button_nobg.button_toggler-service.color-theme-disabled.h5.p-0(type="button" data-toggle="modal" data-target="#booking" disabled)
-          +icon('services','btn__icon h4 color-theme-disabled mr-2')
+          +icon('services','button__icon h4 color-theme-disabled mr-2')
           | Записаться на услугу
       .col-xl-4.col-sm-6
         .form__select
@@ -73,7 +73,7 @@ block popups
                     span.booking-heading__time
                 +icon('readmore-right','booking-heading__arrow h3 color-theme-brand')
                 button.booking-heading__btn.button-unstyled.h5.p-0(type="button")
-                  +icon('edit','btn__icon h4 color-theme-brand mr-2')
+                  +icon('edit','button__icon h4 color-theme-brand mr-2')
                   | Изменить
             .col-lg-6
               .booking-heading.d-flex.align-items-center.justify-content-between.bg-theme-white.box-shadow.border-radius.p-3(data-target="order-reg")

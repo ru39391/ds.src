@@ -16,7 +16,12 @@
 
   .button {
     @extend %btn-default;
-    color: $color__brand;
+    @include color($color__brand);
+    box-shadow: none;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0);
+    }
 
     &:before {
       font-family: '#{$icomoon-font-family}';
