@@ -1,0 +1,19 @@
+.togglebar {
+  @include pos(4.5rem,0,sticky);
+  z-index: 1020;
+  margin: -2.5rem 0 2.5rem;
+  background-color: #fff;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $color__light;
+    color: $color__text_default;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, .12) inset;
+  }
+}

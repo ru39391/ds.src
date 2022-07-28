@@ -1,38 +1,29 @@
 .header {
-  @include offset(0 0 2.5rem,0 0 .75rem);
-  @include pos(0,0,sticky);
+  @include pos(-.5rem,0,sticky);
   right: 0;
-  z-index: 1040;
-  transition: all .3s ease;
+  z-index: 1030;
   background: #fff;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .12);
-  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .16);
+
+  &.header_top {
+    @include pos(-5rem,0,sticky);
+    padding: .625rem 0;
+    background: $color__light;
+    box-shadow: none;
+  }
+
+  &.header_bottom {
+    @include media-breakpoint-down(md) {
+      top: 0;
+    }
+  }
 
   &.header_sticky {
-    padding-bottom: 0;
-
-    .header__top {
-      height: 0;
-      padding: 0;
-      opacity: 0;
-      visibility: hidden;
-    }
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .16);
 
     .header__wrapper {
-      @include media-breakpoint-up(lg) {
-        @include py(.75rem,0);
-      }
-
       @include media-breakpoint-down(md) {
         flex-wrap: nowrap;
       }
-    }
-
-    .header__bottom {
-      height: 0;
-      padding: 0;
-      opacity: 0;
-      visibility: hidden;
     }
 
     .header__col {
@@ -65,10 +56,6 @@
       }
     }
 
-    .header__footer {
-      transform: translateY(0);
-    }
-
     .logo {
       @include media-breakpoint-down(md) {
         display: none;
@@ -77,16 +64,7 @@
   }
 }
 
-.header__top {
-  padding: .625rem 0;
-  //overflow: hidden;
-  background: $color__light;
-  transition: all .3s ease;
-}
-
 .header__wrapper {
-  @extend %wrapper;
-  @extend %flex-item;
   flex-wrap: wrap;
 
   @include media-breakpoint-up(lg) {
@@ -96,12 +74,6 @@
   @include media-breakpoint-down(md) {
     @include py(1rem,0);
   }
-}
-
-.header__bottom {
-  @extend %wrapper;
-  overflow: hidden;
-  transition: all .3s ease;
 }
 
 .header__col {
@@ -255,24 +227,6 @@
 .header__btn-caption {
   width: 0;
   overflow: hidden;
-}
-
-.header__footer {
-  transition: all .3s ease;
-
-  @include media-breakpoint-up(lg) {
-    display: none;
-  }
-
-  @include media-breakpoint-down(md) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transform: translateY(12px);
-    background: $color__light;
-    color: $color__text_default;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, .12) inset;
-  }
 }
 
 .header__cart-data {

@@ -41,9 +41,10 @@ function removeElSelectors(el, selector, selectorActive) {
 };
 
 function setYPos(el, selector) {
-  const headerHeight = document.querySelector('.header').getBoundingClientRect().height;
+  const togglebar = document.querySelector('.togglebar');
+  const ossfetY = togglebar.getBoundingClientRect().height + togglebar.getBoundingClientRect().y;
   if(checkSelector(el, selector)) {
-    el.style.top = `${headerHeight}px`;
+    el.style.top = `${ossfetY}px`;
     document.body.style.overflow = 'hidden';
   } else {
     el.style.top = 0;

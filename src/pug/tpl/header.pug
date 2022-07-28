@@ -1,40 +1,41 @@
 .icons.d-none
-header.header
-  .header__top.zi-2
-    .wrapper.d-flex.flex-wrap.align-items-center
-      .col-xl-6.col-lg-12.col-8.d-flex.align-items-center.justify-content-xl-start.justify-content-lg-between.mb-xl-0.mb-lg-2
-        .contacts.d-flex.align-items-center.justify-content-lg-between.col-xl-7.col-lg-5.w-auto.px-0
-          .contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4
-            +icon('placemark','contacts__icon h3 color-theme-brand mr-lg-2')
-            span.d-none.d-lg-block г. Ростов-на-Дону
-          a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4(href="#")
-            +icon('phone','contacts__icon h3 color-theme-brand mr-lg-2')
-            span.d-none.d-lg-block +7 (863) 22-99-99-4
-        nav.social.d-flex.align-items-center
-          a.social__item.color-theme-brand.mr-4.mr-lg-3(href="#")
-            +icon('wapp-filled','h3')
-          a.social__item.color-theme-brand(href="#")
-            +icon('tg-filled','h3')
-      .col-xl-5.col-lg-10.d-none.d-lg-block
-        nav.header__nav.d-flex.align-items-center.justify-content-xl-end
-          a.header__nav-item.mr-4(href="#") Скидки и акции
-          a.header__nav-item.mr-4(href="#") Бонусные рубли
-          a.header__nav-item(href="#") Контакты
-      .col-xl-1.col-lg-2.col-4.d-flex.align-items-xl-start.justify-content-end
-        .menu
-          button.menu__title.theme-hover.d-flex.align-items-center.zi-2(type="button")
-            span.mr-1 Помощь
-            +icon('dropdown','menu__icon h6')
-          .menu__wrapper.pt-2
-            a.h6.d-block.theme-hover.zi-2.mb-2(href="#") О компании
-            a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Новости
-            a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Статьи
-            a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Вопросы и ответы
-            a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Оплата и доставка
-            a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Кредит
-            a.h6.d-block.theme-hover.zi-2.mb-2(href="#") КупиВкредит
-            a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Политика конфиденциальности
-  .header__wrapper
+.header.header_top
+  .wrapper.d-flex.flex-wrap.align-items-center
+    .col-xl-6.col-lg-12.col-8.d-flex.align-items-center.justify-content-xl-start.justify-content-lg-between.mb-xl-0.mb-lg-2
+      .contacts.d-flex.align-items-center.justify-content-lg-between.col-xl-7.col-lg-5.w-auto.px-0
+        .contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4
+          +icon('placemark','contacts__icon h3 color-theme-brand mr-lg-2')
+          span.d-none.d-lg-block г. Ростов-на-Дону
+        a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4(href="#")
+          +icon('phone','contacts__icon h3 color-theme-brand mr-lg-2')
+          span.d-none.d-lg-block +7 (863) 22-99-99-4
+      nav.social.d-flex.align-items-center
+        a.social__item.color-theme-brand.mr-4.mr-lg-3(href="#")
+          +icon('wapp-filled','h3')
+        a.social__item.color-theme-brand(href="#")
+          +icon('tg-filled','h3')
+    .col-xl-5.col-lg-10.d-none.d-lg-block
+      nav.header__nav.d-flex.align-items-center.justify-content-xl-end
+        a.header__nav-item.mr-4(href="#") Скидки и акции
+        a.header__nav-item.mr-4(href="#") Бонусные рубли
+        a.header__nav-item(href="#") Контакты
+    .col-xl-1.col-lg-2.col-4.d-flex.align-items-xl-start.justify-content-end
+      .menu
+        button.menu__title.theme-hover.d-flex.align-items-center.zi-2(type="button")
+          span.mr-1 Помощь
+          +icon('dropdown','menu__icon h6')
+        .menu__wrapper.pt-2
+          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") О компании
+          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Новости
+          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Статьи
+          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Вопросы и ответы
+          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Оплата и доставка
+          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Кредит
+          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") КупиВкредит
+          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Политика конфиденциальности
+
+header.header.header_bottom
+  .header__wrapper.wrapper.d-flex.align-items-center
     .header__col.header__col_logo.col-xl-4.col-lg-5.mb-3
       a.logo.color-theme-brand.mr-4(href="#")
         +svg('logo')
@@ -316,28 +317,30 @@ header.header
           .pos-rel
             a.header__btn.header__btn_inverse(href="#")
               +icon('cart','header__btn-icon d-block')
-  .header__bottom
-    nav.topmenu.swiper-container
-      .topmenu__wrapper.swiper-wrapper(itemscope itemtype="https://schema.org/SiteNavigationElement")
-        .swiper-slide.w-auto
-          a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
-            span(itemprop="name") Автошины
-        .swiper-slide.w-auto
-          a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
-            span(itemprop="name") Мотошины
-        .swiper-slide.w-auto
-          a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
-            span(itemprop="name") Диски
-        .swiper-slide.w-auto
-          a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
-            span(itemprop="name") Аккумуляторы
-        .swiper-slide.w-auto
-          a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
-            span(itemprop="name") Масла
-        .swiper-slide.w-auto
-          a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
-            span(itemprop="name") Автотовары
-        .swiper-slide.w-auto
-          a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
-            span(itemprop="name") Шиномонтаж
-  block filter
+
+nav.topmenu
+  .topmenu__wrapper.wrapper.swiper-container
+    ul.swiper-wrapper.justify-content-between(itemscope itemtype="https://schema.org/SiteNavigationElement")
+      li.swiper-slide.w-auto
+        a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+          span(itemprop="name") Автошины
+      li.swiper-slide.w-auto
+        a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+          span(itemprop="name") Мотошины
+      li.swiper-slide.w-auto
+        a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+          span(itemprop="name") Диски
+      li.swiper-slide.w-auto
+        a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+          span(itemprop="name") Аккумуляторы
+      li.swiper-slide.w-auto
+        a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+          span(itemprop="name") Масла
+      li.swiper-slide.w-auto
+        a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+          span(itemprop="name") Автотовары
+      li.swiper-slide.w-auto
+        a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+          span(itemprop="name") Шиномонтаж
+
+block filter

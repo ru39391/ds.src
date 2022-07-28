@@ -1,5 +1,9 @@
-.topmenu__wrapper {
-  justify-content: space-between;
+.topmenu {
+  @include before;
+  @include offset(0 0 2.5rem,0 0 .75rem);
+  @include pos(-3rem,0,sticky);
+  background-color: #fff;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .16);
 }
 
 .topmenu__item {

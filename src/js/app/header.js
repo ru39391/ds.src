@@ -1,19 +1,19 @@
 const changeHeader = (() => {
-  const header = document.querySelector('.header');
+  const header = document.querySelector('.header_bottom');
   const scrollHeight = 200;
   let scrolled = false;
 
   function init() {
-    window.addEventListener('scroll', e => {
+    window.addEventListener('scroll', () => {
       if(!scrolled) {
         scrolled = true;
-        setTimeout(scrollPage, 250);
+        scrollPage();
       }
     }, false);
   }
 
   function scrollPage() {
-    if (window.pageYOffset >= scrollHeight) {
+    if (window.pageYOffset > scrollHeight) {
       header.classList.add('header_sticky');
     } else {
       header.classList.remove('header_sticky');
