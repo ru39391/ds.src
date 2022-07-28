@@ -1,78 +1,86 @@
-.section.mb-3
-  .section__title Часто выбирают:
-  form.form.mb-3(action="#")
-    .slides.slides_togglers.swiper-container
-      .slides__nav
-        button.slides__btn.slides__btn_sm.slides__btn_prev.slides_togglers-prev(type="button")
-          svg.icon-fluid
-            use(xlink:href="#icon-arrow-left")
-        button.slides__btn.slides__btn_sm.slides__btn_next.slides_togglers-next(type="button")
-          svg.icon-fluid
-            use(xlink:href="#icon-arrow-right")
-      .swiper-wrapper.px-3.px-lg-0
-        .swiper-slide
-          input.form__toggler.form__toggler_radio(id="filter-radio-1" name="filter-radio" type="radio" value="" checked)
-          label.form__label(for="filter-radio-1") Все
-        .swiper-slide
-          input.form__toggler.form__toggler_radio(id="filter-radio-2" name="filter-radio" type="radio" value="")
-          label.form__label(for="filter-radio-2") Шины
-        .swiper-slide
-          input.form__toggler.form__toggler_radio(id="filter-radio-3" name="filter-radio" type="radio" value="")
-          label.form__label(for="filter-radio-3") Диски
-        .swiper-slide
-          input.form__toggler.form__toggler_radio(id="filter-radio-4" name="filter-radio" type="radio" value="")
-          label.form__label(for="filter-radio-4") Мотошины
-        .swiper-slide
-          input.form__toggler.form__toggler_radio(id="filter-radio-5" name="filter-radio" type="radio" value="")
-          label.form__label(for="filter-radio-5") Аккумуляторы
-        .swiper-slide
-          input.form__toggler.form__toggler_radio(id="filter-radio-6" name="filter-radio" type="radio" value="")
-          label.form__label(for="filter-radio-6") Автозапчасти
-        .swiper-slide
-          input.form__toggler.form__toggler_radio(id="filter-radio-7" name="filter-radio" type="radio" value="")
-          label.form__label(for="filter-radio-7") Масла
-        .swiper-slide
-          input.form__toggler.form__toggler_radio(id="filter-radio-8" name="filter-radio" type="radio" value="")
-          label.form__label(for="filter-radio-8") Автотовары
-        .swiper-slide
-          input.form__toggler.form__toggler_radio(id="filter-radio-9" name="filter-radio" type="radio" value="")
-          label.form__label(for="filter-radio-9") Скидки
-        .swiper-slide
-          input.form__toggler.form__toggler_radio(id="filter-radio-10" name="filter-radio" type="radio" value="")
-          label.form__label(for="filter-radio-10") Хиты
-        .swiper-slide
-          input.form__toggler.form__toggler_radio(id="filter-radio-11" name="filter-radio" type="radio" value="")
-          label.form__label(for="filter-radio-11") Шины на внедорожник
-        .swiper-slide
-          input.form__toggler.form__toggler_radio(id="filter-radio-12" name="filter-radio" type="radio" value="")
-          label.form__label(for="filter-radio-12") Шины на газель
-        .swiper-slide
-          input.form__toggler.form__toggler_radio(id="filter-radio-13" name="filter-radio" type="radio" value="")
-          label.form__label(for="filter-radio-13") Акции
-    .slides.slides_grid.swiper-container.pt-1.pb-4
-      .slides__nav
-        button.slides__btn.slides__btn_prev.slides_grid-prev(type="button")
-          svg.icon-fluid
-            use(xlink:href="#icon-arrow-left")
-        button.slides__btn.slides__btn_next.slides_grid-next(type="button")
-          svg.icon-fluid
-            use(xlink:href="#icon-arrow-right")
-      .swiper-wrapper
-        .swiper-slide
-          include ../positions/plain.pug
-        .swiper-slide
-          include ../positions/plain.pug
-        .swiper-slide
-          include ../positions/banner1.pug
-        .swiper-slide
-          include ../positions/sale.pug
-        .swiper-slide
-          include ../positions/banner2.pug
-        .swiper-slide
-          include ../positions/discount.pug
-        .swiper-slide
-          include ../positions/hit.pug
-        .swiper-slide
-          include ../positions/sale.pug
-        .swiper-slide
-          include ../positions/plain.pug
+.mb-3
+  .h2.font-weight-bold.mb-4 Часто выбирают:
+  .slides.slides_togglers.swiper-container
+    +slidesNav('slides__btn_sm slides_togglers-prev','slides__btn_sm slides_togglers-next')
+    ul.nav.nav-tabs.swiper-wrapper.px-3.px-lg-0(role="tablist")
+      li.nav-item.swiper-slide(role="presentation")
+        a.toggler.nav-link.py-2.active(data-toggle="tab" href="#tab-pane-1" role="tab" aria-controls="tab-tyres" aria-selected="true") Шины
+      li.nav-item.swiper-slide(role="presentation")
+        a.toggler.nav-link.py-2(data-toggle="tab" href="#tab-pane-2" role="tab" aria-controls="tab-pane-2" aria-selected="true") Диски
+      li.nav-item.swiper-slide(role="presentation")
+        a.toggler.nav-link.py-2(data-toggle="tab" href="#tab-pane-3" role="tab" aria-controls="tab-pane-3" aria-selected="true") Мотошины
+      li.nav-item.swiper-slide(role="presentation")
+        a.toggler.nav-link.py-2(data-toggle="tab" href="#tab-pane-4" role="tab" aria-controls="tab-pane-4" aria-selected="true") Аккумуляторы
+      li.nav-item.swiper-slide(role="presentation")
+        a.toggler.nav-link.py-2(data-toggle="tab" href="#tab-pane-5" role="tab" aria-controls="tab-pane-5" aria-selected="true") Автозапчасти
+      li.nav-item.swiper-slide(role="presentation")
+        a.toggler.nav-link.py-2(data-toggle="tab" href="#tab-pane-6" role="tab" aria-controls="tab-pane-6" aria-selected="true") Масла
+      li.nav-item.swiper-slide(role="presentation")
+        a.toggler.nav-link.py-2(data-toggle="tab" href="#tab-pane-7" role="tab" aria-controls="tab-pane-7" aria-selected="true") Автотовары
+      li.nav-item.swiper-slide(role="presentation")
+        a.toggler.nav-link.py-2(data-toggle="tab" href="#tab-pane-8" role="tab" aria-controls="tab-pane-8" aria-selected="true") Скидки
+      li.nav-item.swiper-slide(role="presentation")
+        a.toggler.nav-link.py-2(data-toggle="tab" href="#tab-pane-9" role="tab" aria-controls="tab-pane-9" aria-selected="true") Хиты
+      li.nav-item.swiper-slide(role="presentation")
+        a.toggler.nav-link.py-2(data-toggle="tab" href="#tab-pane-9" role="tab" aria-controls="tab-pane-9" aria-selected="true") Хиты
+      li.nav-item.swiper-slide(role="presentation")
+        a.toggler.nav-link.py-2(data-toggle="tab" href="#tab-pane-10" role="tab" aria-controls="tab-pane-10" aria-selected="true") Шины на внедорожник
+      li.nav-item.swiper-slide(role="presentation")
+        a.toggler.nav-link.py-2(data-toggle="tab" href="#tab-pane-11" role="tab" aria-controls="tab-pane-11" aria-selected="true") Шины на газель
+      li.nav-item.swiper-slide(role="presentation")
+        a.toggler.nav-link.py-2(data-toggle="tab" href="#tab-pane-12" role="tab" aria-controls="tab-pane-12" aria-selected="true") Акции
+  .tab-content.mb-5
+    #tab-pane-1.tab-pane.d-block.overflow-hidden.fade.show.active(role="tabpanel")
+      .slides.slides_grid.swiper-container.pt-1.pb-4
+        +slidesNav
+        .swiper-wrapper
+          .swiper-slide
+            +card('','','Зимние шины Yokohama Ice','',false,false,false,false,false,true,true,true,'card_sm d-flex')
+          .swiper-slide
+            +card('12 337.12','','Зимние шины Yokohama Ice Guard IG55','',false,false,false,false,false,true,true,true,'card_sm d-flex')
+          .swiper-slide
+            +banner('content/banners/banner-3.jpg')
+          .swiper-slide
+            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','sale',false,false,true,false,false,false,false,true,'card_sm d-flex')
+          .swiper-slide
+            +banner('content/banners/banner-4.jpg')
+          .swiper-slide
+            +card('12 337.12','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','discount',true,true,false,false,false,false,false,true,'card_sm d-flex')
+          .swiper-slide
+            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55','hit',false,false,false,true,true,false,false,true,'card_sm d-flex')
+          .swiper-slide
+            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','sale',false,false,false,false,true,false,false,true,'card_sm d-flex')
+          .swiper-slide
+            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55 R17','sale',false,false,false,true,false,false,false,true,'card_sm d-flex')
+          .swiper-slide
+            +card('','','Зимние шины Yokohama Ice','',false,false,false,false,false,true,true,true,'card_sm d-flex')
+          .swiper-slide
+            +card('','14 000','Шины Yokohama Ice Guard IG55 215/55 R17 98T','',false,false,false,false,false,false,false,true,'card_sm d-flex')
+    #tab-pane-2.tab-pane.d-block.overflow-hidden.fade.show(role="tabpanel")
+      .slides.slides_grid.swiper-container.pt-1.pb-4
+        +slidesNav
+        .swiper-wrapper
+          .swiper-slide
+            +card('','','Зимние шины Yokohama Ice','',false,false,false,false,false,true,true,true,'card_sm d-flex')
+          .swiper-slide
+            +card('12 337.12','','Зимние шины Yokohama Ice Guard IG55','',false,false,false,false,false,true,true,true,'card_sm d-flex')
+          .swiper-slide
+            +banner('content/banners/banner-3.jpg')
+          .swiper-slide
+            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','sale',false,false,true,false,false,false,false,true,'card_sm d-flex')
+          .swiper-slide
+            +banner('content/banners/banner-4.jpg')
+          .swiper-slide
+            +card('12 337.12','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','discount',true,true,false,false,false,false,false,true,'card_sm d-flex')
+          .swiper-slide
+            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55','hit',false,false,false,true,true,false,false,true,'card_sm d-flex')
+          .swiper-slide
+            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','sale',false,false,false,false,true,false,false,true,'card_sm d-flex')
+          .swiper-slide
+            +card('','','Зимние шины Yokohama Ice Guard IG55 215/55 R17','sale',false,false,false,true,false,false,false,true,'card_sm d-flex')
+          .swiper-slide
+            +card('','','Зимние шины Yokohama Ice','',false,false,false,false,false,true,true,true,'card_sm d-flex')
+          .swiper-slide
+            +card('','14 000','Шины Yokohama Ice Guard IG55 215/55 R17 98T','',false,false,false,false,false,false,false,true,'card_sm d-flex')
+    #tab-pane-3.tab-pane.d-block.overflow-hidden.fade.show(role="tabpanel")
+    #tab-pane-4.tab-pane.d-block.overflow-hidden.fade.show(role="tabpanel")

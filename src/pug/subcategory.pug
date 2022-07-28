@@ -3,64 +3,345 @@ extends base
 block meta
   - var title = 'Подкатегория каталога (автотовары)';
 
+block filter
+  .togglebar
+    button.aside-toggler.flex-grow-1.aside-toggler_btn_group.px-3.py-2(type="button" data-target="#details")
+      +icon('detail','aside-toggler__icon h3 mr-2')
+      span.aside-toggler__title.h4.text-nowrap
+        span.aside-toggler__show Все автотовары
+        span.aside-toggler__hide Скрыть все автотовары
+    button.aside-toggler.aside-toggler_btn_group.px-3.py-2(type="button" data-target="#filter")
+      +icon('filter','aside-toggler__icon h3')
+      span.aside-toggler__title.aside-toggler__title_invisible.h4.text-nowrap
+        span.aside-toggler__show Показать&nbsp;
+        span.aside-toggler__hide Скрыть&nbsp;
+        | фильтр
+    button.aside-toggler.aside-toggler_btn_group.px-3.py-2(type="button" data-target="#settings")
+      +icon('settings','aside-toggler__icon h3')
+      span.aside-toggler__title.aside-toggler__title_invisible.h4.text-nowrap Подобрать по VIN
+
 block wrapper
-    .container.container_wrapper
-      nav.pathway
-        a.pathway__link(href="#") Главная
-        a.pathway__link(href="#") Автотовары
-        a.pathway__current(href="#") Авточехлы
-      section.content
-        h1 Авточехлы
-      .category-counter 1 840 товаров
-      .row
-        .col-xl-2.col-lg-3.mb-lg-4
-          include base/filter-wheels.pug
+  .wrapper
+    ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Главная
+          meta(itemprop="position" content="1")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Автотовары
+          meta(itemprop="position" content="2")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__current(href="#" itemprop="item")
+          span(itemprop="name") Авточехлы
+          meta(itemprop="position" content="3")
+    section.content
+      h1(itemprop="name") Авточехлы
+    .category-counter.mb-4 1 840 товаров
+    .row
+      .col-xl-2.col-lg-3.mb-lg-4
+        block aside
+          include base/filter-details.pug
+      .col-xl-10.col-lg-9.mb-4
+        .d-lg-none
+          include base/category-details.pug
+        #settings.aside.aside_pos_fixed
+          .aside__wrapper
+            .section.section_filter.bg-theme-white.py-0.mb-lg-3
+              .section__expander.d-flex.align-items-center.justify-content-between.cursor-pointer.px-md-4.px-3.py-2
+                button.button.button_nobg.h4.p-0(type="button")
+                  +icon('settings','color-theme-brand h3 mr-2')
+                  span.color-theme-brand Подобрать по VIN
+                span.section__readmore.readmore.d-none.d-lg-block.color-theme-brand
+                  +icon('readmore','h3')
+              form.section__body.section__body_visible(action="#")
+                .form.border-bottom.px-md-4.px-3.pt-md-4.pt-3
+                  .row
+                    .col-md-5.d-flex.flex-column.justify-content-between
+                      .form__item.mb-4
+                        input.form__field(type="text" value="")
+                        .form__label.form__label_title VIN-код *
+                      .form__item.mb-4
+                        input.form__field(type="text" value="")
+                        .form__label.form__label_title Марка авто *
+                      .form__item.mb-4
+                        input.form__field(type="text" value="")
+                        .form__label.form__label_title Год выпуска
+                      .form__item.mb-4
+                        input.form__field(type="text" value="")
+                        .form__label.form__label_title Объём двигателя
+                      .form__item.mb-4
+                        input.form__field(type="text" value="")
+                        .form__label.form__label_title Мощность
+                    .col-md-5.offset-md-2.d-flex.flex-column.justify-content-between
+                      .form__item.mb-4
+                        input.form__field(type="text" value="")
+                        .form__label.form__label_title Модель двигателя
+                      .form__item.mb-4
+                        input.form__field(type="text" value="")
+                        .form__label.form__label_title Номер двигателя
+                      .form__item.mb-4
+                        textarea.form__field.form__field_textarea
+                        .form__label.form__label_title Cписок необходимых запчастей *
+                .px-md-4.px-3.py-3
+                  .row.align-items-center
+                    .col-xl-7.mb-3.mb-xl-0
+                      .h6.color-theme-disabled *-поля обязательные для заполнения
+                    .col-xl-5.d-flex.justify-content-xl-end
+                      button.button.text-uppercase.px-5(type="submit") Отправить запрос
+        form.form.mb-3(action="#")
+          .row.justify-content-end
+            .col-xl-2.col-md-3.order-3.order-md-2
+              .form__select
+                select.selecter
+                  option Сортировать
+                  option По умолчанию
+                  option По возрастанию цены
+                  option По убыванию цены
+                  option По популярности
+            .col-xl-1.col-md-2.col-4.d-none.d-sm-flex.align-items-center.justify-content-end.order-2.order-md-3.mb-3.mb-md-0
+              button.form__view.mr-3(type="button")
+                +icon('list')
+              button.form__view.active(type="button")
+                +icon('tile')
+        .heading.heading_subcategory.px-3
+          .heading__col.heading__col_subcategory-title.h6.mb-2 Название
+          .heading__col.heading__col_subcategory-article.h6.mb-2 Артикул
+          .heading__col.heading__col_subcategory-price.h6.mb-2 Цена
+          .heading__col.heading__col_subcategory-quantity.h6.mb-2 Наличие
+        form.table-row.table-row_subcategory.box-shadow.border-radius.pos-rel.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+          span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+            meta(itemprop="availability" content="http://schema.org/InStock")
+            meta(itemprop="priceCurrency" content="RUB")
+            meta(itemprop="price" content="100")
+            //- самая низкая цена в категории
+            meta(itemprop="lowPrice" content="100")
+          .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
+            .d-flex.align-items-center
+              .bubble.bubble_pos_abs.zi-2
+                +icon('photo','h2 color-theme-brand mr-2')
+                .bubble__picture.box-shadow.border.border-radius
+                  +img('content/cards/pirelli.jpg','img-cover border-radius zi-2', true)
+              a.table-row__title.h5(href="#" itemprop="url")
+                span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
+          .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Артикул:
+              | 34635635
+          .table-row__col.table-row__col_subcategory-price.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Цена:
+              | 100 ₽
+          .table-row__col.table-row__col_subcategory-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Наличие:
+              span(itemprop="sku") 3
+              | &nbsp;шт.
+          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center.justify-content-center.zi-2
+            .recalculate.recalculate_md.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+              input.recalculate__field.d-none(type="number" name="count" value="4")
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
+              .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
+            .text-center.text-md-left
+              button.button.text-uppercase.px-3(type="submit") В корзину
+        form.table-row.table-row_subcategory.box-shadow.border-radius.pos-rel.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+          span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+            meta(itemprop="availability" content="http://schema.org/InStock")
+            meta(itemprop="priceCurrency" content="RUB")
+            meta(itemprop="price" content="100")
+            //- самая низкая цена в категории
+            meta(itemprop="lowPrice" content="100")
+          .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
+            .d-flex.align-items-center
+              .bubble.bubble_pos_abs.zi-2
+                +icon('photo','h2 color-theme-brand mr-2')
+                .bubble__picture.box-shadow.border.border-radius
+                  +img('content/cards/pirelli.jpg','img-cover border-radius zi-2', true)
+              a.table-row__title.h5(href="#" itemprop="url")
+                span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
+          .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Артикул:
+              | 34635635
+          .table-row__col.table-row__col_subcategory-price.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Цена:
+              | 100 ₽
+          .table-row__col.table-row__col_subcategory-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Наличие:
+              span(itemprop="sku") 3
+              | &nbsp;шт.
+          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center.justify-content-center.zi-2
+            .recalculate.recalculate_md.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+              input.recalculate__field.d-none(type="number" name="count" value="4")
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
+              .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
+            .text-center.text-md-left
+              button.button.text-uppercase.px-3(type="submit") В корзину
+        form.table-row.table-row_subcategory.box-shadow.border-radius.pos-rel.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+          span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+            meta(itemprop="availability" content="http://schema.org/InStock")
+            meta(itemprop="priceCurrency" content="RUB")
+            meta(itemprop="price" content="100")
+            //- самая низкая цена в категории
+            meta(itemprop="lowPrice" content="100")
+          .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
+            .d-flex.align-items-center
+              .bubble.bubble_pos_abs.zi-2
+                +icon('photo','h2 color-theme-brand mr-2')
+                .bubble__picture.box-shadow.border.border-radius
+                  +img('content/cards/pirelli.jpg','img-cover border-radius zi-2', true)
+              a.table-row__title.h5(href="#" itemprop="url")
+                span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
+          .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Артикул:
+              | 34635635
+          .table-row__col.table-row__col_subcategory-price.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Цена:
+              | 100 ₽
+          .table-row__col.table-row__col_subcategory-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Наличие:
+              span(itemprop="sku") 3
+              | &nbsp;шт.
+          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center.justify-content-center.zi-2
+            .recalculate.recalculate_md.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+              input.recalculate__field.d-none(type="number" name="count" value="4")
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
+              .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
+            .text-center.text-md-left
+              button.button.text-uppercase.px-3(type="submit") В корзину
+        form.table-row.table-row_subcategory.box-shadow.border-radius.pos-rel.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+          span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+            meta(itemprop="availability" content="http://schema.org/InStock")
+            meta(itemprop="priceCurrency" content="RUB")
+            meta(itemprop="price" content="100")
+            //- самая низкая цена в категории
+            meta(itemprop="lowPrice" content="100")
+          .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
+            .d-flex.align-items-center
+              .bubble.bubble_pos_abs.zi-2
+                +icon('photo','h2 color-theme-brand mr-2')
+                .bubble__picture.box-shadow.border.border-radius
+                  +img('content/cards/pirelli.jpg','img-cover border-radius zi-2', true)
+              a.table-row__title.h5(href="#" itemprop="url")
+                span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
+          .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Артикул:
+              | 34635635
+          .table-row__col.table-row__col_subcategory-price.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Цена:
+              | 100 ₽
+          .table-row__col.table-row__col_subcategory-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Наличие:
+              span(itemprop="sku") 3
+              | &nbsp;шт.
+          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center.justify-content-center.zi-2
+            .recalculate.recalculate_md.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+              input.recalculate__field.d-none(type="number" name="count" value="4")
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
+              .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
+            .text-center.text-md-left
+              button.button.text-uppercase.px-3(type="submit") В корзину
+        form.table-row.table-row_subcategory.box-shadow.border-radius.pos-rel.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+          span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+            meta(itemprop="availability" content="http://schema.org/InStock")
+            meta(itemprop="priceCurrency" content="RUB")
+            meta(itemprop="price" content="100")
+            //- самая низкая цена в категории
+            meta(itemprop="lowPrice" content="100")
+          .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
+            .d-flex.align-items-center
+              .bubble.bubble_pos_abs.zi-2
+                +icon('photo','h2 color-theme-disabled mr-2')
+              a.table-row__title.h5(href="#" itemprop="url")
+                span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
+          .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Артикул:
+              | 34635635
+          .table-row__col.table-row__col_subcategory-price.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Цена:
+              | 100 ₽
+          .table-row__col.table-row__col_subcategory-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Наличие:
+              span(itemprop="sku") 3
+              | &nbsp;шт.
+          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center.justify-content-center.zi-2
+            .recalculate.recalculate_md.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+              input.recalculate__field.d-none(type="number" name="count" value="4")
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
+              .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
+            .text-center.text-md-left
+              button.button.text-uppercase.px-3(type="submit") В корзину
+        form.table-row.table-row_subcategory.box-shadow.border-radius.pos-rel.p-3.mb-md-2.mb-3(action="#" itemscope itemtype="http://schema.org/Product")
+          span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+            meta(itemprop="availability" content="http://schema.org/InStock")
+            meta(itemprop="priceCurrency" content="RUB")
+            meta(itemprop="price" content="100")
+            //- самая низкая цена в категории
+            meta(itemprop="lowPrice" content="100")
+          .table-row__col.table-row__col_subcategory-title.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
+            .d-flex.align-items-center
+              .bubble.bubble_pos_abs.zi-2
+                +icon('photo','h2 color-theme-disabled mr-2')
+              a.table-row__title.h5(href="#" itemprop="url")
+                span(itemprop="name") Ароматизатор подвесной CONTEX SEX QUEEN (слад. цветоч. лепестк.)
+          .table-row__col.table-row__col_subcategory-article.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Артикул:
+              | 34635635
+          .table-row__col.table-row__col_subcategory-price.d-md-flex.flex-column.align-items-start.justify-content-center.mb-1.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Цена:
+              | 100 ₽
+          .table-row__col.table-row__col_subcategory-quantity.d-md-flex.flex-column.align-items-start.justify-content-center.mb-3.mb-md-0
+            .h5.d-flex.align-items-center
+              .mr-3.d-block.d-md-none Наличие:
+              span(itemprop="sku") 3
+              | &nbsp;шт.
+          .table-row__col.table-row__col_subcategory-btn.d-flex.align-items-center.justify-content-center.zi-2
+            .recalculate.recalculate_md.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+              input.recalculate__field.d-none(type="number" name="count" value="4")
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
+              .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
+              button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
+            .text-center.text-md-left
+              button.button.text-uppercase.px-3(type="submit") В корзину
+        nav.pagination
+          a.pagination__item.pagination__item_prev(href="#")
+            +icon('readmore-right','h3 color-theme-brand')
+          span.pagination__item.pagination__item_current 1
+          a.pagination__item(href="#") 2
+          a.pagination__item(href="#") 3
+          a.pagination__item(href="#") 4
+          span.pagination__item.pagination__item_divider ...
+          a.pagination__item(href="#") 57
+          a.pagination__item.pagination__item_next(href="#")
+            +icon('readmore-right','h3 color-theme-brand')
+    include category/popular.pug
 
-        .col-xl-10.col-lg-9.mb-4
+    .mb-3
+      .h2.font-weight-bold.mb-4 Рекомендуем так же:
+      include category/wheels.pug
 
-      include category/popular.pug
+    include base/links.pug
 
-      .section.mb-3
-        .section__title Рекомендуем так же:
-        include category/wheels.pug
-
-      .section
-        .section__wrapper.section__wrapper_px
-          .mb-3
-            .section__title.section__title_sm Сезон
-            a.toggler(href="#") Летняя
-            a.toggler(href="#") Зимняя
-            a.toggler(href="#") Всесезонная
-            a.toggler(href="#") Летняя
-            a.toggler(href="#") Зимняя
-            a.toggler(href="#") Всесезонная
-          .mb-3
-            .section__title.section__title_sm Тип
-            a.toggler(href="#") Легковые
-            a.toggler(href="#") Для микроавтобуса
-            a.toggler(href="#") Для микроавтобуса
-          .section__title.section__title_sm Диаметр
-          a.toggler(href="#") 13
-          a.toggler(href="#") 14
-          a.toggler(href="#") 14С
-          a.toggler(href="#") 15
-          a.toggler(href="#") 15С
-          a.toggler(href="#") 16
-          a.toggler(href="#") 16С
-          a.toggler(href="#") 17
-          a.toggler(href="#") 18
-          a.toggler(href="#") 13
-          a.toggler(href="#") 14
-          a.toggler(href="#") 14С
-          a.toggler(href="#") 15
-          a.toggler(href="#") 15С
-          a.toggler(href="#") 16
-          a.toggler(href="#") 16С
-          a.toggler(href="#") 17
-          a.toggler(href="#") 18
-
-      .section
-        .content.content_expanded
-          include base/content.pug
-          .content__footer
-            button.readmore.readmore_btn.readmore_arrow-down(type="button")
+    .content.content_expanded.mb-5(itemprop="text")
+      include base/content.pug
+      .content__footer
+        button.readmore.readmore_btn(type="button")
+          +icon('readmore','h2 color-theme-brand')

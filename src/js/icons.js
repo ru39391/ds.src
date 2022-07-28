@@ -1,10 +1,10 @@
 /* svg */
-function requireAll(r) {
-    r.keys().forEach(r);
+const requireAll = (e) => {
+  e.keys().forEach(e);
 }
 requireAll(require.context('../img/icons/', true, /\.svg$/));
 
-fetch(`../img/icons/icons.svg`).then(res => {
+fetch(`img/icons/icons.svg`).then(res => {
   return res.text();
 }).then(data => {
   document.querySelector('.icons').innerHTML = data;

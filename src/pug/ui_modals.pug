@@ -1,0 +1,117 @@
+extends base
+
+block meta
+  - var title = 'Модальные окна';
+
+block header
+  .header.d-none
+
+block wrapper
+  .py-4.px-5
+    .h2.font-weight-bold.mb-4 #{title}:
+    ol.mb-5.px-3
+      li.mb-3(style="list-style:decimal;")
+        a.text-underline(href="#" data-toggle="modal" data-target="#personal-vin-success") Ваш запрос на подбор по VIN успешно отправлен
+      li.mb-3(style="list-style:decimal;")
+        a.text-underline(href="#" data-toggle="modal" data-target="#reg") Регистрация
+      li.mb-3(style="list-style:decimal;")
+        a.text-underline(href="#" data-toggle="modal" data-target="#auth") Авторизация
+      li.mb-3(style="list-style:decimal;")
+        a.text-underline(href="#" data-toggle="modal" data-target="#pwd") Восстановление пароля
+      li.mb-3(style="list-style:decimal;")
+        a.text-underline(href="#" data-toggle="modal" data-target="#order-success") Заказ успешно оформлен
+      li.mb-3(style="list-style:decimal;")
+        a.text-underline(href="#" data-toggle="modal" data-target="#booking-success") Запись на шиномонтаж успешно оформлена
+
+block footer
+  .modal.fade#personal-vin-success(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog_lg
+      .modal-content.border-0.box-shadow.overflow-hidden.p-md-5.p-4
+        +svg('settings','modal__bg')
+        .modal-header.d-flex.align-items-center.justify-content-between.border-0.zi-2.p-0.mb-4
+          .h3.font-weight-bold.color-theme-brand.mr-3 Ваш запрос на подбор по VIN успешно отправлен
+          button.close.h2.button-unstyled.color-theme-brand.py-0(data-dismiss="modal")
+            +icon('close')
+        .modal-body.zi-2.p-0.mb-4
+          .h4.mb-3 Ваша заявка №49409 от 07.06.2021 (16:37:23) успешно оформлена и будет обработана в ближайшее время.
+          .h4.mb-3 Результаты подбора можно будет посмотреть в&nbsp;
+            a.color-theme-brand(href="#") личном кабинете.
+            | Так же, Вы можете получать информацию в удобных для вас месенджерах, сообщив нам номер своей заявки.
+        .row.zi-2
+          .contacts.d-md-flex.flex-wrap.align-items-center.col-xl-10.mb-xl-0.mb-3
+            a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-0.mr-md-4.mb-2.mb-xl-0(href="#")
+              +icon('tg-filled','contacts__icon h3 color-theme-brand mr-2')
+              span.contacts__item-title Продолжить в Telegram
+            a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-2.mb-xl-0(href="#")
+              +icon('wapp-filled','contacts__icon h3 color-theme-brand mr-2')
+              span.contacts__item-title Продолжить в WhatsApp
+          .col-xl-2.d-flex.justify-content-xl-end
+            button.button.text-uppercse.px-4(type="button" data-dismiss="modal") OK
+
+  .modal.fade#order-success(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog_lg
+      .modal-content.border-0.box-shadow.py-3
+        +svg('checked-double','modal__bg modal__bg_checked')
+        .modal-header.d-flex.align-items-center.justify-content-between.pt-0.px-4.pb-3.mb-4
+          .h3.font-weight-bold.color-theme-brand.mr-3 Заказ успешно оформлен
+          button.close.h2.button-unstyled.color-theme-brand.py-0(data-dismiss="modal")
+            +icon('close')
+        .modal-body.border-bottom.pt-0.px-4.pb-3.mb-3.zi-2
+          .h5.mb-4 Ваш заказ успешно оформлен и будет обработан в ближайшее время. С вами свяжется менеджер для его подтверждения.
+          .h5.mb-4 Вы можете следить за выполнением своего заказа в&nbsp;
+            a.color-theme-brand(href="#") личном кабинете.&nbsp;
+            | Либо Вы можете получать информацию удобных для вас месенджерах, сообщив нам номер своего заказа.
+          .desclist
+            .d-flex.align-items-center.mb-1
+              .desclist__title.h6.text-oneline.px-0.col-xl-2.col-sm-3 Номер заказа:
+              .h5.col-xl-10.col-sm-9 49409
+            .d-flex.align-items-center.mb-1
+              .desclist__title.h6.text-oneline.px-0.col-xl-2.col-sm-3 Дата:
+              .h5.col-xl-10.col-sm-9 07.06.202
+        .px-4
+          .row.align-items-center.zi-2
+            .contacts.d-md-flex.flex-wrap.align-items-center.col-xl-10.mb-xl-0.mb-3
+              .h5.color-theme-brand.col-12.px-0.mb-2 Добравляйтесь и получайте напоминание там, где это удобно:
+              a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-0.mr-md-4.mb-2.mb-xl-0(href="#")
+                +icon('tg-filled','contacts__icon h3 color-theme-brand mr-2')
+                span.contacts__item-title Следить в Telegram
+              a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-2.mb-xl-0(href="#")
+                +icon('wapp-filled','contacts__icon h3 color-theme-brand mr-2')
+                span.contacts__item-title Следить в WhatsApp
+            .col-xl-2.d-flex.justify-content-xl-end
+              button.button.text-uppercse.px-4(type="button" data-dismiss="modal") OK
+
+  .modal.fade#booking-success(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog_lg
+      .modal-content.border-0.box-shadow.py-3
+        +svg('checked-double','modal__bg modal__bg_checked')
+        .modal-header.d-flex.align-items-center.justify-content-between.border-0.py-0.px-4.mb-4
+          .h3.font-weight-bold.color-theme-brand.mr-3 Запись на шиномонтаж успешно оформлена. Ждем вас в назначенное время.
+          button.close.h2.button-unstyled.color-theme-brand.py-0(data-dismiss="modal")
+            +icon('close')
+        .modal-body.border-bottom.pt-0.px-4.pb-3.mb-3.zi-2
+          .desclist
+            .d-flex.align-items-center.mb-1
+              .desclist__title.h6.text-oneline.px-0.col-xl-2.col-sm-3 Номер записи:
+              .h3.font-weight-bold.col-xl-10.col-sm-9 49409
+            .d-flex.align-items-center.mb-1
+              .desclist__title.h6.text-oneline.px-0.col-xl-2.col-sm-3 Адрес:
+              .h5.col-xl-10.col-sm-9 ул. Доватора, 11
+            .d-flex.align-items-center.mb-1
+              .desclist__title.h6.text-oneline.px-0.col-xl-2.col-sm-3 Дата:
+              .h5.col-xl-10.col-sm-9 10 января 2021 г.
+            .d-flex.align-items-center.mb-1
+              .desclist__title.h6.text-oneline.px-0.col-xl-2.col-sm-3 Время:
+              .h5.col-xl-10.col-sm-9 11 : 00
+        .px-4
+          .row.align-items-center.zi-2
+            .contacts.d-md-flex.flex-wrap.align-items-center.col-xl-10.mb-xl-0.mb-3
+              .h5.color-theme-brand.col-12.px-0.mb-2 Добравляйтесь и получайте напоминание там, где это удобно:
+              a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-0.mr-md-4.mb-2.mb-xl-0(href="#")
+                +icon('tg-filled','contacts__icon h3 color-theme-brand mr-2')
+                span.contacts__item-title Следить в Telegram
+              a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-2.mb-xl-0(href="#")
+                +icon('wapp-filled','contacts__icon h3 color-theme-brand mr-2')
+                span.contacts__item-title Следить в WhatsApp
+            .col-xl-2.d-flex.justify-content-xl-end
+              button.button.text-uppercse.px-4(type="button" data-dismiss="modal") OK

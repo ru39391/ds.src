@@ -1,0 +1,30 @@
+form.table-row__col.table-row__col_category.box-shadow.border-radius.p-3(action="#")
+  .bubble.d-md-none.mb-3.mb-md-0
+    +icon('photo','h2 color-theme-brand mr-2')
+    .bubble__picture.box-shadow.border.border-radius
+      +img('content/cards/pirelli.jpg','img-cover border-radius zi-2')
+  .table__col.table__col_width.d-flex.flex-md-column.align-items-center.align-items-md-start.justify-content-md-center.mb-3.mb-md-0
+    .table__col-title.h5.mr-2.d-md-none Ш:
+    | 175
+  .table__col.table__col_height.d-flex.flex-md-column.align-items-center.align-items-md-start.justify-content-md-center.mb-3.mb-md-0
+    .table__col-title.h5.mr-2.d-md-none В:
+    | 70
+  .table__col.table__col_type.d-flex.flex-md-column.align-items-center.align-items-md-start.justify-content-md-center.mb-3.mb-md-0
+    .table__col-title.h5.mr-2.d-md-none Сезон:
+    +icon('summer')
+  .table__col.table__col_title.d-md-flex.flex-column.align-items-start.justify-content-center.pr-2.mb-2.mb-md-0
+    a.h5(href="#") Летние шины Cordiant Comfort 2 175/70 R13 86H
+  .table__col.table__col_price.d-flex.flex-md-column.align-items-center.align-items-md-start.justify-content-md-center.mb-1.mb-md-0
+    .table__col-title.h5.mr-2.d-md-none Цена:
+    | 2 530, 08 ₽
+  .table__col.table__col_stock.d-flex.flex-md-column.align-items-center.align-items-md-start.justify-content-md-center.mb-3.mb-md-0
+    .table__col-title.h5.mr-2.d-md-none Наличие:
+    | много
+  .table__col.table__col_btn.d-flex.align-items-center
+    .recalculate.d-flex.align-items-center.flex-grow-1.overflow-hidden.bg-theme-brand.mr-1
+      input.recalculate__field.d-none(type="number" name="count" value="4")
+      button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_remove(type="button") -
+      .recalculate__value.d-flex.align-items-center.justify-content-center.color-theme-white 4
+      button.recalculate__btn.font-weight-bold.color-theme-white.flex-grow-1.recalculate__btn_add(type="button") +
+    .text-center.text-md-left
+      button.button.text-uppercase.px-3(type="submit") В корзину

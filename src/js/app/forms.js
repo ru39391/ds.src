@@ -1,4 +1,35 @@
 import classie from 'desandro-classie';
+import Inputmask from 'inputmask';
+
+const togglerParamWinter = document.querySelector('.form__toggler_param_winter');
+if(togglerParamWinter) {
+  togglerParamWinter.addEventListener('change', e => {
+    const checked = e.target.checked;
+    const togglerParamSpykes = e.target.closest('.form').querySelectorAll('.form__toggler_param_spykes');
+    togglerParamSpykes.forEach(togglerParamSpykesEl => {
+      const togglerParamLabel = togglerParamSpykesEl.nextElementSibling;
+      if(checked) {
+        togglerParamLabel.classList.remove('d-none');
+      } else {
+        togglerParamLabel.classList.add('d-none');
+      }
+    });
+  });
+}
+
+document.querySelectorAll('.input-email').forEach(field => {
+	Inputmask({
+		alias: 'email',
+		showMaskOnHover: false,
+	}).mask(field);
+});
+
+document.querySelectorAll('.input-phone').forEach(field => {
+	Inputmask({
+		mask: '+7 (999) 999-99-99',
+		showMaskOnHover: false,
+	}).mask(field);
+});
 
 const onInputFocus = (e) => {
   classie.add(e.target.parentNode, 'active');
@@ -42,3 +73,34 @@ document.querySelectorAll('.form__toggler_pwd').forEach(formPwdToggler => {
     }
   });
 });
+
+/* form toggler */
+document.querySelectorAll('[data-toggle="list"]').forEach(listToggler => {
+  listToggler.addEventListener('click', (e) => {
+    let target = document.querySelector(e.target.getAttribute('data-target'));
+    if (!target.style.height) {
+      target.style.height = 'auto';
+      e.target.classList.add('checked');
+    } else {
+      target.style.height = null;
+      e.target.classList.remove('checked');
+    }
+  });
+});
+
+/* custom service select */
+const serviceSelect = document.querySelector('.select__service');
+if (serviceSelect) {
+  const serviceCaption = document.querySelector('.modal-header__service-title');
+  const serviceBtn = document.querySelector('.button_toggler-service');
+  const serviceIcon = serviceBtn.querySelector('.button__icon');
+  serviceSelect.addEventListener('change', e => {
+    if(e.target.selectedIndex !== 0) {
+      serviceCaption.textContent = e.target.value.toLowerCase();
+      serviceBtn.disabled = false;
+      serviceBtn.classList.remove('color-theme-disabled');
+      serviceIcon.classList.remove('color-theme-disabled');
+      serviceIcon.classList.add('color-theme-brand');
+    }
+  });
+}

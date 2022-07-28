@@ -4,41 +4,45 @@ block meta
   - var title = 'Подбор автомасел';
 
 block filter
-  .header__footer
-    button.filter-toggler(type="button")
-      svg.filter-toggler__icon
-        use(xlink:href="#icon-filter")
-      span.filter-toggler__title
-        span.filter-toggler__show Показать 
-        span.filter-toggler__hide Скрыть 
+  .togglebar
+    button.aside-toggler.flex-grow-1.justify-content-center.px-3.py-2(type="button" data-target="#filter")
+      +icon('filter', 'aside-toggler__icon h3 mr-2')
+      span.pointer-events-none
+        span.aside-toggler__show Показать&nbsp;
+        span.aside-toggler__hide Скрыть&nbsp;
         | фильтр
 
 block wrapper
-    .container.container_wrapper
-      nav.pathway
-        a.pathway__link(href="#") Главная
-        a.pathway__current(href="#") #{title}
+    .wrapper
+      ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Главная
+            meta(itemprop="position" content="1")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__current(href="#" itemprop="item")
+            span(itemprop="name") #{title}
+            meta(itemprop="position" content="2")
       section.content
-        h1 #{title}
-      .category-counter 1 840 товаров в 4 каталогах
+        h1(itemprop="name") #{title}
+      .category-counter.mb-4 1 840 товаров в 4 каталогах
       .row
         .col-xl-2.col-lg-3.mb-lg-4
-          .filter.filter_sticky
-            .filter__body
-              form.form.form_bg.form_filter(action="#")
-                .form__header
-                  .form__title.form__title_icon
-                    svg.form__title-icon
-                      use(xlink:href="#icon-oil")
+          #filter.aside.aside_pos_fixed
+            .aside__wrapper
+              form.form.form_bg.form_filter.mb-lg-3(action="#")
+                .form__header.d-flex.align-items-center.justify-content-between.d-lg-block
+                  .form__title.form__title_icon.d-flex.align-items-center.flex-grow-1.h4.font-weight-bold.color-theme-brand.mb-0.mb-lg-2
+                    +icon('oil','form__title-icon h3 mr-1')
                     | #{title}
-                  button.btn-link(type="reset") Сбросить
+                  button.button-unstyled.h6(type="reset") Сбросить
                 .form__section
-                  .form__section-title Параметры
+                  .form__section-title.h6.color-theme-disabled.mb-4 Параметры
                   .row
-                    .col-6.col-lg-12
+                    .col-sm-6.col-lg-12
                       .form__select.mb-4
                         .form__select-title Тип
-                        select.form__select-options
+                        select.selecter
                           option --
                           option Значение 1
                           option Значение 2
@@ -48,10 +52,10 @@ block wrapper
                           option Значение 6
                           option Значение 7
                           option Значение 8
-                    .col-6.col-lg-12
+                    .col-sm-6.col-lg-12
                       .form__select.mb-4
                         .form__select-title Двигатель
-                        select.form__select-options
+                        select.selecter
                           option --
                           option Значение 1
                           option Значение 2
@@ -61,10 +65,10 @@ block wrapper
                           option Значение 6
                           option Значение 7
                           option Значение 8
-                    .col-6.col-lg-12
-                      .form__select.mb-lg-4
+                    .col-sm-6.col-lg-12
+                      .form__select.mb-4
                         .form__select-title Вязкость
-                        select.form__select-options
+                        select.selecter
                           option --
                           option Значение 1
                           option Значение 2
@@ -74,10 +78,10 @@ block wrapper
                           option Значение 6
                           option Значение 7
                           option Значение 8
-                    .col-6.col-lg-12
+                    .col-sm-6.col-lg-12
                       .form__select
                         .form__select-title Назначение
-                        select.form__select-options
+                        select.selecter
                           option --
                           option Значение 1
                           option Значение 2
@@ -88,92 +92,115 @@ block wrapper
                           option Значение 7
                           option Значение 8
                 .form__section
-                  .form__section-title Цена, ₽
+                  .form__section-title.h6.color-theme-disabled.mb-4 Цена, ₽
                   .row.mb-3
                     .form__item.col-6
-                      label.form__label.form__label_plain От
+                      label.form__label.form__label_plain.h5.color-theme-disabled От
                       input#price-min.form__field(type="text" value="")
                     .form__item.col-6
-                      label.form__label.form__label_plain До
+                      label.form__label.form__label_plain.h5.color-theme-disabled До
                       input#price-max.form__field(type="text" value="")
                   #price-ranger.form__slider
                 .form__section
-                  .form__section-title Наличие
+                  .form__section-title.h6.color-theme-disabled.mb-4 Наличие
                   input.form__toggler.form__toggler_checkbox(id="instock" type="checkbox" value="")
-                  label.form__label(for="instock")
-                    span.form__label-icon
-                      svg.icon-fluid
-                        use(xlink:href="#icon-checked")
+                  label.form__label.h5(for="instock")
+                    +icon('checked','form__label-icon')
                     span.form__label-title Сейчас в наличии
                 .form__section.border-0.pb-0
-                  .form__section-title Бренд
+                  .form__section-title.h6.color-theme-disabled.mb-4 Бренд
                   .form__item.mb-4
                     input.form__field(type="text" value="")
                     label.form__label.form__label_title Введите название
-                  .row
+                  #brand.form__list.row
+                    .col-6
+                      input.form__toggler.form__toggler_checkbox(id="Michelin-1" type="checkbox" value="")
+                      label.form__label.h5.mb-4(for="Michelin-1")
+                        +icon('checked','form__label-icon')
+                        span.form__label-title Michelin
+                    .col-6
+                      input.form__toggler.form__toggler_checkbox(id="Cordiant-1" type="checkbox" value="")
+                      label.form__label.h5.mb-4(for="Cordiant-1")
+                        +icon('checked','form__label-icon')
+                        span.form__label-title Cordiant
+                    .col-6
+                      input.form__toggler.form__toggler_checkbox(id="Pirelli-1" type="checkbox" value="")
+                      label.form__label.h5.mb-4(for="Pirelli-1")
+                        +icon('checked','form__label-icon')
+                        span.form__label-title Pirelli
+                    .col-6
+                      input.form__toggler.form__toggler_checkbox(id="Hankook-1" type="checkbox" value="")
+                      label.form__label.h5.mb-4(for="Hankook-1")
+                        +icon('checked','form__label-icon')
+                        span.form__label-title Hankook
+                    .col-6
+                      input.form__toggler.form__toggler_checkbox(id="Yokohama-1" type="checkbox" value="")
+                      label.form__label.h5.mb-4(for="Yokohama-1")
+                        +icon('checked','form__label-icon')
+                        span.form__label-title Yokohama
+                    .col-6
+                      input.form__toggler.form__toggler_checkbox(id="Goodyear-1" type="checkbox" value="")
+                      label.form__label.h5.mb-4(for="Goodyear-1")
+                        +icon('checked','form__label-icon')
+                        span.form__label-title Good year
+                    .col-6
+                      input.form__toggler.form__toggler_checkbox(id="Continental-1" type="checkbox" value="")
+                      label.form__label.h5.mb-4(for="Continental-1")
+                        +icon('checked','form__label-icon')
+                        span.form__label-title Continental
+                    .col-6
+                      input.form__toggler.form__toggler_checkbox(id="Bridgestone-1" type="checkbox" value="")
+                      label.form__label.h5.mb-4(for="Bridgestone-1")
+                        +icon('checked','form__label-icon')
+                        span.form__label-title Bridgestone
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Michelin" type="checkbox" value="")
-                      label.form__label.mb-4(for="Michelin")
-                        span.form__label-icon
-                          svg.icon-fluid
-                            use(xlink:href="#icon-checked")
+                      label.form__label.h5.mb-4(for="Michelin")
+                        +icon('checked','form__label-icon')
                         span.form__label-title Michelin
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Cordiant" type="checkbox" value="")
-                      label.form__label.mb-4(for="Cordiant")
-                        span.form__label-icon
-                          svg.icon-fluid
-                            use(xlink:href="#icon-checked")
+                      label.form__label.h5.mb-4(for="Cordiant")
+                        +icon('checked','form__label-icon')
                         span.form__label-title Cordiant
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Pirelli" type="checkbox" value="")
-                      label.form__label.mb-4(for="Pirelli")
-                        span.form__label-icon
-                          svg.icon-fluid
-                            use(xlink:href="#icon-checked")
+                      label.form__label.h5.mb-4(for="Pirelli")
+                        +icon('checked','form__label-icon')
                         span.form__label-title Pirelli
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Hankook" type="checkbox" value="")
-                      label.form__label.mb-4(for="Hankook")
-                        span.form__label-icon
-                          svg.icon-fluid
-                            use(xlink:href="#icon-checked")
+                      label.form__label.h5.mb-4(for="Hankook")
+                        +icon('checked','form__label-icon')
                         span.form__label-title Hankook
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Yokohama" type="checkbox" value="")
-                      label.form__label.mb-4(for="Yokohama")
-                        span.form__label-icon
-                          svg.icon-fluid
-                            use(xlink:href="#icon-checked")
+                      label.form__label.h5.mb-4(for="Yokohama")
+                        +icon('checked','form__label-icon')
                         span.form__label-title Yokohama
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Goodyear" type="checkbox" value="")
-                      label.form__label.mb-4(for="Goodyear")
-                        span.form__label-icon
-                          svg.icon-fluid
-                            use(xlink:href="#icon-checked")
+                      label.form__label.h5.mb-4(for="Goodyear")
+                        +icon('checked','form__label-icon')
                         span.form__label-title Good year
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Continental" type="checkbox" value="")
-                      label.form__label.mb-4(for="Continental")
-                        span.form__label-icon
-                          svg.icon-fluid
-                            use(xlink:href="#icon-checked")
+                      label.form__label.h5.mb-4(for="Continental")
+                        +icon('checked','form__label-icon')
                         span.form__label-title Continental
                     .col-6
                       input.form__toggler.form__toggler_checkbox(id="Bridgestone" type="checkbox" value="")
-                      label.form__label.mb-4(for="Bridgestone")
-                        span.form__label-icon
-                          svg.icon-fluid
-                            use(xlink:href="#icon-checked")
+                      label.form__label.h5.mb-4(for="Bridgestone")
+                        +icon('checked','form__label-icon')
                         span.form__label-title Bridgestone
-                .text-center
-                  button.btn-unstyled(type="submit")
-                    span.readmore.readmore_arrow-down Показать еще
-              .filter__alert
-                .filter__alert-info
-                  .text-sm Найдено:
+                .d-flex.justify-content-center
+                  button.readmore.d-flex.align-items-center(type="submit" data-toggle="list" data-target="#brand")
+                    span.h6.mr-2.pointer-events-none Показать еще
+                    +icon('readmore','h3 color-theme-brand readmore__icon')
+              .aside__alert.d-flex.align-items-center.justify-content-between.flex-lg-column.color-theme-white.bg-theme-brand.px-lg-3.pt-lg-1.pb-lg-3.py-3.px-4
+                .aside__alert-info.h2.font-weight-bold.d-flex.align-items-center.mb-lg-1
+                  .h5.font-weight-normal.mr-2 Найдено:
                   | 713
-                button.btn.btn_bordered.px-3(type="button") Показать
+                button.button.text-uppercase.button_bordered.px-3(type="button") Показать
 
         .col-xl-10.col-lg-9.mb-4

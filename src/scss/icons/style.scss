@@ -1,0 +1,529 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?y36wip') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?y36wip') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?y36wip##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ds-"], [class*=" ds-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ds-icon-photo {
+  &:before {
+    content: $ds-icon-photo;
+  }
+}
+.ds-icon-desc {
+  &:before {
+    content: $ds-icon-desc;
+  }
+}
+.ds-icon-notify {
+  &:before {
+    content: $ds-icon-notify;
+  }
+}
+.ds-icon-points {
+  &:before {
+    content: $ds-icon-points;
+  }
+}
+.ds-icon-reviews {
+  &:before {
+    content: $ds-icon-reviews;
+  }
+}
+.ds-icon-view {
+  &:before {
+    content: $ds-icon-view;
+  }
+}
+.ds-icon-wallet {
+  &:before {
+    content: $ds-icon-wallet;
+  }
+}
+.ds-icon-zoom {
+  &:before {
+    content: $ds-icon-zoom;
+  }
+}
+.ds-icon-close {
+  &:before {
+    content: $ds-icon-close;
+  }
+}
+.ds-icon-allseason .path1 {
+  &:before {
+    content: $ds-icon-allseason-path1;
+    color: $color__brand;
+  }
+}
+.ds-icon-allseason .path2 {
+  &:before {
+    content: $ds-icon-allseason-path2;
+    margin-left: -1em;
+    color: $color__warning;
+  }
+}
+.ds-icon-arrow-left {
+  &:before {
+    content: $ds-icon-arrow-left;
+  }
+}
+.ds-icon-arrow-next {
+  &:before {
+    content: $ds-icon-arrow-next;
+  }
+}
+.ds-icon-arrow-prev {
+  &:before {
+    content: $ds-icon-arrow-prev;
+  }
+}
+.ds-icon-arrow-right {
+  &:before {
+    content: $ds-icon-arrow-right;
+  }
+}
+.ds-icon-attention {
+  &:before {
+    content: $ds-icon-attention;
+  }
+}
+.ds-icon-battery {
+  &:before {
+    content: $ds-icon-battery;
+  }
+}
+.ds-icon-car {
+  &:before {
+    content: $ds-icon-car;
+  }
+}
+.ds-icon-card {
+  &:before {
+    content: $ds-icon-card;
+  }
+}
+.ds-icon-cart {
+  &:before {
+    content: $ds-icon-cart;
+  }
+}
+.ds-icon-case {
+  &:before {
+    content: $ds-icon-case;
+  }
+}
+.ds-icon-checked {
+  &:before {
+    content: $ds-icon-checked;
+  }
+}
+.ds-icon-compare {
+  &:before {
+    content: $ds-icon-compare;
+  }
+}
+.ds-icon-credit {
+  &:before {
+    content: $ds-icon-credit;
+  }
+}
+.ds-icon-delivery {
+  &:before {
+    content: $ds-icon-delivery;
+  }
+}
+.ds-icon-dropdown {
+  &:before {
+    content: $ds-icon-dropdown;
+  }
+}
+.ds-icon-email {
+  &:before {
+    content: $ds-icon-email;
+  }
+}
+.ds-icon-emoji {
+  &:before {
+    content: $ds-icon-emoji;
+  }
+}
+.ds-icon-exit {
+  &:before {
+    content: $ds-icon-exit;
+  }
+}
+.ds-icon-eye {
+  &:before {
+    content: $ds-icon-eye;
+  }
+}
+.ds-icon-facebook {
+  &:before {
+    content: $ds-icon-facebook;
+  }
+}
+.ds-icon-favourite {
+  &:before {
+    content: $ds-icon-favourite;
+  }
+}
+.ds-icon-filter {
+  &:before {
+    content: $ds-icon-filter;
+  }
+}
+.ds-icon-founding .path1 {
+  &:before {
+    content: $ds-icon-founding-path1;
+    color: $color__brand;
+  }
+}
+.ds-icon-founding .path2 {
+  &:before {
+    content: $ds-icon-founding-path2;
+    margin-left: -1em;
+    color: $color__warning;
+  }
+}
+.ds-icon-gift {
+  &:before {
+    content: $ds-icon-gift;
+  }
+}
+.ds-icon-instagram {
+  &:before {
+    content: $ds-icon-instagram;
+  }
+}
+.ds-icon-iron {
+  &:before {
+    content: $ds-icon-iron;
+    color: $color__brand;
+  }
+}
+.ds-icon-list {
+  &:before {
+    content: $ds-icon-list;
+  }
+}
+.ds-icon-logo .path1 {
+  &:before {
+    content: $ds-icon-logo-path1;
+    color: #444;
+  }
+}
+.ds-icon-logo .path2 {
+  &:before {
+    content: $ds-icon-logo-path2;
+    margin-left: -1em;
+    color: #444;
+  }
+}
+.ds-icon-logo .path3 {
+  &:before {
+    content: $ds-icon-logo-path3;
+    margin-left: -1em;
+    color: #444;
+  }
+}
+.ds-icon-logo .path4 {
+  &:before {
+    content: $ds-icon-logo-path4;
+    margin-left: -1em;
+    color: #444;
+  }
+}
+.ds-icon-logo .path5 {
+  &:before {
+    content: $ds-icon-logo-path5;
+    margin-left: -1em;
+    color: #444;
+  }
+}
+.ds-icon-logo .path6 {
+  &:before {
+    content: $ds-icon-logo-path6;
+    margin-left: -1em;
+    color: #bbb;
+  }
+}
+.ds-icon-menu {
+  &:before {
+    content: $ds-icon-menu;
+  }
+}
+.ds-icon-moto {
+  &:before {
+    content: $ds-icon-moto;
+  }
+}
+.ds-icon-nonspikes {
+  &:before {
+    content: $ds-icon-nonspikes;
+    color: $color__brand;
+  }
+}
+.ds-icon-oil {
+  &:before {
+    content: $ds-icon-oil;
+  }
+}
+.ds-icon-phone {
+  &:before {
+    content: $ds-icon-phone;
+  }
+}
+.ds-icon-phone-nobg {
+  &:before {
+    content: $ds-icon-phone-nobg;
+  }
+}
+.ds-icon-placemark {
+  &:before {
+    content: $ds-icon-placemark;
+  }
+}
+.ds-icon-plane {
+  &:before {
+    content: $ds-icon-plane;
+  }
+}
+.ds-icon-readmore {
+  &:before {
+    content: $ds-icon-readmore;
+  }
+}
+.ds-icon-readmore-reversed {
+  &:before {
+    content: $ds-icon-readmore-reversed;
+  }
+}
+.ds-icon-repair {
+  &:before {
+    content: $ds-icon-repair;
+  }
+}
+.ds-icon-scales {
+  &:before {
+    content: $ds-icon-scales;
+  }
+}
+.ds-icon-search {
+  &:before {
+    content: $ds-icon-search;
+  }
+}
+.ds-icon-services {
+  &:before {
+    content: $ds-icon-services;
+  }
+}
+.ds-icon-settings {
+  &:before {
+    content: $ds-icon-settings;
+  }
+}
+.ds-icon-shield {
+  &:before {
+    content: $ds-icon-shield;
+  }
+}
+.ds-icon-spikes {
+  &:before {
+    content: $ds-icon-spikes;
+    color: $color__brand;
+  }
+}
+.ds-icon-steel .path1 {
+  &:before {
+    content: $ds-icon-steel-path1;
+    color: $color__brand;
+  }
+}
+.ds-icon-steel .path2 {
+  &:before {
+    content: $ds-icon-steel-path2;
+    margin-left: -1em;
+    color: $color__warning;
+  }
+}
+.ds-icon-summer {
+  &:before {
+    content: $ds-icon-summer;
+    color: $color__warning;
+  }
+}
+.ds-icon-target {
+  &:before {
+    content: $ds-icon-target;
+  }
+}
+.ds-icon-tg {
+  &:before {
+    content: $ds-icon-tg;
+  }
+}
+.ds-icon-tg-filled {
+  &:before {
+    content: $ds-icon-tg-filled;
+  }
+}
+.ds-icon-tile {
+  &:before {
+    content: $ds-icon-tile;
+  }
+}
+.ds-icon-time {
+  &:before {
+    content: $ds-icon-time;
+  }
+}
+.ds-icon-tires {
+  &:before {
+    content: $ds-icon-tires;
+  }
+}
+.ds-icon-tool {
+  &:before {
+    content: $ds-icon-tool;
+  }
+}
+.ds-icon-trash {
+  &:before {
+    content: $ds-icon-trash;
+  }
+}
+.ds-icon-user {
+  &:before {
+    content: $ds-icon-user;
+  }
+}
+.ds-icon-vk {
+  &:before {
+    content: $ds-icon-vk;
+  }
+}
+.ds-icon-wapp {
+  &:before {
+    content: $ds-icon-wapp;
+  }
+}
+.ds-icon-wapp-filled {
+  &:before {
+    content: $ds-icon-wapp-filled;
+  }
+}
+.ds-icon-warranty {
+  &:before {
+    content: $ds-icon-warranty;
+  }
+}
+.ds-icon-wheels {
+  &:before {
+    content: $ds-icon-wheels;
+  }
+}
+.ds-icon-winter {
+  &:before {
+    content: $ds-icon-winter;
+    color: $color__brand;
+  }
+}
+.ds-icon-youtube {
+  &:before {
+    content: $ds-icon-youtube;
+  }
+}
+.ds-icon-edit {
+  &:before {
+    content: $ds-icon-edit;
+  }
+}
+.ds-icon-share {
+  &:before {
+    content: $ds-icon-share;
+  }
+}
+.ds-icon-close-noborder {
+  &:before {
+    content: $ds-icon-close-noborder;
+  }
+}
+.ds-icon-continue {
+  &:before {
+    content: $ds-icon-continue;
+  }
+}
+.ds-icon-phonehandset {
+  &:before {
+    content: $ds-icon-phonehandset;
+  }
+}
+.ds-icon-checked-double {
+  &:before {
+    content: $ds-icon-checked-double;
+  }
+}
+.ds-icon-readmore-right {
+  &:before {
+    content: $ds-icon-readmore-right;
+  }
+}
+.ds-icon-detail {
+  &:before {
+    content: $ds-icon-detail;
+  }
+}
+
+.ds-icon-services-aircond {
+  &:before {
+    content: $ds-icon-services-aircond;
+  }
+}
+.ds-icon-services-store {
+  &:before {
+    content: $ds-icon-services-store;
+  }
+}
+.ds-icon-services-tires {
+  &:before {
+    content: $ds-icon-services-tires;
+  }
+}
+.ds-icon-services-vin {
+  &:before {
+    content: $ds-icon-services-vin;
+  }
+}
+.ds-icon-services-wheel-painted {
+  &:before {
+    content: $ds-icon-services-wheel-painted;
+  }
+}
+.ds-icon-services-wheel-rolled {
+  &:before {
+    content: $ds-icon-services-wheel-rolled;
+  }
+}

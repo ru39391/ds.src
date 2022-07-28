@@ -1,0 +1,67 @@
+.readmore {
+  @extend %btn-default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease;
+  /*
+  @include before;
+  padding: 0 1.625rem 0 0;
+
+  &:hover,
+  &.current {
+    color: $color__brand;
+  }
+
+  &:before {
+    @include fw(20px);
+    @include wh(20px);
+    top: 50%;
+    right: 0;
+    margin: -.5rem 0 0;
+    border-radius: 50%;
+    background: $color__brand;
+    transition: all .3s ease;
+  }
+
+  &:after {
+    @include border(4px 0 4px 4px,rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #fff);
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    margin: -.125rem 0 0;
+    transition: all .3s ease;
+  }
+
+  &.readmore_btn {
+    @include wh(22px,26px);
+    padding: 0;
+  }
+
+  &.readmore_arrow-down {
+    &:after {
+      @include border(4px 4px 0,#fff rgba(0,0,0,0) rgba(0,0,0,0));
+      right: 6px;
+      margin: 0;
+    }
+  }
+  */
+
+  &.readmore_centered {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin: -10px 0 0;
+  }
+}
+
+.readmore__icon {
+  transition: all .3s ease;
+}
+
+.checked {
+  .readmore__icon {
+    transform: rotate(-180deg);
+  }
+}

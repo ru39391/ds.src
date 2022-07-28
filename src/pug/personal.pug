@@ -4,71 +4,38 @@ block meta
   - var title = 'Личный кабинет';
 
 block filter
-  .header__footer
-    button.filter-toggler(type="button")
-      svg.filter-toggler__icon
-        use(xlink:href="#icon-filter")
-      span.filter-toggler__title
-        span.filter-toggler__show Показать 
-        span.filter-toggler__hide Скрыть 
+  .togglebar
+    button.aside-toggler.flex-grow-1.justify-content-center.px-3.py-2(type="button" data-target="#leftmenu")
+      +icon('filter', 'aside-toggler__icon h3 mr-2')
+      span.pointer-events-none
+        span.aside-toggler__show Показать&nbsp;
+        span.aside-toggler__hide Скрыть&nbsp;
         | меню
 
 block wrapper
-  .container.container_wrapper
-    nav.pathway
-      a.pathway__link(href="#") Главная
-      a.pathway__current(href="#") #{title}
+  .wrapper
+    ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Главная
+          meta(itemprop="position" content="1")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__current(href="#" itemprop="item")
+            span(itemprop="name") #{title}
+            meta(itemprop="position" content="2")
     section.content
-      h1 #{title}
+      h1(itemprop="name") Личный кабинет
     .row.align-items-start
-      .col-xl-3.col-lg-4.mb-lg-4
-        .filter.filter_sticky
-          .filter__body
-            nav.leftmenu
-              a.leftmenu__item(href="#")
-                svg.leftmenu__item-icon
-                  use(xlink:href="#icon-case")
-                span.leftmenu__item-title Мои заказы
-                span.leftmenu__item-badge.bg-brand 2
-              a.leftmenu__item(href="#")
-                svg.leftmenu__item-icon
-                  use(xlink:href="#icon-favourite")
-                span.leftmenu__item-title Избранное
-                span.leftmenu__item-badge.bg-success 3
-              a.leftmenu__item(href="#")
-                svg.leftmenu__item-icon
-                  use(xlink:href="#icon-gift")
-                span.leftmenu__item-title Бонусные рубли
-                span.leftmenu__item-badge.bg-success 300 
-                  span.text-sm Б.₽.
-              a.leftmenu__item(href="#")
-                svg.leftmenu__item-icon
-                  use(xlink:href="#icon-tool")
-                span.leftmenu__item-title Запись на услуги
-              a.leftmenu__item(href="#")
-                svg.leftmenu__item-icon
-                  use(xlink:href="#icon-settings")
-                span.leftmenu__item-title Подбор по VIN
-                span.leftmenu__item-badge.bg-success 1
-              a.leftmenu__item(href="#")
-                svg.leftmenu__item-icon
-                  use(xlink:href="#icon-user")
-                span.leftmenu__item-title Персональные данные
-              a.leftmenu__item(href="#")
-                svg.leftmenu__item-icon
-                  use(xlink:href="#icon-car")
-                span.leftmenu__item-title Мой автомобиль
-              a.leftmenu__item.active(href="#")
-                svg.leftmenu__item-icon
-                  use(xlink:href="#icon-shield")
-                span.leftmenu__item-title Смена пароля
-              a.leftmenu__item(href="#")
-                svg.leftmenu__item-icon
-                  use(xlink:href="#icon-exit")
-                span.leftmenu__item-title Выход
+      #leftmenu.aside.aside_pos_fixed.aside_pos_sticky.col-xl-3.col-lg-4.mb-lg-4
+        .aside__wrapper
+          nav.leftmenu
+            - var leftmenu = [{title: 'Мои заказы', icon: 'case', badge: 'bg-theme-brand', badge__text: '2'}, {title: 'Избранное', icon: 'favourite', badge: 'bg-theme-success', badge__text: '3'}, {title: 'Бонусные рубли', icon: 'gift', badge: 'bg-theme-success', badge__text: '300', badge__extratext: true}, {title: 'Запись на услуги', icon: 'services'},{title: 'Подбор по VIN', icon: 'settings', badge: 'bg-theme-success', badge__text: '1'}, {title: 'Персональные данные', icon: 'user'},{title: 'Мой автомобиль', icon: 'car'}, {title: 'Смена пароля', icon: 'shield'},{title: 'Выход', icon: 'exit'}]
+            each leftmenu__item in leftmenu
+              +leftmenu(leftmenu__item.title, leftmenu__item.icon, leftmenu__item.badge, leftmenu__item.badge__text, leftmenu__item.badge__extratext)
+
       .col-xl-9.col-lg-8
         block personal
 
-    .section.mb-3
-      .section__title Ранее просмотренные товары:
+    .mb-3
+      .h2.font-weight-bold.mb-4 Ранее просмотренные товары:
       include category/carousel.pug

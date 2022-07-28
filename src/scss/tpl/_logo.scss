@@ -1,0 +1,5 @@
+.logo {
+  @include inline-block;
+  @include fw(100px);
+  @include wh(100px,48px);
+}

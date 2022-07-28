@@ -1,438 +1,495 @@
 .form {
-    &.form_bg {
-        padding: 0 0 32px;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
+  &.form_bg {
+    padding: 0 0 2rem;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
+  }
+
+  &.form_filter {
+    @include media-breakpoint-down(md) {
+      @include px(1rem);
+      border-radius: 0;
+      box-shadow: none;
+      border-radius: 0 0 .5rem .5rem;
+      box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
     }
-
-    &.form_filter {
-        @include media-breakpoint-down(md) {
-            @include px(16px);
-            border-radius: 0;
-            box-shadow: none;
-            margin: 0 0 32px;
-            border-radius: 0 0 8px 8px;
-            box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
-        }
-
-        .form__header {
-            @include media-breakpoint-down(md) {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            .form__title {
-                @include media-breakpoint-down(md) {
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
+  }
 }
 
 .form__header {
-    @include border(0 0 1px,$color__border);
-    padding: 16px 16px 16px 46px;
+  @include border(0 0 1px,$color__border);
+  padding: 1rem 1rem 1rem 3rem;
 
-    &.form__header_px {
-        @include media-breakpoint-up(sm) {
-            @include px(32px);
-        }
-
-        @include media-breakpoint-only(xs) {
-            @include px(16px);
-        }
-    }
-
-    &.form__header_py {
-        @include media-breakpoint-up(sm) {
-            @include py(32px);
-        }
-    }
-
-    &.form__header_bg {
-        border: 0;
-        padding-bottom: 8px;
-        margin-bottom: 12px;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
-    }
+  &.form__header_bg {
+    border: 0;
+    padding-bottom: .5rem;
+    margin-bottom: .75rem;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
+  }
 }
 
 .form__section {
-    @include border(0 0 1px,$color__border);
-    padding: 4px 16px 24px;
+  @include border(0 0 1px,$color__border);
+  padding: .25rem 1rem 1.5rem;
 
-    &.form__section_px {
-        @include media-breakpoint-up(sm) {
-            @include px(32px);
-        }
+  &.form__section_hidden {
+    display: none;
+  }
+
+  &.active {
+    & + .form__section_hidden {
+      display: block;
     }
 
-    &.form__section_hidden {
-        display: none;
+    .form__section-toggler {
+      display: none;
     }
-
-    &.form__section_content {
-        p {
-            @extend %h6;
-            margin: 0 0 4px;
-        }
-
-        ul {
-            margin: 0 0 4px;
-        }
-
-        li {
-            @extend %h6;
-        }
-    }
-
-    &.active {
-        & + .form__section_hidden {
-            display: block;
-        }
-
-        .form__section-toggler {
-            display: none;
-        }
-    }
+  }
 }
 
-.form__section-title {
-    @extend %h6;
-    color: $color__disabled;
-    margin: 0 0 24px;
+.form__box {
+  @include border(1px 0,rgba(0,0,0,0));
+  transition: all .3s ease;
+
+  &:last-child {
+    border-width: 1px 0 0;
+  }
+
+  &.form__box_active {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-color: $color__border;
+  }
 }
 
 .form__label {
-    @extend %h5;
-    margin-bottom: 0;
-    cursor: pointer;
-    user-select: none;
-    transition: all .3s ease;
+  margin-bottom: 0;
+  cursor: pointer;
+  user-select: none;
+  transition: all .3s ease;
 
-    &.form__label_title {
-        @include fs-lh(12px,18px);
-        pointer-events: none;
+  &.form__label_title {
+    @include fs-lh(.75rem,1.125rem);
+    pointer-events: none;
 
-        @include media-breakpoint-up(md) {
-            @include pos(4px,8px);
-        }
-    
-        @include media-breakpoint-down(sm) {
-            @include pos(6px,8px);
-        }
+    @include media-breakpoint-up(md) {
+      @include pos(4px,8px);
     }
 
-    &.form__label_plain {
-        @include pos(-18px,8px);
-        @include fs-lh(12px,18px);
-        color: $color__disabled;
-        cursor: default;
+    @include media-breakpoint-down(sm) {
+      @include pos(6px,8px);
     }
+  }
+
+  // лучше избавиться
+  &.form__label_plain.color-theme-disabled {
+    @include pos(-18px,8px);
+    @include fs-lh(.75rem,1.125rem);
+    cursor: default;
+  }
 }
 
 .form__label-title {
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .form__toggler {
+  & + .error + .form__label,
+  & + .form__label {
+    @extend %flex-item;
+  }
+
+  &.form__toggler_checkbox {
+    @extend %toggler-default;
+
+    & + .error + .form__label,
     & + .form__label {
-        @extend %flex-item;
-    }
-
-    &.form__toggler_checkbox {
-        @extend %toggler-default;
-
-        & + .form__label {
-            .form__label-icon {
-                @extend %flex-column;
-                @include fw(24px);
-                @include wh(24px);
-                @include offset(0 8px 0 0,2px 4px);
-                border-radius: 4px;
-                align-items: center;
-                justify-content: center;
-                color: $color__brand;
-                background: $color__light;
-                box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 0.16);
-
-                .icon-fluid {
-                    opacity: 0;
-                }
-            }
-
-            .form__label-title {
-                @include fs-lh(12px,16px);
-            }
-        }
-
-        &:checked {
-            & + .form__label {
-                .form__label-icon {
-                    .icon-fluid {
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-    }
-
-    &.form__toggler_radio {
-        @extend %toggler-default;
-
-        & + .form__label {
-            @extend %toggler-theme;
-
-            &.form__label_lg {
-                @include fs-lh(16px,22px);
-                @include offset(0 8px 8px 0,8px 24px);
-                border-radius: 8px;
-                text-transform: uppercase;
-            }
-        }
-
-        &:checked {
-            & + .form__label {
-                @extend %toggler-theme-current;
-            }
-        }
-    }
-
-    &.form__toggler_pwd {
-        @extend %btn-default;
-        @include before;
-        position: absolute;
-        top: 0;
-        right: 8px;
-        bottom: 0;
-        width: 16px;
+      .form__label-icon {
+        @extend %flex-column;
+        @include fw(24px);
+        @include wh(24px);
+        @include offset(0 .5rem 0 0,.125rem .25rem);
+        border-radius: .25rem;
+        align-items: center;
+        justify-content: center;
         color: $color__brand;
+        background: $color__light;
+        box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, .16);
 
         &:before {
-            @include wh(20px,2px);
-            right: 2px;
-            transform: rotate(-45deg);
-            transform-origin: top right;
-            background: $color__brand;
-
-            @include media-breakpoint-up(md) {
-                top: 5px;
-            }
-        
-            @include media-breakpoint-down(sm) {
-                top: 7px;
-            }
+          opacity: 0;
         }
+      }
 
-        &.active {
-            &:before {
-                display: none;
-            }
-        }
+      .form__label-title {
+        @include fs-lh(.75rem,1rem);
+      }
     }
+
+    &:checked {
+      & + .error + .form__label,
+      & + .form__label {
+        .form__label-icon {
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &.form__toggler_radio {
+    @extend %toggler-default;
+
+    & + .error + .form__label,
+    & + .form__label {
+      @extend %toggler-theme;
+
+      &.form__label_lg {
+        @include fs-lh(1rem,1.375rem);
+        @include offset(0 .5rem .5rem 0,.5rem 1.5rem);
+        border-radius: .5rem;
+      }
+    }
+
+    &:checked {
+      & + .error + .form__label,
+      & + .form__label {
+        @extend %toggler-theme-current;
+      }
+    }
+  }
+
+  &.form__toggler_dot {
+    @extend %toggler-default;
+
+    & + .form__label {
+      @include before;
+
+      &:before {
+        @include fw(24px);
+        @include wh(24px);
+        position: static;
+        border-radius: 50%;
+        margin: 0 .625rem 0 0;
+        background: $color__light;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.16) inset;
+      }
+
+      &:after {
+        @include fw(12px);
+        @include wh(12px);
+        @include pos(6px,6px);
+        content: '';
+        border-radius: 50%;
+        transition: all .3s ease;
+        background: rgba(0, 0, 0, 0);
+      }
+    }
+
+    &:checked {
+      & + .form__label {
+        &:after {
+          background: $color__brand;
+        }
+      }
+    }
+  }
+
+  &.form__toggler_pwd {
+    @extend %btn-default;
+    @include before;
+    position: absolute;
+    top: 0;
+    right: 8px;
+    bottom: 0;
+    width: 16px;
+    color: $color__brand;
+
+    &:before {
+      @include wh(20px,2px);
+      right: 2px;
+      transform: rotate(-45deg);
+      transform-origin: top right;
+      background: $color__brand;
+
+      @include media-breakpoint-up(md) {
+        top: 5px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        top: 7px;
+      }
+    }
+
+    &.active {
+      &:before {
+        display: none;
+      }
+    }
+  }
 }
 
 .form__divider {
-    @include fs-lh(12px,16px);
+  @include fs-lh(.75rem,1rem);
 }
 
 .form__row {
-    @include media-breakpoint-up(md) {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-    }
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .form__col {
-    @include media-breakpoint-up(xl) {
-        @include fw(206px);
-    }
+  @include media-breakpoint-up(xl) {
+    @include fw(206px);
+  }
 
-    @include media-breakpoint-between(md,lg) {
-        @include fw(50%);
-    }
+  @include media-breakpoint-between(md,lg) {
+    @include fw(50%);
+  }
 }
 
 .form__title {
-    @extend %h4;
-    margin: 0 0 18px;
-
-    &.form__title_colored {
-        @extend %h3;
-        font-weight: bold;
-        color: $color__brand;
-    }
-
-    &.form__title_icon {
-        @extend %h3;
-        @extend %flex-item;
-        font-weight: bold;
-        color: $color__brand;
-        margin: 0 0 8px -30px;
-    }
+  &.form__title_icon {
+    margin-left: -1.875rem;
+  }
 }
 
 .form__title-icon {
-    @include fw(22px);
-    @include wh(22px);
-    margin: 0 8px 0 0;
+  @include fw(22px);
+  //@include wh(22px);
 }
 
 .form__select {
-    position: relative;
+  position: relative;
+
+  .select {
+    @include h6;
+    height: 24px;
+    padding: .125rem .5rem;
+    cursor: pointer;
+    border: 0;
+    border-radius: .25rem;
+    background-color: $color__light;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.16);
+
+    &:focus {
+      outline: none;
+      border: 0;
+    }
+
+    option {
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color__brand;
+      }
+    }
+  }
 }
 
 .form__select-title {
-    @extend %h6;
-    @include pos(-16px,14px);
+  @include h6;
+  @include pos(-16px,14px);
 }
 
 .form__select-options {
-    @include media-breakpoint-up(md) {
-        display: none;
-    }
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
 
-    @include media-breakpoint-down(sm) {
-        @include wh(100%);
-        position: absolute;
-        left: 0;
-        z-index: 2;
-        opacity: 0;
-        cursor: pointer;
-        font-size: 16px;
-    }
+  @include media-breakpoint-down(sm) {
+    @include wh(100%);
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+    font-size: 16px;
+  }
 }
 
 .form__item {
-    position: relative;
+  position: relative;
 
-    &.form__item_icon {
-        .form__field {
-            padding-right: 30px;
-        }  
+  &.form__item_icon {
+    .form__field {
+      padding-right: 2rem;
     }
+  }
 
-    &.active {
-        .form__label_title {
-            color: $color__disabled;
+  &.active {
+    .form__label_title {
+      color: $color__disabled;
 
-            @include media-breakpoint-up(md) {
-                transform: translateY(-22px);
-            }
-        
-            @include media-breakpoint-down(sm) {
-                transform: translateY(-24px);
-            }
-        }
+      @include media-breakpoint-up(md) {
+        transform: translateY(-1.375rem);
+      }
+
+      @include media-breakpoint-down(sm) {
+        transform: translateY(-1.5rem);
+      }
     }
+  }
+
+  .error {
+    @include h6;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    margin: 0 0 .5rem;
+    color: $color__danger;
+  }
 }
 
 .form__field {
-    border: 0;
-    width: 100%;
-    padding: 4px 8px;
-    border-radius: 4px;
-    background: $color__light;
-    color: $color__text_default;
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.16) inset;
+  @include offset(0,.25rem .5rem);
+  border: 0;
+  width: 100%;
+  border-radius: .25rem;
+  border: 1px solid rgba(0,0,0,0);
+  background: $color__light;
+  color: $color__text_default;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .16) inset;
 
-    @include media-breakpoint-up(md) {
-        @include fs-lh(12px,18px);
+  @include media-breakpoint-up(md) {
+    @include fs-lh(.75rem,1.125rem);
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include h4;
+  }
+
+  &.form__field_textarea {
+    resize: none;
+    min-height: 120px;
+
+    &:focus {
+      border: 0;
+      outline: none;
     }
+  }
 
-    @include media-breakpoint-down(sm) {
-        @include fs-lh(16px,18px);
-    }
-
-    &.form__field_textarea {
-        resize: none;
-        min-height: 120px;
-
-        &:focus {
-            border: 0;
-            outline: none;
-        }
-    }
-}
-
-.form__footer {
-    @extend %h6;
-
-    &.form__footer_px {
-        @include media-breakpoint-up(sm) {
-            @include px(32px);
-        }
-
-        @include media-breakpoint-only(xs) {
-            @include px(16px);
-        }
-    }
+  &.error {
+    margin: 0;
+    position: static;
+    border-color: $color__danger;
+  }
 }
 
 .form__view {
-    @extend %btn-default;
-    @include wh(24px);
-    @include fw(24px);
-    padding: 2px 4px;
-    border-radius: 50%;
-    transition: all .3s ease;
-    background: #fff;
-    color: $color__brand;
-    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.14);
+  @extend %btn-default;
+  @include wh(24px);
+  @include fw(24px);
+  padding: .125rem .25rem;
+  border-radius: 50%;
+  transition: all .3s ease;
+  background: #fff;
+  color: $color__brand;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .14);
 
-    &.active {
-        background: $color__light;
-        box-shadow: none;
-    }
+  &.active {
+    background: $color__light;
+    box-shadow: none;
+  }
 }
 
 .form__slider {
-    &.noUi-target {
-        height: 1px;
-        border: 0;
-        border-radius: 0;
-        box-shadow: none;
-        background: $color__brand;
+  &.noUi-target {
+    height: 1px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: $color__brand;
 
-        .noUi-connect {
-            background: $color__brand;
-        }
-
-        .noUi-handle {
-            @include wh(8px,8px);
-            top: -4px;
-            cursor: pointer;
-            box-shadow: none;
-            background: #fff;
-            border-radius: 50%;
-            border-color: $color__brand;
-            box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
-
-            &.noUi-handle-lower {
-                right: -8px;
-            }
-
-            &.noUi-handle-upper {
-                right: 0;
-            }
-
-            &:before {
-                display: none;
-            }
-
-            &:after {
-                display: none;
-            }
-        }
+    .irs-line {
+      background: $color__brand;
     }
+
+    .noUi-handle {
+      @include wh(8px,8px);
+      top: -4px;
+      cursor: pointer;
+      box-shadow: none;
+      background: #fff;
+      border-radius: 50%;
+      border-color: $color__brand;
+      box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
+
+      &.noUi-handle-lower {
+        right: -8px;
+      }
+
+      &.noUi-handle-upper {
+        right: 0;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.form__list {
+  height: 190px;
+  overflow: hidden;
+}
+
+.irs {
+  display: block;
+  position: relative;
+}
+
+.irs-line {
+  height: 1px;
+  display: block;
+  background: $color__brand;
+}
+
+.irs-handle {
+  @include wh(8px,8px);
+  top: -4px;
+  position: absolute;
+  cursor: pointer;
+  box-shadow: none;
+  background: #fff;
+  border-radius: 50%;
+  border-color: $color__brand;
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
+}
+
+.irs-single {
+  display: none;
+}
+
+.irs-min {
+  display: none;
+}
+
+.irs-max {
+  display: none;
+}
+
+.irs-to {
+  display: none;
+}
+
+.irs-from {
+  display: none;
 }

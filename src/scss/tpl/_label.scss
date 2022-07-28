@@ -1,0 +1,29 @@
+.label {
+  @extend %flex-item;
+  justify-content: center;
+  height: 22px;
+  border-radius: .75rem;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: .03em;
+  pointer-events: none;
+
+  &.label_hit {
+    background: $color__warning;
+  }
+
+  &.label_sale {
+    color: #fff;
+    background: $color__brand;
+  }
+
+  &.label_discount {
+    color: #fff;
+    background: $color__success;
+  }
+
+  &.label_pos_abs {
+    @include pos(24px,24px);
+  }
+}

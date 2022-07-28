@@ -1,61 +1,55 @@
 .banner {
-    overflow: hidden;
-    position: relative;
-    border-radius: 8px;
-    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
+  position: relative;
+  border-radius: .5rem;
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
 
-    @include media-breakpoint-up(lg) {
-        height: 100%;
+  @include media-breakpoint-up(lg) {
+    height: 100%;
+  }
+
+  &.banner_carousel {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  &.banner_noshadow {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  &.banner_sm {
+    @include media-breakpoint-up(xl) {
+      height: 200px;
     }
+  }
 
-    &.banner_carousel {
-        overflow: visible;
-        border-radius: 0;
-        box-shadow: none;
-
-        @include media-breakpoint-down(md) {
-            margin-bottom: 40px;
-        }
+  &.banner_xs {
+    @include media-breakpoint-up(xl) {
+      height: 160px;
     }
-
-    &.banner_noshadow {
-        border-radius: 0;
-        box-shadow: none;
-    }
+  }
 }
 
 .banner__inner {
-    @extend %flex-column;
-    @include pos(0,0);
-    right: 0;
-    bottom: 0;
-    padding: 24px 16px;
-    align-items: center;
-    justify-content: space-between;
+  @include pos(0,0);
+  right: 0;
+  bottom: 0;
 
-    &.banner__inner_offset {
-        padding: 32px;
+  &.banner__inner_offset {
+    padding: 2rem;
 
-        @include media-breakpoint-only(lg) {
-            @include px(16px);
-        }
+    @include media-breakpoint-only(lg) {
+      @include px(1rem);
     }
+  }
 }
 
 .banner__title {
-    @include fs-lh(36px,40px);
-    font-weight: bold;
-    color: #fff;
-    word-break: break-word;
-    align-items: flex-start;
+  word-break: break-word;
 
-    &.banner__title_colored {
-        color: $color__brand;
+  &.banner__title_sm {
+    @include media-breakpoint-down(sm) {
+      @include fs-lh(1.75rem,2rem);
     }
-
-    &.banner__title_sm {
-        @include media-breakpoint-down(sm) {
-            @include fs-lh(28px,32px);
-        }
-    }
+  }
 }

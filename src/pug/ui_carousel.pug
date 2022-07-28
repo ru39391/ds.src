@@ -1,0 +1,19 @@
+extends results
+
+block meta
+  - var title = 'Скроллеры';
+
+block header
+  .header.d-none
+
+block wrapper
+  .wrapper.py-5
+    .mb-4
+      .h2.font-weight-bold.mb-4 Рекомендуем так же:
+      include category/carousel
+
+    .mb-4
+      .h2.font-weight-bold.mb-4 Подходящие диски:
+      include category/wheels
+
+block footer

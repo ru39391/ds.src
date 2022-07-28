@@ -1,0 +1,43 @@
+.theme-hover {
+  @extend %theme-hover;
+}
+
+.color-theme-inherit {
+  @include color(inherit);
+}
+
+.color-theme-white {
+  @include color(#fff);
+}
+
+.color-theme-info {
+  @include color($color__info);
+}
+
+.color-theme-light {
+  @include color($color__light);
+}
+
+.color-theme-brand {
+  @include color($color__brand);
+}
+
+.color-theme-brand-dark {
+  @include color($color__brand_dark);
+}
+
+.color-theme-success {
+  @include color($color__success);
+}
+
+.color-theme-warning {
+  @include color($color__warning);
+}
+
+.color-theme-danger {
+  @include color($color__danger);
+}
+
+.color-theme-disabled {
+  @include color($color__disabled);
+}

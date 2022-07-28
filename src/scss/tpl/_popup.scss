@@ -1,0 +1,100 @@
+$popup__width_sm: 194px;
+$popup__width_md: 316px;
+$popup__width_lg: 530px;
+@mixin popupParams($popup_w) {
+  width: $popup_w;
+  margin-left: -($popup_w/2);
+}
+
+.popup {
+  z-index: 1040;
+  display: none;
+  position: absolute;
+  margin-top: 16px;
+
+  @include media-breakpoint-up(md) {
+    @include popupParams($popup__width_sm);
+    left: 50%;
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include pos(150px,16px,fixed);
+    right: 16px;
+  }
+
+  &.popup_width_md {
+    @include media-breakpoint-up(md) {
+      @include popupParams($popup__width_md);
+    }
+  }
+
+  &.popup_width_lg {
+    @include media-breakpoint-up(md) {
+      @include popupParams($popup__width_lg);
+    }
+  }
+
+  &.popup_pos_left {
+    @include media-breakpoint-up(md) {
+      left: 0;
+      margin-left: 0;
+    }
+
+    .popup__triangle {
+      left: 56px;
+      margin-left: 0;
+    }
+  }
+
+  &.popup_pos_right {
+    @include media-breakpoint-up(md) {
+      left: auto;
+      right: 0;
+      margin-left: 0;
+    }
+
+    .popup__triangle {
+      left: auto;
+      right: 56px;
+      margin-left: 0;
+    }
+  }
+}
+
+.popup__triangle {
+  @include wh(16px);
+  @include pos(-8px,50%);
+  margin: 0 0 0 -8px;
+  transform: rotate(45deg);
+  z-index: 1;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.popup__close {
+  &.popup__close_type_btn {
+    position: absolute;
+    z-index: 3;
+
+    @include media-breakpoint-up(md) {
+      top: 32px;
+      right: 32px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      top: 12px;
+      right: 12px;
+    }
+  }
+}
+
+.popup__content {
+  max-height: 600px;
+  overflow-y: scroll;
+
+  @include media-breakpoint-up(lg) {
+    @include offset(0 -17px 0 0,0 17px 0 0);
+  }
+}

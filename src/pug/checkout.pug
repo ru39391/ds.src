@@ -1,0 +1,121 @@
+extends base
+
+block meta
+  - var title = 'Оформление заказа';
+
+block wrapper
+  .wrapper
+    ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Главная
+          meta(itemprop="position" content="1")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__current(href="#" itemprop="item")
+          span(itemprop="name") #{title}
+          meta(itemprop="position" content="2")
+    section.content
+      h1(itemprop="name") #{title}
+    .row.align-items-start.mb-5
+      .col-xl-9.col-lg-8.pr-lg-5
+        block checkout
+          form.section.py-0.mb-3(action="#")
+            .border-bottom.d-flex.align-items-center.px-md-4.px-3.py-2
+              span.section-counter.h3.rounded-circle.bg-theme-brand.color-theme-white.mr-2 1
+              .h3.flex-grow-1.font-weight-bold.color-theme-brand Дополнительные услуги
+            .border-bottom.px-md-4.px-3.py-md-4.py-3
+              .row.align-items-center.mb-4
+                .col-sm-5.mb-2.mb-sm-0
+                  input.form__toggler.form__toggler_checkbox(id="checkout-service-1" type="checkbox" value="")
+                  label.form__label.h5(for="checkout-service-1")
+                    +icon('checked','form__label-icon')
+                    span.form__label-title Шиномонтаж
+                .col-sm-7
+                  .h6.color-theme-disabled Вы будете направлены на форму записи на выбранную услугу после оформления заказа.
+              .row.align-items-center
+                .col-sm-5.mb-2.mb-sm-0
+                  input.form__toggler.form__toggler_checkbox(id="checkout-service-2" type="checkbox" value="")
+                  label.form__label.h5(for="checkout-service-2")
+                    +icon('checked','form__label-icon')
+                    span.form__label-title Сезонное хранение
+                .col-sm-7
+                  .h6.color-theme-disabled Вы можете оставить свои старые шины у нас на хранение
+            .px-md-4.px-3.py-3.text-right
+              button.button.text-uppercase.px-5(type="button") Далее
+          form.section.py-0.mb-3(action="#")
+            .border-bottom.d-flex.align-items-center.px-md-4.px-3.py-2
+              span.section-counter.h3.rounded-circle.bg-theme-brand.color-theme-white.mr-2 2
+              .h3.flex-grow-1.font-weight-bold.color-theme-brand Покупатель
+          form.section.py-0.mb-3(action="#")
+            .border-bottom.d-flex.align-items-center.px-md-4.px-3.py-2
+              span.section-counter.h3.rounded-circle.bg-theme-brand.color-theme-white.mr-2 3
+              .h3.flex-grow-1.font-weight-bold.color-theme-brand Доставка
+          form.section.py-0.mb-3(action="#")
+            .border-bottom.d-flex.align-items-center.px-md-4.px-3.py-2
+              span.section-counter.h3.rounded-circle.bg-theme-brand.color-theme-white.mr-2 4
+              .h3.flex-grow-1.font-weight-bold.color-theme-brand Оплата
+      .aside.aside_pos_sticky.col-xl-3.col-lg-4.mb-lg-4
+        .box-shadow.border-radius
+          .border-bottom.px-md-4.px-3.py-md-4.py-3
+            .d-flex.align-items-center.mb-3
+              .h4.mr-3 Товары в заказе
+              .h5.text-nowrap.rounded-pill.color-theme-white.bg-theme-brand.px-2 3 шт.
+            .row.align-items-center.mb-2
+              .col-4
+                a.d-block(href="#")
+                  +img('content/cards/card-1.jpg')
+              .col-8
+                a.h5.d-block(href="#") Летние шины Cordiant Comfort 2 175/70 R13 86H
+                span.d-flex.h3
+                  span.font-weight-bold.mr-1.text-nowrap.js-price 7 337.12
+                  | ₽
+            .row.align-items-center.mb-2
+              .col-4
+                a.d-block(href="#")
+                  +img('content/cards/card-1.jpg')
+              .col-8
+                a.h5.d-block(href="#") Летние шины Cordiant Comfort 2 175/70 R13 86H
+                span.d-flex.h3
+                  span.font-weight-bold.mr-1.text-nowrap.js-price 7 337.12
+                  | ₽
+            .row.align-items-center
+              .col-4
+                a.d-block(href="#")
+                  +img('content/cards/card-1.jpg')
+              .col-8
+                a.h5.d-block(href="#") Летние шины Cordiant Comfort 2 175/70 R13 86H
+                span.d-flex.h3
+                  span.font-weight-bold.mr-1.text-nowrap.js-price 7 337.12
+                  | ₽
+          .desclist.border-bottom.px-md-4.px-3.pt-md-3.pb-md-4.py-3
+            .d-flex.align-items-center.mb-1
+              .desclist__title.h6.text-oneline.px-0.col-md-6 Товаров на:
+              .h3.col-md-6
+                span.font-weight-bold 29 337.12&nbsp;
+                | ₽
+            .d-flex.align-items-center.mb-1
+              .desclist__title.h6.text-oneline.px-0.col-md-6 Общий вес:
+              .h3.col-md-6
+                span.font-weight-bold 114&nbsp;
+                | кг
+            .d-flex.align-items-center.mb-1
+              .desclist__title.h6.text-oneline.px-0.col-md-6 Доставка:
+              .h3.col-md-6
+                span.font-weight-bold 750&nbsp;
+                | ₽
+            .d-flex.align-items-center.mb-1
+              .desclist__title.h6.text-oneline.px-0.col-md-6 Списание бонусов:
+              .h3.col-md-6
+                span.font-weight-bold 250&nbsp;
+                | ₽
+            .d-flex.align-items-center
+              .desclist__title.h6.text-oneline.px-0.col-md-6 Скидка по промокоду:
+              .h3.col-md-6
+                span.font-weight-bold 300&nbsp;
+                | ₽
+          .desclist.px-md-4.px-3.py-3
+            .d-flex.align-items-center
+              .desclist__title.h6.text-oneline.px-0.col-md-6 Итого к оплате:
+              .h3.col-md-6.color-theme-brand
+                span.font-weight-bold 79 337.12&nbsp;
+                | ₽

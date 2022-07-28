@@ -1,0 +1,379 @@
+extends base
+
+block meta
+  - var title = 'Главная';
+
+block wrapper
+    .wrapper
+        .tabs.mb-5
+          ul.nav.nav-tabs.d-flex.align-items-center.p-0.m-0(role="tablist")
+            li.tabs__nav-item.nav-item.flex-grow-1
+              a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2.tabs__nav-link_notitle.active(href="#filter-tires" data-toggle="tab" role="tab" aria-controls="filter-tires" aria-selected="true")
+                +icon('tires','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
+                span.tabs__nav-title.h3.font-weight-bold Подбор шин
+            li.tabs__nav-item.nav-item.flex-grow-1
+              a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2.tabs__nav-link_notitle(href="#filter-wheels" data-toggle="tab" role="tab" aria-controls="filter-wheels" aria-selected="false")
+                +icon('wheels','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
+                span.tabs__nav-title.h3.font-weight-bold Подбор дисков
+            li.tabs__nav-item.nav-item.flex-grow-1
+              a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2.tabs__nav-link_notitle(href="#filter-cars" data-toggle="tab" role="tab" aria-controls="filter-cars" aria-selected="false")
+                +icon('car','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center')
+                span.tabs__nav-title.h3.font-weight-bold Подбор по авто
+          .tabs__content.tab-content
+            form.form.tab-pane.fade.show.active(id="filter-tires" role="tabpanel" action="#")
+              .row.align-items-center
+                .col-lg-2.offset-lg-2
+                  .form__select.mb-4
+                    .form__select-title Ширина
+                    select.selecter
+                      option --
+                      option 5
+                      option 6.5
+                      option 7
+                      option 10.5
+                      option 12.5
+                      option 30
+                .col-lg-1.d-none.d-lg-block
+                  .form__divider.text-center.mb-4 /
+                .col-lg-2
+                  .form__select.mb-4
+                    .form__select-title Высота
+                    select.selecter
+                      option --
+                      option 9.5
+                      option 10
+                      option 10.5
+                      option 11.5
+                      option 12.5
+                      option 13.5
+                .col-lg-1.d-none.d-lg-block
+                  .form__divider.text-center.mb-4 R
+                .col-lg-2
+                  .form__select.mb-4
+                    .form__select-title Диаметр
+                    select.selecter
+                      option --
+                      option 10
+                      option 12
+                      option 12C
+                      option 13
+                      option 13C
+              .row
+                .form__row.col-lg-8.offset-lg-2
+                  input.form__toggler.form__toggler_checkbox(id="tires-checkbox-1" type="checkbox" value="")
+                  label.form__label.h5.mb-4(for="tires-checkbox-1")
+                    +icon('checked','form__label-icon')
+                    span.icon-marker.h4.ds-icon-allseason.mr-2
+                      span.path1
+                      span.path2
+                    span.form__label-title Всесезонные
+                  input.form__toggler.form__toggler_checkbox(id="tires-checkbox-2" type="checkbox" value="")
+                  label.form__label.h5.mb-4(for="tires-checkbox-2")
+                    +icon('checked','form__label-icon')
+                    +icon('summer','icon-marker h4 mr-2')
+                    span.form__label-title Летние
+                  input.form__toggler.form__toggler_checkbox.form__toggler_param_winter(id="tires-checkbox-3" type="checkbox" value="")
+                  label.form__label.h5.mb-4(for="tires-checkbox-3")
+                    +icon('checked','form__label-icon')
+                    +icon('winter','icon-marker h4 mr-2')
+                    span.form__label-title Зимние
+                  input.form__toggler.form__toggler_checkbox.form__toggler_param_spykes(id="tires-checkbox-4" type="checkbox" value="")
+                  label.form__label.h5.d-none.mb-4(for="tires-checkbox-4")
+                    +icon('checked','form__label-icon')
+                    +icon('spikes','icon-marker h4 mr-2')
+                    span.form__label-title Шипы
+                  input.form__toggler.form__toggler_checkbox.form__toggler_param_spykes(id="tires-checkbox-5" type="checkbox" value="")
+                  label.form__label.h5.d-none.mb-4(for="tires-checkbox-5")
+                    +icon('checked','form__label-icon')
+                    +icon('nonspikes','icon-marker h4 mr-2')
+                    span.form__label-title Без шипов
+                .col-md-8.offset-md-2.text-center
+                  a.button.text-uppercase.px-4(href="#") подобрать
+            form.form.tab-pane.fade(id="filter-wheels" role="tabpanel" action="#")
+              .row.align-items-center
+                .col-lg-2.offset-lg-2
+                  .form__select.mb-4
+                    .form__select-title Диаметр
+                    select.selecter
+                      option --
+                      option 10
+                      option 12
+                      option 12C
+                      option 13
+                .col-lg-2.offset-lg-1
+                  .form__select.mb-4
+                    .form__select-title Ширина
+                    select.selecter
+                      option --
+                      option 10
+                      option 12
+                      option 12C
+                      option 13
+                .col-lg-2.offset-lg-1
+                  .form__select.mb-4
+                    .form__select-title PCD
+                    select.selecter
+                      option --
+                      option 10
+                      option 12
+                      option 12C
+                      option 13
+              .row
+                .form__row.col-lg-6.offset-lg-3.col-md-8.offset-md-2
+                  input.form__toggler.form__toggler_checkbox(id="wheels-checkbox-11" type="checkbox" value="")
+                  label.form__label.h5.mb-4(for="wheels-checkbox-11")
+                    +icon('checked','form__label-icon')
+                    +icon('iron','icon-marker h3 mr-2')
+                    span.form__label-title Кованые
+                  input.form__toggler.form__toggler_checkbox(id="wheels-checkbox-21" type="checkbox" value="")
+                  label.form__label.h5.mb-4(for="wheels-checkbox-21")
+                    +icon('checked','form__label-icon')
+                    span.icon-marker.h3.ds-icon-founding.mr-2
+                      span.path1
+                      span.path2
+                    span.form__label-title Литые
+                  input.form__toggler.form__toggler_checkbox(id="wheels-checkbox-31" type="checkbox" value="")
+                  label.form__label.h5.mb-4(for="wheels-checkbox-31")
+                    +icon('checked','form__label-icon')
+                    span.icon-marker.h3.ds-icon-steel.mr-2
+                      span.path1
+                      span.path2
+                    span.form__label-title Стальные
+                .col-md-10.offset-md-1.text-center
+                  a.button.text-uppercase.px-4(href="#") подобрать
+            form.form.tab-pane.fade(id="filter-cars" role="tabpanel" action="#")
+              .row
+                .form__row.col-lg-10.offset-lg-1
+                  .form__col.pr-md-4.pr-xl-0.pos-rel.mb-4
+                    .form__select-title Выберете марку
+                    select.selecter(data-live-search="true")
+                      option Значение 1
+                      option Значение 2
+                      option Значение 3
+                      option Значение 4
+                      option Значение 5
+                  .form__col.pr-md-4.pr-xl-0.pos-rel.mb-4
+                    .form__select-title Модель
+                    select.selecter(data-live-search="true" disabled)
+                      option Значение 1
+                      option Значение 2
+                      option Значение 3
+                      option Значение 4
+                      option Значение 5
+                  .form__col.pr-md-4.pr-xl-0.pos-rel.mb-4
+                    .form__select-title Кузов
+                    select.selecter(data-live-search="true" disabled)
+                      option Значение 1
+                      option Значение 2
+                      option Значение 3
+                      option Значение 4
+                      option Значение 5
+                  .form__col.pr-md-4.pr-xl-0.pos-rel.mb-4
+                    .form__select-title Двигатель
+                    select.selecter(data-live-search="true" disabled)
+                      option Значение 1
+                      option Значение 2
+                      option Значение 3
+                      option Значение 4
+                      option Значение 5
+                  .col-lg-10.offset-lg-1
+                    .form__title.mb-3 Наиболее популярные:
+                    .text-center.mb-1
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/acura.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/toyota.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/suzuki.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/nissan.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/bmw.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/fiat.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/mazda.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/lexus.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/mitsubishi.jpg')
+                      a.d-inline-block.mr-3.mb-3(href="#")
+                        +img('content/logo/infiniti.jpg')
+              .row
+                .col-md-2.col-sm-3.col-6.offset-lg-1
+                  a.result-item.mb-4(href="#")
+                    span.result-item__pic
+                      +img('content/results/car-1.jpg')
+                    span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
+                .col-md-2.col-sm-3.col-6
+                  a.result-item.mb-4(href="#")
+                    span.result-item__pic
+                      +img('content/results/car-2.jpg')
+                    span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
+                .col-md-2.col-sm-3.col-6
+                  a.result-item.mb-4(href="#")
+                    span.result-item__pic
+                      +img('content/results/car-1.jpg')
+                    span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
+                .col-md-2.col-sm-3.col-6
+                  a.result-item.mb-4(href="#")
+                    span.result-item__pic
+                      +img('content/results/car-2.jpg')
+                    span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
+                .col-md-2.col-sm-3.col-6
+                  a.result-item.mb-4(href="#")
+                    span.result-item__pic
+                      +img('content/results/car-1.jpg')
+                    span.result-item__title.px-xl-3.px-lg-2.px-1 Honda CR-V Car Sport внедорожник Toyota RAV4
+              .row
+                .col-lg-10.offset-lg-1.d-flex.flex-sm-row.flex-column.align-items-center.justify-content-sm-around.justify-content-center
+                  a.button.text-uppercase.px-4.mb-4.mb-sm-0(href="#") подобрать шины
+                  a.button.text-uppercase.px-4(href="#") подобрать Диски
+
+        .row.mb-5
+          .col-lg-7.mb-5.mb-lg-0
+            .banner.banner_carousel
+              .slides.slides_banners.swiper-container
+                .swiper-wrapper
+                  a.swiper-slide.px-0(href="#")
+                    +img('content/slides/slide-1.jpg','img-cover')
+                  a.swiper-slide.px-0(href="#")
+                    +img('content/slides/slide-1.jpg','img-cover')
+                  a.swiper-slide.px-0(href="#")
+                    +img('content/slides/slide-1.jpg','img-cover')
+                  a.swiper-slide.px-0(href="#")
+                    +img('content/slides/slide-1.jpg','img-cover')
+                  a.swiper-slide.px-0(href="#")
+                    +img('content/slides/slide-1.jpg','img-cover')
+              .slides-banners-pagination.slides-pagination
+          .col-lg-4.offset-lg-1.col-md-6.offset-md-3.col-sm-8.offset-sm-2
+            .banner.overflow-hidden
+              +img('content/banners/banner-1.jpg','img-cover')
+              .banner__inner.d-flex.flex-column.align-items-center.justify-content-between.px-3.py-4
+                .banner__title.banner__title_sm.h1.text-uppercase.font-weight-bold.color-theme-brand Запись на шиномонтаж онлайн
+                a.button.text-uppercase(href="#") Записаться
+
+        .tabs.mb-5
+          ul.nav.nav-tabs.d-flex.align-items-center.p-0.m-0(role="tablist")
+            li.tabs__nav-item.nav-item.flex-grow-1
+              a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2.active(href="#links-tires" data-toggle="tab" role="tab" aria-controls="links-tires" aria-selected="true")
+                +icon('tires','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center mr-2')
+                span.tabs__nav-title.h3.font-weight-bold.text-uppercase шины
+            li.tabs__nav-item.nav-item.flex-grow-1
+              a.tabs__nav-link.nav-link.d-flex.align-items-center.justify-content-center.p-2(href="#links-wheels" data-toggle="tab" role="tab" aria-controls="links-wheels" aria-selected="false")
+                +icon('wheels','tabs__nav-icon h3 d-flex flex-column align-items-center justify-content-center mr-2')
+                span.tabs__nav-title.h3.font-weight-bold.text-uppercase диски
+          .tabs__content.tab-content
+            .tab-pane.fade.show.active(id="links-tires" role="tabpanel" action="#")
+              .row.text-center.mb-sm-5.mb-4
+                .col-lg-10.offset-lg-1.d-flex.flex-wrap
+                  .col-lg-5.d-flex.flex-column.justify-content-between
+                    .row
+                      a.col-6.px-2.mb-lg-0.mb-md-5.mb-4(href="#")
+                        +img('content/logo/cordiant.jpg')
+                      a.col-6.px-2.mb-lg-0.mb-md-5.mb-4(href="#")
+                        +img('content/logo/bridgestone.jpg')
+                    .row
+                      a.col-6.px-2.mb-lg-0.mb-md-5.mb-4(href="#")
+                        +img('content/logo/michelin.jpg')
+                      a.col-6.px-2.mb-lg-0.mb-md-5.mb-4(href="#")
+                        +img('content/logo/pirelli.jpg')
+                    .row
+                      a.col-6.px-2.mb-lg-0.mb-md-5.mb-4(href="#")
+                        +img('content/logo/yokohama.jpg')
+                      a.col-6.px-2.mb-lg-0.mb-md-5.mb-4(href="#")
+                        +img('content/logo/goodyear.jpg')
+                  .col-lg-6.offset-lg-1.d-flex.flex-wrap
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/contilitle.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/yokohama.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/pirelli.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/nokian.jpg')
+
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/kormoran.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/contilitle.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/dunlop.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/cordiant.jpg')
+
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/bridgestone.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/hankook.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/michelin.jpg')
+                    a.col-6.col-md-3.px-2.mb-md-5.mb-4(href="#")
+                      +img('content/logo/dunlop.jpg')
+
+                    a.col-6.col-md-3.mb-md-0.mb-4.px-2(href="#")
+                      +img('content/logo/bridgestone.jpg')
+                    a.col-6.col-md-3.mb-md-0.mb-4.px-2(href="#")
+                      +img('content/logo/nokian.jpg')
+                    a.col-6.col-md-3.px-2(href="#")
+                      +img('content/logo/goodyear.jpg')
+                    a.col-6.col-md-3.px-2(href="#")
+                      +img('content/logo/hankook.jpg')
+              .d-flex.justify-content-center
+                a.readmore.d-flex.align-items-center(href="#")
+                  span.h5.mr-2 Показать еще
+                  +icon('readmore-right','h3 color-theme-brand')
+            .tab-pane.fade(id="links-wheels" role="tabpanel" action="#")
+
+        include category/popular.pug
+
+        .mb-3
+          .h2.font-weight-bold.mb-4 Рекомендуем так же:
+          include category/carousel.pug
+
+        .row.mb-5
+          .col-lg-9.mb-5.mb-lg-0
+            .section.d-flex.flex-column.justify-content-between.h-100.px-3
+              .px-lg-5.px-sm-4
+                .h2.font-weight-bold.mb-4 Новости
+                - var news = [{title: 'Работа на майские праздники 2021', img: 'content/media/media-1.jpg'},{title: 'Выходные Дини с 29 марта до 5 апреля', img: 'content/media/media-2.jpg'},{title: 'Открытие шинного центра ДонШина Ростов-на-Дону', img: 'content/media/media-3.jpg'},{title: 'Открытие шинного центра ДонШина Ростов-на-Дону', img: 'content/media/media-4.jpg'},{title: 'Рассрочка на шины и диски!', img: 'content/media/media-5.jpg'},{title: 'Открытие шинного центра ДонШина Ростов-на-Дону', img: 'content/media/media-6.jpg'}]
+                .row
+                  each news__item in news
+                    .col-md-6.mb-4
+                      .media
+                        a.media__picture.mr-2(href="#")
+                          +img(news__item.img, 'img-cover')
+                        .media__meta.flex-grow-1
+                          a.media__title.d-block.mb-2(href="#")!= news__item.title
+                          .date.px-2 23.10.2021
+              .d-flex.justify-content-center.px-lg-5.px-sm-4
+                a.readmore.d-flex.align-items-center(href="#")
+                  span.h5.mr-2 Узнать больше новостей
+                  +icon('readmore-right','h3 color-theme-brand')
+          .col-lg-3.ml-lg-0.col-md-6.offset-md-3.col-sm-8.offset-sm-2
+            .banner.overflow-hidden
+              +img('content/banners/banner-2.jpg','img-cover')
+              .banner__inner.banner__inner_offset.d-flex.flex-column.align-items-center.justify-content-between
+                .banner__title.h1.font-weight-bold.color-theme-white Подбор запчастей по VIN-коду
+                a.button.text-uppercase(href="#") Подобрать
+
+        .section.d-flex.flex-wrap.px-3.mb-5
+          .col-lg-4.d-flex.flex-column.pl-lg-5.pr-lg-0.px-sm-4
+            .h2.font-weight-bold.pr-xl-5.mb-4 Интернет-магазин резины, авто шин и дисков в Ростове-на-Дону
+            .row.flex-grow-1
+              .col-xl-6.col-lg-8.col-md-6.d-flex.flex-column.justify-content-around.h-100
+                .feature.mb-5.mb-lg-4
+                  .feature__value.font-weight-bold.color-theme-brand 10
+                    spanh1 лет
+                  .h4 на рынке продаж шин дисков и автотоваров.
+                .feature.mb-5.mb-lg-0
+                  .feature__value.font-weight-bold.color-theme-brand &gt;2000
+                  .h4 качественных товаров в каталоге сайта.
+          .col-lg-6.offset-lg-1.px-lg-0.px-sm-4
+            .content
+              p В нашем интернет-магазине шин и дисков Don-Shina.ru (Дон Шина) представлен большой выбор зимней и летней резины ведущих мировых производителей. Надежные и проверенные шины Nokian (Нокиан), Goodyear, зимние и летние шины Michelin, недорогая резина Continental, Yokohama, Gislaved, Kleber, BF Goodrich, а также автомобильные покрышки отечественных производителей по низким ценам. Купить летние и зимние шины в Ростове можно по низким ценам. Кроме того, в ассортименте присутствуют диски и шины грузовые и для внедорожников. Шины в Таганроге. Шины Шахты. Шины в Новочеркасске.
+              p Кроме летних и зимних шин разных размеров, у нас можно купить литые диски, кованые, штампованные на авто: Lenso, Enkei, Slik, ВСМПО, литые диски LS Replica (Реплика), KOSEI, KFZ, Futek, Теч-лайн, хромированные литые диски Futek, а также осуществляем хранение шин и литых дисков на авто всех размеров. Если вы захотите купить диски (автомобильные) на сумму 50000 руб и более, то мы предоставим вам бесплатную доставку. На нашем сайте вы можете воспользоваться удобным подбором шин и дисков по марке автомобиля, а также заказать шины на Дом. В магазине автомобильных шин и дисков ДонШина цены ниже рыночных.
+            .d-flex.justify-content-center
+              a.readmore.d-flex.align-items-center(href="#")
+                span.h5.mr-2 Узнать больше о компании
+                +icon('readmore-right','h3 color-theme-brand')

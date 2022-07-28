@@ -1,0 +1,41 @@
+.car-color {
+  @include fw(26px);
+  @include wh(26px);
+  cursor: pointer;
+  border-radius: .25rem;
+  border: 1px solid rgba(0,0,0,0);
+
+  &.color-white {
+    background-color: #FCFCFC;
+    border: 1px solid $color__border;
+  }
+
+  &.color-black {
+    background-color: $color__text_default;
+  }
+
+  &.color-red {
+    background-color: #CA3F13;
+  }
+
+  &.color-green {
+    background-color: $color__success;
+  }
+
+  &.color-blue {
+    background-color: $color__brand;
+  }
+
+  &.color-grey {
+    background-color: #C4C4C4;
+  }
+
+  &.color-bez {
+    background-color: $color__border;
+  }
+
+  &.active {
+    border-color: $color__brand;
+    box-shadow: 0 0 0 1px $color__brand inset;
+  }
+}

@@ -1,0 +1,208 @@
+.panel {
+  @include pos(0,0,fixed);
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: rgba(82, 82, 82, .2);
+  transition: all .3s ease;
+
+  @include media-breakpoint-up(xl) {
+    @include wh(100%,0);
+  }
+
+  @include media-breakpoint-down(lg) {
+    @include wh(100%,100% !important);
+  }
+
+  &.panel_visible {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: all;
+  }
+}
+
+.panel__close {
+  @extend %btn-default;
+  @include wh(100%,72px);
+  padding: 1.5rem 2rem;
+}
+
+.panel__toggler {
+  @extend %btn-default;
+  width: 100%;
+}
+
+.panel__wrapper {
+  pointer-events: none;
+  background-color: #fff;
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
+  transition: all .3s ease;
+
+  @include media-breakpoint-up(xl) {
+    @include pos(106px,0);
+    right: 0;
+    height: auto;
+    opacity: 0;
+    padding: 2rem 0 2.5rem;
+  }
+
+  @include media-breakpoint-down(lg) {
+    @include pos(0 !important,0);
+    bottom: 0;
+    width: 304px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transform: translateX(-100%);
+  }
+
+  &.panel__wrapper_active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(0,0);
+  }
+
+  &.panel__wrapper_overflow_scroll {
+    @include media-breakpoint-up(xl) {
+      bottom: 0;
+      overflow-y: scroll;
+      padding-right: 17px;
+      margin-right: -17px;
+    }
+  }
+}
+
+.panel__nav {
+  @include media-breakpoint-up(xl) {
+    @include border(0 1px 0 0,$color__border);
+    position: sticky;
+    top: 0;
+  }
+}
+
+.panel__nav-item {
+  display: flex;
+  cursor: pointer;
+
+  @include media-breakpoint-down(lg) {
+    @include mx(-1rem);
+    @include border(0 0 1px,$color__border);
+  }
+}
+
+.panel__nav-link {
+  transition: all .3s ease;
+
+  @include media-breakpoint-up(xl) {
+    border-radius: .25rem;
+  }
+
+  &.panel__nav-link_type_btn {
+    @include media-breakpoint-down(lg) {
+      @include before;
+      min-height: 50px;
+    }
+
+    &:before {
+      @include media-breakpoint-down(lg) {
+        left: -2rem;
+        right: -2rem;
+        bottom: 0;
+        height: 1px;
+        background-color: $color__border;
+      }
+    }
+  }
+
+  &.panel__nav-link_active {
+    @include media-breakpoint-up(xl) {
+      background-color: $color__light;
+    }
+  }
+}
+
+.panel__nav-title {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.panel__nav-btn {
+  @extend %btn-default;
+  border-radius: .25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $color__light;
+
+  @include media-breakpoint-up(xl) {
+    @include wh(40px);
+    pointer-events: none;
+  }
+
+  @include media-breakpoint-down(lg) {
+    @include wh(32px);
+  }
+}
+
+.panel__grid {
+  @include media-breakpoint-up(xl) {
+    display: none;
+    grid-column-gap: .5rem;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-areas: 'panel__content panel__content panel__content panel__content panel__content panel__content panel__content panel__aside panel__aside panel__aside';
+  }
+
+  @include media-breakpoint-down(lg) {
+    @include px(0 !important);
+    @include pos(72px,0);
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    overflow-y: scroll;
+    background-color: #fff;
+    transition: all .3s ease;
+    transform: translateX(100%);
+  }
+
+  &.panel__grid_active {
+    @include media-breakpoint-up(xl) {
+      display: grid;
+      align-items: flex-start;
+    }
+  }
+
+  &.panel__grid_visible {
+    @include media-breakpoint-down(lg) {
+      transform: translateX(0);
+    }
+  }
+}
+
+.panel__content {
+  @include media-breakpoint-up(xl) {
+    @include border(0 1px 0 0,$color__border);
+    grid-area: panel__content;
+  }
+}
+
+.panel__subcategory {
+  transition: all .3s ease;
+
+  @include media-breakpoint-up(xl) {
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+}
+
+.panel__aside {
+  @include media-breakpoint-up(xl) {
+    grid-area: panel__aside;
+    position: sticky;
+    top: 0;
+  }
+}

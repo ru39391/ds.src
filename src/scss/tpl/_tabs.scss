@@ -1,139 +1,116 @@
-.tabs {
-    margin-bottom: 40px;
-}
-
-.tabs__nav {
-    @extend %flex-item;
-    @extend %list-default;
-}
-
 .tabs__nav-item {
-    flex-grow: 1;
-
-    &:first-child {
-        .tabs__nav-link {
-            &:before {
-                left: 0;
-            }
-        }
+  &:first-child {
+    .tabs__nav-link {
+      &:before {
+        left: 0;
+      }
     }
+  }
 
-    &:last-child {
-        .tabs__nav-link {
-            &:before {
-                right: 0;
-            }
-        }
+  &:last-child {
+    .tabs__nav-link {
+      &:before {
+        right: 0;
+      }
     }
+  }
 }
 
 .tabs__nav-link {
-    @extend %zi-1;
-    @extend %flex-item;
-    @include before;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    //padding: 8px 8px 28px;
-    border-radius: 8px 8px 0 0;
+  @extend %zi-1;
+  @include before;
+  margin-bottom: -2px;
+  border-radius: .5rem .5rem 0 0;
+  color: $color__disabled;
+  background: $color__light;
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .12);
+
+  &:hover,
+  &:focus {
     color: $color__disabled;
-    background: $color__light;
-    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  &.active {
+    z-index: 3;
+    color: $color__brand;
+    background: #fff;
 
     &:hover,
     &:focus {
-        color: $color__disabled;
-    }
-
-    &.active {
-        z-index: 3;
-        color: $color__brand;
-        background: #fff;
-
-        &:hover,
-        &:focus {
-            color: $color__brand;
-        }
-
+      color: $color__brand;
     }
 
     &:before {
-        left: -20px;
-        right: -20px;
-        bottom: -20px;
-        //height: 40px;
-        height: 20px;
-        background: #fff;
+      background: #fff;
+    }
+  }
+
+  &:before {
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    height: 20px;
+    background: $color__light;
+  }
+
+  &.tabs__nav-link_notitle {
+    .tabs__nav-icon {
+      @include media-breakpoint-down(sm) {
+        margin-right: 0;
+      }
     }
 
-    &.tabs__nav-link_notitle {
-        .tabs__nav-icon {
-            @include media-breakpoint-down(sm) {
-                margin-right: 0;
-            }
-        }
-
-        .tabs__nav-title {
-            @include media-breakpoint-down(sm) {
-                display: none;
-            }
-        }
-
-        &.active {
-            .tabs__nav-icon {
-                @include media-breakpoint-down(sm) {
-                    margin-right: 10px;
-                }
-            }
-    
-            .tabs__nav-title {
-                @include media-breakpoint-down(sm) {
-                    display: block;
-                }
-            }
-        }
+    .tabs__nav-title {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
     }
+
+    &.active {
+      .tabs__nav-icon {
+        @include media-breakpoint-down(sm) {
+          margin-right: .625rem;
+        }
+      }
+
+      .tabs__nav-title {
+        @include media-breakpoint-down(sm) {
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 .tabs__nav-icon {
-    @include fw(22px);
-    @include wh(22px,22px);
-    margin: 0 10px 0 0;
-}
-
-.tabs__nav-title {
-    @include fs-lh(18px,24px);
-    font-weight: bold;
-
-    &.tabs__nav-title_upp {
-        text-transform: uppercase;
-    }
+  @include media-breakpoint-up(sm) {
+    margin-right: .625rem;
+  }
 }
 
 .tabs__content {
-    @extend %zi-2;
-    @include py(40px,32px);
-    //margin: -20px 0 0;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.12);
+  @extend %zi-2;
+  @include py(2.5rem,2rem);
+  border-radius: .5rem;
+  background: #fff;
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .12);
 
-    @include media-breakpoint-down(md) {
-        @include px(16px);
-    }
+  @include media-breakpoint-down(md) {
+    @include px(1rem);
+  }
 }
 
 .tabs__grid {
-    display: grid;
-    grid-row-gap: 32px;
-    grid-column-gap: 32px;
-    grid-template-columns: repeat(4,1fr); 
+  display: grid;
+  grid-row-gap: 32px;
+  grid-column-gap: 2rem;
+  grid-template-columns: repeat(4,1fr);
 }
 
 .tab-pane {
-    display: none;
+  display: none;
 
-    &.active {
-        display: block;
-    }
+  &.active {
+    display: block;
+  }
 }

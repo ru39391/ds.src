@@ -4,108 +4,112 @@ block meta
   - var title = 'Подкатегория каталога (серия бренда шин)';
 
 block filter
-  .header__footer
-    button.filter-toggler(type="button")
-      svg.filter-toggler__icon
-        use(xlink:href="#icon-filter")
-      span.filter-toggler__title
-        span.filter-toggler__show Показать 
-        span.filter-toggler__hide Скрыть 
+  .togglebar
+    button.aside-toggler.flex-grow-1.justify-content-center.px-3.py-2(type="button" data-target="#filter")
+      +icon('filter', 'aside-toggler__icon h3 mr-2')
+      span.pointer-events-none
+        span.aside-toggler__show Показать&nbsp;
+        span.aside-toggler__hide Скрыть&nbsp;
         | фильтр
 
 block wrapper
-    .container.container_wrapper
-      nav.pathway
-        a.pathway__link(href="#") Главная
-        a.pathway__link(href="#") Шины
-        a.pathway__current(href="#") Шины R18
+    .wrapper
+      ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Главная
+            meta(itemprop="position" content="1")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Шины
+            meta(itemprop="position" content="2")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__current(href="#" itemprop="item")
+            span(itemprop="name") Шины R18
+            meta(itemprop="position" content="3")
       section.content
-        h1 Купить шины CORDIANT в Ростове-на-Дону
-      .category-counter 1 840 товаров
+        h1(itemprop="name") Купить шины CORDIANT в Ростове-на-Дону
+      .category-counter.mb-4 1 840 товаров
+      .brand.d-flex.flex-wrap.bg-white.h-auto.p-3.mb-3
+        .col-xl-2.col-lg-3.d-flex.flex-column.align-items-center.justify-content-center.mb-3.mb-lg-0
+          +img('content/logo/logo-1.jpg','mb-3')
+          .h4.color-theme-brand Cordiant
+        .brand__desc.h4.col-xl-10.col-lg-9 Компания Bridgestone – мировой лидер по производству автомобильных шин. Зимние и летние автомобильные шины Бриджстоун — символ качества и безопасности. Шины Бриджстоун — это совершенные технологии, прошедшие проверку в самых жестких условиях. Шины Бриджстоун марки Potenza используются в гонках «Формулы-1». Продажа зимних и летних автошин Bridgestone, возможность осуществить выбор шин по марке автомобиля. Шины Бриджстоун — гарантия вашего безопасности и спокойствия.
       .row
         .col-xl-2.col-lg-3.mb-lg-4
-          a.brand.brand_category.mb-3(href="#")
-            img.img-fluid(src="../img/content/logo/logo-1.jpg" alt="" title="")
-            span.brand__title Cordiant
+          +brand('Cordiant', 'brand_category d-flex flex-column align-items-center justify-lg-content-center justify-content-between bg-white py-2 py-lg-3 px-3 mb-3', 'd-inline-block')
           include base/filter-tires.pug
 
         .col-xl-10.col-lg-9.mb-4
           form.form.row.justify-content-end.mb-4(action="#")
             .col-xl-3.col-md-4.col-sm-7
               .form__select
-                select.form__select-options
+                select.selecter
                   option По умолчанию
                   option По возрастанию цены
                   option По убыванию цены
                   option По популярности
             .col-xl-1.col-md-2.col-sm-5.d-none.d-sm-flex.align-items-center.justify-content-end
               button.form__view.mr-3(type="button")
-                svg.icon-fluid
-                  use(xlink:href="#icon-list")
+                +icon('list')
               button.form__view.active(type="button")
-                svg.icon-fluid
-                  use(xlink:href="#icon-tile")
+                +icon('tile')
           .category.mb-3
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
-            include tile/category.pug
+            - var positions = ['Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','Зимние шины Yokohama Ice Guard IG55 215/55','Зимние шины Yokohama Ice','Зимние шины Yokohama Ice Guard IG55','Зимние шины Yokohama Ice Guard IG55 215/55','Зимние шины Yokohama Ice','Шины Yokohama Ice Guard IG55 215/55 R17 98T','CORDIANT Sport 3','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T','Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL','Зимние шины Yokohama Ice Guard IG55 215/55','Зимние шины Yokohama Ice','Зимние шины Yokohama Ice Guard IG55','Зимние шины Yokohama Ice Guard IG55 215/55','Зимние шины Yokohama Ice','Шины Yokohama Ice Guard IG55 215/55 R17 98T','CORDIANT Sport 3']
+            each positions__item in positions
+              .card.card_tile.d-sm-flex.flex-column.justify-content-between.h-100.pt-3.px-3.pb-4
+                .card__header.justify-content-center.justify-content-sm-between.mb-sm-3
+                  a.card__picture.mb-0(href="#")
+                    img.img-fluid(src="../img/content/cards/card-1.jpg" alt="" title="")
+                .card__body.card__body_lg.d-flex.flex-column.justify-content-between.flex-grow-1
+                  .card__intro.mb-3
+                    .card__meta.card__meta_row.flex-wrap.flex-sm-nowrap.mb-3
+                      .card__features.mb-1.mb-sm-0
+                        .icon-marker
+                          +icon('summer')
+                      .card__params.flex-grow-1.text-sm-right.color-theme-brand.mb-1.mb-sm-0 R16 / R17 / R18 / R19
+                    a.card__title.d-block.mb-3(href="#")!= positions__item
+                  .card__footer
+                    .card__meta.card__meta_row
+                      .card__price
+                        span.card__price-value от 7 337.12&nbsp;
+                        | ₽/шт.
 
+    .box-shadow.pt-4.pb-3.mb-5
+      .border-bottom.mb-4
+        .wrapper
+          .h2.font-weight-bold.mb-4 Другие бренды:
+          .d-flex.flex-wrap
+            a.flex-grow-1.text-center.px-2.mb-4(href="#")
+              +img('content/logo/cordiant.jpg')
+            a.flex-grow-1.text-center.px-2.mb-4(href="#")
+              +img('content/logo/bridgestone.jpg')
+            a.flex-grow-1.text-center.px-2.mb-4(href="#")
+              +img('content/logo/michelin.jpg')
+            a.flex-grow-1.text-center.px-2.mb-4(href="#")
+              +img('content/logo/pirelli.jpg')
+            a.flex-grow-1.text-center.px-2.mb-4(href="#")
+              +img('content/logo/yokohama.jpg')
+            a.flex-grow-1.text-center.px-2.mb-4(href="#")
+              +img('content/logo/goodyear.jpg')
+      .wrapper
+        - var namesList = ['Cordiant','Hankook','Continental','Yokohama','Good Year','Bridgestone','Nokian tyres','Dunlop','BFGoodrich','Michelin','Kormoran','Pirelli']
+        each namesList__item in namesList
+          a.h4.d-inline-block.mr-3.mr-sm-4.mb-3(href="#")!= namesList__item
+        each namesList__item in namesList
+          a.h4.d-inline-block.mr-3.mr-sm-4.mb-3(href="#")!= namesList__item
+
+    .wrapper
       include category/popular.pug
 
-      .section.mb-3
-        .section__title Рекомендуем так же:
+      .mb-3
+        .h2.font-weight-bold.mb-4 Рекомендуем так же:
         include category/carousel.pug
 
-      .section
-        .section__wrapper.section__wrapper_px
-          .mb-3
-            .section__title.section__title_sm Сезон
-            a.toggler(href="#") Летняя
-            a.toggler(href="#") Зимняя
-            a.toggler(href="#") Всесезонная
-            a.toggler(href="#") Летняя
-            a.toggler(href="#") Зимняя
-            a.toggler(href="#") Всесезонная
-          .mb-3
-            .section__title.section__title_sm Тип
-            a.toggler(href="#") Легковые
-            a.toggler(href="#") Для микроавтобуса
-            a.toggler(href="#") Для микроавтобуса
-          .section__title.section__title_sm Диаметр
-          a.toggler(href="#") 13
-          a.toggler(href="#") 14
-          a.toggler(href="#") 14С
-          a.toggler(href="#") 15
-          a.toggler(href="#") 15С
-          a.toggler(href="#") 16
-          a.toggler(href="#") 16С
-          a.toggler(href="#") 17
-          a.toggler(href="#") 18
-          a.toggler(href="#") 13
-          a.toggler(href="#") 14
-          a.toggler(href="#") 14С
-          a.toggler(href="#") 15
-          a.toggler(href="#") 15С
-          a.toggler(href="#") 16
-          a.toggler(href="#") 16С
-          a.toggler(href="#") 17
-          a.toggler(href="#") 18
+      include base/links.pug
 
-      .section
-        .content.content_expanded
-          include base/content.pug
-          .content__footer
-            button.readmore.readmore_btn.readmore_arrow-down(type="button")
+      .content.content_expanded.mb-5(itemprop="text")
+        include base/content.pug
+        .content__footer
+          button.readmore.readmore_btn(type="button")
+            +icon('readmore','h2 color-theme-brand')

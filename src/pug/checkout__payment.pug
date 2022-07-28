@@ -1,0 +1,106 @@
+extends checkout
+
+block meta
+  - var title = 'Оплата';
+
+block checkout
+  form.section.py-0.mb-3(action="#")
+    .border-bottom.d-flex.align-items-center.px-md-4.px-3.py-2
+      span.section-counter.h4.rounded-circle.bg-theme-brand.color-theme-white.mr-2
+        +icon('checked','color-theme-white')
+      .h3.flex-grow-1.font-weight-bold.color-theme-brand Дополнительные услуги
+      button.button.button_nobg.h5.h-auto.p-0(type="button")
+        +icon('edit','h3 color-theme-brand mr-sm-2')
+        .d-none.d-sm-block Изменить
+  form.section.py-0.mb-3(action="#")
+    .border-bottom.d-flex.align-items-center.px-md-4.px-3.py-2
+      span.section-counter.h4.rounded-circle.bg-theme-brand.color-theme-white.mr-2
+        +icon('checked','color-theme-white')
+      .h3.flex-grow-1.font-weight-bold.color-theme-brand Покупатель
+      button.button.button_nobg.h5.h-auto.p-0(type="button")
+        +icon('edit','h3 color-theme-brand mr-sm-2')
+        .d-none.d-sm-block Изменить
+    .desclist.desclist.px-md-4.px-3.py-md-4.py-3
+      .d-flex.align-items-center.mb-1
+        .desclist__title.h6.text-oneline.px-0.col-md-4 Ваше имя:
+        .h5.col-md-8 Сергей
+      .d-flex.align-items-center.mb-1
+        .desclist__title.h6.text-oneline.px-0.col-md-4 Номер телефона:
+        .h5.col-md-8 +7 (989) 726-18-85
+      .d-flex.align-items-center
+        .desclist__title.h6.text-oneline.px-0.col-md-4 E-mail:
+        .h5.col-md-8 glumglam@gmail.com
+  form.section.py-0.mb-3(action="#")
+    .border-bottom.d-flex.align-items-center.px-md-4.px-3.py-2
+      span.section-counter.h4.rounded-circle.bg-theme-brand.color-theme-white.mr-2
+        +icon('checked','color-theme-white')
+      .h3.flex-grow-1.font-weight-bold.color-theme-brand Доставка
+      button.button.button_nobg.h5.h-auto.p-0(type="button")
+        +icon('edit','h3 color-theme-brand mr-sm-2')
+        .d-none.d-sm-block Изменить
+    .desclist.desclist.px-md-4.px-3.py-md-4.py-3
+      .d-flex.align-items-center.mb-1
+        .desclist__title.h6.text-oneline.px-0.col-md-4 Тип платильщика:
+        .h5.col-md-8 Физическое лицо
+      .d-flex.align-items-center.mb-1
+        .desclist__title.h6.text-oneline.px-0.col-md-4 Тип доставки:
+        .h5.col-md-8 Самовывоз из магазина (ул. Доватора, 11)
+  form.section.py-0.mb-3(action="#")
+    .border-bottom.d-flex.align-items-center.px-md-4.px-3.py-2
+      span.section-counter.h3.rounded-circle.bg-theme-brand.color-theme-white.mr-2 4
+      .h3.flex-grow-1.font-weight-bold.color-theme-brand Оплата
+    .form.border-bottom.px-md-4.px-3.pb-md-4.pb-3
+      .h6.color-theme-disabled.mb-3 Способ оплаты
+      .row.align-items-center.mb-4
+        .col-sm-5.mb-2.mb-sm-0
+          input.form__toggler.form__toggler_dot(id="checkout-payment-1" type="radio" name="payment" value="" checked)
+          label.form__label.h5(for="checkout-payment-1")
+            span.form__label-title.h6 Наличные
+        .col-sm-7
+          .h6.color-theme-disabled Оплата наличными при получении заказа в офисе или курьеру.
+      .row.mb-4
+        .col-sm-5.mb-2.mb-sm-0
+          input.form__toggler.form__toggler_dot(id="checkout-payment-2" type="radio" name="payment" value="")
+          label.form__label.h5(for="checkout-payment-2")
+            span.form__label-title.h6 Кредит в офисе
+        .col-sm-7
+          .h6.color-theme-disabled.mb-2 Минимальный возраст заёмщика - 18 лет;
+          .h6.color-theme-disabled.mb-2 Сумма кредита - от 3 000 рублей до 500 000 рублей;
+          .h6.color-theme-disabled.mb-2 Кредит предоставляется на срок от 3 месяцев до 3 лет;
+          .h6.color-theme-disabled.mb-2 Подписание кредитного договора в удобное для Вас место и время;
+          .h6.color-theme-disabled.mb-2 Для оформления нужен только паспорт гражданина РФ;
+          .h6.color-theme-disabled.mb-2 Наличие постоянного источника доходов (работа, пенсия).
+      .row.mb-4
+        .col-sm-5.mb-2.mb-sm-0
+          input.form__toggler.form__toggler_dot(id="checkout-payment-3" type="radio" name="payment" value="")
+          label.form__label.h5(for="checkout-payment-3")
+            span.form__label-title.h6 Оплата банковским переводом
+        .col-sm-7
+          .h6.color-theme-disabled.mb-2 Сразу после подтверждения заказа Вы получите на указанный почтовый ящик квитанцию, которую можно оплатить в любом ближайшем от Вас банке.
+    .form.border-bottom.px-md-4.px-3.pb-md-4.pb-3
+      .h6.color-theme-disabled.mb-3 Бонусные рубли
+      .h6.mb-4
+        span.mr-2 На вашем счету:
+        span.font-weight-bold 1250&nbsp;
+        | Б.₽
+      .row
+        .d-flex.flex-wrap.col-md-8.px-0
+          .col-sm-9.mb-2.mb-sm-0
+            .form__item
+              input.form__field(type="text" value="")
+              label.form__label.form__label_title Введите сумму списания в счёт покупки
+          .col-sm-3
+            button.button.button_sm.h6.text-uppercase.px-4.py-1(type="button") Списать
+    .form.border-bottom.px-md-4.px-3.pb-md-4.pb-3
+      .h6.color-theme-disabled.mb-4 Промокод
+      .row.mb-2
+        .d-flex.flex-wrap.col-md-8.px-0
+          .col-sm-9.mb-2.mb-sm-0
+            .form__item
+              input.form__field(type="text" value="")
+              label.form__label.form__label_title Введите промокод
+          .col-sm-3
+            button.button.button_sm.h6.text-uppercase.px-3.py-1(type="button") применить
+      .h6.color-theme-disabled Скидки по промокоду не распространяются на товары со скидкой, промокод нельзя передавать третьим лицам и использовать в комерческих целях. Подробности уточняйте у наших менеджеров.
+    .px-md-4.px-3.py-3.text-right
+      button.button.text-uppercase.px-5(type="button") Оформить заказ

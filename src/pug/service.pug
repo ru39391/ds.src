@@ -4,156 +4,158 @@ block meta
   - var title = 'Страница услуги';
 
 block wrapper
-  .section.section_top
-    .section__picture.section__picture_top.text-right.zi-1
-      img.img-cover.d-none.d-lg-block(src="../img/content/services/services-top-1.jpg" alt="")
-      img.img-cover.d-block.d-lg-none(src="../img/content/services/services-top-1-mobile.jpg" alt="")
-    .container.container_wrapper.container_column.zi-2
-      .section__body.section__body_unstyled
-        nav.pathway
-          a.pathway__link(href="#") Главная
-          a.pathway__link(href="#") Услуги
-          a.pathway__current(href="#") Шиномонтаж
-        section.content
-          h1 Шиномонтаж в Ростове-на-Дону
-          .content__intro Хватит стоять в очередях,
-            br
-            | запишитесь прямо сейчас:
-      .section__footer.p-0
-        button.btn(type="button") Записаться онлайн
+  .promo.mb-5
+    .promo__picture.text-right.zi-1
+      +img('content/services/services-top-1.jpg','img-cover d-none d-lg-block')
+      +img('content/services/services-top-1-mobile.jpg','img-cover d-block d-lg-none')
+    .wrapper.zi-2
+      .promo__wrapper.d-flex.flex-column.justify-content-between.py-lg-5.py-md-4.py-3
+        .promo__content.mb-3
+          ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+            li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+              a.pathway__link(href="#" itemprop="item")
+                span(itemprop="name") Главная
+                meta(itemprop="position" content="1")
+            li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+              a.pathway__link(href="#" itemprop="item")
+                span(itemprop="name") Услуги
+                meta(itemprop="position" content="2")
+            li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+              a.pathway__current(href="#" itemprop="item")
+                span(itemprop="name") Шиномонтаж
+                meta(itemprop="position" content="3")
+          section.content
+            h1(itemprop="name") Шиномонтаж в Ростове-на-Дону
+            .h4 Хватит стоять в очередях,
+              br
+              | запишитесь прямо сейчас:
+        .promo__footer
+          button.button.text-uppercase(type="button") Записаться онлайн
 
-  .container.container_wrapper
-    .section
-      .section__wrapper.section__wrapper_px.mx-0
-        .section__title.text-center Почему лучше обращаться к профессионалам?
-        .section__intro В межсезонье, когда приходит пора менять комплект шин, остро встает вопрос, где это лучше сделать, что бы не стоять больщую очередь. И В такой ситуации мало кто задумывается о качестве работ, а ведь это основной момент. Именно от качества шиномонтажа зависит сразу несколько моментов:
+  .wrapper
+    .section.px-lg-0.px-3.mb-5
+      .px-lg-5.px-md-4
+        .h2.font-weight-bold.text-center.mb-4 Почему лучше обращаться к профессионалам?
+        .h4.mb-4 В межсезонье, когда приходит пора менять комплект шин, остро встает вопрос, где это лучше сделать, что бы не стоять больщую очередь. И В такой ситуации мало кто задумывается о качестве работ, а ведь это основной момент. Именно от качества шиномонтажа зависит сразу несколько моментов:
         .slides.slides_features.swiper-container.px-0
           .slides__nav.slides__nav_row
             button.slides__btn.slides__btn_prev.slides-features-prev(type="button")
-              svg.icon-fluid
-                use(xlink:href="#icon-arrow-prev")
+              +icon('arrow-prev')
             button.slides__btn.slides__btn_prev.slides-features-next(type="button")
-              svg.icon-fluid
-                use(xlink:href="#icon-arrow-next")
+              +icon('arrow-next')
           .swiper-wrapper
             .swiper-slide.px-3
-              .icon-rounded.mb-3
-                svg.icon-fluid
-                  use(xlink:href="#icon-scales")
+              .icon-rounded.h2.d-flex.align-items-center.justify-content-center.color-theme-brand.bg-theme-light.mb-3
+                +icon('scales')
               p Уменьшение срока службы подвески. Неточная или не качественная балансировка может привести к поломке всей ходовой. При некачественной балансировке, неверно выбранный груз или неверном его креплении на диске в процессе эксплуатации груз может слететь.
             .swiper-slide.px-3
-              .icon-rounded.mb-3
-                svg.icon-fluid
-                  use(xlink:href="#icon-target")
+              .icon-rounded.h2.d-flex.align-items-center.justify-content-center.color-theme-brand.bg-theme-light.mb-3
+                +icon('target')
               p Неравномерная изношенность покрышек. При неверной балансировке износ шин происходит намного быстрее, что может привести не только к преждевременной замены покрышки, но и к возникновению аварийной ситуации на дороге.
             .swiper-slide.px-3
-              .icon-rounded.mb-3
-                svg.icon-fluid
-                  use(xlink:href="#icon-attention")
+              .icon-rounded.h2.d-flex.align-items-center.justify-content-center.color-theme-brand.bg-theme-light.mb-3
+                +icon('attention')
               p Безопасность на дороге. Дороже этого ничего быть не может. Сэкономленные 2 часа на смену комплекта шин у непрофессионалов не стоят Вашей безопасности и безопасности Ваших близких.
-    .section
-      .section__wrapper.section__wrapper_px.mx-0
-        .row
-          .col-xl-4.col-lg-5
-            .section__picture.section__picture_left
-              img.img-fluid(src="../img/content/services/services-1.jpg" alt="")
-          .col-lg-6.offset-xl-1
-            .content
-              p Все работы осуществляют только квалифицированные специалисты, прошедшие профессионально-техническое обучение.
-              p У нас вы можете произвести полный комплекс услуг профессионального шиномонтажа: монтаж-демонтаж легковых шин, шин для внедорожников и микроавтобусов, балансировку и ремонт колес, шиномонтаж мотошин.
-              p Все шиномонтажные работы выполняются на новейшем высококачественном немецком оборудовании фирмы Hofmann, а стоимость услуг вас приятно удивит.
-            .h3.color-brand.font-weight-bold.mb-2 Получить более подробную информацию
-              br
-              | или записаться вы можете по телефону:
-            .contacts
-              a.contacts__item.contacts__item_lg.color-brand(href="tel:+73652777068")
-                svg.contacts__item-icon
-                  use(xlink:href="#icon-phone")
-                span.contacts__item-title +7 (365) 277-70-68
-    .section.mb-3
-      .section__title Отзывы
+
+    .section.section_divider.px-lg-0.px-3.mb-5
+      .px-lg-5.px-md-4.d-flex.flex-wrap
+        .col-xl-4.col-lg-5.px-0
+          .section__picture.section__picture_left.text-center.mx-0
+            +img('content/services/services-1.jpg')
+        .col-lg-6.offset-xl-1.px-0
+          .content
+            p Все работы осуществляют только квалифицированные специалисты, прошедшие профессионально-техническое обучение.
+            p У нас вы можете произвести полный комплекс услуг профессионального шиномонтажа: монтаж-демонтаж легковых шин, шин для внедорожников и микроавтобусов, балансировку и ремонт колес, шиномонтаж мотошин.
+            p Все шиномонтажные работы выполняются на новейшем высококачественном немецком оборудовании фирмы Hofmann, а стоимость услуг вас приятно удивит.
+          .h3.color-theme-brand.font-weight-bold.mb-2 Получить более подробную информацию
+            br
+            | или записаться вы можете по телефону:
+          .contacts
+            a.contacts__item.d-flex.align-items-center.h3.font-weight-bold.text-nowrap.color-theme-brand(href="tel:+73652777068")
+              +icon('phone','contacts__icon h3 color-theme-brand mr-2')
+              span.contacts__item-title +7 (863) 22-99-99-4
+    .mb-3
+      .h2.font-weight-bold.mb-4 Отзывы
       .slides.slides_reviews.swiper-container.pt-1.pb-4.px-0.mx-0
+        +slidesNav('slides-reviews-prev', 'slides-reviews-next')
         .swiper-wrapper
           .swiper-slide
-            .review.review_slide
-              .review__header
-                .icon-rounded.mr-3
-                  svg.icon-fluid
-                    use(xlink:href="#icon-emoji")
-                .review__meta
-                  .review__title Анатолий Ефимов
-                  .review__date 10 дек в 11:37
-              .review__content Был 10 декабря, отличный сервис. Сам ещё приеду и всем друзьям посоветую. Мастеру большой репект! Мне очень понравилось, советую ВСЕМ!!!
+            .review.review_slide.h-100.p-3
+              .review__header.d-flex.align-items-center.mb-3
+                .icon-rounded.h2.d-flex.align-items-center.justify-content-center.color-theme-brand.bg-theme-light.mr-3
+                  +icon('emoji')
+                .review__meta.flex-grow-1
+                  .review__title.d-block.h4.color-theme-brand Анатолий Ефимов
+                  .date 10 дек в 11:37
+              .review__content.h5 Был 10 декабря, отличный сервис. Сам ещё приеду и всем друзьям посоветую. Мастеру большой репект! Мне очень понравилось, советую ВСЕМ!!!
           .swiper-slide
-            .review.review_slide
-              .review__header
-                .icon-rounded.mr-3
-                  svg.icon-fluid
-                    use(xlink:href="#icon-emoji")
-                .review__meta
-                  .review__title Павел Антипин
-                  .review__date 10 дек в 11:37
-              .review__content Друг присоветовал этот салон. Приехал, не пожалел. Ребята, сервис шикарный! И доступно, и оперативно, и без проблем. Теперь сам работаю сарафанным радио и друзьям советую!
+            .review.review_slide.h-100.p-3
+              .review__header.d-flex.align-items-center.mb-3
+                .icon-rounded.h2.d-flex.align-items-center.justify-content-center.color-theme-brand.bg-theme-light.mr-3
+                  +icon('emoji')
+                .review__meta.flex-grow-1
+                  .review__title.d-block.h4.color-theme-brand Павел Антипин
+                  .date 10 дек в 11:37
+              .review__content.h5 Друг присоветовал этот салон. Приехал, не пожалел. Ребята, сервис шикарный! И доступно, и оперативно, и без проблем. Теперь сам работаю сарафанным радио и друзьям советую!
           .swiper-slide
-            .review.review_slide
-              .review__header
-                .icon-rounded.mr-3
-                  svg.icon-fluid
-                    use(xlink:href="#icon-emoji")
-                .review__meta
-                  .review__title Костя Боярский
-                  .review__date 10 дек в 11:37
-              .review__content Терпеть не могу сам лезть менять! Считаю, что лучше обратиться к спецам, чем возиться. В последний раз обращался сюда, сервис очень понравился. Думаю, дальше тоже буду кататься к Вашему мастеру!
+            .review.review_slide.h-100.p-3
+              .review__header.d-flex.align-items-center.mb-3
+                .icon-rounded.h2.d-flex.align-items-center.justify-content-center.color-theme-brand.bg-theme-light.mr-3
+                  +icon('emoji')
+                .review__meta.flex-grow-1
+                  .review__title.d-block.h4.color-theme-brand Костя Боярский
+                  .date 10 дек в 11:37
+              .review__content.h5 Терпеть не могу сам лезть менять! Считаю, что лучше обратиться к спецам, чем возиться. В последний раз обращался сюда, сервис очень понравился. Думаю, дальше тоже буду кататься к Вашему мастеру!
           .swiper-slide
-            .review.review_slide
-              .review__header
-                .icon-rounded.mr-3
-                  svg.icon-fluid
-                    use(xlink:href="#icon-emoji")
-                .review__meta
-                  .review__title Иван Трактиров
-                  .review__date 10 дек в 11:37
-              .review__content Приезжал сюда ставить шины на зимний сезон. Вот и масло решил приехать менять сюда же. Мастера отличные, работают быстро и качественно. Рекомендую всем!
+            .review.review_slide.h-100.p-3
+              .review__header.d-flex.align-items-center.mb-3
+                .icon-rounded.h2.d-flex.align-items-center.justify-content-center.color-theme-brand.bg-theme-light.mr-3
+                  +icon('emoji')
+                .review__meta.flex-grow-1
+                  .review__title.d-block.h4.color-theme-brand Иван Трактиров
+                  .date 10 дек в 11:37
+              .review__content.h5 Приезжал сюда ставить шины на зимний сезон. Вот и масло решил приехать менять сюда же. Мастера отличные, работают быстро и качественно. Рекомендую всем!
           .swiper-slide
-            .review.review_slide
-              .review__header
-                .icon-rounded.mr-3
-                  svg.icon-fluid
-                    use(xlink:href="#icon-emoji")
-                .review__meta
-                  .review__title Анатолий Ефимов
-                  .review__date 10 дек в 11:37
-              .review__content Был 10 декабря, отличный сервис. Сам ещё приеду и всем друзьям посоветую. Мастеру большой репект! Мне очень понравилось, советую ВСЕМ!!!
-  .container.container_wrapper
-    .section.mb-3
-      .section__title Как мы работаем
-  .section
-    .slides.slides_carousel.swiper-container.pt-1.pb-4.px-0.mx-0
-      .swiper-wrapper
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-1.jpg" alt="")
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-2.jpg" alt="")
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-3.jpg" alt="")
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-4.jpg" alt="")
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-1.jpg" alt="")
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-2.jpg" alt="")
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-3.jpg" alt="")
-        .swiper-slide
-          img.img-fluid.border-radius(src="../img/content/carousel/item-4.jpg" alt="")
-    .text-center
-      a.readmore(href="#") Больше фото
+            .review.review_slide.h-100.p-3
+              .review__header.d-flex.align-items-center.mb-3
+                .icon-rounded.h2.d-flex.align-items-center.justify-content-center.color-theme-brand.bg-theme-light.mr-3
+                  +icon('emoji')
+                .review__meta.flex-grow-1
+                  .review__title.d-block.h4.color-theme-brand Анатолий Ефимов
+                  .date 10 дек в 11:37
+              .review__content.h5 Был 10 декабря, отличный сервис. Сам ещё приеду и всем друзьям посоветую. Мастеру большой репект! Мне очень понравилось, советую ВСЕМ!!!
+  .wrapper
+    .mb-3
+      .h2.font-weight-bold.mb-4 Как мы работаем
 
-  .container.container_wrapper
+  .slides.slides_carousel.swiper-container.pt-1.pb-4.px-0.mx-0.mb-3
+    .swiper-wrapper
+      .swiper-slide
+        +img('content/carousel/item-1.jpg','img-fluid border-radius')
+      .swiper-slide
+        +img('content/carousel/item-2.jpg','img-fluid border-radius')
+      .swiper-slide
+        +img('content/carousel/item-3.jpg','img-fluid border-radius')
+      .swiper-slide
+        +img('content/carousel/item-4.jpg','img-fluid border-radius')
+      .swiper-slide
+        +img('content/carousel/item-1.jpg','img-fluid border-radius')
+      .swiper-slide
+        +img('content/carousel/item-2.jpg','img-fluid border-radius')
+      .swiper-slide
+        +img('content/carousel/item-3.jpg','img-fluid border-radius')
+      .swiper-slide
+        +img('content/carousel/item-4.jpg','img-fluid border-radius')
+  .d-flex.justify-content-center.mb-5
+    a.readmore.d-flex.align-items-center(href="#")
+      span.h5.mr-2 Узнать больше о компании
+      +icon('readmore-right','h3 color-theme-brand')
+
+  .wrapper
     include base/callorder.pug
 
-    .section
-      .content.content_expanded
-        include base/content.pug
-        .content__footer
-          button.readmore.readmore_btn.readmore_arrow-down(type="button")
+    .content.content_expanded.mb-5(itemprop="text")
+      include base/content.pug
+      .content__footer
+        button.readmore.readmore_btn(type="button")
+          +icon('readmore','h2 color-theme-brand')

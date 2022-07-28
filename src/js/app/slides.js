@@ -2,8 +2,8 @@ new Swiper('.slides_carousel', {
   slidesPerView: 'auto',
   spaceBetween: 0,
   navigation: {
-    nextEl: '.slides-carousel-prev',
-    prevEl: '.slides-carousel-next',
+    nextEl: '.slides-carousel-next',
+    prevEl: '.slides-carousel-prev',
   },
 });
 
@@ -20,8 +20,8 @@ new Swiper('.slides_features', {
   slidesPerView: 1,
   spaceBetween: 0,
   navigation: {
-    nextEl: '.slides-features-prev',
-    prevEl: '.slides-features-next',
+    nextEl: '.slides-features-next',
+    prevEl: '.slides-features-prev',
   },
   breakpoints: {
     992: {
@@ -40,8 +40,8 @@ new Swiper('.slides_reviews', {
   slidesPerView: 1,
   spaceBetween: 0,
   navigation: {
-    nextEl: '.slides-reviews-prev',
-    prevEl: '.slides-reviews-next',
+    prevEl: '.slides-reviews-prev',
+    nextEl: '.slides-reviews-next',
   },
   breakpoints: {
     1200: {

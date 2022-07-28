@@ -5,7 +5,7 @@ let tileSwiper;
 let togglerSwiper;
 
 const topmenuSwiperActive = () => {
-  topmenuSwiper = new Swiper('.topmenu', {
+  topmenuSwiper = new Swiper('.topmenu__wrapper', {
     slidesPerView: 'auto',
     spaceBetween: 0,
   });
@@ -64,7 +64,7 @@ const breakpointChecker = () => {
     if (tileSwiper !== undefined) {
       tileSwiper.destroy( true, true );
       return;
-    } 
+    }
     if (togglerSwiper !== undefined) {
       togglerSwiper.destroy( true, true );
       return;
@@ -75,7 +75,7 @@ const breakpointChecker = () => {
     tileSwiperActive();
     togglerSwiperActive();
   }
-}; 
+};
 
 breakpoint.addListener(breakpointChecker);
 breakpointChecker();

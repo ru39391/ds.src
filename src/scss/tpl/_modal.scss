@@ -1,0 +1,41 @@
+.modal-dialog {
+  &.modal-dialog_lg {
+    @include media-breakpoint-up(md) {
+      max-width: 630px;
+    }
+  }
+
+  &.modal-dialog_xl {
+    @include media-breakpoint-up(md) {
+      max-width: 1066px;
+    }
+  }
+}
+
+.modal__bg {
+  @include wh(224px);
+  position: absolute;
+  right: -35px;
+  bottom: 42px;
+  z-index: 1;
+  transform: rotateY(180deg);
+  color: $color__light;
+
+  &.modal__bg_checked {
+    @include wh(200px);
+    right: 0;
+    top: 50%;
+    bottom: auto;
+    margin: -100px 0 0;
+    transform: rotateY(0);
+  }
+
+  &.modal__bg_pos_left {
+    @include wh(160px);
+    right: auto;
+    bottom: auto;
+    left: -90px;
+    top: 42px;
+    transform: rotateY(0);
+  }
+}

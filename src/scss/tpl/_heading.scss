@@ -1,18 +1,164 @@
 .heading {
-    @extend %h6;
-    @extend %flex-item;
-    margin-bottom: 8px;
-    position: relative;
+  grid-column-gap: $grid-gutter-width;
+
+  &.heading_category {
+    @include media-breakpoint-up(md) {
+      display: grid;
+      grid-gap: 8px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: repeat(10,1fr);
+      grid-template-areas: "category__group category__width category__height category__type category__title category__title category__price category__stock category__stock category__stock";
+    }
+
+    @include media-breakpoint-between(md,lg) {
+      grid-template-columns: repeat(8,1fr);
+      grid-template-areas: "category__group category__width category__height category__type category__title category__title category__price category__stock";
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &.heading_subcategory {
+    @include media-breakpoint-up(md) {
+      display: grid;
+      grid-gap: 8px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: repeat(10,1fr);
+      grid-template-areas: "subcategory__title subcategory__title subcategory__title subcategory__title subcategory__title subcategory__article subcategory__price subcategory__quantity subcategory__quantity subcategory__quantity";
+    }
+
+    @include media-breakpoint-between(md,lg) {
+      grid-template-columns: repeat(10,1fr);
+      grid-template-areas: "subcategory__title subcategory__title subcategory__title subcategory__title subcategory__title subcategory__article subcategory__article subcategory__price subcategory__price subcategory__quantity";
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &.heading_cart {
+    @include media-breakpoint-up(md) {
+      display: grid;
+      grid-gap: 8px;
+      grid-template-columns: repeat(12,1fr);
+      grid-template-areas: ". cart__title cart__title cart__title cart__title cart__price cart__price cart__quantity cart__quantity cart__summ cart__summ .";
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &.heading_orders {
+    grid-template-columns: repeat(2,1fr) 3fr repeat(4,1fr);
+
+    @include media-breakpoint-up(md) {
+      display: grid;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &.heading_bonus {
+    grid-template-columns: 1fr 1fr 5fr 2fr;
+
+    @include media-breakpoint-up(md) {
+      display: grid;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &.heading_vin {
+    grid-template-columns: repeat(2,1fr) 2fr 5fr;
+
+    @include media-breakpoint-up(md) {
+      display: grid;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &.heading_order-details {
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+  }
 }
 
 .heading__col {
-    @include fw(100%/10);
-    @include px(16px,$grid-gutter-width/2);
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  /* cart */
+  &.heading__col_cart-title {
+    grid-area: cart__title;
+  }
 
-    &.heading__col_lg {
-        @include fw(100%/10*2);
-    }
+  &.heading__col_cart-price {
+    grid-area: cart__price;
+  }
+
+  &.heading__col_cart-quantity {
+    grid-area: cart__quantity;
+  }
+
+  &.heading__col_cart-summ {
+    grid-area: cart__summ;
+  }
+
+  /* category */
+  &.heading__col_category-group {
+    grid-area: category__group;
+  }
+
+  &.heading__col_category-width {
+    grid-area: category__width;
+  }
+
+  &.heading__col_category-height {
+    grid-area: category__height;
+  }
+
+  &.heading__col_category-type {
+    grid-area: category__type;
+  }
+
+  &.heading__col_category-title {
+    grid-area: category__title;
+  }
+
+  &.heading__col_category-price {
+    grid-area: category__price;
+  }
+
+  &.heading__col_category-stock {
+    grid-area: category__stock;
+  }
+
+  /* subcategory */
+  &.heading__col_subcategory-title {
+    grid-area: subcategory__title;
+  }
+
+  &.heading__col_subcategory-article {
+    grid-area: subcategory__article;
+  }
+
+  &.heading__col_subcategory-price {
+    grid-area: subcategory__price;
+  }
+
+  &.heading__col_subcategory-quantity {
+    grid-area: subcategory__quantity;
+  }
 }

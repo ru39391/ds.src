@@ -4,53 +4,150 @@ block meta
   - var title = 'Текущие записи';
 
 block personal
-  .section
-    .section__title.text-center Текущие записи
-    .section__wrapper.pb-0
-      .section__body
-        .section__title.section__title_sm.color-brand Вы записаны на шиномонтаж
-        .desclist
-          .desclist__item
-            .desclist__item-title.col-xl-2.col-sm-3 Номер записи:
-            .desclist__item-value.desclist__item-value_lg.col-xl-10.col-sm-9 49409
-          .desclist__item
-            .desclist__item-title.col-xl-2.col-sm-3 Адрес:
-            .desclist__item-value.col-xl-10.col-sm-9 ул. Доватора, 11
-          .desclist__item
-            .desclist__item-title.col-xl-2.col-sm-3 Дата:
-            .desclist__item-value.col-xl-10.col-sm-9 10 января 2021 г.
-          .desclist__item
-            .desclist__item-title.col-xl-2.col-sm-3 Время:
-            .desclist__item-value.col-xl-10.col-sm-9 11 : 00
-      .section__footer
-        .row
-          .contacts.flex-wrap.col-xl-7
-            a.contacts__item.mb-2.mb-sm-0(href="#")
-              svg.contacts__item-icon
-                use(xlink:href="#icon-tg")
-              span.contacts__item-title Напомнить в Telegram
-            a.contacts__item.mb-2.mb-sm-0(href="#")
-              svg.contacts__item-icon
-                use(xlink:href="#icon-wapp")
-              span.contacts__item-title Напомнить в WhatsApp
-          .col-xl-5.d-flex.justify-content-xl-end
-            button.btn.btn_icon.btn_nobg(type="button")
-              svg.btn__icon.color-brand.mr-2
-                use(xlink:href="#icon-trash")
-              | Отменить запись
-  .section
-    .section__wrapper.pt-2.pb-3.pb-sm-2
-      .section__body.border-0.pb-0.mb-0
-        .row.align-items-center
-          .col-xl-8.col-sm-6
-            button.btn.btn_icon.btn_nobg(type="button")
-              svg.btn__icon.color-brand.mr-2
-                use(xlink:href="#icon-tool")
-              | Записаться на услугу
-          .col-xl-4.col-sm-6
-            .form__select
-              select.form__select-options
-                option Выберете услугу
-                option Услуга 1
-                option Услуга 2
-                option Услуга 3
+  .h2.font-weight-bold.text-center.mb-4 #{title}
+  .section.pb-0.mb-5
+    .border-bottom.px-lg-5.px-md-4.px-3.pb-md-4.pb-3.mb-3
+      .h3.font-weight-bold.color-theme-brand.mb-3 Вы записаны на шиномонтаж
+      .desclist
+        .d-flex.align-items-center.mb-1
+          .desclist__title.h6.text-oneline.px-0.col-xl-2.col-sm-3 Номер записи:
+          .h3.font-weight-bold.col-xl-10.col-sm-9 49409
+        .d-flex.align-items-center.mb-1
+          .desclist__title.h6.text-oneline.px-0.col-xl-2.col-sm-3 Адрес:
+          .h5.col-xl-10.col-sm-9 ул. Доватора, 11
+        .d-flex.align-items-center.mb-1
+          .desclist__title.h6.text-oneline.px-0.col-xl-2.col-sm-3 Дата:
+          .h5.col-xl-10.col-sm-9 10 января 2021 г.
+        .d-flex.align-items-center.mb-1
+          .desclist__title.h6.text-oneline.px-0.col-xl-2.col-sm-3 Время:
+          .h5.col-xl-10.col-sm-9 11 : 00
+    .px-lg-5.px-md-4.px-3.pb-3
+      .row
+        .contacts.d-flex.align-items-center.justify-content-lg-between.flex-wrap.col-xl-7
+          a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4.mr-lg-0.mb-2.mb-sm-0(href="#")
+            +icon('tg-filled','contacts__icon h3 color-theme-brand mr-2')
+            span.contacts__item-title Напомнить в Telegram
+          a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mb-2.mb-sm-0(href="#")
+            +icon('wapp-filled','contacts__icon h3 color-theme-brand mr-2')
+            span.contacts__item-title Напомнить в WhatsApp
+        .col-xl-5.d-flex.justify-content-xl-end
+          button.button.button_nobg.h5.p-0(type="button")
+            +icon('trash','button__icon h3 color-theme-brand mr-2')
+            | Отменить запись
+
+  form.section.px-lg-5.px-md-4.px-3.pt-2.pb-3.pb-sm-2.mb-5(action="#")
+    .row.align-items-center
+      .col-xl-8.col-sm-6
+        button.button.button_nobg.button_toggler-service.color-theme-disabled.h5.p-0(type="button" data-toggle="modal" data-target="#booking" disabled)
+          +icon('services','button__icon h4 color-theme-disabled mr-2')
+          | Записаться на услугу
+      .col-xl-4.col-sm-6
+        .form__select
+          select.selecter.select__service
+            option Выберете услугу
+            option Шиномонтаж
+            option Консультации
+
+block popups
+  .modal.fade#booking(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog_xl
+      form.modal-content.border-0.box-shadow.overflow-hidden.py-md-5.py-4(action="#")
+        .px-md-5.px-3
+          +svg('services-tires','modal__bg modal__bg_pos_left')
+          .modal-header.d-flex.align-items-center.justify-content-between.border-0.zi-2.p-0.mb-1
+            .h2.font-weight-bold.color-theme-brand.mr-3 Запись на&nbsp;
+              span.modal-header__service-title шиномонтаж
+            button.close.h2.button-unstyled.color-theme-brand.py-0(data-dismiss="modal")
+              +icon('close')
+          .d-flex.align-items-center.zi-2.mb-3
+            +icon('placemark','h6 color-theme-brand mr-2')
+            .h5 ул. Доватора, 11
+          .row.mb-4.mb-lg-5.zi-2
+            .col-lg-6.mb-3.mb-lg-0
+              .booking-heading.booking-heading_active.d-flex.align-items-center.justify-content-between.bg-theme-white.box-shadow.border-radius.p-3(data-target="order-datepicker")
+                .d-flex.align-items-center
+                  .booking-heading__counter.h3.d-flex.flex-column.align-items-center.justify-content-center.font-weight-bold.rounded-circle.color-theme-white.mr-2 1
+                  .booking-heading__title.h4
+                    span.booking-heading__date.mr-1
+                      span.color-theme-brand Выберете дату и время
+                    span.booking-heading__time
+                +icon('readmore-right','booking-heading__arrow h3 color-theme-brand')
+                button.booking-heading__btn.button-unstyled.h5.p-0(type="button")
+                  +icon('edit','button__icon h4 color-theme-brand mr-2')
+                  | Изменить
+            .col-lg-6
+              .booking-heading.d-flex.align-items-center.justify-content-between.bg-theme-white.box-shadow.border-radius.p-3(data-target="order-reg")
+                .d-flex.align-items-center
+                  .booking-heading__counter.h3.d-flex.flex-column.align-items-center.justify-content-center.font-weight-bold.rounded-circle.color-theme-white.mr-2 2
+                  .booking-heading__title.h4 Регистрация
+                +icon('readmore-right','booking-heading__arrow h3 color-theme-brand')
+        .booking-form.zi-2.p-0
+          #order-datepicker.booking-form__col
+            .px-md-5.px-3
+              .row
+                .col-lg-5.mb-3.mb-lg-0
+                  .booking-form__datepicker
+                .col-lg-5.offset-lg-2
+                  .booking-form__title.h4.color-theme-brand.text-center Время
+                  .booking-form__timetable
+                    input#timetable-radio-1.booking-form__toggler(name="timetable-radio" type="radio" value="" disabled)
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-1") 09:00
+                    input#timetable-radio-2.booking-form__toggler(name="timetable-radio" type="radio" value="" disabled)
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-2") 10:00
+                    input#timetable-radio-3.booking-form__toggler(name="timetable-radio" type="radio" value="")
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-3") 11:00
+                    input#timetable-radio-4.booking-form__toggler(name="timetable-radio" type="radio" value="")
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-4") 12:00
+                    input#timetable-radio-5.booking-form__toggler(name="timetable-radio" type="radio" value="")
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-5") 13:00
+                    input#timetable-radio-6.booking-form__toggler(name="timetable-radio" type="radio" value="")
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-6") 14:00
+                    input#timetable-radio-7.booking-form__toggler(name="timetable-radio" type="radio" value="")
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-7") 15:00
+                    input#timetable-radio-8.booking-form__toggler(name="timetable-radio" type="radio" value="" disabled)
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-8") 16:00
+                    input#timetable-radio-9.booking-form__toggler(name="timetable-radio" type="radio" value="" disabled)
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-9") 17:00
+                    input#timetable-radio-10.booking-form__toggler(name="timetable-radio" type="radio" value="")
+                    label.booking-form__label.booking-form__label_inactive.h3.font-weight-bold.px-1(for="timetable-radio-10") 18:00
+          #order-reg.booking-form__col.d-flex.flex-column.justify-content-between
+            .px-md-5.px-3
+              .form.row
+                .col-lg-5.d-flex.flex-column
+                  .form__item.d-none
+                    input.form__field.form__field_value_date(type="text" value="")
+                    label.form__label.form__label_title Дата
+                  .form__item.d-none
+                    input.form__field.form__field_value_time(type="text" value="")
+                    label.form__label.form__label_title Время
+                  .form__item.mb-4
+                    input.form__field(type="text" value="")
+                    label.form__label.form__label_title Ваше имя*
+                  .form__item.mb-4
+                    input.form__field(type="text" value="")
+                    label.form__label.form__label_title +7 (___) ___-__-__*
+                  .form__item.mb-4
+                    input.form__field(type="text" value="")
+                    label.form__label.form__label_title e-mail*
+                .col-lg-5.offset-lg-2.d-flex.flex-column
+                  .form__item.mb-4
+                    input.form__field(type="text" value="")
+                    label.form__label.form__label_title Гос. номер*
+                  .form__item.mb-4
+                    input.form__field(type="text" value="")
+                    label.form__label.form__label_title Автомобиль (марка, модель)*
+                  .form__item.mb-4
+                    input.form__toggler.form__toggler_checkbox(id="tyre-storage" type="checkbox" value="")
+                    label.form__label.h5(for="tyre-storage")
+                      +icon('checked','form__label-icon')
+                      span.form__label-title Оставить шины на хранение
+            .border-top.px-md-5.px-3.pt-5
+              .row.text-center.text-lg-left
+                .d-flex.flex-wrap.align-items-center.col-xl-9.col-lg-8.mb-lg-0.mb-4
+                  .h6.col-md-6.mb-3.mb-md-0 *-поля обязательные для заполнения
+                  .h6.col-xl-5.col-md-6 Нажимая “Записаться” вы принимаете
+                    br
+                    | условия&nbsp;
+                    a.color-theme-brand(href="#") Политики конфиденциальности
+                .d-flex.justify-content-lg-end.justify-content-center.col-xl-3.col-lg-4
+                  button.button.text-uppercase.px-5(type="submit") Записаться

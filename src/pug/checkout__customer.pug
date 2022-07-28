@@ -1,0 +1,40 @@
+extends checkout
+
+block meta
+  - var title = 'Покупатель';
+
+block checkout
+  form.section.py-0.mb-3(action="#")
+    .border-bottom.d-flex.align-items-center.px-md-4.px-3.py-2
+      span.section-counter.h4.rounded-circle.bg-theme-brand.color-theme-white.mr-2
+        +icon('checked','color-theme-white')
+      .h3.flex-grow-1.font-weight-bold.color-theme-brand Дополнительные услуги
+      button.button.button_nobg.h5.h-auto.p-0(type="button")
+        +icon('edit','h3 color-theme-brand mr-sm-2')
+        .d-none.d-sm-block Изменить
+  form.section.py-0.mb-3(action="#")
+    .border-bottom.d-flex.align-items-center.px-md-4.px-3.py-2
+      span.section-counter.h3.rounded-circle.bg-theme-brand.color-theme-white.mr-2 2
+      .h3.flex-grow-1.font-weight-bold.color-theme-brand Покупатель
+      a.h5(href="#") Авторизация
+    .form.border-bottom.px-md-4.px-3.py-md-4.py-3
+      .form__item.mb-4
+        input.form__field(type="text" value="")
+        .form__label.form__label_title Ваше имя*
+      .form__item.mb-4
+        input.form__field.input-phone(type="text" value="")
+        .form__label.form__label_title Номер телефона*
+      .form__item
+        input.form__field(type="text" value="")
+        .form__label.form__label_title E-mail*
+    .d-flex.align-items-end.justify-content-between.px-md-4.px-3.py-3
+      span.h6 *-поля обязательные для заполнения
+      button.button.text-uppercase.px-5(type="button") Далее
+  form.section.py-0.mb-3(action="#")
+    .border-bottom.d-flex.align-items-center.px-md-4.px-3.py-2
+      span.section-counter.h3.rounded-circle.bg-theme-brand.color-theme-white.mr-2 3
+      .h3.flex-grow-1.font-weight-bold.color-theme-brand Доставка
+  form.section.py-0.mb-3(action="#")
+    .border-bottom.d-flex.align-items-center.px-md-4.px-3.py-2
+      span.section-counter.h3.rounded-circle.bg-theme-brand.color-theme-white.mr-2 4
+      .h3.flex-grow-1.font-weight-bold.color-theme-brand Оплата

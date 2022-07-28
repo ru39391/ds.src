@@ -1,212 +1,216 @@
 .slides {
-    @include mx(-16px);
-    @include px(16px);
+  @include px(1rem);
+  margin-left: -1rem;
 
-    &.slides_grid {
-        @include media-breakpoint-up(lg) {
-            overflow: visible;
-        }
+  @include media-breakpoint-down(lg) {
+    margin-right: -1rem;
+  }
 
-        .slides__nav {
-            @include media-breakpoint-up(lg) {
-                display: none;
-            }
-        }
-
-        .swiper-wrapper {
-            @include media-breakpoint-up(xl) {
-               grid-template-columns: repeat(5,1fr); 
-            }
-
-            @media (min-width:$breakpoint__custom) {
-                grid-template-columns: repeat(6,1fr); 
-            }
-
-            @include media-breakpoint-only(lg) {
-                grid-template-columns: repeat(4,1fr); 
-            }
-
-            @include media-breakpoint-up(lg) {
-                display: grid;
-                grid-row-gap: 16px;
-                width: auto !important;
-                transform: none !important;
-            }
-        }
+  &.slides_grid {
+    @include media-breakpoint-up(lg) {
+      overflow: visible;
     }
 
-    &.slides_tile {
-        @extend .slides_grid;
-
-        .swiper-wrapper {
-            @include media-breakpoint-down(md) {
-                height: 580px;
-            }
-        }
-
-        .swiper-slide {
-            width: auto !important;
-
-            @include media-breakpoint-down(md) {
-                margin: 0 0 16px;
-            }
-        }
+    .slides__nav {
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
     }
 
-    &.slides_togglers {
-        .slides__nav {
-            @include media-breakpoint-up(lg) {
-                display: none;
-            }
-        }
+    .swiper-wrapper {
+      @include media-breakpoint-up(xl) {
+         grid-template-columns: repeat(5,1fr);
+      }
 
-        .swiper-wrapper {
-            @include media-breakpoint-up(lg) {
-                width: auto !important;
-                transform: none !important;
-                display: flex;
-                flex-wrap: wrap;
-            }
-        }
+      @media (min-width:$breakpoint__custom) {
+        grid-template-columns: repeat(6,1fr);
+      }
 
-        .swiper-slide {
-            @include px(0);
-        }
+      @include media-breakpoint-only(lg) {
+        grid-template-columns: repeat(4,1fr);
+      }
+
+      @include media-breakpoint-up(lg) {
+        display: grid;
+        grid-row-gap: 16px;
+        width: auto !important;
+        transform: none !important;
+      }
     }
+  }
 
-    &.slides_banners {
-        @include mx(0);
-        @include px(0);
-        border-radius: 8px;
-        box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
+  &.slides_tile {
+    @extend .slides_grid;
 
-        @include media-breakpoint-up(lg) {
-            margin-bottom: 8px;
-        }
-
-        @include media-breakpoint-down(md) {
-            margin-bottom: 4px;
-        }
-
-        & + .slides-pagination {
-            display: flex;
-            justify-content: center;
-
-            .swiper-pagination-bullet {
-                flex-grow: 1;
-                height: 4px;
-                cursor: pointer;
-                background: #C4C4C4;
-
-                @include media-breakpoint-up(lg) {
-                    margin: 0 8px 0 0;
-                }
-        
-                @include media-breakpoint-down(md) {
-                    margin: 0 4px 0 0;
-                }
-
-                &.swiper-pagination-bullet-active {
-                    background: $color__brand;
-                }
-            }
-        }
-    }
-
-    &.slides_features {
-        position: relative;
-
-        .slides__nav {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
+    .swiper-wrapper {
+      @include media-breakpoint-down(md) {
+        height: 580px;
+      }
     }
 
     .swiper-slide {
-        @include px(4px);
+      width: auto !important;
+
+      @include media-breakpoint-down(md) {
+        margin: 0 0 1rem;
+      }
     }
+  }
+
+  &.slides_togglers {
+    .slides__nav {
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+
+    .swiper-wrapper {
+      @include media-breakpoint-up(lg) {
+        width: auto !important;
+        transform: none !important;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    .swiper-slide {
+      @include px(0);
+    }
+  }
+
+  &.slides_banners {
+    @include mx(0);
+    @include px(0);
+    border-radius: .5rem;
+    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: .5rem;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: .25rem;
+    }
+
+    & + .slides-pagination {
+      display: flex;
+      justify-content: center;
+
+      .swiper-pagination-bullet {
+        flex-grow: 1;
+        height: 4px;
+        cursor: pointer;
+        background: #C4C4C4;
+
+        @include media-breakpoint-up(lg) {
+          margin: 0 .5rem 0 0;
+        }
+
+        @include media-breakpoint-down(md) {
+          margin: 0 .25rem 0 0;
+        }
+
+        &.swiper-pagination-bullet-active {
+          background: $color__brand;
+        }
+      }
+    }
+  }
+
+  &.slides_features {
+    position: relative;
+
+    .slides__nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .swiper-slide {
+    @include px(.25rem);
+  }
 }
 
 .slides__nav {
-    &.slides__nav_row {
-        @extend %zi-2;
-        @extend %flex-item;
+  &.slides__nav_row {
+    @extend %zi-2;
+    @extend %flex-item;
 
-        .slides__btn {
-            margin: 0;
-            position: static;
-            box-shadow: none;
-            color: $color__brand;
+    .slides__btn {
+      margin: 0;
+      position: static;
+      box-shadow: none;
+      color: $color__brand;
 
-            &.swiper-button-disabled {
-                @extend %d-flex;
-                color: $color__disabled;
-            }
+      &.swiper-button-disabled {
+        @extend %d-flex;
+        color: $color__disabled;
+      }
 
-            &:hover,
-            &:focus {
-                background: #fff;
-            }
-        }
+      &:hover,
+      &:focus {
+        background: #fff;
+      }
     }
+  }
 }
 
 .slides__btn {
-    @extend %btn-default;
-    @extend %flex-column;
-    @include size(40px);
-    @include offset(-25px 0 0,12px 14px);
-    position: absolute;
-    top: 50%;
-    z-index: 3;
-    align-items: center;
-    justify-content: center;
-    color: $color__brand;
-    border-radius: 50%;
-    transition: all .3s ease;
-    background: #fff;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12);
+  @extend %btn-default;
+  @extend %flex-column;
+  @include wh(40px);
+  @include offset(-1.563rem 0 0,.75rem .875rem);
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  color: $color__brand;
+  border-radius: 50%;
+  transition: all .3s ease;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .12);
 
-    &:hover {
-        box-shadow: none;
-        background: $color__light;
-    }
+  &:hover {
+    box-shadow: none;
+    background: $color__light;
+  }
 
-    &:focus {
-        box-shadow: none;
-        color: #fff;
-        background: $color__brand;
-    }
+  &:focus {
+    box-shadow: none;
+    color: #fff;
+    background: $color__brand;
+  }
 
-    &.slides__btn_prev {
-        left: 10px;
-    }
+  &.slides__btn_prev {
+    left: 10px;
+  }
+
+  &.slides__btn_next {
+    right: 10px;
+  }
+
+  &.slides__btn_sm {
+    @include wh(28px);
+    @include offset(-1.125rem 0 0,.5rem .375rem .5rem .25rem);
 
     &.slides__btn_next {
-        right: 10px;
+      padding: .5rem .25rem .5rem .375rem;
     }
+  }
 
-    &.slides__btn_sm {
-        @include size(28px);
-        @include offset(-18px 0 0,8px 6px 8px 4px);
-
-        &.slides__btn_next {
-            padding: 8px 4px 8px 6px;
-        }
-    }
-
-    &.swiper-button-disabled {
-        display: none;
-    }
+  &.swiper-button-disabled {
+    display: none;
+  }
 }
 
 .swiper-slide {
-    @include size(auto);
-    z-index: 1;
-    box-sizing: border-box;
+  @include wh(auto);
+  z-index: 1;
+  box-sizing: border-box;
 
-    &:hover {
-        z-index: 2;
-    }
+  &:hover {
+    z-index: 2;
+  }
 }

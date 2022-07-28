@@ -1,6 +1,67 @@
 extends personal
 
 block meta
-  - var title = 'Корзина';
+  - var title = 'Мой автомобиль';
 
 block personal
+  .h2.font-weight-bold.text-center.mb-4 Мой автомобиль
+  form.section.py-0.mb-3(zction="#")
+    .px-md-4.px-3.py-md-4.py-3
+      .h3.font-weight-bold.color-theme-brand Подробно заполненные данные вашего автомобиля сделают работу с сайтом удобнее и быстрее. Мы сможем предлагать товары и услуги подходящие именно Вам.
+    .border-bottom.pb-md-4.pb-4.mb-3
+      .d-flex.flex-wrap.pl-md-4.pl-3.mb-xl-5.mb-4
+        .col-md-3.pl-0.pr-md-4.pr-3.mb-4.pos-rel
+          .form__select-title Выберете марку
+          select.selecter(data-live-search="true")
+            option Значение 1
+            option Значение 2
+            option Значение 3
+            option Значение 4
+            option Значение 5
+        .col-md-3.pl-0.pr-md-4.pr-3.mb-4.pos-rel
+          .form__select-title Модель
+          select.selecter(data-live-search="true" disabled)
+            option Значение 1
+            option Значение 2
+            option Значение 3
+            option Значение 4
+            option Значение 5
+        .col-md-3.pl-0.pr-md-4.pr-3.mb-4.pos-rel
+          .form__select-title Кузов
+          select.selecter(data-live-search="true" disabled)
+            option Значение 1
+            option Значение 2
+            option Значение 3
+            option Значение 4
+            option Значение 5
+        .col-md-3.pl-0.pr-md-4.pr-3.mb-4.pos-rel
+          .form__select-title Двигатель
+          select.selecter(data-live-search="true" disabled)
+            option Значение 1
+            option Значение 2
+            option Значение 3
+            option Значение 4
+            option Значение 5
+      .car-image.d-flex.flex-wrap.text-center.px-md-4.px-3
+        .image-wrapp.col-xl-6.offset-xl-3.col-md-8.offset-md-2.mb-3
+          +img('content/results/white.jpg')
+        .buttons-wrapp.but-row.col-xl-6.offset-xl-3.col-md-8.offset-md-2
+          .car-color-wrapp.d-flex.flex-wrap.justify-content-center
+            .car-color.color-white.mr-3.mb-2(data-color="white")
+            .car-color.color-black.mr-3.mb-2(data-color="black")
+            .car-color.color-red.mr-3.mb-2(data-color="red")
+            .car-color.color-green.mr-3.mb-2(data-color="green")
+            .car-color.color-blue.mr-3.mb-2(data-color="blue")
+            .car-color.color-grey.mr-3.mb-2(data-color="grey")
+            .car-color.color-bez.active.mr-3.mb-2(data-color="bez")
+    .px-md-4.px-3.pb-3
+      .row
+        .d-flex.flex-wrap.col-xl-6
+          a.d-flex.align-items-center.h5.text-nowrap.mr-5.mb-2.mb-xl-0(href="#")
+            +icon('tires','contacts__icon h3 color-theme-brand mr-2')
+            | Подборать шины
+          a.d-flex.align-items-center.h5.text-nowrap.mb-2.mb-xl-0(href="#")
+            +icon('wheels','contacts__icon h3 color-theme-brand mr-2')
+            | Подборать диски
+        .col-xl-6.d-sm-flex.justify-content-xl-end.text-center.text-sm-left
+          button.button.text-uppercase.bg-theme-disabled.px-4(type="button" disabled) Сохранить изменения

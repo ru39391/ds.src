@@ -1,38 +1,49 @@
 .recalculate {
-    @extend %flex-item;
-    flex-grow: 1;
-    overflow: hidden;
-    margin: 0 4px 0 0;
-    border-radius: 8px;
-    background: $color__brand;
-}
+  @include border(1px,rgba(0,0,0,0));
+  border-radius: .5rem;
+  transition: all .3s ease;
 
-.recalculate__field {
-    display: none;
+  &.recalculate_sm {
+    @include fw(54px);
+  }
+
+  &.recalculate_md {
+    @include media-breakpoint-down(md) {
+      @include fw(128px);
+    }
+  }
+
+  &.recalculate_shadow {
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.14);
+  }
 }
 
 .recalculate__btn {
-    @extend %btn-default;
-    @include fs-lh(16px,22px);
-    font-weight: bold;
-    height: 40px;
-    flex-grow: 1;
-    color: #fff;
+  @extend %btn-default;
+  @include fs-lh(1rem,1.375rem);
+  height: 40px;
 
-    &.recalculate__btn_remove {
-        padding: 4px 3px 4px 4px;
-    }
+  &.recalculate__btn_sm {
+    height: 26px;
+    line-height: .75rem;
+  }
 
-    &.recalculate__btn_add {
-        padding: 4px 4px 4px 3px;
-    }
+  &.recalculate__btn_remove {
+    padding: .25rem .188rem .25rem .25rem;
+  }
+
+  &.recalculate__btn_add {
+    padding: .25rem .25rem .25rem .188rem;
+  }
 }
 
 .recalculate__value {
-    @extend %flex-item;
-    @include fw(18px);
-    @include fs-lh(16px,22px);
-    height: 40px;
-    color: #fff;
-    justify-content: center;
+  @include fw(18px);
+  @include fs-lh(1rem,1.375rem);
+  height: 40px;
+
+  &.recalculate__value_sm {
+    height: 26px;
+    line-height: .75rem;
+  }
 }

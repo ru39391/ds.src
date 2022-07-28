@@ -1,25 +1,31 @@
 .pathway {
-    @include fs-lh(12px,1);
+  @include h6;
+  display: flex;
+  flex-wrap: wrap;
 
-    @include media-breakpoint-up(lg) {
-        margin: 0 0 28px;
-    }
+  @include media-breakpoint-up(lg) {
+    margin: 0 0 1.75rem;
+  }
 
-    @include media-breakpoint-down(md) {
-        margin: 0 0 16px;
-    }
+  @include media-breakpoint-down(md) {
+    margin: 0 0 1rem;
+  }
 }
 
 .pathway__link {
-    @include inline-block;
-    margin: 0 4px 0 0;
+  display: block;
+  margin: 0 .25rem 0 0;
 
-    &:after {
-        content: '/';
-        margin: 0 0 0 4px;
-    }
+  &:after {
+    content: '/';
+    margin: 0 0 0 .25rem;
+  }
+
+  &:hover {
+    color: $color__brand;
+  }
 }
 
 .pathway__current {
-    @include inline-block;
+  display: block;
 }

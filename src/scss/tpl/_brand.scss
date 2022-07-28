@@ -1,44 +1,37 @@
 .brand {
-    @extend %flex-column;
-    align-items: center;
-    height: 100px;
-    padding: 16px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.16);
+  height: 100px;
+  border-radius: .5rem;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, .16);
 
-    @include media-breakpoint-up(lg) {
-        justify-content: center;
-    }
-
+  &.brand_slide {
     @include media-breakpoint-down(md) {
-        justify-content: space-between;
+      width: 100%;
+      max-width: 152px;
     }
+  }
 
-    &.brand_slide {
-        @include media-breakpoint-down(md) {
-            width: 100%;
-            max-width: 152px;
-        }
+  &.brand_category {
+    @include media-breakpoint-down(md) {
+      height: auto;
+      flex-direction: row;
     }
+  }
 
-    &.brand_category {
-        @include media-breakpoint-down(md) {
-            height: auto;
-            padding: 8px 16px;
-            flex-direction: row;
-        }
+  &.brand_border_bottom {
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
 
-        .brand__title {
-            @include inline-block;
-        }
+    @include media-breakpoint-down(lg) {
+      @include border(0 0 1px,$color__border);
     }
+  }
 }
 
 .brand__title {
-    @include fs-lh(16px,24px);
+  @include fs-lh(1rem,1.5rem);
+}
 
-    @include media-breakpoint-up(lg) {
-        display: none;
-    }
+.brand__desc {
+  line-height: 1.5em;
 }

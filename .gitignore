@@ -1,3 +1,6 @@
 #npm (for case if npm modules was installed in work folder)
 /node_modules
 /dist
+/*.code-workspace
+.editorconfig
+/*.bak

@@ -1,0 +1,44 @@
+extends article__item
+
+block meta
+  - var title = 'Страница статьи (с видео)';
+
+block articles__section
+  .section.px-lg-0.px-3.mb-5
+    .px-lg-5.px-md-4
+      ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Главная
+            meta(itemprop="position" content="1")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Статьи
+            meta(itemprop="position" content="2")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__current(href="#" itemprop="item")
+            span(itemprop="name") Как самостоятельно заменить тормозную жидкость
+            meta(itemprop="position" content="3")
+      section.content
+        .color-theme-brand
+          h1(itemprop="name") Обзор на летние шины Pirelli P Zero от ДонШина
+        .date.mb-2 30 ноября 2021
+      .section__video
+        .row
+          .col-xl-8.col-lg-10.mb-4
+            .embed-responsive.embed-responsive-16by9
+              iframe.embed-responsive-item(src="https://www.youtube.com/embed/_4rN_sP9DHU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+          .col-xl-8.col-lg-10.d-flex.flex-column.flex-sm-row.align-items-start.align-items-sm-center.justify-content-sm-between.px-lg-0.px-md-5.px-4
+            nav.social.d-flex.align-items-center.mb-4.mb-sm-0
+              .social__title.mr-2 Поделиться:
+              a.social__item.h2.color-theme-brand.mr-2(href="#")
+                +icon('vk')
+              a.social__item.h2.color-theme-brand.mr-2(href="#")
+                +icon('instagram')
+              a.social__item.h2.color-theme-brand.mr-2(href="#")
+                +icon('youtube')
+              a.social__item.h2.color-theme-brand.mr-0(href="#")
+                +icon('facebook')
+            a.readmore.d-flex.align-items-center(href="#")
+              span.h5.mr-2 Смотреть на нашем канале
+              +icon('readmore-right','h3 color-theme-brand')

@@ -1,6 +1,6 @@
 $font-family_default: 'Noto Sans', Arial, sans-serif;
 $font-family_title: $font-family_default;
-$font-size_default: 14px;
+$font-size_default: .875rem;
 
 $line-height_default: 1;
 $line-height_content: 1.4;
@@ -19,5 +19,13 @@ $color__border: #E1DDDD;
 
 $color__info: #30D3CA;
 $color__disabled: #A1A1A1;
+//$color__disabled: #E1DDDD;
 $color__success: #61BD2B;
 $color__warning: #F3CA2C;
+$color__danger: #EB5757;
+
+// bootstrap
+$grid-gutter-width: 8px;
+$tooltip-bg: $color__light;
+$tooltip-color: $color__brand;
+$tooltip-opacity: 1;

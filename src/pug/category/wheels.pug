@@ -1,29 +1,7 @@
+- var wheels = [{title: 'Диск КиК Сильверстоун (КС770-02) 6,5x17', label: 'hit', warranty: false, credit: false, card: false, delivery: false, repair: false},{title: 'Диск КиК Сильверстоун (КС770-02)', label: 'discount', warranty: false, credit: false, card: false, delivery: false, repair: false},{title: 'Диск КиК Сильверстоун (КС770-02)', label: '', warranty: false, credit: false, card: false, delivery: false, repair: false},{title: 'Диск КиК Сильверстоун', label: 'sale', warranty: false, credit: false, card: false, delivery: false, repair: false},{title: 'Диск КиК Сильверстоун', label: 'discount', warranty: false, credit: false, card: false, delivery: false, repair: false},{title: 'Диск КиК Сильверстоун', label: '', warranty: false, credit: false, card: false, delivery: false, repair: false},{title: 'Диск КиК Сильверстоун', label: 'hit', warranty: false, credit: false, card: false, delivery: false, repair: false}]
 .slides.slides_carousel.swiper-container.pt-1.pb-4
-  .slides__nav
-    button.slides__btn.slides__btn_prev.slides-carousel-prev(type="button")
-      svg.icon-fluid
-        use(xlink:href="#icon-arrow-left")
-    button.slides__btn.slides__btn_next.slides-carousel-next(type="button")
-      svg.icon-fluid
-        use(xlink:href="#icon-arrow-right")
+  +slidesNav
   .swiper-wrapper.align-items-stretch
-    .swiper-slide
-      include ../carousel/wheel.pug
-    .swiper-slide
-      include ../carousel/wheel.pug
-    .swiper-slide
-      include ../carousel/wheel.pug
-    .swiper-slide
-      include ../carousel/wheel.pug
-    .swiper-slide
-      include ../carousel/wheel.pug
-    .swiper-slide
-      include ../carousel/wheel.pug
-    .swiper-slide
-      include ../carousel/wheel.pug
-    .swiper-slide
-      include ../carousel/wheel.pug
-    .swiper-slide
-      include ../carousel/wheel.pug
-    .swiper-slide
-      include ../carousel/wheel.pug
+    each wheels__item in wheels
+      .swiper-slide
+        +card('','',wheels__item.title,wheels__item.label,wheels__item.warranty,wheels__item.credit,wheels__item.card,wheels__item.delivery,wheels__item.repair,false,false,false,'card_slide d-flex','content/cards/card-2.jpg',true)

@@ -1,0 +1,63 @@
+.booking-form {
+  display: flex;
+  transition: all .2s ease;
+}
+
+.booking-form__col {
+  @include fw(100%);
+}
+
+.booking-form__title {
+  margin-bottom: .75rem;
+}
+
+.booking-form__timetable {
+  display: grid;
+  grid-row-gap: 1rem;
+  grid-column-gap: .5rem;
+
+  @include media-breakpoint-up(sm) {
+    grid-template-columns: repeat(5,1fr);
+  }
+
+  @include media-breakpoint-only(xs) {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+.booking-form__toggler {
+  @extend %toggler-default;
+
+  &:checked {
+    & + .booking-form__label {
+      color: #fff;
+      background-color: $color__brand;
+    }
+  }
+
+  &:disabled {
+    & + .booking-form__label {
+      color: $color__border;
+      background-color: $color__light;
+    }
+  }
+}
+
+.booking-form__label {
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: .5rem;
+  color: $color__brand;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.14);
+
+  &.booking-form__label_inactive {
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,127 @@
+.datepicker {
+
+}
+
+.datepicker-picker {
+}
+
+.datepicker-header {
+  margin-bottom: .75rem;
+}
+
+.datepicker-controls {
+  @include h4;
+  display: flex;
+  align-items: center;
+
+  .button {
+    @extend %btn-default;
+    @include color($color__brand);
+    box-shadow: none;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    &:before {
+      font-family: '#{$icomoon-font-family}';
+    }
+
+    &.prev-btn {
+      &:before {
+        content: $ds-icon-arrow-prev;
+      }
+    }
+
+    &.next-btn {
+      &:before {
+        content: $ds-icon-arrow-next;
+      }
+    }
+
+    &.view-switch {
+      flex-grow: 1;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.datepicker-main {
+
+}
+
+.datepicker-view {
+  .days {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .days-of-week {
+    order: 2;
+    display: grid;
+    grid-column-gap: .5rem;
+    grid-template-columns: repeat(7,1fr);
+
+    .dow {
+      height: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: $color__disabled;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.datepicker-grid {
+  order: 1;
+  display: grid;
+  grid-column-gap: .5rem;
+  grid-row-gap: 1rem;
+  grid-template-columns: repeat(7,1fr);
+  margin-bottom: .875rem;
+}
+
+.datepicker-cell {
+  @include h3;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: .5rem;
+  color: $color__brand;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.14);
+
+  &.day {
+
+  }
+
+  &.focused {
+    color: #fff;
+    background-color: $color__brand;
+  }
+
+  &.prev {
+    color: $color__border;
+    background-color: $color__light;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    color: $color__border;
+    background-color: $color__light;
+  }
+
+  &.next {
+  }
+}
+
+.datepicker-footer {
+
+}

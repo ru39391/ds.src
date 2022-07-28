@@ -1,153 +1,145 @@
 .media {
-    display: flex;
-    margin: 0 0 24px;
+  display: flex;
 
-    &.media_row {
-        margin-bottom: 0;
+  &.media_shadow {
+    overflow: hidden;
+    border-radius: .5rem;
+    background: #fff;
+    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
+
+    .media__picture {
+      border-radius: 0;
+    }
+
+    .media__title {
+      @include h3;
+    }
+  }
+
+  &.media_row {
+    @include media-breakpoint-up(lg) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+
+    .media__picture {
+      @include media-breakpoint-up(xl) {
+        @include fw(100%/12*2);
+      }
+
+      @include media-breakpoint-only(lg) {
+        @include fw(100%/12*3);
+      }
+
+      @include media-breakpoint-only(md) {
+        @include fw(100%/12*6);
+      }
+
+      @include media-breakpoint-down(sm) {
+        flex: 1 0 auto;
+        max-width: initial;
+      }
+    }
+
+    .media__meta {
+      @include media-breakpoint-up(lg) {
+        @include fw(100%/12*9);
+        padding: 1.5rem 0 1.5rem 2rem;
+      }
+
+      @include media-breakpoint-only(lg) {
+        padding-right: 2rem;
+      }
+
+      @include media-breakpoint-only(md) {
+        @include fw(100%/12*6);
+        padding: 1.5rem;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding: 0 1rem 1.5rem;
+      }
+    }
+
+    .media__intro {
+      @include media-breakpoint-down(md) {
+        height: 88px;
         overflow: hidden;
-        border-radius: 8px;
-        background: #fff;
-        box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
+      }
+    }
+  }
 
-        @include media-breakpoint-up(lg) {
-            grid-column-start: 1;
-            grid-column-end: 3;
-        }
+  &.media_col {
+    grid-column-start: initial;
+    grid-column-end: initial;
 
-        @include media-breakpoint-down(sm) {
-            flex-direction: column;
-        }
-
-        .media__picture {
-            margin-right: 0;
-            border-radius: 0;
-
-            @include media-breakpoint-up(xl) {
-                @include fw(100%/12*2);
-            }
-
-            @include media-breakpoint-only(lg) {
-                @include fw(100%/12*3);
-            }
-
-            @include media-breakpoint-only(md) {
-                @include fw(100%/12*6);
-            }
-
-            @include media-breakpoint-down(sm) {
-                margin: 0 0 24px;
-                flex: 1 0 auto;
-                max-width: initial;
-            }
-        }
-
-        .media__meta {
-            @include media-breakpoint-up(lg) {
-                @include fw(100%/12*9);
-                padding: 24px 0 24px 32px;
-            }
-
-            @include media-breakpoint-only(lg) {
-                padding-right: 32px;
-            }
-
-            @include media-breakpoint-only(md) {
-                @include fw(100%/12*6);
-                padding: 24px;
-            }
-
-            @include media-breakpoint-down(sm) {
-                padding: 0 16px 24px;
-            }
-        }
-
-        .media__date {
-            @include px(12px);
-        }
-
-        .media__title {
-            @include fs-lh(18px,24px);
-            font-weight: bold;
-            margin: 0 0 16px;
-        }
-
-        .media__intro {
-            @include fs-lh(14px,22px);
-
-            @include media-breakpoint-down(md) {
-                height: 88px;
-                overflow: hidden;
-            }
-        }
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
     }
 
-    &.media_col {
-        grid-column-start: initial;
-        grid-column-end: initial;
+    .media__picture {
+      @include media-breakpoint-up(lg) {
+        @include fw(100%/12*6);
+      }
 
-        .media__picture {
-            @include media-breakpoint-up(lg) {
-                @include fw(100%/12*6);
-            }
-        }
+      @include media-breakpoint-only(md) {
+        @include fw(100%/12*6);
+      }
 
-        .media__meta {
-            @include media-breakpoint-up(lg) {
-                @include fw(100%/12*6);
-                padding: 24px;
-            }
-        }
-
-        .media__title {
-            @include media-breakpoint-up(lg) {
-                margin: 0 0 8px;
-            }
-        }
-
-        .media__intro {
-            @include media-breakpoint-up(lg) {
-                height: 88px;
-                overflow: hidden;
-            }
-        }
+      @include media-breakpoint-down(sm) {
+        flex: 1 0 auto;
+        max-width: initial;
+      }
     }
+
+    .media__meta {
+      @include media-breakpoint-up(lg) {
+        @include fw(100%/12*6);
+      }
+
+      @include media-breakpoint-only(md) {
+        @include fw(100%/12*6);
+      }
+    }
+
+    .media__intro {
+      @include media-breakpoint-up(lg) {
+        height: 88px;
+        overflow: hidden;
+      }
+    }
+  }
 }
 
 .media__picture {
-    margin: 0 8px 0 0;
-    overflow: hidden;
-    border-radius: 8px;
+  overflow: hidden;
+  border-radius: .5rem;
 
-    @include media-breakpoint-up(md) {
-        @include fw(120px);
-    }
+  @include media-breakpoint-up(md) {
+    @include fw(120px);
+  }
 
-    @include media-breakpoint-down(sm) {
-        @include fw(105px);
-    }
+  @include media-breakpoint-down(sm) {
+    @include fw(105px);
+  }
 }
 
 .media__meta {
-    flex-grow: 1;
-
-    @include media-breakpoint-up(sm) {
-        padding: 0 24px 0 0;
-    }
+  @include media-breakpoint-up(sm) {
+    //padding: 0 1.5rem 0 0;
+  }
 }
 
 .media__title {
-    display: block;
-    margin: 0 0 8px;
+  @include media-breakpoint-up(md) {
+    @include h4;
+  }
 
-    @include media-breakpoint-up(md) {
-        @include fs-lh(16px,18px);
-    }
-
-    @include media-breakpoint-down(sm) {
-        @include fs-lh(12px,22px);
-    }
-}
-
-.media__date {
-    @extend %date-item;
+  @include media-breakpoint-down(sm) {
+    @include fs-lh(.75rem,1.375rem);
+  }
 }

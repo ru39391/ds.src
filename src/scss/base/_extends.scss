@@ -1,185 +1,163 @@
 %wrapper {
-    @include mx(auto);
-    max-width: 1140px;
-    position: relative;
-
-    @include px(15px);
-
-    @include media-breakpoint-up(xl) {
-        @include px(15px);
-    }
+  @include mw(1600px);
+  @include mx(auto);
+  @include px(2*$grid-gutter-width);
 }
 
 %d-flex {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 %flex-item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 %flex-column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 %btn-default {
-    //@include inline-block;
-    border: 0;
-    outline: 0;
-    padding: 0;
-    cursor: pointer;
-    background: none;
+  //@include inline-block;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+  background: none;
 }
 
 %btn-theme {
-    @include fs-lh(16px,22px);
+  @include fs-lh(1rem,1.375rem);
+  color: #fff;
+  height: 40px;
+  border-radius: .5rem;
+  transition: all .3s ease;
+  background: $color__brand;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, .16);
+
+  &:hover,
+  &:focus {
     color: #fff;
-    height: 40px;
-    border-radius: 8px;
-    text-transform: uppercase;
-    transition: all .3s ease;
+    box-shadow: none;
     background: $color__brand;
-    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.16);
+  }
 
-    &:hover,
-    &:focus {
-        color: #fff;
-        box-shadow: none;
-        background: $color__brand;
-    }
-
-    &:active {
-        background: $color__brand_dark;
-    }
+  &:active {
+    background: $color__brand_dark;
+  }
 }
 
 %toggler-default {
-    @include wh(0);
-    @include pos(0,0);
-    overflow: hidden;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  @include wh(0);
+  @include pos(0,0);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 %toggler-theme {
-    @include inline-block;
-    @include offset(0 16px 8px 0,2px 14px 4px);
-    border-radius: 14px;
-    transition: all .3s ease;
-    color: $color__brand;
-    background: #fff;
-    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.14);
+  @include inline-block;
+  @include offset(0 1rem .5rem 0,.125rem .875rem .25rem);
+  border-radius: .875rem;
+  transition: all .3s ease;
+  color: $color__brand;
+  background: #fff;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .14);
 
-    &:hover {
-        color: $color__brand;
-        background: $color__light;
-    }
+  &:hover {
+    color: $color__brand;
+    background: $color__light;
+  }
 }
 
 %toggler-theme-current {
-    color: #fff;
-    background: $color__brand;
+  color: #fff;
+  background: $color__brand;
 }
 
 %toggler-theme-success {
-    color: #fff;
-    background: $color__success;
+  color: #fff;
+  background: $color__success;
 }
 
 %list-default {
-    @include offset(0,0);
+  @include offset(0,0);
 
-    li {
-        list-style: none;
-        list-style-position: inside;
-    }
+  li {
+    list-style: none;
+    list-style-position: inside;
+  }
 }
 
 %color-brand {
-    color: $color__brand;
+  color: $color__brand;
 
-    &:hover,
-    &:focus {
-        color: $color__brand;
-    }
+  &:hover,
+  &:focus {
+    color: $color__brand;
+  }
+}
+
+%theme-hover {
+  color: $color__text_default;
+
+  &:hover,
+  &:focus {
+    color: $color__brand;
+  }
 }
 
 %link-default {
-    text-decoration: none;
-    color: $color__link;
+  text-decoration: none;
+  color: $color__link;
 
-    &:hover,
-    &:focus {
-        text-decoration: none;
-        color: $color__link;
-    }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $color__brand;
+  }
 }
 
 %title-default {
-    font-family: $font-family_title;
+  font-family: $font-family_title;
 
-    @include media-breakpoint-up(lg) {
-        @include fs-lh(36px,40px);
-    }
+  @include media-breakpoint-up(lg) {
+    @include h1;
+  }
 
-    @include media-breakpoint-down(md) {
-        @include fs-lh(24px,28px);
-    }
+  @include media-breakpoint-down(md) {
+    @include h2;
+  }
 }
 
 %text-default {
-    font-size: $font-size_default;
-    line-height: $line-height_content;
-}
-
-%h1 {
-    @include fs-lh(36px,40px);
-}
-
-%h2 {
-    @include fs-lh(24px,28px);
-}
-
-%h3 {
-    @include fs-lh(18px,24px);
-}
-
-%h4 {
-    @include fs-lh(16px,18px);
-}
-
-%h5 {
-    @include fs-lh(14px,22px);
-}
-
-%h6 {
-    @include fs-lh(12px,1);
+  font-size: $font-size_default;
+  line-height: $line-height_content;
 }
 
 %bordered {
-    border-radius: 8px;
-    background: #FFFFFF;
-    border: 1px solid #ECECEC;
+  border-radius: .5rem;
+  background: #FFFFFF;
+  border: 1px solid #ECECEC;
 }
 
 %date-item {
-    @extend %h6;
-    @include inline-block;
-    padding: 2px 6px;
-    border-radius: 12px;
-    background: $color__light;
+  @include h6;
+  @include inline-block;
+  padding: .125rem .375rem;
+  border-radius: .75rem;
+  background: $color__light;
 }
 
 %zi-1 {
-    z-index: 1;
-    position: relative;
+  z-index: 1;
+  position: relative;
 }
 
 %zi-2 {
-    z-index: 2;
-    position: relative;
+  z-index: 2;
+  position: relative;
 }

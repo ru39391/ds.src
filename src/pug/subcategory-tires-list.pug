@@ -4,129 +4,138 @@ block meta
   - var title = 'Подкатегория каталога (серия бренда шин)';
 
 block filter
-  .header__footer
-    button.filter-toggler(type="button")
-      svg.filter-toggler__icon
-        use(xlink:href="#icon-filter")
-      span.filter-toggler__title
-        span.filter-toggler__show Показать 
-        span.filter-toggler__hide Скрыть 
+  .togglebar
+    button.aside-toggler.flex-grow-1.justify-content-center.px-3.py-2(type="button" data-target="#filter")
+      +icon('filter', 'aside-toggler__icon h3 mr-2')
+      span.pointer-events-none
+        span.aside-toggler__show Показать&nbsp;
+        span.aside-toggler__hide Скрыть&nbsp;
         | фильтр
 
 block wrapper
-    .container.container_wrapper
-      nav.pathway
-        a.pathway__link(href="#") Главная
-        a.pathway__link(href="#") Шины
-        a.pathway__link(href="#") Cordiant
-        a.pathway__current(href="#") Cordiant 2
-      section.content
-        h1 Шины CORDIANT Comfort 2 в Ростове-на-Дону
-      .category-counter 1 840 товаров
+    .wrapper
+      ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Главная
+            meta(itemprop="position" content="1")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Шины
+            meta(itemprop="position" content="2")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Cordiant
+            meta(itemprop="position" content="3")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a.pathway__current(href="#" itemprop="item")
+            span(itemprop="name") Cordiant 2
+            meta(itemprop="position" content="4")
+      section.content(itemscope itemtype="http://schema.org/Product")
+        h1(itemprop="name") Шины CORDIANT Comfort 2 в Ростове-на-Дону
+        span.d-none(itemprop="brand") Cordiant
+        //- остаток на складе
+        span.d-none(itemprop="sku") 1840
+        meta(content="/img/content/logo/logo-1.jpg" itemprop="image")
+        span.d-none(itemtype="http://schema.org/AggregateOffer" itemscope itemprop="offers")
+          meta(itemprop="availability" content="http://schema.org/InStock")
+          //- количество товаров в категории
+          meta(itemprop="offerCount" content="1840")
+          //- самая выскоая цена
+          meta(itemprop="highPrice" content="10657")
+          //- самая низкая цена
+          meta(itemprop="lowPrice" content="25")
+          //- наименование валюты
+          meta(itemprop="priceCurrency" content="RUB")
+      .category-counter.mb-4 1 840 товаров
       .row
         .col-xl-2.col-lg-3.mb-lg-4
-          a.brand.brand_category.mb-3(href="#")
-            img.img-fluid(src="../img/content/logo/logo-1.jpg" alt="" title="")
-            span.brand__title Cordiant
+          +brand('Cordiant', 'brand_category d-flex flex-column align-items-center justify-lg-content-center justify-content-between bg-white py-2 py-lg-3 px-3 mb-3', 'd-inline-block')
           include base/filter-tires.pug
 
         .col-xl-10.col-lg-9.mb-4
           include base/results-form.pug
           .mb-3
-            .heading
-              .heading__col Диаметр
-              .heading__col Ширина
-              .heading__col Высота
-              .heading__col Сезон
-              .heading__col.heading__col_lg Название
-              .heading__col Цена
-              .heading__col Наличие
-            .card-row
-              .card-row__left
-                .card-row__param 18”
-              .card-row__right
-                include tile/row.pug
-            .card-row
-              .card-row__left
-                .card-row__param 17”
-              .card-row__right
-                include tile/row.pug
-            .card-row
-              .card-row__left
-                .card-row__param 16”
-              .card-row__right
-                include tile/row.pug
-                include tile/row.pug
-                include tile/row.pug
-                include tile/row.pug
-            .card-row
-              .card-row__left
-                .card-row__param 15”
-              .card-row__right
-                include tile/row.pug
-                include tile/row.pug
-                include tile/row.pug
-            .card-row
-              .card-row__left
-                .card-row__param 14”
-              .card-row__right
-                include tile/row.pug
-                include tile/row.pug
-                include tile/row.pug
-            .card-row
-              .card-row__left
-                .card-row__param 13”
-              .card-row__right
-                include tile/row.pug
-                include tile/row.pug
+            .heading.heading_category.px-3
+              .heading__col.heading__col_category-group.h6.mb-2 Диаметр
+              .heading__col.heading__col_category-width.h6.mb-2 Ширина
+              .heading__col.heading__col_category-height.h6.mb-2 Высота
+              .heading__col.heading__col_category-type.h6.mb-2 Сезон
+              .heading__col.heading__col_category-title.h6.mb-2 Название
+              .heading__col.heading__col_category-price.h6.mb-2 Цена
+              .heading__col.heading__col_category-stock.h6.mb-2 Наличие
+            .table-row.table-row_category.mb-md-2.mb-3
+              .table-row__col.table-row__col_group.d-flex.flex-md-column.align-items-center.align-items-md-start.justify-content-md-center.px-3.mb-2.mb-md-0
+                .h6.d-md-none.mr-2 Диаметр:
+                .h2.font-weight-bold 18”
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              .table-row__col.table-row__col_group.d-flex.flex-md-column.align-items-center.align-items-md-start.justify-content-md-center.px-3.mb-2.mb-md-0
+                .h6.d-md-none.mr-2 Диаметр:
+                .h2.font-weight-bold 17”
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              .table-row__col.table-row__col_group.d-flex.flex-md-column.align-items-center.align-items-md-start.justify-content-md-center.px-3.mb-2.mb-md-0
+                .h6.d-md-none.mr-2 Диаметр:
+                .h2.font-weight-bold 16”
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              .table-row__col.table-row__col_group.d-flex.flex-md-column.align-items-center.align-items-md-start.justify-content-md-center.px-3.mb-2.mb-md-0
+                .h6.d-md-none.mr-2 Диаметр:
+                .h2.font-weight-bold 15”
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              include base/row.pug
+            .table-row.table-row_category.mb-md-2.mb-3
+              include base/row.pug
 
-      .section.mb-3
-        .section__title Подходящие диски:
+    .box-shadow.pt-4.pb-3.mb-5
+      .border-bottom.mb-4
+        .wrapper
+          .h2.font-weight-bold.mb-4 Другие бренды:
+          .d-flex.flex-wrap
+            a.flex-grow-1.text-center.px-2.mb-4(href="#")
+              +img('content/logo/cordiant.jpg')
+            a.flex-grow-1.text-center.px-2.mb-4(href="#")
+              +img('content/logo/bridgestone.jpg')
+            a.flex-grow-1.text-center.px-2.mb-4(href="#")
+              +img('content/logo/michelin.jpg')
+            a.flex-grow-1.text-center.px-2.mb-4(href="#")
+              +img('content/logo/pirelli.jpg')
+            a.flex-grow-1.text-center.px-2.mb-4(href="#")
+              +img('content/logo/yokohama.jpg')
+            a.flex-grow-1.text-center.px-2.mb-4(href="#")
+              +img('content/logo/goodyear.jpg')
+      .wrapper
+        - var namesList = ['Cordiant','Hankook','Continental','Yokohama','Good Year','Bridgestone','Nokian tyres','Dunlop','BFGoodrich','Michelin','Kormoran','Pirelli']
+        each namesList__item in namesList
+          a.h4.d-inline-block.mr-3.mr-sm-4.mb-3(href="#")!= namesList__item
+        each namesList__item in namesList
+          a.h4.d-inline-block.mr-3.mr-sm-4.mb-3(href="#")!= namesList__item
+
+    .wrapper
+      .mb-3
+        .h2.font-weight-bold.mb-4 Подходящие диски:
         include category/wheels.pug
 
       include category/popular.pug
 
-      .section.mb-3
-        .section__title Рекомендуем так же:
+      .mb-3
+        .h2.font-weight-bold.mb-4 Рекомендуем так же:
         include category/carousel.pug
 
-      .section
-        .section__wrapper.section__wrapper_px
-          .mb-3
-            .section__title.section__title_sm Сезон
-            a.toggler(href="#") Летняя
-            a.toggler(href="#") Зимняя
-            a.toggler(href="#") Всесезонная
-            a.toggler(href="#") Летняя
-            a.toggler(href="#") Зимняя
-            a.toggler(href="#") Всесезонная
-          .mb-3
-            .section__title.section__title_sm Тип
-            a.toggler(href="#") Легковые
-            a.toggler(href="#") Для микроавтобуса
-            a.toggler(href="#") Для микроавтобуса
-          .section__title.section__title_sm Диаметр
-          a.toggler(href="#") 13
-          a.toggler(href="#") 14
-          a.toggler(href="#") 14С
-          a.toggler(href="#") 15
-          a.toggler(href="#") 15С
-          a.toggler(href="#") 16
-          a.toggler(href="#") 16С
-          a.toggler(href="#") 17
-          a.toggler(href="#") 18
-          a.toggler(href="#") 13
-          a.toggler(href="#") 14
-          a.toggler(href="#") 14С
-          a.toggler(href="#") 15
-          a.toggler(href="#") 15С
-          a.toggler(href="#") 16
-          a.toggler(href="#") 16С
-          a.toggler(href="#") 17
-          a.toggler(href="#") 18
+      include base/links.pug
 
-      .section
-        .content.content_expanded
-          include base/content.pug
-          .content__footer
-            button.readmore.readmore_btn.readmore_arrow-down(type="button")
+      .content.content_expanded.mb-5(itemprop="text")
+        include base/content.pug
+        .content__footer
+          button.readmore.readmore_btn(type="button")
+            +icon('readmore','h2 color-theme-brand')

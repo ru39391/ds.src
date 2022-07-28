@@ -1,7 +1,294 @@
-extends base
+extends results
 
 block meta
   - var title = 'Результаты подбора по авто';
+  - var h1 = 'Купить шины для HYUNDAI Accent 2000-2005 LC Sedan 1.3 в Ростове-на-Дону';
 
-block wrapper
-    .container.container_wrapper
+block filter
+  .togglebar
+    button.aside-toggler.flex-grow-1.aside-toggler_btn_group.px-3.py-2(type="button" data-target="#settings")
+      +icon('car','aside-toggler__icon h3 mr-2')
+      span.aside-toggler__title.h4.text-nowrap Подбор по авто
+    button.aside-toggler.aside-toggler_btn_group.px-3.py-2(type="button" data-target="#params")
+      +icon('compare','aside-toggler__icon h3')
+      span.aside-toggler__title.aside-toggler__title_invisible.h4.text-nowrap Параметры подбора
+    button.aside-toggler.aside-toggler_btn_group.px-3.py-2(type="button" data-target="#filter")
+      +icon('filter','aside-toggler__icon h3')
+      span.aside-toggler__title.aside-toggler__title_invisible.h4.text-nowrap
+        span.aside-toggler__show Показать&nbsp;
+        span.aside-toggler__hide Скрыть&nbsp;
+        | фильтр
+
+block results__sidebar
+  #settings.aside.aside_pos_fixed
+    .aside__wrapper
+      form.form.form_bg.form_filter.mb-lg-3(action="#")
+        .form__header.d-flex.align-items-center.justify-content-between.d-lg-block
+          .form__title.form__title_icon.d-flex.align-items-center.flex-grow-1.h4.font-weight-bold.color-theme-brand.mb-0.mb-lg-2
+            +icon('car','form__title-icon h3 mr-1')
+            | Подбор по авто
+          button.button-unstyled.h6(type="reset") Сбросить
+        .form__section.border-0.mb-3
+          .form__section-title.h6.color-theme-disabled.mb-4 Автомобиль
+          .row
+            .col-sm-6.col-md-3.col-lg-12
+              .form__select.mb-4
+                .form__select-title Марка
+                select.selecter
+                  option --
+                  option ACURA
+                  option ALFA ROMEO
+                  option ASTON MARTIN
+                  option AUDI
+                  option BENTLEY
+                  option BMW
+            .col-sm-6.col-md-3.col-lg-12
+              .form__select.mb-4
+                .form__select-title Модель
+                select.selecter
+                  option --
+                  option Azure
+                  option Bentayga
+                  option Brooklands
+                  option Continental Flying Spur
+                  option Continental GT
+            .col-sm-6.col-md-3.col-lg-12
+              .form__select.mb-4
+                .form__select-title Кузов
+                select.selecter
+                  option --
+                  option 2000-2005 LC
+                  option 2006-2011 LC
+                  option 2012-2017 LC
+                  option 2018-2023 LC
+                  option 2024-2028 LC
+            .col-sm-6.col-md-3.col-lg-12
+              .form__select
+                .form__select-title Двигатель
+                select.selecter
+                  option --
+                  option 1.3
+                  option 1.4
+                  option 1.5
+                  option 1.6
+        .form__section.border-0.pb-0
+          .car-image.text-center.mb-5
+            .image-wrapp.mb-4
+              +img('content/results/white.jpg')
+            .buttons-wrapp.but-row
+              .car-color-wrapp.d-flex.flex-wrap.justify-content-center
+                .car-color.color-white.mr-1.mb-2(data-color="white")
+                .car-color.color-black.mr-1.mb-2(data-color="black")
+                .car-color.color-red.mr-1.mb-2(data-color="red")
+                .car-color.color-green.mr-1.mb-2(data-color="green")
+                .car-color.color-blue.mr-1.mb-2(data-color="blue")
+                .car-color.color-grey.mr-1.mb-2(data-color="grey")
+                .car-color.color-bez.active.mr-1.mb-2(data-color="bez")
+          a.d-flex.align-items-center.h5.text-nowrap.mb-4(href="#")
+            +icon('tires','contacts__icon h2 color-theme-brand mr-3')
+            | Подборать шины
+          a.d-flex.align-items-center.h5.text-nowrap(href="#")
+            +icon('wheels','contacts__icon h2 color-theme-brand mr-3')
+            | Подборать диски
+
+  #params.aside.aside_pos_fixed
+    .aside__wrapper
+      form.form.form_bg.form_filter.mb-lg-3(action="#")
+        .form__header.d-flex.align-items-center.justify-content-between.d-lg-block
+          .form__title.form__title_icon.d-flex.align-items-center.flex-grow-1.h4.font-weight-bold.color-theme-brand.mb-0.mb-lg-2
+            +icon('compare','form__title-icon h3 mr-1')
+            | Параметры подбора
+        .form__section
+          .form__section-title.h6.color-theme-disabled.mb-3 Рекомендованы производителем
+          a.d-block.h6.mb-1(href="#") 175/70R13 (84)
+          a.d-block.h6.mb-1(href="#") 185/60R14 (100)
+          a.d-block.h6.mb-1(href="#") 185/55R15 (57)
+        .form__section
+          .form__section-title.h6.color-theme-disabled.mb-3 Взаимозаменяемые
+          a.d-block.h6.mb-1(href="#") 205/60R13 (1)
+          a.d-block.h6.mb-1(href="#") 175/65R14 (128)
+          a.d-block.h6.mb-1(href="#") 175/55R15 (11)
+          a.d-block.h6.mb-1(href="#") 195/50R15 (49)
+          a.d-block.h6.mb-1(href="#") 205/50R15 (5)
+          a.d-block.h6.mb-1(href="#")  215/45R15 (1)
+        .form__section.border-0.pb-0
+          .form__section-title.h6.color-theme-disabled.mb-3 Тюнинг
+          a.d-block.h6.mb-1(href="#") 185/50R16 (12)
+          a.d-block.h6.mb-1(href="#") 195/45R16 (22)
+          a.d-block.h6.mb-1(href="#") 205/40R16 (2)
+          a.d-block.h6.mb-1(href="#") 205/45R16 (20)
+          a.d-block.h6.mb-1(href="#") 215/40R16 (4)
+          a.d-block.h6.mb-1(href="#") 195/40R17 (3)
+
+  #filter.aside.aside_pos_fixed
+    .aside__wrapper
+      form.form.form_bg.form_filter.mb-lg-3(action="#")
+        .form__header.d-flex.align-items-center.justify-content-between.d-lg-block.pl-3
+          button.button-unstyled.h6(type="reset") Сбросить
+        .form__section
+          .form__section-title.h6.color-theme-disabled.mb-4 Типоразмер
+          .row
+            .col-sm-4.col-lg-12
+              .form__select.mb-lg-4.mb-sm-0.mb-4
+                .form__select-title Ширина
+                select.selecter
+                  option --
+                  option 5
+                  option 6.5
+                  option 7
+                  option 10.5
+                  option 12.5
+                  option 30
+            .col-sm-4.col-lg-12
+              .form__select.mb-lg-4.mb-sm-0.mb-4
+                .form__select-title Высота
+                select.selecter
+                  option --
+                  option 9.5
+                  option 10
+                  option 10.5
+                  option 11.5
+                  option 12.5
+                  option 13.5
+            .col-sm-4.col-lg-12
+              .form__select
+                .form__select-title Диаметр
+                select.selecter
+                  option --
+                  option 10
+                  option 12
+                  option 12C
+                  option 13
+                  option 13C
+          button.form__section-toggler.button-unstyled.h6.mt-lg-4(type="button") Добавить размер для спарки
+        .form__section.form__section_hidden
+          .form__section-title.h6.color-theme-disabled.mb-4 Типоразмер (задняя ось)
+          .row
+            .col-sm-4.col-lg-12
+              .form__select.mb-lg-4.mb-sm-0.mb-4
+                .form__select-title Ширина
+                select.selecter
+                  option --
+                  option 5
+                  option 6.5
+                  option 7
+                  option 10.5
+                  option 12.5
+                  option 30
+            .col-sm-4.col-lg-12
+              .form__select.mb-lg-4.mb-sm-0.mb-4
+                .form__select-title Высота
+                select.selecter
+                  option --
+                  option 9.5
+                  option 10
+                  option 10.5
+                  option 11.5
+                  option 12.5
+                  option 13.5
+            .col-sm-4.col-lg-12
+              .form__select
+                .form__select-title Диаметр
+                select.selecter
+                  option --
+                  option 10
+                  option 12
+                  option 12C
+                  option 13
+                  option 13C
+        .form__section
+          .form__section-title.h6.color-theme-disabled.mb-4 Тип
+          input.form__toggler.form__toggler_checkbox(id="param-1" type="checkbox" value="")
+          label.form__label.h5.mb-4(for="param-1")
+            +icon('checked','form__label-icon')
+            span.form__label-title Всесезонные
+          input.form__toggler.form__toggler_checkbox(id="param-2" type="checkbox" value="")
+          label.form__label.h5.mb-4(for="param-2")
+            +icon('checked','form__label-icon')
+            span.form__label-title Для микроавтобуса
+          input.form__toggler.form__toggler_checkbox(id="param-3" type="checkbox" value="")
+          label.form__label.h5(for="param-3")
+            +icon('checked','form__label-icon')
+            span.form__label-title Легковые
+        .form__section
+          .form__section-title.h6.color-theme-disabled.mb-4 Runflat
+          input.form__toggler.form__toggler_checkbox(id="Runflat" type="checkbox" value="")
+          label.form__label.h5(for="Runflat")
+            +icon('checked','form__label-icon')
+            span.form__label-title Да
+        .form__section
+          .form__section-title.h6.color-theme-disabled.mb-4 Цена, ₽
+          .row.mb-3
+            .form__item.col-6
+              label.form__label.form__label_plain.h5.color-theme-disabled От
+              input#price-min.form__field(type="text" value="")
+            .form__item.col-6
+              label.form__label.form__label_plain.h5.color-theme-disabled До
+              input#price-max.form__field(type="text" value="")
+          #price-ranger.form__slider
+        .form__section
+          .form__section-title.h6.color-theme-disabled.mb-4 Наличие
+          input.form__toggler.form__toggler_checkbox(id="instock" type="checkbox" value="")
+          label.form__label.h5(for="instock")
+            +icon('checked','form__label-icon')
+            span.form__label-title Сейчас в наличии
+        .form__section.border-0.pb-0
+          .form__section-title.h6.color-theme-disabled.mb-4 Бренд
+          .form__item.mb-4
+            input.form__field(type="text" value="")
+            label.form__label.form__label_title Введите название
+          #brand.form__list.row
+            .col-6
+              input.form__toggler.form__toggler_checkbox(id="Michelin" type="checkbox" value="")
+              label.form__label.h5.mb-4(for="Michelin")
+                +icon('checked','form__label-icon')
+                span.form__label-title Michelin
+            .col-6
+              input.form__toggler.form__toggler_checkbox(id="Cordiant" type="checkbox" value="")
+              label.form__label.h5.mb-4(for="Cordiant")
+                +icon('checked','form__label-icon')
+                span.form__label-title Cordiant
+            .col-6
+              input.form__toggler.form__toggler_checkbox(id="Pirelli" type="checkbox" value="")
+              label.form__label.h5.mb-4(for="Pirelli")
+                +icon('checked','form__label-icon')
+                span.form__label-title Pirelli
+            .col-6
+              input.form__toggler.form__toggler_checkbox(id="Hankook" type="checkbox" value="")
+              label.form__label.h5.mb-4(for="Hankook")
+                +icon('checked','form__label-icon')
+                span.form__label-title Hankook
+            .col-6
+              input.form__toggler.form__toggler_checkbox(id="Yokohama" type="checkbox" value="")
+              label.form__label.h5.mb-4(for="Yokohama")
+                +icon('checked','form__label-icon')
+                span.form__label-title Yokohama
+            .col-6
+              input.form__toggler.form__toggler_checkbox(id="Goodyear" type="checkbox" value="")
+              label.form__label.h5.mb-4(for="Goodyear")
+                +icon('checked','form__label-icon')
+                span.form__label-title Good year
+            .col-6
+              input.form__toggler.form__toggler_checkbox(id="Continental" type="checkbox" value="")
+              label.form__label.h5.mb-4(for="Continental")
+                +icon('checked','form__label-icon')
+                span.form__label-title Continental
+            .col-6
+              input.form__toggler.form__toggler_checkbox(id="Bridgestone" type="checkbox" value="")
+              label.form__label.h5.mb-4(for="Bridgestone")
+                +icon('checked','form__label-icon')
+                span.form__label-title Bridgestone
+            .col-6
+              input.form__toggler.form__toggler_checkbox(id="Michelin2" type="checkbox" value="")
+              label.form__label.h5.mb-4(for="Michelin2")
+                +icon('checked','form__label-icon')
+                span.form__label-title Michelin
+            .col-6
+              input.form__toggler.form__toggler_checkbox(id="Cordiant2" type="checkbox" value="")
+              label.form__label.h5.mb-4(for="Cordiant2")
+                +icon('checked','form__label-icon')
+                span.form__label-title Cordiant
+        .d-flex.justify-content-center
+          button.readmore.d-flex.align-items-center(type="submit" data-toggle="list" data-target="#brand")
+            span.h6.mr-2.pointer-events-none Показать еще
+            +icon('readmore','h3 color-theme-brand readmore__icon')

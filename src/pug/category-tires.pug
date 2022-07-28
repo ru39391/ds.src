@@ -4,41 +4,49 @@ block meta
   - var title = 'Категория каталога (шины)';
 
 block filter
-  .header__footer
-    button.filter-toggler(type="button")
-      svg.filter-toggler__icon
-        use(xlink:href="#icon-filter")
-      span.filter-toggler__title
-        span.filter-toggler__show Показать 
-        span.filter-toggler__hide Скрыть 
+  .togglebar
+    button.aside-toggler.flex-grow-1.justify-content-center.px-3.py-2(type="button" data-target="#filter")
+      +icon('filter', 'aside-toggler__icon h3 mr-2')
+      span.pointer-events-none
+        span.aside-toggler__show Показать&nbsp;
+        span.aside-toggler__hide Скрыть&nbsp;
         | фильтр
 
 block wrapper
-    .container.container_wrapper
-      nav.pathway
-        a.pathway__link(href="#") Главная
-        a.pathway__link(href="#") Шины
-        a.pathway__current(href="#") Шины R18
-      section.content
-        h1 Шины в Ростове-на-Дону
-      .category-counter 14 840 товаров
-      .row
-        .col-xl-2.col-lg-3.mb-lg-4
-          include base/filter-tires.pug
+  .wrapper
+    ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Главная
+          meta(itemprop="position" content="1")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Шины
+          meta(itemprop="position" content="2")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__current(href="#" itemprop="item")
+          span(itemprop="name") Шины R18
+          meta(itemprop="position" content="3")
+    section.content
+      h1(itemprop="name") Шины в Ростове-на-Дону
+    .category-counter.mb-4 14 840 товаров
+    .row
+      .col-xl-2.col-lg-3.mb-lg-4
+        include base/filter-tires.pug
 
-        .col-xl-10.col-lg-9.mb-4
-          include base/brands.pug
+      .col-xl-10.col-lg-9.mb-4
+        include base/brands.pug
 
-      include category/popular.pug
+    include category/popular.pug
 
-      .section.mb-3
-        .section__title Рекомендуем так же:
-        include category/carousel.pug
+    .mb-3
+      .h2.font-weight-bold.mb-4 Рекомендуем так же:
+      include category/carousel.pug
 
-      include base/links.pug
+    include base/links.pug
 
-      .section
-        .content.content_expanded
-          include base/content.pug
-          .content__footer
-            button.readmore.readmore_btn.readmore_arrow-down(type="button")
+    .content.content_expanded.mb-5
+      include base/content.pug
+      .content__footer
+        button.readmore.readmore_btn(type="button")
+          +icon('readmore','h2 color-theme-brand')

@@ -1,40 +1,38 @@
-.btn {
-    @extend %btn-default;
-    @extend %btn-theme;
-    padding: 4px 12px;
-    white-space: nowrap;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.button {
+  @extend %btn-default;
+  @extend %btn-theme;
+  @include border(1px,rgba(0,0,0,0));
+  padding: .25rem .75rem;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    &.btn_bordered {
-        border: 1px solid #fcfcfc;
-    }
+  &.button_bordered {
+    border-color: #fcfcfc;
+  }
 
-    &.btn_icon {
+  &.button_nobg {
+    @extend %theme-hover;
+    box-shadow: none;
+    background: none;
+  }
 
-    }
+  &.button_sm {
+    height: 26px;
+    border-radius: .25rem;
+  }
 
-    &.btn_nobg {
-        @extend %h5;
-        padding: 0;
-        box-shadow: none;
-        background: none;
-        text-transform: none;
-        color: $color__text_default;
-    }
+  &:disabled {
+    cursor: default;
+  }
 }
 
-.btn-unstyled {
-    @extend %btn-default;
+.button-unstyled {
+  @extend %btn-default;
 }
 
-.btn-link {
-    @extend %btn-default;
-    @include fs-lh(12px,1);
-}
-
-.btn__icon {
-    @include fw(14px);
-    @include wh(14px,18px);
+.button__icon {
+  @include fw(14px);
+  //@include wh(14px,18px);
 }

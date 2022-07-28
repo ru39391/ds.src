@@ -1,42 +1,67 @@
-$grid-gutter-width: 8px;
+@import 'base/variables';
 @import '~nouislider/distribute/nouislider.css';
 
 @import '~bootstrap/scss/bootstrap-reboot.scss';
 @import '~bootstrap/scss/bootstrap-grid.scss';
-//@import '~bootstrap/scss/modal';
+@import '~bootstrap/scss/modal';
 @import '~bootstrap/scss/images';
 @import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/tooltip';
+//@import '~bootstrap/scss/utilities';
 @import '~bootstrap/scss/utilities/text';
 @import '~bootstrap/scss/utilities/embed';
 @import '~bootstrap/scss/utilities/borders';
-//@import '~bootstrap/scss/utilities/display';
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import '~bootstrap/scss/utilities/display';
+@import '~bootstrap/scss/utilities/stretched-link';
 
 /* base */
-@import 'base/variables';
+@import 'base/fonts';
 @import 'base/mixins';
 @import 'base/extends';
 @import 'base/common';
+@import 'base/mixes';
+@import 'base/color';
+@import 'base/text';
+@import 'base/bg';
+
+/* icons */
+@import 'icons/variables';
+@import 'icons/style';
 
 /* tpl */
+@import 'tpl/car';
 @import 'tpl/btn';
+@import 'tpl/icon';
+@import 'tpl/logo';
+@import 'tpl/date';
 @import 'tpl/menu';
 @import 'tpl/tabs';
 @import 'tpl/form';
+@import 'tpl/cart';
 @import 'tpl/card';
+@import 'tpl/card-row';
+@import 'tpl/zoom';
+@import 'tpl/label';
+@import 'tpl/modal';
+@import 'tpl/promo';
 @import 'tpl/brand';
 @import 'tpl/media';
 @import 'tpl/sales';
-@import 'tpl/filter';
+@import 'tpl/aside';
+@import 'tpl/aside-toggler';
+@import 'tpl/category-menu';
+@import 'tpl/booking-form';
+@import 'tpl/booking-heading';
 @import 'tpl/banner';
 @import 'tpl/social';
 @import 'tpl/search';
 @import 'tpl/swiper';
 @import 'tpl/header';
+@import 'tpl/togglebar';
 @import 'tpl/section';
 @import 'tpl/content';
 @import 'tpl/feature';
+@import 'tpl/wrapper';
 @import 'tpl/pathway';
 @import 'tpl/topmenu';
 @import 'tpl/heading';
@@ -48,7 +73,17 @@ $grid-gutter-width: 8px;
 @import 'tpl/leftmenu';
 @import 'tpl/accordion';
 @import 'tpl/pagination';
+@import 'tpl/datepicker';
 @import 'tpl/recalculate';
+@import 'tpl/product-list';
+@import 'tpl/table-row';
+@import 'tpl/readmore';
+@import 'tpl/toggler';
+@import 'tpl/notify';
 @import 'tpl/review';
 @import 'tpl/params';
+@import 'tpl/bubble';
+@import 'tpl/result';
+@import 'tpl/panel';
+@import 'tpl/popup';
 @import 'tpl/footer';

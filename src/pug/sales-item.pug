@@ -4,43 +4,51 @@ block meta
   - var title = 'Страница акции';
 
 block wrapper
-  .container.container_wrapper
-    nav.pathway
-      a.pathway__link(href="#") Главная
-      a.pathway__link(href="#") Скидки и акции
-      a.pathway__current(href="#") Скидки на зимние шины Michelin
+  .wrapper
+    ul.pathway(itemscope itemtype="http://schema.org/BreadcrumbList")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+          span(itemprop="name") Главная
+          meta(itemprop="position" content="1")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__link(href="#" itemprop="item")
+            span(itemprop="name") Скидки и акции
+            meta(itemprop="position" content="2")
+      li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.pathway__current(href="#" itemprop="item")
+            span(itemprop="name") Скидки на зимние шины Michelin
+            meta(itemprop="position" content="3")
     section.content
-      h1 Скидки на зимние шины Michelin
+      h1(itemprop="name") Скидки на зимние шины Michelin
+    .sale-item.sale-item_section.mb-5
+      .sale-item__header.d-block.overflow-hidden.mb-4
+        +img('content/sales/sales-1.jpg','img-cover')
+        .sale-item__date.date.h5.px-2 До 30 ноября
+      .sale-item__body.px-md-4.px-3.pb-3
+        .content.content_expanded
+          h3 Скидки на зимние шины Michelin
+          ul.list-marked
+            li Акция “Скидка на зимние шины Michelin” распространяется только на товары приобретенные в интернет-магазине www.donshina.ru в период её проведения.
+            li Скидки доступны для всех посетителей интернет-магазина.
+            li Условия акции могут быть изменены организатором в одностороннем порядке путем публикации таких изменений на сайте, в том числе организатор вправе досрочно прекратить проведение акции, разместив уведомление о прекращении акции на сайте.
+            li Скидка действует при покупке комплекта резины (4шт.) Предложение и количество товара ограничено, а также обусловлено наличием на складе. В случае отсутствия товара организатор вправе исключить товар из списка участвующих в акции.
+            li Дополнительные скидки и промокоды интернет-магазина не действуют на  товары, участвующие в акции. Настоящая акция не суммируется с другими акциями и скидками.
+            li Участие в акции означает ознакомление и полное согласие покупателя с настоящими правилами, а также согласие на получение информационных и рекламных сообщений от интернет-магазина www.donshina.ru.
+            li Компания не несет ответственности за технические сбои, вызванные оборудованием, обеспечивающим работу серверов, каналов связи и абонентских устройств, также организатор не несет ответственности за услуги курьерской службы, осуществляющей доставку Товара.
+            li Доставка товаров, которые участвуют в акции, осуществляется за счет покупателя в соответствии с тарифами курьерской службы, выбранной при оформлении заказа. Возврат товара осуществляется за счет покупателя.
+            li Время обработки заказа может увеличиться до 2 (двух) дней.
+          .content__footer
+            button.readmore.readmore_btn(type="button")
+              +icon('readmore','h2 color-theme-brand')
 
-    .section
-      .sale-item.sale-item_section
-        .sale-item__header
-          img.img-cover(src="../img/content/sales/sales-1.jpg" alt="")
-          .sale-item__date До 30 ноября
-        .sale-item__body
-          .content.content_expanded
-            h3 Скидки на зимние шины Michelin
-            ul.list-marked
-              li Акция “Скидка на зимние шины Michelin” распространяется только на товары приобретенные в интернет-магазине www.donshina.ru в период её проведения.
-              li Скидки доступны для всех посетителей интернет-магазина.
-              li Условия акции могут быть изменены организатором в одностороннем порядке путем публикации таких изменений на сайте, в том числе организатор вправе досрочно прекратить проведение акции, разместив уведомление о прекращении акции на сайте.
-              li Скидка действует при покупке комплекта резины (4шт.) Предложение и количество товара ограничено, а также обусловлено наличием на складе. В случае отсутствия товара организатор вправе исключить товар из списка участвующих в акции.
-              li Дополнительные скидки и промокоды интернет-магазина не действуют на  товары, участвующие в акции. Настоящая акция не суммируется с другими акциями и скидками.
-              li Участие в акции означает ознакомление и полное согласие покупателя с настоящими правилами, а также согласие на получение информационных и рекламных сообщений от интернет-магазина www.donshina.ru.
-              li Компания не несет ответственности за технические сбои, вызванные оборудованием, обеспечивающим работу серверов, каналов связи и абонентских устройств, также организатор не несет ответственности за услуги курьерской службы, осуществляющей доставку Товара.
-              li Доставка товаров, которые участвуют в акции, осуществляется за счет покупателя в соответствии с тарифами курьерской службы, выбранной при оформлении заказа. Возврат товара осуществляется за счет покупателя.
-              li Время обработки заказа может увеличиться до 2 (двух) дней.
-            .content__footer
-              button.readmore.readmore_btn.readmore_arrow-down(type="button")
-
-    .section.mb-3
-      .section__title Товары участвующие в акции:
+    .mb-3
+      .h2.font-weight-bold.mb-4 Товары участвующие в акции:
       include category/carousel.pug
 
     include base/subscribe.pug
 
-    .section
-      .content.content_expanded
-        include base/content.pug
-        .content__footer
-          button.readmore.readmore_btn.readmore_arrow-down(type="button")
+    .content.content_expanded.mb-5(itemprop="text")
+      include base/content.pug
+      .content__footer
+        button.readmore.readmore_btn(type="button")
+          +icon('readmore','h2 color-theme-brand')

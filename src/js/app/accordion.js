@@ -1,19 +1,22 @@
 let accordionArr = [];
 const accordion = document.querySelectorAll('.accordion');
+const mapsArr = Array.from(document.querySelectorAll('.map'));
 accordion.forEach(accordionEl => {
   accordionArr.push(accordionEl);
   accordionEl.querySelector('.accordion__header').addEventListener('click', (e) => {
+    const accordionTarget = e.target.getAttribute('data-target');
     accordionArr.forEach(accordionArrEl => {
       if(accordionArrEl == e.target.closest('.accordion')) {
         accordionArrEl.classList.toggle('active');
-        if (!accordionArrEl.querySelector('.accordion__body').style.height) {
-          accordionArrEl.querySelector('.accordion__body').style.height = accordionArrEl.querySelector('.accordion__body').scrollHeight + 'px';
-        } else {
-          accordionArrEl.querySelector('.accordion__body').style.height = null;
-        }
       } else {
         accordionArrEl.classList.remove('active');
-        accordionArrEl.querySelector('.accordion__body').style.height = null;
+      }
+    });
+    mapsArr.forEach(mapsArrEl => {
+      if(mapsArrEl.id == accordionTarget) {
+        mapsArrEl.classList.add('active');
+      } else {
+        mapsArrEl.classList.remove('active');
       }
     });
   });
