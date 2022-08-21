@@ -10,12 +10,13 @@ block btns
     span.pointer-events-none Каталог
 
 block profile
-  nav.header__nav.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-4
-    button.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap.d-lg-none(type="button")
-      span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-        +icon('search')
-      span.header__nav-caption Поиск
-    .pos-rel.col-lg-3
+  nav.header__nav.header__nav_type_panel.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-4
+    .header__nav-col.d-flex.d-xl-none.justify-content-center.px-1
+      button.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(type="button")
+        span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
+          +icon('search')
+        span.header__nav-caption Поиск
+    .header__nav-col.col-xl-3
       a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
         span.d-flex.align-items-center.justify-content-center.pos-rel
           span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center.mr-md-1
@@ -35,7 +36,7 @@ block profile
               br
               | покупки
             button.button.text-uppercase(type="button") Сравнить
-    .pos-rel.col-lg-3
+    .header__nav-col.col-xl-3
       a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
         span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
           +icon('car','color-theme-success')
@@ -47,7 +48,7 @@ block profile
           .d-flex.align-items-center.justify-content-between
             button.popup__close.button.button_nobg.px-0(type="button") Позже
             a.button.font-weight-bold.px-3(href="#") ОК
-    .pos-rel.col-lg-3
+    .header__nav-col.col-xl-3
       a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
         span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
           +icon('case')
@@ -68,7 +69,7 @@ block profile
               label.form__label.form__label_title +7 (___) ___-__-__
           .d-flex.align-items-center.justify-content-end
             button.button.text-uppercase(type="submit") Отправить
-    .pos-rel.col-lg-3
+    .header__nav-col.col-xl-3
       a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
         span.d-flex.align-items-center.justify-content-center
           span.header__nav-icon.header__nav-icon_feature_bonus.d-flex.flex-column.align-items-center.justify-content-center.mr-md-1
@@ -79,10 +80,11 @@ block profile
         span.header__nav-caption.button-unstyled Сергей | выход
   .pos-rel
     .d-flex.align-items-center.justify-content-center
-      button.header__btn.header__btn_type_cart-holder.header__btn_inverse(type="button" data-target="#cart")
-        +icon('cart','header__btn-icon header__btn-icon_show zi-2')
-        +icon('close','header__btn-icon header__btn-icon_close zi-2 mr-md-2')
-        span.header__btn-caption.color-theme-white.text-uppercase.pointer-events-none.zi-2.d-none.d-sm-block Корзина
+      button.header__btn.header__btn_type_cart.header__btn_type_cart-holder(type="button" data-target="#cart")
+        span.header__icon-holder.d-flex.flex-column.align-items-center.justify-content-center.zi-2
+          +icon('cart','icon-fluid header__btn-icon header__btn-icon_show')
+          +icon('close','icon-fluid header__btn-icon header__btn-icon_close')
+        span.header__btn-title.header__btn-title_type_caption Корзина
       .header__cart-data.d-flex.flex-column.justify-content-between.zi-2
         a.header__counter.d-flex.align-items-center.justify-content-center.h6.bg-theme-success.color-theme-white.rounded-pill.px-md-2.mb-1(href="#")
           span.font-weight-bold.mr-md-1 3

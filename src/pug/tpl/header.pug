@@ -206,7 +206,7 @@ header.header.header_bottom
                     button.panel__toggler.d-flex.align-items-center.d-xl-none.px-3.py-2.border-bottom(type="button")
                       +icon('arrow-left','h6 color-theme-brand pl-3 mr-2')
                       span.h5 Назад
-    .header__panel.col-xl-8.col-lg-7.d-flex.flex-wrap.align-items-center.mb-lg-3
+    .header__panel.col-xl-8.col-lg-7.d-flex.align-items-center.mb-lg-3
       .header__col.header__col_search.header__col_search_wide
         form.header__search(action="#" method="post")
           input.header__search-field(type="text" placeholder="Я ищу..." value="")
@@ -287,37 +287,39 @@ header.header.header_bottom
               a.h5.d-block.mb-4(href="#") Шины на газель
               a.h5.d-block.mb-4(href="#") Шипованые шины
               a.h5.d-block(href="#") Автошторки
-      .header__col.header__col_nav.flex-grow-1.flex-xl-grow-0
+      .header__col.header__col_nav.d-flex.align-items-center.flex-lg-grow-1.flex-xl-grow-0
         block profile
-          nav.header__nav.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-4
-            button.header__nav-item.header__nav-item_type_col.header__nav-item_search.d-flex.flex-column.text-center.text-nowrap.d-xl-none(type="button")
-              span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center.pointer-events-none
-                +icon('search')
-              span.header__nav-caption.pointer-events-none Поиск
-            .pos-rel.col-xl-3
+          nav.header__nav.header__nav_type_panel.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-4
+            .header__nav-col.d-flex.d-xl-none.justify-content-center.px-1
+              button.header__nav-item.header__nav-item_type_col.header__nav-item_search.d-flex.flex-column.text-center.text-nowrap(type="button")
+                span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center.pointer-events-none
+                  +icon('search')
+                span.header__nav-caption.pointer-events-none Поиск
+            .header__nav-col.col-xl-3
               a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
                 span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                   +icon('compare')
                 span.header__nav-caption Сравнить
-            .pos-rel.col-xl-3
+            .header__nav-col.col-xl-3
               a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
                 span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                   +icon('car')
                 span.header__nav-caption Выбор авто
-            .pos-rel.col-xl-3
+            .header__nav-col.col-xl-3
               a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
                 span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                   +icon('case')
                 span.header__nav-caption Заказы
-            .pos-rel.col-xl-3
+            .header__nav-col.col-xl-3
               .header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(data-toggle="modal" data-target="#auth-phone")
                 .header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                   +icon('user')
-                span.header__nav-caption.button-unstyled  Вход | регистрация
-
+                span.header__nav-caption Вход | регистрация
           .pos-rel
-            a.header__btn.header__btn_inverse(href="#")
-              +icon('cart','header__btn-icon d-block')
+            a.header__btn.header__btn_type_cart(href="#")
+              span.header__icon-holder.d-flex.flex-column.align-items-center.justify-content-center
+                +icon('cart')
+              span.header__btn-title.header__btn-title_type_caption Корзина
 
 nav.topmenu
   .topmenu__wrapper.wrapper.swiper-container
