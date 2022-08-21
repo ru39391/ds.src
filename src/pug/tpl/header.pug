@@ -1,11 +1,11 @@
 .icons.d-none
 .header.header_top
   .wrapper.d-flex.flex-wrap.align-items-center
-    .col-xl-6.col-lg-12.col-8.d-flex.align-items-center.justify-content-xl-start.justify-content-lg-between.mb-xl-0.mb-lg-2
-      .contacts.d-flex.align-items-center.justify-content-lg-between.col-xl-7.col-lg-5.w-auto.px-0
-        .contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4
+    .col-xl-6.col-lg-12.col-md-8.d-flex.align-items-center.justify-content-xl-start.justify-content-lg-between.px-0.px-lg-1.mb-xl-0.mb-lg-2
+      .contacts.d-flex.align-items-center.justify-content-between.flex-grow-1.flex-md-grow-0.col-xl-7.col-lg-5.w-auto.px-0
+        .contacts__item.contacts__item_fs_sm.d-flex.align-items-center.h5.text-nowrap.mr-4
           +icon('placemark','contacts__icon h3 color-theme-brand mr-lg-2')
-          span.d-none.d-lg-block г. Ростов-на-Дону
+          span.d-md-none.d-lg-block г. Ростов-на-Дону
         a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4(href="#")
           +icon('phone','contacts__icon h3 color-theme-brand mr-lg-2')
           span.d-none.d-lg-block +7 (863) 22-99-99-4
@@ -19,7 +19,7 @@
         a.header__nav-item.mr-4(href="#") Скидки и акции
         a.header__nav-item.mr-4(href="#") Бонусные рубли
         a.header__nav-item(href="#") Контакты
-    .col-xl-1.col-lg-2.col-4.d-flex.align-items-xl-start.justify-content-end
+    .col-xl-1.col-lg-2.col-md-4.d-none.d-md-flex.align-items-xl-start.justify-content-end
       .menu
         button.menu__title.theme-hover.d-flex.align-items-center.zi-2(type="button")
           span.mr-1 Помощь
@@ -36,18 +36,19 @@
 
 header.header.header_bottom
   .header__wrapper.wrapper.d-flex.align-items-center
-    .header__col.header__col_logo.col-xl-4.col-lg-5.mb-3
-      a.logo.color-theme-brand.mr-4(href="#")
+    .header__col.header__col_logo.justify-content-between.justify-content-lg-start.col-xl-4.col-lg-5.px-0.px-lg-1
+      a.logo.logo_place_header.color-theme-brand.mr-4(href="#")
         +svg('logo')
       nav.header__nav.d-flex.align-items-center.justify-content-center
-        button.header__btn.header__btn_type_toggler.text-uppercase.mr-3(type="button" data-target="#categories")
-          +icon('menu','header__btn-icon header__btn-icon_show mr-sm-2')
-          +icon('close','header__btn-icon header__btn-icon_close mr-sm-2')
-          span.d-none.d-sm-block.pointer-events-none Каталог
-        button.header__btn.header__btn_type_toggler.text-uppercase(type="button" data-target="#services")
-          +icon('services','header__btn-icon header__btn-icon_show mr-sm-2')
-          +icon('close','header__btn-icon header__btn-icon_close mr-sm-2')
-          span.d-none.d-sm-block.pointer-events-none Услуги
+        block btns
+          button.header__btn.header__btn_type_toggler.text-uppercase.mr-3(type="button" data-target="#categories")
+            +icon('menu','header__btn-icon header__btn-icon_show')
+            +icon('close','header__btn-icon header__btn-icon_close')
+            span.header__btn-title Каталог
+          button.header__btn.header__btn_type_toggler.text-uppercase(type="button" data-target="#services")
+            +icon('services','header__btn-icon header__btn-icon_show')
+            +icon('close','header__btn-icon header__btn-icon_close')
+            span.header__btn-title Услуги
         .panel
           #services.panel__wrapper
             button.panel__close.d-flex.align-items-center.d-xl-none.bg-theme-brand.color-theme-white(type="button")
@@ -205,7 +206,7 @@ header.header.header_bottom
                     button.panel__toggler.d-flex.align-items-center.d-xl-none.px-3.py-2.border-bottom(type="button")
                       +icon('arrow-left','h6 color-theme-brand pl-3 mr-2')
                       span.h5 Назад
-    .col-xl-8.col-lg-7.d-flex.flex-wrap.align-items-center.mb-3
+    .header__panel.col-xl-8.col-lg-7.d-flex.flex-wrap.align-items-center.mb-lg-3
       .header__col.header__col_search.header__col_search_wide
         form.header__search(action="#" method="post")
           input.header__search-field(type="text" placeholder="Я ищу..." value="")
@@ -289,30 +290,30 @@ header.header.header_bottom
       .header__col.header__col_nav.flex-grow-1.flex-xl-grow-0
         block profile
           nav.header__nav.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-4
-            button.header__nav-item.header__nav-item_col.header__nav-item_search.d-flex.flex-column.text-center.text-nowrap.d-xl-none(type="button")
+            button.header__nav-item.header__nav-item_type_col.header__nav-item_search.d-flex.flex-column.text-center.text-nowrap.d-xl-none(type="button")
               span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center.pointer-events-none
                 +icon('search')
-              span.header__btn-title.pointer-events-none Поиск
+              span.header__nav-caption.pointer-events-none Поиск
             .pos-rel.col-xl-3
-              a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap(href="#")
+              a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
                 span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                   +icon('compare')
-                span.header__btn-title Сравнить
+                span.header__nav-caption Сравнить
             .pos-rel.col-xl-3
-              a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap(href="#")
+              a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
                 span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                   +icon('car')
-                span.header__btn-title Выбор авто
+                span.header__nav-caption Выбор авто
             .pos-rel.col-xl-3
-              a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap(href="#")
+              a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
                 span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                   +icon('case')
-                span.header__btn-title Заказы
+                span.header__nav-caption Заказы
             .pos-rel.col-xl-3
-              .header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap(data-toggle="modal" data-target="#auth-phone")
+              .header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(data-toggle="modal" data-target="#auth-phone")
                 .header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
                   +icon('user')
-                span.header__btn-title.button-unstyled  Вход | регистрация
+                span.header__nav-caption.button-unstyled  Вход | регистрация
 
           .pos-rel
             a.header__btn.header__btn_inverse(href="#")

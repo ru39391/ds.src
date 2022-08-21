@@ -3,19 +3,25 @@ extends personal
 block meta
   - var title = 'Данные пользователя';
 
+block btns
+  button.header__btn.header__btn_type_toggler.text-uppercase(type="button" data-target="#categories")
+    +icon('menu','header__btn-icon header__btn-icon_show mr-2')
+    +icon('close','header__btn-icon header__btn-icon_close mr-2')
+    span.pointer-events-none Каталог
+
 block profile
   nav.header__nav.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-4
-    button.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap.d-lg-none(type="button")
+    button.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap.d-lg-none(type="button")
       span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
         +icon('search')
-      span.header__btn-title Поиск
+      span.header__nav-caption Поиск
     .pos-rel.col-lg-3
-      a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap(href="#")
+      a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
         span.d-flex.align-items-center.justify-content-center.pos-rel
           span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center.mr-md-1
             +icon('compare')
           span.header__counter.header__counter_value_compare.d-flex.align-items-center.justify-content-center.h6.bg-theme-success.color-theme-white.rounded-circle 3
-        span.header__btn-title Сравнить
+        span.header__nav-caption Сравнить
       .popup.popup_width_md.popup_pos_left.box-shadow.border-radius.d-block
         .popup__triangle.bg-theme-white.box-shadow
         .bg-theme-white.border-radius.overflow-hidden.zi-2.px-4.py-3
@@ -30,10 +36,10 @@ block profile
               | покупки
             button.button.text-uppercase(type="button") Сравнить
     .pos-rel.col-lg-3
-      a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap(href="#")
+      a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
         span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
           +icon('car','color-theme-success')
-        span.header__btn-title HYUNDAI Accent
+        span.header__nav-caption HYUNDAI Accent
       .popup.box-shadow.border-radius.d-block
         .popup__triangle.bg-theme-white.box-shadow
         .bg-theme-white.border-radius.overflow-hidden.zi-2.pt-4.pb-3.px-4
@@ -42,10 +48,10 @@ block profile
             button.popup__close.button.button_nobg.px-0(type="button") Позже
             a.button.font-weight-bold.px-3(href="#") ОК
     .pos-rel.col-lg-3
-      a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap(href="#")
+      a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
         span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
           +icon('case')
-        span.header__btn-title Заказы
+        span.header__nav-caption Заказы
       .popup.popup_width_md.popup_pos_left.box-shadow.border-radius.d-block
         .popup__triangle.bg-theme-white.box-shadow
         form.bg-theme-white.border-radius.overflow-hidden.zi-2.px-4.py-3(action="#")
@@ -63,14 +69,14 @@ block profile
           .d-flex.align-items-center.justify-content-end
             button.button.text-uppercase(type="submit") Отправить
     .pos-rel.col-lg-3
-      a.header__nav-item.header__nav-item_col.d-flex.flex-column.text-center.text-nowrap(href="#")
+      a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
         span.d-flex.align-items-center.justify-content-center
           span.header__nav-icon.header__nav-icon_feature_bonus.d-flex.flex-column.align-items-center.justify-content-center.mr-md-1
             +icon('user')
           span.header__counter.d-none.d-md-flex.align-items-center.justify-content-center.h6.bg-theme-success.color-theme-white.rounded-pill.px-2
             span.font-weight-bold.mr-1 300
             | Б.₽.
-        span.header__btn-title.button-unstyled Сергей | выход
+        span.header__nav-caption.button-unstyled Сергей | выход
   .pos-rel
     .d-flex.align-items-center.justify-content-center
       button.header__btn.header__btn_type_cart-holder.header__btn_inverse(type="button" data-target="#cart")
