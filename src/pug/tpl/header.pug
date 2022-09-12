@@ -1,12 +1,15 @@
 .icons.d-none
-.header.header_top
-  .wrapper.d-flex.flex-wrap.align-items-center
-    .col-xl-6.col-lg-12.col-md-8.d-flex.align-items-center.justify-content-xl-start.justify-content-lg-between.px-0.px-lg-1.mb-xl-0.mb-lg-2
-      .contacts.d-flex.align-items-center.justify-content-between.flex-grow-1.flex-md-grow-0.col-xl-7.col-lg-5.w-auto.px-0
-        .contacts__item.contacts__item_fs_sm.d-flex.align-items-center.h5.text-nowrap.mr-4
+
+//- include top-panel
+
+.top-panel
+  .top-panel__wrapper.wrapper
+    .top-panel__contacts.col-xl-6.col-lg-12.col-md-8.px-0.px-lg-1.mb-xl-0.mb-lg-2
+      .contacts.contacts_type_row.col-xl-7.col-lg-5.flex-grow-1.flex-md-grow-0.w-auto.px-0
+        .contacts__item.contacts__item_fs_sm.text-nowrap.mr-4
           +icon('placemark','contacts__icon h3 color-theme-brand mr-lg-2')
           span.d-md-none.d-lg-block г. Ростов-на-Дону
-        a.contacts__item.d-flex.align-items-center.h5.text-nowrap.mr-4(href="#")
+        a.contacts__item.h5.text-nowrap.mr-4(href="#")
           +icon('phone','contacts__icon h3 color-theme-brand mr-lg-2')
           span.d-none.d-lg-block +7 (863) 22-99-99-4
       nav.social.d-flex.align-items-center
@@ -14,25 +17,24 @@
           +icon('wapp-filled','h3')
         a.social__item.color-theme-brand(href="#")
           +icon('tg-filled','h3')
-    .col-xl-5.col-lg-10.d-none.d-lg-block
-      nav.header__nav.d-flex.align-items-center.justify-content-xl-end
-        a.header__nav-item.mr-4(href="#") Скидки и акции
-        a.header__nav-item.mr-4(href="#") Бонусные рубли
-        a.header__nav-item(href="#") Контакты
-    .col-xl-1.col-lg-2.col-md-4.d-none.d-md-flex.align-items-xl-start.justify-content-end
-      .menu
-        button.menu__title.theme-hover.d-flex.align-items-center.zi-2(type="button")
-          span.mr-1 Помощь
-          +icon('dropdown','menu__icon h6')
-        .menu__wrapper.pt-2
-          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") О компании
-          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Новости
-          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Статьи
-          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Вопросы и ответы
-          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Оплата и доставка
-          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Кредит
-          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") КупиВкредит
-          a.h6.d-block.theme-hover.zi-2.mb-2(href="#") Политика конфиденциальности
+    nav.top-panel__nav.col-xl-5.col-lg-10
+      a.mr-4(href="#") Скидки и акции
+      a.mr-4(href="#") Бонусные рубли
+      a(href="#") Контакты
+    nav.navbar.col-xl-1.col-lg-2.col-md-4
+      button.navbar__title(type="button")
+        span.mr-1 Помощь
+        +icon('dropdown','navbar__icon h6')
+      .navbar__wrapper.pt-2
+        a.navbar__link.mb-2(href="#") О компании
+        a.navbar__link.mb-2(href="#") Новости
+        a.navbar__link.mb-2(href="#") Статьи
+        a.navbar__link.mb-2(href="#") Вопросы и ответы
+        a.navbar__link.mb-2(href="#") Оплата и доставка
+        a.navbar__link.mb-2(href="#") Кредит
+        a.navbar__link.mb-2(href="#") КупиВкредит
+        a.navbar__link.mb-2(href="#") Политика конфиденциальности
+
 
 header.header.header_bottom
   .header__wrapper.wrapper.d-flex.align-items-center

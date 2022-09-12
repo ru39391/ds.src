@@ -103,7 +103,7 @@
 .form__toggler {
   & + .error + .form__label,
   & + .form__label {
-    @extend %flex-item;
+    @extend %d-flex-ai-center;
   }
 
   &.form__toggler_checkbox {
@@ -112,7 +112,7 @@
     & + .error + .form__label,
     & + .form__label {
       .form__label-icon {
-        @extend %flex-column;
+        @extend %d-flex-column;
         @include fw(24px);
         @include wh(24px);
         @include offset(0 .5rem 0 0,.125rem .25rem);

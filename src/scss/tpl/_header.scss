@@ -68,7 +68,7 @@
 
 .header__col {
   &.header__col_logo {
-    @extend %flex-item;
+    @extend %d-flex-ai-center;
 
     @include media-breakpoint-up(md) {
       margin-bottom: 1rem;
@@ -173,7 +173,7 @@
 .header__btn {
   @extend %btn-default;
   @extend %btn-theme;
-  @extend %flex-item;
+  @extend %d-flex-ai-center;
   padding: .5rem .688rem;
   letter-spacing: .03em;
 

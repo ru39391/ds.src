@@ -73,7 +73,7 @@
 }
 
 .card__meta {
-  @extend %flex-column;
+  @extend %d-flex-column;
   position: absolute;
   top: 0;
   bottom: 24px;
@@ -139,7 +139,7 @@
   transition: all .3s ease;
 
   &.card__btn_icon {
-    @extend %flex-item;
+    @extend %d-flex-ai-center;
     justify-content: flex-start;
     overflow: hidden;
     white-space: nowrap;
@@ -170,7 +170,7 @@
   }
 
   &.card__btn_link {
-    @extend %flex-item;
+    @extend %d-flex-ai-center;
     justify-content: center;
     color: $color__text_default;
     transition: all .3s ease;
@@ -203,7 +203,7 @@
 }
 
 .card__features {
-  @extend %flex-item;
+  @extend %d-flex-ai-center;
 
   &.card__features_col {
     position: absolute;
@@ -227,7 +227,7 @@
     }
 
     .card__features-item {
-      @extend %flex-item;
+      @extend %d-flex-ai-center;
       @include wh(auto,26px);
       flex: 0 0 auto;
       max-width: initial;
