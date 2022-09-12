@@ -2,4 +2,11 @@
   @include inline-block;
   @include fw(100px);
   @include wh(100px,48px);
+
+  &.logo_place_header {
+    @include media-breakpoint-down(md) {
+      @include fw(60px);
+      @include wh(60px,30px);
+    }
+  }
 }

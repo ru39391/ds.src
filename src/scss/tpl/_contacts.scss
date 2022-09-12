@@ -1,3 +1,11 @@
+.contacts__item {
+  &.contacts__item_fs_sm {
+    @include media-breakpoint-down(sm) {
+      @include h6;
+    }
+  }
+}
+
 .contacts__icon {
   @include fw(20px);
   //@include wh(20px);

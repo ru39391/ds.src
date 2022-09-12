@@ -3,8 +3,12 @@
     padding: 2.5rem 0;
   }
 
+  @include media-breakpoint-only(md) {
+    padding-bottom: 6.25rem;
+  }
+
   @include media-breakpoint-down(sm) {
-    padding: 2.5rem 1rem 3rem;
+    padding: 2.5rem 1rem 6.75rem;
   }
 }
 
