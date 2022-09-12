@@ -1,0 +1,5 @@
+.search-panel {
+  @include media-breakpoint-up(xl) {
+    @include fw(100%/8*3);
+  }
+}

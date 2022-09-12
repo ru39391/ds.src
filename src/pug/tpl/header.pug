@@ -1,7 +1,5 @@
 .icons.d-none
 
-//- include top-panel
-
 .top-panel
   .top-panel__wrapper.wrapper
     .top-panel__contacts.col-xl-6.col-lg-12.col-md-8.px-0.px-lg-1.mb-xl-0.mb-lg-2
@@ -35,6 +33,7 @@
         a.navbar__link.mb-2(href="#") КупиВкредит
         a.navbar__link.mb-2(href="#") Политика конфиденциальности
 
+include top-panel
 
 header.header.header_bottom
   .header__wrapper.wrapper.d-flex.align-items-center
@@ -327,25 +326,25 @@ nav.topmenu
   .topmenu__wrapper.wrapper.swiper-container
     ul.swiper-wrapper.justify-content-between(itemscope itemtype="https://schema.org/SiteNavigationElement")
       li.swiper-slide.w-auto
-        a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+        a.topmenu__link.mr-3(href="#" itemprop="url")
           span(itemprop="name") Автошины
       li.swiper-slide.w-auto
-        a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+        a.topmenu__link.mr-3(href="#" itemprop="url")
           span(itemprop="name") Мотошины
       li.swiper-slide.w-auto
-        a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+        a.topmenu__link.mr-3(href="#" itemprop="url")
           span(itemprop="name") Диски
       li.swiper-slide.w-auto
-        a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+        a.topmenu__link.mr-3(href="#" itemprop="url")
           span(itemprop="name") Аккумуляторы
       li.swiper-slide.w-auto
-        a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+        a.topmenu__link.mr-3(href="#" itemprop="url")
           span(itemprop="name") Масла
       li.swiper-slide.w-auto
-        a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+        a.topmenu__link.mr-3(href="#" itemprop="url")
           span(itemprop="name") Автотовары
       li.swiper-slide.w-auto
-        a.theme-hover.d-inline-block.mr-3(href="#" itemprop="url")
+        a.topmenu__link.mr-3(href="#" itemprop="url")
           span(itemprop="name") Шиномонтаж
 
 block filter

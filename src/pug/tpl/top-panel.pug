@@ -1,0 +1,45 @@
+header.header
+  .header__wrapper.wrapper
+    .header__col.header__col_side_left.col-xl-4.col-lg-5.px-0.px-lg-1
+      a.logo.logo_place_header.color-theme-brand.mr-4(href="#")
+        +svg('logo')
+      .header__togglers
+        block btns
+          button.header__btn.header__btn_type_toggler.text-uppercase.mr-3(type="button" data-target="#categories")
+            +icon('menu','header__btn-icon header__btn-icon_show')
+            +icon('close','header__btn-icon header__btn-icon_close')
+            span.header__btn-title Каталог
+          button.header__btn.header__btn_type_toggler.text-uppercase(type="button" data-target="#services")
+            +icon('services','header__btn-icon header__btn-icon_show')
+            +icon('close','header__btn-icon header__btn-icon_close')
+            span.header__btn-title Услуги
+    .header__col.header__col_side_right.col-xl-8.col-lg-7.mb-lg-3
+      .search-panel
+      .header__bottom-panel
+        block profile
+          .header__navbar.mr-4
+            button.header__navbar-item.header__navbar-item_toggler_search(type="button")
+              span.header__navbar-icon
+                +icon('search')
+              span.header__navbar-caption Поиск
+            a.header__navbar-item(href="#")
+              span.header__navbar-icon
+                +icon('compare')
+              span.header__navbar-caption Сравнить
+            a.header__navbar-item(href="#")
+              span.header__navbar-icon
+                +icon('car')
+              span.header__navbar-caption Выбор авто
+            a.header__navbar-item(href="#")
+              span.header__navbar-icon
+                +icon('case')
+              span.header__navbar-caption Заказы
+            button.header__navbar-item(data-toggle="modal" data-target="#auth-phone")
+              span.header__navbar-icon
+                +icon('user')
+              span.header__navbar-caption Вход | регистрация
+          .header__aside
+            a.header__btn(href="#")
+              span.header__btn-icon.header__btn-icon_type_holder
+                +icon('cart')
+              span.header__btn-title Корзина

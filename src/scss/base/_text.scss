@@ -59,7 +59,5 @@ a {
 }
 
 .text-oneline {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  @extend %text-oneline;
 }
