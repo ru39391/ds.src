@@ -35,7 +35,7 @@
 
 include top-panel
 
-header.header.header_bottom
+header.header.header_bottom.d-none
   .header__wrapper.wrapper.d-flex.align-items-center
     .header__col.header__col_logo.justify-content-between.justify-content-lg-start.col-xl-4.col-lg-5.px-0.px-lg-1
       a.logo.logo_place_header.color-theme-brand.mr-4(href="#")
@@ -207,7 +207,7 @@ header.header.header_bottom
                     button.panel__toggler.d-flex.align-items-center.d-xl-none.px-3.py-2.border-bottom(type="button")
                       +icon('arrow-left','h6 color-theme-brand pl-3 mr-2')
                       span.h5 Назад
-    .header__panel.col-xl-8.col-lg-7.d-flex.align-items-center.mb-lg-3
+    .header__panel.col-xl-8.col-lg-7.d-none.d--flex.align-items-center.mb-lg-3
       .header__col.header__col_search.header__col_search_wide
         form.header__search(action="#" method="post")
           input.header__search-field(type="text" placeholder="Я ищу..." value="")

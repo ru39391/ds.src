@@ -2,4 +2,8 @@
   @include media-breakpoint-up(xl) {
     @include fw(100%/8*3);
   }
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
 }

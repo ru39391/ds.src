@@ -13,11 +13,11 @@ header.header
             +icon('services','header__btn-icon header__btn-icon_show')
             +icon('close','header__btn-icon header__btn-icon_close')
             span.header__btn-title Услуги
-    .header__col.header__col_side_right.col-xl-8.col-lg-7.mb-lg-3
+    .header__col.header__col_side_right.col-xl-8.col-lg-7
       .search-panel
       .header__bottom-panel
         block profile
-          .header__navbar.mr-4
+          .header__navbar.mr-lg-4
             button.header__navbar-item.header__navbar-item_toggler_search(type="button")
               span.header__navbar-icon
                 +icon('search')
@@ -39,7 +39,7 @@ header.header
                 +icon('user')
               span.header__navbar-caption Вход | регистрация
           .header__aside
-            a.header__btn(href="#")
+            a.header__btn.header__btn_place_panel(href="#")
               span.header__btn-icon.header__btn-icon_type_holder
                 +icon('cart')
               span.header__btn-title Корзина
