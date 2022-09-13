@@ -30,7 +30,6 @@ menuTitle.addEventListener('click', e => {
 });
 
 document.body.addEventListener('click', e => {
-  console.log(!e.target.closest(menuSel), menuTitle.classList.contains(menuTitleActiveClass));
   if(!e.target.closest(menuSel) && menuTitle.classList.contains(menuTitleActiveClass)) {
     hideMenu(menuTitle, menuTitleActiveClass);
   }

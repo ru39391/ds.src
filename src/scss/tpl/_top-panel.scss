@@ -14,6 +14,10 @@
 .top-panel__contacts {
   @extend %d-flex-ai-center;
 
+  @include media-breakpoint-down(lg) {
+    margin-bottom: .5rem;
+  }
+
   @include media-breakpoint-only(lg) {
     justify-content: space-between;
   }
