@@ -1,12 +1,43 @@
 .icons.d-none
 
-.top-panel
+.top-panel.popup-holder
   .top-panel__wrapper.wrapper
     .top-panel__contacts.col-xl-6.col-lg-12.col-md-8.px-0.px-lg-1
       .contacts.contacts_type_row.col-xl-7.col-lg-5.flex-grow-1.flex-md-grow-0.w-auto.px-0
-        .contacts__item.contacts__item_fs_sm.text-nowrap.mr-4
+        .contacts__item.contacts__item_fs_sm.text-nowrap.popup-toggler.mr-4(data-target="#location")
           +icon('placemark','contacts__icon h3 color-theme-brand mr-lg-2')
-          span.d-md-none.d-lg-block г. Ростов-на-Дону
+          span.theme-hover.d-md-none.d-lg-block.pointer-events-none г. Ростов-на-Дону
+          #location.popup.popup_width_md.popup_type_plain.popup_pos_left.box-shadow.border-radius
+            .popup__triangle.bg-theme-white.box-shadow
+            button.popup__close.popup__close_type_btn.button-unstyled.rounded-circle.bg-theme-white(type="button")
+              +icon('close','h3 color-theme-brand')
+            .search-holder.bg-theme-white.border-radius.overflow-hidden.zi-2.px-4.pt-4.pb-2
+              .d-flex.align-items-start.justify-content-between.mb-4
+                .h5.text-left.color-theme-brand Выберите свой город и пользоваться сайтом станет удобнее
+              form.search.search_border_rounded(action="#" method="post")
+                input.search__field(type="text" value="" placeholder="Я ищу...")
+                button.search__btn.search__btn_type_reset(type="reset")
+                  +icon('close-noborder')
+                button.search__btn.search__btn_type_submit(type="submit")
+                  +icon('search','h4')
+              .search-dropdown.search-dropdown_pos_stat
+                .search-dropdown__wrapper
+                  .search-dropdown__section
+                    a.h5.d-block.mb-3(href="#") Санкт-Петербург (Ленинградская обл.)
+                    a.h5.d-block.mb-3(href="#") Самара (Самарская обл.)
+                    a.h5.d-block.mb-3(href="#") Самарское (Ростовская обл.)
+                    a.h5.d-block.mb-3(href="#") Саратов (Саратовская обл.)
+                    a.h5.d-block.mb-3(href="#") Саранск (Нижегородская обл.)
+                    a.h5.d-block(href="#") Сальск (Ростовская обл.)
+              .row.mt-4
+                .col-6.mb-4
+                  a.h6(href="#") Ростов-на-Дону
+                .col-6.mb-4
+                  a.h6(href="#") Краснодар
+                .col-6.mb-4
+                  a.h6(href="#") Сочи
+                .col-6.mb-4
+                  a.h6(href="#") Ставрополь
         a.contacts__item.h5.text-nowrap.mr-4(href="#")
           +icon('phone','contacts__icon h3 color-theme-brand mr-lg-2')
           span.d-none.d-lg-block +7 (863) 22-99-99-4
@@ -204,7 +235,7 @@ header.header
                     button.panel__toggler(type="button")
                       +icon('arrow-left','h6 color-theme-brand pl-3 mr-2')
                       span.h5 Назад
-    .header__col.header__col_side_right.col-xl-8.col-lg-7
+    .header__col.header__col_side_right.search-holder.col-xl-8.col-lg-7
       .search-panel
         .search-panel__wrapper
           button.panel-close-btn(type="button")
@@ -216,75 +247,75 @@ header.header
               +icon('close-noborder')
             button.search__btn.search__btn_type_submit(type="submit")
               +icon('search','h4')
-          .search-panel__dropdown-holder
-            .search-panel__dropdown
-              .search-panel__section
-                .search-panel__row.mb-2
-                  .search-panel__picture.mr-2
+          .search-dropdown
+            .search-dropdown__wrapper
+              .search-dropdown__section
+                .search-dropdown__row.mb-2
+                  .search-dropdown__picture.mr-2
                     a(href="#")
                       +img('content/cards/card-1.jpg')
-                  .search-panel__desc.flex-grow-1
+                  .search-dropdown__desc.flex-grow-1
                     a.h5.d-block.mb-1(href="#") Зимние шины Nokian Nordman 5 195/65 R15 95T XL
                     span.h6.color-theme-disabled 3 630.90 ₽
-                .search-panel__row.mb-2
-                  .search-panel__picture.mr-2
+                .search-dropdown__row.mb-2
+                  .search-dropdown__picture.mr-2
                     a(href="#")
                       +img('content/cards/card-1.jpg')
-                  .search-panel__desc.flex-grow-1
+                  .search-dropdown__desc.flex-grow-1
                     a.h5.d-block.mb-1(href="#") Летние шины Nokian Nordman SX2 195/65 R15 91H
                     span.h6.color-theme-disabled 3 630.90 ₽
-                .search-panel__row.mb-2
-                  .search-panel__picture.mr-2
+                .search-dropdown__row.mb-2
+                  .search-dropdown__picture.mr-2
                     a(href="#")
                       +img('content/cards/card-1.jpg')
-                  .search-panel__desc.flex-grow-1
+                  .search-dropdown__desc.flex-grow-1
                     a.h5.d-block.mb-1(href="#") Зимние шины Nokian Nordman 7 195/65 R15 95T XL
                     span.h6.color-theme-disabled 3 630.90 ₽
-                .search-panel__row.mb-2
-                  .search-panel__picture.mr-2
+                .search-dropdown__row.mb-2
+                  .search-dropdown__picture.mr-2
                     a(href="#")
                       +img('content/cards/card-1.jpg')
-                  .search-panel__desc.flex-grow-1
+                  .search-dropdown__desc.flex-grow-1
                     a.h5.d-block.mb-1(href="#") Зимние шины Nokian Nordman RS2 205/55 R16 94R XL
                     span.h6.color-theme-disabled 3 630.90 ₽
-                .search-panel__row.mb-2
-                  .search-panel__picture.mr-2
+                .search-dropdown__row.mb-2
+                  .search-dropdown__picture.mr-2
                     a(href="#")
                       +img('content/cards/card-1.jpg')
-                  .search-panel__desc.flex-grow-1
+                  .search-dropdown__desc.flex-grow-1
                     a.h5.d-block.mb-1(href="#") 185/65/15 NORDMAN RS-2 XL R*
                     span.h6.color-theme-disabled 3 630.90 ₽
                 a.h5.color-theme-brand(href="#") показать все товары (54) &gt;
-              .search-panel__section
-                .search-panel__row.mb-2
-                  .search-panel__picture.mr-2
+              .search-dropdown__section
+                .search-dropdown__row.mb-2
+                  .search-dropdown__picture.mr-2
                     a(href="#")
                       +img('content/cards/card-1.jpg')
-                  .search-panel__desc.flex-grow-1
+                  .search-dropdown__desc.flex-grow-1
                     a.h5.d-block.mb-1(href="#") NOKIAN NORDMAN-7
                     span.h6.color-theme-disabled 3 630.90 ₽
-                .search-panel__row.mb-2
-                  .search-panel__picture.mr-2
+                .search-dropdown__row.mb-2
+                  .search-dropdown__picture.mr-2
                     a(href="#")
                       +img('content/cards/card-1.jpg')
-                  .search-panel__desc.flex-grow-1
+                  .search-dropdown__desc.flex-grow-1
                     a.h5.d-block.mb-1(href="#") NOKIAN RS2
                     span.h6.color-theme-disabled 3 630.90 ₽
-                .search-panel__row.mb-2
-                  .search-panel__picture.mr-2
+                .search-dropdown__row.mb-2
+                  .search-dropdown__picture.mr-2
                     a(href="#")
                       +img('content/cards/card-1.jpg')
-                  .search-panel__desc.flex-grow-1
+                  .search-dropdown__desc.flex-grow-1
                     a.h5.d-block.mb-1(href="#") NOKIAN NORDMAN-7 SUV
                     span.h6.color-theme-disabled 3 630.90 ₽
-                .search-panel__row.mb-2
-                  .search-panel__picture.mr-2
+                .search-dropdown__row.mb-2
+                  .search-dropdown__picture.mr-2
                     a(href="#")
                       +img('content/cards/card-1.jpg')
-                  .search-panel__desc.flex-grow-1
+                  .search-dropdown__desc.flex-grow-1
                     a.h5.d-block.mb-1(href="#") NOKIAN NORDMAN-8
                     span.h6.color-theme-disabled 3 630.90 ₽
-              .search-panel__section
+              .search-dropdown__section
                 a.h5.d-block.mb-4(href="#") Зимние шины
                 a.h5.d-block.mb-4(href="#") Шины для внедорожника
                 a.h5.d-block.mb-4(href="#") Шины на газель
