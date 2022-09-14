@@ -9,7 +9,7 @@
 
 .pagination__item {
   @extend %d-flex-column;
-  @include color($color__brand);
+  @include color($color__blue);
   @include fw(22px);
   @include wh(22px);
   margin: 0 .5rem 0 0;

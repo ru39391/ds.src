@@ -18,12 +18,12 @@
   @include color($color__light);
 }
 
-.color-theme-brand {
-  @include color($color__brand);
+.color-theme-blue {
+  @include color($color__blue);
 }
 
-.color-theme-brand-dark {
-  @include color($color__brand_dark);
+.color-theme-blue-dark {
+  @include color($color__blue_dark);
 }
 
 .color-theme-success {

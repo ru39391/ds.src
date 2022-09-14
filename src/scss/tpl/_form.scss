@@ -28,6 +28,10 @@
     background: #fff;
     border-radius: .5rem;
     box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
+
+    @include media-breakpoint-down(md) {
+      @include px(1rem,0);
+    }
   }
 }
 
@@ -119,7 +123,7 @@
         border-radius: .25rem;
         align-items: center;
         justify-content: center;
-        color: $color__brand;
+        color: $color__blue;
         background: $color__light;
         box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, .16);
 
@@ -197,7 +201,7 @@
     &:checked {
       & + .form__label {
         &:after {
-          background: $color__brand;
+          background: $color__blue;
         }
       }
     }
@@ -211,14 +215,14 @@
     right: 8px;
     bottom: 0;
     width: 16px;
-    color: $color__brand;
+    color: $color__blue;
 
     &:before {
       @include wh(20px,2px);
       right: 2px;
       transform: rotate(-45deg);
       transform-origin: top right;
-      background: $color__brand;
+      background: $color__blue;
 
       @include media-breakpoint-up(md) {
         top: 5px;
@@ -293,7 +297,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: $color__brand;
+        background-color: $color__blue;
       }
     }
   }
@@ -396,7 +400,7 @@
   border-radius: 50%;
   transition: all .3s ease;
   background: #fff;
-  color: $color__brand;
+  color: $color__blue;
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .14);
 
   &.active {
@@ -411,10 +415,10 @@
     border: 0;
     border-radius: 0;
     box-shadow: none;
-    background: $color__brand;
+    background: $color__blue;
 
     .irs-line {
-      background: $color__brand;
+      background: $color__blue;
     }
 
     .noUi-handle {
@@ -424,7 +428,7 @@
       box-shadow: none;
       background: #fff;
       border-radius: 50%;
-      border-color: $color__brand;
+      border-color: $color__blue;
       box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
 
       &.noUi-handle-lower {
@@ -459,7 +463,7 @@
 .irs-line {
   height: 1px;
   display: block;
-  background: $color__brand;
+  background: $color__blue;
 }
 
 .irs-handle {
@@ -470,7 +474,7 @@
   box-shadow: none;
   background: #fff;
   border-radius: 50%;
-  border-color: $color__brand;
+  border-color: $color__blue;
   box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .16);
 }
 

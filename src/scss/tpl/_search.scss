@@ -48,33 +48,33 @@
 
   &::-webkit-input-placeholder {
     opacity: .2;
-    color: $color__brand;
+    color: $color__blue;
   }
 
   &::-moz-placeholder {
     opacity: .2;
-    color: $color__brand;
+    color: $color__blue;
   }
 
   &:-ms-input-placeholder {
     opacity: .2;
-    color: $color__brand;
+    color: $color__blue;
   }
 
   &:-moz-placeholder {
     opacity: .2;
-    color: $color__brand;
+    color: $color__blue;
   }
 }
 
 .search__btn {
   @extend %btn-default;
   @include fw(18px);
-  color: $color__brand;
+  color: $color__blue;
 
   &.search__btn_type_reset {
     @include fw(24px);
-    @include border(0 1px 0 0,$color__brand);
+    @include border(0 1px 0 0,$color__blue);
     @include offset(0 .625rem 0 0,0 .625rem 0 0);
     opacity: 0;
     pointer-events: none;

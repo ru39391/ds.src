@@ -56,8 +56,8 @@ block wrapper
     ul
       li.h3.font-weight-bold.color-theme-info.mb-4 Применён .color-theme-info;
       li.h3.font-weight-bold.color-theme-light.mb-4 Применён .color-theme-light;
-      li.h3.font-weight-bold.color-theme-brand.mb-4 Применён .color-theme-brand;
-      li.h3.font-weight-bold.color-theme-brand-dark.mb-4 Применён .color-theme-brand-dark;
+      li.h3.font-weight-bold.color-theme-blue.mb-4 Применён .color-theme-blue;
+      li.h3.font-weight-bold.color-theme-blue-dark.mb-4 Применён .color-theme-blue-dark;
       li.h3.font-weight-bold.color-theme-success.mb-4 Применён .color-theme-success;
       li.h3.font-weight-bold.color-theme-warning.mb-4 Применён .color-theme-warning;
       li.h3.font-weight-bold.color-theme-danger.mb-4 Применён .color-theme-danger;
@@ -67,14 +67,14 @@ block wrapper
     p.h2.mb-4 Фоны, текст в блоке наследует цвет от родителя благодаря селектору класса .color-theme-inherit (кроме второго и последнего элементов):
     ul.color-theme-white
       li.h4.color-theme-inherit.bg-theme-info.p-4.mb-3 .bg-theme-info
-      li.h4.color-theme-brand-dark.bg-theme-light.p-4.mb-3 .bg-theme-light
-      li.h4.color-theme-inherit.bg-theme-brand.p-4.mb-3 .bg-theme-brand
-      li.h4.color-theme-inherit.bg-theme-brand-dark.p-4.mb-3 .bg-theme-brand-dark
+      li.h4.color-theme-blue-dark.bg-theme-light.p-4.mb-3 .bg-theme-light
+      li.h4.color-theme-inherit.bg-theme-blue.p-4.mb-3 .bg-theme-blue
+      li.h4.color-theme-inherit.bg-theme-blue-dark.p-4.mb-3 .bg-theme-blue-dark
       li.h4.color-theme-inherit.bg-theme-success.p-4.mb-3 .bg-theme-success
       li.h4.color-theme-inherit.bg-theme-warning.p-4.mb-3 .bg-theme-warning
       li.h4.color-theme-inherit.bg-theme-danger.p-4.mb-3 .bg-theme-danger
       li.h4.color-theme-inherit.bg-theme-disabled.p-4.mb-3 .bg-theme-disabled
-      li.h4.color-theme-brand-dark.bg-theme-white.border.p-4.mb-3 .bg-theme-white
+      li.h4.color-theme-blue-dark.bg-theme-white.border.p-4.mb-3 .bg-theme-white
 
   .pt-4.pb-3.px-5.border-bottom
     p.h2.mb-4 Кнопки
@@ -86,7 +86,7 @@ block wrapper
         | Кнопка с иконкой
     .mb-3
       button.button.button_nobg(type="button")
-        +icon('trash','button__icon h3 color-theme-brand mr-2')
+        +icon('trash','button__icon h3 color-theme-blue mr-2')
         | Кнопка без фона с иконкой
     .mb-3
       button.button.button_nobg(type="button") Кнопка без фона

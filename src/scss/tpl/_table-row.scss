@@ -256,7 +256,7 @@
     grid-area: col__width;
 
     @include media-breakpoint-down(sm) {
-      color: $color__brand;
+      color: $color__blue;
     }
   }
 
@@ -264,7 +264,7 @@
     grid-area: col__height;
 
     @include media-breakpoint-down(sm) {
-      color: $color__brand;
+      color: $color__blue;
     }
   }
 
@@ -295,7 +295,7 @@
 
     @include media-breakpoint-down(sm) {
       @include fw(100%);
-      color: $color__brand;
+      color: $color__blue;
     }
   }
 

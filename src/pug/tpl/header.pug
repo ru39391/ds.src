@@ -5,15 +5,15 @@
     .top-panel__contacts.col-xl-6.col-lg-12.col-md-8.px-0.px-lg-1
       .contacts.contacts_type_row.col-xl-7.col-lg-5.flex-grow-1.flex-md-grow-0.w-auto.px-0
         .contacts__item.contacts__item_fs_sm.text-nowrap.popup-toggler.mr-4(data-target="#location")
-          +icon('placemark','contacts__icon h3 color-theme-brand mr-lg-2')
+          +icon('placemark','contacts__icon h3 color-theme-blue mr-lg-2')
           span.theme-hover.d-md-none.d-lg-block.pointer-events-none г. Ростов-на-Дону
           #location.popup.popup_width_md.popup_type_plain.popup_pos_left.box-shadow.border-radius
             .popup__triangle.bg-theme-white.box-shadow
             button.popup__close.popup__close_type_btn.button-unstyled.rounded-circle.bg-theme-white(type="button")
-              +icon('close','h3 color-theme-brand')
+              +icon('close','h3 color-theme-blue')
             .search-holder.bg-theme-white.border-radius.overflow-hidden.zi-2.px-4.pt-4.pb-2
               .d-flex.align-items-start.justify-content-between.mb-4
-                .h5.text-left.color-theme-brand Выберите свой город и пользоваться сайтом станет удобнее
+                .h5.text-left.color-theme-blue Выберите свой город и пользоваться сайтом станет удобнее
               form.search.search_border_rounded(action="#" method="post")
                 input.search__field(type="text" value="" placeholder="Я ищу...")
                 button.search__btn.search__btn_type_reset(type="reset")
@@ -39,12 +39,12 @@
                 .col-6.mb-4
                   a.h6(href="#") Ставрополь
         a.contacts__item.h5.text-nowrap.mr-4(href="#")
-          +icon('phone','contacts__icon h3 color-theme-brand mr-lg-2')
+          +icon('phone','contacts__icon h3 color-theme-blue mr-lg-2')
           span.d-none.d-lg-block +7 (863) 22-99-99-4
       nav.social.d-flex.align-items-center
-        a.social__item.color-theme-brand.mr-4.mr-lg-3(href="#")
+        a.social__item.color-theme-blue.mr-4.mr-lg-3(href="#")
           +icon('wapp-filled','h3')
-        a.social__item.color-theme-brand(href="#")
+        a.social__item.color-theme-blue(href="#")
           +icon('tg-filled','h3')
     nav.top-panel__nav.col-xl-5.col-lg-10
       a.mr-4(href="#") Скидки и акции
@@ -67,7 +67,7 @@
 header.header
   .header__wrapper.wrapper
     .header__col.header__col_side_left.col-xl-4.col-lg-5.px-0.px-lg-1
-      a.logo.logo_place_header.color-theme-brand.mr-4(href="#")
+      a.logo.logo_place_header.color-theme-blue.mr-4(href="#")
         +svg('logo')
       .header__togglers
         block btns
@@ -88,29 +88,29 @@ header.header
               .row
                 .panel__nav.border-0.col-xl-4
                   a.panel__nav-link.panel__nav-link_type_plain(href="#")
-                    +icon('services-tires','h3 color-theme-brand mr-2')
+                    +icon('services-tires','h3 color-theme-blue mr-2')
                     span.h4 Шиномонтаж
                   a.panel__nav-link.panel__nav-link_type_plain(href="#")
-                    +icon('services-store','h3 color-theme-brand mr-2')
+                    +icon('services-store','h3 color-theme-blue mr-2')
                     span.h4 Сезонное хранение шин и дисков
                   a.panel__nav-link.panel__nav-link_type_plain(href="#")
-                    +icon('services-aircond','h3 color-theme-brand mr-2')
+                    +icon('services-aircond','h3 color-theme-blue mr-2')
                     span.h4 Заправка автокондиционеров
                 .panel__nav.col-xl-4.border-0.mb-5.mb-xl-0
                   a.panel__nav-link.panel__nav-link_type_plain(href="#")
-                    +icon('services-wheel-rolled','h3 color-theme-brand mr-2')
+                    +icon('services-wheel-rolled','h3 color-theme-blue mr-2')
                     span.h4 Прокатка дисков
                   a.panel__nav-link.panel__nav-link_type_plain(href="#")
-                    +icon('services-wheel-painted','h3 color-theme-brand mr-2')
+                    +icon('services-wheel-painted','h3 color-theme-blue mr-2')
                     span.h4 Покраска дисков
                   a.panel__nav-link.panel__nav-link_type_plain(href="#")
-                    +icon('services-vin','h3 color-theme-brand mr-2')
+                    +icon('services-vin','h3 color-theme-blue mr-2')
                     span.h4 Подбор по VIN
                 .col-xl-4
                   .banner.banner_xs.overflow-hidden.mb-4.mb-xl-0
                     +img('content/banners/banner-1.jpg','img-cover')
                     .banner__inner.d-flex.flex-column.align-items-start.justify-content-between.p-4
-                      .banner__title.h2.font-weight-bold.color-theme-brand Запись на шиномонтаж онлайн
+                      .banner__title.h2.font-weight-bold.color-theme-blue Запись на шиномонтаж онлайн
                       a.button.text-uppercase(href="#") Записаться
           #categories.panel__wrapper
             button.panel-close-btn(type="button")
@@ -121,46 +121,46 @@ header.header
                 .panel__nav.col-xl-2.pr-xl-2
                   .panel__nav-item(data-target="#tires")
                     a.panel__nav-link.panel__nav-link_type_btn.panel__nav-link_active(href="#")
-                      +icon('tires','h3 color-theme-brand mr-2')
+                      +icon('tires','h3 color-theme-blue mr-2')
                       span.panel__nav-title Автошины
                     button.panel__nav-btn(type="button")
-                      +icon('arrow-right','color-theme-brand')
+                      +icon('arrow-right','color-theme-blue')
                   .panel__nav-item(data-target="#moto")
                     a.panel__nav-link.panel__nav-link_type_btn(href="#")
-                      +icon('moto','h3 color-theme-brand mr-2')
+                      +icon('moto','h3 color-theme-blue mr-2')
                       span.panel__nav-title Мотошины
                     button.panel__nav-btn(type="button")
-                      +icon('arrow-right','color-theme-brand')
+                      +icon('arrow-right','color-theme-blue')
                   .panel__nav-item(data-target="#wheels")
                     a.panel__nav-link.panel__nav-link_type_btn(href="#")
-                      +icon('wheels','h3 color-theme-brand mr-2')
+                      +icon('wheels','h3 color-theme-blue mr-2')
                       span.panel__nav-title Диски
                     button.panel__nav-btn(type="button")
-                      +icon('arrow-right','color-theme-brand')
+                      +icon('arrow-right','color-theme-blue')
                   .panel__nav-item(data-target="#battery")
                     a.panel__nav-link.panel__nav-link_type_btn(href="#")
-                      +icon('battery','h3 color-theme-brand mr-2')
+                      +icon('battery','h3 color-theme-blue mr-2')
                       span.panel__nav-title Аккумуляторы
                     button.panel__nav-btn(type="button")
-                      +icon('arrow-right','color-theme-brand')
+                      +icon('arrow-right','color-theme-blue')
                   .panel__nav-item(data-target="#detail")
                     a.panel__nav-link.panel__nav-link_type_btn(href="#")
-                      +icon('detail','h3 color-theme-brand mr-2')
+                      +icon('detail','h3 color-theme-blue mr-2')
                       span.panel__nav-title Автотовары
                     button.panel__nav-btn(type="button")
-                      +icon('arrow-right','color-theme-brand')
+                      +icon('arrow-right','color-theme-blue')
                   .panel__nav-item(data-target="#oil")
                     a.panel__nav-link.panel__nav-link_type_btn(href="#")
-                      +icon('oil','h3 color-theme-brand mr-2')
+                      +icon('oil','h3 color-theme-blue mr-2')
                       span.panel__nav-title Масла
                     button.panel__nav-btn(type="button")
-                      +icon('arrow-right','color-theme-brand')
+                      +icon('arrow-right','color-theme-blue')
                 - var logolist = [{title:'Название бренда', img:'content/logo/logo-1.jpg'},{title:'Название бренда', img:'content/logo/logo-2.jpg'},{title:'Название бренда', img:'content/logo/logo-3.jpg'},{title:'Название бренда', img:'content/logo/logo-4.jpg'},{title:'Название бренда', img:'content/logo/logo-5.jpg'},{title:'Название бренда', img:'content/logo/logo-1.jpg'},{title:'Название бренда', img:'content/logo/logo-2.jpg'},{title:'Название бренда', img:'content/logo/logo-3.jpg'},{title:'Название бренда', img:'content/logo/logo-4.jpg'},{title:'Название бренда', img:'content/logo/logo-5.jpg'},{title:'Название бренда', img:'content/logo/logo-1.jpg'},{title:'Название бренда', img:'content/logo/logo-2.jpg'},{title:'Название бренда', img:'content/logo/logo-3.jpg'},{title:'Название бренда', img:'content/logo/logo-4.jpg'},{title:'Название бренда', img:'content/logo/logo-5.jpg'},{title:'Название бренда', img:'content/logo/logo-5.jpg'},{title:'Название бренда', img:'content/logo/logo-1.jpg'},{title:'Название бренда', img:'content/logo/logo-2.jpg'},{title:'Название бренда', img:'content/logo/logo-3.jpg'},{title:'Название бренда', img:'content/logo/logo-4.jpg'},{title:'Название бренда', img:'content/logo/logo-5.jpg'}]
                 #tires.panel__grid.panel__grid_active.col-xl-10
                   .panel__content
                     .h4.mb-4.d-none.d-xl-block Производители автошин:
                     button.panel__toggler(type="button")
-                      +icon('arrow-left','h6 color-theme-brand pl-3 mr-2')
+                      +icon('arrow-left','h6 color-theme-blue pl-3 mr-2')
                       span.h5 Назад
                     .panel__subcategory.mb-4.mb-xl-0
                       each logolist__item in logolist
@@ -171,7 +171,7 @@ header.header
                     .text-center.d-none.d-xl-block
                       a.readmore(href="#")
                         span.mr-2.pointer-events-none Показать еще
-                        +icon('readmore','readmore__icon h3 color-theme-brand')
+                        +icon('readmore','readmore__icon h3 color-theme-blue')
                   .panel__aside
                     .mb-4
                       a.toggler.py-1(href="#") Зимние шины
@@ -188,7 +188,7 @@ header.header
                   .panel__content
                     .h4.mb-4.d-none.d-xl-block Производители мотошин:
                     button.panel__toggler(type="button")
-                      +icon('arrow-left','h6 color-theme-brand pl-3 mr-2')
+                      +icon('arrow-left','h6 color-theme-blue pl-3 mr-2')
                       span.h5 Назад
                     .panel__subcategory.mb-4.mb-xl-0
                       each logolist__item in logolist
@@ -199,7 +199,7 @@ header.header
                     .text-center.d-none.d-xl-block
                       a.readmore(href="#")
                         span.mr-2.pointer-events-none Показать еще
-                        +icon('readmore','readmore__icon h3 color-theme-brand')
+                        +icon('readmore','readmore__icon h3 color-theme-blue')
                   .panel__aside
                     .mb-4
                       a.toggler.py-1(href="#") Летние шины
@@ -215,25 +215,25 @@ header.header
                   .panel__content
                     .h4.mb-4.d-none.d-xl-block Производители дисков
                     button.panel__toggler(type="button")
-                      +icon('arrow-left','h6 color-theme-brand pl-3 mr-2')
+                      +icon('arrow-left','h6 color-theme-blue pl-3 mr-2')
                       span.h5 Назад
                 #battery.panel__grid.col-xl-10
                   .panel__content
                     .h4.mb-4.d-none.d-xl-block Производители аккумуляторов
                     button.panel__toggler(type="button")
-                      +icon('arrow-left','h6 color-theme-brand pl-3 mr-2')
+                      +icon('arrow-left','h6 color-theme-blue pl-3 mr-2')
                       span.h5 Назад
                 #detail.panel__grid.col-xl-10
                   .panel__content
                     .h4.mb-4.d-none.d-xl-block Производители автотоваров
                     button.panel__toggler(type="button")
-                      +icon('arrow-left','h6 color-theme-brand pl-3 mr-2')
+                      +icon('arrow-left','h6 color-theme-blue pl-3 mr-2')
                       span.h5 Назад
                 #oil.panel__grid.col-xl-10
                   .panel__content
                     .h4.mb-4.d-none.d-xl-block Производители масел
                     button.panel__toggler(type="button")
-                      +icon('arrow-left','h6 color-theme-brand pl-3 mr-2')
+                      +icon('arrow-left','h6 color-theme-blue pl-3 mr-2')
                       span.h5 Назад
     .header__col.header__col_side_right.search-holder.col-xl-8.col-lg-7
       .search-panel
@@ -285,7 +285,7 @@ header.header
                   .search-dropdown__desc.flex-grow-1
                     a.h5.d-block.mb-1(href="#") 185/65/15 NORDMAN RS-2 XL R*
                     span.h6.color-theme-disabled 3 630.90 ₽
-                a.h5.color-theme-brand(href="#") показать все товары (54) &gt;
+                a.h5.color-theme-blue(href="#") показать все товары (54) &gt;
               .search-dropdown__section
                 .search-dropdown__row.mb-2
                   .search-dropdown__picture.mr-2

@@ -16,7 +16,7 @@
 
   .button {
     @extend %btn-default;
-    @include color($color__brand);
+    @include color($color__blue);
     box-shadow: none;
 
     &:hover {
@@ -94,7 +94,7 @@
   cursor: pointer;
   font-weight: bold;
   border-radius: .5rem;
-  color: $color__brand;
+  color: $color__blue;
   background-color: #fff;
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.14);
 
@@ -104,7 +104,7 @@
 
   &.focused {
     color: #fff;
-    background-color: $color__brand;
+    background-color: $color__blue;
   }
 
   &.prev {

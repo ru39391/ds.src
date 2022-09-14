@@ -100,7 +100,7 @@ if (serviceSelect) {
       serviceBtn.disabled = false;
       serviceBtn.classList.remove('color-theme-disabled');
       serviceIcon.classList.remove('color-theme-disabled');
-      serviceIcon.classList.add('color-theme-brand');
+      serviceIcon.classList.add('color-theme-blue');
     }
   });
 }

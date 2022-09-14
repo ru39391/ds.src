@@ -44,18 +44,18 @@
   height: 40px;
   border-radius: .5rem;
   transition: all .3s ease;
-  background: $color__brand;
+  background: $color__blue;
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, .16);
 
   &:hover,
   &:focus {
     color: #fff;
     box-shadow: none;
-    background: $color__brand;
+    background: $color__blue;
   }
 
   &:active {
-    background: $color__brand_dark;
+    background: $color__blue_dark;
   }
 }
 
@@ -73,19 +73,19 @@
   @include offset(0 1rem .5rem 0,.125rem .875rem .25rem);
   border-radius: .875rem;
   transition: all .3s ease;
-  color: $color__brand;
+  color: $color__blue;
   background: #fff;
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .14);
 
   &:hover {
-    color: $color__brand;
+    color: $color__blue;
     background: $color__light;
   }
 }
 
 %toggler-theme-current {
   color: #fff;
-  background: $color__brand;
+  background: $color__blue;
 }
 
 %toggler-theme-success {
@@ -103,11 +103,11 @@
 }
 
 %color-brand {
-  color: $color__brand;
+  color: $color__blue;
 
   &:hover,
   &:focus {
-    color: $color__brand;
+    color: $color__blue;
   }
 }
 
@@ -116,7 +116,7 @@
 
   &:hover,
   &:focus {
-    color: $color__brand;
+    color: $color__blue;
   }
 }
 
@@ -127,7 +127,7 @@
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $color__brand;
+    color: $color__blue;
   }
 }
 
