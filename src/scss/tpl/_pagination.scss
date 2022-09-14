@@ -1,5 +1,5 @@
 .pagination {
-  @extend %flex-item;
+  @extend %d-flex-ai-center;
   justify-content: center;
   padding: .5rem;
   border-radius: .5rem;
@@ -8,8 +8,8 @@
 }
 
 .pagination__item {
-  @extend %flex-column;
-  @include color($color__brand);
+  @extend %d-flex-column;
+  @include color($color__blue);
   @include fw(22px);
   @include wh(22px);
   margin: 0 .5rem 0 0;

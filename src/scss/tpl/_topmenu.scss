@@ -14,7 +14,7 @@
 
   &:hover,
   &.current {
-    color: $color__brand;
+    color: $color__blue;
   }
 
   &.current {
@@ -24,4 +24,9 @@
   @include media-breakpoint-down(md) {
     margin: 0 1.5rem 0 0;
   }
+}
+
+.topmenu__link {
+  @extend %theme-hover;
+  @include inline-block;
 }

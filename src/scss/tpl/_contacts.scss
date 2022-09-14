@@ -1,5 +1,18 @@
+.contacts {
+  &.contacts_type_row {
+    @extend %d-flex-ai-center;
+    justify-content: space-between;
+  }
+}
+
 .contacts__item {
+  @extend %d-flex-ai-center;
+
   &.contacts__item_fs_sm {
+    @include media-breakpoint-up(md) {
+      @include h5;
+    }
+
     @include media-breakpoint-down(sm) {
       @include h6;
     }

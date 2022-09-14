@@ -10,8 +10,8 @@
   transition: all .3s ease;
 
   &.category-menu__item_current {
-    border-color: $color__brand;
-    background-color: $color__brand;
+    border-color: $color__blue;
+    background-color: $color__blue;
 
     .category-menu__title {
       color: #fff;
@@ -23,8 +23,8 @@
   }
 
   &.category-menu__item_active {
-    border-color: $color__brand;
-    background-color: $color__brand;
+    border-color: $color__blue;
+    background-color: $color__blue;
 
     .category-menu__toggler {
       color: #fff;
@@ -52,7 +52,7 @@
 
 .category-menu__toggler {
   padding: .5rem 1rem;
-  color: $color__brand;
+  color: $color__blue;
   transition: all .3s ease;
 }
 
@@ -65,7 +65,7 @@
 
 .category-menu__link {
   @include h5;
-  @include border(0 0 1px,$color__brand);
+  @include border(0 0 1px,$color__blue);
   min-height: 50px;
   padding: .5rem;
   display: flex;

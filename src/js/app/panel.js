@@ -4,7 +4,7 @@ const panelNavLinks = panel.querySelectorAll('.panel__nav-link');
 const panelNavBtns = panel.querySelectorAll('.panel__nav-btn');
 const panelGrids = panel.querySelectorAll('.panel__grid');
 const panelTogglers = panel.querySelectorAll('.panel__toggler');
-const panelCloseBtns = panel.querySelectorAll('.panel__close');
+const panelCloseBtns = panel.querySelectorAll('.panel-close-btn');
 const readmoreBtns = panel.querySelectorAll('.readmore');
 
 const headerTogglers = document.querySelectorAll('.header__btn_type_toggler');

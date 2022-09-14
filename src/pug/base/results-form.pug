@@ -1,12 +1,7 @@
 form.mb-3(action="#")
-    .form__header.form__header_bg
-      .slides.slides_togglers.swiper-container
-        .slides__nav
-          button.slides__btn.slides__btn_sm.slides__btn_prev.slides_togglers-prev(type="button")
-            +icon('arrow-left')
-          button.slides__btn.slides__btn_sm.slides__btn_next.slides_togglers-next(type="button")
-            +icon('arrow-right')
-        .swiper-wrapper.px-3.px-lg-0
+    .form__header.form__header_bg.pos-rel
+      .slides.slides_togglers.swiper-container.px-lg-0.mx-0
+        .swiper-wrapper
           .swiper-slide
             a.toggler.active.h5(href="#") Все
           .swiper-slide
@@ -17,6 +12,19 @@ form.mb-3(action="#")
             a.toggler.h5(href="#") Хиты
           .swiper-slide
             a.toggler.h5(href="#") Акции
+          .swiper-slide
+            a.toggler.h5(href="#") Для моего авто
+          .swiper-slide
+            a.toggler.h5(href="#") Скидки
+          .swiper-slide
+            a.toggler.h5(href="#") Хиты
+          .swiper-slide
+            a.toggler.h5(href="#") Акции
+      .slides__nav
+        button.slides__btn.slides__btn_sm.slides__btn_prev.slides_togglers-prev(type="button")
+          +icon('arrow-left')
+        button.slides__btn.slides__btn_sm.slides__btn_next.slides_togglers-next(type="button")
+          +icon('arrow-right')
     .row.justify-content-end
       .col-xl-2.col-md-3.col-sm-8.order-1.order-md-1.mb-3.mb-md-0
         input.form__toggler.form__toggler_checkbox(id="instock4" type="checkbox" value="")

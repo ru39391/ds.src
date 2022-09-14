@@ -14,7 +14,5 @@ cardFeatureContent.forEach(cardFeatureContentEl => {
     e.target.closest('.card__meta').classList.remove('active');
     e.target.closest('.card__features').classList.remove('active');
     e.target.closest('.card__features-item').classList.remove('active');
-
-    console.log(e.target);
   });
 });

@@ -17,7 +17,7 @@
   &.aside-toggler_active {
     justify-content: center;
     color: #fff;
-    background: $color__brand;
+    background: $color__blue;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, .12) inset;
 
     .aside-toggler__icon {
@@ -35,7 +35,7 @@
 }
 
 .aside-toggler__icon {
-  color: $color__brand;
+  color: $color__blue;
 }
 
 .aside-toggler__hide {

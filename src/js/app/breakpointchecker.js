@@ -40,13 +40,15 @@ const tileSwiperActive = () => {
     },
   });
 };
+const slidesTogglersSel = '.slides_togglers';
+const slidesTogglersParent = document.querySelector(slidesTogglersSel).parentNode;
 const togglerSwiperActive = () => {
-  togglerSwiper = new Swiper('.slides_togglers', {
+  togglerSwiper = new Swiper(slidesTogglersSel, {
     slidesPerView: 'auto',
     spaceBetween: 0,
     navigation: {
-      nextEl: '.slides_togglers-prev',
-      prevEl: '.slides_togglers-next',
+      nextEl: slidesTogglersParent.querySelector('.slides_togglers-prev'),
+      prevEl: slidesTogglersParent.querySelector('.slides_togglers-next'),
     },
   });
 };

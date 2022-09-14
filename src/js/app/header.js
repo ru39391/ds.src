@@ -1,5 +1,5 @@
 const changeHeader = (() => {
-  const header = document.querySelector('.header_bottom');
+  const header = document.querySelector('.header');
   const scrollHeight = 200;
   let scrolled = false;
 

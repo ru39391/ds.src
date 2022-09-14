@@ -1,3 +1,16 @@
+import { Popup } from '../components/Popup';
+
+const popupTogglersArr = Array.from(document.querySelectorAll('.popup-toggler'));
+const popupConfig = {
+  popupHolderSel: '.popup-holder',
+  popupHolderActive: 'popup-holder_active',
+  popupCloseBtnSel: '.popup__close'
+};
+popupTogglersArr.forEach(popupTogglersArrEl => {
+  const popup = new Popup(popupTogglersArrEl, popupConfig);
+  popup.setEventListeners();
+});
+
 const popups = document.querySelectorAll('.popup');
 const popupCloseBtns = document.querySelectorAll('.popup__close');
 const popupCartToggler = document.querySelector('.header__btn_type_cart-holder');
