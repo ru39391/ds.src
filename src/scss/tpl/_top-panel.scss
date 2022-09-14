@@ -1,0 +1,36 @@
+.top-panel {
+  @include pos(-5rem,0,sticky);
+  right: 0;
+  padding: .625rem 0;
+  z-index: 1030;
+  background-color: $color__light;
+}
+
+.top-panel__wrapper {
+  @extend %d-flex-wrap;
+  @extend %d-flex-ai-center;
+}
+
+.top-panel__contacts {
+  @extend %d-flex-ai-center;
+
+  @include media-breakpoint-only(lg) {
+    margin-bottom: .5rem;
+  }
+
+  @include media-breakpoint-only(lg) {
+    justify-content: space-between;
+  }
+}
+
+.top-panel__nav {
+  @extend %d-flex-ai-center;
+
+  @include media-breakpoint-up(xl) {
+    justify-content: flex-end;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}

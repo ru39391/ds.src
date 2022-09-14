@@ -23,7 +23,7 @@
   }
 
   &.color-blue {
-    background-color: $color__brand;
+    background-color: $color__blue;
   }
 
   &.color-grey {
@@ -35,7 +35,7 @@
   }
 
   &.active {
-    border-color: $color__brand;
-    box-shadow: 0 0 0 1px $color__brand inset;
+    border-color: $color__blue;
+    box-shadow: 0 0 0 1px $color__blue inset;
   }
 }

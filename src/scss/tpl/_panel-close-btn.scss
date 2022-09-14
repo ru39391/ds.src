@@ -1,0 +1,12 @@
+.panel-close-btn {
+  @extend %btn-default;
+  @extend %d-flex-ai-center;
+  @include wh(100%,72px);
+  padding: 1.5rem 2rem;
+  color: #fff;
+  background-color: $color__blue;
+
+  @include media-breakpoint-up(xl) {
+    display: none;
+  }
+}

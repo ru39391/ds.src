@@ -32,12 +32,12 @@
 
   &.active {
     z-index: 3;
-    color: $color__brand;
+    color: $color__blue;
     background: #fff;
 
     &:hover,
     &:focus {
-      color: $color__brand;
+      color: $color__blue;
     }
 
     &:before {

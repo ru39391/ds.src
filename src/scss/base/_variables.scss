@@ -5,7 +5,8 @@ $font-size_default: .875rem;
 $line-height_default: 1;
 $line-height_content: 1.4;
 
-$breakpoint__custom: 1366px;
+$breakpoint__custom_lg: 1366px;
+$breakpoint__custom_xs: 375px;
 
 $color__text_default: #525252;
 
@@ -13,8 +14,8 @@ $color__link: $color__text_default;
 $color__link_hover: $color__link;
 
 $color__light: #EDF5FA;
-$color__brand: #008BD1;
-$color__brand_dark: #0075B4;
+$color__blue: #008BD1;
+$color__blue_dark: #0075B4;
 $color__border: #E1DDDD;
 
 $color__info: #30D3CA;
@@ -27,5 +28,5 @@ $color__danger: #EB5757;
 // bootstrap
 $grid-gutter-width: 8px;
 $tooltip-bg: $color__light;
-$tooltip-color: $color__brand;
+$tooltip-color: $color__blue;
 $tooltip-opacity: 1;

@@ -73,7 +73,7 @@
 }
 
 .card__meta {
-  @extend %flex-column;
+  @extend %d-flex-column;
   position: absolute;
   top: 0;
   bottom: 24px;
@@ -139,11 +139,11 @@
   transition: all .3s ease;
 
   &.card__btn_icon {
-    @extend %flex-item;
+    @extend %d-flex-ai-center;
     justify-content: flex-start;
     overflow: hidden;
     white-space: nowrap;
-    color: $color__brand;
+    color: $color__blue;
 
     //padding: .125rem .375rem;
     padding: .375rem;
@@ -170,7 +170,7 @@
   }
 
   &.card__btn_link {
-    @extend %flex-item;
+    @extend %d-flex-ai-center;
     justify-content: center;
     color: $color__text_default;
     transition: all .3s ease;
@@ -198,12 +198,12 @@
 }
 
 .card__btn-icon {
-  color: $color__brand;
+  color: $color__blue;
   transition: all .3s ease;
 }
 
 .card__features {
-  @extend %flex-item;
+  @extend %d-flex-ai-center;
 
   &.card__features_col {
     position: absolute;
@@ -227,7 +227,7 @@
     }
 
     .card__features-item {
-      @extend %flex-item;
+      @extend %d-flex-ai-center;
       @include wh(auto,26px);
       flex: 0 0 auto;
       max-width: initial;
@@ -249,7 +249,7 @@
         .card__features-title {
           opacity: 1;
           transform: scale(1);
-          background: $color__brand;
+          background: $color__blue;
         }
       }
 
@@ -311,7 +311,7 @@
       @include wh(26px);
       padding: .25rem;
       border-radius: 50%;
-      background: $color__brand;
+      background: $color__blue;
       transition: all .3s ease;
     }
 
@@ -337,7 +337,7 @@
   @include fw(16px);
   @include wh(16px);
   margin: 0 .5rem 0 0;
-  color: $color__brand;
+  color: $color__blue;
   transition: all .3s ease;
 
   &:not(.active) {
@@ -354,7 +354,7 @@
 
 .card__features-content {
   cursor: pointer;
-  background: $color__brand;
+  background: $color__blue;
   transition: background .3s ease;
 
   .card__features-icon {
@@ -425,7 +425,7 @@
   &.card__price_new {
     @include h5;
     font-weight: bold;
-    color: $color__brand;
+    color: $color__blue;
   }
 }
 

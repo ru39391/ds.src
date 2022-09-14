@@ -10,7 +10,7 @@
 
   &:hover,
   &.current {
-    color: $color__brand;
+    color: $color__blue;
   }
 
   &:before {
@@ -20,7 +20,7 @@
     right: 0;
     margin: -.5rem 0 0;
     border-radius: 50%;
-    background: $color__brand;
+    background: $color__blue;
     transition: all .3s ease;
   }
 

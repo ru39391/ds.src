@@ -45,7 +45,7 @@ a {
       content: '';
       border-radius: 50%;
       margin: .5rem .25rem 0 0;
-      background: $color__brand;
+      background: $color__blue;
     }
   }
 }
@@ -59,7 +59,5 @@ a {
 }
 
 .text-oneline {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  @extend %text-oneline;
 }

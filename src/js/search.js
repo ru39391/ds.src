@@ -1,57 +1,25 @@
-const headerLogoCol = document.querySelector('.header__col_logo');
-const searchField = document.querySelector('.header__search-field');
-const searchFieldColParent = document.querySelector('.header__col_search').parentNode;
-const searchBtn = document.querySelector('.header__nav-item_search');
-const searchBtnClose = document.querySelector('.header__search-btn_close');
+import { SearchPanel } from './components/SearchPanel';
+import { Search } from './components/Search';
 
-function addClass(elem, selector) {
-  elem.classList.add(selector);
+const searchPanelElem = document.querySelector('.search-panel');
+const searchPanelConfig = {
+  searchPanelActiveClass: 'search-panel_active',
+  searchBtnShowSel: '.header__navbar-item_toggler_search',
+  searchBtnHideSel: '.panel-close-btn'
+};
+if(searchPanelElem) {
+  const searchPanel = new SearchPanel(searchPanelElem, searchPanelConfig);
+  searchPanel.setEventListeners();
 }
 
-function removeClass(elem, selector) {
-  elem.classList.remove(selector);
-}
-
-function toggleClass(elem, selector) {
-  elem.classList.toggle(selector);
-}
-
-if(searchField) {
-  searchField.addEventListener('focus', e => {
-    addClass(searchFieldColParent, 'header__search-holder');
-    addClass(headerLogoCol, 'header__col_logo_invisible');
-  });
-  searchField.addEventListener('blur', e => {
-    removeClass(searchFieldColParent, 'header__search-holder');
-    removeClass(headerLogoCol, 'header__col_logo_invisible');
-
-    if(searchFieldColParent.classList.contains('header__search-holder_active')) {
-      removeClass(searchFieldColParent, 'header__search-holder_active');
-    }
-  });
-  searchField.addEventListener('input', e => {
-    if(e.target.value.length !== 0) {
-      addClass(searchFieldColParent, 'header__search-holder_active');
-    } else {
-      removeClass(searchFieldColParent, 'header__search-holder_active');
-    }
-    /* здесь ajax-запрос */
-  });
-  searchBtn.addEventListener('click', e => {
-    e.preventDefault();
-    toggleClass(searchFieldColParent, 'header__search-holder');
-    toggleClass(headerLogoCol, 'header__col_logo_invisible');
-  });
-  searchBtnClose.addEventListener('click', e => {
-    e.preventDefault();
-    removeClass(searchFieldColParent, 'header__search-holder');
-    removeClass(headerLogoCol, 'header__col_logo_invisible');
-  });
-}
-
-document.body.addEventListener('click', e => {
-  if(!e.target.closest('.header__col_search') && e.target != searchBtn && searchFieldColParent.classList.contains('header__search-holder')) {
-    removeClass(searchFieldColParent, 'header__search-holder');
-    removeClass(headerLogoCol, 'header__col_logo_invisible');
-  }
+const searchInputsArr = Array.from(document.querySelectorAll('.search__field'));
+const searchConfig = {
+  searchHolderSel: '.search-holder',
+  searchResultSel: '.search-dropdown',
+  searchActiveClass: 'search-holder_focused',
+  searchInputActiveClass: 'search-holder_active'
+};
+searchInputsArr.forEach(searchInputsArrEl => {
+  const search = new Search(searchInputsArrEl, searchConfig);
+  search.setEventListeners();
 });

@@ -16,4 +16,8 @@
     color: $color__text_default;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, .12) inset;
   }
+
+  @include media-breakpoint-down(sm) {
+    top: 3.75rem;
+  }
 }

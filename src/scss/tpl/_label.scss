@@ -1,5 +1,5 @@
 .label {
-  @extend %flex-item;
+  @extend %d-flex-ai-center;
   justify-content: center;
   height: 22px;
   border-radius: .75rem;
@@ -15,7 +15,7 @@
 
   &.label_sale {
     color: #fff;
-    background: $color__brand;
+    background: $color__blue;
   }
 
   &.label_discount {
