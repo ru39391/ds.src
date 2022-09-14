@@ -33,14 +33,12 @@
         a.navbar__link(href="#") КупиВкредит
         a.navbar__link(href="#") Политика конфиденциальности
 
-include top-panel
-
-//- header.header.header_bottom.d-none
-  .header__wrapper.wrapper.d-flex.align-items-center
-    .header__col.header__col_logo.justify-content-between.justify-content-lg-start.col-xl-4.col-lg-5.px-0.px-lg-1
+header.header
+  .header__wrapper.wrapper
+    .header__col.header__col_side_left.col-xl-4.col-lg-5.px-0.px-lg-1
       a.logo.logo_place_header.color-theme-brand.mr-4(href="#")
         +svg('logo')
-      nav.header__nav.d-flex.align-items-center.justify-content-center
+      .header__togglers
         block btns
           button.header__btn.header__btn_type_toggler.text-uppercase.mr-3(type="button" data-target="#categories")
             +icon('menu','header__btn-icon header__btn-icon_show')
@@ -52,29 +50,29 @@ include top-panel
             span.header__btn-title Услуги
         .panel
           #services.panel__wrapper
-            button.panel__close.d-flex.align-items-center.d-xl-none.bg-theme-brand.color-theme-white(type="button")
+            button.panel-close-btn(type="button")
               +icon('close','h3 mr-2')
               span.h4.text-uppercase услуги
             .wrapper
               .row
                 .panel__nav.border-0.col-xl-4
-                  a.panel__nav-link.panel__nav-link_type_plain.d-flex.align-items-center.px-3.mb-xl-3(href="#")
+                  a.panel__nav-link.panel__nav-link_type_plain(href="#")
                     +icon('services-tires','h3 color-theme-brand mr-2')
                     span.h4 Шиномонтаж
-                  a.panel__nav-link.panel__nav-link_type_plain.d-flex.align-items-center.px-3.mb-xl-3(href="#")
+                  a.panel__nav-link.panel__nav-link_type_plain(href="#")
                     +icon('services-store','h3 color-theme-brand mr-2')
                     span.h4 Сезонное хранение шин и дисков
-                  a.panel__nav-link.panel__nav-link_type_plain.d-flex.align-items-center.px-3.mb-xl-3(href="#")
+                  a.panel__nav-link.panel__nav-link_type_plain(href="#")
                     +icon('services-aircond','h3 color-theme-brand mr-2')
                     span.h4 Заправка автокондиционеров
                 .panel__nav.col-xl-4.border-0.mb-5.mb-xl-0
-                  a.panel__nav-link.panel__nav-link_type_plain.d-flex.align-items-center.px-3.mb-xl-3(href="#")
+                  a.panel__nav-link.panel__nav-link_type_plain(href="#")
                     +icon('services-wheel-rolled','h3 color-theme-brand mr-2')
                     span.h4 Прокатка дисков
-                  a.panel__nav-link.panel__nav-link_type_plain.d-flex.align-items-center.px-3.mb-xl-3(href="#")
+                  a.panel__nav-link.panel__nav-link_type_plain(href="#")
                     +icon('services-wheel-painted','h3 color-theme-brand mr-2')
                     span.h4 Покраска дисков
-                  a.panel__nav-link.panel__nav-link_type_plain.d-flex.align-items-center.px-3.mb-xl-3(href="#")
+                  a.panel__nav-link.panel__nav-link_type_plain(href="#")
                     +icon('services-vin','h3 color-theme-brand mr-2')
                     span.h4 Подбор по VIN
                 .col-xl-4
@@ -83,46 +81,45 @@ include top-panel
                     .banner__inner.d-flex.flex-column.align-items-start.justify-content-between.p-4
                       .banner__title.h2.font-weight-bold.color-theme-brand Запись на шиномонтаж онлайн
                       a.button.text-uppercase(href="#") Записаться
-
           #categories.panel__wrapper
-            button.panel__close.d-flex.align-items-center.d-xl-none.bg-theme-brand.color-theme-white(type="button")
+            button.panel-close-btn(type="button")
               +icon('close','h3 mr-2')
               span.h4.text-uppercase каталог
             .wrapper
               .row.align-items-start
                 .panel__nav.col-xl-2.pr-xl-2
                   .panel__nav-item(data-target="#tires")
-                    a.panel__nav-link.overflow-hidden.d-flex.align-items-center.flex-grow-1.panel__nav-link_active.px-3.py-xl-2.mr-1(href="#")
+                    a.panel__nav-link.panel__nav-link_type_btn.panel__nav-link_active(href="#")
                       +icon('tires','h3 color-theme-brand mr-2')
                       span.panel__nav-title Автошины
                     button.panel__nav-btn(type="button")
                       +icon('arrow-right','color-theme-brand')
                   .panel__nav-item(data-target="#moto")
-                    a.panel__nav-link.overflow-hidden.d-flex.align-items-center.flex-grow-1.px-3.py-xl-2.mr-1(href="#")
+                    a.panel__nav-link.panel__nav-link_type_btn(href="#")
                       +icon('moto','h3 color-theme-brand mr-2')
                       span.panel__nav-title Мотошины
                     button.panel__nav-btn(type="button")
                       +icon('arrow-right','color-theme-brand')
                   .panel__nav-item(data-target="#wheels")
-                    a.panel__nav-link.overflow-hidden.d-flex.align-items-center.flex-grow-1.px-3.py-xl-2.mr-1(href="#")
+                    a.panel__nav-link.panel__nav-link_type_btn(href="#")
                       +icon('wheels','h3 color-theme-brand mr-2')
                       span.panel__nav-title Диски
                     button.panel__nav-btn(type="button")
                       +icon('arrow-right','color-theme-brand')
                   .panel__nav-item(data-target="#battery")
-                    a.panel__nav-link.overflow-hidden.d-flex.align-items-center.flex-grow-1.px-3.py-xl-2.mr-1(href="#")
+                    a.panel__nav-link.panel__nav-link_type_btn(href="#")
                       +icon('battery','h3 color-theme-brand mr-2')
                       span.panel__nav-title Аккумуляторы
                     button.panel__nav-btn(type="button")
                       +icon('arrow-right','color-theme-brand')
                   .panel__nav-item(data-target="#detail")
-                    a.panel__nav-link.overflow-hidden.d-flex.align-items-center.flex-grow-1.px-3.py-xl-2.mr-1(href="#")
+                    a.panel__nav-link.panel__nav-link_type_btn(href="#")
                       +icon('detail','h3 color-theme-brand mr-2')
                       span.panel__nav-title Автотовары
                     button.panel__nav-btn(type="button")
                       +icon('arrow-right','color-theme-brand')
                   .panel__nav-item(data-target="#oil")
-                    a.panel__nav-link.overflow-hidden.d-flex.align-items-center.flex-grow-1.px-3.py-xl-2.mr-1(href="#")
+                    a.panel__nav-link.panel__nav-link_type_btn(href="#")
                       +icon('oil','h3 color-theme-brand mr-2')
                       span.panel__nav-title Масла
                     button.panel__nav-btn(type="button")
@@ -153,7 +150,7 @@ include top-panel
                       a.toggler.py-1(href="#") Шины на Газель
                     .banner.banner_sm.overflow-hidden.mb-4.mb-xl-0
                       +img('content/banners/banner-2.jpg','img-cover')
-                      .banner__inner.p-4.d-flex.flex-column.align-items-center.justify-content-between
+                      .banner__inner.d-flex.flex-column.align-items-center.justify-content-between.p-4
                         .banner__title.h2.font-weight-bold.color-theme-white Подбор запчастей по VIN-коду
                         a.button.text-uppercase(href="#") Подобрать
                 #moto.panel__grid.col-xl-10
@@ -180,7 +177,7 @@ include top-panel
                       a.toggler.py-1(href="#") Всесезонные шины
                     .banner.banner_sm.overflow-hidden.mb-4.mb-xl-0
                       +img('content/banners/banner-2.jpg','img-cover')
-                      .banner__inner.p-4.d-flex.flex-column.align-items-center.justify-content-between
+                      .banner__inner.d-flex.flex-column.align-items-center.justify-content-between.p-4
                         .banner__title.h2.font-weight-bold.color-theme-white Подбор запчастей по VIN-коду
                         a.button.text-uppercase(href="#") Подобрать
                 #wheels.panel__grid.col-xl-10
@@ -207,120 +204,120 @@ include top-panel
                     button.panel__toggler(type="button")
                       +icon('arrow-left','h6 color-theme-brand pl-3 mr-2')
                       span.h5 Назад
-    .header__panel.col-xl-8.col-lg-7.d-none.d--flex.align-items-center.mb-lg-3
-      .header__col.header__col_search.header__col_search_wide
-        form.header__search(action="#" method="post")
-          input.header__search-field(type="text" placeholder="Я ищу..." value="")
-          button.header__search-btn.header__search-btn_close(type="reset")
-            +icon('close-noborder')
-          button.header__search-btn(type="submit")
-            +icon('search')
-          .header__search-dropdown
-            .header__search-section
-              .header__search-row.mb-2
-                .header__search-picture.mr-2
-                  a(href="#")
-                    +img('content/cards/card-1.jpg')
-                .header__search-desc.flex-grow-1
-                  a.h5.d-block.mb-1(href="#") Зимние шины Nokian Nordman 5 195/65 R15 95T XL
-                  span.h6.color-theme-disabled 3 630.90 ₽
-              .header__search-row.mb-2
-                .header__search-picture.mr-2
-                  a(href="#")
-                    +img('content/cards/card-1.jpg')
-                .header__search-desc.flex-grow-1
-                  a.h5.d-block.mb-1(href="#") Летние шины Nokian Nordman SX2 195/65 R15 91H
-                  span.h6.color-theme-disabled 3 630.90 ₽
-              .header__search-row.mb-2
-                .header__search-picture.mr-2
-                  a(href="#")
-                    +img('content/cards/card-1.jpg')
-                .header__search-desc.flex-grow-1
-                  a.h5.d-block.mb-1(href="#") Зимние шины Nokian Nordman 7 195/65 R15 95T XL
-                  span.h6.color-theme-disabled 3 630.90 ₽
-              .header__search-row.mb-2
-                .header__search-picture.mr-2
-                  a(href="#")
-                    +img('content/cards/card-1.jpg')
-                .header__search-desc.flex-grow-1
-                  a.h5.d-block.mb-1(href="#") Зимние шины Nokian Nordman RS2 205/55 R16 94R XL
-                  span.h6.color-theme-disabled 3 630.90 ₽
-              .header__search-row.mb-2
-                .header__search-picture.mr-2
-                  a(href="#")
-                    +img('content/cards/card-1.jpg')
-                .header__search-desc.flex-grow-1
-                  a.h5.d-block.mb-1(href="#") 185/65/15 NORDMAN RS-2 XL R*
-                  span.h6.color-theme-disabled 3 630.90 ₽
-              a.h5.color-theme-brand(href="#") показать все товары (54) &gt;
-            .header__search-section
-              .header__search-row.mb-2
-                .header__search-picture.mr-2
-                  a(href="#")
-                    +img('content/cards/card-1.jpg')
-                .header__search-desc.flex-grow-1
-                  a.h5.d-block.mb-1(href="#") NOKIAN NORDMAN-7
-                  span.h6.color-theme-disabled 3 630.90 ₽
-              .header__search-row.mb-2
-                .header__search-picture.mr-2
-                  a(href="#")
-                    +img('content/cards/card-1.jpg')
-                .header__search-desc.flex-grow-1
-                  a.h5.d-block.mb-1(href="#") NOKIAN RS2
-                  span.h6.color-theme-disabled 3 630.90 ₽
-              .header__search-row.mb-2
-                .header__search-picture.mr-2
-                  a(href="#")
-                    +img('content/cards/card-1.jpg')
-                .header__search-desc.flex-grow-1
-                  a.h5.d-block.mb-1(href="#") NOKIAN NORDMAN-7 SUV
-                  span.h6.color-theme-disabled 3 630.90 ₽
-              .header__search-row.mb-2
-                .header__search-picture.mr-2
-                  a(href="#")
-                    +img('content/cards/card-1.jpg')
-                .header__search-desc.flex-grow-1
-                  a.h5.d-block.mb-1(href="#") NOKIAN NORDMAN-8
-                  span.h6.color-theme-disabled 3 630.90 ₽
-            .header__search-section
-              a.h5.d-block.mb-4(href="#") Зимние шины
-              a.h5.d-block.mb-4(href="#") Шины для внедорожника
-              a.h5.d-block.mb-4(href="#") Шины на газель
-              a.h5.d-block.mb-4(href="#") Шипованые шины
-              a.h5.d-block(href="#") Автошторки
-      .header__col.header__col_nav.d-flex.align-items-center.flex-lg-grow-1.flex-xl-grow-0
+    .header__col.header__col_side_right.col-xl-8.col-lg-7
+      .search-panel
+        .search-panel__wrapper
+          button.panel-close-btn(type="button")
+            +icon('close','h3 mr-2')
+            span.h4.text-uppercase.pointer-events-none Поиск
+          form.search(action="#" method="post")
+            input.search__field(type="text" value="" placeholder="Я ищу...")
+            button.search__btn.search__btn_type_reset(type="reset")
+              +icon('close-noborder')
+            button.search__btn.search__btn_type_submit(type="submit")
+              +icon('search','h4')
+          .search-panel__dropdown-holder
+            .search-panel__dropdown
+              .search-panel__section
+                .search-panel__row.mb-2
+                  .search-panel__picture.mr-2
+                    a(href="#")
+                      +img('content/cards/card-1.jpg')
+                  .search-panel__desc.flex-grow-1
+                    a.h5.d-block.mb-1(href="#") Зимние шины Nokian Nordman 5 195/65 R15 95T XL
+                    span.h6.color-theme-disabled 3 630.90 ₽
+                .search-panel__row.mb-2
+                  .search-panel__picture.mr-2
+                    a(href="#")
+                      +img('content/cards/card-1.jpg')
+                  .search-panel__desc.flex-grow-1
+                    a.h5.d-block.mb-1(href="#") Летние шины Nokian Nordman SX2 195/65 R15 91H
+                    span.h6.color-theme-disabled 3 630.90 ₽
+                .search-panel__row.mb-2
+                  .search-panel__picture.mr-2
+                    a(href="#")
+                      +img('content/cards/card-1.jpg')
+                  .search-panel__desc.flex-grow-1
+                    a.h5.d-block.mb-1(href="#") Зимние шины Nokian Nordman 7 195/65 R15 95T XL
+                    span.h6.color-theme-disabled 3 630.90 ₽
+                .search-panel__row.mb-2
+                  .search-panel__picture.mr-2
+                    a(href="#")
+                      +img('content/cards/card-1.jpg')
+                  .search-panel__desc.flex-grow-1
+                    a.h5.d-block.mb-1(href="#") Зимние шины Nokian Nordman RS2 205/55 R16 94R XL
+                    span.h6.color-theme-disabled 3 630.90 ₽
+                .search-panel__row.mb-2
+                  .search-panel__picture.mr-2
+                    a(href="#")
+                      +img('content/cards/card-1.jpg')
+                  .search-panel__desc.flex-grow-1
+                    a.h5.d-block.mb-1(href="#") 185/65/15 NORDMAN RS-2 XL R*
+                    span.h6.color-theme-disabled 3 630.90 ₽
+                a.h5.color-theme-brand(href="#") показать все товары (54) &gt;
+              .search-panel__section
+                .search-panel__row.mb-2
+                  .search-panel__picture.mr-2
+                    a(href="#")
+                      +img('content/cards/card-1.jpg')
+                  .search-panel__desc.flex-grow-1
+                    a.h5.d-block.mb-1(href="#") NOKIAN NORDMAN-7
+                    span.h6.color-theme-disabled 3 630.90 ₽
+                .search-panel__row.mb-2
+                  .search-panel__picture.mr-2
+                    a(href="#")
+                      +img('content/cards/card-1.jpg')
+                  .search-panel__desc.flex-grow-1
+                    a.h5.d-block.mb-1(href="#") NOKIAN RS2
+                    span.h6.color-theme-disabled 3 630.90 ₽
+                .search-panel__row.mb-2
+                  .search-panel__picture.mr-2
+                    a(href="#")
+                      +img('content/cards/card-1.jpg')
+                  .search-panel__desc.flex-grow-1
+                    a.h5.d-block.mb-1(href="#") NOKIAN NORDMAN-7 SUV
+                    span.h6.color-theme-disabled 3 630.90 ₽
+                .search-panel__row.mb-2
+                  .search-panel__picture.mr-2
+                    a(href="#")
+                      +img('content/cards/card-1.jpg')
+                  .search-panel__desc.flex-grow-1
+                    a.h5.d-block.mb-1(href="#") NOKIAN NORDMAN-8
+                    span.h6.color-theme-disabled 3 630.90 ₽
+              .search-panel__section
+                a.h5.d-block.mb-4(href="#") Зимние шины
+                a.h5.d-block.mb-4(href="#") Шины для внедорожника
+                a.h5.d-block.mb-4(href="#") Шины на газель
+                a.h5.d-block.mb-4(href="#") Шипованые шины
+                a.h5.d-block(href="#") Автошторки
+      .header__bottom-panel
         block profile
-          nav.header__nav.header__nav_type_panel.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-4
-            .header__nav-col.d-flex.d-xl-none.justify-content-center.px-1
-              button.header__nav-item.header__nav-item_type_col.header__nav-item_search.d-flex.flex-column.text-center.text-nowrap(type="button")
-                span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center.pointer-events-none
-                  +icon('search')
-                span.header__nav-caption.pointer-events-none Поиск
-            .header__nav-col.col-xl-3
-              a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
-                span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-                  +icon('compare')
-                span.header__nav-caption Сравнить
-            .header__nav-col.col-xl-3
-              a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
-                span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-                  +icon('car')
-                span.header__nav-caption Выбор авто
-            .header__nav-col.col-xl-3
-              a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
-                span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-                  +icon('case')
-                span.header__nav-caption Заказы
-            .header__nav-col.col-xl-3
-              .header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(data-toggle="modal" data-target="#auth-phone")
-                .header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-                  +icon('user')
-                span.header__nav-caption Вход | регистрация
-          .pos-rel
-            a.header__btn.header__btn_type_cart(href="#")
-              span.header__icon-holder.d-flex.flex-column.align-items-center.justify-content-center
+          .header__navbar
+            button.header__navbar-item.header__navbar-item_toggler_search(type="button")
+              span.header__navbar-icon.pointer-events-none
+                +icon('search')
+              span.header__navbar-caption.pointer-events-none Поиск
+            a.header__navbar-item(href="#")
+              span.header__navbar-icon
+                +icon('compare')
+              span.header__navbar-caption Сравнить
+            a.header__navbar-item(href="#")
+              span.header__navbar-icon
+                +icon('car')
+              span.header__navbar-caption Выбор авто
+            a.header__navbar-item(href="#")
+              span.header__navbar-icon
+                +icon('case')
+              span.header__navbar-caption Заказы
+            button.header__navbar-item(data-toggle="modal" data-target="#auth-phone")
+              span.header__navbar-icon
+                +icon('user')
+              span.header__navbar-caption Вход | регистрация
+          .header__aside
+            a.header__btn.header__btn_place_panel(href="#")
+              span.header__btn-icon.header__btn-icon_type_holder
                 +icon('cart')
-              span.header__btn-title.header__btn-title_type_caption Корзина
+              span.header__btn-title Корзина
 
 nav.topmenu
   .topmenu__wrapper.wrapper.swiper-container

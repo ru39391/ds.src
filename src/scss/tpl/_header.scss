@@ -609,6 +609,15 @@
   }
 }
 
+.search-panel-active {
+  .header__navbar {
+    @include media-breakpoint-up(xl) {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
 .header__navbar-item {
   @extend %theme-hover;
   @extend %btn-default;
