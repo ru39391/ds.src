@@ -5,54 +5,50 @@ block meta
 
 block btns
   button.header__btn.header__btn_type_toggler.text-uppercase(type="button" data-target="#categories")
-    +icon('menu','header__btn-icon header__btn-icon_show mr-2')
-    +icon('close','header__btn-icon header__btn-icon_close mr-2')
-    span.pointer-events-none Каталог
+    +icon('menu','header__btn-icon header__btn-icon_show')
+    +icon('close','header__btn-icon header__btn-icon_close')
+    span.header__btn-title Каталог
 
 block profile
-  nav.header__nav.header__nav_type_panel.d-flex.align-items-center.justify-content-lg-start.justify-content-between.flex-grow-1.mr-lg-4
-    .header__nav-col.d-flex.d-xl-none.justify-content-center.px-1
-      button.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(type="button")
-        span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-          +icon('search')
-        span.header__nav-caption Поиск
-    .header__nav-col.col-xl-3
-      a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
-        span.d-flex.align-items-center.justify-content-center.pos-rel
-          span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center.mr-md-1
-            +icon('compare')
-          span.header__counter.header__counter_value_compare.d-flex.align-items-center.justify-content-center.h6.bg-theme-success.color-theme-white.rounded-circle 3
-        span.header__nav-caption Сравнить
+  .header__navbar
+    button.header__navbar-item.header__navbar-item_toggler_search(type="button")
+      span.header__navbar-icon.pointer-events-none
+        +icon('search')
+      span.header__navbar-caption.pointer-events-none Поиск
+    .header__navbar-item
+      span.header__navbar-top
+        span.header__navbar-icon.mr-md-1
+          +icon('compare')
+        span.header__navbar-badge.rounded-circle 3
+      span.header__navbar-caption Сравнить
       .popup.popup_width_md.popup_pos_left.box-shadow.border-radius.d-block
         .popup__triangle.bg-theme-white.box-shadow
         .bg-theme-white.border-radius.overflow-hidden.zi-2.px-4.py-3
           .d-flex.align-items-start.justify-content-between.mb-4
-            .h3.font-weight-bold.color-theme-brand Товар готов к сравнению
+            .h3.font-weight-bold.text-left.color-theme-brand Товар готов к сравнению
             .h4.text-nowrap.d-flex.flex-column.align-items-center.justify-content-center.box-shadow.bg-theme-success.color-theme-white.rounded-pill.px-2.py-1 3 шт.
           .mb-5
-            a.h5.theme-hover.d-inline-block.mr-3(href="#") Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL  Ice Guard
+            a.h5.theme-hover.d-inline-block.text-left.mr-3(href="#") Зимние шины Yokohama Ice Guard IG55 215/55 R17 98T XL  Ice Guard
           .d-flex.align-items-center.justify-content-between
             button.popup__close.button.button_nobg.text-left.px-0(type="button") Продолжить
               br
               | покупки
             button.button.text-uppercase(type="button") Сравнить
-    .header__nav-col.col-xl-3
-      a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
-        span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-          +icon('car','color-theme-success')
-        span.header__nav-caption HYUNDAI Accent
+    .header__navbar-item
+      span.header__navbar-icon
+        +icon('car','color-theme-success')
+      span.header__navbar-caption HYUNDAI Accent
       .popup.box-shadow.border-radius.d-block
         .popup__triangle.bg-theme-white.box-shadow
         .bg-theme-white.border-radius.overflow-hidden.zi-2.pt-4.pb-3.px-4
-          .h5.color-theme-brand.mb-2 Выберете свой автомобиль и поиск товаров на сайте станет значительно проще.
+          .h5.color-theme-brand.text-left.mb-2 Выберете свой автомобиль и поиск товаров на сайте станет значительно проще.
           .d-flex.align-items-center.justify-content-between
             button.popup__close.button.button_nobg.px-0(type="button") Позже
             a.button.font-weight-bold.px-3(href="#") ОК
-    .header__nav-col.col-xl-3
-      a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
-        span.header__nav-icon.d-flex.flex-column.align-items-center.justify-content-center
-          +icon('case')
-        span.header__nav-caption Заказы
+    .header__navbar-item
+      span.header__navbar-icon
+        +icon('case')
+      span.header__navbar-caption Заказы
       .popup.popup_width_md.popup_pos_left.box-shadow.border-radius.d-block
         .popup__triangle.bg-theme-white.box-shadow
         form.bg-theme-white.border-radius.overflow-hidden.zi-2.px-4.py-3(action="#")
@@ -69,29 +65,26 @@ block profile
               label.form__label.form__label_title +7 (___) ___-__-__
           .d-flex.align-items-center.justify-content-end
             button.button.text-uppercase(type="submit") Отправить
-    .header__nav-col.col-xl-3
-      a.header__nav-item.header__nav-item_type_col.d-flex.flex-column.text-center.text-nowrap(href="#")
-        span.d-flex.align-items-center.justify-content-center
-          span.header__nav-icon.header__nav-icon_feature_bonus.d-flex.flex-column.align-items-center.justify-content-center.mr-md-1
-            +icon('user')
-          span.header__counter.d-none.d-md-flex.align-items-center.justify-content-center.h6.bg-theme-success.color-theme-white.rounded-pill.px-2
-            span.font-weight-bold.mr-1 300
-            | Б.₽.
-        span.header__nav-caption.button-unstyled Сергей | выход
-  .pos-rel
-    .d-flex.align-items-center.justify-content-center
-      button.header__btn.header__btn_type_cart.header__btn_type_cart-holder(type="button" data-target="#cart")
-        span.header__icon-holder.d-flex.flex-column.align-items-center.justify-content-center.zi-2
-          +icon('cart','icon-fluid header__btn-icon header__btn-icon_show')
-          +icon('close','icon-fluid header__btn-icon header__btn-icon_close')
-        span.header__btn-title.header__btn-title_type_caption Корзина
-      .header__cart-data.d-flex.flex-column.justify-content-between.zi-2
-        a.header__counter.d-flex.align-items-center.justify-content-center.h6.bg-theme-success.color-theme-white.rounded-pill.px-md-2.mb-1(href="#")
-          span.font-weight-bold.mr-md-1 3
-          span.d-none.d-md-block шт.
-        a.header__counter.d-flex.align-items-center.justify-content-center.h6.bg-theme-light.color-theme-brand.rounded-pill.box-shadow.px-md-2(href="#")
-          span.mr-md-1 29
-          +icon('favourite','d-none d-md-block')
+    button.header__navbar-item(type="button")
+      span.header__navbar-top
+        span.header__navbar-icon.mr-md-1
+          +icon('user','color-theme-success')
+        span.header__navbar-badge.header__navbar-badge_width_auto.d-none.d-md-flex.rounded-pill.px-2
+          span.font-weight-bold.mr-1 300
+          | Б.₽.
+      span.header__navbar-caption Сергей | выход
+  .header__aside.d-flex
+    a.header__btn.header__btn_place_panel(href="#")
+      span.header__btn-icon.header__btn-icon_type_holder
+        +icon('cart')
+      span.header__btn-title Корзина
+    .header__aside-meta
+      a.header__aside-badge.bg-theme-success.rounded-pill(href="#")
+        span.color-theme-white.font-weight-bold.mr-md-1 3
+        span.color-theme-white.d-none.d-md-block шт.
+      a.header__aside-badge.rounded-pill.box-shadow(href="#")
+        span.mr-md-1 29
+        +icon('favourite','d-none d-md-block')
     .popup.popup_width_md.popup_pos_right.box-shadow.border-radius.d-block
       .popup__triangle.bg-theme-white.box-shadow
       .bg-theme-white.border-radius.overflow-hidden.zi-2.px-4.py-3

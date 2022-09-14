@@ -633,6 +633,10 @@
     @include fw(100%/5);
   }
 
+  @include media-breakpoint-up(md) {
+    position: relative;
+  }
+
   &:hover {
     .header__navbar-icon {
       background-color: $color__light;
@@ -646,10 +650,37 @@
   }
 }
 
+.header__navbar-top {
+  @extend %d-flex-ai-center;
+  justify-content: center;
+  position: relative;
+}
+
 .header__navbar-icon {
   @extend %d-flex-column;
   @extend %d-flex-centered;
   @include navbar-icon;
+}
+
+.header__navbar-badge {
+  @extend %d-flex-ai-center;
+  @include h6;
+  @include fw(18px);
+  @include wh(18px);
+  justify-content: center;
+  color: #fff;
+  background-color: $color__success;
+
+  &.header__navbar-badge_width_auto {
+    @include fw(auto);
+    width: auto;
+    max-width: initial;
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include pos(-8px,auto);
+    margin: 0 0 0 22px;
+  }
 }
 
 .header__navbar-caption {
@@ -669,10 +700,50 @@
 
 /* aside */
 .header__aside {
+  position: relative;
+
   @include media-breakpoint-down(md) {
     @include fw(100%/6);
     @include px($grid-gutter-width/2);
     display: flex;
     justify-content: center;
+  }
+}
+
+.header__aside-meta {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 -.25rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    top: -8px;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.header__aside-badge {
+  @extend %d-flex-ai-center;
+  @include h6;
+  height: 18px;
+  min-width: 18px;
+  margin-bottom: .25rem;
+  justify-content: center;
+  color: $color__brand;
+  background-color: $color__light;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    @include px(.5rem);
+  }
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
   }
 }

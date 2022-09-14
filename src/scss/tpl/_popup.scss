@@ -12,30 +12,31 @@ $popup__width_lg: 530px;
   position: absolute;
   margin-top: 16px;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     @include popupParams($popup__width_sm);
     left: 50%;
+    top: 100%;
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     @include pos(150px,16px,fixed);
     right: 16px;
   }
 
   &.popup_width_md {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include popupParams($popup__width_md);
     }
   }
 
   &.popup_width_lg {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include popupParams($popup__width_lg);
     }
   }
 
   &.popup_pos_left {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       left: 0;
       margin-left: 0;
     }
@@ -47,7 +48,7 @@ $popup__width_lg: 530px;
   }
 
   &.popup_pos_right {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       left: auto;
       right: 0;
       margin-left: 0;
@@ -68,7 +69,7 @@ $popup__width_lg: 530px;
   transform: rotate(45deg);
   z-index: 1;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     display: none;
   }
 }
@@ -78,12 +79,12 @@ $popup__width_lg: 530px;
     position: absolute;
     z-index: 3;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       top: 32px;
       right: 32px;
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       top: 12px;
       right: 12px;
     }
