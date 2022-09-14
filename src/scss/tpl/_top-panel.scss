@@ -14,7 +14,7 @@
 .top-panel__contacts {
   @extend %d-flex-ai-center;
 
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-only(lg) {
     margin-bottom: .5rem;
   }
 

@@ -15,7 +15,7 @@ header.header
             span.header__btn-title Услуги
         .panel
           #services.panel__wrapper
-            button.panel__close.d-flex.align-items-center.d-xl-none.bg-theme-brand.color-theme-white(type="button")
+            button.panel-close-btn(type="button")
               +icon('close','h3 mr-2')
               span.h4.text-uppercase услуги
             .wrapper
@@ -47,7 +47,7 @@ header.header
                       .banner__title.h2.font-weight-bold.color-theme-brand Запись на шиномонтаж онлайн
                       a.button.text-uppercase(href="#") Записаться
           #categories.panel__wrapper
-            button.panel__close.d-flex.align-items-center.d-xl-none.bg-theme-brand.color-theme-white(type="button")
+            button.panel-close-btn(type="button")
               +icon('close','h3 mr-2')
               span.h4.text-uppercase каталог
             .wrapper
@@ -170,7 +170,17 @@ header.header
                       +icon('arrow-left','h6 color-theme-brand pl-3 mr-2')
                       span.h5 Назад
     .header__col.header__col_side_right.col-xl-8.col-lg-7
-      .search-panel
+      .search-panel.search-panel_active
+        .search-panel__wrapper
+          button.panel-close-btn(type="button")
+            +icon('close','h3 mr-2')
+            span.h4.text-uppercase Поиск
+          form.search(action="#")
+            input.search__field(type="text" value="" placeholder="Я ищу...")
+            button.search__btn.search__btn_type_reset(type="reset")
+              +icon('close-noborder')
+            button.search__btn.search__btn_type_submit(type="submit")
+              +icon('search')
       .header__bottom-panel
         block profile
           .header__navbar

@@ -1,29 +1,44 @@
 .search {
-    position: relative;
-    padding: 0 2.5rem 0 0;
-    overflow: hidden;
+  @extend %d-flex-ai-center;
+  overflow: hidden;
+  background: $color__light;
+
+  @include media-breakpoint-up(xl) {
     border-radius: .5rem;
-    background: $color__light;
+  }
+
+  @include media-breakpoint-down(lg) {
+    height: 40px;
+    padding: .375rem 1.125rem .375rem 0;
+  }
 }
 
 .search__field {
-    @include fw(100%);
-    @include wh(100%,40px);
-    @include fs-lh(1rem,1.375rem);
-    letter-spacing: .05em;
-    padding: .5rem 0 .5rem .875rem;
-    border: 0;
-    background: none;
-    color: $color__brand;
+  @include fs-lh(1rem,1.375rem);
+  letter-spacing: .05em;
+  flex-grow: 1;
+  padding: .125rem .25rem .125rem .875rem;
+  border: 0;
+  background: none;
+  color: $color__text_default;
+
+  @include media-breakpoint-down(lg) {
+    @include border(0 0 1px,rgba(0,0,0,0));
+  }
+
+  &:focus {
+    border-color: #fff;
+  }
 }
 
 .search__btn {
-    @extend %btn-default;
-    @include fw(18px);
-    @include wh(18px);
-    position: absolute;
-    top: 50%;
-    right: 14px;
-    margin: -.563rem 0 0;
-    color: $color__brand;
+  @extend %btn-default;
+  @include fw(18px);
+  color: $color__brand;
+
+  &.search__btn_type_reset {
+    @include fw(24px);
+    @include border(0 1px 0 0,$color__brand);
+    @include offset(0 .625rem 0 0,0 .625rem 0 0);
+  }
 }

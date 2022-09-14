@@ -4,6 +4,34 @@
   }
 
   @include media-breakpoint-down(lg) {
-    display: none;
+    @include wh(100%);
+    @include pos(0,0,fixed);
+    opacity: 0;
+    pointer-events: none;
+    background-color: rgba(82,82,82,.2);
+    transition: all .3s ease;
+  }
+
+  &.search-panel_active {
+    opacity: 1;
+    pointer-events: all;
+
+    .search-panel__wrapper {
+      transform: translate(0,0);
+    }
+  }
+}
+
+.search-panel__wrapper {
+  @include media-breakpoint-down(lg) {
+    @include pos(0,0);
+    bottom: 0;
+    width: 304px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: $color__light;
+    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.16);
+    transform: translateX(-100%);
+    transition: all .3s ease;
   }
 }

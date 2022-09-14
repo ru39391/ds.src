@@ -21,12 +21,6 @@
   }
 }
 
-.panel__close {
-  @extend %btn-default;
-  @include wh(100%,72px);
-  padding: 1.5rem 2rem;
-}
-
 .panel__toggler {
   @extend %btn-default;
   @extend %d-flex-ai-center;
