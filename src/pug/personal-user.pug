@@ -4,7 +4,7 @@ block meta
   - var title = 'Данные пользователя';
 
 block btns
-  button.header__btn.header__btn_type_toggler.text-uppercase(type="button" data-target="#categories")
+  button.header__btn.header__btn_type_toggler(type="button" data-target="#categories")
     +icon('menu','header__btn-icon header__btn-icon_show')
     +icon('close','header__btn-icon header__btn-icon_close')
     span.header__btn-title Каталог
@@ -73,10 +73,10 @@ block profile
           span.font-weight-bold.mr-1 300
           | Б.₽.
       span.header__navbar-caption Сергей | выход
-  .header__aside.d-flex
-    a.header__btn.header__btn_place_panel(href="#")
-      span.header__btn-icon.header__btn-icon_type_holder
-        +icon('cart')
+  .header__aside.popup-holder.d-flex
+    button.header__btn.header__btn_place_panel.popup-toggler(type="button" data-target="#cart")
+      +icon('cart','header__btn-icon header__btn-icon_show')
+      +icon('close','header__btn-icon header__btn-icon_close')
       span.header__btn-title Корзина
     .header__aside-meta
       a.header__aside-badge.bg-theme-success.rounded-pill(href="#")

@@ -128,6 +128,12 @@ $popup__width_plain_xs: 288px;
 
 .popup-toggler {
   @extend %btn-default;
+
+  &.popup-toggler_active {
+    @include media-breakpoint-up(lg) {
+      z-index: 1050;
+    }
+  }
 }
 
 .popup-holder {

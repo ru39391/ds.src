@@ -70,6 +70,8 @@
   letter-spacing: .03em;
 
   &.header__btn_type_toggler {
+    text-transform: uppercase;
+
     .header__btn-title {
       display: block;
 
@@ -80,6 +82,10 @@
   }
 
   &.header__btn_place_panel {
+    @include media-breakpoint-up(lg) {
+      text-transform: uppercase;
+    }
+
     @include media-breakpoint-down(md) {
       height: auto;
       padding: 0;
@@ -110,6 +116,14 @@
         display: none;
       }
     }
+
+    &[class*="active"] {
+      .header__btn-title {
+        @include media-breakpoint-up(xl) {
+          display: block;
+        }
+      }
+    }
   }
 
   &.header__btn_active {
@@ -118,15 +132,17 @@
       position: relative;
       border-radius: .5rem .5rem 0 0;
     }
+  }
 
+  &[class*="active"] {
     .header__btn-icon_show {
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xl) {
         display: none;
       }
     }
 
     .header__btn-icon_close {
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xl) {
         display: flex;
       }
     }

@@ -2,6 +2,7 @@ import { Popup } from '../components/Popup';
 
 const popupTogglersArr = Array.from(document.querySelectorAll('.popup-toggler'));
 const popupConfig = {
+  popupTogglerActiveClass: 'popup-toggler_active',
   popupHolderSel: '.popup-holder',
   popupHolderActive: 'popup-holder_active',
   popupCloseBtnSel: '.popup__close'
