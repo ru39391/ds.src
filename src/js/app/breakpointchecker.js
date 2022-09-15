@@ -40,17 +40,20 @@ const tileSwiperActive = () => {
     },
   });
 };
+
 const slidesTogglersSel = '.slides_togglers';
-const slidesTogglersParent = document.querySelector(slidesTogglersSel).parentNode;
 const togglerSwiperActive = () => {
-  togglerSwiper = new Swiper(slidesTogglersSel, {
-    slidesPerView: 'auto',
-    spaceBetween: 0,
-    navigation: {
-      nextEl: slidesTogglersParent.querySelector('.slides_togglers-prev'),
-      prevEl: slidesTogglersParent.querySelector('.slides_togglers-next'),
-    },
-  });
+  if(document.querySelector(slidesTogglersSel)) {
+    const slidesTogglersParent = document.querySelector(slidesTogglersSel).parentNode;
+    togglerSwiper = new Swiper(slidesTogglersSel, {
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      navigation: {
+        nextEl: slidesTogglersParent.querySelector('.slides_togglers-prev'),
+        prevEl: slidesTogglersParent.querySelector('.slides_togglers-next'),
+      },
+    });
+  }
 };
 
 const breakpointChecker = () => {
